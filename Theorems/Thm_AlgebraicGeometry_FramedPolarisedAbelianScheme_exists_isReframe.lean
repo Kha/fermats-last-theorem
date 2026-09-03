@@ -1,0 +1,18 @@
+import Definitions.Def_AlgebraicGeometry_ThetaReframe
+import Definitions.Def_AlgebraicGeometry_ThetaLevelGroup
+import Definitions.Def_AlgebraicGeometry_ProjSpace
+import P2M.Util
+import P2M.Sol.S_AlgebraicGeometry_FramedPolarisedAbelianScheme_exists_isReframe
+attribute [-simp] AlgebraicGeometry.Scheme.Modules.tensorPow_zero AlgebraicGeometry.Scheme.Modules.tensorPow_succ AlgebraicGeometry.Scheme.Modules.tensorSections_zero_right AlgebraicGeometry.Scheme.Modules.map_unitSection AlgebraicGeometry.Scheme.Modules.tensorSectionsBilin_apply AlgebraicGeometry.Scheme.Modules.tensorPowSection_zero AlgebraicGeometry.Scheme.Modules.tensorSections_zero_left
+
+set_option autoImplicit false
+
+attribute [local instance] MvPolynomial.gradedAlgebra
+
+open CategoryTheory CategoryTheory.Limits AlgebraicGeometry NeronModelInfra GoodReductionJacobian AlgebraicGeometry.Polarisation
+open scoped BigOperators
+
+theorem AlgebraicGeometry.FramedPolarisedAbelianScheme.exists_isReframe
+    {g N n : ℕ} {S : Type} [CommRing S] (X : FramedPolarisedAbelianScheme g N n S)
+    (U : Matrix (Fin (N + 1)) (Fin (N + 1)) S) (hU : IsUnit U) :
+    ∃ X' : FramedPolarisedAbelianScheme g N n S, X.IsReframe U X' := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicGeometry_FramedPolarisedAbelianScheme_exists_isReframe.solution

@@ -1,0 +1,16 @@
+import Mathlib
+import Definitions.Def_AlgebraicGeometry_AffineLimit
+import P2M.Util
+import P2M.Sol.S_AlgebraicGeometry_AffineLimit_homIsLFP_of_locallyOfFinitePresentation
+attribute [-instance] AlgebraicGeometry.FGSubalgebra.instIsDirectedLe AlgebraicGeometry.FGSubalgebra.instQuasiSeparatedSpaceCarrierCarrierCommRingCatObjOppositeSchemeSpecDiagram AlgebraicGeometry.FGSubalgebra.instIsCofilteredOpposite AlgebraicGeometry.FGSubalgebra.instIsAffineObjOppositeSchemeSpecDiagram AlgebraicGeometry.FGSubalgebra.instNonempty AlgebraicGeometry.FGSubalgebra.instNonemptySubtypeLeSubalgebraValFG AlgebraicGeometry.FGSubalgebra.instCompactSpaceCarrierCarrierCommRingCatObjOppositeSchemeSpecDiagram AlgebraicGeometry.FGSubalgebra.instIsDirectedSubtypeLeSubalgebraValFG AlgebraicGeometry.FGSubalgebra.instIsAffineHomMapOppositeSchemeSpecDiagram AlgebraicGeometry.FGSubalgebra.instIsFiltered
+attribute [-simp] AlgebraicGeometry.FGSubalgebra.cocone_ι_app_apply
+
+set_option autoImplicit false
+
+universe u
+
+open CategoryTheory CategoryTheory.Limits Opposite AlgebraicGeometry AlgebraicGeometry.AffineLimit
+
+theorem AlgebraicGeometry.AffineLimit.homIsLFP_of_locallyOfFinitePresentation
+    (R : Type u) [CommRing R] {X : Scheme.{u}} (ξ : X ⟶ Spec (CommRingCat.of R))
+    [LocallyOfFinitePresentation ξ] : HomIsLFP ξ := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicGeometry_AffineLimit_homIsLFP_of_locallyOfFinitePresentation.solution

@@ -1,0 +1,48 @@
+import Definitions.Def_LanglandsTunnell_CubicInduction_Congruence
+import P2M.Util
+namespace P2MW.S_LanglandsTunnell_CubicInduction_iotaGL_mem_congruenceK1_iff
+
+set_option autoImplicit false
+
+open Matrix IsDedekindDomain
+open LanglandsTunnell.CubicInduction
+
+namespace CongruenceBottomEntries
+
+private theorem mem_congruenceK1_iff_bottom_sub_one (R K : Type*) [CommRing R] [IsDedekindDomain R] [Field K]
+    [Algebra R K] [IsFractionRing R K] (v : HeightOneSpectrum R) (c : ℕ) (k : GL (Fin 3) (v.adicCompletion K)) :
+    k ∈ congruenceK1 R K v c ↔
+      k ∈ localMaximalCompact3 R K v ∧
+        ∀ l : Fin 3,
+          Valued.v (((k : Matrix (Fin 3) (Fin 3) (v.adicCompletion K)) - 1) 2 l) ≤ WithZero.exp (-(c : ℤ)) := by
+  rw [mem_congruenceK1_iff]
+  constructor
+  · rintro ⟨h0, h1, h2, h3⟩
+    refine ⟨h0, ?_⟩
+    intro l
+    fin_cases l
+    · simpa [Matrix.sub_apply, Matrix.one_apply] using h1
+    · simpa [Matrix.sub_apply, Matrix.one_apply] using h2
+    · simpa [Matrix.sub_apply, Matrix.one_apply] using h3
+  · rintro ⟨h0, h⟩
+    refine ⟨h0, ?_, ?_, ?_⟩
+    · simpa [Matrix.sub_apply, Matrix.one_apply] using h 0
+    · simpa [Matrix.sub_apply, Matrix.one_apply] using h 1
+    · simpa [Matrix.sub_apply, Matrix.one_apply] using h 2
+
+end CongruenceBottomEntries
+
+open CongruenceBottomEntries
+
+theorem solution
+    (R K : Type*) [CommRing R] [IsDedekindDomain R] [Field K] [Algebra R K] [IsFractionRing R K]
+    (v : HeightOneSpectrum R) (c : ℕ) (g : GL (Fin 2) (v.adicCompletion K)) :
+    iotaGL g ∈ congruenceK1 R K v c ↔ iotaGL g ∈ localMaximalCompact3 R K v := by
+  refine ⟨mem_localMaximalCompact3_of_mem_congruenceK1 R K v, fun hg => ?_⟩
+  refine (mem_congruenceK1_iff_bottom_sub_one R K v c (iotaGL g)).2 ⟨hg, fun l => ?_⟩
+  have hzero : (((iotaGL g : GL (Fin 3) (v.adicCompletion K)) : Matrix (Fin 3) (Fin 3) (v.adicCompletion K)) - 1)
+      2 l = 0 := by
+    rw [coe_iotaGL]
+    fin_cases l <;> simp [embedMat2, Matrix.sub_apply]
+  rw [hzero, map_zero]
+  exact zero_le

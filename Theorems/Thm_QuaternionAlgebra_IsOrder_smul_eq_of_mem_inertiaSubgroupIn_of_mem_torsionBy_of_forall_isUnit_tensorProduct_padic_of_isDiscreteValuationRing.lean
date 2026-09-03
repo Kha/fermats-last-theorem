@@ -1,0 +1,37 @@
+import Mathlib
+import Definitions.Def_QuaternionAlgebra_Order
+import Definitions.Def_FLTPrelim_Ramification
+import P2M.Util
+import P2M.Sol.S_QuaternionAlgebra_IsOrder_smul_eq_of_mem_inertiaSubgroupIn_of_mem_torsionBy_of_forall_isUnit_tensorProduct_padic_of_isDiscreteValuationRing
+attribute [-instance] TateModule.instModule TateModule.instSMul GaloisRepAdic.instAddCommGroup GaloisRepAdic.instFree GaloisRepAdic.instFinite GaloisRepAdic.instModule ResidualGaloisRep.instModule ResidualGaloisRep.instModuleFinite ResidualGaloisRep.instAddCommGroup WeierstrassCurve.Affine.Point.instSMulCommClassAlgEquivZModTorsionBy WeierstrassCurve.Affine.Point.instFinite ModularCurve.instSMulAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange ModularCurve.instDistribMulActionAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange AlgebraicCurve.SemilinearAut.instDistribMulActionSubtypeProdRingAutMemSubgroupPic0 AlgebraicCurve.SemilinearAut.instDistribMulActionSubtypeProdRingAutMemSubgroupDivisor AlgebraicCurve.Pic0.instModuleZModTorsion AlgebraicCurve.SemilinearAut.instSMulSubtypeProdRingAutMemSubgroupPlace AlgebraicCurve.SemilinearAut.instDistribMulActionTorsion AlgebraicCurve.SemilinearAut.instSMulSubtypeProdRingAutMemSubgroupPic0 AlgebraicCurve.SemilinearAut.instSMulTorsion AlgebraicCurve.SemilinearAut.instMulActionSubtypeProdRingAutMemSubgroupPlace AlgebraicCurve.SemilinearAut.instSMulCommClassZModTorsion AlgebraicCurve.SemilinearAut.instMulSemiringActionSubtypeProdRingAutMemSubgroup AlgebraicCurve.Place.instIsScalarTowerSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Divisor.instDistribMulActionAlgEquiv AlgebraicCurve.Place.instSMulAlgEquiv AlgebraicCurve.Place.instIsPrincipalIdealRingSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Place.instIsDiscreteValuationRingSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Pic0.instDistribMulActionAlgEquiv AlgebraicCurve.Place.instAlgebraSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Place.instMulActionAlgEquiv AlgebraicCurve.Pic0.instSMulAlgEquiv
+attribute [-simp] TateModule.smul_apply TateModule.coe_mulP TateModule.proj_apply TateModule.coe_add TateModule.coe_sub WeierstrassCurve.tateModuleRepOfBasis_V TateModule.coe_zero TateModule.rep_apply WeierstrassCurve.tateModuleRep_V WeierstrassCurve.tateModuleRepOfBasis_ρ_apply GaloisRep.padicIntToRingLevel_apply TateModule.coe_neg WeierstrassCurve.tateModuleRep_ρ_apply GaloisRepAdic.mk.injEq GaloisRepAdic.mk.sizeOf_spec GaloisRepAdic.Equiv.mk.sizeOf_spec GaloisRepAdic.Equiv.mk.injEq ResidualGaloisRep.mk.sizeOf_spec ResidualGaloisRep.mk.injEq WeierstrassCurve.Affine.Point.galoisRepModuleEnd_apply ResidualGaloisRep.Equiv.mk.sizeOf_spec ResidualGaloisRep.Equiv.mk.injEq ModularCurve.baseAut_arithmeticGalois ModularCurve.JZero.torsionGaloisRep_apply ModularCurve.coe_arithmeticRingAut_apply ModularCurve.toRingAut_arithmeticGalois ModularCurve.qExpand_coeff_mul ModularCurve.qExpandₐ_apply ModularCurve.jqN_one ModularCurve.qExpand_single ModularCurve.dedekindPsi_one ModularCurve.ModularPolynomialData.mk.sizeOf_spec ModularCurve.evalAtJ_X ModularCurve.ModularPolynomialData.mk.injEq ModularCurve.constantCoeff_jNum ModularCurve.constantCoeff_eisenstein4 ModularCurve.qExpand_C ModularCurve.coeff_jq_neg_one ModularCurve.constantCoeff_jNumQ ModularCurve.coeffEmb_coeff
+attribute [-simp] ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single AlgebraicCurve.SemilinearAut.toRingAut_inv AlgebraicCurve.SemilinearAut.smul_def AlgebraicCurve.SemilinearAut.smul_single AlgebraicCurve.SemilinearAut.smul_toValuationSubring AlgebraicCurve.SemilinearAut.baseAut_inv AlgebraicCurve.SemilinearAut.baseAut_ofAlgAut AlgebraicCurve.SemilinearAut.toRingAut_ofAlgAut AlgebraicCurve.SemilinearAut.torsionRep_apply AlgebraicCurve.SemilinearAut.toRingAut_one AlgebraicCurve.SemilinearAut.deg_smul AlgebraicCurve.SemilinearAut.degree_smul AlgebraicCurve.SemilinearAut.coe_degZeroSMulHom AlgebraicCurve.SemilinearAut.baseAut_mul AlgebraicCurve.SemilinearAut.coe_smulValuationSubringEquiv_apply AlgebraicCurve.SemilinearAut.baseAut_one AlgebraicCurve.SemilinearAut.ofAlgAut_smul AlgebraicCurve.SemilinearAut.coe_torsion_smul AlgebraicCurve.SemilinearAut.toRingAut_mul AlgebraicCurve.Place.mk.injEq AlgebraicCurve.Divisor.degree_single AlgebraicCurve.Divisor.smul_single AlgebraicCurve.Place.smul_toValuationSubring AlgebraicCurve.Place.heightOneSpectrum_asIdeal AlgebraicCurve.Place.coe_algebraMap AlgebraicCurve.Place.ord_one AlgebraicCurve.Place.coe_smulRingEquiv_apply AlgebraicCurve.Pic0.coe_degZeroSMulHom AlgebraicCurve.Place.deg_smul AlgebraicCurve.Pic0.mk_zero AlgebraicCurve.Place.mk.sizeOf_spec AlgebraicCurve.Divisor.degree_smul AlgebraicCurve.Pic0.mk_add AlgebraicCurve.Place.ord_zero AlgebraicCurve.Place.ofHeightOneSpectrum_toValuationSubring ModularCurve.aeval_heckeGen ModularCurve.coe_mTorsionGaloisRep_apply ModularCurve.eisensteinSystem_of_dvd
+attribute [-simp] ModularCurve.eisensteinSystem_of_not_dvd
+
+set_option autoImplicit false
+
+open scoped Quaternion TensorProduct
+
+theorem QuaternionAlgebra.IsOrder.smul_eq_of_mem_inertiaSubgroupIn_of_mem_torsionBy_of_forall_isUnit_tensorProduct_padic_of_isDiscreteValuationRing
+    {a b : ℚ} {Λ : Submodule ℤ ℍ[ℚ, a, b]} (hΛ : QuaternionAlgebra.IsOrder Λ)
+    {ℓ : ℕ} [Fact ℓ.Prime] (hdiv : ∀ x : ℍ[ℚ, a, b] ⊗[ℚ] ℚ_[ℓ], x ≠ 0 → IsUnit x)
+    {R : Type} [CommRing R] [IsDomain R] [IsDiscreteValuationRing R] [Finite (IsLocalRing.ResidueField R)]
+    {K : Type} [Field K] [Algebra R K] [IsFractionRing R K]
+    {Ω : Type} [Field Ω] [Algebra K Ω] [IsAlgClosure K Ω]
+    {M : Type} [AddCommGroup M] [DistribMulAction (Ω ≃ₐ[K] Ω) M]
+    (hcard : ∀ n : ℕ, Nat.card (Submodule.torsionBy ℤ M ((ℓ ^ n : ℕ) : ℤ)) = (ℓ ^ n) ^ 4)
+    (hcont : ∀ n : ℕ, ∃ Fn : IntermediateField K Ω, FiniteDimensional K ↥Fn ∧
+      ∀ σ : Ω ≃ₐ[K] Ω, (∀ x ∈ Fn, σ x = x) →
+        ∀ m ∈ Submodule.torsionBy ℤ M ((ℓ ^ n : ℕ) : ℤ), σ • m = m)
+    (i : ↥Λ → M →+ M) (hi_one : ∀ h : (1 : ℍ[ℚ, a, b]) ∈ Λ, i ⟨1, h⟩ = AddMonoidHom.id M)
+    (hi_mul : ∀ (x y : ↥Λ) (h : (x : ℍ[ℚ, a, b]) * (y : ℍ[ℚ, a, b]) ∈ Λ),
+      i ⟨(x : ℍ[ℚ, a, b]) * (y : ℍ[ℚ, a, b]), h⟩ = (i x).comp (i y))
+    (hi_add : ∀ x y : ↥Λ, i (x + y) = i x + i y)
+    (hi_smul : ∀ (σ : Ω ≃ₐ[K] Ω) (x : ↥Λ) (m : M), σ • i x m = i x (σ • m))
+    {c : ℕ} (hc : 3 ≤ ℓ ^ c) (F : IntermediateField K Ω) [FiniteDimensional K ↥F]
+    (hlevel : ∀ σ : Ω ≃ₐ[K] Ω, (∀ x ∈ F, σ x = x) →
+      ∀ m ∈ Submodule.torsionBy ℤ M ((ℓ ^ c : ℕ) : ℤ), σ • m = m)
+    (hℓ : IsUnit ((ℓ : ℕ) : R))
+    (A : ValuationSubring Ω) (hA : ∀ r : R, algebraMap K Ω (algebraMap R K r) ∈ A)
+    {σ : Ω ≃ₐ[K] Ω} (hσF : ∀ x ∈ F, σ x = x) (hσ : σ ∈ A.inertiaSubgroupIn K)
+    (n : ℕ) (m : M) (hm : m ∈ Submodule.torsionBy ℤ M ((ℓ ^ n : ℕ) : ℤ)) : σ • m = m := by p2m_exact_reverting @_root_.P2MW.S_QuaternionAlgebra_IsOrder_smul_eq_of_mem_inertiaSubgroupIn_of_mem_torsionBy_of_forall_isUnit_tensorProduct_padic_of_isDiscreteValuationRing.solution

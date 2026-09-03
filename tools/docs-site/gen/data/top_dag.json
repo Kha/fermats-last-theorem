@@ -1,0 +1,107 @@
+{
+ "description": "Top levels of the proof: each step proves its conclusion from the listed premises. Node ids are Lean declaration names.",
+ "nodes": [
+  {
+   "id": "fermat_last_theorem",
+   "lean_name": "fermat_last_theorem",
+   "title": "Fermat's Last Theorem (elementary statement)",
+   "title_raw": "Fermat's Last Theorem (elementary statement)",
+   "status": "Proved",
+   "is_root": true
+  },
+  {
+   "id": "FLT.fermatLastTheorem",
+   "lean_name": "FLT.fermatLastTheorem",
+   "title": "Fermat's Last Theorem",
+   "title_raw": "Fermat's Last Theorem",
+   "status": "Proved",
+   "is_root": false
+  },
+  {
+   "id": "FreyPackage.fermatLastTheoremFor_of_five_le",
+   "lean_name": "FreyPackage.fermatLastTheoremFor_of_five_le",
+   "title": "FLT for prime exponents p ≥ 5",
+   "title_raw": "FLT for prime exponents $p \\ge 5$",
+   "status": "Proved",
+   "is_root": false
+  },
+  {
+   "id": "FreyPackage.of_counterexample",
+   "lean_name": "FreyPackage.of_counterexample",
+   "title": "Frey-package construction",
+   "title_raw": "Frey-package construction",
+   "status": "Proved",
+   "is_root": false
+  },
+  {
+   "id": "FreyPackage.no_frey_package",
+   "lean_name": "FreyPackage.no_frey_package",
+   "title": "No Frey package exists",
+   "title_raw": "No Frey package exists",
+   "status": "Proved",
+   "is_root": false
+  },
+  {
+   "id": "FreyPackage.Mazur_Frey",
+   "lean_name": "FreyPackage.Mazur_Frey",
+   "title": "Mazur: irreducibility of ρ̄(E,p) for the Frey curve",
+   "title_raw": "Mazur: irreducibility of $\\bar\\rho_{E,p}$ for the Frey curve",
+   "status": "Proved",
+   "is_root": false
+  },
+  {
+   "id": "FreyPackage.frey_isModular",
+   "lean_name": "FreyPackage.frey_isModular",
+   "title": "The Frey curve is modular",
+   "title_raw": "The Frey curve is modular",
+   "status": "Proved",
+   "is_root": false
+  },
+  {
+   "id": "FreyPackage.level_lowering_to_two",
+   "lean_name": "FreyPackage.level_lowering_to_two",
+   "title": "Ribet: level lowering to Γ₀(2) for the Frey curve",
+   "title_raw": "Ribet: level lowering to $\\Gamma_0(2)$ for the Frey curve",
+   "status": "Proved",
+   "is_root": false
+  },
+  {
+   "id": "ModularForm.S2_Gamma0_2_eq_zero",
+   "lean_name": "ModularForm.S2_Gamma0_2_eq_zero",
+   "title": "S₂(Γ₀(2)) = 0",
+   "title_raw": "$S_2(\\Gamma_0(2)) = 0$",
+   "status": "Proved",
+   "is_root": false
+  }
+ ],
+ "steps": [
+  {
+   "conclusion": "fermat_last_theorem",
+   "premises": [
+    "FLT.fermatLastTheorem"
+   ]
+  },
+  {
+   "conclusion": "FLT.fermatLastTheorem",
+   "premises": [
+    "FreyPackage.fermatLastTheoremFor_of_five_le"
+   ]
+  },
+  {
+   "conclusion": "FreyPackage.fermatLastTheoremFor_of_five_le",
+   "premises": [
+    "FreyPackage.of_counterexample",
+    "FreyPackage.no_frey_package"
+   ]
+  },
+  {
+   "conclusion": "FreyPackage.no_frey_package",
+   "premises": [
+    "FreyPackage.Mazur_Frey",
+    "FreyPackage.frey_isModular",
+    "FreyPackage.level_lowering_to_two",
+    "ModularForm.S2_Gamma0_2_eq_zero"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+import Definitions.Def_AutomorphicForm_CuspidalConstituent
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_isCompact_rowIsometrySubgroup_detOne
+attribute [-instance] AutomorphicForm.compactSpace_maximalCompactAway AutomorphicForm.compactSpace_adelicMaximalCompact AutomorphicForm.isProbabilityMeasure_maximalCompactHaar AutomorphicForm.isHaarMeasure_maximalCompactHaar AutomorphicForm.compactSpace_maximalCompactAt AutomorphicForm.isProbabilityMeasure_maximalCompactAwayHaar AutomorphicForm.isHaarMeasure_maximalCompactAwayHaar AutomorphicForm.isProbabilityMeasure_maximalCompactAtHaar AutomorphicForm.isHaarMeasure_maximalCompactAtHaar
+
+set_option autoImplicit false
+
+open MeasureTheory NumberField IsDedekindDomain
+open NumberField.AdelicHaar NumberField.AdelicLevel NumberField.AdelicBox
+open AutomorphicForm AutomorphicForm.WindowedSiegel AutomorphicForm.SiegelCovering
+open AutomorphicForm.CuspidalConstituent
+open scoped ENNReal
+
+theorem AutomorphicForm.isCompact_rowIsometrySubgroup_detOne
+    (F : Type) [Field F] [NumberField F] (w : InfinitePlace F) :
+    IsCompact (rowIsometrySubgroup₀ w.Completion : Set (GL (Fin 2) w.Completion)) := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_isCompact_rowIsometrySubgroup_detOne.solution

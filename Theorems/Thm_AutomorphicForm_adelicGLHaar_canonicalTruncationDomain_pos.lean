@@ -1,0 +1,41 @@
+import Definitions.Def_AutomorphicForm_TwistedOrbital
+import Definitions.Def_NumberField_PrincipalLevel
+import Definitions.Def_NumberField_TateGlobalZeta
+import Definitions.Def_LanglandsTunnell_ConverseData
+import Definitions.Def_LocalLanglands_HeckeCosetLocal
+import Definitions.Def_AutomorphicForm_AdelicKernel
+import Definitions.Def_AutomorphicForm_CanonicalTruncationDomain
+import Definitions.Def_AutomorphicForm_GeometricRemainder
+import Definitions.Def_AutomorphicForm_InducedSection
+import Definitions.Def_AutomorphicForm_EtaFamily
+import Definitions.Def_AutomorphicForm_WeylIntertwining
+import Definitions.Def_AutomorphicForm_SlabProfile
+import Definitions.Def_AutomorphicForm_TruncationOperator
+import Definitions.Def_AutomorphicForm_CarrierPins
+import Definitions.Def_NumberField_AdelicHeight
+import Definitions.Def_AutomorphicForm_AdelicMaximalCompact
+import Definitions.Def_AutomorphicForm_ArchKFinite
+import Definitions.Def_AutomorphicForm_SmoothAutomorphicFnAt
+import Definitions.Def_NumberField_AdelicHaar
+import Definitions.Def_NumberField_AdelicBox
+import Definitions.Def_AutomorphicForm_RightConvolution
+import Definitions.Def_AutomorphicForm_AutomorphicFnAt
+import Definitions.Def_AutomorphicForm_ResidualSpan
+import Definitions.Def_NumberField_NormPowChar
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_adelicGLHaar_canonicalTruncationDomain_pos
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instCountableOfNumberField_definitions
+attribute [-simp] AutomorphicForm.fnTwist_zero AutomorphicForm.fnTwist_apply
+
+set_option autoImplicit false
+
+open MeasureTheory NumberField NumberField.AdelicLevel NumberField.AdelicBox NumberField.AdelicHaar
+open AutomorphicForm.WindowedSiegel AutomorphicForm.SiegelCovering
+open IsDedekindDomain
+open scoped ComplexConjugate NNReal
+
+attribute [local instance] NumberField.AdelicHaar.glBorel
+
+theorem AutomorphicForm.adelicGLHaar_canonicalTruncationDomain_pos
+    (K : Type) [Field K] [NumberField K] (α β : ℝ) (hα : 0 < α) (hαβ : α < β) :
+    0 < adelicGLHaar (Fin 2) (𝓞 K) K (AutomorphicForm.canonicalTruncationDomain K α β) := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_adelicGLHaar_canonicalTruncationDomain_pos.solution

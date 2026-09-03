@@ -1,0 +1,17 @@
+import Definitions.Def_CerednikDrinfeld_QMIsogeny
+import P2M.Util
+import P2M.Sol.S_CerednikDrinfeld_QM_FakeEllipticCurve_preservesLevel_iff_forall_factorsThrough_geomPoint_of_isAlgClosed
+attribute [-simp] GoodReductionJacobian.RelativeGroupLaw.nsmul_zero GoodReductionJacobian.RelativeGroupLaw.mem_torsionSubset GoodReductionJacobian.RelativeGroupLaw.nsmul_succ GoodReductionJacobian.RelativeGroupLaw.actionSndPoint_coe GoodReductionJacobian.RelativeGroupLaw.actionFstPoint_coe GoodReductionJacobian.RelativeGroupLaw.baseChangePointToBase_ofBase GoodReductionJacobian.RelativeGroupLaw.baseChangePointToBase_coe GoodReductionJacobian.RelativeGroupLaw.baseChangePointOfBase_coe GoodReductionJacobian.RelativeGroupLaw.baseChange_inv GoodReductionJacobian.RelativeGroupLaw.baseChangePointOfBase_toBase GoodReductionJacobian.RelativeGroupLaw.baseChange_mul GoodReductionJacobian.RelativeGroupLaw.baseChange_one NeronModelInfra.NeronModelPropertyBundle.endExtensionEquiv_symm_restrict NeronModelInfra.schemeHomOverComp_id_left NeronModelInfra.schemeHomOverComp_id_right NeronModelInfra.schemeHomOverId_coe NeronModelInfra.NeronModelPropertyBundle.endExtensionEquiv_apply NeronModelInfra.NeronModelPropertyBundle.restrict_endExtensionEquiv_symm NeronModelInfra.schemeHomOverComp_coe NeronSpecialFibreInfra.specialFibreRestrict_coe_comp_fst NeronSpecialFibreInfra.fibreRestrictAlong_coe_comp_snd NeronSpecialFibreInfra.fibreRestrictAlong_coe_comp_fst NeronSpecialFibreInfra.neronEndRestrictEquiv_apply NeronSpecialFibreInfra.fibreRestrictAlong_coe_comp_fst_assoc NeronSpecialFibreInfra.specialFibreRestrict_coe_comp_snd NeronSpecialFibreInfra.neronEndExtension_genericFibreRestrict NeronSpecialFibreInfra.specClosedFibreInclusion_eq NeronSpecialFibreInfra.specialFibreRestrict_coe_comp_fst_assoc NeronSpecialFibreInfra.specialFibreRestrict_coe_comp_snd_assoc NeronSpecialFibreInfra.genericFibreRestrict_neronEndExtension NeronSpecialFibreInfra.homOverId_coe NeronSpecialFibreInfra.homOverComp_coe NeronSpecialFibreInfra.fibreRestrictAlong_coe_comp_snd_assoc GoodReductionJacobian.RelativeGroupLaw.fibre_inv GoodReductionJacobian.RelativeGroupLaw.fibrePointToBase_coe GoodReductionJacobian.RelativeGroupLaw.fibrePointOfBase_toBase GoodReductionJacobian.RelativeGroupLaw.fibre_mul GoodReductionJacobian.RelativeGroupLaw.fibrePointToBase_ofBase GoodReductionJacobian.RelativeGroupLaw.fibre_one GoodReductionJacobian.RelativeGroupLaw.fibrePointOfBase_coe
+
+set_option autoImplicit false
+
+open scoped Quaternion
+open CategoryTheory open AlgebraicGeometry hiding exists_opens_coe_eq_singleton_and_isIso_iota_comp_of_isFinite_of_etale open NeronModelInfra GoodReductionJacobian CerednikDrinfeld CerednikDrinfeld.QM
+
+theorem CerednikDrinfeld.QM.FakeEllipticCurve.preservesLevel_iff_forall_factorsThrough_geomPoint_of_isAlgClosed
+    {a b : ℚ} {Λ : Submodule ℤ ℍ[ℚ, a, b]} {N : ℕ} [NeZero N]
+    (k₀ : Type) [Field k₀] [IsAlgClosed k₀] (hNk : (N : k₀) ≠ 0)
+    (E E' : FakeEllipticCurve Λ N k₀) (φ : E.A ⟶ E'.A) (hφ : φ ≫ E'.f = E.f) :
+    FakeEllipticCurve.PreservesLevel E E' φ hφ ↔
+      ∀ Q : SchemeHomOver (geomPoint k₀ (RingHom.id k₀)) E.f,
+        FactorsThrough E.lev Q → FactorsThrough E'.lev (mapPt φ hφ Q) := by p2m_exact_reverting @_root_.P2MW.S_CerednikDrinfeld_QM_FakeEllipticCurve_preservesLevel_iff_forall_factorsThrough_geomPoint_of_isAlgClosed.solution

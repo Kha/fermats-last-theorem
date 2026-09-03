@@ -1,0 +1,7 @@
+import Mathlib
+import Definitions.Def_ModularForm_EisensteinChiNegThree
+import P2M.Util
+import P2M.Sol.S_EisensteinWeightOne_e1Chi3IsModular
+
+open EisensteinWeightOne
+theorem EisensteinWeightOne.e1Chi3IsModular : EisensteinWeightOne.E1Chi3IsModular := by p2m_exact_reverting @_root_.P2MW.S_EisensteinWeightOne_e1Chi3IsModular.solution

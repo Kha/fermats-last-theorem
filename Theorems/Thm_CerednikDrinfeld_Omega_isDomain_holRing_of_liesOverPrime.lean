@@ -1,0 +1,14 @@
+import Definitions.Def_CerednikDrinfeld_DrinfeldHolomorphic
+import Definitions.Def_ValuationSubring_CompletionRatClosure
+import Definitions.Def_FLTPrelim_Ramification
+import P2M.Util
+import P2M.Sol.S_CerednikDrinfeld_Omega_isDomain_holRing_of_liesOverPrime
+
+set_option autoImplicit false
+
+p2m_open "CerednikDrinfeld.Omega~exists_pseudoUniformizer_isExhausted_of_isCompact~isDomain_holRing ValuationSubring~isAlgClosed_completion_of_liesOverPrime~isCompact_ratClosure_inter_closedBall_of_liesOverPrime~valuation_completion_ratClosure_natCast_pos_and_lt_one_and_rankOne_of_liesOverPrime"
+
+theorem CerednikDrinfeld.Omega.isDomain_holRing_of_liesOverPrime
+    (r : ℕ) [Fact r.Prime] (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime r)
+    (ϖ : PseudoUniformizer ↥(ratClosure A) A.valuation.Completion) :
+    IsDomain ↥(holRing ϖ) := by p2m_exact_reverting @_root_.P2MW.S_CerednikDrinfeld_Omega_isDomain_holRing_of_liesOverPrime.solution

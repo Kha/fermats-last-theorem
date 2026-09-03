@@ -1,0 +1,7 @@
+import Definitions.Def_WeierstrassCurve_ModularityLiftingConductor
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_IsModularModelOfExactConductorLevel_isModularModelOfConductorLevel
+
+theorem WeierstrassCurve.IsModularModelOfExactConductorLevel.isModularModelOfConductorLevel
+    {W : WeierstrassCurve ℤ}
+    (h : W.IsModularModelOfExactConductorLevel) : W.IsModularModelOfConductorLevel := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_IsModularModelOfExactConductorLevel_isModularModelOfConductorLevel.solution

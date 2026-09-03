@@ -1,0 +1,17 @@
+import Definitions.Def_NumberField_TateGlobalZeta
+import Definitions.Def_AutomorphicForm_TransversalMeasure
+import Definitions.Def_M4aHerbrand_GenuineDescent
+import P2M.Util
+import P2M.Sol.S_NumberField_TateGlobal_ideleNorm_idelesBaseChange
+attribute [-instance] instMeasurableSpaceRestrictedProduct_definitions instBorelSpaceRestrictedProduct_definitions RestrictedProduct.SecondCountableTopology_of_principal instCountableElemSetSetsCofinite_definitions MeasureTheory.instMeasurableNegSubtypeMemAddSubgroup_definitions MeasureTheory.instMeasurableMulSubtypeMemSubgroup_definitions MeasureTheory.instMeasurableMul₂SubtypeMemSubgroup_definitions MeasureTheory.instMeasurableMul₂SubtypeMemAddSubgroup_definitions MeasureTheory.instMeasurableAddSubtypeMemAddSubgroup_definitions MeasureTheory.instMeasurableInvSubtypeMemSubgroup_definitions
+attribute [-simp] ContinuousAddEquiv.preimage_mulLeft_smul ContinuousAddEquiv.restrictedProductPi_apply RestrictedProduct.flatten_homeomorph_apply RestrictedProduct.flatten_homeomorph'_symm_apply ContinuousMulEquiv.restrictedProductPi_symm_apply RestrictedProduct.flatten_homeomorph'_apply RestrictedProduct.flatten_homeomorph_symm_apply ContinuousMulEquiv.restrictedProductPi_apply ContinuousAddEquiv.restrictedProductPi_symm_apply
+
+set_option autoImplicit false
+
+p2m_open "NumberField~distribHaarChar_idelicNorm_genuineBaseChange"
+
+theorem NumberField.TateGlobal.ideleNorm_idelesBaseChange
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L] [Algebra K L]
+    [FiniteDimensional K L] [IsGalois K L] (y : (AdeleRing (𝓞 K) K)ˣ) :
+    NumberField.TateGlobal.ideleNorm L (AutomorphicForm.TransversalMeasure.idelesBaseChange K L y) =
+      NumberField.TateGlobal.ideleNorm K y ^ Module.finrank K L := by p2m_exact_reverting @_root_.P2MW.S_NumberField_TateGlobal_ideleNorm_idelesBaseChange.solution

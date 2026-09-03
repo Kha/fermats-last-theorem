@@ -1,0 +1,14 @@
+import Definitions.Def_LanglandsTunnell_CubicInduction_Growth
+import Definitions.Def_NumberField_AdelicHaar
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_CubicInduction_measurable_gauge3
+attribute [-instance] instCountableHeightOneSpectrumRingOfIntegers_definitions instCountableHeightOneSpectrumRingOfIntegersRat_definitions
+attribute [-simp] IsLocalization.map_moduleTensorEquiv_symm_tmul IsLocalization.leftModuleTensorEquiv_apply IsLocalization.moduleLid_symm_apply IsLocalization.leftModuleTensorEquiv_symm_apply IsLocalization.map_moduleTensorEquiv_tmul
+
+set_option autoImplicit false
+
+open IsDedekindDomain NumberField MeasureTheory
+
+attribute [local instance] NumberField.AdelicHaar.glBorel
+
+theorem LanglandsTunnell.CubicInduction.measurable_gauge3 : Measurable (gauge3 ℚ) := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_CubicInduction_measurable_gauge3.solution

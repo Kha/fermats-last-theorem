@@ -1,0 +1,105 @@
+import Definitions.Def_AutomorphicForm_TwistedOrbital
+import Definitions.Def_NumberField_PrincipalLevel
+import Definitions.Def_NumberField_TateGlobalZeta
+import Definitions.Def_LanglandsTunnell_ConverseData
+import Definitions.Def_LocalLanglands_HeckeCosetLocal
+import Definitions.Def_AutomorphicForm_AdelicKernel
+import Definitions.Def_AutomorphicForm_CanonicalTruncationDomain
+import Definitions.Def_AutomorphicForm_GeometricRemainder
+import Definitions.Def_AutomorphicForm_InducedSection
+import Definitions.Def_AutomorphicForm_EtaFamily
+import Definitions.Def_AutomorphicForm_WeylIntertwining
+import Definitions.Def_AutomorphicForm_SlabProfile
+import Definitions.Def_AutomorphicForm_TruncationOperator
+import Definitions.Def_AutomorphicForm_CarrierPins
+import Definitions.Def_NumberField_AdelicHeight
+import Definitions.Def_AutomorphicForm_AdelicMaximalCompact
+import Definitions.Def_AutomorphicForm_ArchKFinite
+import Definitions.Def_AutomorphicForm_SmoothAutomorphicFnAt
+import Definitions.Def_NumberField_AdelicHaar
+import Definitions.Def_NumberField_AdelicBox
+import Definitions.Def_AutomorphicForm_RightConvolution
+import Definitions.Def_AutomorphicForm_AutomorphicFnAt
+import Definitions.Def_AutomorphicForm_ResidualSpan
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_paleyWiener_convOp_and_convOp_pseudoEisenstein_eq_pseudoEisenstein_convOp_of_isArchBiFinite
+attribute [-instance] instCountableOfNumberField_definitions RestrictedProduct.SecondCountableTopology_of_principal instCountableElemSetSetsCofinite_definitions instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions
+attribute [-simp] AutomorphicForm.CuspidalSpectrum.fdPins_μ AutomorphicForm.CuspidalSpectrum.fdPins_nS AutomorphicForm.CuspidalSpectrum.fdPins_ν AutomorphicForm.CuspidalSpectrum.fdPins_gen AutomorphicForm.CuspidalSpectrum.fdPins_U AutomorphicForm.CuspidalSpectrum.fdPins_D AutomorphicForm.CuspidalSpectrum.fdPins_Z AutomorphicForm.CuspidalSpectrum.mem_detNormSlab AutomorphicForm.CuspidalSpectrum.fdPins_eq AutomorphicForm.CuspidalSpectrum.fdPins_mS AutomorphicForm.CuspidalConstituent.rightRegular_apply ContinuousAddEquiv.restrictedProductPi_apply RestrictedProduct.flatten_homeomorph_apply RestrictedProduct.flatten_homeomorph'_symm_apply ContinuousMulEquiv.restrictedProductPi_symm_apply RestrictedProduct.flatten_homeomorph'_apply RestrictedProduct.flatten_homeomorph_symm_apply ContinuousMulEquiv.restrictedProductPi_apply ContinuousAddEquiv.restrictedProductPi_symm_apply RingEquiv.restrictedProductCongr_symm_apply RingEquiv.restrictedProductCongrRight_apply MulEquiv.restrictedProductCongrRight_apply Equiv.restrictedProductProd_symm_apply_coe Equiv.restrictedProductCongrRight_apply AddEquiv.restrictedProductCongr_apply Equiv.restrictedProductCongrLeft'_symm_apply_apply Equiv.restrictedProductCongr_apply_apply Equiv.restrictedProductCongrLeft_apply_apply RestrictedProduct.flatten_equiv'_apply AddEquiv.restrictedProductCongrRight_apply Equiv.restrictedProductCongr_symm_apply Equiv.restrictedProductCongrRight_symm_apply RestrictedProduct.flatten_equiv'_symm_apply AddEquiv.restrictedProductCongrLeft'_apply Equiv.restrictedProductCongrLeft'_apply RestrictedProduct.flatten_apply RingEquiv.restrictedProductCongr_apply_apply RingEquiv.restrictedProductCongrLeft'_apply Equiv.restrictedProductProd_apply RestrictedProduct.flatten_equiv_apply
+attribute [-simp] RestrictedProduct.flatten_equiv_symm_apply LinearEquiv.restrictedProductCongrLeft'_apply RestrictedProduct.not_mem_support RestrictedProduct.mem_structureSubring_iff RestrictedProduct.not_mem_mulSupport RestrictedProduct.support_neg RestrictedProduct.mem_indexSupport_iff RestrictedProduct.mulSupport_inv RestrictedProduct.mapAlongLinearMap_apply
+
+set_option autoImplicit false
+
+open MeasureTheory NumberField NumberField.AdelicLevel NumberField.AdelicBox NumberField.AdelicHaar
+open AutomorphicForm.WindowedSiegel AutomorphicForm.SiegelCovering
+open IsDedekindDomain
+open scoped ComplexConjugate NNReal
+
+attribute [local instance] NumberField.AdelicHaar.glBorel
+
+theorem AutomorphicForm.paleyWiener_convOp_and_convOp_pseudoEisenstein_eq_pseudoEisenstein_convOp_of_isArchBiFinite
+    (K : Type) [Field K] [NumberField K] [DecidableEq (HeightOneSpectrum (𝓞 K))]
+    (α β : ℝ) (hα : 0 < α) (hαβ : α < β)
+    (SK : Finset (HeightOneSpectrum (𝓞 K)))
+    (ξK : (⊤ : Subgroup (AdeleRing (𝓞 K) K)ˣ) →* ℂˣ)
+    (hξc : Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((ξK ⟨z, Subgroup.mem_top z⟩ : ℂˣ) : ℂ))
+    (hξt : ∀ z : (AdeleRing (𝓞 K) K)ˣ,
+      z ∈ (Units.map (algebraMap K (AdeleRing (𝓞 K) K) : K →* AdeleRing (𝓞 K) K)).range →
+        ξK ⟨z, Subgroup.mem_top z⟩ = 1)
+    (N : Ideal (𝓞 K)) (hN : ∀ v : HeightOneSpectrum (𝓞 K), v.asIdeal ∣ N → v ∈ SK)
+    (tysK : ArchTypeFamily K)
+    (hξu : ∀ z : (AdeleRing (𝓞 K) K)ˣ, ‖((ξK ⟨z, Subgroup.mem_top z⟩ : ℂˣ) : ℂ)‖ = 1) :
+    let αm : (AdeleRing (𝓞 K) K)ˣ →* ℝˣ :=
+      ((NNReal.toRealHom : ℝ≥0 →+* ℝ).toMonoidHom.comp
+        (distribHaarChar (AdeleRing (𝓞 K) K))).toHomUnits
+    letI := adeleBorel (𝓞 K) K
+    ∀ (hαm : ∀ x, 0 < ((αm x : ℝˣ) : ℝ)),
+    ∀
+      (ιP : Type) [Fintype ιP]
+      (μP νP : ιP → ((AdeleRing (𝓞 K) K)ˣ →* ℂˣ))
+      (_hμ : ∀ e, IsUnitaryChar (𝓞 K) K (μP e)) (_hν : ∀ e, IsUnitaryChar (𝓞 K) K (νP e))
+      (_hμic : ∀ e, IsIdeleClassChar (𝓞 K) K (μP e)) (_hνic : ∀ e, IsIdeleClassChar (𝓞 K) K (νP e))
+      (_hμc : ∀ e, Continuous fun x : (AdeleRing (𝓞 K) K)ˣ => ((μP e x : ℂˣ) : ℂ))
+      (_hνc : ∀ e, Continuous fun x : (AdeleRing (𝓞 K) K)ˣ => ((νP e x : ℂˣ) : ℂ))
+      (_hμν : ∀ (e : ιP) (z : (productionPinsOf K (AutomorphicForm.canonicalTruncationDomain K α β)
+            (fun M => principalLevel (𝓞 K) K M ⊓ finiteAdelicGL2Subgroup K) (fun v => heckeGen (𝓞 K) K v)
+            (adelicBox K)).Z),
+        μP e (z : (AdeleRing (𝓞 K) K)ˣ) * νP e (z : (AdeleRing (𝓞 K) K)ˣ) = ξK z)
+      (ψf : ιP → ℂ → AdelicGL2 (𝓞 K) K → ℂ)
+      (_hψf : ∀ e s, IsInducedSection (𝓞 K) K (etaFst (μP e) αm hαm s) (etaSnd (νP e) αm hαm s) (ψf e s))
+      (_hψjc : ∀ e, Continuous (fun p : ℂ × AdelicGL2 (𝓞 K) K => ψf e p.1 p.2))
+      (_hψhol : ∀ e g, Differentiable ℂ (fun s => ψf e s g))
+      (_hψdec : ∀ (e : ιP) (n : ℕ) (σ₀ : ℝ) (C : Set (AdelicGL2 (𝓞 K) K)), IsCompact C →
+        ∃ m : ℝ → ℝ, Integrable m ∧ (∃ B : ℝ, ∀ t, m t ≤ B) ∧ ∀ σ' : ℝ, |σ'| ≤ σ₀ →
+          ∀ (t : ℝ), ∀ g ∈ C, (1 + |t|) ^ n * ‖ψf e ((σ' : ℂ) + (t : ℂ) * Complex.I) g‖ ≤ m t)
+      (ψ : AdelicGL2 (𝓞 K) K → ℂ)
+      (_hψ : AutomorphicForm.IsSlabProfile K (productionPinsOf K (AutomorphicForm.canonicalTruncationDomain K α β)
+            (fun M => principalLevel (𝓞 K) K M ⊓ finiteAdelicGL2Subgroup K) (fun v => heckeGen (𝓞 K) K v)
+            (adelicBox K)).Z ξK ψ)
+      (_hψrep : ∀ (σ' : ℝ) (g : AdelicGL2 (𝓞 K) K),
+        ψ g = ∑ e, (((4 * Real.pi)⁻¹ : ℝ) : ℂ) *
+          ∫ t : ℝ, ψf e ((σ' : ℂ) + (t : ℂ) * Complex.I) g)
+      (f : AdelicGL2 (𝓞 K) K → ℂ) (_hf : Continuous f) (_hfc : HasCompactSupport f),
+      IsFactorizableTestFn K f →
+      IsBiInvariantUnder K (principalLevel (𝓞 K) K N ⊓ finiteAdelicGL2Subgroup K) f →
+      IsArchBiFinite K tysK f →
+    (∀ e s, IsInducedSection (𝓞 K) K (etaFst (μP e) αm hαm s) (etaSnd (νP e) αm hαm s) (convOp K f (ψf e s))) ∧
+    (∀ e, Continuous (fun p : ℂ × AdelicGL2 (𝓞 K) K => convOp K f (ψf e p.1) p.2)) ∧
+    (∀ e g, Differentiable ℂ (fun s => convOp K f (ψf e s) g)) ∧
+    (∀ e s, IsArchKFinite K (convOp K f (ψf e s))) ∧ (∀ e s, IsKfSmooth K (convOp K f (ψf e s))) ∧
+    (∀ (e : ιP) (w : InfinitePlace K), ∃ W : Submodule ℂ (↥(archRowIsometrySubgroup K w) → ℂ),
+      FiniteDimensional ℂ W ∧ ∀ (s : ℂ) (g : AdelicGL2 (𝓞 K) K),
+        (fun k : ↥(archRowIsometrySubgroup K w) => convOp K f (ψf e s) (g * (k : AdelicGL2 (𝓞 K) K))) ∈ W) ∧
+    (∀ (e : ιP) (n : ℕ) (σ₀ : ℝ) (C : Set (AdelicGL2 (𝓞 K) K)), IsCompact C →
+      ∃ m : ℝ → ℝ, Integrable m ∧ (∃ B : ℝ, ∀ t, m t ≤ B) ∧ ∀ σ' : ℝ, |σ'| ≤ σ₀ →
+        ∀ (t : ℝ), ∀ g ∈ C, (1 + |t|) ^ n * ‖convOp K f (ψf e ((σ' : ℂ) + (t : ℂ) * Complex.I)) g‖ ≤ m t) ∧
+    (∀ e (s : ℂ) (g : AdelicGL2 (𝓞 K) K),
+      ∀ u ∈ principalLevel (𝓞 K) K N ⊓ finiteAdelicGL2Subgroup K, convOp K f (ψf e s) (g * u) = convOp K f (ψf e s) g) ∧
+    (∀ e (s : ℂ), convOp K f (ψf e s) ∈ archCutSubmodule K tysK) ∧
+    AutomorphicForm.IsSlabProfile K (productionPinsOf K (AutomorphicForm.canonicalTruncationDomain K α β)
+            (fun M => principalLevel (𝓞 K) K M ⊓ finiteAdelicGL2Subgroup K) (fun v => heckeGen (𝓞 K) K v)
+            (adelicBox K)).Z ξK (convOp K f ψ) ∧
+    (∀ (σ' : ℝ) (g : AdelicGL2 (𝓞 K) K),
+      convOp K f ψ g = ∑ e, (((4 * Real.pi)⁻¹ : ℝ) : ℂ) *
+        ∫ t : ℝ, convOp K f (ψf e ((σ' : ℂ) + (t : ℂ) * Complex.I)) g) ∧
+    (∀ g : AdelicGL2 (𝓞 K) K,
+      convOp K f (AutomorphicForm.pseudoEisenstein K ψ) g = AutomorphicForm.pseudoEisenstein K (convOp K f ψ) g) := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_paleyWiener_convOp_and_convOp_pseudoEisenstein_eq_pseudoEisenstein_convOp_of_isArchBiFinite.solution

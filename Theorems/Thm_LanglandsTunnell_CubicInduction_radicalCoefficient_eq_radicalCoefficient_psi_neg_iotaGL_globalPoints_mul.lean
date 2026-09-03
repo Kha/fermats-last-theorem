@@ -1,0 +1,28 @@
+import Definitions.Def_LanglandsTunnell_CubicInduction_Structure
+import Definitions.Def_NumberField_AdelicBox
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_CubicInduction_radicalCoefficient_eq_radicalCoefficient_psi_neg_iotaGL_globalPoints_mul
+attribute [-instance] instCountableOfNumberField_definitions RestrictedProduct.SecondCountableTopology_of_principal instCountableElemSetSetsCofinite_definitions
+attribute [-simp] ContinuousAddEquiv.restrictedProductPi_apply RestrictedProduct.flatten_homeomorph_apply RestrictedProduct.flatten_homeomorph'_symm_apply ContinuousMulEquiv.restrictedProductPi_symm_apply RestrictedProduct.flatten_homeomorph'_apply RestrictedProduct.flatten_homeomorph_symm_apply ContinuousMulEquiv.restrictedProductPi_apply ContinuousAddEquiv.restrictedProductPi_symm_apply RingEquiv.restrictedProductCongr_symm_apply RingEquiv.restrictedProductCongrRight_apply MulEquiv.restrictedProductCongrRight_apply Equiv.restrictedProductProd_symm_apply_coe Equiv.restrictedProductCongrRight_apply AddEquiv.restrictedProductCongr_apply Equiv.restrictedProductCongrLeft'_symm_apply_apply Equiv.restrictedProductCongr_apply_apply Equiv.restrictedProductCongrLeft_apply_apply RestrictedProduct.flatten_equiv'_apply AddEquiv.restrictedProductCongrRight_apply Equiv.restrictedProductCongr_symm_apply Equiv.restrictedProductCongrRight_symm_apply RestrictedProduct.flatten_equiv'_symm_apply AddEquiv.restrictedProductCongrLeft'_apply Equiv.restrictedProductCongrLeft'_apply RestrictedProduct.flatten_apply RingEquiv.restrictedProductCongr_apply_apply RingEquiv.restrictedProductCongrLeft'_apply Equiv.restrictedProductProd_apply RestrictedProduct.flatten_equiv_apply RestrictedProduct.flatten_equiv_symm_apply LinearEquiv.restrictedProductCongrLeft'_apply RestrictedProduct.not_mem_support RestrictedProduct.mem_structureSubring_iff RestrictedProduct.not_mem_mulSupport RestrictedProduct.support_neg RestrictedProduct.mem_indexSupport_iff RestrictedProduct.mulSupport_inv RestrictedProduct.mapAlongLinearMap_apply
+
+set_option autoImplicit false
+
+open MeasureTheory NumberField AutomorphicForm LanglandsTunnell.CubicInduction
+
+theorem LanglandsTunnell.CubicInduction.radicalCoefficient_eq_radicalCoefficient_psi_neg_iotaGL_globalPoints_mul
+    (ψ : AddChar (AdeleRing (𝓞 ℚ) ℚ) ℂ) (_hψ : IsGlobalAddChar ℚ ψ)
+    (Φ : AdelicGL 3 (𝓞 ℚ) ℚ → ℂ) (_hcont : Continuous Φ)
+    (_hinv : ∀ (δ : Matrix.GeneralLinearGroup (Fin 3) ℚ) (h : AdelicGL 3 (𝓞 ℚ) ℚ),
+      Φ (globalPointsGL 3 (𝓞 ℚ) ℚ δ * h) = Φ h)
+    (γ : Matrix.GeneralLinearGroup (Fin 2) ℚ) (v : Fin 2 → ℚ)
+    (_hv : Matrix.vecMul ![0, 1] (γ : Matrix (Fin 2) (Fin 2) ℚ) = v)
+    (g : AdelicGL 3 (𝓞 ℚ) ℚ) :
+    (∫ z : AdeleRing (𝓞 ℚ) ℚ, ∫ y : AdeleRing (𝓞 ℚ) ℚ,
+        Φ (radicalP21 ![z, y] * g) *
+          ψ (-(algebraMap ℚ (AdeleRing (𝓞 ℚ) ℚ) (v 0) * z + algebraMap ℚ (AdeleRing (𝓞 ℚ) ℚ) (v 1) * y))
+      ∂(ProbabilityTheory.cond (NumberField.AdelicHaar.adelicAddHaar (𝓞 ℚ) ℚ) (AdelicBox.adelicBox ℚ))
+      ∂(ProbabilityTheory.cond (NumberField.AdelicHaar.adelicAddHaar (𝓞 ℚ) ℚ) (AdelicBox.adelicBox ℚ))) =
+    ∫ z : AdeleRing (𝓞 ℚ) ℚ, ∫ y : AdeleRing (𝓞 ℚ) ℚ,
+        Φ (radicalP21 ![z, y] * (iotaGL (globalPointsGL 2 (𝓞 ℚ) ℚ γ) * g)) * ψ (-y)
+      ∂(ProbabilityTheory.cond (NumberField.AdelicHaar.adelicAddHaar (𝓞 ℚ) ℚ) (AdelicBox.adelicBox ℚ))
+      ∂(ProbabilityTheory.cond (NumberField.AdelicHaar.adelicAddHaar (𝓞 ℚ) ℚ) (AdelicBox.adelicBox ℚ)) := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_CubicInduction_radicalCoefficient_eq_radicalCoefficient_psi_neg_iotaGL_globalPoints_mul.solution

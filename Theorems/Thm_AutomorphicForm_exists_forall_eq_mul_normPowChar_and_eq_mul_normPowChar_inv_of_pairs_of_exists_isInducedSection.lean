@@ -1,0 +1,80 @@
+import Definitions.Def_AutomorphicForm_TwistedOrbital
+import Definitions.Def_NumberField_PrincipalLevel
+import Definitions.Def_NumberField_TateGlobalZeta
+import Definitions.Def_LanglandsTunnell_ConverseData
+import Definitions.Def_LocalLanglands_HeckeCosetLocal
+import Definitions.Def_AutomorphicForm_AdelicKernel
+import Definitions.Def_AutomorphicForm_CanonicalTruncationDomain
+import Definitions.Def_AutomorphicForm_GeometricRemainder
+import Definitions.Def_AutomorphicForm_InducedSection
+import Definitions.Def_AutomorphicForm_EtaFamily
+import Definitions.Def_AutomorphicForm_WeylIntertwining
+import Definitions.Def_AutomorphicForm_SlabProfile
+import Definitions.Def_AutomorphicForm_TruncationOperator
+import Definitions.Def_AutomorphicForm_CarrierPins
+import Definitions.Def_NumberField_AdelicHeight
+import Definitions.Def_AutomorphicForm_AdelicMaximalCompact
+import Definitions.Def_AutomorphicForm_ArchKFinite
+import Definitions.Def_AutomorphicForm_SmoothAutomorphicFnAt
+import Definitions.Def_NumberField_AdelicHaar
+import Definitions.Def_NumberField_AdelicBox
+import Definitions.Def_AutomorphicForm_RightConvolution
+import Definitions.Def_AutomorphicForm_AutomorphicFnAt
+import Definitions.Def_AutomorphicForm_ResidualSpan
+import Definitions.Def_NumberField_NormPowChar
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_exists_forall_eq_mul_normPowChar_and_eq_mul_normPowChar_inv_of_pairs_of_exists_isInducedSection
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instCountableOfNumberField_definitions
+
+set_option autoImplicit false
+
+open MeasureTheory NumberField NumberField.AdelicLevel NumberField.AdelicBox NumberField.AdelicHaar
+open AutomorphicForm.WindowedSiegel AutomorphicForm.SiegelCovering
+open IsDedekindDomain
+open scoped ComplexConjugate NNReal
+
+attribute [local instance] NumberField.AdelicHaar.glBorel
+
+theorem AutomorphicForm.exists_forall_eq_mul_normPowChar_and_eq_mul_normPowChar_inv_of_pairs_of_exists_isInducedSection
+    (K : Type) [Field K] [NumberField K] [DecidableEq (HeightOneSpectrum (𝓞 K))]
+    (ξK : (⊤ : Subgroup (AdeleRing (𝓞 K) K)ˣ) →* ℂˣ)
+    (N : Ideal (𝓞 K)) (tysK : ArchTypeFamily K) :
+    let αm : (AdeleRing (𝓞 K) K)ˣ →* ℝˣ :=
+      ((NNReal.toRealHom : ℝ≥0 →+* ℝ).toMonoidHom.comp
+        (distribHaarChar (AdeleRing (𝓞 K) K))).toHomUnits
+    letI := adeleBorel (𝓞 K) K
+    ∀ (hαm : ∀ x, 0 < ((αm x : ℝˣ) : ℝ))
+      (ιE : Type)
+      (μ ν : ιE → ((AdeleRing (𝓞 K) K)ˣ →* ℂˣ))
+      (_hμ : ∀ e, IsUnitaryChar (𝓞 K) K (μ e)) (_hν : ∀ e, IsUnitaryChar (𝓞 K) K (ν e))
+      (_hμic : ∀ e, IsIdeleClassChar (𝓞 K) K (μ e)) (_hνic : ∀ e, IsIdeleClassChar (𝓞 K) K (ν e))
+      (_hμc : ∀ e, Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((μ e z : ℂˣ) : ℂ))
+      (_hνc : ∀ e, Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((ν e z : ℂˣ) : ℂ))
+      (_hμν : ∀ (e : ιE) (z : (AdeleRing (𝓞 K) K)ˣ), μ e z * ν e z = ξK ⟨z, Subgroup.mem_top z⟩)
+      (_hpairs : ∀ (μ' ν' : (AdeleRing (𝓞 K) K)ˣ →* ℂˣ),
+        IsUnitaryChar (𝓞 K) K μ' → IsUnitaryChar (𝓞 K) K ν' →
+        IsIdeleClassChar (𝓞 K) K μ' → IsIdeleClassChar (𝓞 K) K ν' →
+        (Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((μ' z : ℂˣ) : ℂ)) →
+        (Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((ν' z : ℂˣ) : ℂ)) →
+        (∀ z : (AdeleRing (𝓞 K) K)ˣ, μ' z * ν' z = ξK ⟨z, Subgroup.mem_top z⟩) →
+        ∀ (t : ℝ) (φ₀ : AdelicGL2 (𝓞 K) K → ℂ),
+        IsInducedSection (𝓞 K) K (etaFst μ' αm hαm ((t : ℂ) * Complex.I)) (etaSnd ν' αm hαm ((t : ℂ) * Complex.I)) φ₀ →
+        Continuous φ₀ → IsArchKFinite K φ₀ →
+        (∀ (g : AdelicGL2 (𝓞 K) K), ∀ u ∈ principalLevel (𝓞 K) K N ⊓ finiteAdelicGL2Subgroup K, φ₀ (g * u) = φ₀ g) →
+        φ₀ ∈ archCutSubmodule K tysK → φ₀ ≠ 0 →
+        ∃ e : ιE, ∀ z ∈ NumberField.TateGlobal.normOneIdeles K, μ e z = μ' z ∧ ν e z = ν' z)
+      (ιP : Type)
+      (μP νP : ιP → ((AdeleRing (𝓞 K) K)ˣ →* ℂˣ))
+      (_hμP : ∀ i, IsUnitaryChar (𝓞 K) K (μP i)) (_hνP : ∀ i, IsUnitaryChar (𝓞 K) K (νP i))
+      (_hμPic : ∀ i, IsIdeleClassChar (𝓞 K) K (μP i)) (_hνPic : ∀ i, IsIdeleClassChar (𝓞 K) K (νP i))
+      (_hμPc : ∀ i, Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((μP i z : ℂˣ) : ℂ))
+      (_hνPc : ∀ i, Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((νP i z : ℂˣ) : ℂ))
+      (_hμνP : ∀ (i : ιP) (z : (AdeleRing (𝓞 K) K)ˣ), μP i z * νP i z = ξK ⟨z, Subgroup.mem_top z⟩)
+      (_hsec : ∀ i : ιP, ∃ (t : ℝ) (φ₀ : AdelicGL2 (𝓞 K) K → ℂ),
+        IsInducedSection (𝓞 K) K (etaFst (μP i) αm hαm ((t : ℂ) * Complex.I)) (etaSnd (νP i) αm hαm ((t : ℂ) * Complex.I)) φ₀ ∧
+        Continuous φ₀ ∧ IsArchKFinite K φ₀ ∧
+        (∀ (g : AdelicGL2 (𝓞 K) K), ∀ u ∈ principalLevel (𝓞 K) K N ⊓ finiteAdelicGL2Subgroup K, φ₀ (g * u) = φ₀ g) ∧
+        φ₀ ∈ archCutSubmodule K tysK ∧ φ₀ ≠ 0),
+    ∃ (em : ιP → ιE) (τ : ιP → ℝ),
+      ∀ i : ιP, μP i = μ (em i) * NumberField.TateGlobal.normPowChar K (τ i) ∧
+        νP i = ν (em i) * (NumberField.TateGlobal.normPowChar K (τ i))⁻¹ := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_exists_forall_eq_mul_normPowChar_and_eq_mul_normPowChar_inv_of_pairs_of_exists_isInducedSection.solution

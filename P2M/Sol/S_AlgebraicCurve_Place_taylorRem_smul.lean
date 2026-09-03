@@ -1,0 +1,41 @@
+import Definitions.Def_AlgebraicCurve_PlaceTaylorCoeff
+import Definitions.Def_AlgebraicCurve_PlaceEvaluationAlgebra
+import Theorems.Thm_AlgebraicCurve_Place_taylorRem_mem_toValuationSubring
+import P2M.Util
+namespace P2MW.S_AlgebraicCurve_Place_taylorRem_smul
+
+set_option autoImplicit false
+
+open AlgebraicCurve AlgebraicCurve.Place
+
+namespace P2MJetT4
+open AlgebraicCurve AlgebraicCurve.Place
+variable {K F : Type*} [Field K] [Field F] [Algebra K F]
+
+theorem evalAt_add_of_mem (v : Place K F) (hv : v.IsRational) {f g : F}
+    (hf : f ∈ v.toValuationSubring) (hg : g ∈ v.toValuationSubring) :
+    v.evalAt (f + g) = v.evalAt f + v.evalAt g := by
+  apply v.algebraMap_residueField_injective
+  rw [map_add, v.algebraMap_evalAt hv (add_mem hf hg), v.algebraMap_evalAt hv hf,
+    v.algebraMap_evalAt hv hg, ← map_add]
+  rfl
+
+theorem evalAt_smul_of_mem (v : Place K F) (hv : v.IsRational) (c : K) {f : F}
+    (hf : f ∈ v.toValuationSubring) : v.evalAt (c • f) = c * v.evalAt f := by
+  rw [Algebra.smul_def, v.evalAt_mul_of_mem hv (v.algebraMap_mem' c) hf, v.evalAt_algebraMap_eq]
+
+end P2MJetT4
+
+open P2MJetT4 in
+theorem solution
+    {K F : Type*} [Field K] [Field F] [Algebra K F]
+    (v : Place K F) (hv : v.IsRational) {t : F} (ht : v.ord t = 1) {f : F}
+    (hf : f ∈ v.toValuationSubring) (c : K) (r : ℕ) :
+    taylorRem v t (c • f) r = c • taylorRem v t f r := by
+  induction r with
+  | zero => rfl
+  | succ r ih =>
+    have hfr := taylorRem_mem_toValuationSubring v hv ht hf r
+    rw [taylorRem_succ, taylorRem_succ, ih, evalAt_smul_of_mem v hv c hfr, map_mul,
+      Algebra.smul_def, Algebra.smul_def]
+    ring

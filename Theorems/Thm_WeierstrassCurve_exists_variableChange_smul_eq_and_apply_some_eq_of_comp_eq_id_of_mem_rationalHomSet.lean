@@ -1,0 +1,6 @@
+import Mathlib
+import Definitions.Def_WeierstrassCurve_RationalEnd
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_exists_variableChange_smul_eq_and_apply_some_eq_of_comp_eq_id_of_mem_rationalHomSet
+
+theorem WeierstrassCurve.exists_variableChange_smul_eq_and_apply_some_eq_of_comp_eq_id_of_mem_rationalHomSet {F : Type*} [Field F] (k : Type*) [Field k] [Algebra F k] [IsAlgClosed k] [DecidableEq k] (W W' : WeierstrassCurve F) [W.IsElliptic] [W'.IsElliptic] (u : (W.baseChange k).toAffine.Point →+ (W'.baseChange k).toAffine.Point) (hu : u ∈ WeierstrassCurve.rationalHomSet k W W') (u' : (W'.baseChange k).toAffine.Point →+ (W.baseChange k).toAffine.Point) (hu' : u' ∈ WeierstrassCurve.rationalHomSet k W' W) (h : u'.comp u = AddMonoidHom.id ((W.baseChange k).toAffine.Point)) (h' : u.comp u' = AddMonoidHom.id ((W'.baseChange k).toAffine.Point)) : ∃ γ : WeierstrassCurve.VariableChange F, γ • W = W' ∧ ∃ B : Set k, B.Finite ∧ ∀ (x y : k) (hxy : (W.baseChange k).toAffine.Nonsingular x y), x ∉ B → ∃ hxy', u (.some x y hxy) = .some (algebraMap F k ((γ.u⁻¹ : Fˣ) : F) ^ 2 * (x - algebraMap F k γ.r)) (algebraMap F k ((γ.u⁻¹ : Fˣ) : F) ^ 3 * (y - algebraMap F k γ.t - algebraMap F k γ.s * (x - algebraMap F k γ.r))) hxy' := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_exists_variableChange_smul_eq_and_apply_some_eq_of_comp_eq_id_of_mem_rationalHomSet.solution

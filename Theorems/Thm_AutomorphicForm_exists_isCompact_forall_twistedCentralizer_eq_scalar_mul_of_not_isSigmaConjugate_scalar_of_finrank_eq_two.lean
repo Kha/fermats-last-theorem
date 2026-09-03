@@ -1,0 +1,29 @@
+import Definitions.Def_AutomorphicForm_TwistedOrbital
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_exists_isCompact_forall_twistedCentralizer_eq_scalar_mul_of_not_isSigmaConjugate_scalar_of_finrank_eq_two
+
+set_option autoImplicit false
+
+open MeasureTheory NumberField
+open IsDedekindDomain
+open scoped TensorProduct
+open scoped TensorProduct.RightActions
+
+theorem
+  AutomorphicForm.exists_isCompact_forall_twistedCentralizer_eq_scalar_mul_of_not_isSigmaConjugate_scalar_of_finrank_eq_two
+    (K L : Type) [Field K] [NumberField K] [Field L] [NumberField L] [Algebra K L]
+    (h2 : Module.finrank K L = 2) (σ : L ≃ₐ[K] L)
+    (hgen : ∀ τ : L ≃ₐ[K] L, τ ∈ Subgroup.zpowers σ)
+    (v : HeightOneSpectrum (𝓞 K))
+    (c : (v.adicCompletion K)ˣ)
+    (δ : GL (Fin 2) (L ⊗[K] v.adicCompletion K))
+    (hδ : AutomorphicForm.IsNormOf K L (v.adicCompletion K) σ (Matrix.GeneralLinearGroup.scalar (Fin 2) c) δ)
+    (hδq : ∀ z : (L ⊗[K] v.adicCompletion K)ˣ,
+      ¬ AutomorphicForm.IsSigmaConjugate K L (v.adicCompletion K) σ δ (Matrix.GeneralLinearGroup.scalar (Fin 2) z)) :
+    ∃ C : Set (GL (Fin 2) (L ⊗[K] v.adicCompletion K)), IsCompact C ∧
+      C ⊆ (AutomorphicForm.twistedCentralizer K L (v.adicCompletion K) σ δ :
+        Set (GL (Fin 2) (L ⊗[K] v.adicCompletion K))) ∧
+      ∀ t ∈ AutomorphicForm.twistedCentralizer K L (v.adicCompletion K) σ δ,
+        ∃ e : (v.adicCompletion K)ˣ, ∃ k ∈ C,
+          t = AutomorphicForm.toTensorGL K L (v.adicCompletion K)
+            (Matrix.GeneralLinearGroup.scalar (Fin 2) e) * k := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_exists_isCompact_forall_twistedCentralizer_eq_scalar_mul_of_not_isSigmaConjugate_scalar_of_finrank_eq_two.solution

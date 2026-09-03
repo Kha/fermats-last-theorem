@@ -1,0 +1,33 @@
+import Mathlib
+import Definitions.Def_GaloisRep_Flat
+import Definitions.Def_TateCurve_TateParameter
+import Definitions.Def_TateCurve_TorsionParametrization
+import Definitions.Def_FLTPrelim_GaloisRep
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_exists_finiteFlat_prolongation_torsion_padicInt_of_tateParameter_of_peuRamifiee
+attribute [-instance] PadicInt.KummerCarrier.instFreeA PadicInt.KummerCarrier.instFiniteA
+attribute [-simp] WeierstrassCurve.Affine.vcY_vcYInv WeierstrassCurve.Affine.vcXInv_vcX WeierstrassCurve.Affine.Point.vcFun_zero WeierstrassCurve.Affine.vcX_vcXInv WeierstrassCurve.Affine.vcYInv_vcY WeierstrassCurve.Affine.Point.vcInvFun_zero WeierstrassCurve.Universal.halveX_zero WeierstrassCurve.Universal.specialize_X_one WeierstrassCurve.Universal.coeff_halve WeierstrassCurve.Universal.specialize_X_two WeierstrassCurve.Universal.halveCoeff_zero WeierstrassCurve.Universal.specialize_X_four WeierstrassCurve.Universal.coeff_halveX WeierstrassCurve.Universal.specialize_X_three WeierstrassCurve.Universal.specialize_X_zero
+
+open scoped NNReal
+open scoped WeierstrassCurve.Affine in
+open WeierstrassCurve WeierstrassCurve.Affine.Point in
+theorem WeierstrassCurve.exists_finiteFlat_prolongation_torsion_padicInt_of_tateParameter_of_peuRamifiee
+    (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hΔ : W.Δ ≠ 0)
+    (hpΔ : (p : ℤ) ∣ W.Δ) (hpc₄ : ¬ (p : ℤ) ∣ W.c₄)
+    (hpr : p ∣ padicValInt p W.Δ)
+    (qT : ℚ_[p]) (hqT0 : qT ≠ 0) (hqT1 : ‖qT‖₊ < 1)
+    (hj : (TateCurve.curve qT).c₄ ^ 3
+        = (((W.map (Int.castRingHom ℚ)).c₄ ^ 3 / (W.map (Int.castRingHom ℚ)).Δ : ℚ) : ℚ_[p])
+            * (TateCurve.curve qT).Δ)
+    (hv : ‖qT‖₊ = ((p : ℝ≥0) ^ padicValInt p W.Δ)⁻¹) :
+    letI : DecidableEq (AlgebraicClosure ℚ_[p]) := Classical.decEq _
+    ∃ (H : Type) (_ : CommRing H) (_ : HopfAlgebra ℤ_[p] H),
+      Module.Finite ℤ_[p] H ∧
+      Module.Flat ℤ_[p] H ∧
+      Coalgebra.IsCocomm ℤ_[p] H ∧
+      ∃ e : WithConv (H →ₐ[ℤ_[p]] AlgebraicClosure ℚ_[p]) ≃
+          Submodule.torsionBy ℤ ((W.map (Int.castRingHom ℚ_[p]))⁄(AlgebraicClosure ℚ_[p])).Point p,
+        (∀ f g, e (f * g) = e f + e g) ∧
+        ∀ (σ : AlgebraicClosure ℚ_[p] ≃ₐ[ℚ_[p]] AlgebraicClosure ℚ_[p])
+          (f g : WithConv (H →ₐ[ℤ_[p]] AlgebraicClosure ℚ_[p])),
+          (∀ h : H, g h = σ (f h)) → e g = σ • (e f) := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_exists_finiteFlat_prolongation_torsion_padicInt_of_tateParameter_of_peuRamifiee.solution

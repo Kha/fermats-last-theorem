@@ -1,0 +1,21 @@
+diff -ru a/src/tc.rs b/src/tc.rs
+--- a/src/tc.rs
++++ b/src/tc.rs
+@@ -126,8 +126,16 @@
+                         .stack_size(crate::STACK_SIZE)
+                         .spawn_scoped(sco, || loop {
+                             let idx = task_num.fetch_add(1, Relaxed);
+-                            if let Some((_, declar)) = self.declars.get_index(idx) {
++                            if let Some((name, declar)) = self.declars.get_index(idx) {
++                                // instrumentation: per-declaration START/DONE lines on stderr
++                                let nm = self.with_ctx(|ctx| format!("{:?}", ctx.debug_print(*name)));
++                                let th = thread::current().name().unwrap_or("?").to_string();
++                                let now = || std::time::SystemTime::now()
++                                    .duration_since(std::time::UNIX_EPOCH).map(|d| d.as_secs()).unwrap_or(0);
++                                eprintln!("{} START {} {} {}", now(), idx, th, nm);
++                                let t0 = std::time::Instant::now();
+                                 self.check_declar(declar);
++                                eprintln!("{} DONE {} {} {:.2}s", now(), idx, th, t0.elapsed().as_secs_f64());
+                             } else {
+                                 break
+                             }

@@ -1,0 +1,8 @@
+import Definitions.Def_AutomorphicForm_ProductionPinsGeneral
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_SiegelCovering_coversModCentre_productionPinsGeneral_D_rat
+
+set_option autoImplicit false
+
+theorem AutomorphicForm.SiegelCovering.coversModCentre_productionPinsGeneral_D_rat :
+    CoversModCentre ℚ (productionPinsGeneral ℚ).D := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_SiegelCovering_coversModCentre_productionPinsGeneral_D_rat.solution

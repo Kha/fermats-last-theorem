@@ -1,0 +1,32 @@
+{
+  "export_file_path": "solution.export",
+  "use_stdin": false,
+  "num_threads": 16,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "nat_extension": true,
+  "string_extension": true,
+  "pp_declars": [
+    "FLT_for_comparator",
+    "FLT_mathlib_for_comparator",
+    "fermat_last_theorem",
+    "FermatLastTheorem"
+  ],
+  "pp_output_path": "pp.txt",
+  "pp_to_stdout": false,
+  "pp_options": {
+    "all": false,
+    "explicit": false,
+    "universes": false,
+    "notation": true,
+    "proofs": false,
+    "indent": 2,
+    "width": 100,
+    "declar_sep": "\n\n"
+  },
+  "print_success_message": true
+}

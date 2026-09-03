@@ -1,0 +1,25 @@
+import Mathlib
+import Definitions.Def_ModularCurve_PlaceWidth
+import Definitions.Def_ModularCurve_CharLDegeneracyHecke
+import Definitions.Def_ModularCurve_QExpansionDiff
+import Definitions.Def_AlgebraicCurve_Correspondence
+import Definitions.Def_ModularCurve_CharLSpecialFibreLevelNDictionary
+import Definitions.Def_ModularCurve_ModPFormFn
+import Definitions.Def_CuspForm_ModPForms
+import Definitions.Def_AlgebraicCurve_Repartitions
+import Definitions.Def_ModularCurve_WeightDivisor
+import Definitions.Def_ModularCurve_SSCarrier
+import Definitions.Def_ModularCurve_SSHeckeV2
+import P2M.Util
+import P2M.Sol.S_ModularCurve_eq_zero_of_isModPCuspFormFn_zero
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA AlgebraicCurve.Place.instIsPrimeCenter AlgebraicCurve.Place.instIsFractionRingIntegralClosureAt AlgebraicCurve.Place.instIsTorsionFreeSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.Place.instIsDedekindDomainIntegralClosureAt AlgebraicCurve.Place.instFiniteSubtypeMemValuationSubringToValuationSubringIntegralClosureAt ModularCurve.instSMulAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange ModularCurve.instDistribMulActionAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.CharPReduction.coeffRed_coeff ModularCurve.CharPReduction.redLocHom_apply ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL AlgebraicCurve.Place.placeOfPrime_toValuationSubring AlgebraicCurve.Place.mem_fiberOver AlgebraicCurve.Place.fiberEquiv_symm_apply AlgebraicCurve.Place.fiberEquiv_apply AlgebraicCurve.Place.centerHeightOneSpectrum_asIdeal ModularCurve.coe_towerInclBar ModularCurve.coe_towerSubstBar ModularCurve.coe_heckeBetaBarRingHom ModularCurve.coe_heckeBetaBar ModularCurve.coe_heckeAlphaBar ModularCurve.baseAut_arithmeticGalois ModularCurve.JZero.torsionGaloisRep_apply ModularCurve.coe_arithmeticRingAut_apply ModularCurve.toRingAut_arithmeticGalois
+set_option autoImplicit false
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+open AlgebraicCurve ModularCurve
+
+theorem ModularCurve.eq_zero_of_isModPCuspFormFn_zero
+    (p : ℕ) [Fact p.Prime] (K : Type) [Field K] [CharP K p] [IsAlgClosed K] (N : ℕ) [NeZero N] (hN : (N : K) ≠ 0)
+    (G : ↥(modularFunctionFieldC K N)) (hG : ModularCurve.IsModPCuspFormFn K 0 (G : LaurentSeries K)) :
+    G = 0 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_eq_zero_of_isModPCuspFormFn_zero.solution

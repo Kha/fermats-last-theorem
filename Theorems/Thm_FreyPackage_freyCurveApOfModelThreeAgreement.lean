@@ -1,0 +1,6 @@
+import Definitions.Def_FreyPackage_RouteAReversePinSeam
+import P2M.Util
+import P2M.Sol.S_FreyPackage_freyCurveApOfModelThreeAgreement
+attribute [-simp] FLT.ModelTransfer.reducedChange_r FLT.ModelTransfer.reducedChange_t FLT.ModelTransfer.reducedChange_s FLT.ModelTransfer.ClearedData.mk.injEq FLT.ModelTransfer.reducedChange_u FLT.ModelTransfer.ClearedData.mk.sizeOf_spec FLT.ModelTransfer.reducedChange_u_inv WeierstrassCurve.Affine.vcY_vcYInv WeierstrassCurve.Affine.vcXInv_vcX WeierstrassCurve.Affine.Point.vcFun_zero WeierstrassCurve.Affine.vcX_vcXInv WeierstrassCurve.Affine.vcYInv_vcY WeierstrassCurve.Affine.Point.vcInvFun_zero
+
+theorem FreyPackage.freyCurveApOfModelThreeAgreement (P : FreyPackage) : P.FreyCurveApOfModelThreeAgreement := by p2m_exact_reverting @_root_.P2MW.S_FreyPackage_freyCurveApOfModelThreeAgreement.solution

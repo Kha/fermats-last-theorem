@@ -1,0 +1,110 @@
+import Mathlib
+import Definitions.Def_ModularCurve_NodeLocalized
+import Definitions.Def_ModularCurve_NodeDescent
+import Definitions.Def_ModularCurve_SupersingularModuli
+import Definitions.Def_ModularCurve_JWidth
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_crossingPresentation_modularLocalizedAtPoint_coeffSubring_of_inertQuadratic
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA AlgebraicCurve.Place.instIsScalarTowerSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Divisor.instDistribMulActionAlgEquiv AlgebraicCurve.Place.instSMulAlgEquiv AlgebraicCurve.Place.instIsPrincipalIdealRingSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Place.instIsDiscreteValuationRingSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Pic0.instDistribMulActionAlgEquiv AlgebraicCurve.Place.instAlgebraSubtypeMemValuationSubringToValuationSubring AlgebraicCurve.Place.instMulActionAlgEquiv AlgebraicCurve.Pic0.instSMulAlgEquiv ModularCurve.instIsDomainTensorProduct AlgebraicClosure.Rat.isGalois ModularCurve.instSMulAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange ModularCurve.instDistribMulActionAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange AlgebraicCurve.SemilinearAut.instDistribMulActionSubtypeProdRingAutMemSubgroupPic0 AlgebraicCurve.SemilinearAut.instDistribMulActionSubtypeProdRingAutMemSubgroupDivisor AlgebraicCurve.Pic0.instModuleZModTorsion AlgebraicCurve.SemilinearAut.instSMulSubtypeProdRingAutMemSubgroupPlace AlgebraicCurve.SemilinearAut.instDistribMulActionTorsion AlgebraicCurve.SemilinearAut.instSMulSubtypeProdRingAutMemSubgroupPic0 AlgebraicCurve.SemilinearAut.instSMulTorsion AlgebraicCurve.SemilinearAut.instMulActionSubtypeProdRingAutMemSubgroupPlace AlgebraicCurve.SemilinearAut.instSMulCommClassZModTorsion AlgebraicCurve.SemilinearAut.instMulSemiringActionSubtypeProdRingAutMemSubgroup AlgebraicCurve.Place.instIsPrimeCenter AlgebraicCurve.Place.instIsFractionRingIntegralClosureAt AlgebraicCurve.Place.instIsTorsionFreeSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.Place.instIsDedekindDomainIntegralClosureAt AlgebraicCurve.Place.instFiniteSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion AlgebraicCurve.IsCurveOver.instNontrivialKaehler AlgebraicCurve.IsCurveOver.instFreeKaehler AlgebraicCurve.IsCurveOver.toHasPrincipalDivisors AlgebraicCurve.IsCurveOver.instFiniteResidue AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation instDecEqAlgebraicClosureRat
+attribute [-instance] WeierstrassCurve.Affine.Point.instDistribMulActionAlgEquiv WeierstrassCurve.Affine.Point.instModuleZModTorsionBy WeierstrassCurve.Affine.Point.instSMulTorsionBy WeierstrassCurve.Affine.Point.instDistribMulActionTorsionBy WeierstrassCurve.Affine.Point.instSMulAlgEquiv WeierstrassCurve.Affine.Point.instSMulCommClassAlgEquivZModTorsionBy ModularCurve.NodeLocalized.isLocalization_nodeDenominators ModularCurve.NodeLocalized.algebraEvalRange ModularCurve.NodeLocalized.isLocalRing_modularLocalizedAtPoint
+attribute [-simp] ModularCurve.reduceModBivar_C_X ModularCurve.laurentMap_coeff ModularCurve.reduceModBivar_X ModularCurve.laurentMap_single ModularCurve.evalAtJInt_X ModularCurve.evalAtJMod_X ModularCurve.jqNMod_one ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL ModularCurve.qInftyPlaceBar_toValuationSubring ModularCurve.qSeriesBar_zero ModularCurve.qSeriesBar_add ModularCurve.cuspInftyFull_toValuationSubring ModularCurve.qInftyPlaceRat_toValuationSubring ModularCurve.qSeriesBar_mul ModularCurve.qSeriesBar_div ModularCurve.qSeriesBar_eq_zero_iff ModularCurve.coe_uniformizerBar ModularCurve.qSeriesBar_pow ModularCurve.cuspInfty_toValuationSubring ModularCurve.qSeriesBar_one ModularCurve.qSeriesBar_inv
+attribute [-simp] ModularCurve.qSeriesBar_sub ModularCurve.qSeriesBar_neg AlgebraicCurve.Place.mk.injEq AlgebraicCurve.Divisor.degree_single AlgebraicCurve.Divisor.smul_single AlgebraicCurve.Place.smul_toValuationSubring AlgebraicCurve.Place.heightOneSpectrum_asIdeal AlgebraicCurve.Place.coe_algebraMap AlgebraicCurve.Place.ord_one AlgebraicCurve.Place.coe_smulRingEquiv_apply AlgebraicCurve.Pic0.coe_degZeroSMulHom AlgebraicCurve.Place.deg_smul AlgebraicCurve.Pic0.mk_zero AlgebraicCurve.Place.mk.sizeOf_spec AlgebraicCurve.Divisor.degree_smul AlgebraicCurve.Pic0.mk_add AlgebraicCurve.Place.ord_zero AlgebraicCurve.Place.ofHeightOneSpectrum_toValuationSubring ModularCurve.coe_baseChangeEquiv_apply ModularCurve.baseChangeHom_tmul ModularCurve.coe_cuspidalDivisor₀ ModularCurve.baseAut_arithmeticGalois ModularCurve.JZero.torsionGaloisRep_apply ModularCurve.coe_arithmeticRingAut_apply ModularCurve.toRingAut_arithmeticGalois AlgebraicCurve.SemilinearAut.toRingAut_inv AlgebraicCurve.SemilinearAut.smul_def AlgebraicCurve.SemilinearAut.smul_single AlgebraicCurve.SemilinearAut.smul_toValuationSubring AlgebraicCurve.SemilinearAut.baseAut_inv AlgebraicCurve.SemilinearAut.baseAut_ofAlgAut AlgebraicCurve.SemilinearAut.toRingAut_ofAlgAut AlgebraicCurve.SemilinearAut.torsionRep_apply AlgebraicCurve.SemilinearAut.toRingAut_one AlgebraicCurve.SemilinearAut.deg_smul AlgebraicCurve.SemilinearAut.degree_smul AlgebraicCurve.SemilinearAut.coe_degZeroSMulHom AlgebraicCurve.SemilinearAut.baseAut_mul AlgebraicCurve.SemilinearAut.coe_smulValuationSubringEquiv_apply AlgebraicCurve.SemilinearAut.baseAut_one
+attribute [-simp] AlgebraicCurve.SemilinearAut.ofAlgAut_smul AlgebraicCurve.SemilinearAut.coe_torsion_smul AlgebraicCurve.SemilinearAut.toRingAut_mul AlgebraicCurve.Place.placeOfPrime_toValuationSubring AlgebraicCurve.Place.mem_fiberOver AlgebraicCurve.Place.fiberEquiv_symm_apply AlgebraicCurve.Place.fiberEquiv_apply AlgebraicCurve.Place.centerHeightOneSpectrum_asIdeal AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom AlgebraicCurve.IsFrobeniusEndo.frobNormRingHom_apply ModularCurve.frobeniusPushforwardGeomLevelPic0_mk ModularCurve.coe_frobeniusGeomLevelEquiv_apply ModularCurve.coe_frobeniusPushforwardGeomLevelDegZero ModularCurve.heckeFibreGeomLevelPic0OfIsCurveOver_mk ModularCurve.frobeniusGeomLevel_apply_coe ModularCurve.frobeniusPullbackGeomLevelPic0OfIsCurveOver_mk ModularCurve.coe_heckeFibreGeomLevelDegZero ModularCurve.coe_frobeniusPullbackGeomLevelDegZero ModularCurve.frobeniusPullbackGeomLevelPic0_mk ModularCurve.frobeniusPullbackGeomLevel_single ModularCurve.heckeFibreGeomLevelPic0_mk ModularCurve.frobeniusPushforwardGeomLevelPic0OfIsCurveOver_mk ModularCurve.frobeniusPushforwardGeomLevel_single ModularCurve.qExpandAlgC_apply AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint AlgebraicCurve.Divisor.degree_pushforwardAlong AlgebraicCurve.Pic0.coe_degZeroCorrespondence
+attribute [-simp] AlgebraicCurve.Place.mem_fiberAlong AlgebraicCurve.coe_frobeniusPushforwardDegZero AlgebraicCurve.IsFrobeniusEndo.coe_frobeniusPullbackDegZero ModularCurve.aeval_heckeGen ModularCurve.coe_mTorsionGaloisRep_apply ModularCurve.eisensteinSystem_of_dvd ModularCurve.eisensteinSystem_of_not_dvd FreyPackage.mk.sizeOf_spec FreyPackage.mk.injEq WeierstrassCurve.Affine.Point.galoisRepModuleEnd_apply ModularCurve.eisensteinNumerator_nineteen ModularCurve.eisensteinNumerator_seventeen ModularCurve.eisensteinNumerator_eleven ModularCurve.eisensteinNumerator_five ModularCurve.eisensteinNumerator_seven ModularCurve.eisensteinNumerator_twentythree ModularCurve.eisensteinNumerator_thirteen ModularCurve.constantCoeff_dedekindEtaUnitQ ModularCurve.coe_towerInclBar ModularCurve.coe_towerSubstBar ModularCurve.coe_heckeBetaBarRingHom ModularCurve.coe_heckeBetaBar ModularCurve.coe_heckeAlphaBar ModularCurve.NodeLocalized.coe_modularEvalAt ModularCurve.charLGeomModuliDictionary_single ModularCurve.specializeModuli_single ModularCurve.specializePlace_def AlgebraicCurve.GluedPic0.toPic0Pair_mk AlgebraicCurve.GluedPic0.toPic0Pair_nodeUnit ModularCurve.coe_nodeEquiv_symm_apply ModularCurve.frobNodePair_jOfNode ModularCurve.jOfNode_mk ModularCurve.widthOf_mk ModularCurve.frobNodePairEmb_apply ModularCurve.card_nodePairsOf ModularCurve.frobNodePair_snd ModularCurve.coe_nodeEquiv_apply ModularCurve.frobNodePair_fst
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+set_option autoImplicit false
+
+open IsLocalRing ModularCurve
+open ModularCurve.NodeLocalized hiding span_uniformizer_pair_eq_branches_or_swap_of_maximalIdeal_eq_span
+
+theorem ModularCurve.exists_crossingPresentation_modularLocalizedAtPoint_coeffSubring_of_inertQuadratic
+    {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)}
+    {k : Type*} [Field k] [CharP k q] [DecidableEq k] (red : A →+* k)
+    (a : k) (ha : a ∈ ssJSet q k) (ha2 : a ^ (q ^ 2) = a) (hq : 5 ≤ q)
+    (K : IntermediateField ℚ (AlgebraicClosure ℚ)) [FiniteDimensional ℚ K]
+    (x : ↥(coeffSubring A K)) (hx : redRestrict red K x = a)
+    (ϖ : ↥(coeffSubring A K)) (hϖ : ∀ c : ↥(coeffSubring A K), redRestrict red K c = 0 ↔ ∃ d, c = ϖ * d)
+    (K' : IntermediateField ℚ (AlgebraicClosure ℚ)) [FiniteDimensional ℚ K']
+    (hle : coeffSubring A K ≤ coeffSubring A K')
+    (ζ : ↥(coeffSubring A K')) (α β : ↥(coeffSubring A K))
+    (hζ : ζ ^ 2 = Subring.inclusion hle α * ζ + Subring.inclusion hle β)
+    (hirr : ∀ c : ↥(coeffSubring A K), redRestrict red K (c ^ 2 - α * c - β) ≠ 0)
+    (hbasis : ∀ c : ↥(coeffSubring A K'), ∃ c₀ c₁ : ↥(coeffSubring A K),
+      c = Subring.inclusion hle c₀ + ζ * Subring.inclusion hle c₁)
+    (hϖ' : ∀ c : ↥(coeffSubring A K'), redRestrict red K' c = 0 ↔ ∃ d, c = Subring.inclusion hle ϖ * d)
+    (hK' :
+    ∃ (eK : ℕ) (ε : ↥(coeffSubring A K')), 1 ≤ eK ∧ IsUnit ε ∧ ((q : ℕ) : ↥(coeffSubring A K')) = Subring.inclusion hle ϖ ^ eK * ε ∧
+    ∃ (G' H' w : ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))),
+      IsUnit w ∧
+      G' * H' = (⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))) ^ (jWidth a * eK) * w ∧
+      (∀ [IsLocalRing ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))],
+        IsLocalRing.maximalIdeal ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q)) =
+          Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), G', H'}) ∧
+      (Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), G'}).IsPrime ∧
+      (Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), H'}).IsPrime ∧
+      H' ∉ Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), G'} ∧
+      G' ∉ Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), H'} ∧
+      Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), G'} = Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), (⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.X 1 - MvPolynomial.X 0 ^ q),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q)))} ∧
+      Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), H'} = Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.C (Subring.inclusion hle ϖ)),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q))), (⟨modularEval (1 * q) (coeffSubring A K') (MvPolynomial.X 0 - MvPolynomial.X 1 ^ q),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K') (redRestrict red K') a (a ^ q)))}) :
+    ∃ (eK : ℕ) (ε : ↥(coeffSubring A K)), 1 ≤ eK ∧ IsUnit ε ∧ ((q : ℕ) : ↥(coeffSubring A K)) = ϖ ^ eK * ε ∧
+    ∃ (G' H' w : ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))),
+      IsUnit w ∧
+      G' * H' = (⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))) ^ (jWidth a * eK) * w ∧
+      (∀ [IsLocalRing ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))],
+        IsLocalRing.maximalIdeal ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q)) =
+          Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), G', H'}) ∧
+      (Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), G'}).IsPrime ∧
+      (Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), H'}).IsPrime ∧
+      H' ∉ Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), G'} ∧
+      G' ∉ Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), H'} ∧
+      Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), G'} = Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), (⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.X 1 - MvPolynomial.X 0 ^ q),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q)))} ∧
+      Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), H'} = Ideal.span {(⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.C ϖ),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q))), (⟨modularEval (1 * q) (coeffSubring A K) (MvPolynomial.X 0 - MvPolynomial.X 1 ^ q),
+          modularEval_mem_modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q) _⟩ :
+          ↥(modularLocalizedAtPoint (1 * q) (coeffSubring A K) (redRestrict red K) a (a ^ q)))} := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_crossingPresentation_modularLocalizedAtPoint_coeffSubring_of_inertQuadratic.solution

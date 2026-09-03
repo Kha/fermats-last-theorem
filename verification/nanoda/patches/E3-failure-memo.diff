@@ -1,0 +1,53 @@
+diff -ru a/src/tc.rs b/src/tc.rs
+--- a/src/tc.rs
++++ b/src/tc.rs
+@@ -924,6 +924,12 @@
+         if let Some(easy) = self.def_eq_quick_check(x, y) {
+             return easy
+         }
++        // E3: if this exact question (same ordered pair, same eager-mode flag) was already answered `false`
++        // in this declaration, answer `false` again without recomputing.
++        let e3_key = (x, y, self.ctx.eager_mode);
++        if self.tc_cache.defeq_failure_memo.contains(&e3_key) {
++            return false
++        }
+ 
+         let x_n = self.whnf_no_unfolding_cheap_proj(x);
+         let y_n = self.whnf_no_unfolding_cheap_proj(y);
+@@ -965,6 +971,8 @@
+         };
+         if result {
+             self.tc_cache.eq_cache.union(x, y);
++        } else {
++            self.tc_cache.defeq_failure_memo.insert(e3_key);
+         }
+         result
+     }
+diff -ru a/src/util.rs b/src/util.rs
+--- a/src/util.rs
++++ b/src/util.rs
+@@ -823,6 +823,8 @@
+     pub(crate) eq_cache: UnionFind<ExprPtr<'t>>,
+     /// A cache of congruence failures during the lazy delta step procedure.
+     pub(crate) failure_cache: FxHashSet<(ExprPtr<'t>, ExprPtr<'t>)>,
++    /// E3: per-declaration memo of `def_eq` calls that returned `false` (keyed by the ordered pair and the eager-mode flag).
++    pub(crate) defeq_failure_memo: FxHashSet<(ExprPtr<'t>, ExprPtr<'t>, bool)>,
+     /// Strong reduction is not used during type-checking, this is more of a library/inspection feature.
+     pub(crate) strong_cache: UniqueHashMap<(ExprPtr<'t>, bool, bool), ExprPtr<'t>>,
+ }
+@@ -836,6 +838,7 @@
+             whnf_no_unfolding_cache: new_unique_hash_map(),
+             eq_cache: UnionFind::new(),
+             failure_cache: new_fx_hash_set(),
++            defeq_failure_memo: new_fx_hash_set(),
+             strong_cache: new_unique_hash_map(),
+         }
+     }
+@@ -847,6 +850,7 @@
+         self.whnf_no_unfolding_cache.clear();
+         self.eq_cache.clear();
+         self.failure_cache.clear();
++        self.defeq_failure_memo.clear();
+         self.strong_cache.clear();
+     }
+ }

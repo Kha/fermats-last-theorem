@@ -1,0 +1,23 @@
+import Mathlib
+import Definitions.Def_CerednikDrinfeld_SpecialFormalModule
+import Definitions.Def_CerednikDrinfeld_GradedCartierModuleData
+import Definitions.Def_CerednikDrinfeld_GradedCartierNModule
+import P2M.Util
+import P2M.Sol.S_CerednikDrinfeld_GradedCartierModuleData_phi_iterate_three_eq_zero_of_nMap_eq_zero_of_sq_eq_zero
+attribute [-instance] MvFormalGroup.CartierModule.instAddCommGroup MvFormalGroup.CartierModule.instNeg MvFormalGroup.CartierModule.instAdd MvFormalGroup.CartierModule.instZero MvFormalGroup.WittLaw.instTendstoCofiniteProdMk MvFormalGroup.CartierModule.instModuleWittVector
+attribute [-simp] MvFormalGroup.CartierModule.toPowerSeries_verschiebungInt MvFormalGroup.WittLaw.xTaut_coeff MvFormalGroup.WittLaw.frobPolyFam_apply MvFormalGroup.CartierModule.toPowerSeries_sub MvFormalGroup.WittLaw.verFam_zero MvFormalGroup.WittLaw.verFam_succ MvFormalGroup.CartierModule.toPowerSeries_frobenius MvFormalGroup.CartierModule.toPowerSeries_verschiebung MvFormalGroup.WittLaw.blk_apply MvFormalGroup.WittLaw.weight_apply MvFormalGroup.CartierModule.toPowerSeries_map MvFormalGroup.CartierModule.toPowerSeries_precompFun MvFormalGroup.CartierModule.toPowerSeries_mapFun MvFormalGroup.CartierModule.mk.injEq MvFormalGroup.WittLaw.pairFam_apply MvFormalGroup.CartierModule.endAct_apply MvFormalGroup.WittLaw.frobFam_apply MvFormalGroup.CartierModule.toPowerSeries_zero MvFormalGroup.CartierModule.tangent_apply MvFormalGroup.CartierModule.toPowerSeries_precomp MvFormalGroup.CartierModule.Examples.toPowerSeries_addLinear MvFormalGroup.CartierModule.toPowerSeries_add MvFormalGroup.CartierModule.toPowerSeries_neg MvFormalGroup.CartierModule.mk.sizeOf_spec MvFormalGroup.CartierModule.inBlk_apply MvFormalGroup.WittLaw.teichFam_apply MvFormalGroup.CartierModule.toPowerSeries_homothety MvFormalGroup.WittLaw.verPoly_succ MvFormalGroup.WittLaw.xVec_coeff MvFormalGroup.WittLaw.cVec_coeff MvFormalGroup.WittLaw.cVec_mul MvFormalGroup.WittLaw.mulFam_apply MvFormalGroup.CartierModule.mapLinear_apply MvFormalGroup.WittLaw.cVec_add MvFormalGroup.WittLaw.cVec_zero MvFormalGroup.WittLaw.verPoly_zero MvFormalGroup.CartierModule.toPowerSeries_wittSMul MvFormalGroup.CartierModule.toPowerSeries_smul_witt MvFormalGroup.WittLaw.cVec_one
+
+set_option autoImplicit false
+
+theorem CerednikDrinfeld.GradedCartierModuleData.phi_iterate_three_eq_zero_of_nMap_eq_zero_of_sq_eq_zero
+    (p : ℕ) [Fact p.Prime] {B B' : Type} [CommRing B] [CommRing B']
+    (j : CerednikDrinfeld.Zp2 p →+* B) (φ : B →+* B') (hφ : Function.Surjective φ)
+    (hI2 : RingHom.ker φ * RingHom.ker φ = ⊥) (hIp : ∀ x ∈ RingHom.ker φ, (p : B) * x = 0)
+    (D : CerednikDrinfeld.GradedCartierModuleData p B j) (hD : D.IsSpecialCartierModule)
+    (D' : CerednikDrinfeld.GradedCartierModuleData p B' (φ.comp j)) (hD' : D'.IsSpecialCartierModule)
+    (f : D.M →+ D'.M) (hf : CerednikDrinfeld.GradedCartierModuleData.IsBaseChangeAlong φ D D' f)
+    (L : D.M →+ D.NMod) (hL : D.IsCanonicalLMap L)
+    (z : D.NMod) (hz : D.nMap D' f hf.2.2.1 hf.2.2.2.1 z = 0) :
+    D.nMap D' f hf.2.2.1 hf.2.2.2.1 (D.phi L hL.isCartierLMap.map_verschiebung z) = 0 ∧
+      D.phi L hL.isCartierLMap.map_verschiebung
+        (D.phi L hL.isCartierLMap.map_verschiebung (D.phi L hL.isCartierLMap.map_verschiebung z)) = 0 := by p2m_exact_reverting @_root_.P2MW.S_CerednikDrinfeld_GradedCartierModuleData_phi_iterate_three_eq_zero_of_nMap_eq_zero_of_sq_eq_zero.solution

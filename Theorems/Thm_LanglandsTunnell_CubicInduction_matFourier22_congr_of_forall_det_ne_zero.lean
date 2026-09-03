@@ -1,0 +1,15 @@
+import Mathlib
+import Definitions.Def_LanglandsTunnell_CubicInduction_GodementSection
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_CubicInduction_matFourier22_congr_of_forall_det_ne_zero
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instDimensionLEOneSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.instLiesOverSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersCompletionIdealAsIdeal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsPrincipalIdealRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemSubringIntegerWithZeroMultiplicativeInt_definitions IsDedekindDomain.HeightOneSpectrum.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicCompletionV_definitions instCountableOfNumberField_definitions
+
+set_option autoImplicit false
+
+open MeasureTheory IsDedekindDomain NumberField AutomorphicForm LanglandsTunnell.TateLocal LanglandsTunnell.CubicInduction
+
+theorem LanglandsTunnell.CubicInduction.matFourier22_congr_of_forall_det_ne_zero
+    (v : HeightOneSpectrum (𝓞 ℚ)) (η : AddChar (v.adicCompletion ℚ) ℂ)
+    (φ φ' : Matrix (Fin 2) (Fin 2) (v.adicCompletion ℚ) → ℂ)
+    (h : ∀ X : Matrix (Fin 2) (Fin 2) (v.adicCompletion ℚ), X.det ≠ 0 → φ X = φ' X) :
+    matFourier22 v η φ = matFourier22 v η φ' := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_CubicInduction_matFourier22_congr_of_forall_det_ne_zero.solution

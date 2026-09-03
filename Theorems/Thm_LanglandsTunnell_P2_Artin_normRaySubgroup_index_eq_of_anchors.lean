@@ -1,0 +1,22 @@
+import Definitions.Def_LanglandsTunnell_ArtinCoreCTM
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_P2_Artin_normRaySubgroup_index_eq_of_anchors
+
+set_option autoImplicit false
+
+open NumberField
+
+theorem LanglandsTunnell.P2.Artin.normRaySubgroup_index_eq_of_anchors
+    (K L : Type*) [Field K] [NumberField K] [Field L] [NumberField L] [Algebra K L]
+    (𝔣 : Ideal (𝓞 K)) (h𝔣 : 𝔣 ≠ ⊥)
+    (Nrm : (AdeleRing (𝓞 L) L)ˣ →* (AdeleRing (𝓞 K) K)ˣ)
+    (hA1 : ∀ {u : (AdeleRing (𝓞 L) L)ˣ} {α : Lˣ},
+      HeckeCharacter.IsAdjuster L (HeckeCharacter.modulusExt K L 𝔣) u α →
+        HeckeCharacter.IsAdjuster K 𝔣 (Nrm u) (Units.map (Algebra.norm K) α))
+    (hA2 : ∀ u : (AdeleRing (𝓞 L) L)ˣ,
+      HeckeCharacter.fadContentHom K (HeckeCharacter.projFin K (Nrm u)) =
+        HeckeCharacter.fracRelNormUnit K L
+          (HeckeCharacter.fadContentHom L (HeckeCharacter.projFin L u)))
+    (hA3 : LanglandsTunnell.P2.Artin.unitIdeles K 𝔣 ≤ Nrm.range) :
+    (LanglandsTunnell.P2.Artin.normRaySubgroup K L 𝔣).index =
+      (M4aHerbrand.principalIdeles (𝓞 K) K ⊔ Nrm.range).index := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_P2_Artin_normRaySubgroup_index_eq_of_anchors.solution

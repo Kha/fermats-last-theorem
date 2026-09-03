@@ -1,0 +1,25 @@
+import Definitions.Def_ModularCurve_ArithmeticGalois
+import Definitions.Def_AlgebraicCurve_SemistableCharts
+import Definitions.Def_FLTPrelim_Ramification
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_mem_dom_forall_inertia_smul_eq_and_evalAt_param_eq
+attribute [-instance] AlgebraicCurve.IsCurveOver.instNontrivialKaehler AlgebraicCurve.IsCurveOver.instFreeKaehler AlgebraicCurve.IsCurveOver.toHasPrincipalDivisors AlgebraicCurve.IsCurveOver.instFiniteResidue AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation
+attribute [-simp] AlgebraicCurve.IsFrobeniusEndo.frobNormRingHom_apply ModularCurve.frobeniusPushforwardGeomLevelPic0_mk ModularCurve.coe_frobeniusGeomLevelEquiv_apply ModularCurve.coe_frobeniusPushforwardGeomLevelDegZero ModularCurve.heckeFibreGeomLevelPic0OfIsCurveOver_mk ModularCurve.frobeniusGeomLevel_apply_coe ModularCurve.frobeniusPullbackGeomLevelPic0OfIsCurveOver_mk ModularCurve.coe_heckeFibreGeomLevelDegZero ModularCurve.coe_frobeniusPullbackGeomLevelDegZero ModularCurve.frobeniusPullbackGeomLevelPic0_mk ModularCurve.frobeniusPullbackGeomLevel_single ModularCurve.heckeFibreGeomLevelPic0_mk ModularCurve.frobeniusPushforwardGeomLevelPic0OfIsCurveOver_mk ModularCurve.frobeniusPushforwardGeomLevel_single ModularCurve.qExpandAlgC_apply AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint AlgebraicCurve.Divisor.degree_pushforwardAlong AlgebraicCurve.Pic0.coe_degZeroCorrespondence AlgebraicCurve.Place.mem_fiberAlong AlgebraicCurve.coe_frobeniusPushforwardDegZero AlgebraicCurve.IsFrobeniusEndo.coe_frobeniusPullbackDegZero ModularCurve.jqNModC_one ModularCurve.reduceModBivar_C_X ModularCurve.laurentMap_coeff ModularCurve.reduceModBivar_X ModularCurve.laurentMap_single
+attribute [-simp] ModularCurve.evalAtJInt_X ModularCurve.evalAtJMod_X ModularCurve.jqNMod_one ModularCurve.aeval_heckeGen ModularCurve.coe_mTorsionGaloisRep_apply ModularCurve.eisensteinSystem_of_dvd ModularCurve.eisensteinSystem_of_not_dvd AlgebraicCurve.mulAdele_apply AlgebraicCurve.residuePairing_apply_coe AlgebraicCurve.mem_adeleBdd AlgebraicCurve.weilSmul_one AlgebraicCurve.diagonalHom_apply AlgebraicCurve.weilSmul_apply AlgebraicCurve.adeleSpaceMul_coe AlgebraicCurve.mulAdele_one
+set_option autoImplicit false
+open AlgebraicCurve IsLocalRing ModularCurve
+
+theorem ModularCurve.exists_mem_dom_forall_inertia_smul_eq_and_evalAt_param_eq
+    (A : ValuationSubring (AlgebraicClosure ℚ))
+    (F₀ : IntermediateField ℚ (LaurentSeries ℚ))
+    (An : AlgebraicCurve.Annulus A ↥(laurentBaseChange (AlgebraicClosure ℚ) F₀))
+    (hz : ∀ σ ∈ A.inertiaSubgroupIn ℚ,
+      arithmeticGalois (L := AlgebraicClosure ℚ) F₀ σ • An.param = An.param)
+    (hdom : ∀ σ ∈ A.inertiaSubgroupIn ℚ, ∀ W ∈ An.dom,
+      arithmeticGalois (L := AlgebraicClosure ℚ) F₀ σ • W ∈ An.dom)
+    (c : ↥A) (hc : c ∈ maximalIdeal ↥A) (hc0 : (c : AlgebraicClosure ℚ) ≠ 0)
+    (hcm : ∃ m ∈ maximalIdeal ↥A, ((An.modulus : ↥A) : AlgebraicClosure ℚ) = (c : AlgebraicClosure ℚ) * m)
+    (hcσ : ∀ σ ∈ A.inertiaSubgroupIn ℚ, σ (c : AlgebraicClosure ℚ) = c) :
+    ∃ W ∈ An.dom,
+      (∀ σ ∈ A.inertiaSubgroupIn ℚ, arithmeticGalois (L := AlgebraicClosure ℚ) F₀ σ • W = W) ∧
+      W.evalAt An.param = (c : AlgebraicClosure ℚ) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_mem_dom_forall_inertia_smul_eq_and_evalAt_param_eq.solution

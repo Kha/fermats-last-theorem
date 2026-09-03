@@ -1,0 +1,56 @@
+import Mathlib
+import Definitions.Def_ModularCurve_X1
+import Definitions.Def_ModularCurve_AtkinLehnerPartial
+import Definitions.Def_ModularCurve_X1Diamond
+import Definitions.Def_ModularForm_HeckeOperator
+import P2M.Util
+import P2M.Sol.S_ModularCurve_XOneP_exists_algEquiv_map_j_eq_qExpand_and_coe_eq_atkinLehnerInvolutionFull_and_diamondConj_and_galoisConj_x1_mul
+attribute [-instance] WeierstrassCurve.Affine.Point.instFinite AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.jqNModC_one ModularCurve.IntegralWeightOneForm.mk.injEq ModularCurve.IntegralWeightOneForm.mk.sizeOf_spec ModularCurve.IgusaCover.IgusaDiamondData.mk.sizeOf_spec ModularCurve.IgusaCover.coe_incl ModularCurve.IgusaCover.IgusaDiamondData.mk.injEq AlgebraicCurve.Divisor.degree_pushforwardAlong AlgebraicCurve.Pic0.coe_degZeroCorrespondence AlgebraicCurve.Place.mem_fiberAlong AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.qExpandAlgHomC_apply
+
+set_option autoImplicit false
+
+open scoped MatrixGroups ModularForm
+
+theorem ModularCurve.XOneP.exists_algEquiv_map_j_eq_qExpand_and_coe_eq_atkinLehnerInvolutionFull_and_diamondConj_and_galoisConj_x1_mul
+    (p : ℕ) [Fact p.Prime] (M : ℕ) [NeZero M] (hpM : ¬ p ∣ M)
+    (L : Type) [Field L] [CharZero L] [IsCyclotomicExtension {p} ℚ L]
+    (ζ : L) (hζ : IsPrimitiveRoot ζ p)
+    (K : IntermediateField L (LaurentSeries L))
+    (hK : K = ModularCurve.laurentBaseChange L (ModularCurve.x1FunctionField (M * p)))
+    (j : ↥K) (hj : ((j : LaurentSeries L)) = ModularCurve.coeffEmb L ModularCurve.jq)
+    [NeZero p] :
+    ∃ σ : ↥K ≃ₐ[L] ↥K,
+
+      ((σ j : ↥K) : LaurentSeries L) = ModularCurve.coeffEmb L (ModularCurve.qExpand ℚ p ModularCurve.jq) ∧
+
+      (∀ (f : ↥(ModularCurve.modularFunctionFieldFull (M * p)))
+        (hfK : ModularCurve.coeffEmb L (f : LaurentSeries ℚ) ∈ K),
+        ((σ ⟨ModularCurve.coeffEmb L (f : LaurentSeries ℚ), hfK⟩ : ↥K) : LaurentSeries L) =
+          ModularCurve.coeffEmb L ((ModularCurve.atkinLehnerInvolutionFull M p f :
+            ↥(ModularCurve.modularFunctionFieldFull (M * p))) : LaurentSeries ℚ)) ∧
+
+      (∀ (d d' : ℕ), d.Coprime (M * p) → d'.Coprime (M * p) →
+        ((d' : ZMod M) = (d : ZMod M)) → ((d' : ZMod p) * (d : ZMod p) = 1) →
+        ∀ (θd θd' : ↥K ≃ₐ[L] ↥K),
+          (∀ (x : ↥K) (x' : ↥(ModularCurve.laurentBaseChange L (ModularCurve.x1FunctionField (M * p)))),
+          (x : LaurentSeries L) = (x' : LaurentSeries L) →
+            ((θd x : ↥K) : LaurentSeries L) =
+              ((ModularCurve.baseChangeAut L (ModularCurve.diamondAut (M * p) d) x' : ↥(ModularCurve.laurentBaseChange L (ModularCurve.x1FunctionField (M * p)))) : LaurentSeries L)) →
+          (∀ (x : ↥K) (x' : ↥(ModularCurve.laurentBaseChange L (ModularCurve.x1FunctionField (M * p)))),
+          (x : LaurentSeries L) = (x' : LaurentSeries L) →
+            ((θd' x : ↥K) : LaurentSeries L) =
+              ((ModularCurve.baseChangeAut L (ModularCurve.diamondAut (M * p) d') x' : ↥(ModularCurve.laurentBaseChange L (ModularCurve.x1FunctionField (M * p)))) : LaurentSeries L)) →
+          ∀ x : ↥K, ((σ (θd (σ.symm x)) : ↥K) : LaurentSeries L) = ((θd' x : ↥K) : LaurentSeries L)) ∧
+
+      (∀ (s : L ≃ₐ[ℚ] L) (b : ℕ), b.Coprime p → s ζ = ζ ^ b →
+        ∀ (b' : ℕ), b'.Coprime (M * p) → ((b' : ZMod M) = 1) → ((b' : ZMod p) = (b : ZMod p)) →
+        ∀ (Ss : ↥K ≃+* ↥K),
+          (∀ x : ↥K, ((Ss x : ↥K) : LaurentSeries L) =
+            ModularCurve.coeffMap (s.toAlgHom.toRingHom) ((x : ↥K) : LaurentSeries L)) →
+        ∀ (θb' : ↥K ≃ₐ[L] ↥K),
+          (∀ (x : ↥K) (x' : ↥(ModularCurve.laurentBaseChange L (ModularCurve.x1FunctionField (M * p)))),
+          (x : LaurentSeries L) = (x' : LaurentSeries L) →
+            ((θb' x : ↥K) : LaurentSeries L) =
+              ((ModularCurve.baseChangeAut L (ModularCurve.diamondAut (M * p) b') x' : ↥(ModularCurve.laurentBaseChange L (ModularCurve.x1FunctionField (M * p)))) : LaurentSeries L)) →
+          ∀ x : ↥K, ((Ss (σ (Ss.symm x)) : ↥K) : LaurentSeries L) = ((σ (θb' x) : ↥K) : LaurentSeries L)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_XOneP_exists_algEquiv_map_j_eq_qExpand_and_coe_eq_atkinLehnerInvolutionFull_and_diamondConj_and_galoisConj_x1_mul.solution

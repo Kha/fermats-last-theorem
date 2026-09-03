@@ -1,0 +1,16 @@
+import Definitions.Def_LanglandsTunnell_CubicInduction_Carrier
+import Definitions.Def_NumberField_TateGlobalZeta
+import Definitions.Def_NumberField_AdelicHaar
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_CubicInduction_ideleNorm_det_globalPointsGL_eq_one_and_measurableSet_ideleNormDetSlab
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instDimensionLEOneSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.instLiesOverSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersCompletionIdealAsIdeal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsPrincipalIdealRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemSubringIntegerWithZeroMultiplicativeInt_definitions IsDedekindDomain.HeightOneSpectrum.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicCompletionV_definitions instCountableOfNumberField_definitions
+
+set_option autoImplicit false
+
+open IsDedekindDomain NumberField MeasureTheory LanglandsTunnell.CubicInduction
+
+theorem LanglandsTunnell.CubicInduction.ideleNorm_det_globalPointsGL_eq_one_and_measurableSet_ideleNormDetSlab :
+    (∀ γ : GL (Fin 3) ℚ,
+      NumberField.TateGlobal.ideleNorm ℚ (Matrix.GeneralLinearGroup.det (globalPointsGL 3 (𝓞 ℚ) ℚ γ)) = 1) ∧
+    ∀ a b : ℝ, @MeasurableSet (AdelicGL 3 (𝓞 ℚ) ℚ) (NumberField.AdelicHaar.glBorel (Fin 3) (𝓞 ℚ) ℚ)
+      {g : AdelicGL 3 (𝓞 ℚ) ℚ | NumberField.TateGlobal.ideleNorm ℚ (Matrix.GeneralLinearGroup.det g) ∈ Set.Icc a b} := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_CubicInduction_ideleNorm_det_globalPointsGL_eq_one_and_measurableSet_ideleNormDetSlab.solution

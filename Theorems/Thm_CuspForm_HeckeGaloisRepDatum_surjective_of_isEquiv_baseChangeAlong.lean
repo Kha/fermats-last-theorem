@@ -1,0 +1,5 @@
+import Definitions.Def_CuspForm_HeckeGaloisRepDatum
+import P2M.Util
+import P2M.Sol.S_CuspForm_HeckeGaloisRepDatum_surjective_of_isEquiv_baseChangeAlong
+
+theorem CuspForm.HeckeGaloisRepDatum.surjective_of_isEquiv_baseChangeAlong {N : ℕ} [NeZero N] {S : Set ℕ} {𝒪 : Type} [CommRing 𝒪] [IsDomain 𝒪] [IsDiscreteValuationRing 𝒪] [IsAdicComplete (IsLocalRing.maximalIdeal 𝒪) 𝒪] {θ : CuspForm.heckeAlgebra N 2 S →+* IsLocalRing.ResidueField 𝒪} {T : Type} [CommRing T] [IsLocalRing T] [IsNoetherianRing T] [IsAdicComplete (IsLocalRing.maximalIdeal T) T] [Algebra 𝒪 T] [IsLocalHom (algebraMap 𝒪 T)] [Module.Finite 𝒪 T] [Module.Free 𝒪 T] (H : CuspForm.HeckeGaloisRepDatum N S 𝒪 θ T) (hS : ∀ q : ℕ, q.Prime → q ∣ N → q ∈ S) {R : Type} [CommRing R] [IsLocalRing R] [Algebra 𝒪 R] (ρR : GaloisRepAdic R) (φ : R →ₐ[𝒪] T) (hφ : IsLocalHom (φ : R →+* T)) (he : (ρR.baseChangeAlong (φ : R →+* T) hφ).IsEquiv H.ρ) : Function.Surjective φ := by p2m_exact_reverting @_root_.P2MW.S_CuspForm_HeckeGaloisRepDatum_surjective_of_isEquiv_baseChangeAlong.solution

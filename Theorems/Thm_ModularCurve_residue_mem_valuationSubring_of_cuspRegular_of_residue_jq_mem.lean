@@ -1,0 +1,37 @@
+import Definitions.Def_ModularCurve_FullLevelSemistableCovering
+import Definitions.Def_ModularCurve_SupersingularNodePlaces
+import Definitions.Def_AlgebraicCurve_ConstantReduction
+import Definitions.Def_FLTPrelim_Ramification
+import P2M.Util
+import P2M.Sol.S_ModularCurve_residue_mem_valuationSubring_of_cuspRegular_of_residue_jq_mem
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA AlgebraicCurve.Place.instIsPrimeCenter AlgebraicCurve.Place.instIsFractionRingIntegralClosureAt AlgebraicCurve.Place.instIsTorsionFreeSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.Place.instIsDedekindDomainIntegralClosureAt AlgebraicCurve.Place.instFiniteSubtypeMemValuationSubringToValuationSubringIntegralClosureAt ModularCurve.instIsDomainTensorProduct AlgebraicClosure.Rat.isGalois
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ AlgebraicCurve.Place.placeOfPrime_toValuationSubring AlgebraicCurve.Place.mem_fiberOver AlgebraicCurve.Place.fiberEquiv_symm_apply AlgebraicCurve.Place.fiberEquiv_apply AlgebraicCurve.Place.centerHeightOneSpectrum_asIdeal ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL ModularCurve.coe_towerInclBar ModularCurve.coe_towerSubstBar ModularCurve.coe_heckeBetaBarRingHom ModularCurve.coe_heckeBetaBar ModularCurve.coe_heckeAlphaBar AlgebraicCurve.mulAdele_apply AlgebraicCurve.residuePairing_apply_coe AlgebraicCurve.mem_adeleBdd AlgebraicCurve.weilSmul_one AlgebraicCurve.diagonalHom_apply AlgebraicCurve.weilSmul_apply AlgebraicCurve.adeleSpaceMul_coe AlgebraicCurve.mulAdele_one ModularCurve.coe_baseChangeEquiv_apply ModularCurve.baseChangeHom_tmul
+attribute [-simp] ModularCurve.coe_cuspidalDivisor₀ ModularCurve.eisensteinNumerator_nineteen ModularCurve.eisensteinNumerator_seventeen ModularCurve.eisensteinNumerator_eleven ModularCurve.eisensteinNumerator_five ModularCurve.eisensteinNumerator_seven ModularCurve.eisensteinNumerator_twentythree ModularCurve.eisensteinNumerator_thirteen ModularCurve.constantCoeff_dedekindEtaUnitQ AlgebraicCurve.TranscendenceTower.mk.sizeOf_spec AlgebraicCurve.IntegralBasisInLSpace.mk.injEq AlgebraicCurve.TranscendenceTower.mk.injEq AlgebraicCurve.PoleDivisorPackage.mk.sizeOf_spec AlgebraicCurve.IntegralBasisInLSpace.mk.sizeOf_spec AlgebraicCurve.PoleDivisorPackage.mk.injEq ModularCurve.qExpandAlgHomC_apply
+
+set_option autoImplicit false
+
+open AlgebraicCurve ModularCurve ModularCurve.FullLevel IsLocalRing CongruenceSubgroup
+open scoped MatrixGroups
+
+attribute [local instance] ModularCurve.instDecidableEqResidueFieldSemistable
+  ModularCurve.instAlgebraResidueFieldModularFunctionFieldCSemistable
+
+theorem ModularCurve.residue_mem_valuationSubring_of_cuspRegular_of_residue_jq_mem
+    (q : ℕ) [Fact q.Prime] (M' : ℕ) [NeZero M'] (hqM' : ¬ q ∣ M')
+    (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime q)
+    (R₀ : ConstantReduction A ↥(modularFunctionFieldBar M') (modularFunctionFieldC (ResidueField A) M'))
+    (hR₀ : ∀ (y : LaurentSeries ↥A) (hy : coeffMap A.subtype y ∈ modularFunctionFieldBar M'),
+      ∃ h : (⟨coeffMap A.subtype y, hy⟩ : ↥(modularFunctionFieldBar M')) ∈ R₀.integers,
+        ((R₀.residue ⟨_, h⟩ : modularFunctionFieldC (ResidueField A) M') : LaurentSeries (ResidueField A)) =
+          coeffMap (IsLocalRing.residue ↥A) y)
+    (x : ↥(modularFunctionFieldBar M')) (hx : x ∈ R₀.integers)
+    (hreg : ∀ P : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar M'),
+      0 ≤ P.ord ((⟨coeffEmb (AlgebraicClosure ℚ) jq,
+        coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (modularFunctionField_le_full M' (jq_mem M'))⟩ :
+        ↥(modularFunctionFieldBar M')) : ↥(modularFunctionFieldBar M')) → 0 ≤ P.ord x)
+    (hj : (⟨coeffEmb (AlgebraicClosure ℚ) jq,
+        coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (modularFunctionField_le_full M' (jq_mem M'))⟩ :
+        ↥(modularFunctionFieldBar M')) ∈ R₀.integers)
+    (v : Place (ResidueField A) (modularFunctionFieldC (ResidueField A) M'))
+    (hv : (R₀.residue ⟨_, hj⟩ : modularFunctionFieldC (ResidueField A) M') ∈ v.toValuationSubring) :
+    (R₀.residue ⟨x, hx⟩ : modularFunctionFieldC (ResidueField A) M') ∈ v.toValuationSubring := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_residue_mem_valuationSubring_of_cuspRegular_of_residue_jq_mem.solution

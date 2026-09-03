@@ -1,0 +1,8 @@
+import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
+import Mathlib.GroupTheory.Index
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PDPairing_index_Gamma_four
+attribute [-instance] ModularCurve.PDPairing.isFreeGroup_inf ModularCurve.PDPairing.instFintypeCusp ModularCurve.PDPairing.iotaDeg0_range_finiteIndex ModularCurve.PDPairing.CentralExt.instInv ModularCurve.PDPairing.CentralExt.instGroup ModularCurve.PDPairing.CentralExt.instMul ModularCurve.PDPairing.CentralExt.instOne ModularCurve.PDPairing.Gamma0Upper_finiteIndex
+attribute [-simp] ModularCurve.PDPairing.CentralExt.lift_apply ModularCurve.PDPairing.mem_Gamma0Upper ModularCurve.PDPairing.CentralExt.snd_apply ModularCurve.PDPairing.pairZ_apply ModularCurve.PDPairing.conjUpperMat_apply_11 ModularCurve.PDPairing.sect_snd ModularCurve.PDPairing.conjUpperMat_apply_10 ModularCurve.Period.IsEquivariantPrimitive.periodHom_apply ModularCurve.Period.IsEquivariantPrimitive.period_one
+
+theorem ModularCurve.PDPairing.index_Gamma_four : (CongruenceSubgroup.Gamma 4).index = 48 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PDPairing_index_Gamma_four.solution

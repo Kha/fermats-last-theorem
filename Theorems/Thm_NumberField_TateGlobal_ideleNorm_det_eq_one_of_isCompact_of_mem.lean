@@ -1,0 +1,14 @@
+import Definitions.Def_NumberField_TateGlobalZeta
+import P2M.Util
+import P2M.Sol.S_NumberField_TateGlobal_ideleNorm_det_eq_one_of_isCompact_of_mem
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instDimensionLEOneSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.instLiesOverSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersCompletionIdealAsIdeal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsPrincipalIdealRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemSubringIntegerWithZeroMultiplicativeInt_definitions IsDedekindDomain.HeightOneSpectrum.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicCompletionV_definitions instCountableOfNumberField_definitions
+
+set_option autoImplicit false
+
+open NumberField AutomorphicForm
+
+theorem NumberField.TateGlobal.ideleNorm_det_eq_one_of_isCompact_of_mem
+    (F : Type) [Field F] [NumberField F]
+    (U : Subgroup (AdelicGL2 (𝓞 F) F)) (hU : IsCompact (U : Set (AdelicGL2 (𝓞 F) F)))
+    (u : AdelicGL2 (𝓞 F) F) (hu : u ∈ U) :
+    ideleNorm F (Matrix.GeneralLinearGroup.det u) = 1 := by p2m_exact_reverting @_root_.P2MW.S_NumberField_TateGlobal_ideleNorm_det_eq_one_of_isCompact_of_mem.solution

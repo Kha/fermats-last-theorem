@@ -1,0 +1,34 @@
+import Mathlib
+import Definitions.Def_LanglandsTunnell_CubicInduction_LocalZeta31
+import Definitions.Def_LanglandsTunnell_CubicInduction_PrincipalSeries2
+import Definitions.Def_LanglandsTunnell_CubicInduction_TorusValues
+import Definitions.Def_LanglandsTunnell_RSCarrier
+import Definitions.Def_LanglandsTunnell_StandardLocalConstantsAt
+import Definitions.Def_AutomorphicForm_LocalOrbitalBase
+import Definitions.Def_HaarQuotient
+import Definitions.Def_UnramifiedWhittaker_HeckeRecursion
+import Definitions.Def_AdelicDock_LocalEmbedding
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_TateLocal_addHaar_ball_eq_and_setIntegral_psiLocal_inv_mul_rat
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instDimensionLEOneSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.instLiesOverSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersCompletionIdealAsIdeal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsPrincipalIdealRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemSubringIntegerWithZeroMultiplicativeInt_definitions IsDedekindDomain.HeightOneSpectrum.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicCompletionV_definitions instCountableOfNumberField_definitions IsDedekindDomain.HeightOneSpectrum.Extension.instAlgebraSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnder IsDedekindDomain.HeightOneSpectrum.Extension.instAlgebraSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnder_1 IsDedekindDomain.HeightOneSpectrum.instMulActionHomClassAlgHomTensorProductAdicCompletionForallValEqUnder_definitions IsDedekindDomain.HeightOneSpectrum.Extension.instAlgebraAdicCompletionValEqUnder IsDedekindDomain.HeightOneSpectrum.adicCompletion.instFiniteForallValEqUnderOfFiniteDimensional_definitions IsDedekindDomain.HeightOneSpectrum.instIsBiscalarSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersTensorProductCoeAlgHomTensorAdicCompletionIntegersTo IsDedekindDomain.HeightOneSpectrum.Extension.instContinuousSMulAdicCompletionValEqUnder IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsModuleTopology IsDedekindDomain.HeightOneSpectrum.Extension.instFiniteSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnderOfFiniteDimensional IsDedekindDomain.HeightOneSpectrum.adicCompletion.instFiniteValEqUnderOfFiniteDimensional_definitions instIsBiscalarTensorProductCoeAlgHomBaseChange_of_algebraMap IsDedekindDomain.HeightOneSpectrum.instIsScalarTowerSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnder_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsModuleTopologyPi Submodule.instIsTopologicalModuleSubtypeMem Pi.instTopologicalModule IsTopologicalModule.toContinuousSMul IsTopologicalModule.toContinuousAdd instFunLike SemialgHomClass.toSemilinearMapClass instCoeTCSemialgHom SemialgHomClass.toRingHomClass SemialgHomClass.instSemialgHom
+attribute [-simp] SemialgHom.baseChange_of_algebraMap_tmul_left SemialgHom.baseChangeRightOfAlgebraMap_apply Pi.semialgHomPi_apply Pi.semialgHom_apply Module.Basis.rightBaseChange_apply LinearEquiv.coe_mulLeft LinearEquiv.coe_mulRight WithVal.semialgebraMap_toFun_ofVal Module.Basis.rightBaseChange_repr IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers.tensorCoe_tmul IsDedekindDomain.HeightOneSpectrum.tensorAdicCompletionIntegersTo_tmul SemialgHom.baseChangeRightOfAlgebraMap_coe IsDedekindDomain.HeightOneSpectrum.adicCompletion.integerBaseChangeLinearEquiv_tmul_apply SemialgHom.baseChange_of_algebraMap_tmul_right IsLocalization.map_moduleTensorEquiv_symm_tmul IsLocalization.leftModuleTensorEquiv_apply IsLocalization.moduleLid_symm_apply IsLocalization.leftModuleTensorEquiv_symm_apply IsLocalization.map_moduleTensorEquiv_tmul IsModuleTopology.continuousLinearEquiv_apply AlgEquiv.extendScalars_symm_apply IsModuleTopology.Module.Basis.equivFun_homeo_symm_apply IsModuleTopology.Module.Basis.equivFun_homeo_apply IsModuleTopology.continuousAlgEquivOfIsBiscalar_apply AlgEquiv.extendScalars_apply IsModuleTopology.continuousLinearEquiv_symm_apply SemialgHom.restrictScalars_toFun SemialgHom.mk.sizeOf_spec SemialgHom.mk.injEq SemialgHom.coe_coe coe_mk TensorProduct.RightActions.smul_def TensorProduct.RightActions.Module.TensorProduct.comm_symm_apply_tmul TensorProduct.RightActions.LinearMap.baseChange_id TensorProduct.RightActions.algebraMap_eval TensorProduct.RightActions.Module.TensorProduct.comm_apply_tmul TensorProduct.RightActions.Algebra.TensorProduct.comm_symm_apply_tmul TensorProduct.RightActions.Algebra.TensorProduct.comm_apply_tmul
+
+set_option autoImplicit false
+
+p2m_open "IsDedekindDomain NumberField MeasureTheory AutomorphicForm LanglandsTunnell.TateLocal~forall_eq_one_and_exists_ne_one_of_addCharLevel~psiLocal_eq_one_of_mem_integers~modulus_adicCompletion_eq_nnnorm~addCharLevel_psiLocal_rat LanglandsTunnell.CubicInduction"
+
+open UnramifiedWhittaker
+
+theorem LanglandsTunnell.TateLocal.addHaar_ball_eq_and_setIntegral_psiLocal_inv_mul_rat
+    (v : HeightOneSpectrum (𝓞 ℚ)) :
+    letI := localBorel ℚ v
+    ∀ (ν : Measure (v.adicCompletion ℚ)) [ν.IsAddHaarMeasure],
+      (∀ j : ℤ, 0 < ν {y : v.adicCompletion ℚ | Valued.v y ≤ WithZero.exp j} ∧
+        ν {y : v.adicCompletion ℚ | Valued.v y ≤ WithZero.exp j} < ⊤ ∧
+        (ν {y : v.adicCompletion ℚ | Valued.v y ≤ WithZero.exp j}).toReal =
+          (Ideal.absNorm v.asIdeal : ℝ) ^ j * (ν {y : v.adicCompletion ℚ | Valued.v y ≤ 1}).toReal) ∧
+      (∀ (t : v.adicCompletion ℚ) (j : ℤ),
+        ∫ y in {y : v.adicCompletion ℚ | Valued.v y ≤ WithZero.exp j},
+            (NumberField.StandardAddChar.psiLocal ℚ v)⁻¹ (t * y) ∂ν =
+          if Valued.v t ≤ WithZero.exp (-j)
+            then ((ν {y : v.adicCompletion ℚ | Valued.v y ≤ WithZero.exp j}).toReal : ℂ) else 0) := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_TateLocal_addHaar_ball_eq_and_setIntegral_psiLocal_inv_mul_rat.solution

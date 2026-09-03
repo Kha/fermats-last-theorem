@@ -1,0 +1,345 @@
+import Definitions.Def_AutomorphicForm_TwistedOrbital
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_semilocal_central_transfer_referenceMeasures_peel_step
+
+set_option autoImplicit false
+
+open MeasureTheory AutomorphicForm
+open scoped TensorProduct TensorProduct.RightActions NNReal
+
+theorem AutomorphicForm.semilocal_central_transfer_referenceMeasures_peel_step
+    (K L : Type) [Field K] [Field L] [Algebra K L] [FiniteDimensional K L] (σ : L ≃ₐ[K] L)
+    {ι : Type} [Fintype ι] [DecidableEq ι]
+    (A : ι → Type) [∀ i, CommRing (A i)] [∀ i, Algebra K (A i)] [∀ i, TopologicalSpace (A i)]
+    [∀ i, IsTopologicalRing (A i)] [∀ i, T2Space (A i)] [∀ i, LocallyCompactSpace (A i)]
+    [∀ i, SecondCountableTopology (A i)]
+    (X Y : ι → Type) [∀ i, NormedAddCommGroup (X i)] [∀ i, NormedSpace ℝ (X i)] [∀ i, FiniteDimensional ℝ (X i)]
+    [∀ i, NormedAddCommGroup (Y i)] [∀ i, NormedSpace ℝ (Y i)] [∀ i, FiniteDimensional ℝ (Y i)]
+    (εK : ∀ i, GL (Fin 2) (A i) → X i) (hεK : ∀ i, Continuous (εK i))
+    (εL : ∀ i, GL (Fin 2) (L ⊗[K] A i) → Y i) (hεL : ∀ i, Continuous (εL i))
+    (c : ∀ i, (A i)ˣ)
+
+    (V : ι → Type) [∀ i, MeasurableSpace (V i)]
+    (κ : ∀ i, GL (Fin 2) (A i) → V i) (hκ : ∀ i, Measurable[glBorelOf (A i)] (κ i)) (hκi : ∀ i, Function.Injective (κ i))
+    (κ' : ∀ i, GL (Fin 2) (L ⊗[K] A i) → V i) (hκ' : ∀ i, Measurable[glBorelOf (L ⊗[K] A i)] (κ' i))
+    (hκ'i : ∀ i, Function.Injective (κ' i))
+    (m : ∀ i, Measure (V i)) (hm : ∀ i, SigmaFinite (m i))
+    (m' : ∀ i, GL (Fin 2) (L ⊗[K] A i) → Measure (V i)) (hm' : ∀ i δ, SigmaFinite (m' i δ))
+    (lam : ι → ℂ)
+    (μ : ∀ i, @Measure (GL (Fin 2) (A i)) (glBorelOf (A i)))
+    (hμ : ∀ i, @Measure.IsHaarMeasure _ _ _ (glBorelOf (A i)) (μ i))
+    (hμr : ∀ i, @Measure.IsMulRightInvariant _ (glBorelOf (A i)) _ (μ i))
+    (μ' : ∀ i, @Measure (GL (Fin 2) (L ⊗[K] A i)) (glBorelOf (L ⊗[K] A i)))
+    (hμ' : ∀ i, @Measure.IsHaarMeasure _ _ _ (glBorelOf (L ⊗[K] A i)) (μ' i))
+
+    (hsecK : ∀ (i : ι) (γ : GL (Fin 2) (A i)), IsRegularSemisimple γ →
+      ∀ τ : @Measure (Subgroup.centralizer ({γ} : Set (GL (Fin 2) (A i)))) (centralizerBorel (A i) γ),
+        @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) γ) τ →
+      ∀ f : GL (Fin 2) (A i) → ℂ, Continuous f → HasCompactSupport f →
+        ∃ w : GL (Fin 2) (A i) → ℝ, IsSectionFnOn (A i) γ τ f w ∧ Continuous w)
+    (hsecL : ∀ (i : ι) (δ : GL (Fin 2) (L ⊗[K] A i)),
+      ∀ τ' : @Measure (twistedCentralizer K L (A i) σ δ) (twistedCentralizerBorel K L (A i) σ δ),
+        @Measure.IsHaarMeasure _ _ _ (twistedCentralizerBorel K L (A i) σ δ) τ' →
+        @Measure.IsInvInvariant _ (twistedCentralizerBorel K L (A i) σ δ) _ τ' →
+      (IsRegularSemisimple (normString K L (A i) σ δ) ∨
+        ∃ (τ : @Measure (Subgroup.centralizer ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))))
+              (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)))),
+          @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) τ ∧
+          (∃ s : ℝ≥0, s ≠ 0 ∧
+            @Measure.map _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) _
+                (fun t : Subgroup.centralizer ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))) => κ i (t : GL (Fin 2) (A i))) τ =
+              s • m i ∧
+            @Measure.map _ _ (twistedCentralizerBorel K L (A i) σ δ) _
+                (fun t : twistedCentralizer K L (A i) σ δ => κ' i (t : GL (Fin 2) (L ⊗[K] A i))) τ' =
+              s • m' i δ)) →
+      ∀ φ : GL (Fin 2) (L ⊗[K] A i) → ℂ, Continuous φ → HasCompactSupport φ →
+        ∃ W : GL (Fin 2) (L ⊗[K] A i) → ℝ, IsTwistedSectionFnOn K L (A i) σ δ τ' φ W ∧ Continuous W)
+
+    (heng : ∀ (i : ι) (φ : GL (Fin 2) (L ⊗[K] A i) → ℂ),
+      ((∃ Φ₁ : Y i → ℂ, ContDiff ℝ (⊤ : ℕ∞) Φ₁ ∧ ∀ g, φ g = Φ₁ (εL i g)) ∧ HasCompactSupport φ) →
+      ∀ (f : GL (Fin 2) (A i) → ℂ),
+      ((∃ F₁ : X i → ℂ, ContDiff ℝ (⊤ : ℕ∞) F₁ ∧ ∀ g, f g = F₁ (εK i g)) ∧ HasCompactSupport f) →
+      (∃ V ∈ nhds (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)),
+        ∀ δ : GL (Fin 2) (L ⊗[K] A i), IsRegularSemisimple (normString K L (A i) σ δ) →
+        ∀ γ ∈ V, IsRegularSemisimple γ →
+        ∀ y : GL (Fin 2) (L ⊗[K] A i), IsNormConjugator K L (A i) σ γ δ y →
+        ∀ (τ : @Measure (Subgroup.centralizer ({γ} : Set (GL (Fin 2) (A i)))) (centralizerBorel (A i) γ))
+          (τ' : @Measure (twistedCentralizer K L (A i) σ δ) (twistedCentralizerBorel K L (A i) σ δ)),
+          @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) γ) τ →
+          @Measure.IsHaarMeasure _ _ _ (twistedCentralizerBorel K L (A i) σ δ) τ' →
+          Coupled K L (A i) σ γ δ y τ τ' →
+          ∀ I I' : ℂ, IsTwistedOrbitalIntegralOn K L (A i) σ (μ' i) δ τ' φ I' →
+            IsOrbitalIntegralOn (A i) (μ i) γ τ f I → I' = I) →
+      ∀ δ y : GL (Fin 2) (L ⊗[K] A i),
+        IsNormConjugator K L (A i) σ (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) δ y →
+        ∀ (τ : @Measure (Subgroup.centralizer
+              ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))))
+              (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))))
+          (τ' : @Measure (twistedCentralizer K L (A i) σ δ) (twistedCentralizerBorel K L (A i) σ δ)),
+          @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) τ →
+          @Measure.IsHaarMeasure _ _ _ (twistedCentralizerBorel K L (A i) σ δ) τ' →
+          @Measure.IsInvInvariant _ (twistedCentralizerBorel K L (A i) σ δ) _ τ' →
+          (∃ s : ℝ≥0, s ≠ 0 ∧
+            @Measure.map _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) _
+                (fun t : Subgroup.centralizer ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))) => κ i (t : GL (Fin 2) (A i))) τ =
+              s • m i ∧
+            @Measure.map _ _ (twistedCentralizerBorel K L (A i) σ δ) _
+                (fun t : twistedCentralizer K L (A i) σ δ => κ' i (t : GL (Fin 2) (L ⊗[K] A i))) τ' =
+              s • m' i δ) →
+          ∀ I I' : ℂ, IsTwistedOrbitalIntegralOn K L (A i) σ (μ' i) δ τ' φ I' →
+            IsOrbitalIntegralOn (A i) (μ i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) τ f I → I' = lam i * I)
+
+    (ν : @Measure ((i : ι) → GL (Fin 2) (A i)) (borel _)) (hν : @Measure.IsHaarMeasure ((i : ι) → GL (Fin 2) (A i)) _ _ (borel _) ν)
+    (ν' : @Measure ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) (borel _)) (hν' : @Measure.IsHaarMeasure ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) _ _ (borel _) ν')
+    (F : ((i : ι) → GL (Fin 2) (A i)) → ℂ)
+    (hF : (∃ F₁ : ((i : ι) → X i) → ℂ, ContDiff ℝ (⊤ : ℕ∞) F₁ ∧ ∀ g, F g = F₁ (fun i => εK i (g i))) ∧
+      HasCompactSupport F)
+    (Φ : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) → ℂ)
+    (hΦ : (∃ Φ₁ : ((i : ι) → Y i) → ℂ, ContDiff ℝ (⊤ : ℕ∞) Φ₁ ∧ ∀ g, Φ g = Φ₁ (fun i => εL i (g i))) ∧
+      HasCompactSupport Φ)
+
+    (hreg : ∀ (γ : ((i : ι) → GL (Fin 2) (A i))) (δ y : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))),
+      (∀ i, IsRegularSemisimple (γ i)) → (∀ i, IsRegularSemisimple (normString K L (A i) σ (δ i))) →
+      (∀ i, IsNormConjugator K L (A i) σ (γ i) (δ i) (y i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer ({γ} : Set ((i : ι) → GL (Fin 2) (A i)))) (borel _))
+        (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+        @Measure.IsHaarMeasure _ _ _ (borel _) τ → @Measure.IsHaarMeasure _ _ _ (borel _) τ' →
+        @Measure.IsInvInvariant _ (borel _) _ τ' →
+        @Measure.map _ _ (borel _) (borel ((i : ι) → GL (Fin 2) (L ⊗[K] A i)))
+            (fun t : sigmaCentralizer (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) δ => y⁻¹ * (t : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) * y) τ' =
+          @Measure.map _ _ (borel _) (borel ((i : ι) → GL (Fin 2) (L ⊗[K] A i)))
+            (fun s : Subgroup.centralizer ({γ} : Set ((i : ι) → GL (Fin 2) (A i))) => fun i => toTensorGL K L (A i) ((s : ((i : ι) → GL (Fin 2) (A i))) i)) τ →
+        ∀ I I' : ℂ,
+          (∃ W : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, (∀ x, 0 ≤ W x) ∧ Measurable[borel ((i : ι) → GL (Fin 2) (L ⊗[K] A i))] W ∧ HasCompactSupport W ∧
+            (∀ x : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)), Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+              @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+            I' = @integral _ ℂ _ _ (borel ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) ν' (fun x => Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) x) * (W x : ℂ))) →
+          (∃ w : ((i : ι) → GL (Fin 2) (A i)) → ℝ, (∀ x, 0 ≤ w x) ∧ Measurable[borel ((i : ι) → GL (Fin 2) (A i))] w ∧ HasCompactSupport w ∧
+            (∀ x : ((i : ι) → GL (Fin 2) (A i)), F (x⁻¹ * γ * x) ≠ 0 →
+              @integral _ ℝ _ _ (borel _) τ (fun s => w ((s : ((i : ι) → GL (Fin 2) (A i))) * x)) = 1) ∧
+            I = @integral _ ℂ _ _ (borel ((i : ι) → GL (Fin 2) (A i))) ν (fun x => F (x⁻¹ * γ * x) * (w x : ℂ))) →
+          I' = I)
+
+    (ih : ∀ {ι₁ : Type} [Fintype ι₁] [DecidableEq ι₁]
+      (A : ι₁ → Type) [∀ i, CommRing (A i)] [∀ i, Algebra K (A i)] [∀ i, TopologicalSpace (A i)]
+      [∀ i, IsTopologicalRing (A i)] [∀ i, T2Space (A i)] [∀ i, LocallyCompactSpace (A i)]
+      [∀ i, SecondCountableTopology (A i)]
+      (X Y : ι₁ → Type) [∀ i, NormedAddCommGroup (X i)] [∀ i, NormedSpace ℝ (X i)] [∀ i, FiniteDimensional ℝ (X i)]
+      [∀ i, NormedAddCommGroup (Y i)] [∀ i, NormedSpace ℝ (Y i)] [∀ i, FiniteDimensional ℝ (Y i)]
+      (εK : ∀ i, GL (Fin 2) (A i) → X i) (hεK : ∀ i, Continuous (εK i))
+      (εL : ∀ i, GL (Fin 2) (L ⊗[K] A i) → Y i) (hεL : ∀ i, Continuous (εL i))
+      (c : ∀ i, (A i)ˣ)
+
+      (V : ι₁ → Type) [∀ i, MeasurableSpace (V i)]
+      (κ : ∀ i, GL (Fin 2) (A i) → V i) (hκ : ∀ i, Measurable[glBorelOf (A i)] (κ i)) (hκi : ∀ i, Function.Injective (κ i))
+      (κ' : ∀ i, GL (Fin 2) (L ⊗[K] A i) → V i) (hκ' : ∀ i, Measurable[glBorelOf (L ⊗[K] A i)] (κ' i))
+      (hκ'i : ∀ i, Function.Injective (κ' i))
+      (m : ∀ i, Measure (V i)) (hm : ∀ i, SigmaFinite (m i))
+      (m' : ∀ i, GL (Fin 2) (L ⊗[K] A i) → Measure (V i)) (hm' : ∀ i δ, SigmaFinite (m' i δ))
+      (lam : ι₁ → ℂ)
+      (μ : ∀ i, @Measure (GL (Fin 2) (A i)) (glBorelOf (A i)))
+      (hμ : ∀ i, @Measure.IsHaarMeasure _ _ _ (glBorelOf (A i)) (μ i))
+      (hμr : ∀ i, @Measure.IsMulRightInvariant _ (glBorelOf (A i)) _ (μ i))
+      (μ' : ∀ i, @Measure (GL (Fin 2) (L ⊗[K] A i)) (glBorelOf (L ⊗[K] A i)))
+      (hμ' : ∀ i, @Measure.IsHaarMeasure _ _ _ (glBorelOf (L ⊗[K] A i)) (μ' i))
+      (hsecK : ∀ (i : ι₁) (γ : GL (Fin 2) (A i)), IsRegularSemisimple γ →
+      ∀ τ : @Measure (Subgroup.centralizer ({γ} : Set (GL (Fin 2) (A i)))) (centralizerBorel (A i) γ),
+      @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) γ) τ →
+      ∀ f : GL (Fin 2) (A i) → ℂ, Continuous f → HasCompactSupport f →
+      ∃ w : GL (Fin 2) (A i) → ℝ, IsSectionFnOn (A i) γ τ f w ∧ Continuous w)
+      (hsecL : ∀ (i : ι₁) (δ : GL (Fin 2) (L ⊗[K] A i)),
+      ∀ τ' : @Measure (twistedCentralizer K L (A i) σ δ) (twistedCentralizerBorel K L (A i) σ δ),
+      @Measure.IsHaarMeasure _ _ _ (twistedCentralizerBorel K L (A i) σ δ) τ' →
+      @Measure.IsInvInvariant _ (twistedCentralizerBorel K L (A i) σ δ) _ τ' →
+      (IsRegularSemisimple (normString K L (A i) σ δ) ∨
+      ∃ (τ : @Measure (Subgroup.centralizer ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))))
+      (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)))),
+      @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) τ ∧
+      (∃ s : ℝ≥0, s ≠ 0 ∧
+      @Measure.map _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) _
+      (fun t : Subgroup.centralizer ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))) => κ i (t : GL (Fin 2) (A i))) τ =
+      s • m i ∧
+      @Measure.map _ _ (twistedCentralizerBorel K L (A i) σ δ) _
+      (fun t : twistedCentralizer K L (A i) σ δ => κ' i (t : GL (Fin 2) (L ⊗[K] A i))) τ' =
+      s • m' i δ)) →
+      ∀ φ : GL (Fin 2) (L ⊗[K] A i) → ℂ, Continuous φ → HasCompactSupport φ →
+      ∃ W : GL (Fin 2) (L ⊗[K] A i) → ℝ, IsTwistedSectionFnOn K L (A i) σ δ τ' φ W ∧ Continuous W)
+      (heng : ∀ (i : ι₁) (φ : GL (Fin 2) (L ⊗[K] A i) → ℂ),
+      ((∃ Φ₁ : Y i → ℂ, ContDiff ℝ (⊤ : ℕ∞) Φ₁ ∧ ∀ g, φ g = Φ₁ (εL i g)) ∧ HasCompactSupport φ) →
+      ∀ (f : GL (Fin 2) (A i) → ℂ),
+      ((∃ F₁ : X i → ℂ, ContDiff ℝ (⊤ : ℕ∞) F₁ ∧ ∀ g, f g = F₁ (εK i g)) ∧ HasCompactSupport f) →
+      (∃ V ∈ nhds (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)),
+      ∀ δ : GL (Fin 2) (L ⊗[K] A i), IsRegularSemisimple (normString K L (A i) σ δ) →
+      ∀ γ ∈ V, IsRegularSemisimple γ →
+      ∀ y : GL (Fin 2) (L ⊗[K] A i), IsNormConjugator K L (A i) σ γ δ y →
+      ∀ (τ : @Measure (Subgroup.centralizer ({γ} : Set (GL (Fin 2) (A i)))) (centralizerBorel (A i) γ))
+      (τ' : @Measure (twistedCentralizer K L (A i) σ δ) (twistedCentralizerBorel K L (A i) σ δ)),
+      @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) γ) τ →
+      @Measure.IsHaarMeasure _ _ _ (twistedCentralizerBorel K L (A i) σ δ) τ' →
+      Coupled K L (A i) σ γ δ y τ τ' →
+      ∀ I I' : ℂ, IsTwistedOrbitalIntegralOn K L (A i) σ (μ' i) δ τ' φ I' →
+      IsOrbitalIntegralOn (A i) (μ i) γ τ f I → I' = I) →
+      ∀ δ y : GL (Fin 2) (L ⊗[K] A i),
+      IsNormConjugator K L (A i) σ (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) δ y →
+      ∀ (τ : @Measure (Subgroup.centralizer
+      ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))))
+      (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))))
+      (τ' : @Measure (twistedCentralizer K L (A i) σ δ) (twistedCentralizerBorel K L (A i) σ δ)),
+      @Measure.IsHaarMeasure _ _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) τ →
+      @Measure.IsHaarMeasure _ _ _ (twistedCentralizerBorel K L (A i) σ δ) τ' →
+      @Measure.IsInvInvariant _ (twistedCentralizerBorel K L (A i) σ δ) _ τ' →
+      (∃ s : ℝ≥0, s ≠ 0 ∧
+      @Measure.map _ _ (centralizerBorel (A i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i))) _
+      (fun t : Subgroup.centralizer ({Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)} : Set (GL (Fin 2) (A i))) => κ i (t : GL (Fin 2) (A i))) τ =
+      s • m i ∧
+      @Measure.map _ _ (twistedCentralizerBorel K L (A i) σ δ) _
+      (fun t : twistedCentralizer K L (A i) σ δ => κ' i (t : GL (Fin 2) (L ⊗[K] A i))) τ' =
+      s • m' i δ) →
+      ∀ I I' : ℂ, IsTwistedOrbitalIntegralOn K L (A i) σ (μ' i) δ τ' φ I' →
+      IsOrbitalIntegralOn (A i) (μ i) (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) τ f I → I' = lam i * I)
+      (ν : @Measure ((i : ι₁) → GL (Fin 2) (A i)) (borel _)) (hν : @Measure.IsHaarMeasure ((i : ι₁) → GL (Fin 2) (A i)) _ _ (borel _) ν)
+      (ν' : @Measure ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) (borel _)) (hν' : @Measure.IsHaarMeasure ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) _ _ (borel _) ν')
+      (F : ((i : ι₁) → GL (Fin 2) (A i)) → ℂ)
+      (hF : (∃ F₁ : ((i : ι₁) → X i) → ℂ, ContDiff ℝ (⊤ : ℕ∞) F₁ ∧ ∀ g, F g = F₁ (fun i => εK i (g i))) ∧
+      HasCompactSupport F)
+      (Φ : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) → ℂ)
+      (hΦ : (∃ Φ₁ : ((i : ι₁) → Y i) → ℂ, ContDiff ℝ (⊤ : ℕ∞) Φ₁ ∧ ∀ g, Φ g = Φ₁ (fun i => εL i (g i))) ∧
+      HasCompactSupport Φ)
+      (hreg : ∀ (γ : ((i : ι₁) → GL (Fin 2) (A i))) (δ y : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))),
+      (∀ i, IsRegularSemisimple (γ i)) → (∀ i, IsRegularSemisimple (normString K L (A i) σ (δ i))) →
+      (∀ i, IsNormConjugator K L (A i) σ (γ i) (δ i) (y i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer ({γ} : Set ((i : ι₁) → GL (Fin 2) (A i)))) (borel _))
+      (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+      @Measure.IsHaarMeasure _ _ _ (borel _) τ → @Measure.IsHaarMeasure _ _ _ (borel _) τ' →
+      @Measure.IsInvInvariant _ (borel _) _ τ' →
+      @Measure.map _ _ (borel _) (borel ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)))
+      (fun t : sigmaCentralizer (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) δ => y⁻¹ * (t : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) * y) τ' =
+      @Measure.map _ _ (borel _) (borel ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)))
+      (fun s : Subgroup.centralizer ({γ} : Set ((i : ι₁) → GL (Fin 2) (A i))) => fun i => toTensorGL K L (A i) ((s : ((i : ι₁) → GL (Fin 2) (A i))) i)) τ →
+      ∀ I I' : ℂ,
+      (∃ W : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, (∀ x, 0 ≤ W x) ∧ Measurable[borel ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))] W ∧ HasCompactSupport W ∧
+      (∀ x : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)), Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+      @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+      I' = @integral _ ℂ _ _ (borel ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) ν' (fun x => Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) x) * (W x : ℂ))) →
+      (∃ w : ((i : ι₁) → GL (Fin 2) (A i)) → ℝ, (∀ x, 0 ≤ w x) ∧ Measurable[borel ((i : ι₁) → GL (Fin 2) (A i))] w ∧ HasCompactSupport w ∧
+      (∀ x : ((i : ι₁) → GL (Fin 2) (A i)), F (x⁻¹ * γ * x) ≠ 0 →
+      @integral _ ℝ _ _ (borel _) τ (fun s => w ((s : ((i : ι₁) → GL (Fin 2) (A i))) * x)) = 1) ∧
+      I = @integral _ ℂ _ _ (borel ((i : ι₁) → GL (Fin 2) (A i))) ν (fun x => F (x⁻¹ * γ * x) * (w x : ℂ))) →
+      I' = I),
+      Fintype.card ι₁ < Fintype.card ι →
+      (∀ (δ y : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))),
+      (∀ i, IsNormConjugator K L (A i) σ (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) (δ i) (y i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer
+      ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι₁) → GL (Fin 2) (A i)))} : Set ((i : ι₁) → GL (Fin 2) (A i)))) (borel _))
+      (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+      @Measure.IsHaarMeasure _ _ _ (borel _) τ → @Measure.IsHaarMeasure _ _ _ (borel _) τ' →
+      @Measure.IsInvInvariant _ (borel _) _ τ' →
+      (∃ s : ℝ≥0, s ≠ 0 ∧
+      @Measure.map _ _ (borel _) MeasurableSpace.pi
+      (fun t : Subgroup.centralizer ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι₁) → GL (Fin 2) (A i)))} : Set ((i : ι₁) → GL (Fin 2) (A i))) =>
+      fun i => κ i ((t : ((i : ι₁) → GL (Fin 2) (A i))) i)) τ =
+      s • Measure.pi m ∧
+      @Measure.map _ _ (borel _) MeasurableSpace.pi
+      (fun t : sigmaCentralizer (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) δ => fun i => κ' i ((t : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) i)) τ' =
+      s • Measure.pi (fun i => m' i (δ i))) →
+      ∀ I I' : ℂ,
+      (∃ W : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, (∀ x, 0 ≤ W x) ∧ Measurable[borel ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))] W ∧ HasCompactSupport W ∧
+      (∀ x : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)), Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+      @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+      I' = @integral _ ℂ _ _ (borel ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) ν' (fun x => Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) x) * (W x : ℂ))) →
+      (∃ w : ((i : ι₁) → GL (Fin 2) (A i)) → ℝ, (∀ x, 0 ≤ w x) ∧ Measurable[borel ((i : ι₁) → GL (Fin 2) (A i))] w ∧ HasCompactSupport w ∧
+      (∀ x : ((i : ι₁) → GL (Fin 2) (A i)), F (x⁻¹ * (fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) * x) ≠ 0 →
+      @integral _ ℝ _ _ (borel _) τ (fun s => w ((s : ((i : ι₁) → GL (Fin 2) (A i))) * x)) = 1) ∧
+      I = @integral _ ℂ _ _ (borel ((i : ι₁) → GL (Fin 2) (A i))) ν
+      (fun x => F (x⁻¹ * (fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) * x) * (w x : ℂ))) →
+      I' = (∏ i, lam i) * I) ∧
+      (∀ (δ y : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))),
+      (∀ i, IsNormConjugator K L (A i) σ (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) (δ i) (y i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι₁) → GL (Fin 2) (A i)))} : Set ((i : ι₁) → GL (Fin 2) (A i)))) (borel _))
+      (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+      @Measure.IsHaarMeasure _ _ _ (borel _) τ → @Measure.IsHaarMeasure _ _ _ (borel _) τ' →
+      @Measure.IsInvInvariant _ (borel _) _ τ' →
+      (∃ s : ℝ≥0, s ≠ 0 ∧
+      @Measure.map _ _ (borel _) MeasurableSpace.pi
+      (fun t : Subgroup.centralizer ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι₁) → GL (Fin 2) (A i)))} : Set ((i : ι₁) → GL (Fin 2) (A i))) =>
+      fun i => κ i ((t : ((i : ι₁) → GL (Fin 2) (A i))) i)) τ =
+      s • Measure.pi m ∧
+      @Measure.map _ _ (borel _) MeasurableSpace.pi
+      (fun t : sigmaCentralizer (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) δ => fun i => κ' i ((t : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) i)) τ' =
+      s • Measure.pi (fun i => m' i (δ i))) →
+      ∀ Ψ : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) → ℂ, Continuous Ψ → HasCompactSupport Ψ →
+      ∃ W : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, Continuous W ∧ (∀ x, 0 ≤ W x) ∧ HasCompactSupport W ∧
+      ∀ x : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)), Ψ (x⁻¹ * δ * (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+      @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+      (∀ (δ : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))), (∀ i, IsRegularSemisimple (normString K L (A i) σ (δ i))) →
+      ∀ (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+      @Measure.IsHaarMeasure _ _ _ (borel _) τ' → @Measure.IsInvInvariant _ (borel _) _ τ' →
+      ∀ Ψ : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) → ℂ, Continuous Ψ → HasCompactSupport Ψ →
+      ∃ W : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, Continuous W ∧ (∀ x, 0 ≤ W x) ∧ HasCompactSupport W ∧
+      ∀ x : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i)), Ψ (x⁻¹ * δ * (MonoidHom.pi fun i : ι₁ => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι₁ => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+      @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι₁) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+      (∀ (γ : ((i : ι₁) → GL (Fin 2) (A i))), (∀ i, IsRegularSemisimple (γ i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer ({γ} : Set ((i : ι₁) → GL (Fin 2) (A i)))) (borel _)),
+      @Measure.IsHaarMeasure _ _ _ (borel _) τ →
+      ∀ Ψ : ((i : ι₁) → GL (Fin 2) (A i)) → ℂ, Continuous Ψ → HasCompactSupport Ψ →
+      ∃ w : ((i : ι₁) → GL (Fin 2) (A i)) → ℝ, Continuous w ∧ (∀ x, 0 ≤ w x) ∧ HasCompactSupport w ∧
+      ∀ x : ((i : ι₁) → GL (Fin 2) (A i)), Ψ (x⁻¹ * γ * x) ≠ 0 →
+      @integral _ ℝ _ _ (borel _) τ (fun s => w ((s : ((i : ι₁) → GL (Fin 2) (A i))) * x)) = 1)) :
+    (∀ (δ y : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))),
+      (∀ i, IsNormConjugator K L (A i) σ (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) (δ i) (y i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer
+            ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι) → GL (Fin 2) (A i)))} : Set ((i : ι) → GL (Fin 2) (A i)))) (borel _))
+        (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+        @Measure.IsHaarMeasure _ _ _ (borel _) τ → @Measure.IsHaarMeasure _ _ _ (borel _) τ' →
+        @Measure.IsInvInvariant _ (borel _) _ τ' →
+        (∃ s : ℝ≥0, s ≠ 0 ∧
+          @Measure.map _ _ (borel _) MeasurableSpace.pi
+              (fun t : Subgroup.centralizer ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι) → GL (Fin 2) (A i)))} : Set ((i : ι) → GL (Fin 2) (A i))) =>
+                fun i => κ i ((t : ((i : ι) → GL (Fin 2) (A i))) i)) τ =
+            s • Measure.pi m ∧
+          @Measure.map _ _ (borel _) MeasurableSpace.pi
+              (fun t : sigmaCentralizer (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) δ => fun i => κ' i ((t : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) i)) τ' =
+            s • Measure.pi (fun i => m' i (δ i))) →
+        ∀ I I' : ℂ,
+          (∃ W : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, (∀ x, 0 ≤ W x) ∧ Measurable[borel ((i : ι) → GL (Fin 2) (L ⊗[K] A i))] W ∧ HasCompactSupport W ∧
+            (∀ x : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)), Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+              @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+            I' = @integral _ ℂ _ _ (borel ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) ν' (fun x => Φ (x⁻¹ * δ * (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) x) * (W x : ℂ))) →
+          (∃ w : ((i : ι) → GL (Fin 2) (A i)) → ℝ, (∀ x, 0 ≤ w x) ∧ Measurable[borel ((i : ι) → GL (Fin 2) (A i))] w ∧ HasCompactSupport w ∧
+            (∀ x : ((i : ι) → GL (Fin 2) (A i)), F (x⁻¹ * (fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) * x) ≠ 0 →
+              @integral _ ℝ _ _ (borel _) τ (fun s => w ((s : ((i : ι) → GL (Fin 2) (A i))) * x)) = 1) ∧
+            I = @integral _ ℂ _ _ (borel ((i : ι) → GL (Fin 2) (A i))) ν
+              (fun x => F (x⁻¹ * (fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) * x) * (w x : ℂ))) →
+          I' = (∏ i, lam i) * I) ∧
+    (∀ (δ y : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))),
+      (∀ i, IsNormConjugator K L (A i) σ (Matrix.GeneralLinearGroup.scalar (Fin 2) (c i)) (δ i) (y i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι) → GL (Fin 2) (A i)))} : Set ((i : ι) → GL (Fin 2) (A i)))) (borel _))
+        (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+        @Measure.IsHaarMeasure _ _ _ (borel _) τ → @Measure.IsHaarMeasure _ _ _ (borel _) τ' →
+        @Measure.IsInvInvariant _ (borel _) _ τ' →
+        (∃ s : ℝ≥0, s ≠ 0 ∧
+          @Measure.map _ _ (borel _) MeasurableSpace.pi
+              (fun t : Subgroup.centralizer ({(fun i => Matrix.GeneralLinearGroup.scalar (Fin 2) (c i) : ((i : ι) → GL (Fin 2) (A i)))} : Set ((i : ι) → GL (Fin 2) (A i))) =>
+                fun i => κ i ((t : ((i : ι) → GL (Fin 2) (A i))) i)) τ =
+            s • Measure.pi m ∧
+          @Measure.map _ _ (borel _) MeasurableSpace.pi
+              (fun t : sigmaCentralizer (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) δ => fun i => κ' i ((t : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) i)) τ' =
+            s • Measure.pi (fun i => m' i (δ i))) →
+        ∀ Ψ : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) → ℂ, Continuous Ψ → HasCompactSupport Ψ →
+          ∃ W : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, Continuous W ∧ (∀ x, 0 ≤ W x) ∧ HasCompactSupport W ∧
+            ∀ x : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)), Ψ (x⁻¹ * δ * (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+              @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+    (∀ (δ : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))), (∀ i, IsRegularSemisimple (normString K L (A i) σ (δ i))) →
+      ∀ (τ' : @Measure (sigmaCentralizer (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) δ) (borel _)),
+        @Measure.IsHaarMeasure _ _ _ (borel _) τ' → @Measure.IsInvInvariant _ (borel _) _ τ' →
+        ∀ Ψ : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) → ℂ, Continuous Ψ → HasCompactSupport Ψ →
+          ∃ W : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)) → ℝ, Continuous W ∧ (∀ x, 0 ≤ W x) ∧ HasCompactSupport W ∧
+            ∀ x : ((i : ι) → GL (Fin 2) (L ⊗[K] A i)), Ψ (x⁻¹ * δ * (MonoidHom.pi fun i : ι => (sigmaGL K L (A i) σ).comp (Pi.evalMonoidHom (fun i : ι => GL (Fin 2) (L ⊗[K] A i)) i)) x) ≠ 0 →
+              @integral _ ℝ _ _ (borel _) τ' (fun t => W ((t : ((i : ι) → GL (Fin 2) (L ⊗[K] A i))) * x)) = 1) ∧
+    (∀ (γ : ((i : ι) → GL (Fin 2) (A i))), (∀ i, IsRegularSemisimple (γ i)) →
+      ∀ (τ : @Measure (Subgroup.centralizer ({γ} : Set ((i : ι) → GL (Fin 2) (A i)))) (borel _)),
+        @Measure.IsHaarMeasure _ _ _ (borel _) τ →
+        ∀ Ψ : ((i : ι) → GL (Fin 2) (A i)) → ℂ, Continuous Ψ → HasCompactSupport Ψ →
+          ∃ w : ((i : ι) → GL (Fin 2) (A i)) → ℝ, Continuous w ∧ (∀ x, 0 ≤ w x) ∧ HasCompactSupport w ∧
+            ∀ x : ((i : ι) → GL (Fin 2) (A i)), Ψ (x⁻¹ * γ * x) ≠ 0 →
+              @integral _ ℝ _ _ (borel _) τ (fun s => w ((s : ((i : ι) → GL (Fin 2) (A i))) * x)) = 1) := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_semilocal_central_transfer_referenceMeasures_peel_step.solution

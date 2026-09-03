@@ -1,0 +1,9 @@
+import Mathlib
+import Definitions.Def_FLTPrelim_GaloisRep
+import Definitions.Def_FLTPrelim_Ramification
+import Definitions.Def_EllipticCurve_ZeroComponentAt
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_exists_reduction_inZeroComponentAt
+
+open WeierstrassCurve WeierstrassCurve.Affine WeierstrassCurve.Affine.Point
+theorem WeierstrassCurve.exists_reduction_inZeroComponentAt (W : WeierstrassCurve ℤ) (A : ValuationSubring (AlgebraicClosure ℚ)) [DecidableEq (IsLocalRing.ResidueField A)] : ∃ red : ((W.map (Int.castRingHom ℚ))⁄(AlgebraicClosure ℚ)).Point → (W.map (Int.castRingHom (IsLocalRing.ResidueField A))).toAffine.Point, red 0 = 0 ∧ (∀ P Q : ((W.map (Int.castRingHom ℚ))⁄(AlgebraicClosure ℚ)).Point, W.InZeroComponentAt A P → W.InZeroComponentAt A Q → red (P + Q) = red P + red Q) ∧ (∀ (x y : AlgebraicClosure ℚ) (h : ((W.map (Int.castRingHom ℚ))⁄(AlgebraicClosure ℚ)).toAffine.Nonsingular x y) (hx : x ∈ A) (hy : y ∈ A) (hns : (W.map (Int.castRingHom (IsLocalRing.ResidueField A))).toAffine.Nonsingular (IsLocalRing.residue A ⟨x, hx⟩) (IsLocalRing.residue A ⟨y, hy⟩)), red (Point.some x y h) = Point.some (IsLocalRing.residue A ⟨x, hx⟩) (IsLocalRing.residue A ⟨y, hy⟩) hns) ∧ (∀ (x y : AlgebraicClosure ℚ) (h : ((W.map (Int.castRingHom ℚ))⁄(AlgebraicClosure ℚ)).toAffine.Nonsingular x y), x ∉ A → red (Point.some x y h) = 0) ∧ (∀ P : ((W.map (Int.castRingHom ℚ))⁄(AlgebraicClosure ℚ)).Point, W.InZeroComponentAt A P → red P = 0 → P = 0 ∨ ∃ (x y : AlgebraicClosure ℚ) (h : ((W.map (Int.castRingHom ℚ))⁄(AlgebraicClosure ℚ)).toAffine.Nonsingular x y), P = Point.some x y h ∧ x ∉ A) ∧ (∀ σ ∈ A.inertiaSubgroupIn ℚ, ∀ P : ((W.map (Int.castRingHom ℚ))⁄(AlgebraicClosure ℚ)).Point, red (σ • P) = red P) := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_exists_reduction_inZeroComponentAt.solution

@@ -1,0 +1,11 @@
+import Mathlib.AlgebraicGeometry.Morphisms.Separated
+import Mathlib.AlgebraicGeometry.Noetherian
+import Mathlib.RingTheory.Localization.Away.Basic
+import Definitions.Def_AlgebraicGeometry_OModulePresheafConstructions
+import P2M.Util
+import P2M.Sol.S_AlgebraicGeometry_OModulePresheaf_hasDevissageStep
+
+open AlgebraicGeometry
+
+universe u
+theorem AlgebraicGeometry.OModulePresheaf.hasDevissageStep : OModulePresheaf.HasDevissageStep.{u} := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicGeometry_OModulePresheaf_hasDevissageStep.solution

@@ -1,0 +1,145 @@
+{
+ "_source": "Classical names for landmark theorems, taken from the wording of PROOF-PATH.md (steps 1-6 and 'Exact strength of the named steps') and docs/route.md headings; used only as extra search terms.",
+ "aliases": {
+  "fermat_last_theorem": [
+   "Fermat's Last Theorem",
+   "FLT"
+  ],
+  "FLT.fermatLastTheorem": [
+   "Mathlib FermatLastTheorem",
+   "FLT"
+  ],
+  "FreyPackage.of_counterexample": [
+   "Frey curve",
+   "Frey"
+  ],
+  "FreyPackage.no_frey_package": [
+   "Frey",
+   "Serre",
+   "Ribet",
+   "Wiles",
+   "four-way contradiction"
+  ],
+  "FreyPackage.Mazur_Frey": [
+   "Mazur",
+   "irreducibility of the mod-p representation"
+  ],
+  "FreyPackage.frey_reducible_hasCofixedLine": [
+   "Serre",
+   "cofixed line"
+  ],
+  "FreyPackage.frey_no_cofixed_large": [
+   "Mazur",
+   "Eisenstein ideal",
+   "Eisenstein quotient"
+  ],
+  "WeierstrassCurve.mazurStepThree_not_inZeroComponentAt": [
+   "Mazur Step 3"
+  ],
+  "flt_regular": [
+   "Kummer",
+   "regular primes",
+   "flt-regular"
+  ],
+  "fermatLastTheoremFive": [
+   "descent",
+   "exponent 5"
+  ],
+  "FreyPackage.frey_isModular": [
+   "Wiles",
+   "Taylor-Wiles",
+   "modularity of the Frey curve"
+  ],
+  "WeierstrassCurve.modularity_of_semistableModel": [
+   "Wiles",
+   "Taylor-Wiles",
+   "modularity theorem",
+   "semistable modularity"
+  ],
+  "WeierstrassCurve.modThreeOrFiveIrreducible": [
+   "3-5 trick",
+   "X0(15)",
+   "15-isogeny"
+  ],
+  "WeierstrassCurve.isResiduallyModular_three_and_noInertiaFixedTorsion_and_not_cube_dvd_of_isSemistableModel": [
+   "Langlands-Tunnell",
+   "residual modularity mod 3"
+  ],
+  "LanglandsTunnell.exists_isWeightOneChiNegThreeRealized_eq_trace_lift": [
+   "Langlands-Tunnell",
+   "Tunnell",
+   "octahedral",
+   "weight one form"
+  ],
+  "WeierstrassCurve.modularityLiftingAtConductor_threeFive_of_level_of_inertia_moves_torsion_of_eq_three_of_not_cube_dvd": [
+   "modularity lifting",
+   "R=T",
+   "R = T",
+   "Taylor-Wiles",
+   "p = 3"
+  ],
+  "WeierstrassCurve.modularityLiftingAtConductor_threeFive_of_level_of_not_sq_dvd_of_not_cube_dvd": [
+   "modularity lifting",
+   "R=T",
+   "R = T",
+   "Taylor-Wiles",
+   "p = 5"
+  ],
+  "GaloisRep.DeformationRingData.exists_surjective_algHom_of_heckeGaloisRepDatum": [
+   "R=T",
+   "R = T",
+   "Taylor-Wiles patching",
+   "Diamond"
+  ],
+  "Algebra.PatchingDatum.nonempty_patchingLevel_bot": [
+   "Taylor-Wiles patching",
+   "patching datum"
+  ],
+  "WeierstrassCurve.threeFiveSwitchCurve": [
+   "3-5 switch",
+   "three-five switch",
+   "Wiles"
+  ],
+  "WeierstrassCurve.threeFiveAuxiliaryCurveExists": [
+   "3-5 switch",
+   "Rubin-Silverberg family"
+  ],
+  "WeierstrassCurve.isResiduallyModularOfLevel_of_switch": [
+   "3-5 switch"
+  ],
+  "FreyPackage.level_lowering_to_two": [
+   "Ribet",
+   "level lowering",
+   "epsilon conjecture"
+  ],
+  "FreyPackage.level_lowering_odd_prime_of_conductorLevel": [
+   "Ribet",
+   "Cerednik-Drinfeld",
+   "Čerednik-Drinfeld"
+  ],
+  "FreyPackage.level_lowering_at_p_of_conductorLevel": [
+   "Mazur-Ribet",
+   "level lowering at p"
+  ],
+  "FreyCurve.isPeuRamifieeAt_odd_of_integralForm": [
+   "peu ramifiee",
+   "finite at p"
+  ],
+  "FreyPackage.modularRepOfConductorLevel": [
+   "arises from level N",
+   "conductor level"
+  ],
+  "ModularForm.S2_Gamma0_2_eq_zero": [
+   "S2(Gamma0(2)) = 0",
+   "no weight 2 level 2 cusp forms"
+  ],
+  "ModularForm.S2_Gamma0_one_eq_zero": [
+   "S2(Gamma0(1)) = 0",
+   "level one"
+  ],
+  "ResidualGaloisRep.isAbsolutelyIrreducible_of_isIrreducible_of_isOdd": [
+   "absolutely irreducible",
+   "odd"
+  ]
+ }
+}

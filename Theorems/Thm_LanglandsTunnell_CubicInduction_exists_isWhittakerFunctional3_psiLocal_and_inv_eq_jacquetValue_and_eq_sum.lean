@@ -1,0 +1,31 @@
+import Definitions.Def_LanglandsTunnell_CubicInduction_JacquetWhittaker
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_CubicInduction_exists_isWhittakerFunctional3_psiLocal_and_inv_eq_jacquetValue_and_eq_sum
+attribute [-instance] IsDedekindDomain.HeightOneSpectrum.Extension.instAlgebraSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnder IsDedekindDomain.HeightOneSpectrum.Extension.instAlgebraSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnder_1 IsDedekindDomain.HeightOneSpectrum.instMulActionHomClassAlgHomTensorProductAdicCompletionForallValEqUnder_definitions IsDedekindDomain.HeightOneSpectrum.Extension.instAlgebraAdicCompletionValEqUnder IsDedekindDomain.HeightOneSpectrum.adicCompletion.instFiniteForallValEqUnderOfFiniteDimensional_definitions IsDedekindDomain.HeightOneSpectrum.instIsBiscalarSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersTensorProductCoeAlgHomTensorAdicCompletionIntegersTo IsDedekindDomain.HeightOneSpectrum.Extension.instContinuousSMulAdicCompletionValEqUnder IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsModuleTopology IsDedekindDomain.HeightOneSpectrum.Extension.instFiniteSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnderOfFiniteDimensional IsDedekindDomain.HeightOneSpectrum.adicCompletion.instFiniteValEqUnderOfFiniteDimensional_definitions instIsBiscalarTensorProductCoeAlgHomBaseChange_of_algebraMap IsDedekindDomain.HeightOneSpectrum.instIsScalarTowerSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersValEqUnder_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsModuleTopologyPi IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instDimensionLEOneSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.instLiesOverSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersCompletionIdealAsIdeal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsPrincipalIdealRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemSubringIntegerWithZeroMultiplicativeInt_definitions IsDedekindDomain.HeightOneSpectrum.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicCompletionV_definitions Submodule.instIsTopologicalModuleSubtypeMem Pi.instTopologicalModule IsTopologicalModule.toContinuousSMul IsTopologicalModule.toContinuousAdd instFunLike SemialgHomClass.toSemilinearMapClass instCoeTCSemialgHom SemialgHomClass.toRingHomClass SemialgHomClass.instSemialgHom
+attribute [-simp] LanglandsTunnell.CubicInduction.translateRepStep_apply_coe LanglandsTunnell.CubicInduction.translateFn_apply SemialgHom.baseChange_of_algebraMap_tmul_left SemialgHom.baseChangeRightOfAlgebraMap_apply Pi.semialgHomPi_apply Pi.semialgHom_apply Module.Basis.rightBaseChange_apply LinearEquiv.coe_mulLeft LinearEquiv.coe_mulRight WithVal.semialgebraMap_toFun_ofVal Module.Basis.rightBaseChange_repr IsDedekindDomain.HeightOneSpectrum.adicCompletionIntegers.tensorCoe_tmul IsDedekindDomain.HeightOneSpectrum.tensorAdicCompletionIntegersTo_tmul SemialgHom.baseChangeRightOfAlgebraMap_coe IsDedekindDomain.HeightOneSpectrum.adicCompletion.integerBaseChangeLinearEquiv_tmul_apply SemialgHom.baseChange_of_algebraMap_tmul_right IsLocalization.map_moduleTensorEquiv_symm_tmul IsLocalization.leftModuleTensorEquiv_apply IsLocalization.moduleLid_symm_apply IsLocalization.leftModuleTensorEquiv_symm_apply IsLocalization.map_moduleTensorEquiv_tmul IsModuleTopology.continuousLinearEquiv_apply AlgEquiv.extendScalars_symm_apply IsModuleTopology.Module.Basis.equivFun_homeo_symm_apply IsModuleTopology.Module.Basis.equivFun_homeo_apply IsModuleTopology.continuousAlgEquivOfIsBiscalar_apply AlgEquiv.extendScalars_apply IsModuleTopology.continuousLinearEquiv_symm_apply SemialgHom.restrictScalars_toFun SemialgHom.mk.sizeOf_spec SemialgHom.mk.injEq SemialgHom.coe_coe coe_mk TensorProduct.RightActions.smul_def TensorProduct.RightActions.Module.TensorProduct.comm_symm_apply_tmul TensorProduct.RightActions.LinearMap.baseChange_id TensorProduct.RightActions.algebraMap_eval TensorProduct.RightActions.Module.TensorProduct.comm_apply_tmul TensorProduct.RightActions.Algebra.TensorProduct.comm_symm_apply_tmul TensorProduct.RightActions.Algebra.TensorProduct.comm_apply_tmul
+
+set_option autoImplicit false
+
+open IsDedekindDomain NumberField
+
+theorem LanglandsTunnell.CubicInduction.exists_isWhittakerFunctional3_psiLocal_and_inv_eq_jacquetValue_and_eq_sum
+    (v : HeightOneSpectrum (𝓞 ℚ))
+    (χ : Fin 3 → ((v.adicCompletion ℚ)ˣ →* ℂˣ)) (hχ : ∀ i, IsLocallyConstant (χ i)) :
+    ∃ Λ₀ Λ₁ : ↥(principalSeries3 v χ) →ₗ[ℂ] ℂ,
+      IsWhittakerFunctional3 (NumberField.StandardAddChar.psiLocal ℚ v) Λ₀ ∧
+      (∀ F : ↥(principalSeries3 v χ), Λ₀ F = jacquetValue v (F : LocalGL3 v → ℂ)) ∧
+      (∀ Φ : (Fin 3 → v.adicCompletion ℚ) → ℂ, IsLocallyConstant Φ ∧ HasCompactSupport Φ →
+        ∃ h : cellSectionOf v χ Φ ∈ principalSeries3 v χ,
+          jacquetWhittaker3 v χ Φ = coefficientFn Λ₀ ⟨cellSectionOf v χ Φ, h⟩) ∧
+      (∀ f : ↥(principalSeries3 v χ), ∃ (n : ℕ) (κ : Fin n → ℂ) (x y z : Fin n → v.adicCompletion ℚ)
+        (Φ : Fin n → (Fin 3 → v.adicCompletion ℚ) → ℂ),
+        (∀ j, IsLocallyConstant (Φ j) ∧ HasCompactSupport (Φ j)) ∧
+        (f : LocalGL3 v → ℂ) = ∑ j, κ j • gl3AmbientRightTranslate (R := ℂ)
+          (upperUnipotent3 (x j) (y j) (z j) * antidiagonal3 v) (cellSectionOf v χ (Φ j))) ∧
+      IsWhittakerFunctional3 (NumberField.StandardAddChar.psiLocal ℚ v)⁻¹ Λ₁ ∧
+      (∀ F : ↥(principalSeries3 v χ), Λ₁ F =
+        jacquetValue v (gl3AmbientRightTranslate (R := ℂ) (diagonal3 v ![1, -1, 1]) (F : LocalGL3 v → ℂ))) ∧
+      ∀ Φ : (Fin 3 → v.adicCompletion ℚ) → ℂ, IsLocallyConstant Φ ∧ HasCompactSupport Φ →
+        ∃ h : cellSectionOf v χ Φ ∈ principalSeries3 v χ,
+          (fun k => jacquetWhittaker3 v χ Φ (diagonal3 v ![1, -1, 1] * k)) =
+            coefficientFn Λ₁ ⟨cellSectionOf v χ Φ, h⟩ := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_CubicInduction_exists_isWhittakerFunctional3_psiLocal_and_inv_eq_jacquetValue_and_eq_sum.solution

@@ -1,0 +1,92 @@
+import Definitions.Def_LanglandsTunnell_CubicInduction_CellBumps
+import Definitions.Def_LanglandsTunnell_CubicInduction_MirabolicMajorant
+import Definitions.Def_UnramifiedWhittaker_HeckeRecursion
+import Definitions.Def_AutomorphicForm_LocalOrbitalBase
+import Definitions.Def_LanglandsTunnell_CubicInduction_LocalZeta31
+import Definitions.Def_LanglandsTunnell_RSCarrier
+import Definitions.Def_LanglandsTunnell_StandardLocalConstantsAt
+import Definitions.Def_LanglandsTunnell_CubicLambda
+import Definitions.Def_M4aHerbrand_GenuineDescent
+import Definitions.Def_DedekindDomain_Completion_BaseChange
+import Definitions.Def_AutomorphicForm_SmoothingKernel
+import Definitions.Def_LanglandsTunnell_LambdaSquared
+import Definitions.Def_LanglandsTunnell_CubicInduction_ArchZeta31
+import Definitions.Def_M4aHerbrand_SIdeleClassGroup
+import Definitions.Def_RatIdele_Normalizer
+import Definitions.Def_LanglandsTunnell_CubicInduction_Structure
+import Definitions.Def_LanglandsTunnell_CubicInduction_GlobalZeta31
+import Definitions.Def_AdelicDock_LocalEmbedding
+import Definitions.Def_NumberField_StandardGlobalAddCharRat
+import Definitions.Def_LanglandsTunnell_RankinSelbergEuler
+import Definitions.Def_NumberField_AdelicLevel
+import Definitions.Def_LanglandsTunnell_CubicInduction_Congruence
+import Definitions.Def_LanglandsTunnell_CubicInduction_GodementSection
+import Definitions.Def_LanglandsTunnell_CubicInduction_PrincipalSeries2
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_RankinSelberg_exists_schwartz_godementZeta2_whittaker_eq_godementZeta2_section_and_dual_of_equivariant_embedding
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instCountableOfNumberField_definitions
+attribute [-simp] AutomorphicForm.IsStableLinearOn.coe_toEnd_apply AutomorphicForm.ArchRepAt.mk.sizeOf_spec AutomorphicForm.IsIsotypicCuspFormAt.toRealization_toFun AutomorphicForm.ArchTypeFamily.mk.sizeOf_spec AutomorphicForm.charRep_apply AutomorphicForm.ArchRepAt.mk.injEq AutomorphicForm.ArchTypeFamily.mk.injEq AutomorphicForm.classSq_apply AutomorphicForm.classRepEmbedding_one AutomorphicForm.finIdeleExponentAt_one AutomorphicForm.classRepFinIdele_one AutomorphicForm.productionPinsGeneralOf_D AutomorphicForm.productionPinsGeneral_D AutomorphicForm.productionPinsGeneralOf_μ AutomorphicForm.productionPinsGeneralOf_U AutomorphicForm.productionPinsCompact_ν AutomorphicForm.productionPinsCompact_U AutomorphicForm.productionPinsCompact_D AutomorphicForm.productionPinsCompact_nS AutomorphicForm.productionPinsCompact_gen AutomorphicForm.productionPinsCompact_Z AutomorphicForm.productionPinsCompact_mS AutomorphicForm.productionPinsCompact_μ AutomorphicForm.productionPins_nS AutomorphicForm.productionPins_mS AutomorphicForm.productionPins_ν AutomorphicForm.productionPins_Z AutomorphicForm.productionPins_U AutomorphicForm.productionPins_μ AutomorphicForm.productionPins_gen AutomorphicForm.productionPins_D AutomorphicForm.SiegelCoordinates.upperUnit_apply_zero_zero AutomorphicForm.SiegelCoordinates.upperUnit_apply_one_zero AutomorphicForm.SiegelCoordinates.upperUnit_apply_one_one AutomorphicForm.SiegelCoordinates.upperUnit_apply_zero_one AutomorphicForm.HeckeEigensystem.ofRawCentral_toRawCentral AutomorphicForm.HeckeEigensystem.toRawCentral_ofRawCentral AutomorphicForm.HeckeEigensystem.ofRawCentral_a AutomorphicForm.HeckeEigensystem.ofRawCentral_b AutomorphicForm.HeckeEigensystem.toRawCentral_level
+attribute [-simp] AutomorphicForm.HeckeEigensystem.toRawCentral_a AutomorphicForm.HeckeEigensystem.ofRawCentral_level AutomorphicForm.HeckeEigensystem.toRawCentral_b AutomorphicForm.SmoothCuspRealizationAt.mk.injEq AutomorphicForm.degenerateEigensystem_a AutomorphicForm.SmoothCuspRealizationAt.mk.sizeOf_spec AutomorphicForm.degenerateEigensystem_b AutomorphicForm.HeckeEigensystem.map_b AutomorphicForm.HeckeEigensystem.map_a AutomorphicForm.HeckeEigensystem.map_level AutomorphicForm.mem_sigmaCentralizer_iff
+
+set_option autoImplicit false
+
+open IsDedekindDomain NumberField AutomorphicForm LanglandsTunnell.RankinSelberg MeasureTheory
+  LanglandsTunnell.TateLocal NumberField.TateGlobal UnramifiedWhittaker
+  LanglandsTunnell.Converse LanglandsTunnell.CubicInduction
+open scoped nonZeroDivisors
+open NumberField.AdelicLevel (diagOne)
+
+open scoped Classical
+
+theorem LanglandsTunnell.RankinSelberg.exists_schwartz_godementZeta2_whittaker_eq_godementZeta2_section_and_dual_of_equivariant_embedding
+    (p : HeightOneSpectrum (𝓞 ℚ))
+
+    (N : Ideal (𝓞 ℚ)) (hN : N ≠ ⊥)
+    (w₂base : GL (Fin 2) (p.adicCompletion ℚ) → ℂ)
+    (hw₂law : ∀ (x : p.adicCompletion ℚ) (g : GL (Fin 2) (p.adicCompletion ℚ)),
+      w₂base (unipotent x * g) = NumberField.StandardAddChar.psiLocal ℚ p x * w₂base g)
+    (hw₂K : ∀ k ∈ AdelicDock.localLevelOne (𝓞 ℚ) ℚ p N, ∀ g : GL (Fin 2) (p.adicCompletion ℚ), w₂base (g * k) = w₂base g)
+    (hw₂ne : w₂base ≠ 0)
+    (hw₂irr : ∀ w ∈ Submodule.span ℂ (Set.range fun h : GL (Fin 2) (p.adicCompletion ℚ) => fun g : GL (Fin 2) (p.adicCompletion ℚ) => w₂base (g * h)),
+      w ≠ 0 → w₂base ∈ Submodule.span ℂ (Set.range fun h : GL (Fin 2) (p.adicCompletion ℚ) => fun g : GL (Fin 2) (p.adicCompletion ℚ) => w (g * h)))
+    (hw₂adm : ∀ U : Subgroup (GL (Fin 2) (p.adicCompletion ℚ)), IsOpen (U : Set (GL (Fin 2) (p.adicCompletion ℚ))) →
+      ∃ B : Finset (GL (Fin 2) (p.adicCompletion ℚ) → ℂ),
+        ∀ w ∈ Submodule.span ℂ (Set.range fun h : GL (Fin 2) (p.adicCompletion ℚ) => fun g : GL (Fin 2) (p.adicCompletion ℚ) => w₂base (g * h)),
+          (∀ k ∈ U, ∀ g : GL (Fin 2) (p.adicCompletion ℚ), w (g * k) = w g) →
+            w ∈ Submodule.span ℂ (B : Set (GL (Fin 2) (p.adicCompletion ℚ) → ℂ)))
+
+    (lam : Fin 2 → ((p.adicCompletion ℚ)ˣ →* ℂˣ))
+    (Φe : (GL (Fin 2) (p.adicCompletion ℚ) → ℂ) →ₗ[ℂ] (GL (Fin 2) (p.adicCompletion ℚ) → ℂ))
+    (hΦeq : ∀ w ∈ Submodule.span ℂ (Set.range fun h : GL (Fin 2) (p.adicCompletion ℚ) => fun g : GL (Fin 2) (p.adicCompletion ℚ) => w₂base (g * h)), ∀ h : GL (Fin 2) (p.adicCompletion ℚ),
+      Φe (fun g => w (g * h)) = fun g => Φe w (g * h))
+    (hΦinj : ∀ w ∈ Submodule.span ℂ (Set.range fun h : GL (Fin 2) (p.adicCompletion ℚ) => fun g : GL (Fin 2) (p.adicCompletion ℚ) => w₂base (g * h)), Φe w = 0 → w = 0)
+    (hΦPS : ∀ w ∈ Submodule.span ℂ (Set.range fun h : GL (Fin 2) (p.adicCompletion ℚ) => fun g : GL (Fin 2) (p.adicCompletion ℚ) => w₂base (g * h)), Φe w ∈ principalSeries2 p lam)
+
+    (χ : (p.adicCompletion ℚ)ˣ →* ℂˣ) (hχ : IsLocallyConstant χ) :
+    letI := localBorel ℚ p
+    letI := localGLBorel ℚ p
+    haveI := borelSpace_localGLBorel ℚ p
+    ∀ (μ₂ : Measure (GL (Fin 2) (p.adicCompletion ℚ))) [μ₂.IsHaarMeasure],
+      ∀ w ∈ Submodule.span ℂ (Set.range fun h : GL (Fin 2) (p.adicCompletion ℚ) => fun g : GL (Fin 2) (p.adicCompletion ℚ) => w₂base (g * h)),
+        ∀ (Φ : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ) → ℂ), IsLocallyConstant Φ → HasCompactSupport Φ →
+          ∃ Φt : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ) → ℂ, IsLocallyConstant Φt ∧ HasCompactSupport Φt ∧
+            ∃ S : Finset (GL (Fin 2) (p.adicCompletion ℚ)), ∀ s : ℂ,
+              ((Integrable (fun g : GL (Fin 2) (p.adicCompletion ℚ) =>
+                    w g * Φ (g : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ)) * ((χ (Matrix.GeneralLinearGroup.det g) : ℂˣ) : ℂ) * ((modulus ((Matrix.GeneralLinearGroup.det g : (p.adicCompletion ℚ)ˣ) : p.adicCompletion ℚ) : ℝ) : ℂ) ^ s) μ₂ →
+                (∀ t ∈ S, Integrable (fun g : GL (Fin 2) (p.adicCompletion ℚ) =>
+                    Φe w g * Φ (((t⁻¹ : GL (Fin 2) (p.adicCompletion ℚ)) : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ)) * (g : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ))) *
+                      ((χ (Matrix.GeneralLinearGroup.det g) : ℂˣ) : ℂ) * ((modulus ((Matrix.GeneralLinearGroup.det g : (p.adicCompletion ℚ)ˣ) : p.adicCompletion ℚ) : ℝ) : ℂ) ^ s) μ₂) →
+                godementZeta2 p μ₂ w Φ χ s = godementZeta2 p μ₂ (Φe w) Φt χ s) ∧
+              (Integrable (fun g : GL (Fin 2) (p.adicCompletion ℚ) =>
+                    w (transposeInvN (Fin 2) g) *
+                      matFourier22 p (NumberField.StandardAddChar.psiLocal ℚ p) Φ (g : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ)) *
+                      ((χ⁻¹ (Matrix.GeneralLinearGroup.det g) : ℂˣ) : ℂ) * ((modulus ((Matrix.GeneralLinearGroup.det g : (p.adicCompletion ℚ)ˣ) : p.adicCompletion ℚ) : ℝ) : ℂ) ^ s) μ₂ →
+                (∀ t ∈ S, Integrable (fun g : GL (Fin 2) (p.adicCompletion ℚ) =>
+                    Φe w (transposeInvN (Fin 2) g) *
+                      matFourier22 p (NumberField.StandardAddChar.psiLocal ℚ p)
+                        (fun X : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ) => Φ (((t⁻¹ : GL (Fin 2) (p.adicCompletion ℚ)) : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ)) * X)) (g : Matrix (Fin 2) (Fin 2) (p.adicCompletion ℚ)) *
+                      ((χ⁻¹ (Matrix.GeneralLinearGroup.det g) : ℂˣ) : ℂ) * ((modulus ((Matrix.GeneralLinearGroup.det g : (p.adicCompletion ℚ)ˣ) : p.adicCompletion ℚ) : ℝ) : ℂ) ^ s) μ₂) →
+                godementZeta2 p μ₂ (fun g : GL (Fin 2) (p.adicCompletion ℚ) => w (transposeInvN (Fin 2) g))
+                    (matFourier22 p (NumberField.StandardAddChar.psiLocal ℚ p) Φ) χ⁻¹ s =
+                  godementZeta2 p μ₂ (fun g : GL (Fin 2) (p.adicCompletion ℚ) => Φe w (transposeInvN (Fin 2) g))
+                    (matFourier22 p (NumberField.StandardAddChar.psiLocal ℚ p) Φt) χ⁻¹ s)) := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_RankinSelberg_exists_schwartz_godementZeta2_whittaker_eq_godementZeta2_section_and_dual_of_equivariant_embedding.solution

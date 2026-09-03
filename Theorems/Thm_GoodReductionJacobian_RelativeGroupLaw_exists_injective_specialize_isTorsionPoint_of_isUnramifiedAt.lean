@@ -1,0 +1,34 @@
+import Mathlib
+import Definitions.Def_JacJ1Iface
+import Definitions.Def_GoodReductionJacobian_RelativeGroupLawKernel
+import Definitions.Def_GoodReductionJacobian_RelativeGroupLawBaseChange
+import P2M.Util
+import P2M.Sol.S_GoodReductionJacobian_RelativeGroupLaw_exists_injective_specialize_isTorsionPoint_of_isUnramifiedAt
+
+set_option autoImplicit false
+
+open CategoryTheory CategoryTheory.Limits AlgebraicGeometry NeronModelInfra GoodReductionJacobian
+
+universe u
+
+theorem GoodReductionJacobian.RelativeGroupLaw.exists_injective_specialize_isTorsionPoint_of_isUnramifiedAt
+    {R : Type u} [CommRing R] [IsDomain R] [IsDiscreteValuationRing R]
+    (K : Type u) [Field K] [Algebra R K] [IsFractionRing R K]
+    {B : Scheme.{u}} {g : B ⟶ Spec (CommRingCat.of R)} (LB : RelativeGroupLaw R g)
+    (hcomm : ∀ {T : Scheme.{u}} (t : T ⟶ Spec (CommRingCat.of R)) (x y : SchemeHomOver t g),
+      LB.mul t x y = LB.mul t y x)
+    (hN : NeronModelPropertyBundle R K g)
+    (n : ℕ) (hn : IsUnit (n : R))
+    (S : Type u) [CommRing S] [IsDomain S] [Algebra R S] [Module.Finite R S]
+    (L : Type u) [Field L] [Algebra S L] [Algebra K L] [Algebra R L]
+    [IsScalarTower R S L] [IsScalarTower R K L] [IsFractionRing S L]
+    [IsIntegralClosure S R L] [Algebra.IsAlgebraic K L]
+    (P : Ideal S) [P.IsPrime] [Algebra.IsUnramifiedAt R P]
+    (k' : Type u) [Field k'] [Algebra R k'] (ψ : S →ₐ[R] k')
+    (hψ : ∀ s : S, ψ s = 0 → s ∈ P) :
+    ∃ r : {z : SchemeHomOver (Spec.map (CommRingCat.ofHom (algebraMap K L)))
+              (pullback.snd g (specGenericFibreInclusion R K)) //
+            (LB.genericFibre K).IsTorsionPoint (Spec.map (CommRingCat.ofHom (algebraMap K L))) n z}
+          → {y : SchemeHomOver (Spec.map (CommRingCat.ofHom (algebraMap R k'))) g //
+            LB.IsTorsionPoint (Spec.map (CommRingCat.ofHom (algebraMap R k'))) n y},
+      Function.Injective r := by p2m_exact_reverting @_root_.P2MW.S_GoodReductionJacobian_RelativeGroupLaw_exists_injective_specialize_isTorsionPoint_of_isUnramifiedAt.solution

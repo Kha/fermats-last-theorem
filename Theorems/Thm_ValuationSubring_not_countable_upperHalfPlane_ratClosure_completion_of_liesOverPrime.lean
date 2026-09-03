@@ -1,0 +1,13 @@
+import Definitions.Def_CerednikDrinfeld_DrinfeldUpperHalfPlane
+import Definitions.Def_ValuationSubring_CompletionRatClosure
+import Definitions.Def_FLTPrelim_Ramification
+import P2M.Util
+import P2M.Sol.S_ValuationSubring_not_countable_upperHalfPlane_ratClosure_completion_of_liesOverPrime
+
+set_option autoImplicit false
+
+open ValuationSubring hiding exists_two_closed_subfields_completion_inf_eq_ratClosure_of_liesOverPrime open CerednikDrinfeld
+
+theorem ValuationSubring.not_countable_upperHalfPlane_ratClosure_completion_of_liesOverPrime
+    (r : ℕ) [Fact r.Prime] (A : ValuationSubring (AlgebraicClosure ℚ)) (hA : A.LiesOverPrime r) :
+    ¬ (Omega.upperHalfPlane ↥(ratClosure A) A.valuation.Completion).Countable := by p2m_exact_reverting @_root_.P2MW.S_ValuationSubring_not_countable_upperHalfPlane_ratClosure_completion_of_liesOverPrime.solution

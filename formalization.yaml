@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml (v0.4): repo-root metadata for this formalization,
+# following https://github.com/mathlib-initiative/formalization.yaml
+
+version: "v0.4"
+
+project:
+  name: "Fermat's Last Theorem in Lean 4"
+  description: >-
+    A complete, machine-checked Lean 4 proof of Fermat's Last Theorem, built on
+    Mathlib: for every natural number n >= 3 there are no positive natural
+    numbers a, b, c with a^n + b^n = c^n (declaration fermat_last_theorem).
+    The default build target also derives Mathlib's own statement
+    FermatLastTheorem. The argument is that of Frey, Serre, Ribet, Wiles and
+    Taylor-Wiles; the named classical inputs (irreducibility of the Frey
+    representation, Langlands-Tunnell, modularity lifting, modularity of
+    semistable curves, level lowering) are proved within the development, in
+    the strength the argument needs, rather than assumed.
+  authors:
+    - "Anthropic"
+  license: "Apache-2.0"
+
+sources:
+  - title: "Modular elliptic curves and Fermat's Last Theorem"
+    authors: ["Andrew Wiles"]
+    id: "doi:10.2307/2118559"
+    type: "article"
+    location: "Annals of Mathematics 141 (1995), 443-551"
+    relationship: "adapts"
+    note: >-
+      The development proves the theorem by the strategy of this paper and its
+      companion (Taylor-Wiles), but does not track the text statement by
+      statement: intermediate results are proved in the form the argument
+      needs. PROOF-PATH.md names each step and the Lean theorem that carries it.
+    author_endorsement: "not-contacted"
+  - title: "Ring-theoretic properties of certain Hecke algebras"
+    authors: ["Richard Taylor", "Andrew Wiles"]
+    id: "doi:10.2307/2118560"
+    type: "article"
+    location: "Annals of Mathematics 141 (1995), 553-572"
+    relationship: "adapts"
+    author_endorsement: "not-contacted"
+  - title: "Fermat's Last Theorem"
+    authors: ["Henri Darmon", "Fred Diamond", "Richard Taylor"]
+    id: "In: Current Developments in Mathematics, 1995 (International Press), 1-154"
+    type: "article"
+    relationship: "adapts"
+    note: "The exposition the route largely follows (see PROOF-PATH.md), run as a proof by contradiction."
+    author_endorsement: "not-contacted"
+
+related_formalizations:
+  - id: "https://github.com/ImperialCollegeLondon/FLT"
+    relationship: "builds-on"
+    note: >-
+      The Imperial College London FLT project led by Kevin Buzzard (Apache-2.0).
+      Material adapted from it (Frey package, Galois representations, deformation
+      theory, patching and more) is listed file by file in ATTRIBUTION.md and
+      credited in NOTICE.
+  - id: "https://github.com/leanprover-community/flt-regular"
+    relationship: "builds-on"
+    note: "flt-regular (Apache-2.0): Kummer's theorem. Adapted files are listed in ATTRIBUTION.md and credited in NOTICE."
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11D41"]
+
+status:
+  scope: >-
+    The full statement of Fermat's Last Theorem for natural-number exponents
+    n >= 3, proved from Lean's three standard axioms with every intermediate
+    result proved in the development or taken from Mathlib; nothing is assumed
+    from the literature.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "fermat_last_theorem"
+      file: "Theorems/Thm_fermat_last_theorem.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "verification/comparator/config.json"
+      literature_dependencies: []
+    - declaration: "flt_mathlib"
+      file: "FinalCheck.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "verification/comparator/config.json"
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: "agent"
+
+fidelity:
+  divergences: >-
+    The development follows the strategy of the sources, not their text. Named
+    classical theorems are proved in the strength the argument needs, as set out
+    under "Exact strength of the named steps" in PROOF-PATH.md: irreducibility of
+    E[p] is proved for Frey curves rather than via Mazur's general theorems;
+    Langlands-Tunnell in the octahedral case only; modularity lifting under level
+    conditions at p = 3 and p in {3, 5}; modularity for semistable integral
+    Weierstrass models in the sense of matching a_l; level lowering for the Frey
+    representation as a congruence of traces. The top-level statement is the
+    standard one and is checked identical to a Mathlib-only challenge file.
+
+review:
+  status: "self-assessed"
+  reviewers: []
+  notes: >-
+    The proof is machine-checked: by the Lean kernel in a from-scratch build whose
+    default target fails unless fermat_last_theorem depends on exactly propext,
+    Classical.choice and Quot.sound; by leanprover/comparator against the
+    Mathlib-only challenge statement in verification/comparator/Challenge.lean
+    (statement and constants identical, no other axiom, full kernel replay
+    including Mathlib); and by the independent kernel nanoda, which accepted every
+    declaration of the exported environment. See README.md, "How it was verified".
+
+acknowledgements: >-
+  Portions derive from the Imperial College London FLT project led by Kevin
+  Buzzard, from flt-regular and from Mathlib, all released under the Apache
+  License 2.0; see NOTICE and ATTRIBUTION.md.

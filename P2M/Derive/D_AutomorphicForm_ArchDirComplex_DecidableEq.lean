@@ -1,0 +1,3 @@
+import Definitions.Def_AutomorphicForm_ArchDerivCasimirComplex
+
+deriving instance DecidableEq for AutomorphicForm.ArchDirComplex

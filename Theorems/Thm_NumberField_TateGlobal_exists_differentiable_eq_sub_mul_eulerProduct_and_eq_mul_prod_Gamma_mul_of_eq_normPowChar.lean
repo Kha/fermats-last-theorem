@@ -1,0 +1,41 @@
+import Definitions.Def_NumberField_TateGlobalZeta
+import Definitions.Def_AutomorphicForm_HeckeEigenfunction
+import Definitions.Def_AutomorphicForm_EtaFamily
+import Definitions.Def_NumberField_NormPowChar
+import P2M.Util
+import P2M.Sol.S_NumberField_TateGlobal_exists_differentiable_eq_sub_mul_eulerProduct_and_eq_mul_prod_Gamma_mul_of_eq_normPowChar
+attribute [-instance] instCountableOfNumberField_definitions FLT.SmoothVectors.RightTranslationFn.instAddCommMonoid FLT.SmoothVectors.RightTranslationFn.instMulAction FLT.SmoothVectors.RightTranslationFn.instDistribMulAction instContinuousSMulOfDiscreteTopologyOfContinuousSMulDiscrete HeckePair.instSMulCommClassSubtypeForallMemSubmoduleHeckeAlgebra HeckePair.instAlgebraSubtypeForallMemSubmoduleHeckeAlgebra HeckePair.instOneSubtypeForallMemSubmoduleHeckeAlgebra HeckePair.instIsScalarTowerSubtypeForallMemSubmoduleHeckeAlgebra HeckePair.instRingSubtypeForallMemSubmoduleHeckeAlgebra HeckePair.instMulSubtypeForallMemSubmoduleHeckeAlgebra
+attribute [-simp] NumberField.AdeleRing.val_finiteUnitsComponent IsDedekindDomain.FiniteAdeleRing.val_unitsComponent NumberField.AdeleRing.val_finitePartUnits NumberField.AdeleRing.val_infiniteUnitsComponent AutomorphicForm.SiegelCoordinates.upperUnit_apply_zero_zero AutomorphicForm.SiegelCoordinates.upperUnit_apply_one_zero AutomorphicForm.SiegelCoordinates.upperUnit_apply_one_one AutomorphicForm.SiegelCoordinates.upperUnit_apply_zero_one AutomorphicForm.classSq_apply AutomorphicForm.classRepEmbedding_one AutomorphicForm.finIdeleExponentAt_one AutomorphicForm.classRepFinIdele_one AutomorphicForm.productionPinsGeneralOf_D AutomorphicForm.productionPinsGeneral_D AutomorphicForm.productionPinsGeneralOf_μ AutomorphicForm.productionPinsGeneralOf_U AutomorphicForm.productionPinsCompact_ν AutomorphicForm.productionPinsCompact_U AutomorphicForm.productionPinsCompact_D AutomorphicForm.productionPinsCompact_nS AutomorphicForm.productionPinsCompact_gen AutomorphicForm.productionPinsCompact_Z AutomorphicForm.productionPinsCompact_mS AutomorphicForm.productionPinsCompact_μ AutomorphicForm.productionPins_nS AutomorphicForm.productionPins_mS AutomorphicForm.productionPins_ν AutomorphicForm.productionPins_Z AutomorphicForm.productionPins_U AutomorphicForm.productionPins_μ AutomorphicForm.productionPins_gen AutomorphicForm.productionPins_D AutomorphicForm.unipotentGL2_zero AutomorphicForm.constantTerm_const AutomorphicForm.constantTerm_zero AutomorphicForm.unipotentGL2_coe FLT.SmoothVectors.RightTranslationFn.toFun_smul FLT.SmoothVectors.RightTranslationFn.mk_toFun FLT.SmoothVectors.RightTranslationFn.toFun_mk FLT.SmoothVectors.mem_smoothVectors_iff
+attribute [-simp] AutomorphicForm.HeckeEigensystem.ofRawCentral_toRawCentral AutomorphicForm.HeckeEigensystem.toRawCentral_ofRawCentral AutomorphicForm.HeckeEigensystem.ofRawCentral_a AutomorphicForm.HeckeEigensystem.ofRawCentral_b AutomorphicForm.HeckeEigensystem.toRawCentral_level AutomorphicForm.HeckeEigensystem.toRawCentral_a AutomorphicForm.HeckeEigensystem.ofRawCentral_level AutomorphicForm.HeckeEigensystem.toRawCentral_b AutomorphicForm.SmoothCuspRealizationAt.mk.injEq AutomorphicForm.degenerateEigensystem_a AutomorphicForm.SmoothCuspRealizationAt.mk.sizeOf_spec AutomorphicForm.degenerateEigensystem_b AutomorphicForm.HeckeEigensystem.map_b AutomorphicForm.HeckeEigensystem.map_a AutomorphicForm.HeckeEigensystem.map_level HeckePair.convTerm_mk HeckePair.coe_apply_add HeckePair.coe_apply_smul
+
+set_option autoImplicit false
+
+open NumberField IsDedekindDomain AutomorphicForm
+open NumberField.TateGlobal
+open scoped Classical
+
+theorem NumberField.TateGlobal.exists_differentiable_eq_sub_mul_eulerProduct_and_eq_mul_prod_Gamma_mul_of_eq_normPowChar
+    (K : Type) [Field K] [NumberField K]
+    (χ : (AdeleRing (𝓞 K) K)ˣ →* ℂˣ)
+      (_hχc : Continuous fun z : (AdeleRing (𝓞 K) K)ˣ => ((χ z : ℂˣ) : ℂ))
+      (_hχu : AutomorphicForm.IsUnitaryChar (𝓞 K) K χ) (_hχF : AutomorphicForm.IsIdeleClassChar (𝓞 K) K χ) :
+    let P : ℂ → ℂ := fun w => ∏' v : HeightOneSpectrum (𝓞 K),
+        (1 - (if IsUnramifiedCharAt χ v then ((χ (uniformizerIdele K v) : ℂˣ) : ℂ) else 0) *
+          (((Ideal.absNorm v.asIdeal : ℕ) : ℂ) ^ (-w)))⁻¹
+    ∀ (τ : InfinitePlace K → ℝ) (m : InfinitePlace K → ℤ)
+      (_hτ : ∀ (v : InfinitePlace K) (x : (v.Completion)ˣ),
+        0 < (InfinitePlace.Completion.extensionEmbedding v (x : v.Completion)).re →
+        (InfinitePlace.Completion.extensionEmbedding v (x : v.Completion)).im = 0 →
+        ((archLocalChar χ v x : ℂˣ) : ℂ) =
+          (((ideleNorm K (archUnitHom v x)) : ℝ) : ℂ) ^ (((τ v : ℝ) : ℂ) * Complex.I))
+      (_hm : ∀ (v : InfinitePlace K) (x : (v.Completion)ˣ),
+        ‖InfinitePlace.Completion.extensionEmbedding v (x : v.Completion)‖ = 1 →
+        ((archLocalChar χ v x : ℂˣ) : ℂ) =
+          (InfinitePlace.Completion.extensionEmbedding v (x : v.Completion)) ^ (m v)),
+    let γ : ℂ → ℂ := fun s => ∏ v : InfinitePlace K,
+        (if v.IsReal then Complex.Gammaℝ (s + ((τ v : ℝ) : ℂ) * Complex.I + (((m v).natAbs % 2 : ℕ) : ℂ))
+          else Complex.Gammaℂ (s + ((τ v : ℝ) : ℂ) * Complex.I + (((m v).natAbs : ℕ) : ℂ) / 2))
+    ∀ τ₀ : ℝ, χ = normPowChar K τ₀ →
+      ∃ (Q ΛQ : ℂ → ℂ), Differentiable ℂ Q ∧ Differentiable ℂ ΛQ ∧
+        (∀ w : ℂ, 1 < w.re → Q w = (w - ((1 : ℂ) - ((τ₀ : ℝ) : ℂ) * Complex.I)) * P w) ∧
+        (∀ s : ℂ, 0 < s.re → ΛQ s = (s + ((τ₀ : ℝ) : ℂ) * Complex.I) * (γ s * Q s)) := by p2m_exact_reverting @_root_.P2MW.S_NumberField_TateGlobal_exists_differentiable_eq_sub_mul_eulerProduct_and_eq_mul_prod_Gamma_mul_of_eq_normPowChar.solution

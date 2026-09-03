@@ -1,0 +1,10 @@
+import Definitions.Def_LanglandsTunnell_CubicInduction_Carrier
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_CubicInduction_discreteTopology_range_globalPointsGL_three_rat
+
+set_option autoImplicit false
+
+open scoped NumberField
+
+theorem LanglandsTunnell.CubicInduction.discreteTopology_range_globalPointsGL_three_rat :
+    DiscreteTopology (globalPointsGL 3 (𝓞 ℚ) ℚ).range := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_CubicInduction_discreteTopology_range_globalPointsGL_three_rat.solution

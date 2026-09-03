@@ -1,0 +1,16 @@
+import Mathlib
+import Definitions.Def_ModularCurve_X1
+import Definitions.Def_ModularForm_HeckeOperator
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_modularForm_coe_eq_atkinLehnerSlash_x1x0_gamma0
+
+set_option autoImplicit false
+open scoped MatrixGroups ModularForm in
+
+theorem ModularCurve.exists_modularForm_coe_eq_atkinLehnerSlash_x1x0_gamma0
+    (p : ℕ) [Fact p.Prime] (M : ℕ) [NeZero M] (hpM : ¬ p ∣ M) {k : ℤ}
+    (f : ModularForm ((CongruenceSubgroup.Gamma1 M ⊓ CongruenceSubgroup.Gamma0 p : Subgroup SL(2, ℤ)) : Subgroup (GL (Fin 2) ℝ)) k)
+    (γ : SL(2, ℤ)) (hγ : γ ∈ CongruenceSubgroup.Gamma0 M) (hγp : (p : ℤ) ∣ γ 1 1) :
+    ∃ F : ModularForm ((CongruenceSubgroup.Gamma1 M ⊓ CongruenceSubgroup.Gamma0 p : Subgroup SL(2, ℤ)) : Subgroup (GL (Fin 2) ℝ)) k,
+      (⇑F : UpperHalfPlane → ℂ) = fun τ : UpperHalfPlane =>
+        ((⇑f : UpperHalfPlane → ℂ) ∣[k] γ) (ModularForm.heckeDiagMatrix p • τ) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_modularForm_coe_eq_atkinLehnerSlash_x1x0_gamma0.solution

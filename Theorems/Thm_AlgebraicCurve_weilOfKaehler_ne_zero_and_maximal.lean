@@ -1,0 +1,13 @@
+import Mathlib
+import Definitions.Def_AlgebraicCurve_WeilOfKaehler
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_weilOfKaehler_ne_zero_and_maximal
+
+namespace AlgebraicCurve
+
+theorem weilOfKaehler_ne_zero_and_maximal {K F : Type*} [Field K] [Field F] [Algebra K F] [HasCanonicalLocalResidueKStar K F]
+    [HasCanonicalDivisor (K := K) (F := F)] [∀ v : Place K F, v.DCoordGenerates]
+    [Nontrivial Ω[F⁄K]] [HasSeparableResidue K F] [Nonempty (Place K F)]
+    {ω : Ω[F⁄K]} (hω : ω ≠ 0) :
+    weilOfKaehler K F hω ≠ 0 ∧
+      ∀ D : Divisor K F, weilOfKaehler K F hω ∈ omegaSpace D → D ≤ canonicalDivisorOf hω := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_weilOfKaehler_ne_zero_and_maximal.solution

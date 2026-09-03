@@ -1,0 +1,39 @@
+import Mathlib
+import Definitions.Def_AlgebraicCurve_Correspondence
+import Definitions.Def_AlgebraicCurve_IsCurveOver
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_exists_constantFieldDescent_correspondence
+attribute [-instance] AlgebraicCurve.Place.instIsPrimeCenter AlgebraicCurve.Place.instIsFractionRingIntegralClosureAt AlgebraicCurve.Place.instIsTorsionFreeSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.Place.instIsDedekindDomainIntegralClosureAt AlgebraicCurve.Place.instFiniteSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation instDecEqAlgebraicClosureRat WeierstrassCurve.Affine.Point.instDistribMulActionAlgEquiv WeierstrassCurve.Affine.Point.instModuleZModTorsionBy WeierstrassCurve.Affine.Point.instSMulTorsionBy WeierstrassCurve.Affine.Point.instDistribMulActionTorsionBy WeierstrassCurve.Affine.Point.instSMulAlgEquiv WeierstrassCurve.Affine.Point.instSMulCommClassAlgEquivZModTorsionBy AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
+attribute [-simp] AlgebraicCurve.Place.placeOfPrime_toValuationSubring AlgebraicCurve.Place.mem_fiberOver AlgebraicCurve.Place.fiberEquiv_symm_apply AlgebraicCurve.Place.fiberEquiv_apply AlgebraicCurve.Place.centerHeightOneSpectrum_asIdeal AlgebraicCurve.IsFrobeniusEndo.frobNormRingHom_apply ModularCurve.frobeniusPushforwardGeomLevelPic0_mk ModularCurve.coe_frobeniusGeomLevelEquiv_apply ModularCurve.coe_frobeniusPushforwardGeomLevelDegZero ModularCurve.heckeFibreGeomLevelPic0OfIsCurveOver_mk ModularCurve.frobeniusGeomLevel_apply_coe ModularCurve.frobeniusPullbackGeomLevelPic0OfIsCurveOver_mk ModularCurve.coe_heckeFibreGeomLevelDegZero ModularCurve.coe_frobeniusPullbackGeomLevelDegZero ModularCurve.frobeniusPullbackGeomLevelPic0_mk ModularCurve.frobeniusPullbackGeomLevel_single ModularCurve.heckeFibreGeomLevelPic0_mk ModularCurve.frobeniusPushforwardGeomLevelPic0OfIsCurveOver_mk ModularCurve.frobeniusPushforwardGeomLevel_single ModularCurve.qExpandAlgC_apply AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint AlgebraicCurve.coe_frobeniusPushforwardDegZero AlgebraicCurve.IsFrobeniusEndo.coe_frobeniusPullbackDegZero ModularCurve.jqNModC_one ModularCurve.qExpand_coeff_mul ModularCurve.qExpandₐ_apply ModularCurve.jqN_one ModularCurve.qExpand_single ModularCurve.dedekindPsi_one ModularCurve.ModularPolynomialData.mk.sizeOf_spec ModularCurve.evalAtJ_X ModularCurve.ModularPolynomialData.mk.injEq ModularCurve.constantCoeff_jNum ModularCurve.constantCoeff_eisenstein4 ModularCurve.qExpand_C
+attribute [-simp] ModularCurve.coeff_jq_neg_one ModularCurve.constantCoeff_jNumQ ModularCurve.reduceModBivar_C_X ModularCurve.laurentMap_coeff ModularCurve.reduceModBivar_X ModularCurve.laurentMap_single ModularCurve.evalAtJInt_X ModularCurve.evalAtJMod_X ModularCurve.jqNMod_one ModularCurve.aeval_heckeGen ModularCurve.coe_mTorsionGaloisRep_apply ModularCurve.eisensteinSystem_of_dvd ModularCurve.eisensteinSystem_of_not_dvd FreyPackage.mk.sizeOf_spec FreyPackage.mk.injEq WeierstrassCurve.Affine.Point.galoisRepModuleEnd_apply AlgebraicCurve.RationalFunctionField.placeInfty_toValuationSubring AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none AlgebraicCurve.Divisor.evalFun_zero AlgebraicCurve.Place.evalAt_one
+
+open AlgebraicCurve
+
+universe u v w x
+
+theorem AlgebraicCurve.exists_constantFieldDescent_correspondence
+    (K : Type u) (F : Type v) [Field K] [Field F] [Algebra K F] [IsAlgClosed K] [CharZero K]
+    [IsCurveOver K F]
+    (hfg : ∃ x : F, Transcendental K x ∧
+      FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F)
+    {ι : Type w} [Finite ι] (F' : ι → Type x) [∀ i, Field (F' i)] [∀ i, Algebra K (F' i)]
+    (φ ψ : ∀ i, F →ₐ[K] F' i)
+    (hφ : ∀ i, (φ i).toRingHom.IsIntegral) (hfin : ∀ i, FiniteAlong K (ψ i)) :
+    ∃ (K₀ : Type u) (F₀ : Type v) (F'₀ : ι → Type x)
+      (_ : Field K₀) (_ : Field F₀) (_ : ∀ i, Field (F'₀ i))
+      (_ : Algebra K₀ K) (_ : Algebra K₀ ℂ) (_ : IsAlgClosed K₀) (_ : Countable K₀)
+      (_ : Algebra K₀ F₀) (_ : Algebra F₀ F) (_ : Algebra K₀ F)
+      (_ : IsScalarTower K₀ K F) (_ : IsScalarTower K₀ F₀ F) (_ : IsCurveOver K₀ F₀)
+      (_ : ∀ i, Algebra K₀ (F'₀ i)) (_ : ∀ i, Algebra (F'₀ i) (F' i)) (_ : ∀ i, Algebra K₀ (F' i))
+      (_ : ∀ i, IsScalarTower K₀ K (F' i)) (_ : ∀ i, IsScalarTower K₀ (F'₀ i) (F' i))
+      (_ : ∀ i, IsCurveOver K₀ (F'₀ i))
+      (φ₀ ψ₀ : ∀ i, F₀ →ₐ[K₀] F'₀ i),
+      (∃ x : F₀, Transcendental K₀ x ∧
+        FiniteDimensional (IntermediateField.adjoin K₀ ({x} : Set F₀)) F₀) ∧
+      IntermediateField.adjoin K (Set.range (algebraMap F₀ F)) = ⊤ ∧
+      (∀ i, ∃ x : F'₀ i, Transcendental K₀ x ∧
+        FiniteDimensional (IntermediateField.adjoin K₀ ({x} : Set (F'₀ i))) (F'₀ i)) ∧
+      (∀ i, IntermediateField.adjoin K (Set.range (algebraMap (F'₀ i) (F' i))) = ⊤) ∧
+      (∀ i (f : F₀), φ i (algebraMap F₀ F f) = algebraMap (F'₀ i) (F' i) (φ₀ i f)) ∧
+      (∀ i (f : F₀), ψ i (algebraMap F₀ F f) = algebraMap (F'₀ i) (F' i) (ψ₀ i f)) ∧
+      (∀ i, FiniteAlong K₀ (φ₀ i)) ∧ (∀ i, FiniteAlong K₀ (ψ₀ i)) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_exists_constantFieldDescent_correspondence.solution

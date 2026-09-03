@@ -1,0 +1,59 @@
+import Definitions.Def_AutomorphicForm_LocalOrbitalBase
+import Definitions.Def_AutomorphicForm_ConstantTerm
+import Definitions.Def_AdelicDock_LocalEmbedding
+import Definitions.Def_UnramifiedWhittaker_HeckeRecursion
+import Definitions.Def_LanglandsTunnell_CubicInduction_IotaTorus
+import Definitions.Def_LanglandsTunnell_CubicInduction_Structure
+import Definitions.Def_LanglandsTunnell_RSCarrier
+import Definitions.Def_LanglandsTunnell_StandardLocalConstantsAt
+import Definitions.Def_LanglandsTunnell_TateLocalConstantsAt
+import Definitions.Def_LanglandsTunnell_TateLocalZeta
+import P2M.Util
+import P2M.Sol.S_LanglandsTunnell_RankinSelberg_exists_polynomial_forall_rsLocalIntegral_iotaGL_eq_of_forall_torusShell_localLevelOne_pow_eq_zero
+attribute [-instance] instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instDimensionLEOneSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.instLiesOverSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersCompletionIdealAsIdeal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsPrincipalIdealRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemSubringIntegerWithZeroMultiplicativeInt_definitions IsDedekindDomain.HeightOneSpectrum.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicCompletionV_definitions instCountableOfNumberField_definitions
+attribute [-simp] LocalGL2.coe_localRepSome LocalGL2.coe_diagPi LocalGL2.coe_localRepInf LocalGL2.coe_localRepSome_inv LocalGL2.coe_unipotentInt LocalGL2.coe_weylInt LocalGL2.coe_diagPi_inv LocalGL2.transposeGL_val LocalGL2.transposeGL_one LocalGL2.swapUnit_val
+
+set_option autoImplicit false
+
+open MeasureTheory IsDedekindDomain NumberField AutomorphicForm UnramifiedWhittaker
+  LanglandsTunnell.TateLocal LanglandsTunnell.CubicInduction
+
+theorem LanglandsTunnell.RankinSelberg.exists_polynomial_forall_rsLocalIntegral_iotaGL_eq_of_forall_torusShell_localLevelOne_pow_eq_zero
+    (K : Type) [Field K] [NumberField K] (v : HeightOneSpectrum (𝓞 K))
+    {ϖ : v.adicCompletionIntegers K}
+    (hπ : algebraMap (v.adicCompletionIntegers K) (v.adicCompletion K) ϖ ≠ 0)
+    (hϖ : Valued.v (algebraMap (v.adicCompletionIntegers K) (v.adicCompletion K) ϖ) = WithZero.exp (-1 : ℤ))
+    (b : ℕ) (θ : AddChar (v.adicCompletion K) ℂ)
+    (W₃ : GL (Fin 3) (v.adicCompletion K) → ℂ) (hW₃law : IsGL3PsiWhittakerFn θ⁻¹ W₃)
+    (hW₃sm : ∃ Uv : Subgroup (GL (Fin 3) (v.adicCompletion K)), IsOpen (Uv : Set (GL (Fin 3) (v.adicCompletion K))) ∧
+      ∀ k ∈ Uv, ∀ g : GL (Fin 3) (v.adicCompletion K), W₃ (g * k) = W₃ g)
+    (g₃ : GL (Fin 3) (v.adicCompletion K))
+    (w₂ : GL (Fin 2) (v.adicCompletion K) → ℂ)
+    (hw₂law : ∀ (x : v.adicCompletion K) (g : GL (Fin 2) (v.adicCompletion K)), w₂ (unipotent x * g) = θ x * w₂ g)
+    (hw₂K : ∀ k ∈ AdelicDock.localLevelOne (𝓞 K) K v (v.asIdeal ^ b), ∀ g : GL (Fin 2) (v.adicCompletion K),
+      w₂ (g * k) = w₂ g) :
+    letI := localBorel K v
+    letI := localGLBorel K v
+    haveI := borelSpace_localGLBorel K v
+    ∀ (μ₂ : Measure (GL (Fin 2) (v.adicCompletion K))) [μ₂.IsHaarMeasure]
+      (μN₂ : Measure ↥(unipotentGL2Hom (R := v.adicCompletion K)).range) [μN₂.IsHaarMeasure]
+      (ν : Measure (v.adicCompletion K)ˣ) [ν.IsHaarMeasure],
+      (∀ k₀ ∈ AdelicDock.localLevelOne (𝓞 K) K v ⊤, ∀ (η : (v.adicCompletion K)ˣ →* ℂˣ) (c : ℕ),
+        HasConductorExponentAt K v η c → c ≤ b →
+        ∃ T : Finset (ℤ × ℤ), ∀ n : ℤ × ℤ, n ∉ T →
+          (∫ u in {u : (v.adicCompletion K)ˣ | Valued.v (u : v.adicCompletion K) = 1},
+              (∫ k in ((AdelicDock.localLevelOne (𝓞 K) K v (v.asIdeal ^ b) :
+                    Subgroup (GL (Fin 2) (v.adicCompletion K))) : Set (GL (Fin 2) (v.adicCompletion K))),
+                  W₃ (iotaGL (scalarPi (algebraMap (v.adicCompletionIntegers K) (v.adicCompletion K) ϖ) hπ ^ n.2 *
+                    diagUnitGL2 (Units.mk0 (algebraMap (v.adicCompletionIntegers K) (v.adicCompletion K) ϖ) hπ
+                      ^ n.1 * u) * (k₀ * k)) * g₃) ∂μ₂) * ((η u : ℂˣ) : ℂ) ∂ν) = 0) →
+      ∃ (P : Polynomial ℂ) (m : ℤ), ∀ s : ℂ,
+        Integrable (fun g : GL (Fin 2) (v.adicCompletion K) =>
+          (W₃ (iotaGL g * g₃) * w₂ g) * ((modulus ((Matrix.GeneralLinearGroup.det g : (v.adicCompletion K)ˣ) :
+            v.adicCompletion K) : ℝ) : ℂ) ^ (s - 1 / 2))
+          (μ₂.withDensity (HaarQuotient.density (unipotentGL2Hom (R := v.adicCompletion K)).range μN₂)) →
+        RSCarrier.rsLocalIntegral μ₂ (unipotentGL2Hom (R := v.adicCompletion K)).range μN₂
+            (fun g : GL (Fin 2) (v.adicCompletion K) =>
+              (modulus ((Matrix.GeneralLinearGroup.det g : (v.adicCompletion K)ˣ) : v.adicCompletion K) : ℝ))
+            s (fun g => W₃ (iotaGL g * g₃)) w₂ =
+          (Ideal.absNorm v.asIdeal : ℂ) ^ ((m : ℂ) * s) * P.eval ((Ideal.absNorm v.asIdeal : ℂ) ^ (-s)) := by p2m_exact_reverting @_root_.P2MW.S_LanglandsTunnell_RankinSelberg_exists_polynomial_forall_rsLocalIntegral_iotaGL_eq_of_forall_torusShell_localLevelOne_pow_eq_zero.solution

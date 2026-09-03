@@ -1,0 +1,12 @@
+diff -ru a/src/tc.rs b/src/tc.rs
+--- a/src/tc.rs
++++ b/src/tc.rs
+@@ -1191,7 +1191,7 @@
+                     (Const { levels: l_levels, .. }, Const { levels: r_levels, .. })
+                         if l_args.len() == r_args.len()
+                             && !self.failure_cache_contains(x, y)
+-                            && l_args.iter().copied().zip(r_args.iter().copied()).all(|(x, y)| self.def_eq(x, y))
++                            && l_args.iter().rev().copied().zip(r_args.iter().rev().copied()).all(|(x, y)| self.def_eq(x, y)) /* E1: last-argument-first */
+                             && self.ctx.eq_antisymm_many(l_levels, r_levels) =>
+                         Some(FoundEqResult(true)),
+                     (Const { .. }, Const { .. }) => {

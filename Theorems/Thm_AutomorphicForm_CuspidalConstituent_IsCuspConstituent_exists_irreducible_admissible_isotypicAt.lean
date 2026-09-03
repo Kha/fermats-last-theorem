@@ -1,0 +1,36 @@
+import Definitions.Def_AutomorphicForm_CuspidalConstituent
+import Definitions.Def_AdelicDock_LocalEmbedding
+import P2M.Util
+import P2M.Sol.S_AutomorphicForm_CuspidalConstituent_IsCuspConstituent_exists_irreducible_admissible_isotypicAt
+attribute [-instance] FLT.SpectralSide.instCompactSpaceMatrix RestrictedProduct.SecondCountableTopology_of_principal instCountableElemSetSetsCofinite_definitions instCountableOfNumberField_definitions AutomorphicForm.compactSpace_maximalCompactAway AutomorphicForm.compactSpace_adelicMaximalCompact AutomorphicForm.isProbabilityMeasure_maximalCompactHaar AutomorphicForm.isHaarMeasure_maximalCompactHaar AutomorphicForm.compactSpace_maximalCompactAt AutomorphicForm.isProbabilityMeasure_maximalCompactAwayHaar AutomorphicForm.isHaarMeasure_maximalCompactAwayHaar AutomorphicForm.isProbabilityMeasure_maximalCompactAtHaar AutomorphicForm.isHaarMeasure_maximalCompactAtHaar instFiniteResidueFieldAdicCompletionRingOfIntegersWithZeroMultiplicativeInt_definitions NumberField.instCompactSpaceAdicCompletionIntegers Rat.adicCompletion.locallyCompactSpace NumberField.instFiniteResidueFieldAdicCompletionIntegers instWeaklyLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions instLocallyCompactSpaceAdicCompletionRingOfIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instDimensionLEOneSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.instLiesOverSubtypeAdicCompletionMemValuationSubringAdicCompletionIntegersCompletionIdealAsIdeal IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsPrincipalIdealRingSubtypeMemValuationSubringAdicCompletionIntegers_definitions IsDedekindDomain.HeightOneSpectrum.adicCompletion.instIsDiscreteValuationRingSubtypeMemSubringIntegerWithZeroMultiplicativeInt_definitions IsDedekindDomain.HeightOneSpectrum.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicCompletionV_definitions
+attribute [-simp] LocalGL2.transposeGL_val LocalGL2.transposeGL_one LocalGL2.swapUnit_val AutomorphicForm.fnTwist_zero AutomorphicForm.fnTwist_apply ContinuousAddEquiv.restrictedProductPi_apply RestrictedProduct.flatten_homeomorph_apply RestrictedProduct.flatten_homeomorph'_symm_apply ContinuousMulEquiv.restrictedProductPi_symm_apply RestrictedProduct.flatten_homeomorph'_apply RestrictedProduct.flatten_homeomorph_symm_apply ContinuousMulEquiv.restrictedProductPi_apply ContinuousAddEquiv.restrictedProductPi_symm_apply RingEquiv.restrictedProductCongr_symm_apply RingEquiv.restrictedProductCongrRight_apply MulEquiv.restrictedProductCongrRight_apply Equiv.restrictedProductProd_symm_apply_coe Equiv.restrictedProductCongrRight_apply AddEquiv.restrictedProductCongr_apply Equiv.restrictedProductCongrLeft'_symm_apply_apply Equiv.restrictedProductCongr_apply_apply Equiv.restrictedProductCongrLeft_apply_apply RestrictedProduct.flatten_equiv'_apply AddEquiv.restrictedProductCongrRight_apply Equiv.restrictedProductCongr_symm_apply Equiv.restrictedProductCongrRight_symm_apply RestrictedProduct.flatten_equiv'_symm_apply AddEquiv.restrictedProductCongrLeft'_apply Equiv.restrictedProductCongrLeft'_apply RestrictedProduct.flatten_apply RingEquiv.restrictedProductCongr_apply_apply RingEquiv.restrictedProductCongrLeft'_apply Equiv.restrictedProductProd_apply RestrictedProduct.flatten_equiv_apply RestrictedProduct.flatten_equiv_symm_apply LinearEquiv.restrictedProductCongrLeft'_apply RestrictedProduct.not_mem_support RestrictedProduct.mem_structureSubring_iff RestrictedProduct.not_mem_mulSupport RestrictedProduct.support_neg
+attribute [-simp] RestrictedProduct.mem_indexSupport_iff RestrictedProduct.mulSupport_inv RestrictedProduct.mapAlongLinearMap_apply AutomorphicForm.whittakerCoefficient_zero NumberField.StandardAddChar.ratArchLine_apply NumberField.StandardAddChar.AdelicTraceData.mk.sizeOf_spec NumberField.StandardAddChar.AdelicTraceData.mk.injEq NumberField.AdelicTrace.traceDiag_apply NumberField.AdelicTrace.diag_apply AutomorphicForm.CuspidalSpectrum.fdPins_μ AutomorphicForm.CuspidalSpectrum.fdPins_nS AutomorphicForm.CuspidalSpectrum.fdPins_ν AutomorphicForm.CuspidalSpectrum.fdPins_gen AutomorphicForm.CuspidalSpectrum.fdPins_U AutomorphicForm.CuspidalSpectrum.fdPins_D AutomorphicForm.CuspidalSpectrum.fdPins_Z AutomorphicForm.CuspidalSpectrum.mem_detNormSlab AutomorphicForm.CuspidalSpectrum.fdPins_eq AutomorphicForm.CuspidalSpectrum.fdPins_mS LanglandsTunnell.TateLocal.charExt_coe_units LanglandsTunnell.TateLocal.modulus_one LanglandsTunnell.TateLocal.modulus_zero LanglandsTunnell.TateLocal.modulus_coe_units LanglandsTunnell.TateLocal.charExt_zero
+
+set_option autoImplicit false
+
+theorem AutomorphicForm.CuspidalConstituent.IsCuspConstituent.exists_irreducible_admissible_isotypicAt
+    (ξ : (AutomorphicForm.productionPinsGeneral ℚ).Z →* ℂˣ)
+    (V : Submodule ℂ (AutomorphicForm.AdelicGL2 (NumberField.RingOfIntegers ℚ) ℚ → ℂ))
+    (hV : AutomorphicForm.CuspidalConstituent.IsCuspConstituent ℚ
+      (AutomorphicForm.productionPinsGeneral ℚ) ξ V)
+    (v : IsDedekindDomain.HeightOneSpectrum (NumberField.RingOfIntegers ℚ)) :
+    ∃ (X : Type) (_ : AddCommGroup X) (_ : Module ℂ X)
+      (π : Representation ℂ (GL (Fin 2) (v.adicCompletion ℚ)) X),
+      (∀ x : X, ∃ U : Subgroup (GL (Fin 2) (v.adicCompletion ℚ)),
+          IsOpen (U : Set (GL (Fin 2) (v.adicCompletion ℚ))) ∧ ∀ u ∈ U, π u x = x) ∧
+      (∃ x : X, x ≠ 0) ∧
+      (∀ T : Submodule ℂ X, (∀ (g : GL (Fin 2) (v.adicCompletion ℚ)) (x : X), x ∈ T → π g x ∈ T) →
+          T = ⊥ ∨ T = ⊤) ∧
+      (∀ U : Subgroup (GL (Fin 2) (v.adicCompletion ℚ)),
+          IsOpen (U : Set (GL (Fin 2) (v.adicCompletion ℚ))) →
+          ∃ T : Submodule ℂ X, FiniteDimensional ℂ T ∧
+            ∀ x : X, (∀ u ∈ U, π u x = x) → x ∈ T) ∧
+      ∀ φ ∈ V, ∃ (n : ℕ) (x : Fin n → X)
+          (f : Fin n → (X →ₗ[ℂ] (AutomorphicForm.AdelicGL2 (NumberField.RingOfIntegers ℚ) ℚ → ℂ))),
+          (∀ i : Fin n, (∀ y : X, f i y ∈ V) ∧
+            ∀ (g : GL (Fin 2) (v.adicCompletion ℚ)) (y : X),
+              f i (π g y) =
+                AutomorphicForm.CuspidalConstituent.rightTranslate ℚ
+                  (AdelicDock.finEmbed (NumberField.RingOfIntegers ℚ) ℚ
+                    (AdelicDock.localEmbed (NumberField.RingOfIntegers ℚ) ℚ v g)) (f i y)) ∧
+          φ = ∑ i : Fin n, f i (x i) := by p2m_exact_reverting @_root_.P2MW.S_AutomorphicForm_CuspidalConstituent_IsCuspConstituent_exists_irreducible_admissible_isotypicAt.solution

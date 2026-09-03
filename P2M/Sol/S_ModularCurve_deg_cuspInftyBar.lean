@@ -1,0 +1,11 @@
+import Definitions.Def_ModularCurve_AtkinLehner
+import Theorems.Thm_ModularCurve_deg_qInftyPlaceBar
+import P2M.Util
+namespace P2MW.S_ModularCurve_deg_cuspInftyBar
+
+open ModularCurve AlgebraicCurve
+open scoped Pointwise
+
+theorem solution (N : ℕ) [NeZero N] :
+    (cuspInftyBar N).deg = 1 :=
+  ModularCurve.deg_qInftyPlaceBar (AlgebraicClosure ℚ) _
