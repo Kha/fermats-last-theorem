@@ -774,4 +774,3 @@ theorem solution (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.Fin
       _ = (Cf * Q) ^ 2 := by ring
   exact (pow_le_pow_iff_left₀ hPnn (mul_nonneg hCf0 hQnn) two_ne_zero).mp hsq
 
-#print axioms solution

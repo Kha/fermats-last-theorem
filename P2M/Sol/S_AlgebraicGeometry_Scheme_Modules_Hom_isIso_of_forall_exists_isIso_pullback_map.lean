@@ -44,6 +44,5 @@ theorem _root_.P2MW.S_AlgebraicGeometry_Scheme_Modules_Hom_isIso_of_forall_exist
   · exact top_le_iff.mp fun x _ => Opens.mem_iSup.2 ⟨x, hxU x⟩
   · exact isIso_app_of_isIso_pullback_ι_map φ (U x) (hU x) V hV
 
-#print axioms solution
 
 end AlgebraicGeometry.Scheme.Modules

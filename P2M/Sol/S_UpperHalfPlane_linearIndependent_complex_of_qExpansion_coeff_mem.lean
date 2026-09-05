@@ -545,6 +545,5 @@ theorem solution (N : ℕ) [NeZero N]
       obtain ⟨m, hm⟩ := (hf i).2
       exact ⟨m, by simpa only [WLight.KPoleAt, CuspForm.coe_discriminant] using hm⟩⟩) hli
 
-#print axioms solution
 
 end

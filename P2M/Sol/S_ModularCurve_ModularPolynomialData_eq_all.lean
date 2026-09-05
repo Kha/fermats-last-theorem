@@ -72,4 +72,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_ModularPolynomialData_eq_all
 theorem solution (N : ℕ) [NeZero N] (d d' : ModularPolynomialData N) : d = d' :=
   ModularCurve.ModularPolynomialData.eq_all N d d'
 
-#print axioms solution

@@ -607,4 +607,3 @@ theorem solution
     · show σ (aeval j P)⁻¹ ∈ W₀
       rw [map_inv₀, hσP]; exact h2
 
-#print axioms solution

@@ -1003,4 +1003,3 @@ theorem solution
   AutomorphicForm.PrincipalLevelVanishing.isotypicCuspSubmodule_productionPinsOf_principal_eq_bot_of_dvd
     F v Dset B ξ N S Φ hvS hv
 
-#print axioms solution

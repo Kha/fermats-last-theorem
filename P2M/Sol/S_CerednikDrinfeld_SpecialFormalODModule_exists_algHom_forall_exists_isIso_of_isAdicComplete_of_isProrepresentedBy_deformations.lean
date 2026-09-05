@@ -202,4 +202,3 @@ theorem solution
     rw [hresn_unique n hn r hr]
     exact hc
 
-#print axioms solution

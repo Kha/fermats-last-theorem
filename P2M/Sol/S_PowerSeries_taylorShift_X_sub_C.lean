@@ -49,4 +49,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
         simp
       rw [hzero, tsum_zero, if_neg (by omega), if_neg (by omega), add_zero]
 
-#print axioms solution

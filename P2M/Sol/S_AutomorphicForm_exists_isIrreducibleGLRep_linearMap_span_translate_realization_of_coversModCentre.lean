@@ -3035,4 +3035,3 @@ theorem solution
     LocalNewvector.NearClassEmbedding.exists_linearMap_of_cover q _ V hV hS κ f hf hle hge
   exact ⟨V, i₁, i₂, i₃, i₄, hV, ι, L, hL⟩
 
-#print axioms solution

@@ -59,4 +59,3 @@ theorem solution
   | add y z _ _ hy hz => exact ⟨by rw [map_add, hy.1, hz.1, add_zero], by rw [map_add, hy.2, hz.2, add_zero]⟩
   | neg y _ hy => exact ⟨by rw [map_neg, hy.1, neg_zero], by rw [map_neg, hy.2, neg_zero]⟩
 
-#print axioms solution

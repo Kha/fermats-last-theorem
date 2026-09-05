@@ -81,4 +81,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
   calc ‖PowerSeries.coeff e F‖ ≤ M / ρ ^ e * (S.map fun w => ‖w‖ / ρ).prod := hval
     _ = M * (S.map fun w => ‖w‖ / ρ).prod / ρ ^ e := by ring
 
-#print axioms solution

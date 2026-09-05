@@ -884,11 +884,9 @@ p2m_reactivate "P2MW.S_ModularCurve_ModularPolynomialData_evalSymm_of_irreducibl
 end
 p2m_reactivate "P2MW.S_ModularCurve_ModularPolynomialData_evalSymm_of_irreducible.ModularCurve"
 
-#print axioms ModularCurve.PhiGen.evalSymm_of_splits
 
 open _root_.ModularCurve _root_.P2MW.S_ModularCurve_ModularPolynomialData_evalSymm_of_irreducible.ModularCurve _root_.ModularCurve.PhiGen _root_.P2MW.S_ModularCurve_ModularPolynomialData_evalSymm_of_irreducible.ModularCurve.PhiGen in
 
 theorem solution {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (hirr : PhiIrreducible data) (hswap : data.Φ.eval₂ (evalAtJqN N) jq = 0) (hTmonic : ((swapBivar data.Φ).map evalAtJGen).Monic) (hTdeg : ((swapBivar data.Φ).map evalAtJGen).natDegree ≤ dedekindPsi N) : EvalSymm data.Φ :=
   ModularCurve.ModularPolynomialData.evalSymm_of_irreducible data hirr hswap hTmonic hTdeg
 
-#print axioms solution

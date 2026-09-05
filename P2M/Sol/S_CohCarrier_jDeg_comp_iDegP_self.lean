@@ -29,4 +29,3 @@ theorem solution {M M' d : ℕ} {H : Subgroup (ZMod M)ˣ} {H' : Subgroup (ZMod M
   show coresAdd _ (pushChar M M' H H' d A h (iDeg' M M' H H' d A h φ)) = _
   rw [jDiagPushCharRestrict h φ, coresAdd_comp_subtype]
 
-#print axioms solution

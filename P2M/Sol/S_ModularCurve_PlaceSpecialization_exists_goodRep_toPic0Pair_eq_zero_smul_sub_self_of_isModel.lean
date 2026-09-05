@@ -1032,4 +1032,3 @@ theorem solution
   exact ⟨hA.choose, hA.choose_spec.choose, hA.choose_spec.choose_spec.choose,
     (hA.choose_spec.choose_spec.choose_spec.1).trans hclass, hA.choose_spec.choose_spec.choose_spec.2⟩
 
-#print axioms solution

@@ -348,4 +348,3 @@ theorem solution
     show (eK T' _).1 ≫ _ = Spec.map (CommRingCat.ofHom g.toRingHom) ≫ (eK T φ).1 ≫ _
     rw [hnat, Category.assoc]
 
-#print axioms solution

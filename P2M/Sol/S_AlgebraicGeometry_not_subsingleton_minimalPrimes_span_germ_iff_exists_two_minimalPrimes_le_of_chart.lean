@@ -113,4 +113,3 @@ theorem solution
     obtain ⟨b, hb, hbP⟩ := hP'
     exact hPne (by rw [← haP, ← hbP, hsub ha hb])
 
-#print axioms solution

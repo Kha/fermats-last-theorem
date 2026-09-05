@@ -157,4 +157,3 @@ theorem solution
     · rw [if_pos hm, if_pos hm, if_neg hn, if_neg (show ¬(0 ≤ m ∧ 0 ≤ n) from fun h => hn h.2)]; ring
   · rw [if_neg hm, if_neg hm, if_neg (show ¬(0 ≤ m ∧ 0 ≤ n) from fun h => hm h.1)]; ring
 
-#print axioms solution

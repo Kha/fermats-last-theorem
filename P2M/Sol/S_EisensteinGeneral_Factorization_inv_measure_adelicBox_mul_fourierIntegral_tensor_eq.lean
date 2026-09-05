@@ -182,4 +182,3 @@ theorem solution
               * fourierIntegral (ψ.compAddMonoidHom (AddMonoidHom.inr _ _)) ν g w.2)) := by
   exact FiniteAdelicFactorization.inv_measure_adelicBox_mul_fourierIntegral_tensor_eq F μ ν ψ f g w
 
-#print axioms solution

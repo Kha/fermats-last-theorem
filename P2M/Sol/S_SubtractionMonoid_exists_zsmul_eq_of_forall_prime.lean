@@ -30,4 +30,3 @@ theorem solution {A : Type*} [SubtractionMonoid A]
   · obtain ⟨y, hy⟩ := core n.natAbs hna x
     exact ⟨-y, by rw [he, neg_zsmul, zsmul_neg, neg_neg, hy]⟩
 
-#print axioms solution

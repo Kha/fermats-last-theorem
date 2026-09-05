@@ -33,4 +33,3 @@ theorem solution (N : ℕ) [NeZero N] (j₀ : AlgebraicClosure ℚ) :
     EMD N j₀ :=
   ModularCurve.emd_holds N j₀
 
-#print axioms solution

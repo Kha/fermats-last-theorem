@@ -1649,4 +1649,3 @@ theorem solution (K : Type*) [Field K] (p : ℕ) [NeZero p] (c : ℕ → ℕ) :
       qExpand K p (laurentOfInt K (PowerSeries.mk fun m => ∑ d ∈ m.divisors, (c d : ℤ))) :=
   W4B.B2.tsum_lambertTerm_eq K p c
 
-#print axioms solution

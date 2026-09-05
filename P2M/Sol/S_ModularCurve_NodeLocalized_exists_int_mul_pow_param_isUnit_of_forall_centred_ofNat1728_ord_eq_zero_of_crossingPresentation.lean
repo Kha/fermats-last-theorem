@@ -478,4 +478,3 @@ theorem solution
   rw [heval]
   exact ⟨hmemA, hunitA⟩
 
-#print axioms solution

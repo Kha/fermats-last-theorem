@@ -67,7 +67,6 @@ p2m_reactivate "P2MW.S_NumberField_AdelicBox_setIntegral_adelicBox_tsum_add_alge
 end
 p2m_reactivate "P2MW.S_NumberField_AdelicBox_setIntegral_adelicBox_tsum_add_algebraMap.M4aP3B P2MW.S_NumberField_AdelicBox_setIntegral_adelicBox_tsum_add_algebraMap.M4aP3B.Rows P2MW.S_NumberField_AdelicBox_setIntegral_adelicBox_tsum_add_algebraMap.M4aP3B.Rows.Unfold"
 
-#print axioms M4aP3B.Rows.Unfold.setIntegral_adelicBox_tsum_add_algebraMap_impl
 
 open MeasureTheory NumberField NumberField.AdelicHaar NumberField.AdelicBox IsDedekindDomain
 

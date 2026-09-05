@@ -132,4 +132,3 @@ theorem solution
   rw [D45CMP.glueMap_one_comp]
   exact hsp
 
-#print axioms solution

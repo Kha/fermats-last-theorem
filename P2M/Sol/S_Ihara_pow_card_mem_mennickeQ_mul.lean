@@ -1228,4 +1228,3 @@ theorem solution (q : ℕ) [NeZero q] (m' m₅ m₆ : ℕ) [NeZero m'] [NeZero m
   Ihara.pow_card_mem_mennickeQ_mul_impl q m' m₅ m₆ hcop h56 hm'q hm''q hmq hm'n hsat h5
     hP1 hP2 hN' hsurj' hZ'' hhabel'' hsurj'' hx
 
-#print axioms solution

@@ -2006,4 +2006,3 @@ theorem solution
       | (rw [← ResiduePairLift.Fibre.finsuppDegree_eq_divisorDegree hdegC]; exact hdeg₂)
   exact ResiduePairLift.Fibre.main hqN hW R hR hRL hNV hO S hS D hD hgood hDfix hdeg₁' hdeg₂' g₁ g₂ hg₁ hg₂ hnode
 
-#print axioms solution

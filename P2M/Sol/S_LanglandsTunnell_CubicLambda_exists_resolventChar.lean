@@ -1144,89 +1144,6 @@ private theorem resolvent_main (K L E : Type) [Field K] [NumberField K] [Field L
 
 end Main
 
-#print axioms resolvent_locIdele
-#print axioms resolvent_uniformizerIdele_eq
-#print axioms resolvent_localChar_eq
-#print axioms resolvent_isAdjuster_locIdele
-#print axioms resolvent_placeOrd_locIdele_of_ne
-#print axioms resolvent_placeOrd_locIdele_self
-#print axioms resolvent_valued_eq_one
-#print axioms resolvent_map_locIdele
-#print axioms resolvent_map_locIdele_eq_one
-#print axioms resolvent_map_uniformizerIdele
-#print axioms resolvent_isUnramifiedCharAt
-#print axioms resolvent_eulerCoeff_eq
-#print axioms resolvent_archSign_mul_self
-#print axioms resolvent_isAdjuster_arch_mul_self
-#print axioms resolvent_placeOrd_arch
-#print axioms resolvent_eq_one_of_sq_of_cube
-#print axioms resolvent_map_arch_eq_one
-#print axioms resolvent_isArchCompAt
-#print axioms resolvent_isArchCompAt_zmod
-#print axioms resolvent_isIdeleClassChar
-#print axioms resolvent_isOfFinOrder
-#print axioms resolvent_unitIdeles_le_ker
-#print axioms resolvent_continuous_of_nhds
-#print axioms resolvent_continuous
-#print axioms resolvent_exists_injective_char
-#print axioms resolvent_orderOf_map_eq
-#print axioms resolvent_map_eq_one_of_ker_eq
-#print axioms resolvent_map_eq_inv_of_ker_eq
-#print axioms resolvent_isPrimitiveRoot
-#print axioms resolvent_isOpen_realPos
-#print axioms resolvent_valued_eq_one_of_integral
-#print axioms resolvent_unitIdeles_mem_nhds
-#print axioms resolvent_isPrimitiveRoot_eulerCoeff
-#print axioms resolvent_eulerCoeff_eq_inv
-#print axioms resolvent_eq_inv_of_eq_zero
-#print axioms resolvent_isFiniteOrderHeckeChar
-#print axioms resolvent_eulerCoeff_eq_zero
-#print axioms resolvent_under_primeAbove_isMaximal
-#print axioms resolvent_finite_quotient_under
-#print axioms resolvent_orderOf_artinFrob_eq_finrank
-#print axioms resolvent_comm_of_orderOf_three
-#print axioms resolvent_eq_inv_of_conj
-#print axioms resolvent_not_comm_of_not_normal
-#print axioms resolvent_natCard_quotient_eq
-#print axioms resolvent_isArithFrobAt_of_card_eq
-#print axioms resolvent_restrictHom
-#print axioms resolvent_restrictHom_injective
-#print axioms resolvent_restrictHom_smul
-#print axioms resolvent_restrictHom_smul_ideal
-#print axioms resolvent_artinFrob_eq_inv
-#print axioms cubic_injective_of_ringOfIntegers
-#print axioms cubic_injective_coe_comp_algebraMap
-#print axioms cubic_liftToFields
-#print axioms cubic_liftToFields_coe
-#print axioms cubic_algebra_eq_of_forall_coe
-#print axioms cubic_algebra_eq_ofLift
-#print axioms cubic_under_eq_of_algebra_eq
-#print axioms cubic_ramificationIdx_eq_of_algebra_eq
-#print axioms cubic_inertiaDeg_eq_of_algebra_eq
-#print axioms cubic_ringHom_ringOfIntegers_rat_ext
-#print axioms cubic_algebra_ringOfIntegers_rat_eq
-#print axioms cubic_isGalois_of_isGalois_rat
-#print axioms cubic_finrank_eq_three
-#print axioms cubic_natCard_aut_eq_three
-#print axioms cubic_isMulCommutative_aut
-#print axioms cubic_aut_pow_three
-#print axioms cubic_inertia_primeAbove_eq_bot_iff
-#print axioms cubic_inertia_primeAbove_ne_bot_iff
-#print axioms cubic_inertia_eq_bot_iff_of_under_eq
-#print axioms cubic_ramificationIdx_ne_one_of_exists_inertia_ne_bot
-#print axioms cubic_ramificationIdx_primeAbove_eq
-#print axioms cubic_inertiaDeg_primeAbove_eq
-#print axioms cubic_inertiaDeg_primeAbove_eq_finrank
-#print axioms cubic_exists_admissibleModulus_dvd_not_dvd
-#print axioms cubic_ramificationIdx_eq_one_and_inertiaDeg_eq_one_of_ne
-#print axioms cubic_natCard_aut_rat_eq_six
-#print axioms cubic_ramificationIdx_primeAbove_eq_of_ne
-#print axioms cubic_inertia_primeAbove_eq_bot_iff_of_ne
-#print axioms cubic_inertia_primeAbove_rat_eq_bot_of_ne
-#print axioms cubic_aut_pow_three'
-#print axioms cubic_not_dvd_of_inertia_eq_bot
-#print axioms cubic_inertia_eq_bot_iff_inertia_eq_bot
-#print axioms resolvent_main
 
 section ResolventExists
 
@@ -1286,7 +1203,6 @@ private theorem resolvent_exists_of_localUnits
 
 end ResolventExists
 
-#print axioms resolvent_exists_of_localUnits
 
 open IsDedekindDomain NumberField NumberField.InfinitePlace HeckeCharacter LanglandsTunnell.Converse
 open LanglandsTunnell.CubicLambda
@@ -1313,4 +1229,3 @@ theorem solution
       (∀ u : InfinitePlace L, u.IsComplex → IsArchCompAt L θ u 0 0) := by
   exact resolvent_exists_of_localUnits K L E hK hKn hL hE
     LanglandsTunnell.P2.Artin.exists_localUnit_notMem_principalIdeles_sup_range_idelicNorm_of_inertia_ne_bot
-#print axioms solution

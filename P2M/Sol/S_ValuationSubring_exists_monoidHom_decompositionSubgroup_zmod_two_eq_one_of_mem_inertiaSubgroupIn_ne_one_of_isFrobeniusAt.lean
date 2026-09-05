@@ -227,4 +227,3 @@ theorem solution
     · intro h
       rw [hχ, if_pos (h ω hω2)]
 
-#print axioms solution

@@ -31,4 +31,3 @@ theorem solution
   ⟨fun d d' h => CerednikDrinfeld.FormalOmega.DeligneDatum.eq_of_forall_map_eq_of_span_eq_top 𝒪 K π B n f hf L d d' h,
    fun x hx => CerednikDrinfeld.FormalOmega.DeligneDatum.exists_forall_map_eq_of_span_eq_top 𝒪 K π B n f hf L L₂ l r hl hr x hx⟩
 
-#print axioms solution

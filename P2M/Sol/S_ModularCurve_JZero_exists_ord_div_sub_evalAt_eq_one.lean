@@ -263,4 +263,3 @@ theorem solution (N : ℕ) [NeZero N] {r : ℕ}
   exact AlgebraicCurve.c3a_exists_ord_div_sub_evalAt_eq_one_of_regVal_ne_zero s
     (fun j => hs.1.ne_zero j) w hv _ hπ1 p hreg i hi
 
-#print axioms solution

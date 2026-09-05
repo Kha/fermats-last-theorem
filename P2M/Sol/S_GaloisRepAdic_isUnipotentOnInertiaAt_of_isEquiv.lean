@@ -187,4 +187,3 @@ theorem solution
     (h : ρ₁.IsUnipotentOnInertiaAt q) : ρ₂.IsUnipotentOnInertiaAt q :=
   GaloisRepAdic.LCSol.isUnipotentOnInertiaAt_of_isEquiv e h
 
-#print axioms solution

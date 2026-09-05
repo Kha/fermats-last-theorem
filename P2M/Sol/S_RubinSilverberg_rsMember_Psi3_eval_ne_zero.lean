@@ -168,4 +168,3 @@ open RubinSilverberg in
 theorem solution {K : Type*} [Field K] [CharZero K] (ζ : K) (hζ : IsPrimitiveRoot ζ 5) {a b u₀ : K} (ha : a ≠ 0) (hb : b ≠ 0) (hu₀ : IsKleinDatum a b u₀) (l : K) (x : RatFunc K) : ((rsMember (RatFunc.C a) (RatFunc.C b) (RatFunc.C u₀) (RatFunc.C l) (RatFunc.X : RatFunc K)).Ψ₃).eval x ≠ 0 :=
   Pullback.rsMember_Psi3_eval_ne_zero ζ hζ ha hb hu₀ l x
 
-#print axioms solution

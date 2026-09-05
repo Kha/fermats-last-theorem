@@ -18,4 +18,3 @@ theorem solution
       ModularCurve.TwoChart.ιInf A K j ≫ e.hom = AlgebraicCurve.TwoChartIntegralModel.ιInf A K j :=
   ⟨Iso.refl _, Category.id_comp _, Category.comp_id _, Category.comp_id _⟩
 
-#print axioms solution

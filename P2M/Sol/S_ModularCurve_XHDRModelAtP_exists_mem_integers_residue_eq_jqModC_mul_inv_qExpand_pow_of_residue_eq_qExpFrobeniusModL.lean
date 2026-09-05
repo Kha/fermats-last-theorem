@@ -774,4 +774,3 @@ theorem solution
         jqModC (ResidueField ↥A) * ((qExpand (ResidueField ↥A) p (jqModC (ResidueField ↥A)))⁻¹) ^ p := by
   exact Res2T.core p M H hpM hpM2 hHp hj 𝔛 A hA ρ hρ θ hwgen Psp Rpd α hα_coe hres₂α x hx t ht
 
-#print axioms solution

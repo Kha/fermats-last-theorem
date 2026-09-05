@@ -99,4 +99,3 @@ theorem solution
   apply hne₁
   rw [← hc', Matrix.mulVec_smul, Matrix.mulVec_mulVec, hMM, Matrix.zero_mulVec, smul_zero]
 
-#print axioms solution

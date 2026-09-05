@@ -239,11 +239,4 @@ open AutomorphicForm
 #check @IsInTranslateSpanOn
 #check @ArchOccursInClassOf
 #check @ArchOccursInSpanOf
-#print axioms AutomorphicForm.isInTranslateSpanOn_self
-#print axioms AutomorphicForm.TranslateSpanOccurrence.agrees_trans
-#print axioms AutomorphicForm.archOccursInClassOf_of_realization
-#print axioms AutomorphicForm.archOccursInClassOf_iff_of_agrees
-#print axioms AutomorphicForm.ArchOccursInClassOf.isArithGenuineCuspRealizable
-#print axioms AutomorphicForm.archOccursInSpanOf_self
-#print axioms AutomorphicForm.ArchOccursInSpanOf.archOccursInClassOf
 end Battery

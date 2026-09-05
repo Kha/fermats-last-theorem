@@ -299,4 +299,3 @@ theorem solution
   LanglandsTunnell.TateLocal.Unram0.stdRootNumberAt_eq_one_of_zeta K v
     (LanglandsTunnell.TateLocal.localZeta_stdTestFunAt_eq_of_unramified K v) χ hχ hu hlev hψ
 
-#print axioms solution

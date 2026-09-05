@@ -621,4 +621,3 @@ theorem solution
       hψT := fun t y => hψT t y }
   exact K6Core.existsUnique_factor H
 
-#print axioms solution

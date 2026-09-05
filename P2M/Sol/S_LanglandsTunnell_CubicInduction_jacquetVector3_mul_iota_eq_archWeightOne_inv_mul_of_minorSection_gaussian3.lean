@@ -271,4 +271,3 @@ theorem solution
   rw [archWeightOne_coe_inv hκ, jacquetVector3_eq, jacquetVector3_eq, hdet3, hint, integral_const_mul]
   ring
 
-#print axioms solution

@@ -146,4 +146,3 @@ theorem solution
     apply TopologicalSpace.Opens.ext
     exact heq
 
-#print axioms solution

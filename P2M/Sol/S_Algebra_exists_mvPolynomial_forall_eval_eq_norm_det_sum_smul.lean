@@ -71,4 +71,3 @@ theorem solution
   refine ⟨(lmPoly E m n e b).det, fun c => ?_⟩
   rw [RingHom.map_det, eval_lmPoly, ← Algebra.norm_eq_matrix_det b, evE_genDet]
 
-#print axioms solution

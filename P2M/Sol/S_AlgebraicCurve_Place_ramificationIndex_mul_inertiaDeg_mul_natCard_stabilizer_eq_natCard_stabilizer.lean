@@ -241,4 +241,3 @@ theorem solution
     rfl hloc hinj (fun r => hxR r)
   rw [key]
 
-#print axioms solution

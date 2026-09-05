@@ -388,7 +388,6 @@ theorem GCAux.mem_of_rho0_eq_one
   exact IsFineModuli.mem_of_ptF_comp_eq_of_rigid Λ hΛ N m hmU hM hρ ℓ' hℓ hℓm L₀ hL₀ hℓL₀ hL₀_left hL₀_index H hH
     (AlgebraicClosure ℚ) (𝟙 _) u hrig_u (z : G) hg
 
-#print axioms GCAux.mem_of_rho0_eq_one
 
 theorem GCAux.isFinite_of_isIntegralHom_of_isAffineHom
     {k : Type} [Field k] {M Xq : Scheme.{0}} (πM : M ⟶ Spec (CommRingCat.of k)) (hMlft : LocallyOfFiniteType πM)
@@ -1312,4 +1311,3 @@ theorem solution
   exact ⟨(C₀ : Scheme.{0}).functionField, inferInstance, iAlg, iAlgF, iAlgT, iTowF, iTowT, hFDF, iFDT, hGalF, c,
     hφcompat, hcR, hcount⟩
 
-#print axioms solution

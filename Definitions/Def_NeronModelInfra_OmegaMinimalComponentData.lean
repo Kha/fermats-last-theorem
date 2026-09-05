@@ -196,7 +196,6 @@ info: 'NeronModelInfra.fromSpecStalk_comp_eq_specMap_algebraMap_stalkAlgebra' de
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.fromSpecStalk_comp_eq_specMap_algebraMap_stalkAlgebra
 
 /--
 info: 'NeronModelInfra.ComponentReading.n_eq_one_of_a_eq_uniformizer' depends on axioms: [propext,
@@ -204,10 +203,8 @@ info: 'NeronModelInfra.ComponentReading.n_eq_one_of_a_eq_uniformizer' depends on
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.ComponentReading.n_eq_one_of_a_eq_uniformizer
 
 /--
 info: 'NeronModelInfra.MinimalComponentData.IsOmegaMinimal.n_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.MinimalComponentData.IsOmegaMinimal.n_eq

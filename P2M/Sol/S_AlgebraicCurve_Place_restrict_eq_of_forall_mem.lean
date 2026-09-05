@@ -64,4 +64,3 @@ theorem solution {K F L : Type*} [Field K] [Field F] [Field L]
     rw [this]
     exact mul_mem (hle hg) (pow_mem hyO' m)
 
-#print axioms solution

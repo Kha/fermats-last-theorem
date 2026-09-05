@@ -177,4 +177,3 @@ theorem solution
 
   exact (mul_eq_zero.mp hzero).resolve_left hres₁
 
-#print axioms solution

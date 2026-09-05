@@ -116,4 +116,3 @@ theorem solution
   rw [← Algebra.TensorProduct.basis_apply, Module.Basis.repr_self, Finsupp.single_eq_same, mul_one] at h5
   exact h5
 
-#print axioms solution

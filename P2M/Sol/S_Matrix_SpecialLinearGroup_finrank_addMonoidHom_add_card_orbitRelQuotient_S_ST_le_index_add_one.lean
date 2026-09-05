@@ -360,4 +360,3 @@ theorem solution (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.Fin
   rw [hS, hST]
   omega
 
-#print axioms solution

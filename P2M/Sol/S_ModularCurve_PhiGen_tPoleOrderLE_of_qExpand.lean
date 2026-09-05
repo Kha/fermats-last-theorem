@@ -318,11 +318,9 @@ end ModularCurve
 
 end
 
-#print axioms ModularCurve.PhiGen.evalAtJ_injective
 
 open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_tPoleOrderLE_of_qExpand.ModularCurve _root_.ModularCurve.PhiGen _root_.P2MW.S_ModularCurve_PhiGen_tPoleOrderLE_of_qExpand.ModularCurve.PhiGen in
 
 theorem solution {K : Type*} [Field K] {f : LaurentSeries K} {N n : ℕ} [NeZero N] (h : TPoleOrderLE (qExpand K N f) (N * n)) : TPoleOrderLE f n :=
   ModularCurve.PhiGen.tPoleOrderLE_of_qExpand h
 
-#print axioms solution

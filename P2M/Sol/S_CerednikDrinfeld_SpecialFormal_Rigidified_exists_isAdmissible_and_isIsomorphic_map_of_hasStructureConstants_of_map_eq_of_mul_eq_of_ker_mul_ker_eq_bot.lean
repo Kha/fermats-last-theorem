@@ -243,4 +243,3 @@ theorem solution
   rw [lhs, rhs] at key
   exact key
 
-#print axioms solution

@@ -249,4 +249,3 @@ theorem solution
   have : (0 : ℤ) < (((q - 1) / 2 : ℕ) : ℤ) := by exact_mod_cast hnpos
   omega
 
-#print axioms solution

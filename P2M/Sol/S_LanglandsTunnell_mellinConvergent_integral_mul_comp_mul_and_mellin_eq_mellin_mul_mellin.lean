@@ -138,4 +138,3 @@ theorem solution
     simp only [mellin]
     exact setIntegral_congr_fun measurableSet_Ioi fun r hr => by rw [hT r hr]
 
-#print axioms solution

@@ -414,4 +414,3 @@ theorem solution (ν s : ℂ) (hs : |ν.re| < s.re) :
       = ((2 : ℂ) ^ s * (1 / 2)) * Complex.Gamma ((s + ν) / 2) * Complex.Gamma ((s - ν) / 2) := by ring
     _ = _ := by rw [e]
 
-#print axioms solution

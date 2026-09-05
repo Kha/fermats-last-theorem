@@ -2292,4 +2292,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hp2 : p �
     (fun A' hA' => WeierstrassCurve.valuation_torsion_of_coeff_prePsi_dvd W p hp2 hgood hss A' hA')
     hcard A hA⟩
 
-#print axioms solution

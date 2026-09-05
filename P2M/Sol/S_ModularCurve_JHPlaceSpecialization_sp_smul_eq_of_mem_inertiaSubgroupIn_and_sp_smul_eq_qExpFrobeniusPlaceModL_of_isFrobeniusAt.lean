@@ -204,4 +204,3 @@ theorem solution
     rw [qExpFrobeniusPlaceModL_eq_qExpArithFrobC_smul]
     exact key
 
-#print axioms solution

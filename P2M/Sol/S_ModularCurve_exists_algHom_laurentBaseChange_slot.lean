@@ -175,4 +175,3 @@ theorem solution (K : Type*) [Field K] [Algebra ℚ K] (N : ℕ) [NeZero N] (ζ 
           qExpand K (a * a) (qTwist (ζ ^ (b * a)) (coeffEmb K jq)) :=
   ModularCurve.exists_algHom_laurentBaseChange_slot K N ζ hζ a b ha hb hg
 
-#print axioms solution

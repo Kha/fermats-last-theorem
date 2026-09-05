@@ -19,4 +19,3 @@ theorem solution :
   rw [← IsEquivariantPrimitive.sub_eq_period hF.traceSum γ UpperHalfPlane.I]
   exact sum_traceRep_smul_sub hF γ UpperHalfPlane.I
 
-#print axioms solution

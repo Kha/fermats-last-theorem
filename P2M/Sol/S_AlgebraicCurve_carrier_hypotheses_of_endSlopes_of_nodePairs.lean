@@ -154,4 +154,3 @@ theorem solution
 
   exact ⟨C₁, C₁', C₂, C₂', fun s hs => (B s hs hδ (hord₂ s.2)).2⟩
 
-#print axioms solution

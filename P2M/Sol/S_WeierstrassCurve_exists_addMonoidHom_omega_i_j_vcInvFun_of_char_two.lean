@@ -816,4 +816,3 @@ theorem solution
   · exact fun T => heq_vcHom _ (E K) (i_stab ω hω) T
   · exact fun T => heq_vcHom _ (E K) (j_stab ω hω) T
 
-#print axioms solution

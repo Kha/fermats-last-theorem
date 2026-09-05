@@ -114,4 +114,3 @@ theorem solution
   have : (s' - s) • dt = 0 := by rw [sub_smul, ← hs, ← hs', sub_self]
   exact sub_eq_zero.mp (hinj _ this)
 
-#print axioms solution

@@ -351,4 +351,3 @@ theorem solution
   have hy₂ : y₂ ≠ 0 := hpR.1.ne'
   exact key x y₁ y₂ θ hy₁ hy₂ _ rfl
 
-#print axioms solution

@@ -404,4 +404,3 @@ theorem solution
   exact (ρ_ L).symm ≪≫ whiskerLeftIso L eEdual.symm ≪≫ (α_ _ _ _).symm ≪≫ (β_ _ _) ≪≫
     tensorIso eES (eMn ≪≫ eV) ≪≫ (foldrTensorIso A B V _).symm
 
-#print axioms solution

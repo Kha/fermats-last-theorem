@@ -1000,4 +1000,3 @@ theorem solution {K : Type*} [Field K] (M : ℕ) [NeZero M] (ζ : Kˣ) (hζ : Is
             {x : LaurentSeries K | ∃ (d' : ℕ) (_ : NeZero d'), d' ∣ d ∧ x = jqNModC K d'} :=
   ModularCurve.package_of_socket M ζ hζ hbase
 
-#print axioms solution

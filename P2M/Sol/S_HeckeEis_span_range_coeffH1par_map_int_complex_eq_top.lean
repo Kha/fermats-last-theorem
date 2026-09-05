@@ -51,4 +51,3 @@ theorem solution (n N : ℕ) [NeZero N]
   obtain ⟨t, b, c, h⟩ := HeckeEis.exists_basis_coeffH1par_int_complex n N Φ hΦ
   exact HeckeEis.C2Cor.span_eq_top_of_bases b c Φ h
 
-#print axioms solution

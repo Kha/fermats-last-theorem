@@ -27,4 +27,3 @@ theorem solution
   show Φ x ∈ w.toValuationSubring ↔ _
   rw [hΦ x, hpow]
 
-#print axioms solution

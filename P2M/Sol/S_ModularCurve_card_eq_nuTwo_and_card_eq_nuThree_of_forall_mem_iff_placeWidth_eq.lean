@@ -217,4 +217,3 @@ theorem solution
       ← hS, nsmul_eq_mul] at hsum
     omega
 
-#print axioms solution

@@ -107,4 +107,3 @@ theorem solution
   congr 1
   exact Subtype.ext (by simp only [hP])
 
-#print axioms solution

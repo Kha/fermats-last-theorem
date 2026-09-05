@@ -76,4 +76,3 @@ theorem solution (N q : ℕ) [NeZero N] [NeZero q] (hq : q.Prime) (hqN : ¬ q �
     exact Or.inl (hloc 𝔪 hmax heis hunit x hx hpt h hcomp hpair)
   · exact Or.inr hlow
 
-#print axioms solution

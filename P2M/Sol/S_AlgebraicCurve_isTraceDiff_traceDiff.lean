@@ -164,4 +164,3 @@ private theorem ModularCurve.qExpansionDiffAlong_smul_map_D {K F F' L : Type*} [
 theorem solution (K F F' : Type*) [Field K] [Field F] [Field F'] [Algebra K F] [Algebra K F'] [Algebra F F'] [IsScalarTower K F F'] [Algebra.IsSeparable F F'] : IsTraceDiff K F F' (traceDiff K F F') :=
   AlgebraicCurve.isTraceDiff_traceDiff K F F'
 
-#print axioms solution

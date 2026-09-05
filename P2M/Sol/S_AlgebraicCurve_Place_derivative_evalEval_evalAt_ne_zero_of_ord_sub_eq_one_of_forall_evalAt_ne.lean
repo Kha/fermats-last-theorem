@@ -611,4 +611,3 @@ theorem solution
     rfl
   exact rf_tower hrat zz hzz y G hGirr hG ℓ hℓ (rf_gauss_minpoly hz y G hGirr hG) Q hzQ hyQ he hlead hsep
 
-#print axioms solution

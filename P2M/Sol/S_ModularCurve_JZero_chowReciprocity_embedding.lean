@@ -449,4 +449,3 @@ example (N : ℕ) [NeZero N] :
 
 end
 
-#print axioms solution

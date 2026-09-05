@@ -41,4 +41,3 @@ theorem solution {K L : Type*} [Field K] [Field L] [Algebra K L]
   exact heq
 
 #check @solution
-#print axioms solution

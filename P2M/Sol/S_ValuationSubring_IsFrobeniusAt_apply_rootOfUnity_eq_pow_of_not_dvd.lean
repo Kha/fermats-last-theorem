@@ -173,4 +173,3 @@ theorem solution
     σ ζ = ζ ^ q :=
   frob_apply_eq_pow_of_pow_eq_one hσ (vs_natCast_residueField_ne_zero_of_not_dvd hq hA hm) hζ
 
-#print axioms solution

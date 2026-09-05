@@ -144,4 +144,3 @@ theorem solution
   have : b ∈ 𝔭₁ := by rw [← heq]; exact (h𝔭₀W b).mpr hb₀
   exact hb₁ ((h𝔭₁W b).mp this)
 
-#print axioms solution

@@ -607,4 +607,3 @@ theorem solution
     (by rw [hj', coe_jFull])
 
 set_option maxHeartbeats 1600000 in
-#print axioms solution

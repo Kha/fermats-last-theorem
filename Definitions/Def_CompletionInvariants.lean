@@ -144,13 +144,3 @@ set_option pp.universes true in
 #check @AdicCompletion.tensorRingHom_equivariant
 set_option pp.universes true in
 #check @AdicCompletion.completionTensorFixedEquiv
-#print axioms AdicCompletion.smul_map_algebraMap
-#print axioms AdicCompletion.toStabilizerExtended
-#print axioms AdicCompletion.selfCompletionMulSemiringAction
-#print axioms AdicCompletion.selfCompletion_smul_of
-#print axioms AdicCompletion.stabilizer_smulCommClass
-#print axioms AdicCompletion.selfCompletion_smulCommClass
-#print axioms AdicCompletion.selfCompletion_smul_completionBaseChangeHom
-#print axioms AdicCompletion.tensorRingHom_equivariant
-#print axioms AdicCompletion.fixedPointsCongr
-#print axioms AdicCompletion.completionTensorFixedEquiv

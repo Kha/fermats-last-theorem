@@ -75,4 +75,3 @@ theorem solution
     (ModularCurve.ssPlacesQExp K Γ p).Finite :=
   SSFin.main K p Γ hT
 
-#print axioms solution

@@ -412,4 +412,3 @@ theorem solution (M q : ℕ) [NeZero M] [NeZero q] (hcop : Nat.Coprime q M)
   rw [hperm]
   abel
 
-#print axioms solution

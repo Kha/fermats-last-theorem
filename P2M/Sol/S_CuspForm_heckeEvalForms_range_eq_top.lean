@@ -42,4 +42,3 @@ end EVFRangeSol
 theorem solution (N : ℕ) [NeZero N] (k : ℤ) : (CuspForm.heckeEvalForms N k).range = ⊤ :=
   EVFRangeSol.rangeTop N k
 
-#print axioms solution

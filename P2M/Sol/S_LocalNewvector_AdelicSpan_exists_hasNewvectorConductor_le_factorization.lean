@@ -45,8 +45,6 @@ theorem hasNewvectorConductor_zero_of_not_dvd_impl (φ : AutomorphicForm.AdelicG
 
 end P63DockRows
 
-#print axioms P63DockRows.exists_hasNewvectorConductor_le_factorization_impl
-#print axioms P63DockRows.hasNewvectorConductor_zero_of_not_dvd_impl
 
 theorem solution
     (φ : AutomorphicForm.AdelicGL2 (NumberField.RingOfIntegers ℚ) ℚ → ℂ) (hφ : φ ≠ 0) {N : ℕ} (hN : N ≠ 0)

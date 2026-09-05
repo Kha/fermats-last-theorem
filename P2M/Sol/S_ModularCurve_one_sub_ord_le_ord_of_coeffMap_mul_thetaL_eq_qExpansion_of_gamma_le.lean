@@ -119,4 +119,3 @@ theorem solution
     mul_le_mul_of_nonneg_left hjc (by positivity)
   linarith
 
-#print axioms solution

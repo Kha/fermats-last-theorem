@@ -267,10 +267,7 @@ end
 
 #check @ModularCurve.levelBaseRing
 #check @ModularCurve.exists_finset_forall_integral_laurentDescent
-#print axioms ModularCurve.exists_finset_forall_integral_laurentDescent
 #check @ModularCurve.integral_laurentDescent_of_integral
 #check @ModularCurve.laurentDescent_mem_integralCoeffs_iff
 #check @ModularCurve.levelPolynomialEquiv
 #check @ModularCurve.prime_levelConst
-#print axioms ModularCurve.prime_levelConst
-#print axioms ModularCurve.uniqueFactorizationMonoid_levelBaseRing

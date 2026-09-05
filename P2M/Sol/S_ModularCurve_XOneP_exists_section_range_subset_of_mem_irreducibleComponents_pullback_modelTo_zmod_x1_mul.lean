@@ -92,4 +92,3 @@ theorem solution
     rw [Set.mem_singleton_iff.mp (hrange (x ≫ τ) hw)]
     exact h
 
-#print axioms solution

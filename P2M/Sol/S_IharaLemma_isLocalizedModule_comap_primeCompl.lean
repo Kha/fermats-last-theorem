@@ -38,4 +38,3 @@ theorem solution {Λ B : Type*} [CommRing Λ] [CommRing B] [Algebra Λ B]
     refine ⟨⟨s, hs⟩, ?_⟩
     simpa [Submonoid.smul_def, algebraMap_smul] using hc
 
-#print axioms solution

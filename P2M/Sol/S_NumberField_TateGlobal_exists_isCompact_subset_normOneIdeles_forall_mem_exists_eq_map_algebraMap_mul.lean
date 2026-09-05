@@ -3680,4 +3680,3 @@ theorem solution
         x = Units.map (algebraMap F (AdeleRing (𝓞 F) F)).toMonoidHom η * κ :=
   M4aLocalCFT.FujisakiR1.exists_isCompact_impl F
 
-#print axioms solution

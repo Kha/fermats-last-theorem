@@ -366,4 +366,3 @@ theorem solution
   rw [he_one] at this
   exact this
 
-#print axioms solution

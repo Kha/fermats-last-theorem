@@ -139,4 +139,3 @@ theorem solution
       v ψv hψinv W hW hW1 hmult hirr hsm hadm hWgauge ωv hωu hω hπ hϖ E Ed ε ℓ h31
       a₁ a₂ ha W₂ hW₂ψ hW₂K hW₂1 hW₂Z hW₂T W₂d hW₂dψ hW₂dK hW₂d1 hW₂dZ hW₂dT μ₂ μN p q pd qd σ₂ σ₃ hq hqd h1 h2 h3 h4⟩
 
-#print axioms solution

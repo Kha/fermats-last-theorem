@@ -118,7 +118,6 @@ theorem M4aP3B.Rows.constantTerm_adelicBox_unipotentGL2_mul_impl (K : Type) [Fie
           (fun x => AutomorphicForm.unipotentGL2 x) φ g :=
   M4aP3B.Rows.constantTerm_adelicBox_unipotentGL2_mul' K hφ x₀ g
 
-#print axioms M4aP3B.Rows.constantTerm_adelicBox_unipotentGL2_mul_impl
 
 theorem solution (K : Type) [Field K] [NumberField K]
     {φ : AutomorphicForm.AdelicGL2 (NumberField.RingOfIntegers K) K → ℂ}

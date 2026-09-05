@@ -737,49 +737,41 @@ end AlgebraicCurve
 info: 'AlgebraicCurve.WeilDatum.classLeft' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.WeilDatum.classLeft
 
 /--
 info: 'AlgebraicCurve.WeilDatum.galSmul_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.WeilDatum.galSmul_pairing
 
 /--
 info: 'AlgebraicCurve.WeilDatum.pairing_eq_of_addPrincipalLeft' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.WeilDatum.pairing_eq_of_addPrincipalLeft
 
 /--
 info: 'AlgebraicCurve.DivisorialWeilPairingData.pair_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.DivisorialWeilPairingData.pair_add_left
 
 /--
 info: 'AlgebraicCurve.DivisorialWeilPairingData.pair_pow_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.DivisorialWeilPairingData.pair_pow_eq_one
 
 /--
 info: 'AlgebraicCurve.DivisorialWeilPairingData.pair_self_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.DivisorialWeilPairingData.pair_self_eq_one
 
 /--
 info: 'AlgebraicCurve.DivisorialWeilPairingData.pair_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.DivisorialWeilPairingData.pair_smul
 
 /--
 info: 'AlgebraicCurve.DivisorialWeilPairingData.toWeilPairingData' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.DivisorialWeilPairingData.toWeilPairingData
 
 /--
 info: 'AlgebraicCurve.nonempty_weilPairingData_of_existsPerfectDivisorialWeilPairing' depends on axioms: [propext,
@@ -787,4 +779,3 @@ info: 'AlgebraicCurve.nonempty_weilPairingData_of_existsPerfectDivisorialWeilPai
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicCurve.nonempty_weilPairingData_of_existsPerfectDivisorialWeilPairing

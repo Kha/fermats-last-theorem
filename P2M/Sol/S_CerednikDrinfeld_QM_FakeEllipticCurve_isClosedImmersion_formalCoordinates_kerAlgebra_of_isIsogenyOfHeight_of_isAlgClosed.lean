@@ -219,4 +219,3 @@ theorem solution
     exact AlgHom.congr_fun hlift y
   rw [hpq]
 
-#print axioms solution

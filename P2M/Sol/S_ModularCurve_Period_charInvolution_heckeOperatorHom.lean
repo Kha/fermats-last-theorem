@@ -184,4 +184,3 @@ theorem solution (N ℓ : ℕ) [NeZero ℓ]
   rw [HeckeEis.heckeOperatorHom_apply, HeckeEis.heckeOperatorHom_apply]
   exact sum_commutes N ℓ φ (Additive.toMul γ)
 
-#print axioms solution

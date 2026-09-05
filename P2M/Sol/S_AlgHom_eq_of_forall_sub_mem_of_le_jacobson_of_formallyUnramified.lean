@@ -44,4 +44,3 @@ theorem solution
   rw [hunit.mul_left_eq_zero, sub_eq_zero] at this
   exact this.symm
 
-#print axioms solution

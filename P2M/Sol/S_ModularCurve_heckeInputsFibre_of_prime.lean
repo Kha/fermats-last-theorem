@@ -284,13 +284,9 @@ end ModularCurve
 end
 
 #check @ModularCurve.hasPrincipalDivisors_charLDegeneracyRoof_of_prime
-#print axioms ModularCurve.hasPrincipalDivisors_charLDegeneracyRoof_of_prime
 #check @ModularCurve.heckeInputsFibre_of_prime
-#print axioms ModularCurve.heckeInputsFibre_of_prime
 #check @ModularCurve.heckeDivFibreDescends_of_natCast_ne_zero
-#print axioms ModularCurve.heckeDivFibreDescends_of_natCast_ne_zero
 #check @ModularCurve.heckeInputsFibre_of_natCast_ne_zero
-#print axioms ModularCurve.heckeInputsFibre_of_natCast_ne_zero
 #check @ModularCurve.heckePic0Fibre_eq_of_natCast_ne_zero
 
 open _root_.ModularCurve _root_.P2MW.S_ModularCurve_heckeInputsFibre_of_prime.ModularCurve AlgebraicCurve in

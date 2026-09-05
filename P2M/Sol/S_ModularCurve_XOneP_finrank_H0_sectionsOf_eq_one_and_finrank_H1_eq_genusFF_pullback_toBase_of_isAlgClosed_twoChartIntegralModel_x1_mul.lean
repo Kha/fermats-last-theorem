@@ -351,4 +351,3 @@ theorem solution
   rw [e1.finrank_eq, h1, ← ModularCurve.XOneP.GenFibre.genusFF_laurentBaseChange_eq_algebraicClosure (M * p) L']
   exact AlgebraicCurve.genusFF_eq_of_algEquiv e
 
-#print axioms solution

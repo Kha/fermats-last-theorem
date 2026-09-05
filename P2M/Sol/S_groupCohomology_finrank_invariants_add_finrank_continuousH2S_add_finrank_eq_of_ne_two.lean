@@ -427,4 +427,3 @@ theorem solution
   unfold gwDefect at hM
   omega
 
-#print axioms solution

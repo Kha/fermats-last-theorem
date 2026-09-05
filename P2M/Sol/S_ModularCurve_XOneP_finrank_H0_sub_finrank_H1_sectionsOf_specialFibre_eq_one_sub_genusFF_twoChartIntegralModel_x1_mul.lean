@@ -138,4 +138,3 @@ theorem solution
   rw [h0, h1] at hval
   rw [hval, he_gen]
 
-#print axioms solution

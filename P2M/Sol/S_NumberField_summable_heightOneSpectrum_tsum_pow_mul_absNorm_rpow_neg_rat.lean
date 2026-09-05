@@ -82,4 +82,3 @@ theorem solution
       ≤ ((Ideal.absNorm v.asIdeal : ℕ) : ℝ) ^ (-θ) * (((m : ℝ) + 2) ^ k * ρ ^ m) := hle v m
     _ = ((m : ℝ) + 2) ^ k * ρ ^ m * ((Ideal.absNorm v.asIdeal : ℕ) : ℝ) ^ (-θ) := by ring
 
-#print axioms solution

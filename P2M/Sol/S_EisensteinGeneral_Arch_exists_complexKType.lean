@@ -1001,4 +1001,3 @@ theorem solution (a b : ℕ) :
         ‖J w ζ‖ ≤ C * max 1 (‖ζ‖ ^ (-(N : ℝ))) * Real.exp (-c' * ‖ζ‖)) := by
   exact EgenArch.e7_head_of_family a b (EgenArch.e7_family a b)
 
-#print axioms solution

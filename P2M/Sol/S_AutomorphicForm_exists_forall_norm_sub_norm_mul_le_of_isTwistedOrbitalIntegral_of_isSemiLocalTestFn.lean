@@ -121,4 +121,3 @@ theorem solution
     _ ≤ ∑ a ∈ s, M * (Cf a * X) := Finset.sum_le_sum fun a _ => mul_le_mul_of_nonneg_left (hJb a) hM
     _ = M * (∑ a ∈ s, Cf a) * X := by rw [Finset.mul_sum, Finset.sum_mul]; refine Finset.sum_congr rfl fun a _ => ?_; ring
 
-#print axioms solution

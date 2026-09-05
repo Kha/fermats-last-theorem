@@ -655,4 +655,3 @@ theorem solution {K F F' : Type*} [Field K] [Field F] [Field F'] [Algebra K F] [
   rw [hfib]
   exact h
 
-#print axioms solution

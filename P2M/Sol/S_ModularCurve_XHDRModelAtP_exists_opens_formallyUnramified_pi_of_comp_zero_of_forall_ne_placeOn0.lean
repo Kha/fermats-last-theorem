@@ -552,4 +552,3 @@ theorem solution
   rintro _ ⟨t, rfl⟩
   exact ((IsLocalRing.specializes_closedPoint t).map u.1.base.hom.continuous).mem_open V.2 hV
 
-#print axioms solution

@@ -46,4 +46,3 @@ theorem solution
     F c u (1 / 2) 2 T (by norm_num) (hcov (1 / 2) 2 (by norm_num) (by norm_num)) ξ N hN P tys Ψ
   exact Submodule.finiteDimensional_of_le hle
 
-#print axioms solution

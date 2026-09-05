@@ -608,4 +608,3 @@ theorem solution
     rw [hng] at hn hord
     exact hPgen p (c * t) x₁ y₁ h₁ hn hord
 
-#print axioms solution

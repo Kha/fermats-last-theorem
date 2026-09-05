@@ -124,4 +124,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
       _ = M * (‖z - w‖ / ρ * (S.map fun w => ‖z - w‖ / ρ).prod) := by
           field_simp
 
-#print axioms solution

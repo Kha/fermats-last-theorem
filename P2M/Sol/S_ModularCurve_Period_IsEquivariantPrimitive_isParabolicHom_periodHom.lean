@@ -330,4 +330,3 @@ theorem solution {Γ : Subgroup SL(2, ℤ)}
     ModularCurve.Period.IsParabolicHom Γ hF.periodHom :=
   hF.isParabolicHom_periodHom_of_classification ModularCurve.Period.parabolicConjugacyClassification hlim
 
-#print axioms solution

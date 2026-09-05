@@ -67,4 +67,3 @@ theorem solution
   exact ⟨⟨⟨(lsXiMemberAt_iff (𝓞 F) F (adelicGLHaar (Fin 2) (𝓞 F) F) ⊤ ξ (⋃ x ∈ T, (· * x) '' centreCutSiegelSet F c u d₁ d₂) ψ).mpr ⟨hA.1, hMem⟩,
       hψ.smoothCusp.1.2⟩, hψ.smoothCusp.2⟩, hψ.continuous, hψ.level_invariant, hψ.hecke_eigen, hψ.central_eigen⟩
 
-#print axioms solution

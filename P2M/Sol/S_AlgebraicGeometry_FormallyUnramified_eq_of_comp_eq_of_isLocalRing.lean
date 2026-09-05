@@ -51,4 +51,3 @@ theorem solution
     exact this
   rw [ha, hb]
 
-#print axioms solution

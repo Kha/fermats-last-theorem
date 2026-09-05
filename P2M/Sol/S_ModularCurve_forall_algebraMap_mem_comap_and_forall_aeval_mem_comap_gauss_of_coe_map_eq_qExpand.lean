@@ -238,4 +238,3 @@ theorem solution
     exact ((ModularCurve.chartAlgFin_iff_and_comap_ne_and_aeval_mem_comap_of_algEquiv_map_j_eq_qExpand
       p L K A hAp j hj σ hσj).2 W₀ hW₀).2
 
-#print axioms solution

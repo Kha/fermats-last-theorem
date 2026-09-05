@@ -1283,4 +1283,3 @@ theorem solution
   rw [hB, hD, ← hVrank M]
   exact hsplit
 
-#print axioms solution

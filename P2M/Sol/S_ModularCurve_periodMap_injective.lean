@@ -23,4 +23,3 @@ theorem solution {N : ℕ} [NeZero N] :
   obtain ⟨F, hFf, -, hFe, -⟩ := Period.CuspForm.exists_equivariantPrimitive_gamma0 (f - g)
   exact Period.CuspForm.periodHom_ne_zero_of_ne_zero hsub hFe hFf ((periodMap_eq_periodHom hFe hFf).symm.trans hzero)
 
-#print axioms solution

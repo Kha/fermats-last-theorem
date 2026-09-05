@@ -142,4 +142,3 @@ theorem solution {K : Type*} [Field K] (C : VariableChange K) (W : WeierstrassCu
         (∑ P ∈ S, (P.1 * W.veluGx P.1 P.2 - P.2 * W.veluGy P.1 P.2))) :=
   WeierstrassCurve.variableChange_veluQuotientOfSums_asymWeights C W S hneg
 
-#print axioms solution

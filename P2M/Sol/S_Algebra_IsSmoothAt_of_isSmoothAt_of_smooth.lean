@@ -89,4 +89,3 @@ theorem solution (R S T : Type u) [CommRing R] [CommRing S] [CommRing T]
     exact (eB.toEquiv.injective.comp hinj).subsingleton
   exact Module.FaithfullyFlat.lTensor_reflects_triviality A B (A ⊗[S] Algebra.H1Cotangent R S)
 
-#print axioms solution

@@ -38,4 +38,3 @@ theorem solution
     haveI : Subsingleton V := ⟨fun a b => (hV a).trans (hV b).symm⟩
     exact Function.injective_of_subsingleton _
 
-#print axioms solution

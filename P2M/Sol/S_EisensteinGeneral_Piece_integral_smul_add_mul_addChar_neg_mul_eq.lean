@@ -122,4 +122,3 @@ theorem solution (F : Type) [Field F] [NumberField F]
 
 end Solution
 
-#print axioms solution

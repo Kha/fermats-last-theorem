@@ -58,4 +58,3 @@ theorem solution
   intro v hv k hk
   exact ⟨finEmbed_localEmbed_mem_levelOne hv hk, finEmbed_mem_finiteAdelicGL2Subgroup _⟩
 
-#print axioms solution

@@ -396,4 +396,3 @@ theorem solution (M : ℕ) [NeZero M] (H : Subgroup (ZMod M)ˣ) :
   XHGenusLE.main (CohCarrier.GammaH M H) M (ModularCurve.Gamma1_le_GammaH M H)
     (CohCarrier.GammaH_le_Gamma0 H) (ModularCurve.translation_mem_GammaH M H)
 
-#print axioms solution

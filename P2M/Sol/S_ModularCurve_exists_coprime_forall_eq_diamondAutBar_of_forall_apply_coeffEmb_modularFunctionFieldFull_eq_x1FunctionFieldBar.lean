@@ -163,4 +163,3 @@ theorem solution
       ↥(ModularCurve.x1FunctionFieldBar (M * p)) u) x = u • x := rfl
   rw [h1, ← hu, h2, hsmul, hφ, MonoidHom.comp_apply, hδ u, diamondAutBar_eq_geomAut]
 
-#print axioms solution

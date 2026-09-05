@@ -164,4 +164,3 @@ theorem solution
     FiniteDimensional (ZMod p) (continuousH2S S M) := by
   exact gwb_main S hpS M hsm hMur
 
-#print axioms solution

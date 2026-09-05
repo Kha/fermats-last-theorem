@@ -301,10 +301,6 @@ theorem solution
     · rw [(hxx n B hB ψ P).1, (hxx n B hB ψ' P).1]
     · rw [(hxx n B hB ψ P).2, (hxx n B hB ψ' P).2, psi2_congr π Onr Fr n hB ψ ψ' h]
 
-#print axioms solution
 
-#print axioms solution
 
-#print axioms solution
 
-#print axioms solution

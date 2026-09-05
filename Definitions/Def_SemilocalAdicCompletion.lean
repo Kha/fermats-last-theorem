@@ -393,25 +393,5 @@ set_option pp.universes true in
 #check @Ideal.isArtinianRing_quotient_pow
 set_option pp.universes true in
 #check @Ideal.quotientPowEquivPiSup
-#print axioms isArtinian_of_finite_of_smul_eq_zero
-#print axioms Ideal.isArtinianRing_quotient_pow
-#print axioms Ideal.isMaximal_of_isPrime_of_le
-#print axioms Ideal.finite_setOf_isMaximal_and_le
-#print axioms Ideal.prod_pow_le_pow_of_radical_pow_le
-#print axioms Ideal.sup_pow_le_pow_of_le
-#print axioms Ideal.sup_mul_sup_le
-#print axioms Ideal.isCoprime_sup_pow_of_ne
-#print axioms Ideal.iInf_sup_pow_eq
-#print axioms Ideal.quotientPowEquivPiSup
-#print axioms Ideal.quotientPowEquivPiSup_mk
 set_option pp.universes true in
 #check @AdicCompletion.semilocalPiEquiv
-#print axioms AdicCompletion.semilocalComponent
-#print axioms AdicCompletion.semilocalPiHom
-#print axioms AdicCompletion.ofCompatibleFamily
-#print axioms AdicCompletion.evalₐ_ofCompatibleFamily
-#print axioms AdicCompletion.semilocalPiHom_injective
-#print axioms AdicCompletion.quotientPowEquivPiSup_factorPow
-#print axioms AdicCompletion.semilocalPiHom_surjective
-#print axioms AdicCompletion.semilocalPiEquiv
-#print axioms AdicCompletion.semilocalPiEquiv_of

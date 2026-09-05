@@ -82,4 +82,3 @@ theorem solution
   · intro hv
     exact mem_of_mem α.toRingHom Rpd.R₁.integers Rpd.R₂.integers (fun w hw₁ hw₂ hlt => ((h12 w hw₁ hw₂).mpr hlt)) v hv
 
-#print axioms solution

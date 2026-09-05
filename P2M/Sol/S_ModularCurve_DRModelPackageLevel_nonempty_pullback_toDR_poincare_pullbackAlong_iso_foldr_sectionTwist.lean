@@ -1106,4 +1106,3 @@ theorem solution
     (hD.poincare.pullbackAlong z).L m σ pos neg F (algebraMap O F) hτp tK htK hxσ hM
   exact ⟨(Scheme.Modules.pullbackComp _ _).app _ ≪≫ eY⟩
 
-#print axioms solution

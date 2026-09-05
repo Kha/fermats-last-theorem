@@ -279,4 +279,3 @@ theorem solution
       have eN : (⟨y * z, IntermediateField.mul_mem _ hy hz⟩ : ↥(qExpFunctionFieldC ℚ (CohCarrier.GammaH (M / p) (infSubgroup p M H hpM)))) = ⟨y, hy⟩ * ⟨z, hz⟩ := rfl
       rw [eM, eN, map_mul, map_mul, MulMemClass.coe_mul, MulMemClass.coe_mul, ihy, ihz]
 
-#print axioms solution

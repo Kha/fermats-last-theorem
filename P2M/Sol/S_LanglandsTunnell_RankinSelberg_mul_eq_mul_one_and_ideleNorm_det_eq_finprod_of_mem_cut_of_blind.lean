@@ -287,4 +287,3 @@ theorem solution
     (fun v hvB hvSQ => (hvB (Finset.mem_union_left _ hvSQ)).elim)
     (fun v _ hvSQ => hg v hvSQ)
 
-#print axioms solution

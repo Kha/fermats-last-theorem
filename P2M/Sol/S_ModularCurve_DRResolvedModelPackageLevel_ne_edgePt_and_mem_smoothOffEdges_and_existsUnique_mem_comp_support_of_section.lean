@@ -180,4 +180,3 @@ theorem solution
       E5W2aSec.exists_mem_smoothOffEdges_and_mem_support_comp_and_forall_not_mem (𝔛reg := 𝔛reg) hϖ σ
     exact ⟨v, hv, fun w hw => by by_contra h; exact huniq w h hw⟩
 
-#print axioms solution

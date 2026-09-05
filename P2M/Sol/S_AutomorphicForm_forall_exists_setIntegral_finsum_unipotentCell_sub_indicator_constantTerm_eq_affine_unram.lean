@@ -4118,4 +4118,3 @@ theorem solution
     simp only [ProductMomentFunctional.plainValue, ProductMomentFunctional.pointValue, hA, hB]
     exact (ArcsineMomentAlgebra.affine_combination_eq (R : ℂ) Λ κ₀ _ _ _ _ _ _).symm
 
-#print axioms solution

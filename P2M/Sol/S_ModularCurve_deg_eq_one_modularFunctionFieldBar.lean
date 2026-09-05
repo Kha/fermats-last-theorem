@@ -161,4 +161,3 @@ open AlgebraicCurve _root_.ModularCurve _root_.P2MW.S_ModularCurve_deg_eq_one_mo
 theorem solution (M : ℕ) [NeZero M] (w : Place (AlgebraicClosure ℚ) (modularFunctionFieldBar M)) : w.deg = 1 :=
   ModularCurve.deg_eq_one_modularFunctionFieldBar M w
 
-#print axioms solution

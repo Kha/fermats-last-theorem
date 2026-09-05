@@ -73,4 +73,3 @@ theorem solution
   rw [AddSubgroup.closure_eq]
   rfl
 
-#print axioms solution

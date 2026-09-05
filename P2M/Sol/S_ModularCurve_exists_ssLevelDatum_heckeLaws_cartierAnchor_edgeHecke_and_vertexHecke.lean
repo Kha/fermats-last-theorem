@@ -93,4 +93,3 @@ theorem solution
   obtain ⟨n₂, hcol₂, ε₂, hε₂, -⟩ := h2
   exact ⟨X₁, hX₁, n₁, hcol₁, ε₁, hε₁, n₂, hcol₂, ε₂, hε₂⟩
 
-#print axioms solution

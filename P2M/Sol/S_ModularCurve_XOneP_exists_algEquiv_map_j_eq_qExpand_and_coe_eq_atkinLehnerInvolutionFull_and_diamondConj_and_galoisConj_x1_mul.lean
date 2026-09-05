@@ -64,4 +64,3 @@ theorem solution
     ModularCurve.XOneP.algEquiv_diamond_symm_eq_diamond_of_generatorLaw_x1_mul p M hpM L ζ hζ K hK j hj σ hW,
     ModularCurve.XOneP.ringEquiv_algEquiv_symm_eq_algEquiv_diamond_of_generatorLaw_x1_mul p M hpM L ζ hζ K hK j hj σ hW⟩
 
-#print axioms solution

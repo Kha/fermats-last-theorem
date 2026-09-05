@@ -185,4 +185,3 @@ theorem solution
     rw [h, key1]
     simp only [Finset.mul_sum]
 
-#print axioms solution

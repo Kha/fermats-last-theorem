@@ -2385,16 +2385,6 @@ example : ∀ (F : Type) [Field F] [NumberField F],
       φ ((adelicWeyl (𝓞 F) F)⁻¹ * unipotentGL2 x * g)) (adelicAddHaar (𝓞 F) F) :=
   fun F _ _ => AutomorphicForm.weylIntertwiningIntegrand_integrable_of_re_gt_half_impl F
 
-#print axioms AutomorphicForm.weylIntertwiningIntegrand_integrable_of_re_gt_half_impl
-#print axioms AutomorphicForm.WeylIntegrable.integrable_weylIntegrand
-#print axioms AutomorphicForm.WeylIntegrable.distribHaarChar_finIdele
-#print axioms AutomorphicForm.WeylIntegrable.weyl_unipotent_eq
-#print axioms AutomorphicForm.WeylIntegrable.norm_apply_weyl_unipotent_le
-#print axioms AutomorphicForm.WeylIntegrable.normProd_le_relIndex
-#print axioms AutomorphicForm.WeylIntegrable.tsum_relIndex_rpow_lt_top
-#print axioms AutomorphicForm.WeylIntegrable.lintegral_archSlab_archWeight_lt_top
-#print axioms AutomorphicForm.WeylIntegrable.ofReal_rpow_le_domG
-#print axioms NumberField.AdeleRing.distribHaarChar_eq_prod_norm_pow_mult_of_snd_eq_one_impl
 
 p2m_open "MeasureTheory NumberField P2MW.S_AutomorphicForm_weylIntertwiningIntegrand_integrable_of_re_gt_half.NumberField NumberField.AdelicHaar"
 p2m_open "AutomorphicForm P2MW.S_AutomorphicForm_weylIntertwiningIntegrand_integrable_of_re_gt_half.AutomorphicForm"

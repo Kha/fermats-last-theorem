@@ -512,4 +512,3 @@ theorem solution
       rw [hconst] at ha''
       exact hversal _ hγ'' ha''
 
-#print axioms solution

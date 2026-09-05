@@ -2841,4 +2841,3 @@ theorem solution (j₀ : Qbar) :
       C • specialFibre (goodModel j₀) = WeierstrassCurve.ofJ j₀ :=
   ModularCurve.B3.exists_variableChange_specialFibre_goodModel j₀
 
-#print axioms solution

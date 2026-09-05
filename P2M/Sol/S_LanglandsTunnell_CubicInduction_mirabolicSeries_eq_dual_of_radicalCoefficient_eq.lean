@@ -5038,4 +5038,3 @@ theorem solution
     (LanglandsTunnell.CubicInduction.radicalCoefficient_eq_zero_of_forall_mem_converseCongruenceSet3 ψ _hψ S _hψS
       a _ha ω _hω _hωa W _hW _hWω _hWK _hWl _hsum _hsum' _hcont' _hV g hg)
 
-#print axioms solution

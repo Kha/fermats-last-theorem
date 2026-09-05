@@ -156,4 +156,3 @@ theorem solution
     AlgEquiv.ofRingEquiv (f := θ) hθk
   exact ⟨(Mdl.ffAlgEquiv.trans eMC).trans (θk.symm.trans ψ)⟩
 
-#print axioms solution

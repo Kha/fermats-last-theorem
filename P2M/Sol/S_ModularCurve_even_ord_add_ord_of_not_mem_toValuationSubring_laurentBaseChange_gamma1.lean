@@ -389,4 +389,3 @@ theorem solution
   push_cast
   exact ⟨n, by ring⟩
 
-#print axioms solution

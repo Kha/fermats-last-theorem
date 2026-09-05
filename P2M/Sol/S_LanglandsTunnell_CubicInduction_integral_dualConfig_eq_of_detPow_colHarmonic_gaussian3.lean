@@ -240,4 +240,3 @@ theorem solution
             simp only [Complex.I_sq, hI3]
             ring_nf
 
-#print axioms solution

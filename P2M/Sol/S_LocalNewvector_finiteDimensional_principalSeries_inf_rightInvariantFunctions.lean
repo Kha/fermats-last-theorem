@@ -841,7 +841,6 @@ end FLT.PrincipalSeriesGL2Padic
 p2m_reactivate "P2MW.S_LocalNewvector_finiteDimensional_principalSeries_inf_rightInvariantFunctions.LocalGL2"
 p2m_reactivate "P2MW.S_LocalNewvector_finiteDimensional_principalSeries_inf_rightInvariantFunctions.LocalGL2"
 
-#print axioms FLT.PrincipalSeriesGL2Padic.finiteDimensional_principalSeries_inf_rightInvariantFunctions_impl
 
 theorem solution (p : ℕ) [Fact p.Prime]
     (μ₁ μ₂ : ℚ_[p]ˣ →* ℂˣ) (U : Subgroup (GL (Fin 2) ℚ_[p])) (hU : IsOpen (U : Set (GL (Fin 2) ℚ_[p]))) :

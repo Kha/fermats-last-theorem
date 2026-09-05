@@ -47,7 +47,6 @@ end M4aP3B.Rows
 
 end
 
-#print axioms M4aP3B.Rows.archHeight_glArch_centralScalar_mul_impl
 
 theorem solution (F : Type) [Field F] [NumberField F]
     (z : (NumberField.AdeleRing (NumberField.RingOfIntegers F) F)ˣ)

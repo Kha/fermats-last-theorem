@@ -57,4 +57,3 @@ theorem solution
   exact AlgebraicGeometry.RelPicard.isProper_and_geometricallyConnected_baseChange_toBase_of_representsRelSubPic_of_field
     (R p) (toBase p (ΓM M H) hj) 𝔛.εinf D hD ℚ 𝒱
 
-#print axioms solution

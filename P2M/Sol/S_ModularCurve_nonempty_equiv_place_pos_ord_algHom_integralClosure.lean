@@ -456,4 +456,3 @@ theorem solution (N : ℕ) [NeZero N]
               (jBar N : modularFunctionFieldBar N)⟩) = j₀}) :=
   ModularCurve.nonempty_equiv_place_pos_ord_algHom_integralClosure N j₀ hdeg
 
-#print axioms solution

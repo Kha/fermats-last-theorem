@@ -57,4 +57,3 @@ theorem solution (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] :
     ∃ data : ModularCurve.ModularPolynomialData ℓ, ModularCurve.EvalSymm data.Φ :=
   ModularCurve.exists_modularPolynomialData_evalSymm' ℓ
 
-#print axioms solution

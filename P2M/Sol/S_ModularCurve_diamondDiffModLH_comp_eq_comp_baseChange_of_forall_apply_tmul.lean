@@ -382,4 +382,3 @@ theorem solution
     rw [TensorProduct.smul_tmul', smul_eq_mul, mul_one]
   rw [e1, e2, LinearMap.map_smul, LinearMap.map_smul, LinearMap.map_smul, hΦ1, hΦ1, hC]
 
-#print axioms solution

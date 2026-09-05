@@ -153,4 +153,3 @@ theorem solution
         (⇑(CuspForm.diamondLinH k d' G) : UpperHalfPlane → ℂ) :=
   DiaW.main M p hpM H hHp W k d f G hG
 
-#print axioms solution

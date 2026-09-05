@@ -197,4 +197,3 @@ theorem solution
     (s + uP + (m : ℂ) / 2 - 2) hDpos hz
   rw [hI, show (μ + (k : ℂ) / 2 + 1) + (s + uP + (m : ℂ) / 2 - 2) + 1 = s + uP + μ + ((m : ℂ) + (k : ℂ)) / 2 by ring]
 
-#print axioms solution

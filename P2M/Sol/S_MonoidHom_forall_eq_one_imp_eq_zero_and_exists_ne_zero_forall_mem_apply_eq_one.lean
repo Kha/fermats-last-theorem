@@ -36,4 +36,3 @@ theorem solution
     · rw [ofAdd_toAdd]
       exact (CommGroup.mem_subgroupOrderIsoSubgroupMonoidHom_symm_iff (M := L) K g).mp hg χ hχ
 
-#print axioms solution

@@ -88,9 +88,4 @@ open AutomorphicForm
 #check @IsGL2RealKTypeModule
 #check @IsGL2RealKTypeSubmodule
 #check @IsIrreducibleGL2RealKTypeModule
-#print axioms AutomorphicForm.isGL2RealKTypeSubmodule_bot
-#print axioms AutomorphicForm.isGL2RealKTypeSubmodule_top
-#print axioms AutomorphicForm.not_isIrreducibleGL2RealKTypeModule_of_subsingleton
-#print axioms AutomorphicForm.IsGL2RealKTypeModule.refl_comp_lower
-#print axioms AutomorphicForm.IsGL2RealKTypeModule.refl_refl
 end Battery

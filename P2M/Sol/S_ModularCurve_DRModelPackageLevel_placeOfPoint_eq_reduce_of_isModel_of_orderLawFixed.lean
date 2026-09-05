@@ -98,4 +98,3 @@ theorem solution
     PlaceSpecialization.sp_eq_spPlace_of_isModel_of_orderLawFixed R hpN₀ hR hO fm cc hred dataAll hsepΦ
   exact ModularCurve.DRModelPackageLevel.compat_reduceFst_reduceSnd_of_sp_eq_spPlace N₀ p hpN₀ 𝔓 A hA ρ hρ data hKr hα hβ fm cc hfin hinf hred dataAll hsepΦ P hP
 
-#print axioms solution

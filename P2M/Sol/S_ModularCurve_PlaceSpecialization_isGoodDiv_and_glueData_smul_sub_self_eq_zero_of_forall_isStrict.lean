@@ -242,4 +242,3 @@ theorem solution
   have _ := hW
   exact ⟨P.isGoodDiv_inertiaSmul_sub_self σ hσ E hE, P.glueData_inertiaSmul_sub_self σ hσ _ E hE⟩
 
-#print axioms solution

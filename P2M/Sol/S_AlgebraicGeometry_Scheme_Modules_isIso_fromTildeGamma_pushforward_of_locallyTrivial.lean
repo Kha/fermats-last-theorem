@@ -291,4 +291,3 @@ theorem solution
   isIso_fromTildeGamma_pushforward π 𝒱.U0 𝒱.U1 𝒱.isAffineOpen_U0 𝒱.isAffineOpen_U1 𝒱.sup_eq_top
     𝒱.isAffineOpen_inf htriv
 
-#print axioms solution

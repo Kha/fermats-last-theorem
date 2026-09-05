@@ -83,4 +83,3 @@ theorem solution
   subst hPP
   exact ⟨P, hker, hsp, R₀, h₀model, h₀reg, h₀node, h₀O⟩
 
-#print axioms solution

@@ -58,4 +58,3 @@ theorem solution
     rw [hmap]
     exact hlev t _ ((hlev_e t P).1 hP)
 
-#print axioms solution

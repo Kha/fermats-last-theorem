@@ -300,4 +300,3 @@ theorem solution
   have hbij : Function.Bijective φ := bijective_of_bijective_of_surjective_aux φ₁ hbij₁ φ hψs
   exact dock_aux p φ hbij hCI₀
 
-#print axioms solution

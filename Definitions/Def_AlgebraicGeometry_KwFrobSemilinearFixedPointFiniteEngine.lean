@@ -166,22 +166,17 @@ section Audits
 
 /-- info: 'AlgebraicCurve.KwFsfp.kw_fsfp_axiomAnchor' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwFsfp.kw_fsfp_axiomAnchor
 
 /-- info: 'AlgebraicCurve.KwFsfp.kw_fsfp_fixedScalars_finite' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwFsfp.kw_fsfp_fixedScalars_finite
 
 /-- info: 'AlgebraicCurve.KwFsfp.kw_fsfp_smul_inv' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwFsfp.kw_fsfp_smul_inv
 
 /-- info: 'AlgebraicCurve.KwFsfp.kw_fsfp_fixedPoints_finite' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwFsfp.kw_fsfp_fixedPoints_finite
 
 /-- info: 'AlgebraicCurve.KwFsfp.kw_fsfp_fixedPoints_inter_finite_of_mapsTo' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwFsfp.kw_fsfp_fixedPoints_inter_finite_of_mapsTo
 
 end Audits

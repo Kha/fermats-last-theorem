@@ -399,4 +399,3 @@ theorem solution
   rw [map_one, one_mul, MulMemClass.coe_mul, SubmonoidClass.coe_pow]
   exact hfin
 
-#print axioms solution

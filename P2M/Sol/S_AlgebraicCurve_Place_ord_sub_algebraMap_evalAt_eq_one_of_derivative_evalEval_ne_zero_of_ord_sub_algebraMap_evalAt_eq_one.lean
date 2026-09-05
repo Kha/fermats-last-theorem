@@ -165,4 +165,3 @@ theorem solution
   rw [heq, v.ord_mul hhne hzne] at hy1
   omega
 
-#print axioms solution

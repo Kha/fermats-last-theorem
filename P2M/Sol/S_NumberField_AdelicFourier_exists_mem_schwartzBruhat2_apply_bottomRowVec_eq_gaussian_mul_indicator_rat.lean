@@ -222,4 +222,3 @@ theorem solution
     simp only [boxProp] at hP'
     rw [if_neg hP, if_neg hP']
 
-#print axioms solution

@@ -244,4 +244,3 @@ theorem solution (F : ℍ → ℂ) (hper : Function.Periodic (F ∘ UpperHalfPla
         ((UpperHalfPlane.qExpansion 1 F : PowerSeries ℂ) : LaurentSeries ℂ) :=
   ModularCurve.coe_qExpansion_normalizedDerivOfComplex F hper hhol hbdd
 
-#print axioms solution

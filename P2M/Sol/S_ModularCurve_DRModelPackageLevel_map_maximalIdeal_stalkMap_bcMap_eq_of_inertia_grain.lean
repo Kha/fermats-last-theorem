@@ -403,4 +403,3 @@ theorem solution
 
 end Face
 
-#print axioms solution

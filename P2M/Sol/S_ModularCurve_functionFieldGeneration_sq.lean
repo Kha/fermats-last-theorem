@@ -54,4 +54,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_functionFieldGeneration_sq.M
 theorem solution (p : ℕ) [hp : Fact (Nat.Prime p)] : FunctionFieldGeneration (p * p) :=
   ModularCurve.functionFieldGeneration_sq p
 
-#print axioms solution

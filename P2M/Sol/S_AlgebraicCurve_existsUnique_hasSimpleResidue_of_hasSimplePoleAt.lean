@@ -44,4 +44,3 @@ theorem solution
     ∃! a : K, v.HasSimpleResidue ω a :=
   ResEx.main v ω hω
 
-#print axioms solution

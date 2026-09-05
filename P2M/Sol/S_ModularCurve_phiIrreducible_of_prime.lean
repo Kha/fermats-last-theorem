@@ -70,4 +70,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_phiIrreducible_of_prime.Modu
 theorem solution (p : ℕ) [hp : Fact (Nat.Prime p)] (data : ModularPolynomialData p) : PhiIrreducible data :=
   ModularCurve.phiIrreducible_of_prime p data
 
-#print axioms solution

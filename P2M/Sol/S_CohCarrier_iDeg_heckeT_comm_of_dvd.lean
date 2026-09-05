@@ -319,4 +319,3 @@ theorem solution {M M' : ℕ} {H : Subgroup (ZMod M)ˣ} {H' : Subgroup (ZMod M')
     rfl
   rw [hchar]
 
-#print axioms solution

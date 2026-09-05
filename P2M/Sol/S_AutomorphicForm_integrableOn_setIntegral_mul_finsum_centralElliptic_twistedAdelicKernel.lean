@@ -2248,4 +2248,3 @@ theorem solution
   exact integral_congr_ae (Filter.Eventually.of_forall fun z =>
     CentralEllipticAssembly.mul_finsum_mem_eq_add K L D σ hgen ξL hfin φ hφs x z)
 
-#print axioms solution

@@ -336,4 +336,3 @@ theorem solution
   simp only [sub_mul, Finset.sum_sub_distrib, Finset.mul_sum]
   ring
 
-#print axioms solution

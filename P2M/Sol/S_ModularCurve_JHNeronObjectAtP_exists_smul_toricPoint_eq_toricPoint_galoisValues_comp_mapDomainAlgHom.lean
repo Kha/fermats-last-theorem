@@ -403,4 +403,3 @@ theorem solution
 
   exact h1.symm.trans (congrArg (· ≫ pullback.fst O.g Λ.σA) h2)
 
-#print axioms solution

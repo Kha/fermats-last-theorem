@@ -750,4 +750,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_func
 theorem solution (N : ℕ) [NeZero N] : FunctionFieldGeneration N :=
   ModularCurve.functionFieldGeneration N
 
-#print axioms solution

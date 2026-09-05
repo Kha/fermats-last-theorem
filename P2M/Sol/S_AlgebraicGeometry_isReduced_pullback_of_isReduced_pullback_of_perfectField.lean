@@ -24,4 +24,3 @@ theorem solution
       (Spec.map (CommRingCat.ofHom ι))
   exact isReduced_of_isOpenImmersion (pullbackLeftPullbackSndIso f x₀ (Spec.map (CommRingCat.ofHom ι))).inv
 
-#print axioms solution

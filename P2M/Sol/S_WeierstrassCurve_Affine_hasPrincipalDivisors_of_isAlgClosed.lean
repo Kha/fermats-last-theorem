@@ -408,4 +408,3 @@ theorem solution {F : Type*} [Field F] [IsAlgClosed F] (W : WeierstrassCurve.Aff
     [W.IsElliptic] : AlgebraicCurve.HasPrincipalDivisors F W.FunctionField :=
   D5S.hasPrincipalDivisors_impl
 
-#print axioms solution

@@ -799,4 +799,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_Matrix_UnitaryGroup_exists_polynomial_eq_of_continuous_of_rightFinite.M4aP3C P2MW.S_Matrix_UnitaryGroup_exists_polynomial_eq_of_continuous_of_rightFinite.M4aP3C.SU2Finite"
 
-#print axioms solution

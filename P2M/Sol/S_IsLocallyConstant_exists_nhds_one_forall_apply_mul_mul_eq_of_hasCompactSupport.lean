@@ -83,8 +83,6 @@ theorem gate_zero : ∃ V ∈ nhds (1 : G), ∀ u ∈ V, ∀ u' ∈ V, ∀ g : G
 
 end M4aP3B.Rows.UniformLocConst
 
-#print axioms M4aP3B.Rows.UniformLocConst.exists_nhds_one_forall_apply_mul_mul_eq_of_hasCompactSupport_impl
-#print axioms M4aP3B.Rows.UniformLocConst.gate_zero
 
 theorem solution
     {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] {Y : Type*} [Zero Y]

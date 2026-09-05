@@ -149,4 +149,3 @@ theorem solution
     ← Series.comp_assoc _ _ _ (ccA' _) ht'.constantCoeff_ρ, ← FormalODModule.act_pow_add,
     show 0 + t'.n + μ = 0 + (μ + t'.n) from by omega]
 
-#print axioms solution

@@ -256,4 +256,3 @@ theorem solution
     · exact hhom0.2
     · exact hhom1.2
 
-#print axioms solution

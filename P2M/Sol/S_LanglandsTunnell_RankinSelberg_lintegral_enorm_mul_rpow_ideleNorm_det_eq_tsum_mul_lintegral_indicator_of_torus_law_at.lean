@@ -2198,4 +2198,3 @@ theorem solution
   rw [hE p, hlw p, ENNReal.ofReal_mul (mul_nonneg ha (norm_nonneg _)), ENNReal.ofReal_mul ha, ofReal_norm, hzpow]
   ring
 
-#print axioms solution

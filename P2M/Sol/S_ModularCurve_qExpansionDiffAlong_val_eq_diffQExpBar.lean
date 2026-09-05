@@ -59,4 +59,3 @@ theorem solution (N : ℕ) [NeZero N]
     qExpansionDiffAlong (modularFunctionFieldBar N).val ω = diffQExpBar N ω :=
   ModularCurve.qExpansionDiffAlong_val_eq_diffQExpBar N ω
 
-#print axioms solution

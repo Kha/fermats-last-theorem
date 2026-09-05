@@ -47,4 +47,3 @@ theorem solution {X : Scheme.{u}} [CompactSpace ↥X] (M : X.Modules) (hM : Sche
       ∃ m : ∀ l, Γ(M, W l), ∀ l, Scheme.Modules.IsFrameOn (m l) (W l) :=
   FrameCoverT.main M hM
 
-#print axioms solution

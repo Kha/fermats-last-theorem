@@ -197,4 +197,3 @@ theorem solution (p M : ℕ) [Fact p.Prime] [NeZero M] (H : Subgroup (ZMod M)ˣ)
     (fun u => by rw [(ModularCurve.diamondAutHBar_mul_and_diamondAutHBar_one (M / p) (infSubgroup p M H hpM)).2]; rfl)
     θ hθα c (hθβ c hc) d x
 
-#print axioms solution

@@ -1978,5 +1978,3 @@ theorem solution
   TwistedUnipotentTerm.exists_forall_integrableOn_and_setIntegral_finsum_sub_indicator_eq_mul_log_add_of_eq_indicator
     F μ hμ1 ν Ω hΩ S μf T hT g h₀ Θ h Ψ hΨ hΨs hΨc hloc θ₀ hθ₀
 
-#print axioms TwistedUnipotentTerm.exists_forall_zetaIntegral_mul_tprod_eq_mul_prod_localZeta
-#print axioms solution

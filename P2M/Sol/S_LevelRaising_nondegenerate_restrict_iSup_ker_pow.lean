@@ -73,4 +73,3 @@ theorem solution
         (∀ x ∈ ⨆ n : ℕ, LinearMap.ker (g ^ n), B x y = 0) → y = 0) :=
   LevelRaisingAux.PrimaryOrthogonal.nondegenerate_restrict_iSup_ker_pow B hBl hBr g hadj
 
-#print axioms solution

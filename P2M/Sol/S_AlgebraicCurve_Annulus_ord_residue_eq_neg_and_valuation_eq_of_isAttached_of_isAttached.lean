@@ -141,4 +141,3 @@ theorem solution
   rw [hn, zpow_zero, mul_one] at k1
   exact k1
 
-#print axioms solution

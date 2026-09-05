@@ -225,4 +225,3 @@ theorem solution (M : ℕ) [NeZero M] (m : ℕ) (hm : 1 ≤ m)
       LaurentSeries ℂ) = X * T ^ (m + 1)
     rw [hneg, PowerSeries.coe_neg, ← hF, hF', neg_neg]
 
-#print axioms solution

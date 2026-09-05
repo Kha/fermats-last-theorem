@@ -128,4 +128,3 @@ theorem solution
                 Qd.eval ((Ideal.absNorm p.asIdeal : ℂ) ^ (-s))) := by rw [h]
       _ = _ := by ring
 
-#print axioms solution

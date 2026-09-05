@@ -479,37 +479,8 @@ set_option pp.universes true in
 #check @AdicCompletion.transportOf
 set_option pp.universes true in
 #check @AdicCompletion.transportOf_eq_of_fixed
-#print axioms AdicCompletion.liesOver_of_isPrime_of_map_le
-#print axioms AdicCompletion.isMaximal_of_isPrime_of_liesOver
-#print axioms AdicCompletion.isMaximal_and_map_le_iff
-#print axioms AdicCompletion.exists_smul_eq_of_liesOver
-#print axioms AdicCompletion.map_toAlgEquiv_le_of_smul_le
-#print axioms AdicCompletion.transportOf
-#print axioms AdicCompletion.evalₐ_transportOf
-#print axioms AdicCompletion.transportOf_of
-#print axioms AdicCompletion.transportOf_eq_of_fixed
-#print axioms AdicCompletion.map_algebraMap_le_smul
-#print axioms AdicCompletion.semilocalComponent_selfSmul
 
 set_option pp.universes true in
 #check @AdicCompletion.invariantsCompletionEquiv
 set_option pp.universes true in
 #check @AdicCompletion.invariantsCompletionHom
-#print axioms AdicCompletion.isNoetherianRing_of_finite_algebra
-#print axioms AdicCompletion.isArtinianRing_quotient_map
-#print axioms AdicCompletion.mem_index_self
-#print axioms AdicCompletion.smul_mem_index
-#print axioms AdicCompletion.completionBaseChangeHom_eq_tensor
-#print axioms AdicCompletion.completionBaseChangeHom_injective
-#print axioms AdicCompletion.invariantsCompletionHom
-#print axioms AdicCompletion.evalₐ_invariantsCompletionHom
-#print axioms AdicCompletion.stabAut_invariantsCompletionHom
-#print axioms AdicCompletion.eq_of_component_eq_of_smul_eq
-#print axioms AdicCompletion.transportOf_one
-#print axioms AdicCompletion.evalₐ_component_selfSmul
-#print axioms AdicCompletion.evalₐ_component
-#print axioms AdicCompletion.invariantsCompletionHom_injective
-#print axioms AdicCompletion.exists_invariantsCompletionHom_eq
-#print axioms AdicCompletion.invariantsCompletionEquiv
-#print axioms AdicCompletion.invariantsCompletionRingEquiv
-#print axioms AdicCompletion.mem_fixedPoints_iff

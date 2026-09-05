@@ -172,4 +172,3 @@ theorem solution
   haveI := hM
   exact isReduced_of_injective (CartierDual.mapAlgHom q) hinj
 
-#print axioms solution

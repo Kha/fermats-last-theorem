@@ -1066,4 +1066,3 @@ theorem solution
       geomAut (AlgebraicClosure ℚ) (modularFunctionFieldFull (N * q)) (atkinLehnerInvolutionFull N q) from rfl,
     arithmeticGalois_smul_geomAut, hbfix i σ hσ]
 
-#print axioms solution

@@ -554,82 +554,62 @@ section Audits
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_axiomAnchor' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_axiomAnchor
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_z1_map_eq' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_z1_map_eq
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_z1' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_z1
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_z_derivG' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_z_derivG
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_z2' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_z2
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_z3_natDegree_le' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_z3_natDegree_le
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_z3_coeff_zero' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_z3_coeff_zero
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_tau_coe' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_tau_coe
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_vext_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_vext_of_lt
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_phiP_X' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_phiP_X
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_phi_apply' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_phi_apply
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_Phi_apply' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_Phi_apply
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_t4_natCast_pow' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_t4_natCast_pow
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_t1_Phi_G' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_t1_Phi_G
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_t2_Phi_dG' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_t2_Phi_dG
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_t3_repr_Phi' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_t3_repr_Phi
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_D_eq' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_D_eq
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_fstar_pow_char' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_fstar_pow_char
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_repr_top' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_repr_top
 
 /-- info: 'AlgebraicCurve.KwCfx.kw_cfx_C_dlog_fixed' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCfx.kw_cfx_C_dlog_fixed
 
 end Audits

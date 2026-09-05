@@ -428,10 +428,4 @@ theorem solution
   exact ⟨hc0.trans h0', hc1.trans h1'⟩
 
 section Battery
-#print axioms solution
-#print axioms M4aHerbrandArchnumSol.regroupUnits
-#print axioms M4aHerbrandArchnumSol.fst_genuineAct
-#print axioms M4aHerbrandArchnumSol.piVInf_actInf
-#print axioms M4aHerbrandArchnumSol.regroup_Phi
-#print axioms M4aHerbrandArchnumSol.tate_card_conj
 end Battery

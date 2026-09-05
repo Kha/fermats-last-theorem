@@ -161,4 +161,3 @@ theorem solution
       simp only [coe_castMF]
   exact GenFloor.split h1 K₀ F hF hspan
 
-#print axioms solution

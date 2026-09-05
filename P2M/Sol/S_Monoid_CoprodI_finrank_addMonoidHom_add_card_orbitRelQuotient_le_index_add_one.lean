@@ -860,4 +860,3 @@ theorem solution {G : Fin 2 → Type*} [∀ i, Group (G i)]
       ≤ H.index + 1 :=
   GroupTheory.OrbifoldBound.main H K hK
 
-#print axioms solution

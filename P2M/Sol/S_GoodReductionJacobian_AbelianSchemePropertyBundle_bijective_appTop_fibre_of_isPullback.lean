@@ -32,4 +32,3 @@ theorem solution
     GeometricallyIntegral.isIntegral_of_subsingleton (pullback.snd fk _)
   exact AlgebraicGeometry.bijective_algebraMap_appTop_of_isProper_of_isIntegral (AlgebraicClosure k) (pullback.snd fk _)
 
-#print axioms solution

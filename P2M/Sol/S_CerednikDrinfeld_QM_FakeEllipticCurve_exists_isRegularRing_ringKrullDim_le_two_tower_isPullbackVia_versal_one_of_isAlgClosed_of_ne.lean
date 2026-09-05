@@ -209,4 +209,3 @@ theorem solution
       rw [Category.assoc, hbase', ← Category.assoc, ← Category.assoc, IsIso.hom_inv_id, Category.id_comp]
     exact huniq φ' hφ'res hφ'O h' hh' hbase''
 
-#print axioms solution

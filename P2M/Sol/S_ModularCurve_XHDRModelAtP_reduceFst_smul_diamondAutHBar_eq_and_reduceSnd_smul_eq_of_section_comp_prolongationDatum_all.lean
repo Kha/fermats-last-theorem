@@ -176,4 +176,3 @@ theorem solution
       (diamondActionModL (ResidueField ↥A) (M / p) (infSubgroup p M H hpM)
         (CuspForm.gammaLift (M / p) (ZMod.unitsMap (Nat.div_dvd_of_dvd hpM) d))) • v) e0)))
 
-#print axioms solution

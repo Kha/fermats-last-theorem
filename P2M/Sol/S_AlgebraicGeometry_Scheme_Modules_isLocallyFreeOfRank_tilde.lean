@@ -115,6 +115,5 @@ theorem _root_.P2MW.S_AlgebraicGeometry_Scheme_Modules_isLocallyFreeOfRank_tilde
     tilde.pullbackSpecIso φ P ≪≫
     tildeIsoFreeOfFinrankEq ((ModuleCat.extendScalars φ.hom).obj P) hn
 
-#print axioms solution
 
 end AlgebraicGeometry

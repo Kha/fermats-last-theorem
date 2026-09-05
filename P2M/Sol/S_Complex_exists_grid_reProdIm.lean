@@ -206,4 +206,3 @@ theorem solution {a₁ a₂ b₁ b₂ δ : ℝ} (ha : a₁ ≤ a₂) (hb : b₁ 
       · change dist (⟨X (fx l), Y (fy l)⟩ : ℂ) ⟨X (fx (l + 1)), Y (fy (l + 1))⟩ ≤ δ
         rw [← hx]; exact hstepY hy
 
-#print axioms solution

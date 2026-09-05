@@ -2279,4 +2279,3 @@ theorem solution (N : ℕ) [NeZero N]
     Nat.card {v : Place (AlgebraicClosure ℚ) (modularFunctionFieldBar N) // v.ord (jBar N - 1728) = 1} = nuTwo N :=
   ModularCurve.natCard_ord_jBar_sub_1728_eq_one_eq_nuTwo N h2 hcount
 
-#print axioms solution

@@ -1132,4 +1132,3 @@ theorem solution
       (((e (s₀ : Place k (modularFunctionFieldC k N) × Place k (modularFunctionFieldC k N)).1 : ℕ) : ℤ) • crossingCoord s₀))
     hdual hB.symm).trans S4
 
-#print axioms solution

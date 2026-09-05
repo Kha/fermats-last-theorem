@@ -48,4 +48,3 @@ theorem solution
         rw [map_smul, Algebra.smul_def, IsScalarTower.algebraMap_apply ℤ_[p] ℚ_[p] (PadicAlgCl p)]
         exact mul_mem (IntermediateField.algebraMap_mem _ _) hx
 
-#print axioms solution

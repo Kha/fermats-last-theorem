@@ -99,4 +99,3 @@ theorem solution
   exact AlgebraicCurve.CurveModel.ramificationIndexAlong_pointEquivPlace_eq_one_of_formallyUnramified
     𝔛.Meta Meta₀ αH hαint πM hπM₂ hgen y W hyW hFUW
 
-#print axioms solution

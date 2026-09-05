@@ -79,4 +79,3 @@ theorem solution
   rw [hηt, h3] at h1
   exact h1
 
-#print axioms solution

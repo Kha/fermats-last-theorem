@@ -90,4 +90,3 @@ theorem solution {k : Type} [Field k] (ρbar : ResidualGaloisRep k)
       Matrix (Fin 2) (Fin 2) k) = LinearMap.toMatrix b b (ρbar.ρ σ)
   exact congrArg Units.val (liftAuxU_spec ρbar L₀ b hsurj hker_le σ)
 
-#print axioms solution

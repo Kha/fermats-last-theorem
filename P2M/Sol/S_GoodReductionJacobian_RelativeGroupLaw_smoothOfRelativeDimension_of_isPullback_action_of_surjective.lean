@@ -37,4 +37,3 @@ theorem solution
   obtain ⟨hQ, hle⟩ := AlgebraicGeometry.SmoothOfRelativeDimension.of_comp_of_surjective_of_field fQ q g h
   exact ⟨hq', hQ, hle⟩
 
-#print axioms solution

@@ -600,4 +600,3 @@ theorem solution
   obtain ⟨hM, hE⟩ := main hb hgm hσ hg hKm hK H hH s hs1 hs2
   exact ⟨hI, hM, hE⟩
 
-#print axioms solution

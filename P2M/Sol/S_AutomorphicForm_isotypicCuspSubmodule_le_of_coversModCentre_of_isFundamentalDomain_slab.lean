@@ -44,4 +44,3 @@ theorem solution
   exact ⟨⟨⟨hA', hcusp⟩, hsm⟩, hφ'.continuous, hφ'.level_invariant, hφ'.hecke_eigen,
     hφ'.central_eigen⟩
 
-#print axioms solution

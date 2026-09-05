@@ -254,4 +254,3 @@ theorem solution
   obtain ⟨φ₁, Wf₁, mS, hinv, hoff, -, hsh, hne⟩ := main S Finset.Subset.rfl
   exact ⟨φ₁, Wf₁, mS, hinv, hoff, hsh, hne⟩
 
-#print axioms solution

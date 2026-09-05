@@ -68,4 +68,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
   simp only [zero_add, pow_zero, div_one] at h1 h2
   exact ⟨h1, h2⟩
 
-#print axioms solution

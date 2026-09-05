@@ -145,24 +145,19 @@ end Gates
 /-- info: 'instIsAdicCompleteMaximalIdealOfCompactSpace' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms instIsAdicCompleteMaximalIdealOfCompactSpace
 
 /-- info: 'instHenselianLocalRingOfCompactSpaceOfIsNoetherianRing' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms instHenselianLocalRingOfCompactSpaceOfIsNoetherianRing
 
 /-- info: 'NumberField.instHenselianLocalRingAdicCompletionIntegers' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms NumberField.instHenselianLocalRingAdicCompletionIntegers
 
 /-- info: 'exists_nthRoot_of_isUnit_natCast' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms exists_nthRoot_of_isUnit_natCast
 
 /-- info: 'exists_nthRoot_of_sub_one_mem_maximalIdeal' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms exists_nthRoot_of_sub_one_mem_maximalIdeal

@@ -409,4 +409,3 @@ theorem solution
   simp_rw [hf'J]
   exact sandwich μK J hJc e he φ hφc f hfc hfK lam heig' hrep' g
 
-#print axioms solution

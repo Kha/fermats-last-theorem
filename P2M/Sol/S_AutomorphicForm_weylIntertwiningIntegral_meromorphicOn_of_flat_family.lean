@@ -2500,4 +2500,3 @@ theorem solution
           refine Finset.sum_congr rfl (fun j _ => ?_)
           rw [integral_const_mul, hMeq j s hs]
 
-#print axioms solution

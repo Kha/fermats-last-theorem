@@ -174,4 +174,3 @@ theorem solution
       fun s s' e => hφ (congrArg Subtype.val e)
     exact IsRegularLocalRing.of_ringEquiv (RingEquiv.ofBijective _ ⟨hinj, hsurj⟩).symm
 
-#print axioms solution

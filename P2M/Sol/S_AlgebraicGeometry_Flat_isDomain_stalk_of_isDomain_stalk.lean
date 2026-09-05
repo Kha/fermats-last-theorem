@@ -22,4 +22,3 @@ theorem solution
     (RingHom.faithfullyFlat_algebraMap_iff.mpr inferInstance).injective
   exact hinj.isDomain _
 
-#print axioms solution

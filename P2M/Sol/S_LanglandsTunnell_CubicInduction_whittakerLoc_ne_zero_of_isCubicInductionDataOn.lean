@@ -66,4 +66,3 @@ theorem solution
   simp only [hW] at hexp
   exact hexp.unique hasSum_zero
 
-#print axioms solution

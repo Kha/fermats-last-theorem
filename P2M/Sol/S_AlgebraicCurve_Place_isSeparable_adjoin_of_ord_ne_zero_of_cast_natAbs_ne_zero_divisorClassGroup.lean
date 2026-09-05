@@ -15,4 +15,3 @@ theorem solution
     Algebra.IsSeparable (IntermediateField.adjoin K ({t} : Set F)) F :=
   AlgebraicCurve.Place.isSeparable_adjoin_of_ord_ne_zero_of_cast_natAbs_ne_zero x v ht htame
 
-#print axioms solution

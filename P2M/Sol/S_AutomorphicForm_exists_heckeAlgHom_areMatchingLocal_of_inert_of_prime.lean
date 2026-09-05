@@ -424,14 +424,6 @@ private theorem S_basis_of_le {a b : ℤ} (hab : a ≤ b) :
 
 end Values
 
-#print axioms heckeIndicator_central_mul
-#print axioms sum_satCoeff_range
-#print axioms satCoeff_middle
-#print axioms sat_apply
-#print axioms sat_succ_eq
-#print axioms S_localRepInf_pow
-#print axioms S_basis
-#print axioms S_basis_of_le
 
 end SatakeValues
 
@@ -894,18 +886,7 @@ private theorem relIndex_conjStabilizer_ne_zero (hfix : unitOrbitalCount (v.adic
   rw [mem_fixedVertexSet] at hx ⊢
   rw [← Vertex.act_mul, hcomm, Vertex.act_mul, hx]
 
-#print axioms exists_act_stdVertex_eq
-#print axioms mem_conjStabilizer_iff_act_eq
-#print axioms relIndex_conjStabilizer_ne_zero_of_stable
-#print axioms relIndex_conjStabilizer_ne_zero
 
-#print axioms measure_coe_eq_relIndex_mul
-#print axioms conjStabilizer_le_unitCentralizer
-#print axioms mem_unitCentralizer_iff
-#print axioms mem_conjStabilizer_iff
-#print axioms isCompact_conjStabilizer
-#print axioms measure_unitCentralizer_eq
-#print axioms measure_unitCentralizer_subgroupOf_eq
 
 end Local
 

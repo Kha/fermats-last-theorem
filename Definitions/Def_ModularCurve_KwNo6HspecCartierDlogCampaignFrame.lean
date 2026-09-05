@@ -172,50 +172,38 @@ section Audits
 
 /-- info: 'AlgebraicCurve.kw_hwcd_axiomAnchor' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_axiomAnchor
 
 /-- info: 'AlgebraicCurve.Place.kw_hwcd_mem_of_ord_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.Place.kw_hwcd_mem_of_ord_nonneg
 
 /-- info: 'AlgebraicCurve.Place.kw_hwcd_ord_nonneg_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.Place.kw_hwcd_ord_nonneg_of_mem
 
 /-- info: 'AlgebraicCurve.Place.kw_hwcd_ord_algebraMap' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.Place.kw_hwcd_ord_algebraMap
 
 /-- info: 'AlgebraicCurve.kw_hwcd_dlog_zero' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_dlog_zero
 
 /-- info: 'AlgebraicCurve.kw_hwcd_dlog_one' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_dlog_one
 
 /-- info: 'AlgebraicCurve.kw_hwcd_dlog_mul' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_dlog_mul
 
 /-- info: 'AlgebraicCurve.kw_hwcd_dlog_pow' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_dlog_pow
 
 /-- info: 'AlgebraicCurve.kw_hwcd_mem_regularDifferentials_iff' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_mem_regularDifferentials_iff
 
 /-- info: 'AlgebraicCurve.kw_hwcd_dlog_pow_char' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_dlog_pow_char
 
 /-- info: 'AlgebraicCurve.kw_hwcd_regularDifferentials' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_regularDifferentials
 
 /-- info: 'AlgebraicCurve.kw_hwcd_differentialCoeff_add' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.kw_hwcd_differentialCoeff_add
 
 end Audits

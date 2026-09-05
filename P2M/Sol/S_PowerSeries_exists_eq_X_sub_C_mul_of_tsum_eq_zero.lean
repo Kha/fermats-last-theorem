@@ -94,4 +94,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
     rw [hHc]
     exact (le_div_iff₀ (pow_pos hρ (j + 1))).mp (l1_norm_tsum_shifted_le F hρ hF a ha (j + 1))
 
-#print axioms solution

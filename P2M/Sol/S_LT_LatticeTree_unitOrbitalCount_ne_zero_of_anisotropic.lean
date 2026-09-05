@@ -2064,4 +2064,3 @@ theorem solution
   rw [h.2]
   omega
 
-#print axioms solution

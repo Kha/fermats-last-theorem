@@ -23,4 +23,3 @@ theorem solution {X : Scheme.{u}} {L : X.Modules}
   | succ n ih =>
     simpa only [Scheme.Modules.tensorPow_succ] using ih.tensor hL
 
-#print axioms solution

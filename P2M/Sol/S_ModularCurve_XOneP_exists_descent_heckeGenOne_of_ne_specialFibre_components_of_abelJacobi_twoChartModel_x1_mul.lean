@@ -428,4 +428,3 @@ theorem solution
     rw [hvv]
     exact hu₂ _ v
 
-#print axioms solution

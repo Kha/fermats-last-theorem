@@ -69,4 +69,3 @@ theorem solution
   rw [Finset.sum_pair hne.symm, if_pos rfl, if_pos hw', hDw] at hpair
   omega
 
-#print axioms solution

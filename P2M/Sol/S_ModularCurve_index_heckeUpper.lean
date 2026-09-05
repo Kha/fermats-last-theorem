@@ -438,4 +438,3 @@ theorem solution {N ℓ : ℕ} (hℓ : ℓ.Prime) (hℓN : ¬ ℓ ∣ N) :
   rw [Subgroup.index_eq_card, ← Nat.card_congr (ModularCurve.IndexHeckeUpper.heckeCosetEquiv hℓ hℓN)]
   simp [Nat.card_eq_fintype_card]
 
-#print axioms solution

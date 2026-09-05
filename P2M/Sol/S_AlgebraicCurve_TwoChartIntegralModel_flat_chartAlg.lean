@@ -18,4 +18,3 @@ theorem solution
   rw [Module.Flat.flat_iff_torsion_eq_bot_of_isBezout, ← Submodule.isTorsionFree_iff_torsion_eq_bot]
   infer_instance
 
-#print axioms solution

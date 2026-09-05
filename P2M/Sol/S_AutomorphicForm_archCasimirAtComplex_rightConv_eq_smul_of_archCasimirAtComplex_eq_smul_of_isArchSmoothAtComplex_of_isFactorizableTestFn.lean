@@ -330,4 +330,3 @@ theorem solution
   · rw [hΩc, hΩ, EigconvC.rightConv_smul_left]
   · rw [hΩbc, hΩb, EigconvC.rightConv_smul_left]
 
-#print axioms solution

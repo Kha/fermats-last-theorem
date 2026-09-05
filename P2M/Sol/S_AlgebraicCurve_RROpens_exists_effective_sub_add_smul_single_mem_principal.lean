@@ -45,4 +45,3 @@ theorem solution {K : Type u} {F : Type v} [Field K] [Field F] [Algebra K F]
   · rw [add_sub_cancel_left]
     exact ⟨f, hf0, hDf⟩
 
-#print axioms solution

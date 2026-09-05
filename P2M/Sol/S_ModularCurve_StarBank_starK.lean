@@ -207,4 +207,3 @@ theorem solution (K : Type*) [Field K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ
                   (PowerSeries.map (Int.castRingHom K) etaProd) ^ 24) ^ M = 1 :=
   ModularCurve.StarBank.starK K hHasse
 
-#print axioms solution

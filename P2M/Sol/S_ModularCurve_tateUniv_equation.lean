@@ -1111,4 +1111,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_tateUniv_equation.ModularCur
 theorem solution : tateUnivCurve.toAffine.Equation tateUnivX tateUnivY :=
   ModularCurve.tateUniv_equation
 
-#print axioms solution

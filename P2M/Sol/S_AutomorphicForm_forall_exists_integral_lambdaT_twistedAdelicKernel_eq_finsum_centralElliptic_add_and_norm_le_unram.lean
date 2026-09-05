@@ -574,4 +574,3 @@ theorem solution
     rw [h0, hL]
     simp
 
-#print axioms solution

@@ -50,4 +50,3 @@ theorem solution
     rw [ValuationSubring.tameCharacter_eq_of_div_mem_of_div_mem A 1 ((u : ↥A) : AlgebraicClosure ℚ) one_ne_zero hu0 hu hu' hσ]
     exact TK_tameCharacter_at_one A σ
 
-#print axioms solution

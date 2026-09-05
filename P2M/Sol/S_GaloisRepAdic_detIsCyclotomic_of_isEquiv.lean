@@ -187,4 +187,3 @@ theorem solution
     (h : ρ₁.DetIsCyclotomic p) : ρ₂.DetIsCyclotomic p :=
   GaloisRepAdic.LCSol.detIsCyclotomic_of_isEquiv e h
 
-#print axioms solution

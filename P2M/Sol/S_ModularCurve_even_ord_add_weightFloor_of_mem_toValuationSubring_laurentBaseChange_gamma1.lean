@@ -355,4 +355,3 @@ theorem solution
     refine ⟨n + t, ?_⟩
     omega
 
-#print axioms solution

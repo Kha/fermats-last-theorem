@@ -217,4 +217,3 @@ theorem solution {K : Type*} [Field K] {M : ℕ}
         = HahnSeries.C γ :=
   ModularCurve.StarBank.onePoint hM hc hstar
 
-#print axioms solution

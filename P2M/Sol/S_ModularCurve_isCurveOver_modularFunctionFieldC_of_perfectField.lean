@@ -387,4 +387,3 @@ theorem solution (K : Type*) [Field K] [PerfectField K]
 example : ∀ (K : Type*) [Field K] [PerfectField K] (N : ℕ) [NeZero N],
     IsCurveOver K (modularFunctionFieldC K N) := @solution
 
-#print axioms solution

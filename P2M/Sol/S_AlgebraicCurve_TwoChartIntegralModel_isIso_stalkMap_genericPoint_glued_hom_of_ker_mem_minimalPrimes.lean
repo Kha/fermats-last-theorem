@@ -250,4 +250,3 @@ theorem solution
   exact AlgebraicGeometry.Scheme.Hom.isIso_stalkMap_genericPoint_of_isReduced_of_forall_specializes_of_forall_exists_div
     c hred hmaxpt (g ''ᵁ ⊤) hV hgen
 
-#print axioms solution

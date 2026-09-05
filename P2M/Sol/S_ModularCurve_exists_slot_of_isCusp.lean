@@ -1187,4 +1187,3 @@ theorem solution (K : Type*) [Field K] [Algebra ℚ K] (N : ℕ) [NeZero N] (ζ 
         ∀ x, w.ord x * ((a * Nat.gcd a (N / a) : ℕ) : ℤ) = (ι x).order :=
   ModularCurve.exists_slot_of_isCusp K N ζ hζ w hc
 
-#print axioms solution

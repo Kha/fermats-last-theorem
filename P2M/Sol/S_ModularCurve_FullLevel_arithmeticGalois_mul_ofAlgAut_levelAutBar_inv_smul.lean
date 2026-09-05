@@ -933,4 +933,3 @@ theorem solution
         arithmeticGalois (xHFunctionField (q ^ 2 * M') (levelH q M')) σ := by
   rw [← LawA.conj_levelAutBar hqM' σ ζ hγ, LawA.ofAlgAut_conj, inv_mul_cancel_right]
 
-#print axioms solution

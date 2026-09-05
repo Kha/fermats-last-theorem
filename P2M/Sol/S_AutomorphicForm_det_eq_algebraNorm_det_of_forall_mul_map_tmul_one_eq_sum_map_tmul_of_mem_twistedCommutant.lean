@@ -223,4 +223,3 @@ theorem solution
       K L h2 σ hgen δ₀ c u hN hns
   exact Ws31.DetLeftMult.det_eq_norm_det (A := v.adicCompletion K) h2 σ hgen δ₀ hz hns ι b hb hbspan X P hP
 
-#print axioms solution

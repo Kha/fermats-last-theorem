@@ -238,4 +238,3 @@ theorem solution
   intro ℓ y x
   exact (hε₂ ℓ y (reindex P x)).trans (congrArg (ε₂ y) (hkey ℓ x))
 
-#print axioms solution

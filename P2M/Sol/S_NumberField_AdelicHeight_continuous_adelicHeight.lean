@@ -143,4 +143,3 @@ theorem solution
     (F : Type) [Field F] [NumberField F] : Continuous (adelicHeight F) :=
   P6B.RFCSol.continuous_adelicHeight_impl F
 
-#print axioms solution

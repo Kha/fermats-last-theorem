@@ -342,25 +342,21 @@ end HomogeneousIdealQuotientGrading
 info: 'HomogeneousIdealQuotientGrading.pieceHom' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.pieceHom
 
 /--
 info: 'HomogeneousIdealQuotientGrading.pieceHom_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.pieceHom_coe
 
 /--
 info: 'HomogeneousIdealQuotientGrading.pieceHom_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.pieceHom_surjective
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gradedMonoidOfImages' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gradedMonoidOfImages
 
 /--
 info: 'HomogeneousIdealQuotientGrading.coeAddMonoidHom_map_pieceHom' depends on axioms: [propext,
@@ -368,31 +364,26 @@ info: 'HomogeneousIdealQuotientGrading.coeAddMonoidHom_map_pieceHom' depends on 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.coeAddMonoidHom_map_pieceHom
 
 /--
 info: 'HomogeneousIdealQuotientGrading.preDecompose' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.preDecompose
 
 /--
 info: 'HomogeneousIdealQuotientGrading.preDecompose_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.preDecompose_apply
 
 /--
 info: 'HomogeneousIdealQuotientGrading.preDecompose_apply_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.preDecompose_apply_apply
 
 /--
 info: 'HomogeneousIdealQuotientGrading.preDecompose_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.preDecompose_of_mem
 
 /--
 info: 'HomogeneousIdealQuotientGrading.coeAddMonoidHom_preDecompose' depends on axioms: [propext,
@@ -400,79 +391,66 @@ info: 'HomogeneousIdealQuotientGrading.coeAddMonoidHom_preDecompose' depends on 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.coeAddMonoidHom_preDecompose
 
 /--
 info: 'HomogeneousIdealQuotientGrading.preDecompose_eq_zero_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.preDecompose_eq_zero_of_mem
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotDecompose' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotDecompose
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotDecompose_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotDecompose_mk
 
 /--
 info: 'HomogeneousIdealQuotientGrading.decompositionOfImages' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.decompositionOfImages
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gradedRingOfImages' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gradedRingOfImages
 
 /--
 info: 'HomogeneousIdealQuotientGrading.decompose_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.decompose_mk
 
 /--
 info: 'HomogeneousIdealQuotientGrading.decompose_mk_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.decompose_mk_apply
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGrading' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGrading
 
 /--
 info: 'HomogeneousIdealQuotientGrading.mem_quotGrading_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.mem_quotGrading_iff
 
 /--
 info: 'HomogeneousIdealQuotientGrading.mk_mem_quotGrading' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.mk_mem_quotGrading
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingPieceHom' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingPieceHom
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingPieceHom_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingPieceHom_coe
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingPieceHom_surjective' depends on axioms: [propext,
@@ -480,19 +458,16 @@ info: 'HomogeneousIdealQuotientGrading.quotGradingPieceHom_surjective' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingPieceHom_surjective
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingGradedMonoid' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingGradedMonoid
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingGradedRing' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingGradedRing
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingGradedRingOfHomogeneous' depends on axioms: [propext,
@@ -500,7 +475,6 @@ info: 'HomogeneousIdealQuotientGrading.quotGradingGradedRingOfHomogeneous' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingGradedRingOfHomogeneous
 
 /--
 info: 'HomogeneousIdealQuotientGrading.decompose_quotGrading_mk_apply' depends on axioms: [propext,
@@ -508,13 +482,11 @@ info: 'HomogeneousIdealQuotientGrading.decompose_quotGrading_mk_apply' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.decompose_quotGrading_mk_apply
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingSubmodule' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingSubmodule
 
 /--
 info: 'HomogeneousIdealQuotientGrading.mem_quotGradingSubmodule_iff' depends on axioms: [propext,
@@ -522,13 +494,11 @@ info: 'HomogeneousIdealQuotientGrading.mem_quotGradingSubmodule_iff' depends on 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.mem_quotGradingSubmodule_iff
 
 /--
 info: 'HomogeneousIdealQuotientGrading.mk_mem_quotGradingSubmodule' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.mk_mem_quotGradingSubmodule
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedMonoid' depends on axioms: [propext,
@@ -536,7 +506,6 @@ info: 'HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedMonoid' depends
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedMonoid
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedAlgebra' depends on axioms: [propext,
@@ -544,7 +513,6 @@ info: 'HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedAlgebra' depend
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedAlgebra
 
 /--
 info: 'HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedAlgebraOfHomogeneous' depends on axioms: [propext,
@@ -552,7 +520,6 @@ info: 'HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedAlgebraOfHomoge
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.quotGradingSubmoduleGradedAlgebraOfHomogeneous
 
 /--
 info: 'HomogeneousIdealQuotientGrading.decompose_quotGradingSubmodule_mk_apply' depends on axioms: [propext,
@@ -560,70 +527,58 @@ info: 'HomogeneousIdealQuotientGrading.decompose_quotGradingSubmodule_mk_apply' 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.decompose_quotGradingSubmodule_mk_apply
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gateIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gateIdeal
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gateIdeal_isHomogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gateIdeal_isHomogeneous
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gateHomogeneousIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gateHomogeneousIdeal
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gate_gateIdeal_ne_bot' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gate_gateIdeal_ne_bot
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gate_mk_X0X1_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gate_mk_X0X1_eq_zero
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gate_X0_not_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gate_X0_not_mem
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gate_mk_X0_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gate_mk_X0_ne_zero
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gate_mk_X0_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gate_mk_X0_mem
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gateGradedRing' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gateGradedRing
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gateGradedAlgebra' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gateGradedAlgebra
 
 /--
 info: 'HomogeneousIdealQuotientGrading.gate_decompose_mk_X0' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms HomogeneousIdealQuotientGrading.gate_decompose_mk_X0

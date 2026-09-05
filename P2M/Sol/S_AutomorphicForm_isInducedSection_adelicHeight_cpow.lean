@@ -452,4 +452,3 @@ theorem solution
     fun hα s => P6B.JE2aFlat.isInducedSection_flatOne _ hα
       (fun x => NumberField.AdeleRing.distribHaarChar_eq_prod_norm_pow_mult_mul_finprod_norm F x) s⟩
 
-#print axioms solution

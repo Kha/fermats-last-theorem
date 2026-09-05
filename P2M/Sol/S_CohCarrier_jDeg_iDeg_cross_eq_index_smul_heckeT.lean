@@ -248,4 +248,3 @@ theorem solution {M M' d d' : ℕ} {H : Subgroup (ZMod M)ˣ} {H' : Subgroup (ZMo
     coresAdd_comp_inclusion_impl _ _ (range_iotaDeg_le_GammaHUpper_impl q h hqd)]
   rfl
 
-#print axioms solution

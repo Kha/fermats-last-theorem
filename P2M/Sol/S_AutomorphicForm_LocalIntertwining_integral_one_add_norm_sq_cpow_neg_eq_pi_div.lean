@@ -99,4 +99,3 @@ theorem solution
     ∫ z : ℂ, ((1 + ‖z‖ ^ 2 : ℝ) : ℂ) ^ (-(2 * s + 1)) = (Real.pi : ℂ) / (2 * s) :=
   M4aP2DGK.ArchComplex.integral_value hs
 
-#print axioms solution

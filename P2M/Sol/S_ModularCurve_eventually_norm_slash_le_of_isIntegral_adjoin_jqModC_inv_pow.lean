@@ -731,4 +731,3 @@ theorem solution
       exact le_of_mul_le_mul_right this hhalf
     exact (pow_le_pow_iff_left₀ hPnn (by positivity) h2M).mp hpow
 
-#print axioms solution

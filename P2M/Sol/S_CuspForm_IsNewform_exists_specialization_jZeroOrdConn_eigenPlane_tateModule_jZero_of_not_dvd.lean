@@ -151,4 +151,3 @@ theorem solution
     rw [hsp] at h1
     exact (AddEquiv.map_eq_zero_iff _).mp h1
 
-#print axioms solution

@@ -286,4 +286,3 @@ theorem solution {N : ℕ} [NeZero N]
   ModularCurve.Period.SolExistsPrimitive.exists_equivariantPrimitive f
     (ModularCurve.Period.SolExistsPrimitive.Gamma_le_Gamma0 N)
 
-#print axioms solution

@@ -373,4 +373,3 @@ theorem solution
     exact ⟨𝒜, fun n => by rw [h𝒜 n]; simp⟩
   · exact ANR25.main Λ hΛ s ω hω hpf χ lift hlift sub hsub G hG R hR hGsupp hGper x₀ n₀ θ₀ hN
 
-#print axioms solution

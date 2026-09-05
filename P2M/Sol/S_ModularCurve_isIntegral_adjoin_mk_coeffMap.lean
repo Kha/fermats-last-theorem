@@ -1000,4 +1000,3 @@ theorem solution {O : Type*} [CommRing O] {K : Type*}
       (⟨coeffMap res z, hmem⟩ : modularFunctionFieldC K N) :=
   ModularCurve.isIntegral_adjoin_mk_coeffMap res N Q z hzrep hmem
 
-#print axioms solution

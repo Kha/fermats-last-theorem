@@ -216,7 +216,6 @@ theorem integrable_of_mem_schwartzBruhat_impl [MeasurableSpace 𝔸] [BorelSpace
   · intro c f _ hf
     exact hf.smul c
 
-#print axioms integrable_of_mem_schwartzBruhat_impl
 
 example : ∀ [MeasurableSpace 𝔸] [BorelSpace 𝔸] (μ : Measure 𝔸) [μ.IsAddHaarMeasure] {f : 𝔸 → ℂ}
     (_ : f ∈ schwartzBruhat F), Integrable f μ :=

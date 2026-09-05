@@ -26,4 +26,3 @@ theorem solution {G : Type*} [Group G] (K : Subgroup G) [K.FiniteIndex]
   rw [hreindex, mul_comm ((φ g) ^ _) _, ← mul_assoc, inv_mul_cancel, one_mul,
     Subgroup.index_eq_card, Nat.card_eq_fintype_card, ← Finset.card_univ]
 
-#print axioms solution

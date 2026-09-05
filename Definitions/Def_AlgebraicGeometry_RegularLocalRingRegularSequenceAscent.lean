@@ -287,13 +287,11 @@ end RegularLocalRingQuotientAscent
 info: 'RegularLocalRingQuotientAscent.mem_nonZeroDivisors_of_isSMulRegular' depends on axioms: [propext, Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.mem_nonZeroDivisors_of_isSMulRegular
 
 /--
 info: 'RegularLocalRingQuotientAscent.ofList_ne_top_of_isRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.ofList_ne_top_of_isRegular
 
 /--
 info: 'RegularLocalRingQuotientAscent.mem_maximalIdeal_of_isRegular' depends on axioms: [propext,
@@ -301,13 +299,11 @@ info: 'RegularLocalRingQuotientAscent.mem_maximalIdeal_of_isRegular' depends on 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.mem_maximalIdeal_of_isRegular
 
 /--
 info: 'RegularLocalRingQuotientAscent.spanFinrank_ofList_le_length' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.spanFinrank_ofList_le_length
 
 /--
 info: 'RegularLocalRingQuotientAscent.spanFinrank_maximalIdeal_le_quotient_ofList_add_length' depends on axioms: [propext,
@@ -315,7 +311,6 @@ info: 'RegularLocalRingQuotientAscent.spanFinrank_maximalIdeal_le_quotient_ofLis
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.spanFinrank_maximalIdeal_le_quotient_ofList_add_length
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_ofList' depends on axioms: [propext,
@@ -323,7 +318,6 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_q
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_ofList
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_isWeaklyRegular' depends on axioms: [propext,
@@ -331,7 +325,6 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_q
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_isWeaklyRegular
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_regularSequence' depends on axioms: [propext,
@@ -339,7 +332,6 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_q
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_regularSequence
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_surjective_ker_ofList' depends on axioms: [propext,
@@ -347,7 +339,6 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_surjective_ker_ofLis
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_surjective_ker_ofList
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_ofList_iterated' depends on axioms: [propext,
@@ -355,7 +346,6 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_q
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_ofList_iterated
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_ofList_via_iterated_ascent' depends on axioms: [propext,
@@ -363,7 +353,6 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_q
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient_ofList_via_iterated_ascent
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_padicInt_isRegular_singleton_p' depends on axioms: [propext,
@@ -371,7 +360,6 @@ info: 'RegularLocalRingQuotientAscent.gate_padicInt_isRegular_singleton_p' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_padicInt_isRegular_singleton_p
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_padicInt_quotient_ofList_isRegularLocalRing' depends on axioms: [propext,
@@ -379,7 +367,6 @@ info: 'RegularLocalRingQuotientAscent.gate_padicInt_quotient_ofList_isRegularLoc
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_padicInt_quotient_ofList_isRegularLocalRing
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt_via_sequence' depends on axioms: [propext,
@@ -387,7 +374,6 @@ info: 'RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt_via_seque
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt_via_sequence
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt_via_iterated_ascent' depends on axioms: [propext,
@@ -395,7 +381,6 @@ info: 'RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt_via_itera
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt_via_iterated_ascent
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_padicInt_dimension_jump_length' depends on axioms: [propext,
@@ -403,7 +388,6 @@ info: 'RegularLocalRingQuotientAscent.gate_padicInt_dimension_jump_length' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_padicInt_dimension_jump_length
 
 /--
 info: 'RegularLocalRingQuotientAscent.not_isRegular_dualNumber_singleton_eps' depends on axioms: [propext,
@@ -411,7 +395,6 @@ info: 'RegularLocalRingQuotientAscent.not_isRegular_dualNumber_singleton_eps' de
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.not_isRegular_dualNumber_singleton_eps
 
 /--
 info: 'RegularLocalRingQuotientAscent.not_forall_isRegularLocalRing_of_quotient_ofList_dropping_isRegular' depends on axioms: [propext,
@@ -419,6 +402,5 @@ info: 'RegularLocalRingQuotientAscent.not_forall_isRegularLocalRing_of_quotient_
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.not_forall_isRegularLocalRing_of_quotient_ofList_dropping_isRegular
 
 end

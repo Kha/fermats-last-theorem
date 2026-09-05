@@ -195,4 +195,3 @@ theorem solution
         (by linarith) (by linarith) ξ (fun _ => hcontr) N P Ψ)
   · exact Or.inl fun N P tys Ψ => by_contra fun h => hex ⟨N, P, tys, Ψ, h⟩
 
-#print axioms solution

@@ -102,4 +102,3 @@ theorem solution
       exact congrArg Subtype.val (pt_iso _ sbar _ _
         (CerednikDrinfeld.QM.FakeEllipticCurve.iso_of_isLevelIsogeny_of_iso_of_isOrder (ℓ.1 : ℕ) ℓ.1.prop.pos hΛ.isOrder (tw.repT ℓ R) u _ d hRu (tw.restrict_one ℓ R) hisog))
 
-#print axioms solution

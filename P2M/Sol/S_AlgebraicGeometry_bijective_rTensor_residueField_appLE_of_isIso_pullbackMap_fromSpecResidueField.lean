@@ -135,4 +135,3 @@ theorem solution
   rw [hfun]
   exact hTbij
 
-#print axioms solution

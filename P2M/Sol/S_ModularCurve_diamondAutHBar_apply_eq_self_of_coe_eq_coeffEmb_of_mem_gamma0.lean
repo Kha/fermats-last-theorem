@@ -165,4 +165,3 @@ theorem solution (N : ℕ) [NeZero N] (H : Subgroup (ZMod N)ˣ) (c : (ZMod N)ˣ)
     diamondAutHBar N H c x = x :=
   DiaMulBody.fix N H c x y hy hx
 
-#print axioms solution

@@ -391,4 +391,3 @@ theorem solution
     rw [Place.mem_center_iff, Place.mem_center_iff, ← e1, ← e2, e3]
   exact Subtype.ext (place_eq_of_center_eq v.1 w.1 (hRv v.1 v.2) (hRv w.1 w.2) hcen)
 
-#print axioms solution

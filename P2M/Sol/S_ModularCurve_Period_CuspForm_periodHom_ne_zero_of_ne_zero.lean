@@ -148,4 +148,3 @@ theorem solution {N : ℕ} [NeZero N]
     hFprim.periodHom ≠ 0 := fun hzero =>
   hf (eq_zero_of_periodHom_eq_zero_of_hasDerivAt hFprim hFf hzero)
 
-#print axioms solution

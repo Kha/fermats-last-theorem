@@ -78,4 +78,3 @@ theorem solution
     · rw [hz]; exact zero_mem _
     · exact mem_of_ord_nonneg w hz hnn
 
-#print axioms solution

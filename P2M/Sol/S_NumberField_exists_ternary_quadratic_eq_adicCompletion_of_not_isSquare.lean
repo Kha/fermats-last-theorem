@@ -686,4 +686,3 @@ theorem solution
   exact QuadraticNormSet.exists_ternary_eq_of_normIndexTwo two_ne_zero
     (QuadraticNormSet.normIndexTwo_adicCompletion K v) hD hlam hr
 
-#print axioms solution

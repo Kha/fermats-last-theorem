@@ -159,6 +159,5 @@ theorem solution
 
   exact hQ.symm
 
-#print axioms solution
 
 end

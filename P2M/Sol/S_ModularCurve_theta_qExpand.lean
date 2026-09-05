@@ -182,4 +182,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_theta_qExpand.ModularCurve _
 theorem solution {R : Type*} [CommRing R] (N : ℕ) [NeZero N] (f : LaurentSeries R) : (HahnSeries.single (1 : ℤ) (1 : R) : LaurentSeries R) * LaurentSeries.derivative R (qExpand R N f) = N • (qExpand R N ((HahnSeries.single (1 : ℤ) (1 : R) : LaurentSeries R) * LaurentSeries.derivative R f)) :=
   ModularCurve.theta_qExpand N f
 
-#print axioms solution

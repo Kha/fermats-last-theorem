@@ -361,4 +361,3 @@ theorem solution
       (continuous_psi.comp (by fun_prop))).measurable.mul (hmT.comp measurable_snd)).aestronglyMeasurable
   · rw [norm_mul, norm_mul, norm_psi, mul_one]
 
-#print axioms solution

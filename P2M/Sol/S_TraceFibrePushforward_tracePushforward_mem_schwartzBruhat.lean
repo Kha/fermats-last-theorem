@@ -875,4 +875,3 @@ theorem solution
       HasCompactSupport (tracePushforward K L F) ∧ Continuous (tracePushforward K L F) :=
   AdelicTracePushforward.tracePushforward_mem_schwartzBruhat K L s g hg hgc h hh hhc F hF
 
-#print axioms solution

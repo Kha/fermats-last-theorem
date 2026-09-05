@@ -117,4 +117,3 @@ theorem solution (N : ℕ) [NeZero N] (n : ℕ) (hn : 2 ≤ n) (hne : Even n) :
     rw [hg]; ring
   linarith [hQ, key]
 
-#print axioms solution

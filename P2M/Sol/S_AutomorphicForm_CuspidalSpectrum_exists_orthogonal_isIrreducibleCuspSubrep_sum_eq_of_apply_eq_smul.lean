@@ -270,4 +270,3 @@ theorem solution
   exact ⟨n, M, vs, fun i => ⟨(hM i).2.1, (hM i).2.2.1, (hM i).2.2.2⟩, hMo,
     fun i => ⟨(hvs i).1, (hmemE₀ _).mp (hvs i).2⟩, hsum⟩
 
-#print axioms solution

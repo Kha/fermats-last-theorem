@@ -365,4 +365,3 @@ theorem solution
   rw [← hΦ ξ]
   exact DFunLike.congr_fun (AddMonoidHom.eq_of_eqOn_dense hA67 hagree) ξ
 
-#print axioms solution

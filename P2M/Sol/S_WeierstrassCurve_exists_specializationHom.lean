@@ -432,7 +432,6 @@ theorem solution (W : WeierstrassCurve (Polynomial ℚ)) (t₀ : ℚ) (hΔ : W.�
     fun n hn P hP h0 => CAlpha.sp_torsion_injective t₀ W hn P hP h0,
     fun x y h => CAlpha.sp_some_algebraMap t₀ W x y h⟩
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_WeierstrassCurve_exists_specializationHom.CAlpha"

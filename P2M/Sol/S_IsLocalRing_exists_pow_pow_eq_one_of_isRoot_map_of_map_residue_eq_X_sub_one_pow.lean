@@ -162,4 +162,3 @@ theorem solution
   have hc : ((ζT : T) : S) = ζ := rfl
   simpa [η, hc] using h
 
-#print axioms solution

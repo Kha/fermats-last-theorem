@@ -541,4 +541,3 @@ theorem solution
   rw [← hres_a] at hfinal
   exact hfinal
 
-#print axioms solution

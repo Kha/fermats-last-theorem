@@ -188,4 +188,3 @@ theorem solution {n : ℕ} {f : UpperHalfPlane → ℂ} {F : UpperHalfPlane → 
     HeckeEis.IsEichlerIntegral n (f ∣[((n : ℤ) + 2)] δ) (fun τ => HeckeEis.binaryFormRepSL ℂ n δ⁻¹ (F (δ • τ))) :=
   HeckeEis.SolMain.slash hF δ
 
-#print axioms solution

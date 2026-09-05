@@ -282,4 +282,3 @@ theorem solution
           HahnSeries.ofPowerSeries ℤ L (x.map (algebraMap ↥A₀ L))) :=
   ⟨L₂ A₀, W₂ A₀ hdvr, fun _ => Iff.rfl, fun f => mem_W₂_iff A₀ hdvr f, fun f => mem_nonunits_iff A₀ hdvr f⟩
 
-#print axioms solution

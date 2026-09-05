@@ -404,4 +404,3 @@ theorem solution {N : ℕ}
               * HahnSeries.ofPowerSeries ℤ ℤ ModularCurve.etaProd ^ 24) ^ N :=
   ModularCurve.StarBank.hassePolyDescent F hT h0
 
-#print axioms solution

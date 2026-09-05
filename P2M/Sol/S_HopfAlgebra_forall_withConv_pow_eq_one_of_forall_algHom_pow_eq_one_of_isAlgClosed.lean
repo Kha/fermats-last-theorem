@@ -148,4 +148,3 @@ theorem solution
   apply hι
   exact congrArg (fun g : H →ₐ[R] L ⊗[R] H => g x) key
 
-#print axioms solution

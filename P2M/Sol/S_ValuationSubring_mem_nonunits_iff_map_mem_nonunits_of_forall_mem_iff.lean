@@ -47,4 +47,3 @@ theorem solution
   rw [mem_nonunits_iff_mem_and W f, mem_nonunits_iff_mem_and W' (ι f), h f, h f⁻¹, map_inv₀,
     map_eq_zero_iff ι ι.injective]
 
-#print axioms solution

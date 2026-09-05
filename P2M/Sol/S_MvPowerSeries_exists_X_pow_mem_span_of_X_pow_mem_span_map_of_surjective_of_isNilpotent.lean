@@ -73,4 +73,3 @@ theorem solution
     ← Ideal.Quotient.eq_zero_iff_mem, map_pow, map_add, (Ideal.Quotient.eq_zero_iff_mem).mpr hA,
     zero_add, ← map_pow, hEM, map_zero]
 
-#print axioms solution

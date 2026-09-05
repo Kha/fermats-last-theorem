@@ -149,4 +149,3 @@ theorem solution
   rw [hpres] at hRH
   nlinarith [hRH, hGMp, hGM, hidx, hcusp, hScard]
 
-#print axioms solution

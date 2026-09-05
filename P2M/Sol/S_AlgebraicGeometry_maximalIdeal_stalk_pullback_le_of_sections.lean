@@ -124,4 +124,3 @@ theorem solution
   rw [← hw']
   exact transport ι _ _ _ _ U'.ι V'.ι h₁ h₂ _ (AlgebraicGeometry.maximalIdeal_stalk_pullback_le_of_sections_of_isAffine pU pV y' hyU' z' hzV' _ rfl)
 
-#print axioms solution

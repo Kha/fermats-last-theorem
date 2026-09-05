@@ -190,4 +190,3 @@ theorem solution
       · show g' ≫ m ≫ q j = (pt S' s (φ j) (hφ j)).1
         rw [← Category.assoc, hg', hwq j]
 
-#print axioms solution

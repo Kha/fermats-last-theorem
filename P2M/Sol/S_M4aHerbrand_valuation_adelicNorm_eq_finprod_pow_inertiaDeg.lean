@@ -261,4 +261,3 @@ theorem solution
         Valued.v ((x.2 : FiniteAdeleRing (𝓞 L) L) w) ^ Ideal.inertiaDeg' v.asIdeal w.asIdeal :=
   M4aHerbrandA2Sol.a2_impl K L B x v
 
-#print axioms solution

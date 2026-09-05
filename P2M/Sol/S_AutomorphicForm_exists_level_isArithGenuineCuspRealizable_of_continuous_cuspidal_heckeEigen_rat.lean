@@ -3561,4 +3561,3 @@ theorem solution
   exact PrincipalToLevelOne.exists_level_isArithGenuineCuspRealizable_of_isIsotypicCuspFormAt_principalLevel
     c u d₁ d₂ T hc hd₁ hd a b S₁ _ N' hN' hN'S φ₁ hφ₁ hφ₁0
 
-#print axioms solution

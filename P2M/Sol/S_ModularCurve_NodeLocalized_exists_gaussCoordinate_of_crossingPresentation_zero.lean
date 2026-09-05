@@ -654,5 +654,4 @@ theorem solution
     conj3_leg hker ϖ eK ε hqϖ heK1 (jWidth (0 : k)) G' H' w hw hGH hGF hHF hHL⟩
 
 section Probes
-#print axioms solution
 end Probes

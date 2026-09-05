@@ -61,4 +61,3 @@ theorem solution (M : ℕ) [NeZero M] :
     Module.Finite ℤ (ModularCurve.Period.parabolicHoms ℤ (CongruenceSubgroup.Gamma0 M) ℤ) :=
   LevelRaisingAux.FiniteSupply.moduleFinite_parabolicHoms M
 
-#print axioms solution

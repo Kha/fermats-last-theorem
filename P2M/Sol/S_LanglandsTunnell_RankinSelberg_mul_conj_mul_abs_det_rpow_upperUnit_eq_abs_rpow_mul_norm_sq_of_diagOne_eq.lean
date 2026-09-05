@@ -47,4 +47,3 @@ theorem solution
     Real.rpow_neg ha₂.le]
   field_simp
 
-#print axioms solution

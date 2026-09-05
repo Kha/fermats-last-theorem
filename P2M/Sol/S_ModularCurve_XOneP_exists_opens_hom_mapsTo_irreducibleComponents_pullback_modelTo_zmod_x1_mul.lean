@@ -623,4 +623,3 @@ theorem solution
 
   exact FinFibreInvol.core A (↥K) j (ZMod p) ϖ hsurj hker s 𝔭₀ 𝔭₁ hmin hne hs₀ hZ2 hreg hdim
 
-#print axioms solution

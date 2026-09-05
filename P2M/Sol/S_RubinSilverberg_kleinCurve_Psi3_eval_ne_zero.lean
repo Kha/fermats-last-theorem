@@ -792,4 +792,3 @@ open RubinSilverberg in
 theorem solution {K : Type*} [Field K] [CharZero K] (ζ : K) (hζ : IsPrimitiveRoot ζ 5) (x : RatFunc K) : ((kleinCurve (RatFunc.X : RatFunc K)).Ψ₃).eval x ≠ 0 :=
   GenIrr3.kleinCurve_Psi3_eval_ne_zero ζ hζ x
 
-#print axioms solution

@@ -89,4 +89,3 @@ theorem solution
     K L 1 2 one_pos one_lt_two S hSs hS ξL NK SK SL hNS Ψ tysL V
     (hV.trans (inf_le_inf_of_window K L cL uL d₁L d₂L TL hdL hcovL 1 2 one_pos S hSs hS ξL _ SL Ψ tysL)) f
 
-#print axioms solution

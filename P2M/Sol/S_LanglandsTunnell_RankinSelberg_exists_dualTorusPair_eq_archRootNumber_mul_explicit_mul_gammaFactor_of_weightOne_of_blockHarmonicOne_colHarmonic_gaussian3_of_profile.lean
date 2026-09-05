@@ -364,4 +364,3 @@ theorem solution
     rw [h2π]
     linear_combination ((Real.pi : ℂ) * Complex.I) * hE
 
-#print axioms solution

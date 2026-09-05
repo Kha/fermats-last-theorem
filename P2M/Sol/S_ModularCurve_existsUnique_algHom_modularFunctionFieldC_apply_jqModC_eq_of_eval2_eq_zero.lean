@@ -257,4 +257,3 @@ theorem solution
         ψ ⟨ModularCurve.jqNModC K N, ModularCurve.jqNModC_mem K N⟩ = y :=
   ModularCurve.UnivPropC.main K N data hirr c y hc hy
 
-#print axioms solution

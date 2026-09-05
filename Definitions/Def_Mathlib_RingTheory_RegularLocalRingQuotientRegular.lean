@@ -241,7 +241,6 @@ info: 'RegularQuotientEngine.isLocalRing_quotient_span_singleton' depends on axi
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.isLocalRing_quotient_span_singleton
 
 /--
 info: 'RegularQuotientEngine.exists_span_eq_maximalIdeal_ncard_le' depends on axioms: [propext,
@@ -249,7 +248,6 @@ info: 'RegularQuotientEngine.exists_span_eq_maximalIdeal_ncard_le' depends on ax
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.exists_span_eq_maximalIdeal_ncard_le
 
 /--
 info: 'RegularQuotientEngine.spanFinrank_map_quotientMk_le_sub_one' depends on axioms: [propext,
@@ -257,7 +255,6 @@ info: 'RegularQuotientEngine.spanFinrank_map_quotientMk_le_sub_one' depends on a
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.spanFinrank_map_quotientMk_le_sub_one
 
 /--
 info: 'RegularQuotientEngine.spanFinrank_maximalIdeal_quotient_le_sub_one' depends on axioms: [propext,
@@ -265,7 +262,6 @@ info: 'RegularQuotientEngine.spanFinrank_maximalIdeal_quotient_le_sub_one' depen
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.spanFinrank_maximalIdeal_quotient_le_sub_one
 
 /--
 info: 'RegularQuotientEngine.ringKrullDim_lt_top_of_isNoetherianRing_of_isLocalRing' depends on axioms: [propext,
@@ -273,7 +269,6 @@ info: 'RegularQuotientEngine.ringKrullDim_lt_top_of_isNoetherianRing_of_isLocalR
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.ringKrullDim_lt_top_of_isNoetherianRing_of_isLocalRing
 
 /--
 info: 'RegularQuotientEngine.exists_ringKrullDim_eq_natCast' depends on axioms: [propext,
@@ -281,7 +276,6 @@ info: 'RegularQuotientEngine.exists_ringKrullDim_eq_natCast' depends on axioms: 
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.exists_ringKrullDim_eq_natCast
 
 /--
 info: 'RegularQuotientEngine.isRegularLocalRing_quotient_and_ringKrullDim_succ_eq' depends on axioms: [propext,
@@ -289,7 +283,6 @@ info: 'RegularQuotientEngine.isRegularLocalRing_quotient_and_ringKrullDim_succ_e
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.isRegularLocalRing_quotient_and_ringKrullDim_succ_eq
 
 /--
 info: 'RegularQuotientEngine.isRegularLocalRing_quotient_span_singleton' depends on axioms: [propext,
@@ -297,7 +290,6 @@ info: 'RegularQuotientEngine.isRegularLocalRing_quotient_span_singleton' depends
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.isRegularLocalRing_quotient_span_singleton
 
 /--
 info: 'RegularQuotientEngine.ringKrullDim_quotient_span_singleton_succ_eq' depends on axioms: [propext,
@@ -305,7 +297,6 @@ info: 'RegularQuotientEngine.ringKrullDim_quotient_span_singleton_succ_eq' depen
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.ringKrullDim_quotient_span_singleton_succ_eq
 
 /--
 info: 'RegularQuotientEngine.spanFinrank_maximalIdeal_quotient_succ_eq' depends on axioms: [propext,
@@ -313,4 +304,3 @@ info: 'RegularQuotientEngine.spanFinrank_maximalIdeal_quotient_succ_eq' depends 
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms RegularQuotientEngine.spanFinrank_maximalIdeal_quotient_succ_eq

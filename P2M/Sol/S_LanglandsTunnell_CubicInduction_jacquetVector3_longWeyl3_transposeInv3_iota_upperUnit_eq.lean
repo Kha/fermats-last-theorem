@@ -119,4 +119,3 @@ theorem solution
   refine integral_congr_ae (Filter.Eventually.of_forall fun e => ?_)
   simp only [jacquetIntegrand3, godementInner3, hR, hN]
 
-#print axioms solution

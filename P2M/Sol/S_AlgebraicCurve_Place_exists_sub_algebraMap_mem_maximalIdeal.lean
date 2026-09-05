@@ -16,4 +16,3 @@ theorem solution {K F : Type*} [Field K] [Field F]
     IsScalarTower.algebraMap_apply K u.toValuationSubring u.ResidueField,
     IsLocalRing.ResidueField.algebraMap_eq]
 
-#print axioms solution

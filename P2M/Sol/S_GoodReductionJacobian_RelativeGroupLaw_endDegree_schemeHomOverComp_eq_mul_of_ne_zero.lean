@@ -81,4 +81,3 @@ theorem solution
     (AlgebraicGeometry.isFinite_and_flat_and_surjective_of_locallyQuasiFinite_of_smoothOfRelativeDimension f f g γ.1 γ.2).2.1
   exact GoodReductionJacobian.RelativeGroupLaw.endDegree_schemeHomOverComp_of_isFinite_of_flat K f L β γ
 
-#print axioms solution

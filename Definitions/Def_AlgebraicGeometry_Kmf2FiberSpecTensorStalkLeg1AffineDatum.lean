@@ -92,7 +92,6 @@ theorem kmf2_fiberStalkLeg1_affineDatum
 info: 'kmf2_fiberSpecTensorIso' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiberSpecTensorIso
 
 /--
 info: 'kmf2_fiberSpecTensorIso_hom_includeRight' depends on axioms: [propext,
@@ -100,7 +99,6 @@ info: 'kmf2_fiberSpecTensorIso_hom_includeRight' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiberSpecTensorIso_hom_includeRight
 
 /--
 info: 'kmf2_fiberSpecTensorIso_point_comap' depends on axioms: [propext,
@@ -108,7 +106,6 @@ info: 'kmf2_fiberSpecTensorIso_point_comap' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiberSpecTensorIso_point_comap
 
 /--
 info: 'kmf2_fiberStalk_localizationAtPrime' depends on axioms: [propext,
@@ -116,7 +113,6 @@ info: 'kmf2_fiberStalk_localizationAtPrime' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiberStalk_localizationAtPrime
 
 /--
 info: 'kmf2_fiberStalkLeg1_affineDatum' depends on axioms: [propext,
@@ -124,6 +120,5 @@ info: 'kmf2_fiberStalkLeg1_affineDatum' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiberStalkLeg1_affineDatum
 
 end

@@ -540,4 +540,3 @@ M.obj B ψ hB → OmegaObj (K := ℚ_[p]) (p : ℤ_[p]) B)
     hη.2.1 L₁ L ψ₁ ψL hL₁ hL e₁ he₁ψ t₁ ht₁, hηt₁, ← M.map_comp hB hL₁ hL e₁ (algebraMap B L₁) rfl he₁ψ x]
   exact mapIrrel hB hL _ _ he₁ _ rfl x
 
-#print axioms solution

@@ -1254,4 +1254,3 @@ theorem solution (q : ℕ)
     rw [Subgroup.mem_comap, Ihara.mem_congFilt_iff, pow_one]; exact hy
   exact Ihara.comap_congFilt_one_commute q π hsurj hcen hq hq5 x hxK y hyK
 
-#print axioms solution

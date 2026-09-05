@@ -999,4 +999,3 @@ theorem solution
     have hj' : c j = 1 := (Finset.mem_filter.mp hj).2
     simp only [w, if_neg (fun h : c j = 0 => by rw [hj'] at h; exact absurd h (by decide))]
 
-#print axioms solution

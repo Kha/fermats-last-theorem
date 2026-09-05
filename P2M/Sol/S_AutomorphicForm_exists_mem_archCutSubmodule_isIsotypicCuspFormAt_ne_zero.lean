@@ -2453,4 +2453,3 @@ theorem solution
       u' ∈ archCutSubmodule K tys ∧ u' ≠ 0 := by
   exact IsotypicArchCut.Main.main K cK uK d₁K d₂K TK hcK hd₁K hdK hcovK SK ξ N' hN' π u hu hu0
 
-#print axioms solution

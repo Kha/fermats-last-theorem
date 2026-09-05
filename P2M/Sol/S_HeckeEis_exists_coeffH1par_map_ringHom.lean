@@ -255,4 +255,3 @@ theorem solution {R R' : Type*} [CommRing R] [CommRing R'] (φ : R →+* R') (n 
   intro g
   rw [HeckeEis.CoeffMapAux.pushPar_apply_coe, HeckeEis.CoeffMapAux.pushCoeff_ringHom_eq_map]
 
-#print axioms solution

@@ -738,4 +738,3 @@ theorem solution
     · rw [Set.mem_singleton_iff] at hx; subst hx
       exact mem_map_sup_of_mk_eq χ.toRingHom _ _ _ vv hvm s' hsV
 
-#print axioms solution

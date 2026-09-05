@@ -149,4 +149,3 @@ theorem solution
   rw [← mem_nonunits_iff, ← mem_maximalIdeal, ← hker (⟨W.evalAt f, hmem⟩ : A), hred] at hnu
   exact hc0 hnu
 
-#print axioms solution

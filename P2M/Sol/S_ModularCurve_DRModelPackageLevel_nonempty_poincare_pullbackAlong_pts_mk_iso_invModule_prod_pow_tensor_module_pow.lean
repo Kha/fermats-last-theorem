@@ -285,4 +285,3 @@ theorem solution
   rw [hpts]
   exact main s
 
-#print axioms solution

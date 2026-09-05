@@ -282,4 +282,3 @@ theorem solution
   exact ⟨fun χ hχ => RealQuasiCharacter.exists_eq_realCharFun_of_continuous χ hχ,
       fun χ hχ => ComplexQuasiCharacter.exists_eq_complexCharFun_of_continuous χ hχ⟩
 
-#print axioms solution

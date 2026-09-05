@@ -1687,4 +1687,3 @@ theorem solution
       NumberField.TateGlobal.StripNonvanishingChar.apply_ne_zero_of_one_le_re K χ _hχ _hχc _hχu _hχ1 T L _hL
         _hLE hTS hS hST w hw
 
-#print axioms solution

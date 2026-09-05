@@ -365,4 +365,3 @@ theorem solution
     exact (Ideal.mem_bot).mp this
   exact sub_eq_zero.mp hd0
 
-#print axioms solution

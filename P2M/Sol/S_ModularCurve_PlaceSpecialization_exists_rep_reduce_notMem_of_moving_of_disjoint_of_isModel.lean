@@ -496,4 +496,3 @@ theorem solution
   have _ := heng
   exact SupportAvoidance.forall_T_of_tuple N q hq hqN A hA W hW data hKr hα hβ P R hR hRL hO T hTW x
 
-#print axioms solution

@@ -302,4 +302,3 @@ theorem solution {n : ℕ} {g : UpperHalfPlane → ℂ}
       (τ : ℂ) :=
   HeckeEis.BolAux.hasDerivAt_eval_iterate_pderiv hG hj τ
 
-#print axioms solution

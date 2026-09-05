@@ -381,4 +381,3 @@ theorem solution
       rw [hval, ModularCurve.coe_jqNFull]
     rw [← hfloor, hemb _ ⟨hgf, hgi, hcusp⟩ hgf hgi, val_apply]
 
-#print axioms solution

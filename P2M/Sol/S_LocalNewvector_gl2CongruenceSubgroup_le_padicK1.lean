@@ -100,7 +100,6 @@ theorem gl2CongruenceSubgroup_le_padicK0_impl (n : ℕ) :
     gl2CongruenceSubgroup p n ≤ padicK0 p n :=
   (gl2CongruenceSubgroup_le_padicK1_impl p n).trans (congruenceK1_le_congruenceK0 _ _)
 
-#print axioms LocalNewvector.gl2CongruenceSubgroup_le_padicK1_impl
 
 end LocalNewvector
 

@@ -113,4 +113,3 @@ end
 
 /-- info: 'NeronModelInfra.TopFormOrder.addOrd_uniformizer' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms NeronModelInfra.TopFormOrder.addOrd_uniformizer

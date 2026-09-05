@@ -333,4 +333,3 @@ theorem solution
     rw [← hx₁]
     exact AlignSol.isRoot_kernelVariableChangeDeg γ _ _ hroot
 
-#print axioms solution

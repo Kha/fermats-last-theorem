@@ -735,4 +735,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_finr
 theorem solution (F : IntermediateField ℚ (LaurentSeries ℚ)) (hj : jq ∈ F) (p : ℕ) [hp : Fact (Nat.Prime p)] (hjp : jqN p ∈ F) (hF : jqN (p * p) ∉ F) : Module.finrank F (IntermediateField.adjoin F ({jqN (p * p)} : Set (LaurentSeries ℚ))) = p :=
   ModularCurve.finrank_adjoin_jqN_sq_of_not_mem F hj p hjp hF
 
-#print axioms solution

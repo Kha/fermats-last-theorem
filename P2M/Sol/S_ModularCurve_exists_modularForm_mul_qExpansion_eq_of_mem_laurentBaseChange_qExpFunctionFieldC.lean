@@ -163,4 +163,3 @@ theorem solution (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.Fin
         ((qExpansion 1 (g : ℍ → ℂ) : PowerSeries ℂ) : LaurentSeries ℂ) :=
   ModularCurve.RatioFieldOfLevelG.isRatio_of_mem hT hx
 
-#print axioms solution

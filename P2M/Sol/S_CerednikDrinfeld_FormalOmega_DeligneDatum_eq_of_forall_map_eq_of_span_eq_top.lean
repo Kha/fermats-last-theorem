@@ -95,4 +95,3 @@ theorem solution
     exact hloc i
   exact aux (idx r) r (hidx r)
 
-#print axioms solution

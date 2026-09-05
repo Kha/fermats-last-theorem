@@ -266,9 +266,6 @@ end D2Brick7
 
 end
 
-#print axioms D2Brick7.exists_pos_forall_norm_lt_subset
-#print axioms D2Brick7.adelicAddHaar_nhds_zero_inter_adelicBox_pos
-#print axioms D2Brick7.eq_at_zero_of_ae_eq_cond_adelicBox
 #check @D2Brick7.adelicAddHaar_nhds_zero_inter_adelicBox_pos
 #check @D2Brick7.eq_at_zero_of_ae_eq_cond_adelicBox
 
@@ -790,28 +787,6 @@ p2m_reactivate "P2MW.S_AutomorphicForm_hasSum_whittakerCoefficient.D2Bricks"
 end
 p2m_reactivate "P2MW.S_AutomorphicForm_hasSum_whittakerCoefficient.D2Bricks"
 
-#print axioms D2Bricks.instCompactSpaceAQuot
-#print axioms D2Bricks.isClosed_principalSubgroup
-#print axioms D2Bricks.instT2SpaceAQuot
-#print axioms D2Bricks.quotChar_zero
-#print axioms D2Bricks.quotChar_add
-#print axioms D2Bricks.star_quotChar
-#print axioms D2Bricks.quotChar_separatesPoints
-#print axioms D2Bricks.quotCharSubalgebra_closure_eq_top
-#print axioms D2Bricks.span_quotChar_closure_eq_top
-#print axioms D2Bricks.instCountableHeightOneSpectrum
-#print axioms D2Bricks.instSecondCountableFiniteAdeleRing
-#print axioms D2Bricks.instSecondCountableInfinitePlaceCompletion
-#print axioms D2Bricks.instSecondCountableAdeleRing
-#print axioms D2Bricks.instSecondCountableAQuot
-#print axioms D2Bricks.instHasOuterApproxClosedAQuot
-#print axioms D2Bricks.polishSpace_of_compact_t2_secondCountable
-#print axioms D2Bricks.integrable_cond_adelicBox
-#print axioms D2Bricks.integrable_mul_comp_mk_cond
-#print axioms D2Bricks.integral_mul_comp_mk_eq_zero
-#print axioms D2Bricks.setIntegral_preimage_quotientAddGroup_mk_eq_zero
-#print axioms D2Bricks.quotientAddGroup_mk_injOn_adelicBox
-#print axioms D2Bricks.ae_eq_zero_cond_of_forall_integral_eq_zero
 #check @D2Bricks.ae_eq_zero_cond_of_forall_integral_eq_zero
 
 set_option autoImplicit false
@@ -1124,16 +1099,6 @@ p2m_reactivate "P2MW.S_AutomorphicForm_hasSum_whittakerCoefficient.D2Bricks P2MW
 end
 p2m_reactivate "P2MW.S_AutomorphicForm_hasSum_whittakerCoefficient.D2Bricks P2MW.S_AutomorphicForm_hasSum_whittakerCoefficient.D2Proof"
 
-#print axioms D2Proof.setIntegral_adelicBox_addChar_neg_algebraMap_mul
-#print axioms D2Proof.zero_mem_adelicBox
-#print axioms D2Proof.integrable_cond_of_continuous
-#print axioms D2Proof.integral_cond_addChar_algebraMap_sub
-#print axioms D2Proof.hasSum_G
-#print axioms D2Proof.summable_G_shifted
-#print axioms D2Proof.integral_G_mul_addChar
-#print axioms D2Proof.continuous_G
-#print axioms D2Proof.d2_completeness_hole
-#print axioms D2Proof.innerSolution
 #check @D2Proof.d2_completeness_hole
 #check @D2Proof.innerSolution
 
@@ -1153,4 +1118,3 @@ theorem solution
       (φ g) :=
   D2Proof.innerSolution F D U gen ψ hψ φ g hcont hsum
 
-#print axioms solution

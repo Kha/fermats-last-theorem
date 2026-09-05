@@ -271,4 +271,3 @@ theorem solution
     have : φ ∈ V' := h.symm ▸ hφ
     exact this.2
 
-#print axioms solution

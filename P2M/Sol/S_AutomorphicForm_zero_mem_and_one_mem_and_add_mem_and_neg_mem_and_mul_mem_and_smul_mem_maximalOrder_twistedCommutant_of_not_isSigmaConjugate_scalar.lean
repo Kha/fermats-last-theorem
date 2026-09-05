@@ -722,4 +722,3 @@ theorem solution
     exact mul_le_one₀ (pow_le_one₀ (pow_nonneg (norm_nonneg _) _) (pow_le_one₀ (norm_nonneg _) ha1))
       (norm_nonneg _) hx.2
 
-#print axioms solution

@@ -123,4 +123,3 @@ theorem solution (K : Type) [Field K]
           ∀ x, ∀ u ∈ U, ff (x * u) = ff x := by
   exact RightInvariance.exists_compact_open_subgroup_of_isFinTestFactor K ff hff
 
-#print axioms solution

@@ -94,4 +94,3 @@ theorem solution
     g hg d₀ hpool
     (ModularCurve.XHDRModelAtP.exists_twoGluedSmoothCurveDegeneration_of_not_smooth p M H hpM hpM2 hj 𝔛)
 
-#print axioms solution

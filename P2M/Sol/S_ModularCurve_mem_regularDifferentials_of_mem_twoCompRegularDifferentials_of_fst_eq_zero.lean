@@ -221,4 +221,3 @@ theorem solution
   exact AlgebraicCurve.FstSurj.mem_regularDifferentials_of_mem_gluedPolarDifferentials_of_fst_eq_zero
     (ModularCurve.ssNodePairsQExp K Γ p) hω h0
 
-#print axioms solution

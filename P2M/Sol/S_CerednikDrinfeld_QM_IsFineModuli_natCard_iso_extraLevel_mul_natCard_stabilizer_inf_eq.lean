@@ -859,4 +859,3 @@ theorem solution
   show Nat.card T * Nat.card SH = Nat.card {g : G // inS g}
   exact key.symm
 
-#print axioms solution

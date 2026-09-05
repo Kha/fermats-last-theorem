@@ -844,4 +844,3 @@ theorem solution
       R3bStep.o4 Θ S ϖ hπall Wf p hp x₀ o4⟩,
     R3bStep.lev Θ Wf p x₀ T hlevel, R3bStep.sh ϖ hπall Wf p x₀ T' hpT' m hshell⟩
 
-#print axioms solution

@@ -166,4 +166,3 @@ theorem solution
   obtain ⟨hreg, hev⟩ := hr ⟨_, hmem⟩
   exact ⟨hreg, by rw [← hval, ← hev]⟩
 
-#print axioms solution

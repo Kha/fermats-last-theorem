@@ -305,4 +305,3 @@ theorem solution
   have occ₃ := (AutomorphicForm.archOccursInClassOf_hasArchCharacterAtZero_archCasimirAt_iff_twist_rpow_absNorm K c u (max d₁ (d₂ / 2)) d₂ T hdp (formalBaseChange ℚ K Φ) w hw n lam t).mpr occ₂
   exact (htr _).mpr occ₃
 
-#print axioms solution

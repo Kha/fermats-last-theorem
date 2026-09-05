@@ -100,4 +100,3 @@ theorem solution
   · rw [map_sub, map_sub, map_toricX _ N c hc, ← tateToricPoint_fst_eq, map_slotSubst _ N 1 j hj hjN, map_one]
     rfl
 
-#print axioms solution

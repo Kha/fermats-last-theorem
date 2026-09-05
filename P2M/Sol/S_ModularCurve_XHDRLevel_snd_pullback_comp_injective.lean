@@ -89,4 +89,3 @@ theorem solution
   haveI : IsClosedImmersion (pullback.snd (comp 0) (comp 1)) := inferInstance
   exact (pullback.snd (comp 0) (comp 1)).isClosedEmbedding.injective
 
-#print axioms solution

@@ -118,4 +118,3 @@ theorem solution
     simp only [mapPt_coe, Category.assoc]
     rw [← hc', IsIso.inv_hom_id_assoc, hQ₀]
 
-#print axioms solution

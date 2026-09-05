@@ -188,4 +188,3 @@ theorem solution
     simp only [b, if_neg hm.ne']
     exact ⟨ℓ * ∑ d ∈ m.divisors, eps (χ (d : ZMod ℓ)), by ring⟩
 
-#print axioms solution

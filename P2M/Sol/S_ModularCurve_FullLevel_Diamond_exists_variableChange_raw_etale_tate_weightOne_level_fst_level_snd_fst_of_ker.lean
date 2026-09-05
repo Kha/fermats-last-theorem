@@ -283,4 +283,3 @@ theorem solution
   exact ⟨C, ⟨W₀, hΔ₀, (hT, (D₀, PUnit.unit)), ⟨⟨hTspec, hD₀, trivial⟩, hlink⟩⟩, ⟨hu, hr, hs, ht⟩, hW₀,
     (fun p F' _ f ζ' hζ' => hTtoric p F' f ζ' hζ'), hD₀map⟩
 
-#print axioms solution

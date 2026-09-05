@@ -70,4 +70,3 @@ theorem solution
     exact Algebra.IsIntegral.isIntegral (R := ↥(xHFunctionFieldBar (M / p) (infSubgroup p M H hpM))) x
   exact ⟨αH, hαint, hαq⟩
 
-#print axioms solution

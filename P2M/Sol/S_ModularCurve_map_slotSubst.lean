@@ -50,4 +50,3 @@ theorem solution
   funext i
   exact map_slotFamily g p c j i
 
-#print axioms solution

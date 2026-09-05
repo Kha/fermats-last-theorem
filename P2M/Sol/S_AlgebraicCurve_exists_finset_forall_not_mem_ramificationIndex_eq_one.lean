@@ -1226,4 +1226,3 @@ theorem solution
     ∃ S : Finset (Place K F'), ∀ w : Place K F', w ∉ S → w.ramificationIndex F = 1 :=
   AlgebraicCurve.exists_finset_unramified_off hreg htame hω₀ hω₀'
 
-#print axioms solution

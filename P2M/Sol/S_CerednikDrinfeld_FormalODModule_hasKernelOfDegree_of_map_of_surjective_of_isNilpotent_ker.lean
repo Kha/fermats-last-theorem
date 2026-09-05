@@ -53,4 +53,3 @@ theorem solution
   rw [← hf, ← Series.map_map]
   exact h.2.2 κ fbar
 
-#print axioms solution

@@ -46,4 +46,3 @@ theorem solution (K : Type*) [Field K] [PerfectField K]
 example : ∀ (K : Type*) [Field K] [PerfectField K] (N : ℕ) [NeZero N],
     ConstantsAreBase K (modularFunctionFieldC K N) := @solution
 
-#print axioms solution

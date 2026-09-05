@@ -240,4 +240,3 @@ theorem solution
     ∫⁻ g, φ g * ρ g ∂μ = ∫⁻ g, φ g * ρ' g ∂μ :=
   Admissible.lintegral_mul_eq_of_invariant μ μH hinv hρ hρ' hρ1 hρ'1 hφ hφinv
 
-#print axioms solution

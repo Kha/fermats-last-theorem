@@ -722,4 +722,3 @@ theorem solution
   · obtain ⟨f, hf, hne, hinv⟩ := caseAC p θ (c 0) (c 1) h1 (hcθ 0) (hcθ 1)
     exact ⟨f, hf, hne, fun k hk g => hinv k (hlev k hk) g⟩
 
-#print axioms solution

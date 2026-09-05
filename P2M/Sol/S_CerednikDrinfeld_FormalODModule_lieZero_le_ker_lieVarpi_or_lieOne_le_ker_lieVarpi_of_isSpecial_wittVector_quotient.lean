@@ -29,4 +29,3 @@ theorem solution
   · exact Or.inl fun m hm => LinearMap.mem_ker.mpr (h m hm)
   · exact Or.inr fun m hm => LinearMap.mem_ker.mpr (h m hm)
 
-#print axioms solution

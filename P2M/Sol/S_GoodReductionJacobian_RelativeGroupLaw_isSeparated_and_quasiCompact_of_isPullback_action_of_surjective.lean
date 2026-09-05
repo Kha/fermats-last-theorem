@@ -170,4 +170,3 @@ theorem solution
     haveI : CompactSpace Q := ⟨by rw [← Set.range_eq_univ.mpr q.surjective]; exact isCompact_range q.continuous⟩
     exact (HasAffineProperty.iff_of_isAffine (P := @QuasiCompact)).mpr ‹_›
 
-#print axioms solution

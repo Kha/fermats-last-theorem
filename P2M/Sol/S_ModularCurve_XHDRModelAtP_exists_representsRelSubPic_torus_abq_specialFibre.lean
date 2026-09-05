@@ -193,4 +193,3 @@ theorem solution
     · exact fun t a b => hm₂ t a b
   · exact Fin.forall_fin_two.trans (hker t a)
 
-#print axioms solution

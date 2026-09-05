@@ -1013,4 +1013,3 @@ theorem solution
   rw [hcoe] at hlik
   exact LinearIndependent.of_comp (P2MCartesian.ToK.prodCoeff (modularFunctionFieldC k N)) hlik
 
-#print axioms solution

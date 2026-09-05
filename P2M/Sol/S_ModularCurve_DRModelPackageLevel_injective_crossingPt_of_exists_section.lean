@@ -87,4 +87,3 @@ theorem solution
   rw [heapp, heapp, Scheme.Hom.comp_apply, Scheme.Hom.comp_apply]
   exact hnm'
 
-#print axioms solution

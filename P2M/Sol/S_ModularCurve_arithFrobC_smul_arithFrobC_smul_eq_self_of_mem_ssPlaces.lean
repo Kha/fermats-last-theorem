@@ -63,6 +63,3 @@ theorem ModularCurve.arithFrobC_smul_arithFrobC_smul_eq_self_of_mem_ssPlaces
     ModularCurve.arithFrobC q K N • (ModularCurve.arithFrobC q K N • w) = w :=
   _root_.P2MW.S_ModularCurve_arithFrobC_smul_arithFrobC_smul_eq_self_of_mem_ssPlaces.solution q N hqN K w hw
 
-#print axioms solution
-#print axioms solution_hyp
-#print axioms frobOnPlacesGeomLevel_packet_irrel

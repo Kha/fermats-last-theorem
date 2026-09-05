@@ -1089,4 +1089,3 @@ theorem solution
   rw [sliceAt_one] at key
   exact key
 
-#print axioms solution

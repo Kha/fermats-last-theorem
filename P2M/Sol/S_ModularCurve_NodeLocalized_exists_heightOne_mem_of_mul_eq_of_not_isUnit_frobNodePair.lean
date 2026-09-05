@@ -151,4 +151,3 @@ theorem solution
     · exact hs𝔫 (h𝔭le h)
   exact ⟨𝔭, h𝔭pr, hht, hq𝔭, hp𝔭, fun t ht0 ht' hmem => hS𝔫 t ht0 ht' (h𝔭le hmem)⟩
 
-#print axioms solution

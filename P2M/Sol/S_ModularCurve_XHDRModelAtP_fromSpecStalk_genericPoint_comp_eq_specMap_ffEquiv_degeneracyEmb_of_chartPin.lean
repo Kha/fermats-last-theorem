@@ -868,4 +868,3 @@ theorem solution
     𝔛.iota0 αH hΦθ 𝔛.π.1 𝔛.pi_chart πM hπM₁ hπM₂
   exact fromSpecStalk_comp_eq_of_fieldMap_eq πM hξ _ hB
 
-#print axioms solution

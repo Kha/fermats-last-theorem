@@ -187,4 +187,3 @@ theorem solution
   simp only [χ, χ₀, DDTsep.snd_dualHom] at h
   exact h
 
-#print axioms solution

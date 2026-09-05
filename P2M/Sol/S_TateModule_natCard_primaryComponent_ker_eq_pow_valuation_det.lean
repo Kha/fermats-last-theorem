@@ -351,4 +351,3 @@ theorem solution (p : ℕ) [Fact p.Prime] {M : Type}
   obtain ⟨b⟩ := TateModule.nonempty_basis_of_card_torsionBy p r hcard
   exact natCard_primaryComponent_eq hcard α b hdet
 
-#print axioms solution

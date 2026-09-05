@@ -135,4 +135,3 @@ theorem solution (n N : ℕ) [NeZero N] (m : ℤ) (hm : m ≠ 0)
     (hx : m • x = 0) : x = 0 :=
   HeckeEis.SolMain.A4 n N m hm x hx
 
-#print axioms solution

@@ -319,4 +319,3 @@ theorem solution
     have H := ReduceTL2.core p k (ι.comp (WittVector.frobenius : Zp2 p →+* Zp2 p)) Φ hΦ' hΦ4 h0'
     simpa only [ReduceTL2.isAdmissible_comp_frobenius_iff] using H
 
-#print axioms solution

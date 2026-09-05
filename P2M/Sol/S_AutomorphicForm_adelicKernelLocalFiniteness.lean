@@ -135,8 +135,6 @@ end M4aP3B.Rows.Discrete
 
 end
 
-#print axioms M4aP3B.Rows.Discrete.adelicKernelLocalFiniteness_impl
-#print axioms M4aP3B.Rows.Discrete.finite_setOf_algebraMap_mem
 
 theorem solution (F : Type) [Field F] [NumberField F] :
     AutomorphicForm.AdelicKernelLocalFiniteness F := by

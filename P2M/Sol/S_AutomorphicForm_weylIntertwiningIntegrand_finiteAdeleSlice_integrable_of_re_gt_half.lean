@@ -1341,9 +1341,3 @@ theorem solution
   intro α hα μ ν hμ hν s hs φ hφ hφc g
   exact M4aP3C.Rho7cSol.integrable_weylIntegrand_finSlice F σ α hα (fun x => rfl) μ ν hμ hν s hs φ hφ hφc g
 
-#print axioms solution
-#print axioms M4aP3C.Rho7cSol.integrable_weylIntegrand_finSlice
-#print axioms M4aP3C.Rho7cSol.measure_addSubgroup_eq_relIndex_mul
-#print axioms M4aP3C.Rho7cSol.distribHaarChar_yUnit_zero
-#print axioms AutomorphicForm.WeylIntegrable.norm_apply_weyl_unipotent_le
-#print axioms AutomorphicForm.WeylIntegrable.normProd_le_relIndex

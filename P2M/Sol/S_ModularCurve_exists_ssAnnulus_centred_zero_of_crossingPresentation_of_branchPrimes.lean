@@ -1098,4 +1098,3 @@ theorem solution
       red hker hq ha K ϖ hϖ eK ε hε hqϖ G' H' w hw hGH hmax heK1 hpr1 hpr2
         hnm1 hnm2 hsp1 hsp2)
 
-#print axioms solution

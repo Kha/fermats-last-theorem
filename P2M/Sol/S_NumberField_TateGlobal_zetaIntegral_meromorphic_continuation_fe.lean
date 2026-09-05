@@ -7686,4 +7686,3 @@ theorem solution
       ∧ (∀ s : ℂ, 1 < s.re → Z (1 - s) = zetaIntegral ν (fourierIntegral ψ μ f) χ⁻¹ s) :=
   M4aD2Skeleton.skeleton_D2_body F ν μ _hμ1 ψ _hψ _hψinf _hf _hχc _hχu _hχF
 
-#print axioms solution

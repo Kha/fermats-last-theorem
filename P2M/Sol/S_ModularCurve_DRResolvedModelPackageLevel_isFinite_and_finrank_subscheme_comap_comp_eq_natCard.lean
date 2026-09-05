@@ -162,4 +162,3 @@ theorem solution
   rw [hdeg t, hNdef]
   exact Nat.card_eq_fintype_card.symm
 
-#print axioms solution

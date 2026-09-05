@@ -132,4 +132,3 @@ theorem solution
   intro v hv k hk
   exact ⟨finEmbed_localEmbed_mem_principalLevel hv hk, finEmbed_mem_finiteAdelicGL2Subgroup _⟩
 
-#print axioms solution

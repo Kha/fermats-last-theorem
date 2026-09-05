@@ -59,4 +59,3 @@ theorem solution
       k f L g i h fQ q hq hR
   exact ⟨Q, fQ, LQ, q', hsep, hqc, hQs, hle, hqs, hsurj, hhom, hcomm, hker⟩
 
-#print axioms solution

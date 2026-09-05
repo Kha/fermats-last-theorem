@@ -42,4 +42,3 @@ theorem ModularCurve.arithFrobC_smul_arithFrobC_smul_of_mem_ssPlaces_of_not_dvd
       ModularCurve.arithFrobC q K N • (ModularCurve.arithFrobC q K N • w) = w :=
   _root_.P2MW.S_ModularCurve_arithFrobC_smul_arithFrobC_smul_of_mem_ssPlaces_of_not_dvd.solution q N hqN K
 
-#print axioms solution

@@ -21,7 +21,6 @@ end SiegelCovering
 
 end M4aP1R
 
-#print axioms M4aP1R.SiegelCovering.centreCutSiegelSet_coversModCentre_rat_impl
 
 theorem solution {c u d₁ d₂ : ℝ}
     (hc : c ≤ Real.sqrt 3 / 2) (hu : 1 / 2 ≤ u) (hd₂ : 0 < d₂) (hd : d₁ ≤ d₂) :

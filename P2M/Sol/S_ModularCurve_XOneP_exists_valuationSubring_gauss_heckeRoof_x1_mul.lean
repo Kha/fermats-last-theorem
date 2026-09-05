@@ -514,4 +514,3 @@ theorem solution
   exact ⟨⟨jPolyNum P, PowerSeries.X ^ P.natDegree, red_X_pow_ne_zero _, hpres⟩,
     inv_mem_gaussVS_of_red_ne_zero hKpres hpres (red_jPolyNum_ne_zero hP)⟩
 
-#print axioms solution

@@ -117,9 +117,4 @@ open AutomorphicForm
 #check @loweringAt
 #check @archSliceAt
 #check @IsArchLoweringAnnihilatedAt
-#print axioms AutomorphicForm.loweringAt_const
-#print axioms AutomorphicForm.archSliceAt_coe_generalLinearGroup
-#print axioms AutomorphicForm.archSliceAt_iwasawa
-#print axioms AutomorphicForm.archSliceAt_const_mul
-#print axioms AutomorphicForm.isArchLoweringAnnihilatedAt_zero
 end Battery

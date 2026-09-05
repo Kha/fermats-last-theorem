@@ -199,4 +199,3 @@ theorem solution (f : UpperHalfPlane → ℂ) (h₀ : ℕ) (hh₀ : 0 < h₀)
       (h₀ : ℂ) * PowerSeries.coeff (h₀ * m) (UpperHalfPlane.qExpansion (h₀ : ℝ) f) :=
   ProjTranslates.main hh₀ hper hhol hbdd m
 
-#print axioms solution

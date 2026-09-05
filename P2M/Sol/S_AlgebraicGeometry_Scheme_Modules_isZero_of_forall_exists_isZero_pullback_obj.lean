@@ -56,6 +56,5 @@ theorem _root_.P2MW.S_AlgebraicGeometry_Scheme_Modules_isZero_of_forall_exists_i
   ext W s
   simpa using hsec W s
 
-#print axioms solution
 
 end AlgebraicGeometry.Scheme.Modules

@@ -901,4 +901,3 @@ theorem solution
   rw [map_pow, hσζ, ← pow_mul, ← pow_mul, mul_comm]
 
 #check @solution
-#print axioms solution

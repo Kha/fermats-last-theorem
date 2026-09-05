@@ -426,4 +426,3 @@ theorem solution
         1 2 Tw hd hcov ξ NK SK (SL ∪ Fb) hNS Ψ tys w w' hw hw0 hw')
     V hVW f
 
-#print axioms solution

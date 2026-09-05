@@ -204,4 +204,3 @@ theorem solution {q : ℕ} (P : ValuationSubring (AlgebraicClosure ℚ))
     exact hres
   exact (ValuationSubring.residue_eq_residue_iff_valuation_sub_lt_one P _ _).mp h1
 
-#print axioms solution

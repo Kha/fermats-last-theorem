@@ -169,4 +169,3 @@ theorem solution {n : ℕ} {f : UpperHalfPlane → ℂ}
     ∃ v : ↥(HeckeEis.BinaryForm ℂ n), ∀ τ : UpperHalfPlane, F τ - G τ = v :=
   HeckeEis.SolMain.const hF hG
 
-#print axioms solution

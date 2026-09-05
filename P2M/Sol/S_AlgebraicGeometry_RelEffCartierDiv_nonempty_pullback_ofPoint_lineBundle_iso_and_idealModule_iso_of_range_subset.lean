@@ -61,4 +61,3 @@ theorem solution
         (RelEffCartierDiv.ofPoint c (ψ.1 ≫ u.1) hψu).idealModule) :=
   OfPointBC.main R c U u hu ψ hψu
 
-#print axioms solution

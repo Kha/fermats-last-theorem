@@ -138,4 +138,3 @@ theorem solution (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.Fin
       ≤ Module.finrank K (Additive Γ →+ K) + 1 :=
   BassSerreCuspDim.main Γ K hneg
 
-#print axioms solution

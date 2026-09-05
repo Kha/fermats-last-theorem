@@ -220,4 +220,3 @@ theorem solution
   haveI : IsReduced X := isReduced_of_isReduced_stalk X
   exact (isIntegral_iff_irreducibleSpace_and_isReduced X).mpr ⟨inferInstance, inferInstance⟩
 
-#print axioms solution

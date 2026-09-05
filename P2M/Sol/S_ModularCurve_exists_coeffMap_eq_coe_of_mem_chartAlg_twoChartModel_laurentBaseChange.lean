@@ -269,4 +269,3 @@ theorem solution
     rw [Set.mem_singleton_iff.mp hz]
     exact ⟨_, hjA'⟩
 
-#print axioms solution

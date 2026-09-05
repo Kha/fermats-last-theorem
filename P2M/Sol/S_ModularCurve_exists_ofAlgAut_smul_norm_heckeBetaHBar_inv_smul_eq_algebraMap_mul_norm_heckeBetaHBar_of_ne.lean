@@ -855,4 +855,3 @@ theorem solution
   show θ (@Algebra.norm ↥(ModularCurve.xHFunctionFieldBar M H) ↥(ModularCurve.laurentBaseChange (AlgebraicClosure ℚ) (ModularCurve.xHTopFunctionFieldC ℚ M H (M * ℓ))) _ _ (AlgebraicCurve.algebraAlong (heckeAlphaHBar (AlgebraicClosure ℚ) M H ℓ)) (heckeBetaHBar (AlgebraicClosure ℚ) M H ℓ (θ.symm f))) = _
   rw [WTComm.norm_exchange (heckeAlphaHBar (AlgebraicClosure ℚ) M H ℓ) θ Θ hC1, hC2, AlgEquiv.apply_symm_apply]
 
-#print axioms solution

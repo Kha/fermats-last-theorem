@@ -592,4 +592,3 @@ theorem solution
     dsimp only [f]
     rw [(_hMc g).2 s hs]
 
-#print axioms solution

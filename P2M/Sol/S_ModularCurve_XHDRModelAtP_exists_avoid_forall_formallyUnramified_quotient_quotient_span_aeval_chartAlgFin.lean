@@ -1260,6 +1260,5 @@ theorem solution
   exact transport P (Polynomial.aeval v h) _ (aeval_mk_map P v h).symm (hf _ hdeg hcop.of_mul_right_right)
     (hc _ hsep hcop.of_mul_right_left)
 
-#print axioms solution
 
 end

@@ -32,4 +32,3 @@ theorem solution
     rw [← CommRingCat.comp_apply, TopCat.Presheaf.germ_stalkSpecializes]
   rw [h1, Scheme.Hom.germ_stalkMap_apply]
 
-#print axioms solution

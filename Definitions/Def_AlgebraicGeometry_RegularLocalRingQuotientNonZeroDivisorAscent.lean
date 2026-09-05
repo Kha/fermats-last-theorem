@@ -257,7 +257,6 @@ info: 'RegularLocalRingQuotientAscent.spanFinrank_comap_le_of_surjective' depend
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.spanFinrank_comap_le_of_surjective
 
 /--
 info: 'RegularLocalRingQuotientAscent.spanFinrank_maximalIdeal_le_of_surjective' depends on axioms: [propext,
@@ -265,7 +264,6 @@ info: 'RegularLocalRingQuotientAscent.spanFinrank_maximalIdeal_le_of_surjective'
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.spanFinrank_maximalIdeal_le_of_surjective
 
 /--
 info: 'RegularLocalRingQuotientAscent.finrank_cotangentSpace_le_of_surjective' depends on axioms: [propext,
@@ -273,7 +271,6 @@ info: 'RegularLocalRingQuotientAscent.finrank_cotangentSpace_le_of_surjective' d
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.finrank_cotangentSpace_le_of_surjective
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient' depends on axioms: [propext,
@@ -281,7 +278,6 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_q
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_isRegularLocalRing_quotient
 
 /--
 info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_surjective_ker_span_singleton' depends on axioms: [propext,
@@ -289,13 +285,11 @@ info: 'RegularLocalRingQuotientAscent.isRegularLocalRing_of_surjective_ker_span_
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.isRegularLocalRing_of_surjective_ker_span_singleton
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_padicInt_hypotheses' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_padicInt_hypotheses
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt' depends on axioms: [propext,
@@ -303,7 +297,6 @@ info: 'RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt' depends 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_isRegularLocalRing_padicInt
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_padicInt_conclusion_consistency' depends on axioms: [propext,
@@ -311,13 +304,11 @@ info: 'RegularLocalRingQuotientAscent.gate_padicInt_conclusion_consistency' depe
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_padicInt_conclusion_consistency
 
 /--
 info: 'RegularLocalRingQuotientAscent.gate_padicInt_dimension_jump' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.gate_padicInt_dimension_jump
 
 /--
 info: 'RegularLocalRingQuotientAscent.quotient_span_eps_isRegularLocalRing' depends on axioms: [propext,
@@ -325,13 +316,11 @@ info: 'RegularLocalRingQuotientAscent.quotient_span_eps_isRegularLocalRing' depe
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.quotient_span_eps_isRegularLocalRing
 
 /--
 info: 'RegularLocalRingQuotientAscent.eps_notMem_nonZeroDivisors' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.eps_notMem_nonZeroDivisors
 
 /--
 info: 'RegularLocalRingQuotientAscent.not_isRegularLocalRing_dualNumber' depends on axioms: [propext,
@@ -339,7 +328,6 @@ info: 'RegularLocalRingQuotientAscent.not_isRegularLocalRing_dualNumber' depends
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.not_isRegularLocalRing_dualNumber
 
 /--
 info: 'RegularLocalRingQuotientAscent.not_forall_isRegularLocalRing_of_quotient_dropping_nonZeroDivisor' depends on axioms: [propext,
@@ -347,6 +335,5 @@ info: 'RegularLocalRingQuotientAscent.not_forall_isRegularLocalRing_of_quotient_
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms RegularLocalRingQuotientAscent.not_forall_isRegularLocalRing_of_quotient_dropping_nonZeroDivisor
 
 end

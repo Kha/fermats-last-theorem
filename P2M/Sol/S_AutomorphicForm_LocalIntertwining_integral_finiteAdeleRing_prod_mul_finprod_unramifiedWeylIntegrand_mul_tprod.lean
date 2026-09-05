@@ -1288,4 +1288,3 @@ theorem solution
   AutomorphicForm.LocalIntertwining.FiniteAdeleAssembly.integral_finiteAdeleRing_impl
     F ν S μ h ϖ hϖ χ hχ hχ₁ s hs
 
-#print axioms solution

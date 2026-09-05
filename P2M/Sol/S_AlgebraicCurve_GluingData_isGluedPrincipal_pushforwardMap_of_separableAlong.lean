@@ -189,4 +189,3 @@ theorem solution
     rw [GluingData.nodeFibreSum_apply, toMul_sum, hw]
     simp only [toMul_nsmul, toMul_ofMul, div_pow, Finset.prod_div_distrib, A, B]
 
-#print axioms solution

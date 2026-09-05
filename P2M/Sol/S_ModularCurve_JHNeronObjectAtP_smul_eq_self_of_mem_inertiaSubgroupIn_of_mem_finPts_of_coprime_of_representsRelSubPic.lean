@@ -281,4 +281,3 @@ theorem solution
     ∀ σ ∈ A.inertiaSubgroupIn ℚ, σ • x = x :=
   forall_smul_eq_self_of_mem_finPts O hmp x hx
 
-#print axioms solution

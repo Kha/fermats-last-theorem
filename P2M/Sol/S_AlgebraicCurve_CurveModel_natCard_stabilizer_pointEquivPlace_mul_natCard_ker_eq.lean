@@ -150,4 +150,3 @@ theorem solution
   have hS : Nat.card S = Nat.card {g : G₀ // x.1 ≫ (ρ g).hom = x.1} := rfl
   rw [← hS, ← hmul, hidx, hkercard, hrangecard, Nat.mul_comm]
 
-#print axioms solution

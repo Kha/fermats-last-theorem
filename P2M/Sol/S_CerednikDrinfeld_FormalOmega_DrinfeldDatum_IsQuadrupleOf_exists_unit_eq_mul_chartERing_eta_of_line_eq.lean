@@ -81,4 +81,3 @@ theorem solution
     change β = u₁ * c₀ * -(x (chartERing.ξ 𝒪 π q))
     linear_combination c₀ * E2 - β * hU₀
 
-#print axioms solution

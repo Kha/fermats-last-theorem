@@ -57,4 +57,3 @@ theorem solution
   have hw' := ord_restrictAlong_pos _ hα Q _ hQ
   exact P.d0_j w j₀ hw'
 
-#print axioms solution

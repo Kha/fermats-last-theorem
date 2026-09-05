@@ -497,4 +497,3 @@ theorem solution (N : ℕ) [NeZero N] (n : ℕ)
       ≤ Module.finrank ℂ (HeckeEis.coeffH1par W) :=
   HeckeEis.UBSol.main W hW
 
-#print axioms solution

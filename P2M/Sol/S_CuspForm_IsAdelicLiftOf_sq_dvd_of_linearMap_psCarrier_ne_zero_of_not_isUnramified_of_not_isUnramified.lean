@@ -344,4 +344,3 @@ theorem solution
   · rw [h1, PrincipalSeriesLevelOne.fixedSubmodule_padicK1_one_eq_bot q _hμ₁ _hμ₂, Submodule.mem_bot] at hw
     exact hfψ hw
 
-#print axioms solution

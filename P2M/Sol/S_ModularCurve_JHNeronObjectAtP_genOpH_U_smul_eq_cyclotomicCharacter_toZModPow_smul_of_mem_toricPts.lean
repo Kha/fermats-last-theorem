@@ -946,4 +946,3 @@ theorem solution
       _ = (p % ℓ ^ k + ℓ ^ k * (p / ℓ ^ k)) • O.toricPoint (ℓ ^ k) hmk χk := (add_nsmul _ _ _).symm
       _ = p • O.toricPoint (ℓ ^ k) hmk χk := by rw [Nat.mod_add_div]
 
-#print axioms solution

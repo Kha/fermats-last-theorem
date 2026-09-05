@@ -52,4 +52,3 @@ theorem solution
   exact ModularCurve.FullLevel.map_jChartFin_mem_ssJSet_of_exists_two_minimalPrimes_span_le_chartAlgFin_laurentBaseChange_gamma0_mul
     p M hpM L K₂ hK₂ A hAp j hj ϖ hϖ y hyϖ htwo Ω φ hφ
 
-#print axioms solution

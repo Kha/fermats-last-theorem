@@ -2840,4 +2840,3 @@ theorem solution (W : WeierstrassCurve H)
     (hW : IntegralCoeffs W) (hΔ : W.Δ.orderTop = 0) : (specialFibre W).IsElliptic :=
   ModularCurve.B3.isElliptic_specialFibre W hW hΔ
 
-#print axioms solution

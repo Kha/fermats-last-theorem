@@ -1328,11 +1328,6 @@ end
 #check @ModularCurve.JZero.pairing_eq_ePt
 #check @B0Asm.subrow_R8
 #check @B0Asm.subrow_ARITH
-#print axioms B0Asm.subrow_R8
-#print axioms B0Asm.subrow_ARITH
-#print axioms ModularCurve.JZero.pairing_eq_ePt
-#print axioms B0Asm.subrow_R2
-#print axioms B0Asm.IsRepOf.coeffSum
 
 p2m_open "ModularCurve P2MW.S_ModularCurve_JZero_heightForm_quasiInvariant_eps_of_prime_of_five_le.ModularCurve AlgebraicCurve"
 

@@ -511,4 +511,3 @@ theorem solution
           * ∫ y, h v y ∂(μ v)) :=
   FiniteAdelicFactorization.inv_measure_mul_setIntegral_integralOffSet_finprod_eq F ν S μ h h₁
 
-#print axioms solution

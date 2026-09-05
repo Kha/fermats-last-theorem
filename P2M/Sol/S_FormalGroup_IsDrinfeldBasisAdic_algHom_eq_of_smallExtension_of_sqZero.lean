@@ -244,4 +244,3 @@ theorem solution
   rw [snd_diag] at h2
   exact h2.symm
 
-#print axioms solution

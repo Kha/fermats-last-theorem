@@ -128,4 +128,3 @@ theorem solution
   obtain ⟨hdvr, hdim⟩ := isDiscreteValuationRing_and_ringKrullDim_eq_one_of_maximalIdeal_eq_span t hmax hnf
   exact ⟨hdim, hdom, hdvr⟩
 
-#print axioms solution

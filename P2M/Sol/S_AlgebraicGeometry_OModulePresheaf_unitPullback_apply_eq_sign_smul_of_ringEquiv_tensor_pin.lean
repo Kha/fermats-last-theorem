@@ -110,4 +110,3 @@ theorem solution
     rw [e, map_mul, map_mul, map_mul, map_mul, map_mul, hσ₂, hσ₁, hA, Algebra.TensorProduct.map_tmul,
       Algebra.TensorProduct.map_tmul, AlgHom.id_apply, AlgHom.id_apply, map_one, hσV₂, hσV₁, hθ]
 
-#print axioms solution

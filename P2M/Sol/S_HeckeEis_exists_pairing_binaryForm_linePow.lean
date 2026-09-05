@@ -356,4 +356,3 @@ theorem solution (n : ℕ) :
   ⟨HeckeEis.PairingSol.pairing n, HeckeEis.PairingSol.pairing_rep n, HeckeEis.PairingSol.pairing_swap n,
     HeckeEis.PairingSol.eq_zero_of_pairing_eq_zero n, HeckeEis.PairingSol.pairing_linePow n⟩
 
-#print axioms solution

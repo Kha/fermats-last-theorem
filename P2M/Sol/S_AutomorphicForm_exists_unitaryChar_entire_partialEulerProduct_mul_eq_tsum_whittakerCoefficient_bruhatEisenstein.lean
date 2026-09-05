@@ -592,4 +592,3 @@ theorem solution
 
 end Target
 
-#print axioms solution

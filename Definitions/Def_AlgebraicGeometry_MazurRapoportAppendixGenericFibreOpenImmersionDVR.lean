@@ -108,25 +108,21 @@ end NeronModelInfra
 info: 'NeronModelInfra.isLocalizationAway_of_irreducible' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.isLocalizationAway_of_irreducible
 
 /--
 info: 'NeronModelInfra.isLocalizationAway_uniformizer_zp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.isLocalizationAway_uniformizer_zp
 
 /--
 info: 'NeronModelInfra.isLocalizationAway_uniformizer_three' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.isLocalizationAway_uniformizer_three
 
 /--
 info: 'NeronModelInfra.isOpenImmersion_specGenericFibreInclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.isOpenImmersion_specGenericFibreInclusion
 
 /--
 info: 'NeronModelInfra.range_specGenericFibreInclusion_eq_basicOpen' depends on axioms: [propext,
@@ -134,19 +130,16 @@ info: 'NeronModelInfra.range_specGenericFibreInclusion_eq_basicOpen' depends on 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.range_specGenericFibreInclusion_eq_basicOpen
 
 /--
 info: 'NeronModelInfra.mono_specGenericFibreInclusion_of_dvr' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.mono_specGenericFibreInclusion_of_dvr
 
 /--
 info: 'NeronModelInfra.flat_specGenericFibreInclusion_of_dvr' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.flat_specGenericFibreInclusion_of_dvr
 
 /--
 info: 'NeronModelInfra.gate_isOpenImmersion_specGenericFibreInclusion_zp' depends on axioms: [propext,
@@ -154,7 +147,6 @@ info: 'NeronModelInfra.gate_isOpenImmersion_specGenericFibreInclusion_zp' depend
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_isOpenImmersion_specGenericFibreInclusion_zp
 
 /--
 info: 'NeronModelInfra.gate_isOpenImmersion_specGenericFibreInclusion_three' depends on axioms: [propext,
@@ -162,19 +154,16 @@ info: 'NeronModelInfra.gate_isOpenImmersion_specGenericFibreInclusion_three' dep
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_isOpenImmersion_specGenericFibreInclusion_three
 
 /--
 info: 'NeronModelInfra.not_isIso_specGenericFibreInclusion_zp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.not_isIso_specGenericFibreInclusion_zp
 
 /--
 info: 'NeronModelInfra.not_isIso_specGenericFibreInclusion_three' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.not_isIso_specGenericFibreInclusion_three
 
 /--
 info: 'NeronModelInfra.gate_strictOpenImmersion_specGenericFibreInclusion_zp' depends on axioms: [propext,
@@ -182,7 +171,6 @@ info: 'NeronModelInfra.gate_strictOpenImmersion_specGenericFibreInclusion_zp' de
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_strictOpenImmersion_specGenericFibreInclusion_zp
 
 /--
 info: 'NeronModelInfra.gate_strictOpenImmersion_specGenericFibreInclusion_three' depends on axioms: [propext,
@@ -190,6 +178,5 @@ info: 'NeronModelInfra.gate_strictOpenImmersion_specGenericFibreInclusion_three'
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_strictOpenImmersion_specGenericFibreInclusion_three
 
 end

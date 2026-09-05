@@ -149,4 +149,3 @@ theorem solution
     w.hasseRootFn_ne_zero hK.pow_mem
   exact ⟨hK.pow_mem, h23.1, h23.2⟩
 
-#print axioms solution

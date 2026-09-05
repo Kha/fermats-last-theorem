@@ -6103,4 +6103,3 @@ theorem solution (N : ℕ) [NeZero N] (hN : N.Prime) (hN5 : 5 ≤ N) {r : ℕ}
   obtain ⟨Γ⟩ := hpf A hAp μ hμ hball
   exact hcore A hAp μ hμ hball hμp Γ
 
-#print axioms solution

@@ -311,4 +311,3 @@ theorem solution
           (heckeGen (𝓞 K) K v) reps := by
   exact PrincipalLevelCosets.exists_isHeckeCosetSystem_both K v hv
 
-#print axioms solution

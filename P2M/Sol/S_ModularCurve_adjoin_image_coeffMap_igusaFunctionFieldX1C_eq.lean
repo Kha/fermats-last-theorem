@@ -139,4 +139,3 @@ theorem solution
       exact IntermediateField.adjoin.mono k _ _ Set.subset_union_left hx'
     · exact IntermediateField.subset_adjoin k _ (Or.inr hx)
 
-#print axioms solution

@@ -60,4 +60,3 @@ theorem solution
     AutomorphicForm.mem_integralUnitsSet, AutomorphicForm.mem_integralUnitsSet, ← map_inv]
   simp only [happ, IntDescent.one_tmul_mem_semiLocalIntegers_iff, SetLike.mem_coe]
 
-#print axioms solution

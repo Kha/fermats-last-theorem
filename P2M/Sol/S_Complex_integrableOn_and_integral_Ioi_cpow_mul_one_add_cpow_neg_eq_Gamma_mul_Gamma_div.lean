@@ -148,4 +148,3 @@ theorem solution
   refine IntegrableOn.congr_fun h2 (fun v hv => ?_) measurableSet_Ioi
   rw [hsec v hv, ← mul_assoc, inv_mul_cancel₀ hΓab, one_mul]
 
-#print axioms solution

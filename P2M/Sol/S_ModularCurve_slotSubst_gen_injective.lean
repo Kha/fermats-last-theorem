@@ -1647,4 +1647,3 @@ theorem solution : Function.Injective (slotSubst (LaurentSeries ℚ) 2
       (Units.mk0 (HahnSeries.single (1 : ℤ) (1 : ℚ)) (HahnSeries.single_ne_zero one_ne_zero)) 1) :=
   ModularCurve.W4Bdev.slotSubst_gen_injective
 
-#print axioms solution

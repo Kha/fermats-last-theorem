@@ -68,4 +68,3 @@ theorem solution
     ← map_mul] at hlaw'
   exact qExpand_injective (N := p) hlaw'
 
-#print axioms solution

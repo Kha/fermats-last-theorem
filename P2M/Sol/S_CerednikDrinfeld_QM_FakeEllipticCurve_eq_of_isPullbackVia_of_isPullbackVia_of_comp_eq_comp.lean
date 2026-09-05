@@ -99,6 +99,5 @@ theorem solution
     ρ hρ E'.L (RigidPB.bijective_appTop_of_abelianSchemePropertyBundle E₀.bundle) g' sq₀
     (E'.L.one (𝟙 _)).1 (E'.L.one (𝟙 _)).2 α (𝟙 _) hα₂ (Category.id_comp _) hgα (hs₁.trans hs₂.symm)
 
-#print axioms solution
 
 end

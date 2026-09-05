@@ -97,4 +97,3 @@ theorem solution
   exact ⟨ConjInf.conjByFiniteIdele_inf Λ Λ' hΛ.fg hΛ.spanTop hΛ'.fg hΛ'.spanTop g,
     fun h => ConjInf.conjByFiniteIdele_mono h g⟩
 
-#print axioms solution

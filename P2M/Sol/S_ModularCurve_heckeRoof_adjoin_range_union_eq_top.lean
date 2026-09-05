@@ -568,4 +568,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_heck
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N ℓ ℓ' M : ℕ) [NeZero N] [NeZero ℓ] [NeZero ℓ'] [NeZero M] (hM : M = N * ℓ * ℓ') (hgenQ : FunctionFieldGeneration M) (data' : ModularPolynomialData ℓ') : Algebra.adjoin L (Set.range (towerSubstBar L (N * ℓ') ℓ (dvd_of_eq_roof N ℓ ℓ' M hM).2) ∪ Set.range (towerInclBar L (dvd_of_eq_roof N ℓ ℓ' M hM).1)) = ⊤ :=
   ModularCurve.heckeRoof_adjoin_range_union_eq_top L N ℓ ℓ' M hM hgenQ data'
 
-#print axioms solution

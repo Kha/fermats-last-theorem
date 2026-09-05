@@ -1433,4 +1433,3 @@ theorem solution
       AlgebraicCurve.RegularProlongation.mem_adjoin_iff_mem_integers_iff_of_transcendental_residue A R' R f hfR' hfR
         htr' htr e he
 
-#print axioms solution

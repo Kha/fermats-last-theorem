@@ -38,4 +38,3 @@ theorem solution
     eq_inv_of_mul_eq_one_left (by rw [← map_mul, IsUnit.val_inv_mul, map_one])
   rw [hinv, hgb, eq_comm, eq_mul_inv_iff_mul_eq₀ hb, hx]
 
-#print axioms solution

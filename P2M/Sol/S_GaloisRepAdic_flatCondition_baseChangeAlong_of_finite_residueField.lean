@@ -18,4 +18,3 @@ theorem solution
   · exact GaloisRepAdic.isFlatAt_baseChangeAlong_of_finite_residueField φ hφ ρ h.2.1
   · exact fun q hq hqS => GaloisRepAdic.isUnramifiedAt_baseChangeAlong φ hφ ρ (h.2.2 q hq hqS)
 
-#print axioms solution

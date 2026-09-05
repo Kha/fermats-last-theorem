@@ -113,4 +113,3 @@ theorem solution {N : ℕ} (c : ℂ) (f : CuspForm (CongruenceSubgroup.Gamma0 N)
   rw [periodMap_eq_periodHom (hFe.smul' c) hsmul, periodMap_eq_periodHom hFe hFf]
   exact hFe.periodHom_smul' c
 
-#print axioms solution

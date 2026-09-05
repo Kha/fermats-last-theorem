@@ -28,4 +28,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_relfinrank_modularFunctionFi
 theorem solution (N : ℕ) [NeZero N] : IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (modularFunctionField N) = Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) :=
   ModularCurve.relfinrank_modularFunctionField N
 
-#print axioms solution

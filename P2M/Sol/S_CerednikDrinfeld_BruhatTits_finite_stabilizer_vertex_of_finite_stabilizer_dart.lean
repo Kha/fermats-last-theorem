@@ -46,4 +46,3 @@ theorem solution
     | nil => exact absurd rfl hx
     | cons h _ => exact ⟨_, h⟩
 
-#print axioms solution

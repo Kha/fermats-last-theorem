@@ -298,11 +298,9 @@ p2m_reactivate "P2MW.S_ModularCurve_PhiGen_intCoeffs_jq_pow.ModularCurve.PhiGen 
 end
 p2m_reactivate "P2MW.S_ModularCurve_PhiGen_intCoeffs_jq_pow.ModularCurve.PhiGen P2MW.S_ModularCurve_PhiGen_intCoeffs_jq_pow.ModularCurve"
 
-#print axioms ModularCurve.PhiGen.aeval_jq_intCoeffs_descent
 
 open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_intCoeffs_jq_pow.ModularCurve _root_.ModularCurve.PhiGen _root_.P2MW.S_ModularCurve_PhiGen_intCoeffs_jq_pow.ModularCurve.PhiGen in
 
 theorem solution (n : ℕ) : IntCoeffs (jq ^ n) :=
   ModularCurve.PhiGen.intCoeffs_jq_pow n
 
-#print axioms solution

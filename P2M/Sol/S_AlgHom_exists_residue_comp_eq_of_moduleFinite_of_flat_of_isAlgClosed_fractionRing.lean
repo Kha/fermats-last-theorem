@@ -137,4 +137,3 @@ theorem solution
   rw [map_sub, sub_eq_zero, AlgHom.commutes, IsLocalRing.ResidueField.algebraMap_eq] at hk
   exact hk.symm
 
-#print axioms solution

@@ -373,4 +373,3 @@ theorem solution
     rw [hχ, hχ1, hdeg, map_zero]
     ring
 
-#print axioms solution

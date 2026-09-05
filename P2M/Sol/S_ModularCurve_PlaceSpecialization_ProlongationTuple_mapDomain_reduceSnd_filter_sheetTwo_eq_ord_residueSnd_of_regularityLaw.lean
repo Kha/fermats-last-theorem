@@ -121,4 +121,3 @@ theorem solution
   rw [reduceFst_atkinLehnerBar_smul P hqN W]
   exact Iff.rfl.and (exists_congr fun a => Iff.rfl.and (hval W a))
 
-#print axioms solution

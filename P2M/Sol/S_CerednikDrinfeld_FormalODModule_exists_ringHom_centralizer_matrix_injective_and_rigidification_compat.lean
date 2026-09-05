@@ -88,4 +88,3 @@ theorem solution
     rw [hAA', Matrix.smul_mulVec, ← Nat.cast_pow, Nat.cast_smul_eq_nsmul, map_nsmul, ← h1, smul_smul,
       pow_succ]
 
-#print axioms solution

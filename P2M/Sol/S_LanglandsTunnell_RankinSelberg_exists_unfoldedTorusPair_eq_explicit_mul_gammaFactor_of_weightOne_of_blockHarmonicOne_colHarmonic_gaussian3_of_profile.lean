@@ -782,5 +782,3 @@ theorem solution
   obtain ⟨hR, hC⟩ := hRA9 s
   rw [hfr s (lt_of_le_of_lt (le_max_left _ _) hs), h, hR, hC, mul_one, ← hinj.1, ← hinj.2.1, ← hinj.2.2.1, ← hinj.2.2.2, ha₀]
 
-#print axioms solution
-#print axioms Ws25K7majCore.core_major

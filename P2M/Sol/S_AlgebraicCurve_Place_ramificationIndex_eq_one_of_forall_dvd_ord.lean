@@ -439,4 +439,3 @@ theorem solution {K F L : Type*} [Field K] [Field F] [Field L]
     nlinarith [hK0pos]
   omega
 
-#print axioms solution

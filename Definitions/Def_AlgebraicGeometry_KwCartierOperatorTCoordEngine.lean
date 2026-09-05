@@ -447,98 +447,74 @@ section Audits
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_axiomAnchor' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_axiomAnchor
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_d_pow_zero' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_d_pow_zero
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_not_pthPower' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_not_pthPower
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_monic_eq_of_associated' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_monic_eq_of_associated
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_minpoly_natDegree_eq' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_minpoly_natDegree_eq
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_span_singleton_eq_top_of_finrank_one' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_span_singleton_eq_top_of_finrank_one
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_hspan_of_isCurveOver' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_hspan_of_isCurveOver
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_pow_family_indep' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_pow_family_indep
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_exists_repr' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_exists_repr
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_repr_spec' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_repr_spec
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_repr_unique' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_repr_unique
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_repr_add' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_repr_add
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_repr_pow_smul' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_repr_pow_smul
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_root_pow' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_root_pow
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_root_unique' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_root_unique
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_root_add' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_root_add
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_root_pow_mul' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_root_pow_mul
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_exists_dtCoord' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_exists_dtCoord
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_dtCoord_spec' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_dtCoord_spec
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_dtCoord_unique' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_dtCoord_unique
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_dtCoord_add' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_dtCoord_add
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_dtCoord_smul' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_dtCoord_smul
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_C_add' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_C_add
 
 /-- info: 'AlgebraicCurve.KwCart.kw_cart_C_semilinear' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwCart.kw_cart_C_semilinear
 
 end Audits

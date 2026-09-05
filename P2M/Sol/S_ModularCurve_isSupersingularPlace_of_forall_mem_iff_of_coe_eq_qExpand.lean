@@ -112,4 +112,3 @@ theorem solution
   have hmem : a' ^ (q ^ e) ∈ ssJSet q K := heval ▸ hss
   exact ModularCurve.mem_ssJSet_of_pow_mem_ssJSet q K e a' hmem
 
-#print axioms solution

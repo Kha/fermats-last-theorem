@@ -279,4 +279,3 @@ theorem solution
       rw [hb]
       exact hψz
 
-#print axioms solution

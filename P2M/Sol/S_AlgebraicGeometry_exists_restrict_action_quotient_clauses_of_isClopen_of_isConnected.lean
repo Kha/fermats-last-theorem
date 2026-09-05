@@ -412,4 +412,3 @@ theorem solution
       rw [map_appLE_apply]
       exact appLE_one_apply ρ O _ s
 
-#print axioms solution

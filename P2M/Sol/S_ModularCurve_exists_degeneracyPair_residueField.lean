@@ -155,4 +155,3 @@ theorem solution (M s q' : ℕ) [NeZero M] [NeZero s] (hq' : q'.Prime)
   haveI : CharP (ResidueField A) q' := ValuationSubring.charP_residueField_of_liesOverPrime_def hq' hA
   exact exists_pair (ResidueField A) q' M s hq'Ms
 
-#print axioms solution

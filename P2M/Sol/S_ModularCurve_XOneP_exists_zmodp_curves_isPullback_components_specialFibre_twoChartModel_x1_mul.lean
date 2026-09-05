@@ -186,4 +186,3 @@ theorem solution
   exact ⟨C₁ₚ, C₂ₚ, c₁ₚ, c₂ₚ, i₁ₚ, i₂ₚ, g₁, g₂, ε₁ₚ, ε₂ₚ, hRES, ⟨hprop₁, hsm₁, hgi₁⟩, ⟨hprop₂, hsm₂, hgi₂⟩,
     hpb₁', hpb₂', hci₁, hci₂, rfl, rfl, hcomm₁, hcomm₂⟩
 
-#print axioms solution

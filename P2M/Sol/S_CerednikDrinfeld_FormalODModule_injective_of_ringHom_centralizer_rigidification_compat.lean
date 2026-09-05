@@ -180,4 +180,3 @@ theorem solution
   apply Subtype.ext
   exact sub_eq_zero.mp hg
 
-#print axioms solution

@@ -671,4 +671,3 @@ theorem solution
     _ = φ'.toRingHom := by rw [h1, h2]
     _ = χ' := hφ'
 
-#print axioms solution

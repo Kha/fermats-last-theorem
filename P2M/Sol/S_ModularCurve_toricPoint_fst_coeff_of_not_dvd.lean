@@ -1646,4 +1646,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_fst_coeff_of_not_
 theorem solution (K : Type*) [Field K] (p : ℕ) (c : K) {m : ℕ} (hpm : ¬ p ∣ m) : (toricPoint K p c).1.coeff (m : ℤ) = 0 :=
   ModularCurve.toricPoint_fst_coeff_of_not_dvd K p c hpm
 
-#print axioms solution

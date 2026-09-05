@@ -42,4 +42,3 @@ theorem solution
     have := huniq (Place.congrEquiv e he w) (by show Place.restrictAlong φ' hφ' (Place.congrEquiv e he w) = s; rw [h1]; exact hw)
     rw [← this, Equiv.symm_apply_apply]
 
-#print axioms solution

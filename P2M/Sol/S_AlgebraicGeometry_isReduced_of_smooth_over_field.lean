@@ -77,4 +77,3 @@ theorem solution {k : Type u} [Field k]
 
 end SchemeLevel
 
-#print axioms solution

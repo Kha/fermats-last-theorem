@@ -258,4 +258,3 @@ theorem solution
     intro g
     exact (IntermediateField.mem_fixedField_iff _ _).mp hz _ ⟨g, rfl⟩
 
-#print axioms solution

@@ -657,4 +657,3 @@ theorem solution
     · rw [hCs]
       field_simp
 
-#print axioms solution

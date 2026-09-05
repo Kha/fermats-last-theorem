@@ -38,4 +38,3 @@ theorem solution
   · exact fun q hq hqS => GaloisRepAdic.isUnramifiedAt_of_jointly_injective πA hπA πB hπB hinj ρ
       (hA.2.2 q hq hqS) (hB.2.2 q hq hqS)
 
-#print axioms solution

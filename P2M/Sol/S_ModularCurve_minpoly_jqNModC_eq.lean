@@ -248,4 +248,3 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N]
         ⟨jqModC L, IntermediateField.mem_adjoin_simple_self L (jqModC L)⟩) :=
   ModularCurve.minpoly_jqNModC_eq L N data
 
-#print axioms solution

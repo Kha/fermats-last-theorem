@@ -158,4 +158,3 @@ theorem solution (N : ℕ) [NeZero N] {r : ℕ}
       rw [hEw] at hle
       omega
 
-#print axioms solution

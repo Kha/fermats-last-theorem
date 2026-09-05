@@ -199,4 +199,3 @@ theorem solution
     | succ n => exact hn n)
   exact sub_eq_zero.mp h0
 
-#print axioms solution

@@ -1440,4 +1440,3 @@ end
 
 end
 
-#print axioms solution

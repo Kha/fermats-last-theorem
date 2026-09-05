@@ -32,4 +32,3 @@ theorem solution
     exact IntermediateField.adjoin.mono ℚ _ _ hsub
   exact hmap ⟨y, hy, rfl⟩
 
-#print axioms solution

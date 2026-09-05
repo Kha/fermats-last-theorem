@@ -564,4 +564,3 @@ theorem solution (N : ℕ) [NeZero N]
       (w.ord (jBar N - algebraMap (AlgebraicClosure ℚ) (modularFunctionFieldBar N) j₀)).toNat :=
   B2Peo.natCard_normalized_algHom_hahnSeries_jBar_sub_eq_toNat_ord N j₀ S hS hsum hP1
 
-#print axioms solution

@@ -93,4 +93,3 @@ theorem solution
         = algebraMap (v.adicCompletion ↥L) (AlgebraicClosure (v.adicCompletion ↥L)) (FinitePlace.embedding v a) := rfl
     rw [hφa, halgM, spectralMulAlgNorm_def, spectralNorm_extends, ← hv, FinitePlace.mk_apply]
 
-#print axioms solution

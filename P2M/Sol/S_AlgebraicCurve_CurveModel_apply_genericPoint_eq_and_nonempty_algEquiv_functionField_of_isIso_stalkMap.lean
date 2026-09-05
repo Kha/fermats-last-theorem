@@ -77,4 +77,3 @@ theorem solution
   rw [h1, IsIso.hom_inv_id_apply, TopCat.Presheaf.germ_stalkSpecializes_apply]
   rfl
 
-#print axioms solution

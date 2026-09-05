@@ -34,4 +34,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hΔ : W.Δ
     exact hσ ζ hζ.pow_eq_one
   exact ZMod.val_injective p (hζ.pow_inj (ZMod.val_lt _) (ZMod.val_lt _) key)
 
-#print axioms solution

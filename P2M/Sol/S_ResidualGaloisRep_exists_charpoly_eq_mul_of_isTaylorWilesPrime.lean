@@ -103,4 +103,3 @@ theorem solution
   refine ⟨α, β, hne, ?_⟩
   rw [hcp, ← LinearMap.charpoly_toMatrix (ρbar.ρ τ) b, hmat, hM]
 
-#print axioms solution

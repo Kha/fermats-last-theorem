@@ -523,4 +523,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_relf
 theorem solution (N : ℕ) [NeZero N] (hN : Squarefree N) : IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (modularFunctionFieldFull N) = dedekindPsi N :=
   ModularCurve.relfinrank_full_of_squarefree N hN
 
-#print axioms solution

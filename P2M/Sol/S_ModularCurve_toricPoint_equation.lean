@@ -1112,4 +1112,3 @@ theorem solution (K : Type*) [Field K] [CharZero K] (p : ℕ) [NeZero p] (c : K)
     (tateBase K p).toAffine.Equation (toricPoint K p c).1 (toricPoint K p c).2 :=
   ModularCurve.toricPoint_equation K p c hc0 hc1
 
-#print axioms solution

@@ -702,4 +702,3 @@ theorem solution
   · exact Or.inl hj'
   · exact Or.inr hj'
 
-#print axioms solution

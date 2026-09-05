@@ -3612,4 +3612,3 @@ theorem solution (F : Type) [Field F] [NumberField F] :
       (principalIdeles (𝓞 F) F).subgroupOf (NumberField.TateGlobal.normOneIdeles F)) :=
   M4aLocalCFT.FujisakiC2c.compactSpace_normOneIdeleClass_impl F
 
-#print axioms solution

@@ -408,4 +408,3 @@ theorem solution
   · intro g x hx
     exact hu₁.level_invariant g x (Subgroup.mem_inf.mpr ⟨(Subgroup.mem_inf.mp hx).1.2, (Subgroup.mem_inf.mp hx).2⟩)
 
-#print axioms solution

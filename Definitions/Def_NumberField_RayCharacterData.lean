@@ -73,13 +73,3 @@ end M4aP2
 
 end
 
-#print axioms M4aP2.signAt
-#print axioms M4aP2.chiIdeal
-#print axioms M4aP2.IsParity
-#print axioms M4aP2.chiFin
-#print axioms M4aP2.IsPrimitiveMod
-#print axioms M4aP2.addChar
-#print axioms M4aP2.gaussSumAt
-#print axioms M4aP2.IsGaussDatum
-#print axioms M4aP2.isParity_one_empty
-#print axioms M4aP2.isPrimitiveMod_top

@@ -73,4 +73,3 @@ theorem solution
         (fun j _ => hF b (Finset.mem_insert_self b s) j) m).trans (hc b (Finset.mem_insert_self b s)))
       (ih (fun i hi => hF i (Finset.mem_insert_of_mem hi)) (fun i hi => hc i (Finset.mem_insert_of_mem hi))) n
 
-#print axioms solution

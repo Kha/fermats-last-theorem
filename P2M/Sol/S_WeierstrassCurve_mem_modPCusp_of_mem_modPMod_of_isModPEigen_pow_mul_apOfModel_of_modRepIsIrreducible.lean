@@ -167,4 +167,3 @@ theorem solution
     ψ ∈ modPCusp N' k' F :=
   CuspidalLowPoint.main p hp2 W hΔ hirr N' hpN' S₀ hS₀fin hS₀p k' hk' j F ψ mu hψ heig hmu
 
-#print axioms solution

@@ -336,4 +336,3 @@ theorem solution
         Algebra.IsUnramifiedAt (R p)[X] P :=
   ModularCurve.XHDRModelAtP.OggUnramHAux.main M H p hj v hv
 
-#print axioms solution

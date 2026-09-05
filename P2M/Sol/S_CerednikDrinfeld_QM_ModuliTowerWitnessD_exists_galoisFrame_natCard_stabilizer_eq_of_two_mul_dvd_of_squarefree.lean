@@ -164,4 +164,3 @@ theorem solution
   rw [hmul, ← h3]
   ring
 
-#print axioms solution

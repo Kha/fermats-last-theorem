@@ -787,4 +787,3 @@ theorem _p2m_restate_check
         arithmeticGalois (modularFunctionFieldFull (N * q)) σ • Q₂ j = Q₂ j) :=
   solution P hqN W hWne B Kc g₀ hRR
 
-#print axioms solution

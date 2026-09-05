@@ -83,4 +83,3 @@ theorem solution
     (ModularCurve.genusFF_laurentBaseChange_gamma1_mul_add_one_le_two_mul_genusFF_igusaFunctionFieldX1C_add_natCard
       p M hM hpM Ω₀ w jbar rfl)
 
-#print axioms solution

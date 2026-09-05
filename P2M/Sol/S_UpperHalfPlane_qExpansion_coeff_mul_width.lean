@@ -88,4 +88,3 @@ theorem solution (f : UpperHalfPlane → ℂ) (h₀ : ℝ) (hh₀ : 0 < h₀)
       if m' ∣ i then PowerSeries.coeff (i / m') (UpperHalfPlane.qExpansion h₀ f) else 0 :=
   WidthChange.main f h₀ hh₀ hper hhol hbdd m' hm' i
 
-#print axioms solution

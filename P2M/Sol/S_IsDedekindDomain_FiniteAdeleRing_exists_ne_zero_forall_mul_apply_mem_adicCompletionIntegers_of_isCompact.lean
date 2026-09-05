@@ -38,8 +38,6 @@ theorem gate_empty : ∃ s : R, s ≠ 0 ∧ ∀ y ∈ (∅ : Set (FiniteAdeleRin
 
 end M4aP3B.Rows.CompactDenominator
 
-#print axioms M4aP3B.Rows.CompactDenominator.exists_ne_zero_forall_mul_apply_mem_adicCompletionIntegers_of_isCompact_impl
-#print axioms M4aP3B.Rows.CompactDenominator.gate_empty
 
 theorem solution
     (R K : Type*) [CommRing R] [IsDedekindDomain R] [Field K] [Algebra R K] [IsFractionRing R K]

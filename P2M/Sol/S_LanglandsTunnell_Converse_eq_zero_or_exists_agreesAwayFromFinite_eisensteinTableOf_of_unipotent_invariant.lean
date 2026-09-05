@@ -948,4 +948,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_LanglandsTunnell_Converse_eq_zero_or_exists_agreesAwayFromFinite_eisensteinTableOf_of_unipotent_invariant.C4bWall"
 
-#print axioms solution

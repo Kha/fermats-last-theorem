@@ -224,4 +224,3 @@ theorem solution
     push_cast
     nlinarith [h12, hμZ]
 
-#print axioms solution

@@ -114,4 +114,3 @@ theorem solution
     rw [← Category.assoc, hc1, Category.assoc, hsq', ← Category.assoc, ← Spec.map_comp, ← CommRingCat.ofHom_comp]
     rfl
 
-#print axioms solution

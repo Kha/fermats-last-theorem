@@ -2071,4 +2071,3 @@ theorem solution (W : WeierstrassCurve ℤ) (hΔ : W.Δ ≠ 0)
       WeierstrassCurve.apply_eq_self_of_galoisRep_eq_one_of_pow_eq_one W 3 hΔ σ hσ μ hμ)
     hunr hle2
 
-#print axioms solution

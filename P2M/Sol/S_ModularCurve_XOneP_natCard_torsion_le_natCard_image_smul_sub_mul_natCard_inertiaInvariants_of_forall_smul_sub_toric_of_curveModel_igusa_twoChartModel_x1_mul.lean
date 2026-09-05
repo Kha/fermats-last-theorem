@@ -357,4 +357,3 @@ theorem solution
     γ hγI hγL hγ hdisp
     (fun σ hσI hσL x hx ⟨z, y, h1, h2, h3⟩ => hfix σ hσI hσL x hx z y h1 h2 h3)
 
-#print axioms solution

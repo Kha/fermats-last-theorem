@@ -147,4 +147,3 @@ theorem solution
       (inducedCoeff K ν) (inducedCoeff K (ν * χA.comp (M4aHerbrand.GenuineDescent.genuineBaseChange ℚ K).idelicNorm))
       hc W).1.mp hW
 
-#print axioms solution

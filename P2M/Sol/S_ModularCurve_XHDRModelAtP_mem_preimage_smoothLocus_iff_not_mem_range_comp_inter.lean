@@ -163,4 +163,3 @@ theorem solution
       (pullback (toBase p (ΓM M H) hj) (Spec.map (CommRingCat.ofHom ((IsLocalRing.residue ↥A).comp ρ)))).Opens) : Set _) ↔ _
   rw [hU, Set.mem_compl_iff, hiff]
 
-#print axioms solution

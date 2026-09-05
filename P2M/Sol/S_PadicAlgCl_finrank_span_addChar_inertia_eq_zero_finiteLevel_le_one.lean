@@ -166,4 +166,3 @@ theorem solution
       ≤ Module.finrank k k := LinearMap.finrank_le_finrank_of_injective hinj
     _ = 1 := Module.finrank_self k
 
-#print axioms solution

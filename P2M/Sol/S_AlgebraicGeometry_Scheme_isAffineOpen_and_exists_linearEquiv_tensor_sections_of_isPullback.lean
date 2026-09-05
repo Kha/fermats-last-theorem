@@ -96,4 +96,3 @@ theorem solution
       V (pullback.fst fX fY ⁻¹ᵁ U ⊓ pullback.snd fX fY ⁻¹ᵁ V) (p₁ ⁻¹ᵁ U ⊓ p₂ ⁻¹ᵁ V) inf_le_right hW.le inf_le_right b
   rw [AlgEquiv.toLinearEquiv_apply, AlgEquiv.trans_apply, hσ, he₀ a b, map_mul, h1, h2]
 
-#print axioms solution

@@ -38,4 +38,3 @@ theorem solution
   exact ⟨AlgebraicCurve.map_mem_polarDifferentials_of_constantFieldExtension_of_isAlgClosed K F K' F' hfg hfg' hgen hdK hdK' S,
     AlgebraicCurve.mem_span_image_polarDifferentials_of_constantFieldExtension_of_isAlgClosed K F K' F' hfg hfg' hgen hdK hdK' S⟩
 
-#print axioms solution

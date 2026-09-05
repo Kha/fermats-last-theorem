@@ -357,4 +357,3 @@ theorem solution (K : Type*) [Field K] [PerfectField K] (N : ℕ) [NeZero N] :
 example : ∀ (K : Type*) [Field K] [PerfectField K] (N : ℕ) [NeZero N],
     HasPrincipalDivisors K (modularFunctionFieldC K N) := @solution
 
-#print axioms solution

@@ -843,4 +843,3 @@ theorem solution
   rw [integral_const_mul]
   ring
 
-#print axioms solution

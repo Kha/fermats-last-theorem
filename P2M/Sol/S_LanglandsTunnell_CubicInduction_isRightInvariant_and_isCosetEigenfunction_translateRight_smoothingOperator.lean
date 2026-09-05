@@ -747,4 +747,3 @@ theorem solution
   isRightInvariant_and_isCosetEigenfunction_translateRight_smoothingOperator_of_integrable lam1 lam2 φ f
     (integrable_mul_of_isSmoothingKernel _hφ _hc) _hφp h _hh _hK _hT1 _hT2
 
-#print axioms solution

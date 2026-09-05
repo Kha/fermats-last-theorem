@@ -240,4 +240,3 @@ theorem solution (N : ℕ) [NeZero N] (p : ℕ) (hp : p.Prime) (hHI : ModularCur
   have h := congrArg Subtype.val (hx𝔪 a a.2)
   simpa using h
 
-#print axioms solution

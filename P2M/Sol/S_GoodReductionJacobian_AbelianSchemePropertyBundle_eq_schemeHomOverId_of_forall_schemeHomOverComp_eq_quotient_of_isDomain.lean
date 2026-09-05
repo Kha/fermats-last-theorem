@@ -173,4 +173,3 @@ theorem solution
     σ = NeronModelInfra.schemeHomOverId f :=
   RigidConnT.main hA L σ hσ 𝔭 hfix
 
-#print axioms solution

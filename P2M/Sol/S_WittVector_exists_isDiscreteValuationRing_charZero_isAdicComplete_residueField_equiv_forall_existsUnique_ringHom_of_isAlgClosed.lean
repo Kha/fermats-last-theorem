@@ -75,4 +75,3 @@ theorem solution
   · rw [hres]; exact hf
   · rw [← hres]; exact hg
 
-#print axioms solution

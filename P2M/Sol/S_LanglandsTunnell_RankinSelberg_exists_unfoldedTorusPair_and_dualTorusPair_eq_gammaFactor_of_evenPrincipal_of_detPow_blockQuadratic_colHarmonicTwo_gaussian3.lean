@@ -333,4 +333,3 @@ theorem solution
     fun s hs => hA s (lt_of_le_of_lt (le_max_left _ _) hs), fun s hs => hB s (lt_of_le_of_lt (le_max_right _ _) hs)⟩
   exact mul_ne_zero (mul_ne_zero (Complex.ofReal_ne_zero.2 (by positivity)) (pow_ne_zero _ (by norm_num))) hρ0
 
-#print axioms solution

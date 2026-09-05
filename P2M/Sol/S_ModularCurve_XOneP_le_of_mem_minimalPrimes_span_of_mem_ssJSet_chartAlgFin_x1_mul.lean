@@ -468,4 +468,3 @@ theorem solution
     p M hM hpM L ζ hζ K₂ hK₂ A hAp hζA j₂ hj₂ ϖ hϖ (y.under ↥(chartAlgFin A (↥K₂) j₂)) hyϖ₂ hss₂
   exact SSCrossRingK11.le_of_mem_minimalPrimes_of_bottom G ϖ y hstab hbottom
 
-#print axioms solution

@@ -421,4 +421,3 @@ theorem solution
       exact (mul_right_inj' (pow_ne_zero n hη)).symm
     · rw [twistHom_twoRowPointLocal χ v hχ, ← add_assoc]
       exact (mul_right_inj' (pow_ne_zero _ hη)).symm
-#print axioms solution

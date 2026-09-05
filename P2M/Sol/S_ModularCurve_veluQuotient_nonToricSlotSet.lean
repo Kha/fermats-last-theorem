@@ -1327,4 +1327,3 @@ theorem solution (K : Type*) [CommRing K] (p : ℕ) [NeZero p]
       (tateLaurent K).map (qTwist (ζ ^ b)) :=
   ModularCurve.veluQuotient_nonToricSlotSet K p hp ζ hζ b hE
 
-#print axioms solution

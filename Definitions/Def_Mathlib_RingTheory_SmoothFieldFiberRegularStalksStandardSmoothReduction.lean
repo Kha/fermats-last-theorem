@@ -123,7 +123,6 @@ theorem kmf2_fiber_not_isStandardSmooth_dualNumber_of_standardSmooth_case
 info: 'kmf2_fiber_isLocalization_primeCompl_congr' depends on axioms: [propext, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_isLocalization_primeCompl_congr
 
 /--
 info: 'kmf2_fiber_input_of_standardSmooth_case' depends on axioms: [propext,
@@ -131,7 +130,6 @@ info: 'kmf2_fiber_input_of_standardSmooth_case' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_input_of_standardSmooth_case
 
 /--
 info: 'kmf2_fiber_standardSmooth_case_of_input' depends on axioms: [propext,
@@ -139,7 +137,6 @@ info: 'kmf2_fiber_standardSmooth_case_of_input' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_standardSmooth_case_of_input
 
 /--
 info: 'kmf2_fiber_input_iff_standardSmooth_case' depends on axioms: [propext,
@@ -147,7 +144,6 @@ info: 'kmf2_fiber_input_iff_standardSmooth_case' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_input_iff_standardSmooth_case
 
 /--
 info: 'kmf2_fiber_isRegularLocalRing_localization_atPrime_of_isPrincipalIdealRing' depends on axioms: [propext,
@@ -155,7 +151,6 @@ info: 'kmf2_fiber_isRegularLocalRing_localization_atPrime_of_isPrincipalIdealRin
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_isRegularLocalRing_localization_atPrime_of_isPrincipalIdealRing
 
 /--
 info: 'kmf2_fiber_isRegularRing_polynomial' depends on axioms: [propext,
@@ -163,7 +158,6 @@ info: 'kmf2_fiber_isRegularRing_polynomial' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_isRegularRing_polynomial
 
 /--
 info: 'kmf2_fiber_isRegularLocalRing_localization_atPrime_polynomial' depends on axioms: [propext,
@@ -171,7 +165,6 @@ info: 'kmf2_fiber_isRegularLocalRing_localization_atPrime_polynomial' depends on
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_isRegularLocalRing_localization_atPrime_polynomial
 
 /--
 info: 'kmf2_fiber_sat_smooth_polynomial' depends on axioms: [propext,
@@ -179,7 +172,6 @@ info: 'kmf2_fiber_sat_smooth_polynomial' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_sat_smooth_polynomial
 
 /--
 info: 'kmf2_fiber_gate_input_clause_polynomial' depends on axioms: [propext,
@@ -187,7 +179,6 @@ info: 'kmf2_fiber_gate_input_clause_polynomial' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_gate_input_clause_polynomial
 
 /--
 info: 'kmf2_fiber_isRegularLocalRing_localization_atPrime_of_isReduced_of_mem_minimalPrimes' depends on axioms: [propext,
@@ -195,7 +186,6 @@ info: 'kmf2_fiber_isRegularLocalRing_localization_atPrime_of_isReduced_of_mem_mi
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_isRegularLocalRing_localization_atPrime_of_isReduced_of_mem_minimalPrimes
 
 /--
 info: 'kmf2_fiber_falsif_not_standardSmooth_case_dropping_standardSmooth' depends on axioms: [propext,
@@ -203,7 +193,6 @@ info: 'kmf2_fiber_falsif_not_standardSmooth_case_dropping_standardSmooth' depend
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_falsif_not_standardSmooth_case_dropping_standardSmooth
 
 /--
 info: 'kmf2_fiber_not_isStandardSmooth_dualNumber_of_standardSmooth_case' depends on axioms: [propext,
@@ -211,4 +200,3 @@ info: 'kmf2_fiber_not_isStandardSmooth_dualNumber_of_standardSmooth_case' depend
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmf2_fiber_not_isStandardSmooth_dualNumber_of_standardSmooth_case

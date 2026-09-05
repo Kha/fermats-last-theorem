@@ -45,4 +45,3 @@ theorem solution
   | add x y _ _ hx hy => rw [smul_add, hx, hy]
   | neg x _ hx => rw [smul_neg, hx]
 
-#print axioms solution

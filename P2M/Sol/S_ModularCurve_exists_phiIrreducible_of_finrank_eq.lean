@@ -155,4 +155,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_exists_phiIrreducible_of_fin
 theorem solution (N : ℕ) [NeZero N] (h : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N) : ∃ data : ModularPolynomialData N, PhiIrreducible data :=
   ModularCurve.exists_phiIrreducible_of_finrank_eq N h
 
-#print axioms solution

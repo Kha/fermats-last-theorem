@@ -50,4 +50,3 @@ theorem solution
   show ((Λ.shGenLift (O.pts (x : JZero (N₀ * p)))).1 ≫ F.openImm.1) = barPt A ≫ shPt A ≫ σ.1
   rw [← hyK x, Category.assoc, ← Category.assoc (barPt A), hbase, Category.assoc, hσ]
 
-#print axioms solution

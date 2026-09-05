@@ -268,4 +268,3 @@ theorem solution
       (SemilinearAut.ofAlgAut σbar • Qp))) (SemilinearAut.ofAlgAut σbar • P)).mpr (by rwa [smul_inv_smul])
   rwa [← mul_smul, ← map_inv, ← map_mul, hDeq] at hB3
 
-#print axioms solution

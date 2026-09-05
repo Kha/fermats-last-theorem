@@ -182,4 +182,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_weightTwo_coeff_sum_s
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] (ℓ : ℕ) [NeZero ℓ] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) ℓ) (f : LaurentSeries K) (n : ℤ) : ((ℓ * ℓ) • qExpand K (ℓ * ℓ) f + ∑ b ∈ Finset.range ℓ, qTwist (ζ ^ b) f).coeff ((ℓ : ℤ) * n) = (ℓ : K) * (f.coeff ((ℓ : ℤ) * n) + if (ℓ : ℤ) ∣ n then (ℓ : K) * f.coeff (n / ℓ) else 0) :=
   ModularCurve.PhiGen.weightTwo_coeff_sum_slots ℓ ζ hζ f n
 
-#print axioms solution

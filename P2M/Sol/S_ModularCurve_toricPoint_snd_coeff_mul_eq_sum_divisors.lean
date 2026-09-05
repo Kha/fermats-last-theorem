@@ -1646,4 +1646,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_mul_eq_
 theorem solution (K : Type*) [Field K] (p : ℕ) (hp : 0 < p) (c : K) {M : ℕ} (hM : M ≠ 0) : (toricPoint K p c).2.coeff ((p * M : ℕ) : ℤ) = ∑ e ∈ M.divisors, (((e.choose 2 : ℕ) : K) * (c ^ e - c⁻¹ ^ e) - (e : K) * c⁻¹ ^ e + (e : K)) :=
   ModularCurve.toricPoint_snd_coeff_mul' K p hp c hM
 
-#print axioms solution

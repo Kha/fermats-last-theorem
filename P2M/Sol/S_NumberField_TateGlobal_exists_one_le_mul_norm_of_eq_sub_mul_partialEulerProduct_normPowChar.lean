@@ -1479,4 +1479,3 @@ theorem solution
     unfold NumberField.ShiftedZetaLower.zetaT
     exact NumberField.TateGlobal.ThreeFourOneSites.one_le_norm_tprod_absNorm_three_four_one K T hσ u
 
-#print axioms solution

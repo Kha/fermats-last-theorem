@@ -2159,4 +2159,3 @@ theorem solution
                 (tateLaurent K).map (qExpand K (m * 2)) :=
   S2C.of_level_two K (S2C.level_two K) m
 
-#print axioms solution

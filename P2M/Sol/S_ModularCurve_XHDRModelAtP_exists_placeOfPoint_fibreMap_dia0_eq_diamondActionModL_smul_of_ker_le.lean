@@ -625,4 +625,3 @@ theorem solution
   rw [AlgEquiv.symm_symm] at hh
   exact ⟨h, hh⟩
 
-#print axioms solution

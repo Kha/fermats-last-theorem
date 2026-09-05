@@ -74,4 +74,3 @@ theorem solution
     rw [← ZMod.natCast_zmod_val x, h, Nat.cast_sub hqn.le, ZMod.natCast_self, zero_sub]
   exact ArithAux.skeleton (q * ℓ) q _ _ hodd h3 hq0 hJ₁ hJ₂pos hJ₂lt hJ₂q hJ₂nq
 
-#print axioms solution

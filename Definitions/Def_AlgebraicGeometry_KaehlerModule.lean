@@ -98,7 +98,6 @@ end
 
 /-- info: 'AlgebraicGeometry.Scheme.Hom.kaehlerToSections_add' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms AlgebraicGeometry.Scheme.Hom.kaehlerToSections_add
 
 /--
 info: 'AlgebraicGeometry.Scheme.Hom.kaehlerPresheaf_nontrivial_polynomial' depends on axioms: [propext,
@@ -106,4 +105,3 @@ info: 'AlgebraicGeometry.Scheme.Hom.kaehlerPresheaf_nontrivial_polynomial' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms AlgebraicGeometry.Scheme.Hom.kaehlerPresheaf_nontrivial_polynomial

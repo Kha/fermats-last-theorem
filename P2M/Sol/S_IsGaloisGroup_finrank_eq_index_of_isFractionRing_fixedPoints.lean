@@ -83,4 +83,3 @@ theorem solution
   exact FracDegFixedAux.finrank_eq_index_core A B (FixedPoints.subalgebra A B H) G H K E
     (FractionRing B)
 
-#print axioms solution

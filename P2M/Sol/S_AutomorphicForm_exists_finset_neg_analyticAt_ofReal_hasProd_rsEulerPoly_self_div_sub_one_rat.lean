@@ -78,4 +78,3 @@ theorem solution
     rw [key]
     exact hprod s hσ₀
 
-#print axioms solution

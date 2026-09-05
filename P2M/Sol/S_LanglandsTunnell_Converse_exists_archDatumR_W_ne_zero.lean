@@ -1772,4 +1772,3 @@ theorem solution (P : RealArchParam) :
   | principal u₁ a₁ u₂ a₂ => exact LanglandsTunnell.Converse.exists_archDatumR_principal_W_ne_zero u₁ a₁ u₂ a₂
   | discrete u k hk => exact LanglandsTunnell.Converse.exists_archDatumR_discrete_GL u k hk
 
-#print axioms solution

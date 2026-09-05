@@ -344,4 +344,3 @@ theorem solution (N : ℕ) [NeZero N]
           laurentBaseChange (AlgebraicClosure ℚ) (modularFunctionFieldFull N)) ∣ (3 : ℤ) :=
   ModularCurve.ord_jBar_dvd_three_of_pos_of_forall_isRoot_hasRamBound N data htrio v hv
 
-#print axioms solution

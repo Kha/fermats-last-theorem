@@ -563,5 +563,4 @@ theorem solution
   omega
 
 section Probes
-#print axioms solution
 end Probes

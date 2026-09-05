@@ -262,4 +262,3 @@ theorem solution
         (Or.inr ⟨wC, hC, hall, Or.inl ⟨hk, rfl⟩⟩) D S hS hJ
       exact ⟨_, ⟨pkg.1, pkg.2.1, pkg.2.2.1, pkg.2.2.2.1, pkg.2.2.2.2.1, pkg.2.2.2.2.2, hzeta⟩, hpair⟩
 
-#print axioms solution

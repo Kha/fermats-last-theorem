@@ -1646,4 +1646,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_zero.Mo
 theorem solution (K : Type*) [Field K] (p : ℕ) (c : K) : (toricPoint K p c).2.coeff 0 = c ^ 2 / (1 - c) ^ 3 :=
   ModularCurve.toricPoint_snd_coeff_zero K p c
 
-#print axioms solution

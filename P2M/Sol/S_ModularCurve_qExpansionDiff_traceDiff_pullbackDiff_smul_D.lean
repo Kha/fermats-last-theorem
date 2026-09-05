@@ -124,4 +124,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_qExpansionDiff_traceDiff_pul
 theorem solution {K F F' L : Type*} [Field K] [Field F] [Field F'] [Algebra K F] [Algebra K F'] [Algebra F F'] [IsScalarTower K F F'] [Field L] [Algebra K L] {σ₀ : F →ₐ[K] LaurentSeries L} {φ₀ : Ω[F⁄K] →ₗ[K] LaurentSeries L} (hφ₀ : IsQExpansionDiffAlong σ₀ φ₀) {t : Ω[F'⁄K] →ₗ[F] Ω[F⁄K]} (ht : IsTraceDiff K F F' t) (β : F →ₐ[K] F') {x : F} {h : F'} (hD : KaehlerDifferential.D K F' (β x) = h • KaehlerDifferential.map K K F F' (KaehlerDifferential.D K F x)) (f : F) : φ₀ (t (pullbackDiff β (f • KaehlerDifferential.D K F x))) = σ₀ (Algebra.trace F F' (β f * h)) * thetaL L (σ₀ x) :=
   ModularCurve.qExpansionDiff_traceDiff_pullbackDiff_smul_D hφ₀ ht β hD f
 
-#print axioms solution

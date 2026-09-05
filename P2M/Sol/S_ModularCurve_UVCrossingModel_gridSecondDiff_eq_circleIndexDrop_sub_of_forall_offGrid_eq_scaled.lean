@@ -208,4 +208,3 @@ theorem solution
     simp only [hσ]
     rw [h0, zero_add, hbot']
 
-#print axioms solution

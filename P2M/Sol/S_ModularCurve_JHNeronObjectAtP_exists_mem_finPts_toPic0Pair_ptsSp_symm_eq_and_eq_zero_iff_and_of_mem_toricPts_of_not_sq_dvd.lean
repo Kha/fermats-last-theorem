@@ -116,4 +116,3 @@ theorem solution
   · intro x hx s hs sκ hsκ
     exact ModularCurve.JHNeronObjectAtP.ptsSp_symm_eq_zero_of_mem_toricPts_pow p M H hpM A hA Λ O n hn x hx s hs sκ hsκ
 
-#print axioms solution

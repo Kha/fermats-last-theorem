@@ -105,4 +105,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_
 theorem solution (N : ℕ) [NeZero N] : ∃ P : Polynomial (Polynomial ℤ), P.Monic ∧ P.eval₂ evalAtJ (jqN N) = 0 :=
   ModularCurve.exists_monic_evalAtJ_jqN_eq_zero N
 
-#print axioms solution

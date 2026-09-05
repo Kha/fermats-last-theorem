@@ -336,19 +336,12 @@ end ModularCurve
 end
 
 #check @ModularCurve.finiteAlong_heckeAlphaC
-#print axioms ModularCurve.finiteAlong_heckeAlphaC
 #check @ModularCurve.finiteAlong_heckeBetaC
-#print axioms ModularCurve.finiteAlong_heckeBetaC
 #check @ModularCurve.separableAlong_heckeAlphaC_of_isSeparable
-#print axioms ModularCurve.separableAlong_heckeAlphaC_of_isSeparable
 #check @ModularCurve.separableAlong_heckeBetaC_of_isSeparable
-#print axioms ModularCurve.separableAlong_heckeBetaC_of_isSeparable
 #check @ModularCurve.heckeDivFibreDescends_of_isSeparable
-#print axioms ModularCurve.heckeDivFibreDescends_of_isSeparable
 #check @ModularCurve.isSeparable_jqModC_of_separable_phi_map
-#print axioms ModularCurve.isSeparable_jqModC_of_separable_phi_map
 #check @ModularCurve.heckeDivFibreDescends_of_separable_phi_map
-#print axioms ModularCurve.heckeDivFibreDescends_of_separable_phi_map
 
 theorem solution (k : Type*) [Field k] (N q : ℕ) [NeZero N] [NeZero q] :
     AlgebraicCurve.FiniteAlong k (ModularCurve.heckeAlphaC k N q) :=

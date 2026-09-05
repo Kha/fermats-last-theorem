@@ -198,4 +198,3 @@ theorem solution
     ring
   rw [hint]
 
-#print axioms solution

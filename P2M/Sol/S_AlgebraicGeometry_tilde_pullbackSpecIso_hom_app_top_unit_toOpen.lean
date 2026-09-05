@@ -46,4 +46,3 @@ theorem solution {R S : CommRingCat.{u}}
   simp only [ModuleCat.hom_comp, LinearMap.comp_apply, Adjunction.comp_unit_app, Functor.comp_map] at h
   exact h
 
-#print axioms solution

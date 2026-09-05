@@ -8,4 +8,3 @@ theorem solution {K L : Type*} [Field K] [Field L] [Algebra K L] [IsAlgClosed K]
   minpoly.degree_eq_one_iff.mp
     (IsAlgClosed.degree_eq_one_of_irreducible K (minpoly.irreducible hx.isIntegral))
 
-#print axioms solution

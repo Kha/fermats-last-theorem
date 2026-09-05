@@ -908,4 +908,3 @@ theorem solution
               (ModularCurve.heckeBetaModLH K (M / p) (ModularCurve.infSubgroup p M H hpM) q' (Ψ x))))  := by
   exact ⟨D6aT.conj_T p hp2 M hpM hpM2 H hHp S hin Pl hPl K hj 𝔛 Λ hrepΛ O hD hDQ hsep ajQ kQ ajbar εbar hpoinc hajQε hajQ hkQ₁ hkQ₂ hajbar hajbar_over hεbar hεbar_aj hpts_law hAJ R hRA hRdvr hRirr hRfix hRmax 𝒢 Δ hΔinj hΔlev hΔgal hΔhecke wgen hwgen θ hθ hwθ ιK hιK Ψ hΨ, D6aT.conj_U p hp2 M hpM hpM2 H hHp S hin Pl hPl K hj 𝔛 Λ hrepΛ O hD hDQ hsep ajQ kQ ajbar εbar hpoinc hajQε hajQ hkQ₁ hkQ₂ hajbar hajbar_over hεbar hεbar_aj hpts_law hAJ R hRA hRdvr hRirr hRfix hRmax 𝒢 Δ hΔinj hΔlev hΔgal hΔhecke wgen hwgen θ hθ hwθ ιK hιK Ψ hΨ⟩
 
-#print axioms solution

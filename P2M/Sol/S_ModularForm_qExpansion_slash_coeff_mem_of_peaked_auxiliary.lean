@@ -948,4 +948,3 @@ theorem solution
     push_cast
     nlinarith [hrδ]
 
-#print axioms solution

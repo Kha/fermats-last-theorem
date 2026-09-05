@@ -193,4 +193,3 @@ theorem solution
       Series.comp_assoc _ _ _ (ccY _) (Series.constantCoeff_comp ccw ccρ'B), hc₀',
       ← Series.comp_assoc _ _ _ (ccY _) ccρ''B]
 
-#print axioms solution

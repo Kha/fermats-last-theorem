@@ -247,5 +247,3 @@ theorem solution
     refine hπinj _ _ (hfix a) (hfix b) ?_
     rw [atom_composite 𝔫 h𝔫 a, atom_composite 𝔫 h𝔫 b, hab]
 
-#print axioms solution
-#print axioms atom_finite

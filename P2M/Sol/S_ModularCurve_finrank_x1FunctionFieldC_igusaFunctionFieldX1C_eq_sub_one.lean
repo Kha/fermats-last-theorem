@@ -113,4 +113,3 @@ theorem solution
       exact h2
     · exact absurd (Fact.out : Nat.Prime 4) (by norm_num)
 
-#print axioms solution

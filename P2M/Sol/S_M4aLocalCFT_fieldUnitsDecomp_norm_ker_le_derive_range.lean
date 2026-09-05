@@ -191,4 +191,3 @@ theorem solution {K L : Type*} [Field K] [Field L] [Algebra K L] (A : ValuationS
   exact hbeq.symm
 
 #check @solution
-#print axioms solution

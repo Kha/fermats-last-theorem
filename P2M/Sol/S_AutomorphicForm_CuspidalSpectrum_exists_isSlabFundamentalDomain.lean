@@ -21,4 +21,3 @@ theorem solution
     AutomorphicForm.exists_isFundamentalDomain_globalPoints_range_restrict_ideleNorm_det_Icc F 1 2
   exact ⟨1, 2, S, ⟨one_pos, one_lt_two, hS, hFD⟩⟩
 
-#print axioms solution

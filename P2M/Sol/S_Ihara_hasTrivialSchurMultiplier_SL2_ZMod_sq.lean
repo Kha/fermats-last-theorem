@@ -996,4 +996,3 @@ theorem solution (q : ℕ) (hq : q.Prime) (hq5 : 5 ≤ q)
     Ihara.HasTrivialSchurMultiplier SL(2, ZMod (q ^ 2)) :=
   Ihara.hasTrivialSchurMultiplier_SL2_ZMod_sq_impl q hq hq5 hperf IH
 
-#print axioms solution

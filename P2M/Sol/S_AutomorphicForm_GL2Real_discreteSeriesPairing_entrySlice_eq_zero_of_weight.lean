@@ -2989,7 +2989,6 @@ theorem solution
   · exact discreteSeriesPairing_eq_zero_of_le_of_two_dvd hfc hK (htype p) hmj hpar r hr
   · exact discreteSeriesPairing_eq_zero_of_not_two_dvd hneg (le_trans (Nat.le_add_left 2 m) hmj) hpar r
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_AutomorphicForm_GL2Real_discreteSeriesPairing_entrySlice_eq_zero_of_weight.FLT P2MW.S_AutomorphicForm_GL2Real_discreteSeriesPairing_entrySlice_eq_zero_of_weight.FLT.BandStripFubini"

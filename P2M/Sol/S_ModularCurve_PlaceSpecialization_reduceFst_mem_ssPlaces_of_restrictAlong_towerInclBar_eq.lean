@@ -282,4 +282,3 @@ theorem solution
   refine ⟨(mem_ssPlaces_iff q N k).mpr ((isSupersingularPlace_iff q N k _).mpr ?_), hev.trans hxa⟩
   exact ⟨hrat, hc.isAffineGeomPlace, by rw [hev, hxa]; exact hss⟩
 
-#print axioms solution

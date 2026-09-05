@@ -244,4 +244,3 @@ theorem solution
       ∫ g, f g ∂μ.withDensity ρ' = ∫ g, f g ∂μ.withDensity ρ :=
   Admissible.integral_withDensity_eq_of_invariant μ μH hinv hρ hρ' hρ1 hρ'1 hρt hρ't hfinv hfi
 
-#print axioms solution

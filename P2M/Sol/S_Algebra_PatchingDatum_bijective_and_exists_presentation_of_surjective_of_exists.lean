@@ -25,4 +25,3 @@ theorem solution
     P.bijective_and_free_of_surjective hℓ φ hφ hcompat
   exact ⟨hbij, ⟨M, iACG, iModR, iModT, iNT, hcompat, hfreeR, hfreeT, hann⟩, r, f, ⟨e⟩⟩
 
-#print axioms solution

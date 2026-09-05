@@ -740,4 +740,3 @@ theorem solution
   exact ModularCurve.IgusaScheme.exists_mem_ssJSet_tmul_sub_mem_of_ker_le_of_ker_comp_le_tensor_chartAlgFin_mul_of_not_dvd
     M p hpM (IsLocalRing.ResidueField ↥A₀) ι hι w hw (σ 0) h0 v hv 𝔮 (hall _ hP0min) (hall _ hP1min)
 
-#print axioms solution

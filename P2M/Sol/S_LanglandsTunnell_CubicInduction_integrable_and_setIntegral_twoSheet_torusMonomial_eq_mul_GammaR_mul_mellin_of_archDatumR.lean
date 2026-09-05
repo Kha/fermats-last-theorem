@@ -297,4 +297,3 @@ theorem solution
     rw [hs2, ← hEq, ← integral_const_mul]
     exact setIntegral_congr_fun measurableSet_Ioi inner
 
-#print axioms solution

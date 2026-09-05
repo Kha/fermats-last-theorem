@@ -61,4 +61,3 @@ theorem solution
   rw [← hrange]
   exact (s ≫ DRLevel.bcMap (N₀ := N₀) ρO (IsLocalRing.residue O)).isClosedEmbedding.isClosed_range
 
-#print axioms solution

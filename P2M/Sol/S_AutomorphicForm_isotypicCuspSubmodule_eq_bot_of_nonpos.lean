@@ -37,4 +37,3 @@ theorem solution
     exact AutomorphicForm.not_isArithGenuineCuspRealizable_of_nonpos_of_lt_of_coversModCentre F c u d₁ d₂ T hc hd hcov Ψ'
       ⟨R, show Continuous R.toFun by rw [hR]; exact hφ.continuous⟩
 
-#print axioms solution

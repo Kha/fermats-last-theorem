@@ -56,4 +56,3 @@ theorem solution
 example (M : ℕ) [NeZero M] (H : Subgroup (ZMod M)ˣ) : IsCurveOver (AlgebraicClosure ℚ) ↥(xHFunctionFieldBar M H) :=
   (solution (AlgebraicClosure ℚ) M H).1
 
-#print axioms solution

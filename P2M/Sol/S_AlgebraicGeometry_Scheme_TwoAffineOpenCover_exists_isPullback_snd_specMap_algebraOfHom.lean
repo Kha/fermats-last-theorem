@@ -166,4 +166,3 @@ theorem solution
       g' ≫ Limits.pullback.fst c t = Limits.pullback.fst c (Scheme.TwoAffineOpenCover.specMap R Γ(T, W)) :=
   exists_isPullback_snd_specMap_algebraOfHom_aux c t W hW
 
-#print axioms solution

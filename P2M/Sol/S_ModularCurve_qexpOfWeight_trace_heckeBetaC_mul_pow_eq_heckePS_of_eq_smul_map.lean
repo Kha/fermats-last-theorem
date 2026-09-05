@@ -780,7 +780,6 @@ theorem solution
         hfnat, show (2 * (m : ℤ) - 1) = ((2 * m - 1 : ℕ) : ℤ) by omega, zpow_natCast]
     · rw [if_neg hd, if_neg (fun h' => hd (Int.natCast_dvd_natCast.mp h')), mul_zero]
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_ModularCurve_qexpOfWeight_trace_heckeBetaC_mul_pow_eq_heckePS_of_eq_smul_map.ModularCurve P2MW.S_ModularCurve_qexpOfWeight_trace_heckeBetaC_mul_pow_eq_heckePS_of_eq_smul_map.ModularCurve.CharQHeckeDiff"

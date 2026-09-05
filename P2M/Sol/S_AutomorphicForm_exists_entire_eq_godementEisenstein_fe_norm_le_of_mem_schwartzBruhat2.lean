@@ -267,4 +267,3 @@ theorem solution
       simp only [hH']
       exact hA' s h1 h2 (R' s (g * t)) (X (g * t)) _ (hHpos g) (hA s h1 h2 g hg) (hX1 (g * t)).le
 
-#print axioms solution

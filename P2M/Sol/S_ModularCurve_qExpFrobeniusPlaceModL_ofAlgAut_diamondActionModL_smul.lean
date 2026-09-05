@@ -362,4 +362,3 @@ theorem solution
     ModularCurve.QExpFrobBij.frobeniusPlace_eq_smul K (CohCarrier.GammaH N H') (ℓ := p),
     ← mul_smul, ← mul_smul, ModularCurve.QExpFrobBij.sigmaSL_mul_ofAlgAut K p N H' hN γ]
 
-#print axioms solution

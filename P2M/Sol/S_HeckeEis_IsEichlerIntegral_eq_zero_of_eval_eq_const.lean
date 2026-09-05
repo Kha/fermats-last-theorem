@@ -89,4 +89,3 @@ theorem solution {n : ℕ} {g : UpperHalfPlane → ℂ}
     g = 0 :=
   funext fun τ => HeckeEis.LadderAux.eq_zero_of_rung_zero_const hG hc τ
 
-#print axioms solution

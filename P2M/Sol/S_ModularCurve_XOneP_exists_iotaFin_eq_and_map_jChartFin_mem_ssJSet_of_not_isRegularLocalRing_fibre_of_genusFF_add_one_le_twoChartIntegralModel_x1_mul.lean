@@ -255,4 +255,3 @@ theorem solution
   exact congrArg (fun t => (pullback.fst (toBase A (↥K) j)
     (Spec.map (CommRingCat.ofHom (algebraMap A Ω₀)))).base t) (congrArg Subtype.val hv)
 
-#print axioms solution

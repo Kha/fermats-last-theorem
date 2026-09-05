@@ -504,6 +504,3 @@ end
 set_option pp.deepTerms true in
 set_option pp.proofs true in
 #check @solution
-#print axioms TWBridges.baseChangeAlong_isUnramifiedAt_of_forall_algHom_inertiaCharacter_eq_one
-#print axioms TWBridges.algHom_eq_of_baseChangeAlong_isEquiv
-#print axioms solution

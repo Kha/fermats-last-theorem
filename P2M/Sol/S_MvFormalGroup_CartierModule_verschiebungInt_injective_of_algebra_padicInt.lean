@@ -28,4 +28,3 @@ theorem solution
   have hn := congrArg (PowerSeries.coeff (p * n)) h
   rwa [PowerSeries.coeff_expand_mul, PowerSeries.coeff_expand_mul] at hn
 
-#print axioms solution

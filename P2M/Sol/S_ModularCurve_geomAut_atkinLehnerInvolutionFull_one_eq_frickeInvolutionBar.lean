@@ -15,4 +15,3 @@ theorem solution (q : ℕ) [Fact q.Prime] :
       = frickeInvolutionBar (1 * q) := by
   rw [atkinLehnerInvolutionFull_one_eq_frickeInvolutionFull, frickeInvolutionBar_def]
 
-#print axioms solution

@@ -330,4 +330,3 @@ theorem solution
     ∃ φ : ↥(chartAlgFin (N₀ * p) p) →+* A, f = Spec.map (CommRingCat.ofHom φ) ≫ ιFin (N₀ * p) p :=
   CoordSS.exists_eq_spec_map_comp_ιFin_of_crossing 𝔓 κ toκ red hker f uκ h₁ n hn
 
-#print axioms solution

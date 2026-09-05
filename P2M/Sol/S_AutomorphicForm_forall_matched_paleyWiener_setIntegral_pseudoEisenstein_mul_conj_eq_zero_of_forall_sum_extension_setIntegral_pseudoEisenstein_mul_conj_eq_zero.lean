@@ -337,4 +337,3 @@ theorem solution
     · exact hψtyM (j₁ i) s
     · exact hψtyM x.1 s
 
-#print axioms solution

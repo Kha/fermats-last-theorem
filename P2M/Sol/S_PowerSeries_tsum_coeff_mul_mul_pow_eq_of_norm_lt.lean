@@ -58,4 +58,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
   rw [← hp, pow_add]
   ring
 
-#print axioms solution

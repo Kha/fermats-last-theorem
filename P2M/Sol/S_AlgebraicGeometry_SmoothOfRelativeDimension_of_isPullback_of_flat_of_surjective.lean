@@ -182,4 +182,3 @@ theorem solution (n : ℕ)
   exact MorphismProperty.of_isPullback_of_descendsAlong (P := @SmoothOfRelativeDimension n)
     (Q := @Surjective ⊓ @Flat ⊓ @QuasiCompact) H ⟨⟨‹_›, ‹_›⟩, ‹_›⟩ ‹_›
 
-#print axioms solution

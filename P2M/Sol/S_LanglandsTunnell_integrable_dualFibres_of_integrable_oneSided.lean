@@ -705,4 +705,3 @@ theorem solution
     exact (hσ.integrable_comp T1.aestronglyMeasurable).mpr T1
   exact ⟨by exact T1, by simpa only [K9F2.Phi, K9F2.Zi] using T2⟩
 
-#print axioms solution

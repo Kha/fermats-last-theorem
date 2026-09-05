@@ -801,4 +801,3 @@ theorem solution
   rw [AlgEquiv.apply_symm_apply] at key
   rw [key]
 
-#print axioms solution

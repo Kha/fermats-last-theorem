@@ -523,4 +523,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_relf
 theorem solution (N : ℕ) [NeZero N] (hN : Squarefree N) {ℓ : ℕ} (hℓ : ℓ.Prime) (hℓN : ¬ ℓ ∣ N) : IntermediateField.relfinrank (modularFunctionFieldFull N) (modularFunctionFieldFull (N * ℓ)) = ℓ + 1 :=
   ModularCurve.relfinrank_full_mul_prime N hN hℓ hℓN
 
-#print axioms solution

@@ -50,4 +50,3 @@ theorem solution (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (W : WeierstrassCurve 
       hker hpS (fun q hq hqS hdvd => hqS (hbadS q hq hdvd)))
     (GaloisRep.tangentFinite_flatCondition 𝒪 _ p S)
 
-#print axioms solution

@@ -143,4 +143,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_TatePoint_fullKernelIsRootAt
 theorem solution (N : ℕ) [NeZero N] (hN : Odd N) : FullKernelIsRootAt N :=
   ModularCurve.TatePoint.fullKernelIsRootAt_of_odd_aux N hN
 
-#print axioms solution

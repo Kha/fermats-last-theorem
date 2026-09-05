@@ -174,4 +174,3 @@ theorem solution
     (Pic0.torsion (AlgebraicClosure ℚ) (xHFunctionFieldBar M H) (ℓ ^ k)) (O.toricPts (ℓ ^ k)) (ℓ ^ k)
     hfixT hdisp hstab htors γ hγI hγ
 
-#print axioms solution

@@ -110,4 +110,3 @@ theorem solution
   refine ⟨j, a, hj, ⟨hjW, hres⟩, ?_⟩
   convert ha
 
-#print axioms solution

@@ -995,4 +995,3 @@ theorem solution (M : ℕ) (H : Subgroup (ZMod M)ˣ) (ℓ ℓ' : ℕ) [NeZero �
     heckeT M H ℓ V (heckeT M H ℓ' V F) = heckeT M H ℓ' V (heckeT M H ℓ V F) :=
   IharaSolComm.commPrime_impl M H ℓ ℓ' hℓ hcop V F
 
-#print axioms solution

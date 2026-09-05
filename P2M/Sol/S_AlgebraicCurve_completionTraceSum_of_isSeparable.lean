@@ -859,9 +859,3 @@ theorem solution
     AlgebraicCurve.KwHgfV352CompletionTraceSum K F E :=
   kwF4R1V386a_completionTraceSum_of_isSeparable (K := K) (F := F) (E := E)
 
-#print axioms solution
-#print axioms kwF4R1V386a_distinctKernels
-#print axioms kwF4R1V386a_finrankCompletionEF
-#print axioms kwF4R1V384a_completionTraceSum_of_semilocalBij
-#print axioms kwF4R1V384a_completionSemilocalBij_of_distinctKernels_finrankEF
-#print axioms AlgebraicCurve.Place.sum_ramificationIndex_mul_inertiaDeg

@@ -326,4 +326,3 @@ theorem solution
   haveI : IsDomain R := Function.Injective.isDomain _ hinj
   UnitTensorDescent.mem_span_unitTmul_of_forall_apply_eq_zero hinj Φ g hcomm v hv
 
-#print axioms solution

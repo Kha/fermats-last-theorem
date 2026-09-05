@@ -234,4 +234,3 @@ theorem solution
     have h' := congrArg e h
     rwa [map_natCast, map_zero] at h'
 
-#print axioms solution

@@ -41,4 +41,3 @@ theorem solution
   have : Finite ↥H := Finite.of_equiv _ (Subgroup.groupEquivQuotientProdSubgroup (s := K)).symm
   exact this
 
-#print axioms solution

@@ -57,4 +57,3 @@ theorem solution
     _ = (((2 / x : ℝ)) : ℂ) ^ ν * ((((x / 2 : ℝ)) : ℂ) * ((((x / 2 : ℝ)) : ℂ) ^ (ν - 1) * besselKernel ν x)) := by
         ring
 
-#print axioms solution

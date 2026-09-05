@@ -277,13 +277,11 @@ end NeronModelInfra
 info: 'NeronModelInfra.genericFibreRestrict_schemeHomOverComp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.genericFibreRestrict_schemeHomOverComp
 
 /--
 info: 'NeronModelInfra.neronEndRestrict_bijective_of_smooth' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronEndRestrict_bijective_of_smooth
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.endRestrict_bijective' depends on axioms: [propext,
@@ -291,7 +289,6 @@ info: 'NeronModelInfra.NeronModelPropertyBundle.endRestrict_bijective' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.endRestrict_bijective
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_endExtension' depends on axioms: [propext,
@@ -299,7 +296,6 @@ info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_endExtension' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.existsUnique_endExtension
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.endExtensionEquiv_symm_comp' depends on axioms: [propext,
@@ -307,7 +303,6 @@ info: 'NeronModelInfra.NeronModelPropertyBundle.endExtensionEquiv_symm_comp' dep
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.endExtensionEquiv_symm_comp
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_familyExtension' depends on axioms: [propext,
@@ -315,7 +310,6 @@ info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_familyExtension' de
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.existsUnique_familyExtension
 
 /--
 info: 'NeronModelInfra.gate_endRestrict_bijective_trivialGroupScheme_zp' depends on axioms: [propext,
@@ -323,7 +317,6 @@ info: 'NeronModelInfra.gate_endRestrict_bijective_trivialGroupScheme_zp' depends
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_endRestrict_bijective_trivialGroupScheme_zp
 
 /--
 info: 'NeronModelInfra.gate_endExtensionEquiv_symm_id_trivialGroupScheme_z3' depends on axioms: [propext,
@@ -331,4 +324,3 @@ info: 'NeronModelInfra.gate_endExtensionEquiv_symm_id_trivialGroupScheme_z3' dep
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_endExtensionEquiv_symm_id_trivialGroupScheme_z3

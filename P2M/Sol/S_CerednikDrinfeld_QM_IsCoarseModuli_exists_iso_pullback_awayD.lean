@@ -79,4 +79,3 @@ theorem solution
     exact ⟨P.1, hP⟩
   exact ⟨g, hiso, hg_snd, hg_pt⟩
 
-#print axioms solution

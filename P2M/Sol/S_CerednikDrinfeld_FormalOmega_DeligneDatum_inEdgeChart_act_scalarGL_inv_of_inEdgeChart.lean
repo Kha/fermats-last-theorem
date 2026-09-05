@@ -29,4 +29,3 @@ theorem solution
   rw [hM] at h2
   exact h2
 
-#print axioms solution

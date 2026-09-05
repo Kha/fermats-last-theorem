@@ -1103,4 +1103,3 @@ theorem solution
   rw [hsymm]
   exact hUxq
 
-#print axioms solution

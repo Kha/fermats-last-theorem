@@ -29,4 +29,3 @@ theorem solution {R : Type*} [CommRing R] (S : Submonoid R)
   rw [smul_zero, Submonoid.coe_mul, Submonoid.coe_mul, mul_smul, mul_smul]
   rw [hv', ← map_smul, ← map_smul, hs', map_zero]
 
-#print axioms solution

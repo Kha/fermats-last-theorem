@@ -71,4 +71,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hΔ : W.Δ
         (W.map (Int.castRingHom ℚ)) p σ = 1 := hunr A hA σ hσ
     rw [h1, sub_self, zero_mul]
 
-#print axioms solution

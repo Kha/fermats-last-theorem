@@ -596,4 +596,3 @@ theorem solution
   have hjK := E147B2.jmap_algebraMap q M' A hle R₀ R jmap hjmap
   exact hQN (E147B2.mem_nodes q M' A W hW NIg jmap hjK hNIg Q hrat hjQ h1)
 
-#print axioms solution

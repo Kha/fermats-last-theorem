@@ -16,4 +16,3 @@ theorem solution
   rw [← h1, UniformSpace.Completion.norm_coe, WithAbs.norm_eq_apply_ofAbs, h2]
   exact hv.apply_natCast_le_one
 
-#print axioms solution

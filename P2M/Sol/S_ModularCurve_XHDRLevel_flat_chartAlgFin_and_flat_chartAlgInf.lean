@@ -37,4 +37,3 @@ theorem solution
     (algebraMap ℚ ↥(qExpFunctionFieldC ℚ Γ)).injective.comp Subtype.val_injective
   exact ⟨TwoChartIntegralModel.flat_chartAlg hRF _, TwoChartIntegralModel.flat_chartAlg hRF _⟩
 
-#print axioms solution

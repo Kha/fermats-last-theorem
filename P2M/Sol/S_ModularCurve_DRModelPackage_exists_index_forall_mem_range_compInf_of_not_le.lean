@@ -364,6 +364,5 @@ theorem solution
   subst hii'
   exact goal_of_index p 𝔛 i k hi'' y 𝔮 hy h𝔮
 
-#print axioms solution
 
 end

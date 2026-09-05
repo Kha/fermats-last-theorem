@@ -1268,4 +1268,3 @@ theorem solution
     · intro h; linarith
     · intro h; linarith
 
-#print axioms solution

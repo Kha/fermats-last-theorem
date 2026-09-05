@@ -497,4 +497,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_jqN_
 theorem solution (p : ℕ) [hp : Fact (Nat.Prime p)] : jqN p ∈ modularFunctionField (p * p) :=
   ModularCurve.jqN_mem_modularFunctionField_sq p
 
-#print axioms solution

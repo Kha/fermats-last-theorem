@@ -1646,4 +1646,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_tsum_of_coeff_lt_eq_zero.Mod
 theorem solution {K : Type*} [Field K] {δ : ℕ} (hδ : 0 < δ) (f : ℕ → LaurentSeries K) (hf : ∀ N : ℕ, ∀ m : ℤ, m < (N : ℤ) * (δ : ℤ) → (f N).coeff m = 0) (g : LaurentSeries K) (hg : ∀ m : ℤ, g.coeff m = ∑ N ∈ Finset.range (m.toNat / δ + 1), (f N).coeff m) : ∑' N, f N = g :=
   W4B.tsum_of_coeff_lt_eq_zero hδ f hf g hg
 
-#print axioms solution

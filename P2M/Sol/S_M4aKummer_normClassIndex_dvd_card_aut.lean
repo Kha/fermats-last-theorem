@@ -202,4 +202,3 @@ theorem solution
   rw [hm]
   exact M4aKummer.SolH1.normClassIdx_dvd_two_pow k m E hm 𝔣
 
-#print axioms solution

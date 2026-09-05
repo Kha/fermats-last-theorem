@@ -105,4 +105,3 @@ theorem solution
     rw [hne]
     exact Set.finite_empty
 
-#print axioms solution

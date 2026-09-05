@@ -696,4 +696,3 @@ theorem solution
     ∃ w : GL (Fin 2) (L ⊗[K] A) → ℝ, IsTwistedSectionFnOn K L A σ δ τ' φ w ∧ Continuous w := by
   exact exists_isTwistedSectionFnOn_and_continuous_of_normString_eq_toTensorGL_scalar_of_algHom_field K L hdeg σ hσ A ι δ z hδ φ hφ hφc τ' hτ'
 
-#print axioms solution

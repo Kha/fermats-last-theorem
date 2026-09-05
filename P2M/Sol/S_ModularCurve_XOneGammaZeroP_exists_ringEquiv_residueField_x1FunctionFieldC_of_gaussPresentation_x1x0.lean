@@ -173,4 +173,3 @@ theorem solution
       rfl
     rw [hR, hC]
 
-#print axioms solution

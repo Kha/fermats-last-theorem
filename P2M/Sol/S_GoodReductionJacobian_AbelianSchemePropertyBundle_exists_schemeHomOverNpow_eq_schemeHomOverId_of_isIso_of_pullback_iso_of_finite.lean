@@ -126,4 +126,3 @@ theorem solution
     ∃ m : ℕ, m ≠ 0 ∧ NeronModelInfra.schemeHomOverNpow σ m = NeronModelInfra.schemeHomOverId f :=
   AutFinFqT.main hA M hM hci σ hσiso hpol
 
-#print axioms solution

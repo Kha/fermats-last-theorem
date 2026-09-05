@@ -250,4 +250,3 @@ theorem solution
       whittakerCoefficient F (productionPinsOf F D U gen (AdelicBox.adelicBox F)) ψ φ 1 g ≠ 0 :=
   WhittakerGenericity.genericity_one F D U gen ψ hψ φ hleft g₀ hcusp hcont hsum hg₀
 
-#print axioms solution

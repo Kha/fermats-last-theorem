@@ -118,12 +118,3 @@ end SameUniverse
 
 set_option pp.universes true in
 #check @AdicCompletion.tensorRingEquiv
-#print axioms AdicCompletion.completionBaseChangeHom
-#print axioms AdicCompletion.completionBaseChangeHom_of
-#print axioms AdicCompletion.tensorRingHom
-#print axioms AdicCompletion.tensorRingHom_tmul
-#print axioms AdicCompletion.tensorRingHom_tmul_eq_symm_smul
-#print axioms AdicCompletion.restrictScalarsEquiv_tensorRingHom
-#print axioms AdicCompletion.tensorRingHom_bijective
-#print axioms AdicCompletion.tensorRingEquiv
-#print axioms AdicCompletion.tensorRingEquiv_tmul

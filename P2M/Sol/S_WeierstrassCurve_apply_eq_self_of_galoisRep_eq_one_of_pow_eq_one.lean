@@ -27,4 +27,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hΔ : W.Δ
   rw [ZMod.val_one, pow_one] at h1
   exact h1
 
-#print axioms solution

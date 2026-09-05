@@ -200,4 +200,3 @@ theorem solution
     · rw [Ws23.PEXR.k0_twist01]
       exact (htr _).mpr (hoccP.mono fun φ hφ => hφ.1)
 
-#print axioms solution

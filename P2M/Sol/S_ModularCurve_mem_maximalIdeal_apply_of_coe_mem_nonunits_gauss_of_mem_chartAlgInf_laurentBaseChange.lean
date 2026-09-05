@@ -224,4 +224,3 @@ theorem solution
   show (b : ↥K) * ((b : ↥K))⁻¹ = 1
   exact mul_inv_cancel₀ hb0'
 
-#print axioms solution

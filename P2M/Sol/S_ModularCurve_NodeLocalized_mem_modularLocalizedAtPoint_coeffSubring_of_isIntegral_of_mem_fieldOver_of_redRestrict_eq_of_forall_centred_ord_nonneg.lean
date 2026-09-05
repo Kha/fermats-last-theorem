@@ -151,4 +151,3 @@ theorem solution
     ModularCurve.NodeLocalized.exists_mul_eq_of_mem_fieldOver red a K hfK
   exact frac_close red hq a ha ha2 f h₁ h₂ hford K ⟨x, hx⟩ hfK hInt hIC y z hy hz hz0 hfz
 
-#print axioms solution

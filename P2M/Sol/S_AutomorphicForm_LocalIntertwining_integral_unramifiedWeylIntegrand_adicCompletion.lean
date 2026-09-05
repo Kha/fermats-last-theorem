@@ -2107,4 +2107,3 @@ theorem solution
           * (1 - ((χ ϖ : ℂˣ) : ℂ) * ((Ideal.absNorm v.asIdeal : ℕ) : ℂ) ^ (-(2 * s)))⁻¹ :=
   M4aP2DGK.FinGK.WeylGK.integral_unramifiedWeylIntegrand_impl F v μ ϖ hϖ χ hχ s hs
 
-#print axioms solution

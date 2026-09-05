@@ -322,4 +322,3 @@ theorem solution
         Complex.Gamma (α + β - γ) * Complex.Gamma α * Complex.Gamma β / Complex.Gamma (α + β) := by
   exact ⟨integrable_f α β γ hα hβ hγ, integral_f α β γ hα hβ hγ⟩
 
-#print axioms solution

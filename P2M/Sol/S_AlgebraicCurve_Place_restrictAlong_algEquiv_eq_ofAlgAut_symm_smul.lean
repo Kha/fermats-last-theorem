@@ -21,4 +21,3 @@ theorem solution
   show σ x ∈ v.toValuationSubring ↔ _
   rfl
 
-#print axioms solution

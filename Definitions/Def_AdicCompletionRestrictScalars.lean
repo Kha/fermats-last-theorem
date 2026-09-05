@@ -70,8 +70,3 @@ end AdicCompletion
 
 set_option pp.universes true in
 #check @AdicCompletion.restrictScalarsEquiv
-#print axioms AdicCompletion.restrictScalars_map_pow_smul_top
-#print axioms AdicCompletion.levelRestrictScalarsEquiv
-#print axioms AdicCompletion.restrictScalarsEquiv
-#print axioms AdicCompletion.restrictScalarsEquiv_of
-#print axioms AdicCompletion.restrictScalarsEquiv_symm_of

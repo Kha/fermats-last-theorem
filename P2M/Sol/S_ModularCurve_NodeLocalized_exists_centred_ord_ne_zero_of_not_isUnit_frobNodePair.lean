@@ -313,4 +313,3 @@ theorem solution
   haveI := hKfd
   exact core red hker a ha ha2 h0 h1728 f h₁ h₁F h₁u h₂ h₂F h₂u hmem hnu hford hq K hx hfK
 
-#print axioms solution

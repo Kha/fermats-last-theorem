@@ -218,4 +218,3 @@ theorem solution
     rw [atom_finrank_eq_finrank_fractionRing (R := A) (S := B₁) (FractionRing A) (FractionRing B₁), hfrac, hindex]
   exact ⟨B₁, hmem, atom_isGaloisGroup_fixedPoints (A := A) (B := B) D I, hetale, hloc, hres, hfree, hrank, hindex⟩
 
-#print axioms solution

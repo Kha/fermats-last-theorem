@@ -272,4 +272,3 @@ theorem solution
            ∂(adelicAddHaar (𝓞 F) F) :=
   WhittakerUnfolding.whittakerCoefficient_bruhatSeries_eq_of_isInducedSection hψ hφ hξ g hint
 
-#print axioms solution

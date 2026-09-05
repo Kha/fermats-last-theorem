@@ -569,4 +569,3 @@ theorem solution
     Algebra.FinitePresentation R A :=
   LFPRingC.main R A B
 
-#print axioms solution

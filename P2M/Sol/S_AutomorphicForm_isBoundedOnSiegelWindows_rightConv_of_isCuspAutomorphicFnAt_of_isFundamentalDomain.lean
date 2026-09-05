@@ -39,4 +39,3 @@ theorem solution
   exact hC φ ((lsXiMemberAt_iff (𝓞 F) F _ _ _ _ φ).mp hφ.1).1 hφ.2 hcont
     ((lsXiMemberAt_iff (𝓞 F) F _ _ _ _ φ).mp hφ.1).2 g hg
 
-#print axioms solution

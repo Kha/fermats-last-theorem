@@ -389,4 +389,3 @@ theorem solution
   obtain ⟨π, hπ₁, hπ₂⟩ := gwc_exists_retract K.fixingSubgroup
   exact ⟨gwcEquiv (N := N) hK (IntermediateField.exists_normal_isUnramifiedOutside_of_le S) π hπ₁ hπ₂⟩
 
-#print axioms solution

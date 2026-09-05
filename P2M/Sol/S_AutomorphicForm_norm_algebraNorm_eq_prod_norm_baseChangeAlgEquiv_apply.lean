@@ -21,4 +21,3 @@ theorem solution
   exact (HeightOneSpectrum.adicCompletion.norm_tensorProduct_eq_finprod_norm_baseChangeAlgEquiv_and_norm_norm_eq_norm
     K L v).2.2 α
 
-#print axioms solution

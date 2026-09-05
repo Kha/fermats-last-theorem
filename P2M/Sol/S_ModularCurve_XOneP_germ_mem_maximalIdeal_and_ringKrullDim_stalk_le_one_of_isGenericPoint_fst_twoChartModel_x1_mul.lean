@@ -364,4 +364,3 @@ theorem solution
     (fun y hy hs' => GenPt.eq_of_specializes_of_germ_mem p A hp0 k (ModularCurve.TwoChart.modelTo A (↥K) j) ϖ hϖ
       (i₁.1.base ξ) hmaxk y hy hs')
 
-#print axioms solution

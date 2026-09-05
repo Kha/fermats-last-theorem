@@ -41,4 +41,3 @@ theorem solution
   haveI : UniversallyClosed (σ.1.imageι ≫ f) := UniversallyClosed.of_comp_surjective σ.1.toImage _
   exact ⟨⟩
 
-#print axioms solution

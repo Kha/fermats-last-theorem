@@ -258,4 +258,3 @@ theorem solution
       hdet, hI]
   · rw [dif_neg hq, dif_neg hq]
 
-#print axioms solution

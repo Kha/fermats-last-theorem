@@ -848,7 +848,6 @@ end FLT.PrincipalSeriesGL2Padic
 p2m_reactivate "P2MW.S_LocalNewvector_PSCarrier_fixedSubmodule_padicK1_zero_eq_bot.LocalGL2"
 p2m_reactivate "P2MW.S_LocalNewvector_PSCarrier_fixedSubmodule_padicK1_zero_eq_bot.LocalGL2"
 
-#print axioms FLT.PrincipalSeriesGL2Padic.PSCarrier.fixedSubmodule_padicK1_zero_eq_bot_impl
 
 theorem solution (p : ℕ) [Fact p.Prime] {μ₁ μ₂ : ℚ_[p]ˣ →* ℂˣ}
     (hram : ¬ LocalNewvector.IsUnramified p μ₁ ∨ ¬ LocalNewvector.IsUnramified p μ₂) :

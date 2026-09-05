@@ -75,4 +75,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
       _ = M / ρ ^ n := mul_one _
   exact (le_div_iff₀ (pow_pos hρ n)).mp h
 
-#print axioms solution

@@ -279,4 +279,3 @@ theorem solution
   rw [hDdeg, hsumD, Finset.sum_add_distrib, Finset.sum_add_distrib, hA, hB, hC, hTsum]
   linear_combination (4 * (m : ℤ)) * hcnt0 + (3 * (m : ℤ)) * hcnt1
 
-#print axioms solution

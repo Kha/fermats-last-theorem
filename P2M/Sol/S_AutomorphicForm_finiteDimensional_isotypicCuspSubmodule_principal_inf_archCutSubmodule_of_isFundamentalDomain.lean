@@ -609,4 +609,3 @@ end FundamentalDomain
 
 end
 
-#print axioms solution

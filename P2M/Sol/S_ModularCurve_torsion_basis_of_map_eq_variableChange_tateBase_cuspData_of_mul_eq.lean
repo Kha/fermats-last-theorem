@@ -343,4 +343,3 @@ theorem solution
       simp only [WeierstrassCurve.Affine.Point.some.injEq] at hab
       exact hPQT ⟨hab.1, by rw [hab.2, h2Q]⟩
 
-#print axioms solution

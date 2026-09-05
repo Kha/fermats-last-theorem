@@ -25,4 +25,3 @@ theorem solution {R : Type*} [CommRing R] [TopologicalSpace R]
   simp only [M4aP3B.CTU.unipotentGL2_inv]
   exact hval.comp continuous_neg
 
-#print axioms solution

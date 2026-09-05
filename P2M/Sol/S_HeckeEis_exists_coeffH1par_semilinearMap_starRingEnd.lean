@@ -329,4 +329,3 @@ theorem solution (n : ℕ) (Γ : Subgroup SL(2, ℤ)) :
   · rw [HeckeEis.ConjAux.conjH1par_apply, HeckeEis.ConjAux.pushH1par_mk]
   · rw [HeckeEis.ConjAux.conjH1par_apply, HeckeEis.ConjAux.conjH1par_apply, HeckeEis.ConjAux.pushH1par_cj_cj]
 
-#print axioms solution

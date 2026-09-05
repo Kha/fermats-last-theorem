@@ -179,4 +179,3 @@ theorem solution
     ring
   exact sub_eq_zero.mp ((mul_eq_zero.mp key).resolve_right hHh0)
 
-#print axioms solution

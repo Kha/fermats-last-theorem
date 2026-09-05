@@ -309,4 +309,3 @@ theorem solution
   funext M
   exact hA M i
 
-#print axioms solution

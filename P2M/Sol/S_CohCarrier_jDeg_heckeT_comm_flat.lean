@@ -714,4 +714,3 @@ theorem solution {M M' : ℕ} {H : Subgroup (ZMod M)ˣ} {H' : Subgroup (ZMod M')
             (pushChar M M' H H' d A h (heckeT M' H' ℓ A φ))) := by rw [hS3]
   exact congrArg MonoidHom.toAdditiveLeft chain
 
-#print axioms solution

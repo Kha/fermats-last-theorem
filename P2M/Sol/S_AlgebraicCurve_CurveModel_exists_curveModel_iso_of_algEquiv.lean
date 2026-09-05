@@ -52,4 +52,3 @@ theorem solution
       rw [show M.ffEquiv.symm (algebraMap _ _ s) = e.toRingEquiv.symm y from hs, AlgEquiv.symm_symm]
       exact e.apply_symm_apply y
 
-#print axioms solution

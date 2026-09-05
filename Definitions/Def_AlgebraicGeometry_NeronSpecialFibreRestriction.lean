@@ -335,66 +335,55 @@ end NeronSpecialFibreInfra
 info: 'NeronSpecialFibreInfra.fibreRestrictAlong_homOverId' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.fibreRestrictAlong_homOverId
 
 /--
 info: 'NeronSpecialFibreInfra.fibreRestrictAlong_homOverComp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.fibreRestrictAlong_homOverComp
 
 /--
 info: 'NeronSpecialFibreInfra.genericFibreRestrict_homOverComp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.genericFibreRestrict_homOverComp
 
 /--
 info: 'NeronSpecialFibreInfra.isClosedImmersion_specClosedFibreInclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.isClosedImmersion_specClosedFibreInclusion
 
 /--
 info: 'NeronSpecialFibreInfra.specialFibreRestrict_homOverComp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.specialFibreRestrict_homOverComp
 
 /--
 info: 'NeronSpecialFibreInfra.neronEndExtension_homOverComp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.neronEndExtension_homOverComp
 
 /--
 info: 'NeronSpecialFibreInfra.neronSpecialFibreTransfer_eq_of_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.neronSpecialFibreTransfer_eq_of_restrict
 
 /--
 info: 'NeronSpecialFibreInfra.neronSpecialFibreTransfer_homOverId' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.neronSpecialFibreTransfer_homOverId
 
 /--
 info: 'NeronSpecialFibreInfra.neronSpecialFibreTransfer_homOverComp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.neronSpecialFibreTransfer_homOverComp
 
 /--
 info: 'NeronSpecialFibreInfra.gate_specialFibreRestrict_id_trivialGroupScheme_zp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.gate_specialFibreRestrict_id_trivialGroupScheme_zp
 
 /--
 info: 'NeronSpecialFibreInfra.gate_neronSpecialFibreTransfer_id_trivialGroupScheme_z3' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms NeronSpecialFibreInfra.gate_neronSpecialFibreTransfer_id_trivialGroupScheme_z3
 
 end

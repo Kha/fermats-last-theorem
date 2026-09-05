@@ -218,7 +218,6 @@ theorem Approx.exists_sub_algebraMap_mem_adicCompletionIntegers_impl
 
 end M4aP1R
 
-#print axioms M4aP1R.Approx.exists_sub_algebraMap_mem_adicCompletionIntegers_impl
 
 theorem solution
     {A : Type*} (K : Type*) [CommRing A] [IsDedekindDomain A] [Field K] [Algebra A K]

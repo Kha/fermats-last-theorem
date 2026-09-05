@@ -250,4 +250,3 @@ theorem solution
   ⟨BaseChangeDiff.Phi k K Γ, BaseChangeDiff.Phi_injective k K Γ hT,
     fun c f g f' g' hf hg => BaseChangeDiff.Phi_tmul_smul_D k K Γ c f g f' g' hf hg⟩
 
-#print axioms solution

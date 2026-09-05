@@ -1262,4 +1262,3 @@ theorem solution (r : ℕ) [Fact r.Prime] (k : Type) [Field k] [CharP k r] [IsAl
     obtain ⟨t, ht, e⟩ := H i L hL
     exact ⟨t, UAdm.isAdmissible hL ht, e⟩
 
-#print axioms solution

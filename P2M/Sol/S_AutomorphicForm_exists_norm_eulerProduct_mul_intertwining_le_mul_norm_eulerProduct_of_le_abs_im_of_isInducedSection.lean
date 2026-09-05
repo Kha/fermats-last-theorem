@@ -6201,4 +6201,3 @@ theorem solution
                 ⨆ k' : ↥(adelicMaximalCompact F), ‖φ s (k' : AdelicGL2 (𝓞 F) F)‖) := by
   exact NormalisedIntertwiningTail.tail_bound F
 
-#print axioms solution

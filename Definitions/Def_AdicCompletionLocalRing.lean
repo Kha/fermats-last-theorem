@@ -199,10 +199,3 @@ end Transport
 
 end AdicCompletion
 
-#print axioms AdicCompletion.ker_evalₐ_eq_map_pow
-#print axioms AdicCompletion.isUnit_one_add_of_mem_map
-#print axioms AdicCompletion.instIsLocalRingMaximalIdeal
-#print axioms AdicCompletion.maximalIdeal_eq_map
-#print axioms AdicCompletion.quotientMaximalIdealPowAlgEquiv
-#print axioms AdicCompletion.maximalIdeal_eq_map_algEquiv
-#print axioms AdicCompletion.quotientMaximalIdealPowAlgEquivOfAlgEquiv

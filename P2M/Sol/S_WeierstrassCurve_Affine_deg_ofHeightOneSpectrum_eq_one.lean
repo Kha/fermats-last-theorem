@@ -134,4 +134,3 @@ theorem solution {F : Type*} [Field F] [IsAlgClosed F] (W : WeierstrassCurve.Aff
   obtain ⟨c, hc⟩ := D5S.exists_sub_algebraMap_mem W hab r
   exact ⟨c, hw ▸ hc⟩
 
-#print axioms solution

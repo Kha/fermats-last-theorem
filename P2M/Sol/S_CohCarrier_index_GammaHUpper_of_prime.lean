@@ -173,4 +173,3 @@ theorem solution (M : ℕ) (H : Subgroup (ZMod M)ˣ) (ℓ : ℕ) [NeZero ℓ]
     (GammaHUpper M H ℓ).index = ℓ + 1 :=
   IharaSolIdx.index_GammaHUpper_prime M H ℓ hℓ hℓM
 
-#print axioms solution

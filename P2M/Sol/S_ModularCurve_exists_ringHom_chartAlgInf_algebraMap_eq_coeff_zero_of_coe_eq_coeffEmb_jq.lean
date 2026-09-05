@@ -236,4 +236,3 @@ theorem solution
     rw [algebraMap_ψ, map_zero]
     exact ψL_jInv (A := A) j hj
 
-#print axioms solution

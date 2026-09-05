@@ -544,4 +544,3 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N]
         coeffEmb_mem_laurentBaseChange L (jqd_mem_full N (dvd_refl N))⟩) :=
   ModularCurve.isRoot_map_Phi_apply_jBar L N data A φ
 
-#print axioms solution

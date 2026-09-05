@@ -183,4 +183,3 @@ theorem solution (N : ℕ) [NeZero N] (n : ℕ) :
   have hzero : (⇑f : ℍ → ℂ) = 0 := hEI₁.eq_zero_of_eval_eq_const hc
   exact DFunLike.ext f 0 fun τ => by rw [congrFun hzero τ]; rfl
 
-#print axioms solution

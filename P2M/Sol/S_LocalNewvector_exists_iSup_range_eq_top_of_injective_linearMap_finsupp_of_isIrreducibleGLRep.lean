@@ -179,4 +179,3 @@ theorem solution
   exact exists_spanning_of_injective_finsupp V N
     (representation_isIrreducible_of_isIrreducibleGLRep q V hV) ι L hL hLx
 
-#print axioms solution

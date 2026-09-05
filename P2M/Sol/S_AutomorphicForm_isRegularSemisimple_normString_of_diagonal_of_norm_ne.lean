@@ -167,4 +167,3 @@ theorem solution
   rw [key, ← map_sub, ← map_pow]
   exact ((pow_ne_zero 2 (sub_ne_zero.mpr hN)).isUnit).map _
 
-#print axioms solution

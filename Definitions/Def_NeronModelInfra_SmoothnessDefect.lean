@@ -99,10 +99,8 @@ end
 info: 'NeronModelInfra.smoothnessDefect' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.smoothnessDefect
 
 /--
 info: 'NeronModelInfra.smoothnessDefect_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.smoothnessDefect_id

@@ -1000,4 +1000,3 @@ theorem solution
   exact isNodeUnitModule_of_iso x i₁ i₂ p₁ p₂
     (asIso (θ x i₁ i₂ p₁ p₂ ψ j₁ j₂ hj j₁' j₂' hj')) ⟨j₁', j₂', hj'⟩
 
-#print axioms solution

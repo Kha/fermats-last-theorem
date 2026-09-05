@@ -388,4 +388,3 @@ theorem solution
         · exact mul_le_mul_of_nonneg_left (hM₀ ι b cls hb hb₁ hb₀ F) (by positivity)
         · exact Finset.sum_le_sum fun σ _ => hMσ σ ι b cls hb hb₁ hb₀ F
 
-#print axioms solution

@@ -40,4 +40,3 @@ theorem solution (q : ℕ) [Fact q.Prime] :
   exact (isFrickeAutFull_of_isAtkinLehnerAutFull_one q _
     (isAtkinLehnerAutFull_atkinLehnerInvolutionFull 1 q hAL)).eq_frickeInvolutionFull
 
-#print axioms solution

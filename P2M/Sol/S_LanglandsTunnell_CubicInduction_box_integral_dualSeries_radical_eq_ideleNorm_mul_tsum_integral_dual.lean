@@ -868,4 +868,3 @@ theorem solution
   LanglandsTunnell.CubicInduction.box_integral_dualSeries_radical_eq_ideleNorm_mul_tsum_integral_dual'
     ψ _hψ W _hWc _hW _hsum' g a _hfin
 
-#print axioms solution

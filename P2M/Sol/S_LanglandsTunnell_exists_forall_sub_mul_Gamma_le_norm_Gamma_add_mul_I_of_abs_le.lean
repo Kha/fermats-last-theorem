@@ -254,4 +254,3 @@ theorem solution
     rw [mul_add]; linarith
   linarith
 
-#print axioms solution

@@ -81,4 +81,3 @@ theorem solution
       exact ModularCurve.diamondDiffModLH_comp_eq_comp_baseChange_of_forall_apply_tmul p M hpM hpM2 H S k K Φ hinj hΦ
         hρk hρK hN _
 
-#print axioms solution

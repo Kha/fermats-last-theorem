@@ -119,4 +119,3 @@ theorem solution
   rw [← h4]
   exact hnat.symm
 
-#print axioms solution

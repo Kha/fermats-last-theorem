@@ -257,4 +257,3 @@ theorem solution
       (CuspKit.mem_map_zpowers_T_iff (M * n)) (CuspKit.mem_map_zpowers_T_iff M) (CuspKit.mem_map_zpowers_T_iff n),
     CuspC4.natCard_quotient_prod]
 
-#print axioms solution

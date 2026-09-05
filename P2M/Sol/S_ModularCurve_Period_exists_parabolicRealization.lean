@@ -808,4 +808,3 @@ theorem solution (N : ℕ) [NeZero N]
     rw [heckeOperatorHom_parCastLin_eq N ℓ w, hMw, map_smul]
     rfl
 
-#print axioms solution

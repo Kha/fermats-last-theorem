@@ -25,4 +25,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
     v.deg = 1 ↔ Function.Surjective (algebraMap K v.ResidueField) :=
   AlgebraicCurve.Place.deg_eq_one_iff_surjective_algebraMap_residueField v
 
-#print axioms solution

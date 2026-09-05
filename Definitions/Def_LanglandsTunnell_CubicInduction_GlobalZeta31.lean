@@ -149,10 +149,3 @@ end
 #check @LanglandsTunnell.CubicInduction.weylPrime3
 #check @LanglandsTunnell.CubicInduction.globalZeta30
 #check @LanglandsTunnell.CubicInduction.globalZetaDual31
-#print axioms LanglandsTunnell.CubicInduction.weylPrime3_mul_self
-#print axioms LanglandsTunnell.CubicInduction.transposeInv3_weylPrime3
-#print axioms LanglandsTunnell.CubicInduction.weylPrime3_mul_transposeInv3_radicalP21_mul_weylPrime3
-#print axioms LanglandsTunnell.CubicInduction.transposeInv3_lowerUnipotent21
-#print axioms LanglandsTunnell.CubicInduction.globalZeta30
-#print axioms LanglandsTunnell.CubicInduction.globalZetaDual31
-#print axioms LanglandsTunnell.CubicInduction.globalZeta31

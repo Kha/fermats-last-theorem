@@ -60,4 +60,3 @@ theorem solution {Γ : Subgroup SL(2, ℤ)}
   show hF.period (Additive.toMul γ) = hG.period (Additive.toMul γ)
   exact period_congr hF hG c (fun z => by simpa [ofComplex_apply] using hc z) _
 
-#print axioms solution

@@ -355,4 +355,3 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq2 : q ≠ 2) (k : ℕ) :
         : LaurentSeries ℚ)) :=
   LambdaPsiZIntSol.zint q hq2 k
 
-#print axioms solution

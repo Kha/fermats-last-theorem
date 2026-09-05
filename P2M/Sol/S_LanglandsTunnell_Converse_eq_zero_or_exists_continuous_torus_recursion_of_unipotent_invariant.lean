@@ -692,4 +692,3 @@ theorem solution
     have hvS : v ∉ S := fun h => hv (by simp [hS₁, h])
     exact rc_torus_recB K Pi S ϕ hcentralEigen g₀ v hvS t₁ t₂
 
-#print axioms solution

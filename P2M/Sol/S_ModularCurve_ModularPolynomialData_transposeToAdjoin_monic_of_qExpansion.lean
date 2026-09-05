@@ -884,11 +884,9 @@ p2m_reactivate "P2MW.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_moni
 end
 p2m_reactivate "P2MW.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion.ModularCurve"
 
-#print axioms ModularCurve.PhiGen.evalSymm_of_splits
 
 open _root_.ModularCurve _root_.P2MW.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion.ModularCurve _root_.ModularCurve.PhiGen _root_.P2MW.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion.ModularCurve.PhiGen in
 
 theorem solution {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (h0top : (evalAtJ (data.Φ.coeff 0)).coeff (-(dedekindPsi N : ℤ)) = 1) (h0le : ∀ m : ℕ, dedekindPsi N < m → (evalAtJ (data.Φ.coeff 0)).coeff (-(m : ℤ)) = 0) (hk : ∀ k, k ≠ 0 → ∀ m : ℕ, dedekindPsi N ≤ m → (evalAtJ (data.Φ.coeff k)).coeff (-(m : ℤ)) = 0) : ((swapBivar data.Φ).map evalAtJGen).Monic ∧ ((swapBivar data.Φ).map evalAtJGen).natDegree = dedekindPsi N :=
   ModularCurve.ModularPolynomialData.transposeToAdjoin_monic_of_qExpansion data h0top h0le hk
 
-#print axioms solution

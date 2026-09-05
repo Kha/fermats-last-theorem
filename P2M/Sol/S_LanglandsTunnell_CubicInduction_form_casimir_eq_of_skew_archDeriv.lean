@@ -110,4 +110,3 @@ theorem solution
     refine Finset.sum_congr rfl (fun j _ => ?_)
     rw [Finset.sum_comm]
 
-#print axioms solution

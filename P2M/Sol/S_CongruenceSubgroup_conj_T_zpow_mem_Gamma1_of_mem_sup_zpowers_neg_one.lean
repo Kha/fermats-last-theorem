@@ -73,4 +73,3 @@ theorem solution (M : ℕ) (hM : ¬ M ∣ 4)
     norm_num at h3
     exact_mod_cast h3
 
-#print axioms solution

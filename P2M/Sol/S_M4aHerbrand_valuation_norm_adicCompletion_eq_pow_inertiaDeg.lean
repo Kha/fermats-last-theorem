@@ -166,4 +166,3 @@ theorem solution
       Valued.v y ^ Ideal.inertiaDeg' v.asIdeal w.1.asIdeal :=
   M4aHerbrandLocalNormProof.localNorm K L v w y
 
-#print axioms solution

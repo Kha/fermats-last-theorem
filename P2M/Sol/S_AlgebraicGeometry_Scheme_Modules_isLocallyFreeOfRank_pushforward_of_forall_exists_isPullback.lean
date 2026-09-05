@@ -165,4 +165,3 @@ theorem solution
     Scheme.Modules.IsLocallyFreeOfRank n ((Scheme.Modules.pushforward π).obj F) :=
   isLocallyFreeOfRank_pushforward_of_forall_exists_isPullback_aux π F n h
 
-#print axioms solution

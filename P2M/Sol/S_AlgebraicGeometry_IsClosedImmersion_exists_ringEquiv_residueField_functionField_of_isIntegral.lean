@@ -29,4 +29,3 @@ theorem solution
       exact h (isUnit_of_map_unit φ s (isUnit_iff_ne_zero.mpr hne))
   refine ⟨(Ideal.quotEquivOfEq hker.symm).trans (RingHom.quotientKerEquivOfSurjective hsurj), fun s => rfl⟩
 
-#print axioms solution

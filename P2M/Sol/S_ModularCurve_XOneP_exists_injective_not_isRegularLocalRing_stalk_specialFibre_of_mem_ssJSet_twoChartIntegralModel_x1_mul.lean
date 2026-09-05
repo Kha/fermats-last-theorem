@@ -653,4 +653,3 @@ theorem solution
     haveI := hreg; exact IsRegularLocalRing.isDomain _
   exact hnd' (AlgebraicGeometry.Flat.isDomain_stalk_of_isDomain_stalk h (ι v))
 
-#print axioms solution

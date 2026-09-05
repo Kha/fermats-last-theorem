@@ -299,4 +299,3 @@ theorem solution
   simp only [Equiv.symm_apply_apply, hvbar]
   ring
 
-#print axioms solution

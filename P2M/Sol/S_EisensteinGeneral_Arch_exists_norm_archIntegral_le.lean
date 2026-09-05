@@ -230,4 +230,3 @@ theorem solution (c : ℂ) (hc : 0 < c.re) (M : ℝ) :
 
 end Solution
 
-#print axioms solution

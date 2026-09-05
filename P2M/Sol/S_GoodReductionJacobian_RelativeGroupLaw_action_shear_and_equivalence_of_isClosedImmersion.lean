@@ -263,4 +263,3 @@ theorem solution
         rw [← Category.assoc, pullback.lift_fst]
       · exact pullback.lift_snd _ _ _
 
-#print axioms solution

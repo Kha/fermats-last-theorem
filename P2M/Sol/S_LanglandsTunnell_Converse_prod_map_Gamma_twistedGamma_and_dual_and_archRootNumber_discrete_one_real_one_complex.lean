@@ -128,4 +128,3 @@ theorem solution
       RealArchParam.baseChange, ComplexArchParam.twist, ComplexArchParam.epsilonFactor, RealArchParam.centralSign,
       neg_one_pow_val_natCast_add_one]
 
-#print axioms solution

@@ -282,4 +282,3 @@ theorem solution
     fun ℓ i => hWinv (some ℓ) i, fun ℓ => hWcomm (some ℓ) 1 0, fun ℓ τ i => (hgalW (some ℓ) i τ).symm,
     fun ℓ i a => hWbase (some ℓ) i a⟩
 
-#print axioms solution

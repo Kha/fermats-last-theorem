@@ -102,4 +102,3 @@ theorem solution
   exact IgSplitAux.isSplittingField_igusaFunctionField (ModularCurve.x1FunctionFieldC Ω M) w.hasseRootFn
     (p - 1) hn hζ b hb
 
-#print axioms solution

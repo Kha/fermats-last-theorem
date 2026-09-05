@@ -919,4 +919,3 @@ theorem solution
   rw [integral_congr_ae hfold, integral_const_mul, hId, show s + 1 - (-u₃ - 1 - (δ : ℂ)) - 2 = s + u₃ + (δ : ℂ) by ring]
   ring
 
-#print axioms solution

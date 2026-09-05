@@ -1153,4 +1153,3 @@ theorem solution
       A (↥K) j Ω₀ t p (Fact.out : p.Prime).pos θFin₁ θInf₁ hjFin₁ hjInf₁
       c₁ hc₁_over hc₁F hc₁I hc₁match hmin₁ inferInstance hfrac₁
 
-#print axioms solution

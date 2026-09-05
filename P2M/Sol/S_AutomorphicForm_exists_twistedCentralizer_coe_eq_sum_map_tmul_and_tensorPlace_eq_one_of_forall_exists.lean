@@ -703,4 +703,3 @@ theorem solution
       ∀ w ∉ S, AutomorphicForm.tensorPlace K L w (t : GL (Fin 2) (L ⊗[K] AdeleRing (𝓞 K) K)) = 1 :=
   Ws25L3.globalPoint K L h2 σ δ₀ c ι b hb hbspan β hβ S a harch hS hoff
 
-#print axioms solution

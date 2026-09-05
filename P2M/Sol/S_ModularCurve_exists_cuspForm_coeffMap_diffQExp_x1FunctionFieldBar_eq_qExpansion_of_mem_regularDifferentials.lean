@@ -224,4 +224,3 @@ theorem solution
   rw [pow_one] at hf
   exact hf.symm
 
-#print axioms solution

@@ -527,4 +527,3 @@ theorem solution (N : ℕ) [NeZero N] (n : ℕ) (hn : Even n) (hn0 : n ≠ 0) :
   obtain ⟨y, ⟨a, rfl⟩, z, ⟨b, rfl⟩, hyz⟩ := hf
   exact ⟨a, b, by rw [← hyz]; rfl⟩
 
-#print axioms solution

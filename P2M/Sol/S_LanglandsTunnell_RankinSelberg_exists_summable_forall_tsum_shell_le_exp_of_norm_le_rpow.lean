@@ -209,4 +209,3 @@ theorem solution
   refine ENNReal.ofReal_le_ofReal ?_
   exact mul_le_mul haval hgeo (tsum_nonneg fun n => pow_nonneg hρ0 n) (Real.exp_pos _).le
 
-#print axioms solution

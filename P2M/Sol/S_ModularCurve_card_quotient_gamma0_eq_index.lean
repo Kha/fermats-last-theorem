@@ -315,4 +315,3 @@ theorem solution (N : ℕ) :
       (CongruenceSubgroup.Gamma0 N)).subgroupOf 𝒮ℒ) = (CongruenceSubgroup.Gamma0 N).index :=
   ModularCurve.card_quotient_gamma0_eq_index N
 
-#print axioms solution

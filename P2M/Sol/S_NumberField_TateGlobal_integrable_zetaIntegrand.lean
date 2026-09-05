@@ -6199,4 +6199,3 @@ theorem solution (F : Type) [Field F] [NumberField F]
     Integrable (fun x : (AdeleRing (𝓞 F) F)ˣ => f x * ((χ x : ℂˣ) : ℂ) * ((ideleNorm F x : ℝ) : ℂ) ^ s) ν :=
   NumberField.TateGlobal.integrable_zetaIntegrand_impl F ν hf hχc hχu hs
 
-#print axioms solution

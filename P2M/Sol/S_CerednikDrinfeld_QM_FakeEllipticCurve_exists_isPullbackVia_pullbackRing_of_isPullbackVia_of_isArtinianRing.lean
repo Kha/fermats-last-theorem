@@ -72,4 +72,3 @@ theorem solution
       E (g' ≫ k') hg k' hk' k'' hk'' rfl hhk hpo Et gt hgt kt' hkt' kt'' hkt'' h1 h2
   exact ⟨e, he, hmul, hact, hlev, hge⟩
 
-#print axioms solution

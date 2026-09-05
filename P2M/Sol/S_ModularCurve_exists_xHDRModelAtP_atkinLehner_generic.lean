@@ -44,4 +44,3 @@ theorem solution (p M : ℕ) [Fact p.Prime] [NeZero M] (H : Subgroup (ZMod M)ˣ)
     ModularCurve.exists_xHDRModelAtP_atkinLehner_generic_chart p M H hpM hpM2 hHp hj
   exact ⟨𝔛, θ, hθ, hwgen⟩
 
-#print axioms solution

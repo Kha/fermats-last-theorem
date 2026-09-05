@@ -201,4 +201,3 @@ theorem solution
     rw [k1, LA, TopCat.Presheaf.germ_res_apply]
     exact hread (a ⊗ₜ 1)
 
-#print axioms solution

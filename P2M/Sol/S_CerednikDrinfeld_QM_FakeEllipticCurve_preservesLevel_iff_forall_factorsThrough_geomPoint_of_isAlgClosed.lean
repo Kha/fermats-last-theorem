@@ -105,4 +105,3 @@ theorem solution
     change ψc c ≫ E'.lev = (U c).ι ≫ E.lev ≫ φ
     exact hψc c
 
-#print axioms solution

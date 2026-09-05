@@ -419,4 +419,3 @@ theorem solution
   refine Submodule.span_mono ?_ hmem
   exact Set.image_mono (polarDifferentials_mono hTS)
 
-#print axioms solution

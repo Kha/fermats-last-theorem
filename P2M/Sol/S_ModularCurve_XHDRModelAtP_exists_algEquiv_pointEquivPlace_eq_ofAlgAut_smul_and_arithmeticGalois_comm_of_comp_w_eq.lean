@@ -290,4 +290,3 @@ theorem solution
   simp only [mul_smul, SemilinearAut.ofAlgAut_smul] at hf
   exact hf.symm
 
-#print axioms solution

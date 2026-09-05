@@ -49,9 +49,6 @@ theorem finite_image_of_isCompact
 
 end M4aP3B.Rows.SliceLocConst
 
-#print axioms M4aP3B.Rows.SliceLocConst.isLocallyConstant_fun_mul_apply_mul_of_hasCompactSupport_impl
-#print axioms M4aP3B.Rows.SliceLocConst.gate_discrete
-#print axioms M4aP3B.Rows.SliceLocConst.finite_image_of_isCompact
 
 theorem solution
     {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] {Y : Type*} [Zero Y]

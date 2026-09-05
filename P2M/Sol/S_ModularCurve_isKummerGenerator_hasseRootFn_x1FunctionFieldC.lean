@@ -29,4 +29,3 @@ theorem solution
     · exact ModularCurve.isKummerGenerator_one_hasseRootFn_of_charP_two M hM hpM k w
     · exact ModularCurve.isKummerGenerator_two_hasseRootFn_of_charP_three k M w
 
-#print axioms solution

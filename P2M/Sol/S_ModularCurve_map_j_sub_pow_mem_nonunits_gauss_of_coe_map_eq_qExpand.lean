@@ -175,4 +175,3 @@ theorem solution
     exact e
   exact Pg.map_ne_zero_of_inv hg0 P' hX
 
-#print axioms solution

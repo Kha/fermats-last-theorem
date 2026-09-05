@@ -1181,4 +1181,3 @@ theorem solution
   · exact forall_ideal_of_eq (D.adjoin_red_eq_map_range _ hBinf)
       (fun 𝔪 _ => isDiscreteValuationRing_localization_map_range_θ D _ hBinf hnI hnfI 𝔪)
 
-#print axioms solution

@@ -176,4 +176,3 @@ theorem solution
       Function.comp_apply] at h6
     rw [h6, lift_includeLeft_includeRight_apply]
 
-#print axioms solution

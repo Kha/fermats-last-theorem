@@ -466,4 +466,3 @@ theorem solution
     (IsPullback.of_hasPullback π (Scheme.TwoAffineOpenCover.specMap A A')) F).mpr
     (isIso_baseChangeHom_of_twoAffineOpenCover_aux π A' 𝒱 F htriv hfin hfib)
 
-#print axioms solution

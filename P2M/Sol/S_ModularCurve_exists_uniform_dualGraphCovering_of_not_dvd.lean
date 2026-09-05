@@ -1129,4 +1129,3 @@ theorem solution (N : ℕ) [NeZero N] {r : ℕ}
       rw [hE, sub_zero] at hdist
       exact hdist
 
-#print axioms solution

@@ -40,4 +40,3 @@ theorem solution
      fun ⟨g, hg⟩ => hg ▸ MvFormalGroup.CartierModule.tangent_verschiebungInt g⟩,
    fun x => MvFormalGroup.CartierModule.existsUnique_forall_eq_sum_range_verschiebungInt_iterate_add p Φ x⟩
 
-#print axioms solution

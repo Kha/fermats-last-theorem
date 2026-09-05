@@ -274,4 +274,3 @@ theorem solution
       hcompat0 hcompat1 (x : JZero (N₀ * p)) E hEgood ⟨_, hadm⟩ rfl hEx s hs sκ hsκ h0
     exact (hexact (𝟙 _) sκ).mp hM3
 
-#print axioms solution

@@ -291,4 +291,3 @@ theorem solution
   obtain ⟨x, -, hx⟩ := exists_isOpen_singleton_of_isOpen_finite (hfinc.subset hUsub) hUne hU
   exact ModularCurve.DRLevel.not_isOpen_singleton_fibre N₀ q κ (algebraMap (DRLevel.R q) κ) x hx
 
-#print axioms solution

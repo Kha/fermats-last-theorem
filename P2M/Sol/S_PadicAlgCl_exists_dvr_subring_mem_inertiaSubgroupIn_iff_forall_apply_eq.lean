@@ -282,4 +282,3 @@ theorem solution (p : ℕ) [Fact p.Prime] :
   · intro y hy hfix
     exact (mem_Oring_iff p y).mpr ⟨hfix, hy⟩
 
-#print axioms solution

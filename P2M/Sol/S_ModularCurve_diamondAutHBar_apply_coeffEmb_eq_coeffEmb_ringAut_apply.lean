@@ -310,4 +310,3 @@ theorem solution
         Subtype.ext (map_mul _ _ _)
       rw [e, map_mul, map_mul, ihy, ihz]
 
-#print axioms solution

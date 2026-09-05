@@ -187,4 +187,3 @@ theorem solution
     (h : ρ₁.IsOrdinaryAt p) : ρ₂.IsOrdinaryAt p :=
   GaloisRepAdic.LCSol.isOrdinaryAt_of_isEquiv e h
 
-#print axioms solution

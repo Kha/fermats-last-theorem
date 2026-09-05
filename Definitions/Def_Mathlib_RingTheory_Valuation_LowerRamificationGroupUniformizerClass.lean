@@ -262,7 +262,6 @@ info: 'IsLocalRing.smul_uniformizer_unit_sub_one_mem_pow_of_mem_lowerRamificatio
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms IsLocalRing.smul_uniformizer_unit_sub_one_mem_pow_of_mem_lowerRamificationGroup
 
 /--
 info: 'IsLocalRing.smul_uniformizer_unit_cocycle' depends on axioms: [propext]
@@ -285,7 +284,6 @@ info: 'IsLocalRing.mem_lowerRamificationGroup_of_smul_uniformizer_unit_sub_one_m
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms IsLocalRing.mem_lowerRamificationGroup_of_smul_uniformizer_unit_sub_one_mem_pow
 
 /--
 info: 'IsLocalRing.mem_lowerRamificationGroup_iff_smul_uniformizer_unit_sub_one_mem_pow' depends on axioms: [propext,
@@ -293,7 +291,6 @@ info: 'IsLocalRing.mem_lowerRamificationGroup_iff_smul_uniformizer_unit_sub_one_
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms IsLocalRing.mem_lowerRamificationGroup_iff_smul_uniformizer_unit_sub_one_mem_pow
 
 /--
 info: 'IsLocalRing.irreducible_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -306,7 +303,6 @@ info: 'ValuationSubring.smul_uniformizer_unit_sub_one_mem_pow_of_mem_lowerRamifi
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms ValuationSubring.smul_uniformizer_unit_sub_one_mem_pow_of_mem_lowerRamificationGroup
 
 /--
 info: 'Ideal.pointwise_smul_span_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -716,4 +716,3 @@ theorem solution
   exact ⟨leg_one M s q' hs hsq' hq'M hsM φ hφ hφα hφβ hα₁ hβ₁ hα₀ hβ₀ D,
     leg_two M s q' hs hsq' hq'M hsM φ hφ hφα hφβ hα₁ hβ₁ hα₀ hβ₀ D⟩
 
-#print axioms solution

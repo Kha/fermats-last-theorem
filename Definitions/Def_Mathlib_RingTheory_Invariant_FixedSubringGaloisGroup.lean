@@ -17,4 +17,3 @@ end FixedPoints
 info: 'FixedPoints.isGaloisGroup_subring' depends on axioms: [propext, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms FixedPoints.isGaloisGroup_subring

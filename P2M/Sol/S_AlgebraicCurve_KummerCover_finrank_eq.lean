@@ -20,4 +20,3 @@ theorem solution {F L : Type*} [Field F] [Field L] [Algebra F L] {p : ℕ} [hp :
     Module.finrank F L = p :=
   finrank_of_isSplittingField_X_pow_sub_C hζ (irreducible_X_pow_sub_C hf) L
 
-#print axioms solution

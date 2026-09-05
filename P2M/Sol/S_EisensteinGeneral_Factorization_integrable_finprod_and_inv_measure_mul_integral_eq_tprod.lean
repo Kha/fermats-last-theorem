@@ -861,4 +861,3 @@ theorem solution
               * ∫ y, h v y ∂(μ v)) := by
   exact FiniteAdelicFactorization.integrable_finprod_and_inv_measure_mul_integral_eq_tprod F ν S μ h h₁ hint hsum
 
-#print axioms solution

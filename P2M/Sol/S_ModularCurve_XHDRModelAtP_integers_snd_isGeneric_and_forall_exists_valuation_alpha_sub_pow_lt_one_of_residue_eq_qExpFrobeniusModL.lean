@@ -268,4 +268,3 @@ theorem solution
   intro u hu
   exact insep₂ p M H hpM hpM2 hHp hj 𝔛 A hA ρ hρ θ hwgen Psp Rpd α hα_coe hres₂α u hu
 
-#print axioms solution

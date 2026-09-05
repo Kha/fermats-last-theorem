@@ -979,4 +979,3 @@ theorem solution
   exact L5bA.aux p M H hpM hpM2 hj 𝔛 A hA ρ hρ (resPt A ≫ Spec.map (CommRingCat.ofHom ρ))
     (by rw [← Spec.map_comp, ← CommRingCat.ofHom_comp]) rfl D hD D₀ hD₀ ptsSp₀ hptsSp₀_add hptsSp₀
 
-#print axioms solution

@@ -152,4 +152,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_coeffMap_coeffEmb_of_ringHom
 theorem solution {L₁ L₂ : Type*} [Field L₁] [Field L₂] [Algebra ℚ L₁] [Algebra ℚ L₂] (σ : L₁ →+* L₂) (x : LaurentSeries ℚ) : ModularCurve.coeffMap σ (ModularCurve.coeffEmb L₁ x) = ModularCurve.coeffEmb L₂ x :=
   ModularCurve.coeffMap_coeffEmb_of_ringHom σ x
 
-#print axioms solution

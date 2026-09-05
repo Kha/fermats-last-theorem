@@ -1103,4 +1103,3 @@ theorem solution
     (by rw [map_zero, zero_pow (Fact.out : q.Prime).ne_zero]) ϖ hϖm eK ε hε hqϖ (jWidth (0 : k)) G' H' w hGH hmax
     c m hc hm hcm' hW₁ hW₂ hv₁' hv₂' g hg
 
-#print axioms solution

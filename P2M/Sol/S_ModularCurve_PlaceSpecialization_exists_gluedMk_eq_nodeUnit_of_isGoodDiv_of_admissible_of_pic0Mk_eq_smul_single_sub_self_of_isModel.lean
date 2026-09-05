@@ -1050,4 +1050,3 @@ theorem solution
     show (0 : Additive (ResidueField A)ˣ) - Additive.ofMul (bs s / as s) = Additive.ofMul (as s / bs s)
     rw [zero_sub, show -Additive.ofMul (bs s / as s) = Additive.ofMul (bs s / as s)⁻¹ from rfl, inv_div]
 
-#print axioms solution

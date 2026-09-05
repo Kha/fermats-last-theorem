@@ -98,4 +98,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_kroneckerCongruence.ModularC
 theorem solution (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (data : ModularPolynomialData ℓ) : KroneckerCongruence ℓ data :=
   ModularCurve.kroneckerCongruence ℓ data
 
-#print axioms solution

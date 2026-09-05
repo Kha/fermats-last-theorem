@@ -144,4 +144,3 @@ theorem solution
       exact hmem)
     z hz
 
-#print axioms solution

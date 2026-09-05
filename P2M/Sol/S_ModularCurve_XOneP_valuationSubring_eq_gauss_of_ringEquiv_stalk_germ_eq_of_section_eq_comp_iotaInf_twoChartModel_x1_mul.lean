@@ -408,4 +408,3 @@ theorem solution
   rw [Scheme.Hom.image_top_eq_opensRange]
   exact hfin
 
-#print axioms solution

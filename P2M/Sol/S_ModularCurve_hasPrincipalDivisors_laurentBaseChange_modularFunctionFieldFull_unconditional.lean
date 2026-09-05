@@ -14,4 +14,3 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L]
     (N : ℕ) [NeZero N] : HasPrincipalDivisors L (laurentBaseChange L (modularFunctionFieldFull N)) :=
   hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull L modularPolynomialFamily N
 
-#print axioms solution

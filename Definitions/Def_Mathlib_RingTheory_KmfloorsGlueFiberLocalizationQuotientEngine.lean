@@ -419,7 +419,6 @@ info: 'kmfloorsGlue_map_algebraMap_fiber_eq_bot' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_map_algebraMap_fiber_eq_bot
 
 /--
 info: 'kmfloorsGlue_one_tmul_eq_zero_of_mem_map' depends on axioms: [propext,
@@ -427,7 +426,6 @@ info: 'kmfloorsGlue_one_tmul_eq_zero_of_mem_map' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_one_tmul_eq_zero_of_mem_map
 
 /--
 info: 'kmfloorsGlue_isUnit_algebraMap_fiber_of_notMem' depends on axioms: [propext,
@@ -435,7 +433,6 @@ info: 'kmfloorsGlue_isUnit_algebraMap_fiber_of_notMem' depends on axioms: [prope
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_isUnit_algebraMap_fiber_of_notMem
 
 /--
 info: 'kmfloorsGlue_mem_iff_one_tmul_mem' depends on axioms: [propext,
@@ -443,13 +440,11 @@ info: 'kmfloorsGlue_mem_iff_one_tmul_mem' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_mem_iff_one_tmul_mem
 
 /--
 info: 'kmfloorsGlue_fiberEval' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_fiberEval
 
 /--
 info: 'kmfloorsGlue_isLocalization_fiberEval' depends on axioms: [propext,
@@ -457,7 +452,6 @@ info: 'kmfloorsGlue_isLocalization_fiberEval' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_isLocalization_fiberEval
 
 /--
 info: 'kmfloorsGlue_fiberLocalizationAtPrimeQuotientEquiv' depends on axioms: [propext,
@@ -465,7 +459,6 @@ info: 'kmfloorsGlue_fiberLocalizationAtPrimeQuotientEquiv' depends on axioms: [p
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_fiberLocalizationAtPrimeQuotientEquiv
 
 /--
 info: 'kmfloorsGlue_isRegularLocalRing_localizationQuotient_iff' depends on axioms: [propext,
@@ -473,7 +466,6 @@ info: 'kmfloorsGlue_isRegularLocalRing_localizationQuotient_iff' depends on axio
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_isRegularLocalRing_localizationQuotient_iff
 
 /--
 info: 'kmfloorsGlue_maximalIdeal_map_eq' depends on axioms: [propext,
@@ -481,7 +473,6 @@ info: 'kmfloorsGlue_maximalIdeal_map_eq' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_maximalIdeal_map_eq
 
 /--
 info: 'kmfloorsGlue_satGate_identityChart' depends on axioms: [propext,
@@ -489,7 +480,6 @@ info: 'kmfloorsGlue_satGate_identityChart' depends on axioms: [propext,
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_satGate_identityChart
 
 /--
 info: 'kmfloorsGlue_satGate_production_chartPair_int_three' depends on axioms: [propext,
@@ -497,7 +487,6 @@ info: 'kmfloorsGlue_satGate_production_chartPair_int_three' depends on axioms: [
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_satGate_production_chartPair_int_three
 
 /--
 info: 'kmfloorsGlue_falsifGate_wrongPrime_targetCollapses' depends on axioms: [propext,
@@ -505,6 +494,5 @@ info: 'kmfloorsGlue_falsifGate_wrongPrime_targetCollapses' depends on axioms: [p
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms kmfloorsGlue_falsifGate_wrongPrime_targetCollapses
 
 end

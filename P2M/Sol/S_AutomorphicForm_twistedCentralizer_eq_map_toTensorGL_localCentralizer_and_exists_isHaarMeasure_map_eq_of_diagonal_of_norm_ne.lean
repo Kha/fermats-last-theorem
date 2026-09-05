@@ -869,4 +869,3 @@ theorem solution
       GL (Fin 2) (v.adicCompletion K))
   rw [← he, ContinuousMulEquiv.apply_symm_apply]
 
-#print axioms solution

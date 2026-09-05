@@ -605,4 +605,3 @@ p2m_reactivate "P2MW.S_AlgebraicCurve_finrankAlong_id.ModularCurve P2MW.S_Algebr
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] : AlgebraicCurve.finrankAlong K (AlgHom.id K F) = 1 :=
   AlgebraicCurve.finrankAlong_id
 
-#print axioms solution

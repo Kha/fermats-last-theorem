@@ -47,4 +47,3 @@ theorem solution
       ↔ ∃ x' : ModularCurve.Period.parabolicHoms ℤ Γ ℤ, x = (p : ℤ) • x' :=
   LevelRaisingAux.SatRed.parabolicHoms_castAddHom_comp_eq_zero_iff x
 
-#print axioms solution

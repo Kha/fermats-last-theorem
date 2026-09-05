@@ -141,4 +141,3 @@ theorem solution :
     tatePowerSeries.Δ = PowerSeries.X * dedekindEtaUnit :=
   ModularCurve.Delta_tatePowerSeries
 
-#print axioms solution

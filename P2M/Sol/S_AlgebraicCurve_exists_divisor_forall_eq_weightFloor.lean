@@ -46,4 +46,3 @@ theorem solution
   refine ⟨Finsupp.onFinset (Dj.support ∪ Dc.support) R hsupp, fun w => ?_⟩
   rw [Finsupp.onFinset_apply]
 
-#print axioms solution

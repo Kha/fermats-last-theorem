@@ -186,4 +186,3 @@ theorem solution
 
 end Solution
 
-#print axioms solution

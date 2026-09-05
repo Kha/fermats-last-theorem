@@ -168,7 +168,6 @@ theorem placeOfPoint_ofGenerator_iotaInf_comap
 
 end AlgebraicCurve.CurveModel
 
-#print axioms AlgebraicCurve.CurveModel.placeOfPoint_ofGenerator_iotaInf_comap
 
 p2m_open "AlgebraicCurve P2MW.S_AlgebraicCurve_CurveModel_placeOfPoint_ofGenerator_iota0_comap.AlgebraicCurve AlgebraicCurve.CurveModel P2MW.S_AlgebraicCurve_CurveModel_placeOfPoint_ofGenerator_iota0_comap.AlgebraicCurve.CurveModel"
 

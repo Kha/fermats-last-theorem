@@ -422,4 +422,3 @@ theorem solution
     show (μ₀.degTotal : ℕ) = _
     rw [hμtot]; rfl
 
-#print axioms solution

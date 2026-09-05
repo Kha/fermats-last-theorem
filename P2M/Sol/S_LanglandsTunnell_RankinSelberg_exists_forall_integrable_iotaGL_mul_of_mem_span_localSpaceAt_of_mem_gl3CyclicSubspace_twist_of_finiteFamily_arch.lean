@@ -1265,4 +1265,3 @@ theorem solution
   exact Ws23HLInt.local_core p (Ws23HLInt.twist χA p (F.whittakerLoc p)) hW₃law hW₃sm hWgauge b hπp hϖp w₂base hw₂law
     hw₂K ω hcen hw₂gr μ₂ μN₂ w (hspan hw) W₃ hW₃
 
-#print axioms solution

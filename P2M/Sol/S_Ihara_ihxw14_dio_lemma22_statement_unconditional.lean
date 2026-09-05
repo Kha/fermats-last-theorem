@@ -693,4 +693,3 @@ theorem solution (q : ℕ) [NeZero q] (hq : 2 ≤ q) :
       Ihara.mennickeZ q m hmq = ⊤ :=
   Ihara.ihxw14_dio_lemma22_statement_unconditional_impl q hq
 
-#print axioms solution

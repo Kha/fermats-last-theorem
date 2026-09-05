@@ -152,4 +152,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_coeffMap_mem_laurentBaseChan
 theorem solution {L₁ L₂ : Type*} [Field L₁] [Field L₂] [Algebra ℚ L₁] [Algebra ℚ L₂] (σ : L₁ →+* L₂) (F₀ : IntermediateField ℚ (LaurentSeries ℚ)) {x : LaurentSeries L₁} (hx : x ∈ ModularCurve.laurentBaseChange L₁ F₀) : ModularCurve.coeffMap σ x ∈ ModularCurve.laurentBaseChange L₂ F₀ :=
   ModularCurve.coeffMap_mem_laurentBaseChange_of_ringHom σ F₀ hx
 
-#print axioms solution

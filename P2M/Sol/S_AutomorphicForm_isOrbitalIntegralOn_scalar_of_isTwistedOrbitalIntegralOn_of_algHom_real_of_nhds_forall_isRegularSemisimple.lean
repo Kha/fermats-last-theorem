@@ -563,4 +563,3 @@ theorem solution
     have := hgerm; simp only [hgdef] at this; exact (sub_eq_zero.mp this)
   rw [hfg]
 
-#print axioms solution

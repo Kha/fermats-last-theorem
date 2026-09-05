@@ -264,4 +264,3 @@ theorem solution
   obtain ⟨𝒲, m, h1, h2⟩ := E163K2L.cover_lifts π hπ hker (pullback.fst f f ≫ f) (pullback.fst f₀ f₀ ≫ f₀) _ hG f _ hμ
   exact ⟨𝒲, m, h1, h2⟩
 
-#print axioms solution

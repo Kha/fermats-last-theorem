@@ -87,4 +87,3 @@ theorem solution (N₀ q : ℕ) [NeZero N₀] [Fact q.Prime] (hqN : ¬ q ∣ N�
   rw [← h1]
   exact hlc.apply_eq_of_preconnectedSpace _ _
 
-#print axioms solution

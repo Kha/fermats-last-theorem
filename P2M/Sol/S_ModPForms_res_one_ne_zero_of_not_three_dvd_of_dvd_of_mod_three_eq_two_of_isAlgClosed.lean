@@ -1708,8 +1708,6 @@ private theorem e2_cong_Bd_sub_B2_mem_modPMod_two
   rw [heq]
   exact Submodule.sub_mem _ hbmem (Submodule.smul_mem _ _ hc1mem)
 
-#print axioms e3_res_one_add_eq_of_mem_modPMod_two
-#print axioms e2_cong_Bd_sub_B2_mem_modPMod_two
 
 end R3cK2ULegE
 

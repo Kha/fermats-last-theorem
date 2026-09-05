@@ -72,4 +72,3 @@ theorem solution
   rw [← hxb, Equiv.symm_apply_eq]
   exact hspA
 
-#print axioms solution

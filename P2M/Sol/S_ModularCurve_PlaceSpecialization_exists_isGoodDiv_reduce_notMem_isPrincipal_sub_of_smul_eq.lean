@@ -449,4 +449,3 @@ theorem solution
       simp only [Finsupp.coe_sub, Pi.sub_apply, hE₀, hC₀]
       omega⟩
 
-#print axioms solution

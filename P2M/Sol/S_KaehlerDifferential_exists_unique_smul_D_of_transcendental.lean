@@ -20,4 +20,3 @@ private theorem KaehlerDifferential.exists_unique_smul_D_of_transcendental (K : 
 theorem solution (K : Type*) [Field K] {F : Type*} [Field F] [Algebra K F] (x : F) (hx : Transcendental K x) [Algebra.IsSeparable (IntermediateField.adjoin K ({x} : Set F)) F] (ω : KaehlerDifferential K F) : ∃! c : F, ω = c • KaehlerDifferential.D K F x :=
   KaehlerDifferential.exists_unique_smul_D_of_transcendental K x hx ω
 
-#print axioms solution

@@ -960,27 +960,5 @@ theorem coprimeToModulus_top : coprimeToModulus K (⊤ : Ideal (𝓞 K)) = ⊤ :
 
 end Degenerate
 
-#print axioms Deep.NTSupply.coprimeToModulus
-#print axioms Deep.NTSupply.mem_coprimeToModulus_iff
-#print axioms Deep.NTSupply.narrowRaySet
-#print axioms Deep.NTSupply.narrowRaySubgroup
-#print axioms Deep.NTSupply.narrowRaySubgroup_le_coprimeToModulus
-#print axioms Deep.NTSupply.NarrowRayClassGroup
-#print axioms Deep.NTSupply.NarrowRayClassGroup.mk
-#print axioms Deep.NTSupply.one_mem_narrowRaySet
-#print axioms Deep.NTSupply.raySymbol
-#print axioms Deep.NTSupply.raySymbol_mul
-#print axioms Deep.NTSupply.raySymbolHom
-#print axioms Deep.NTSupply.raySymbolHom_prime
-#print axioms Deep.NTSupply.raySymbolDescend
-#print axioms Deep.NTSupply.raySymbolDescend_mk
-#print axioms Deep.NTSupply.raySymbolDescend_primeClass
-#print axioms Deep.NTSupply.raySymbolIdealHom
-#print axioms Deep.NTSupply.primeUnit
-#print axioms Deep.NTSupply.primeClass
-#print axioms Deep.NTSupply.movingLemma
-#print axioms Deep.NTSupply.finite
-#print axioms Deep.NTSupply.coprimeToModulus_top
-#print axioms Deep.NTSupply.finite_closure_of_involutions
 
 end Deep.NTSupply

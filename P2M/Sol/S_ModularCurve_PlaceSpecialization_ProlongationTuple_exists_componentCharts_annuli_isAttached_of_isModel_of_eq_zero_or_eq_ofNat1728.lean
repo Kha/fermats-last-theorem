@@ -2660,8 +2660,6 @@ theorem nodeResidue₂_eq_zero_iff_mem_span (R : ProlongationTuple P)
     (RingHom.ker φ) hkϖ hky hne
   rw [← hφ g, ← RingHom.mem_ker, key]
 
-#print axioms nodeResidue₁_eq_zero_iff_mem_span
-#print axioms nodeResidue₂_eq_zero_iff_mem_span
 
 theorem span_nodeConst_eq_span_kronecker (R : ProlongationTuple P) (hmodel : R.IsModel)
     (hker : ∀ c : A, red c = 0 ↔ c ∈ IsLocalRing.maximalIdeal A) (hq : 5 ≤ q)
@@ -2847,7 +2845,6 @@ theorem span_nodeConst_eq_span_kronecker (R : ProlongationTuple P) (hmodel : R.I
     · rw [heϖ, heKy, ← hsp2ₑ]; exact hpr2ₑ
     · rw [heϖ, heKy, ← hsp2ₑ]; exact hnm2ₑ
 
-#print axioms span_nodeConst_eq_span_kronecker
 
 end ChartOkDictW
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_exists_componentCharts_annuli_isAttached_of_isModel_of_eq_zero_or_eq_ofNat1728.ChartOkChartFst"
@@ -2922,7 +2919,6 @@ theorem jFun_jqFun_mem_nodeIntegersOver
     exact Subfield.subset_closure (Or.inr (Set.mem_insert_of_mem _ (Set.mem_singleton _)))
   exact ⟨⟨⟨h₁, h₂, fun V hV => (hplaces V hV).1⟩, hKJ⟩, ⟨⟨h₁', h₂', fun V hV => (hplaces V hV).2⟩, hKJQ⟩⟩
 
-#print axioms jFun_jqFun_mem_nodeIntegersOver
 
 end ChartOkDictW
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_exists_componentCharts_annuli_isAttached_of_isModel_of_eq_zero_or_eq_ofNat1728.ChartOkChartFst"
@@ -3049,7 +3045,6 @@ theorem exists_coeff_lift (R : ProlongationTuple P)
       rw [Place.ord_mul _ ht' hy0, hy1]; omega
     rw [AlgebraicCurve.Place.evalAt_congr _ hjmem hmemc (Or.inr hpos), AlgebraicCurve.Place.evalAt_algebraMap]
 
-#print axioms exists_coeff_lift
 
 end ChartOkECA
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_exists_componentCharts_annuli_isAttached_of_isModel_of_eq_zero_or_eq_ofNat1728.ChartOkChartFst"
@@ -3111,7 +3106,6 @@ theorem ew_eq_jWidth (R : ProlongationTuple P) (hq : 5 ≤ q) (hR : R.IsModel)
     rw [ModularCurve.placeRamificationJ, hwb', ← hwb, hordb]; rfl
   rw [hram, Nat.div_one]
 
-#print axioms ew_eq_jWidth
 
 end ChartOkECA
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_exists_componentCharts_annuli_isAttached_of_isModel_of_eq_zero_or_eq_ofNat1728.ChartOkChartFst"

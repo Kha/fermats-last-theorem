@@ -63,4 +63,3 @@ theorem solution
   exact ⟨⟨(lsXiMemberAt_iff (𝓞 F) F (adelicGLHaar (Fin 2) (𝓞 F) F) ⊤ ξ (⋃ x ∈ T, (· * x) '' centreCutSiegelSet F c u d₁ d₂) (rightTranslate F g ψ)).mpr ⟨hA.1, hMem⟩,
       hg.1.2⟩, hg.2⟩
 
-#print axioms solution

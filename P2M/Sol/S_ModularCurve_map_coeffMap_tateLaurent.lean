@@ -265,4 +265,3 @@ theorem solution (K : Type*) [CommRing K] (K' : Type*) [CommRing K']
     (f : K →+* K') : (tateLaurent K).map (coeffMap f) = tateLaurent K' :=
   ModularCurve.map_coeffMap_tateLaurent K K' f
 
-#print axioms solution

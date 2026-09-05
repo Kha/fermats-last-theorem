@@ -144,4 +144,3 @@ theorem solution
     show μ₂.real (U : Set (GL (Fin 2) (p.adicCompletion ℚ))) = (μ₂ (U : Set (GL (Fin 2) (p.adicCompletion ℚ)))).toReal from rfl]
   ring
 
-#print axioms solution

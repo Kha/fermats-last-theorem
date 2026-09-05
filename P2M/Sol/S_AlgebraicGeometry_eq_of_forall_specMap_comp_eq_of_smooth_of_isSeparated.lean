@@ -30,4 +30,3 @@ theorem solution
   haveI : IsReduced X := AlgebraicGeometry.isReduced_of_flat_of_isReduced_pullback_of_isFractionRing K f
   exact AlgebraicGeometry.eq_of_forall_specMap_comp_eq_of_flat_of_isReduced_of_isSeparated K Ω f g φ ψ hφ hψ h
 
-#print axioms solution

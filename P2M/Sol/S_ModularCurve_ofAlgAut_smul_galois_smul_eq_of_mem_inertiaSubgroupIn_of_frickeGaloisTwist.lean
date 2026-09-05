@@ -101,4 +101,3 @@ theorem solution
     Units.val_one, ← Nat.cast_one, ZMod.natCast_eq_natCast_iff]
   exact hc1'
 
-#print axioms solution

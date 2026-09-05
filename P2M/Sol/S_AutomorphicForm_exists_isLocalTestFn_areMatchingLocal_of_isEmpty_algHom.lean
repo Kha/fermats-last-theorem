@@ -813,4 +813,3 @@ theorem solution
     AutomorphicForm.exists_nhds_forall_exists_isLocalTestFn_areMatchingLocal_of_not_isRegularSemisimple_normString
     K L hdeg σ hσ v hι φv hφv
 
-#print axioms solution

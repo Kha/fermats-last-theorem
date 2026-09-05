@@ -80,4 +80,3 @@ theorem solution {N : ℕ}
   rw [heig, ModularCurve.periodMap_smul] at h
   exact h.symm
 
-#print axioms solution

@@ -2728,17 +2728,6 @@ example : ∀ (F : Type) [Field F] [NumberField F],
       * unipotentGL2 (algebraMap F (AdeleRing (𝓞 F) F) ξ) * g)‖) :=
   fun F _ _ => AutomorphicForm.bruhatTransversal_summand_norm_summable_of_re_gt_half_impl F
 
-#print axioms AutomorphicForm.bruhatTransversal_summand_norm_summable_of_re_gt_half_impl
-#print axioms AutomorphicForm.WeylIntegrable.bruhatTransversal_norm_le_summable_uniform
-#print axioms AutomorphicForm.WeylIntegrable.bruhatTransversal_summand_norm_summable
-#print axioms AutomorphicForm.WeylIntegrable.jE1_hole
-#print axioms AutomorphicForm.WeylIntegrable.summable_rpow_Dy_algebraMap
-#print axioms AutomorphicForm.WeylIntegrable.S2_finite
-#print axioms AutomorphicForm.WeylIntegrable.Dy_translate_le
-#print axioms AutomorphicForm.WeylIntegrable.norm_apply_weyl_unipotent_le
-#print axioms AutomorphicForm.WeylIntegrable.lintegral_domG_lt_top
-#print axioms AutomorphicForm.WeylIntegrable.weylIntertwiningIntegrand_integrable_of_re_gt_half_impl
-#print axioms NumberField.AdeleRing.distribHaarChar_eq_prod_norm_pow_mult_of_snd_eq_one_impl
 
 p2m_open "MeasureTheory NumberField P2MW.S_AutomorphicForm_bruhatTransversal_summand_norm_summable_of_re_gt_half.NumberField NumberField.AdelicHaar"
 p2m_open "AutomorphicForm P2MW.S_AutomorphicForm_bruhatTransversal_summand_norm_summable_of_re_gt_half.AutomorphicForm"

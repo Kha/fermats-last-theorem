@@ -306,4 +306,3 @@ theorem solution
     push_cast
     rw [ModularCurve.algebraMap_laurentSeries_eq_single, ← HahnSeries.C_apply]
 
-#print axioms solution

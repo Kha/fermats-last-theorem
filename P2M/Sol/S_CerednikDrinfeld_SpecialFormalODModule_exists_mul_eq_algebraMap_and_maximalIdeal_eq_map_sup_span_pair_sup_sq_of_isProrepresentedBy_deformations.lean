@@ -51,4 +51,3 @@ theorem solution
       Onr hOnr_complete hOnr_max ι X₀ R resR hresR Xu wu hwu hPRO hnode₀ hnode₁ e₀ e₁ u v he₀ he₁ hbasis hu hv
       χ χ' hχ hχ' (hs u (by simp)) (hs v (by simp))
 
-#print axioms solution

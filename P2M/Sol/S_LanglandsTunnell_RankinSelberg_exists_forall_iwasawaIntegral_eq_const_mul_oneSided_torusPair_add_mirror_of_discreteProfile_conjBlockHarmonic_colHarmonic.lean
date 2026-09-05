@@ -1178,4 +1178,3 @@ theorem solution
   rw [hA]
   exact hS6 s hs2 hrow
 
-#print axioms solution

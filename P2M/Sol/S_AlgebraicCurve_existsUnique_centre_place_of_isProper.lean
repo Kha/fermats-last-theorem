@@ -150,4 +150,3 @@ theorem solution
     obtain ⟨L₁, hL₁⟩ := mkLift z₁ hz₁
     rw [← hL₁, Subsingleton.elim L₁ Lu.default]
 
-#print axioms solution

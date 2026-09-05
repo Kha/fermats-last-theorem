@@ -46,4 +46,3 @@ theorem solution
     inferInstanceAs (IsLocalHom (g.stalkMap x).hom)
   exact FD0625672e.ringKrullDim_quotient_map_maximalIdeal_eq_zero (Y.presheaf.stalk (g.base x)) (X.presheaf.stalk x)
 
-#print axioms solution

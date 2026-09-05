@@ -198,4 +198,3 @@ theorem solution
     (s - uP - P₂.centralExponent + (m : ℂ) / 2 - 2) hDpos hz
   rw [hI, hce, show (μ + (k : ℂ) / 2 + 1) + (s - uP - 2 * μ + (m : ℂ) / 2 - 2) + 1 = s - uP - μ + ((m : ℂ) + (k : ℂ)) / 2 by ring]
 
-#print axioms solution

@@ -167,5 +167,3 @@ end ModularCurve
 
 end
 
-#print axioms ModularCurve.laurentDescent_geomAut
-#print axioms ModularCurve.exists_finset_forall_exists_laurentDescent_eq

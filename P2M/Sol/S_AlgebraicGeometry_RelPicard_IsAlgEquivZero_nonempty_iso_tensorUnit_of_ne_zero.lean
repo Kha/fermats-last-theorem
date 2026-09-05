@@ -168,4 +168,3 @@ theorem solution
   exact ⟨AlgZeroTrivGlue.isoPullbackInvPullbackObj (pullback.fst x (𝟙 _)) L ≪≫ (Scheme.Modules.pullback _).mapIso e ≪≫
     Scheme.Modules.pullbackUnitIso _⟩
 
-#print axioms solution

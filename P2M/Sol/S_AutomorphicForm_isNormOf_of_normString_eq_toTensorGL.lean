@@ -17,4 +17,3 @@ theorem solution
   show AutomorphicForm.toTensorGL K L A γ = 1⁻¹ * AutomorphicForm.normString K L A σ ε * 1
   rw [inv_one, one_mul, mul_one, h]
 
-#print axioms solution

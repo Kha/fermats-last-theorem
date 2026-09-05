@@ -54,4 +54,3 @@ theorem solution
   rintro φ' ⟨h1', G'', hbc', ψ', hψ'⟩
   exact FormalGroup.IsDrinfeldBasisAdic.algHom_eq_of_smallExtension_of_sqZero q k W₀ hW₀ res₀ hres₀ hker₀ F₀ hF₀ Fu hFu hFu1 T resT hresT hkerT hresT₀ S resS hresS hkerS σ hσ hσres hsmall G hG Gσ hGσ φbar hφbar Gbar' hbcbar ψbar hψbar φ' φ h1' h1 G'' hbc' ψ' hψ' G' hbc ψ hψ
 
-#print axioms solution

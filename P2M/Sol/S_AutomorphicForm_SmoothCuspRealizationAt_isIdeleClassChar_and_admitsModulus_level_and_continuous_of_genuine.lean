@@ -193,7 +193,6 @@ theorem solution
     CentralCharacterOfRealization.continuous_fullChar R⟩
 
 section Foot
-#print axioms solution
 set_option pp.funBinderTypes true in
 #check @solution
 end Foot

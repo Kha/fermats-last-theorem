@@ -67,4 +67,3 @@ theorem solution
   unfold Measure.real
   ring
 
-#print axioms solution

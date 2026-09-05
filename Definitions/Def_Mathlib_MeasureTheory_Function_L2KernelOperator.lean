@@ -484,37 +484,31 @@ end MeasureTheory
 info: 'MeasureTheory.L2.lintegral_enorm_kernelIntegral_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.lintegral_enorm_kernelIntegral_sq_le
 
 /--
 info: 'MeasureTheory.L2.eLpNorm_kernelIntegral_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.eLpNorm_kernelIntegral_le
 
 /--
 info: 'MeasureTheory.MemLp.kernelIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.MemLp.kernelIntegral
 
 /--
 info: 'MeasureTheory.L2.norm_kernelIntegralCLM_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.norm_kernelIntegralCLM_le
 
 /--
 info: 'MeasureTheory.L2.norm_kernelIntegralₗ_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.norm_kernelIntegralₗ_le
 
 /--
 info: 'MeasureTheory.L2.kernelIntegralCLM_indicatorConst_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.kernelIntegralCLM_indicatorConst_prod
 
 /--
 info: 'MeasureTheory.L2.isCompactOperator_kernelIntegralCLM_indicatorConst_prod' depends on axioms: [propext,
@@ -522,19 +516,16 @@ info: 'MeasureTheory.L2.isCompactOperator_kernelIntegralCLM_indicatorConst_prod'
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.isCompactOperator_kernelIntegralCLM_indicatorConst_prod
 
 /--
 info: 'MeasureTheory.L2.compactKernels_eq_top' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.compactKernels_eq_top
 
 /--
 info: 'MeasureTheory.L2.isCompactOperator_kernelIntegralCLM' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.isCompactOperator_kernelIntegralCLM
 
 /--
 info: 'MeasureTheory.L2.finiteDimensional_of_kernelIntegralCLM_eq_id' depends on axioms: [propext,
@@ -542,4 +533,3 @@ info: 'MeasureTheory.L2.finiteDimensional_of_kernelIntegralCLM_eq_id' depends on
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.L2.finiteDimensional_of_kernelIntegralCLM_eq_id

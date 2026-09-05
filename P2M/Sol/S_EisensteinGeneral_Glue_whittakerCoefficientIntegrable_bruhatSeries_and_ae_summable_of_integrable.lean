@@ -162,4 +162,3 @@ theorem solution (F : Type) [Field F]
 end Solution
 p2m_reactivate "P2MW.S_EisensteinGeneral_Glue_whittakerCoefficientIntegrable_bruhatSeries_and_ae_summable_of_integrable.EgenGlue"
 
-#print axioms solution

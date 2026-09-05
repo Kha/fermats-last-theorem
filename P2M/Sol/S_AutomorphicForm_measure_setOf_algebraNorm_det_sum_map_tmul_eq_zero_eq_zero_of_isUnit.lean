@@ -128,4 +128,3 @@ theorem solution
   rw [hset]
   exact MvPolynomial.measure_setOf_eval_eq_zero_of_ne_zero (v.adicCompletion K) hF ι _ hP0 μ
 
-#print axioms solution

@@ -3472,4 +3472,3 @@ theorem solution
   have hI := tendsto_nhds_unique hconst hboth
   rw [hI, hIC, mul_comm]
 
-#print axioms solution

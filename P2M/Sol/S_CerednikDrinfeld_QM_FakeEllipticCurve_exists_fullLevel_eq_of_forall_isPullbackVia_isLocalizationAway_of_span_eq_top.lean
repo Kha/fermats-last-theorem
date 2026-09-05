@@ -194,4 +194,3 @@ theorem solution
       apply Subtype.ext
       rw [← hR, H, e1]
 
-#print axioms solution

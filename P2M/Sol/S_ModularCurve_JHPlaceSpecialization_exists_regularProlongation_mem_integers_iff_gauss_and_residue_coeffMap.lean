@@ -88,4 +88,3 @@ theorem solution
 
   exact transfer M H A _ hE
 
-#print axioms solution

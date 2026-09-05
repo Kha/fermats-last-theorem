@@ -6410,4 +6410,3 @@ theorem solution (K : Type) [Field K] [NumberField K]
     (fun v => NumberField.AdelicLevel.uniformizerUnit K v)
     (fun v => NumberField.AdelicLevel.valued_uniformizerUnit K v) χ hχc hχu hχ hχ1
 
-#print axioms solution

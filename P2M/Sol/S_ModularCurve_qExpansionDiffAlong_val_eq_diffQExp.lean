@@ -59,4 +59,3 @@ theorem solution {L : Type*} [Field L]
     qExpansionDiffAlong F.val ω = diffQExp F ω :=
   ModularCurve.qExpansionDiffAlong_val_eq_diffQExp F ω
 
-#print axioms solution

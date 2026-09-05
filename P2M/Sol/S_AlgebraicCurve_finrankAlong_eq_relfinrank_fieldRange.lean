@@ -605,4 +605,3 @@ p2m_reactivate "P2MW.S_AlgebraicCurve_finrankAlong_eq_relfinrank_fieldRange.Modu
 theorem solution {K E : Type*} [Field K] [Field E] [Algebra K E] (A B : IntermediateField K E) (φ : A →ₐ[K] B) : AlgebraicCurve.finrankAlong K φ = IntermediateField.relfinrank ((B.val.comp φ).fieldRange) B :=
   AlgebraicCurve.finrankAlong_eq_relfinrank_fieldRange A B φ
 
-#print axioms solution

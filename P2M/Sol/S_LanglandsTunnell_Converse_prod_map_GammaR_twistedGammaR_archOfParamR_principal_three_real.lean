@@ -71,4 +71,3 @@ theorem solution
   · rw [twistedGammaC, hU, hE, Finset.sum_insert hn0, Finset.sum_insert hn1, Finset.sum_singleton, Finset.sum_empty]
     simp only [archOfParamR, RealArchParam.twist, RealArchParam.gammaC, add_zero, Multiset.map_zero, Multiset.prod_zero]
 
-#print axioms solution

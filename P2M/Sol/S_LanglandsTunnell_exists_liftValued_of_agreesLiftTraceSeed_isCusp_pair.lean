@@ -838,4 +838,3 @@ theorem solution
       Units.val_mul, Units.val_mul, Matrix.det_mul_right_comm, ← Units.val_mul, ← map_mul,
       ← map_mul, mul_inv_cancel, map_one, map_one, Units.val_one, Matrix.one_mul]
 
-#print axioms solution

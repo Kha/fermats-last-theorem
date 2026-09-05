@@ -312,4 +312,3 @@ theorem solution
     exact sub_eq_zero.mp this
   rw [hft, hg]
 
-#print axioms solution

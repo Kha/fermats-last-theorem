@@ -42,4 +42,3 @@ theorem solution
   rw [hsplit, map_add, (IsLocalRing.residue_eq_zero_iff _).mpr hmax, zero_add]
   exact e.residue_algebraMap (c e : K)
 
-#print axioms solution

@@ -31,4 +31,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
   refine tsum_congr fun k => ?_
   ring
 
-#print axioms solution

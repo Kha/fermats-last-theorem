@@ -134,4 +134,3 @@ theorem solution
   exact ⟨OggSmallQ.xInt p, OggSmallQ.coeffMap_xInt_rat p,
     fun κ _ _ => OggSmallQ.coeffMap_xInt_charP p h240 κ⟩
 
-#print axioms solution

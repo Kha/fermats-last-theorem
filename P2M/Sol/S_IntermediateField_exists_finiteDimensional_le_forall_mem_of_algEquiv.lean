@@ -74,4 +74,3 @@ theorem solution
     intro x hx
     exact hle hx
 
-#print axioms solution

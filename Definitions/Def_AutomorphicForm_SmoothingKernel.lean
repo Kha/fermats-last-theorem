@@ -955,25 +955,5 @@ end Kernel
 #check @AutomorphicForm.finInclN
 #check @AutomorphicForm.compactHaarN
 #check @AutomorphicForm.finAvgN
-#print axioms AutomorphicForm.transposeInvN_mul
-#print axioms AutomorphicForm.componentAtN_mul_archInclN
-#print axioms AutomorphicForm.isHaarMeasure_archGLHaarN
-#print axioms AutomorphicForm.archConvN_comp_mul_left
-#print axioms AutomorphicForm.convN_mul_right
-#print axioms AutomorphicForm.archConvN_eq_convN_mul
-#print axioms AutomorphicForm.finInclN_mul_archInclN
-#print axioms AutomorphicForm.archConvN_mul_finInclN
-#print axioms AutomorphicForm.isProbabilityMeasure_compactHaarN
-#print axioms AutomorphicForm.finAvgN_eq_self
-#print axioms AutomorphicForm.finAvgN_mul_finInclN
 #check @AutomorphicForm.StandardKernel.standardKernelCore
-#print axioms AutomorphicForm.StandardKernel.standardKernelCore_one
-#print axioms AutomorphicForm.StandardKernel.standardKernelCore_mul_of_orth
-#print axioms AutomorphicForm.StandardKernel.standardKernelCore_transpose_inv
-#print axioms AutomorphicForm.StandardKernel.bound_of_standardKernelCore_ne_zero
-#print axioms AutomorphicForm.StandardKernel.contDiff_coreOfEntries
 #check @AutomorphicForm.StandardKernel.standardKernel
-#print axioms AutomorphicForm.StandardKernel.standardKernel_one
-#print axioms AutomorphicForm.StandardKernel.standardKernel_comp_transposeInvN
-#print axioms AutomorphicForm.StandardKernel.isSmoothingKernelN_standardKernel
-#print axioms AutomorphicForm.StandardKernel.exists_isSmoothingKernelN_transposeInvN_one

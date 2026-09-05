@@ -57,4 +57,3 @@ theorem solution
     rw [sub_add_cancel_left, neg_mem_iff, hmax]
     simpa only [pow_one] using hy
 
-#print axioms solution

@@ -518,4 +518,3 @@ theorem solution
     huniq _ _ hP0min hkermin hP0le hkerle
   rw [key z, ← hP0]
 
-#print axioms solution

@@ -853,4 +853,3 @@ theorem solution
       rootOfUnity, ← HahnSeries.C_mul_eq_smul]
     ring
 
-#print axioms solution

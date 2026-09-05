@@ -102,4 +102,3 @@ theorem solution {M : ℕ} {H : Subgroup (ZMod M)ˣ}
       (range_iotaDeg_le_GammaHLower_impl q hcop h hdqM')]
   rfl
 
-#print axioms solution

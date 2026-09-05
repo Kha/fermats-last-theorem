@@ -575,4 +575,3 @@ theorem solution
     M4aKummer.SolH3.normSub_eq_range M E (𝔣.map (algebraMap (𝓞 k) (𝓞 M)))]
   exact M4aKummer.SolH3.main k M E 𝔣
 
-#print axioms solution

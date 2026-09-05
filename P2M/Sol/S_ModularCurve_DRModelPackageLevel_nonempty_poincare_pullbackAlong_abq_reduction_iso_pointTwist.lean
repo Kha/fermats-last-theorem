@@ -318,4 +318,3 @@ theorem solution
   ·
     exact ⟨(habq1 (𝟙 _) sκ).some ≪≫ Scheme.Modules.rigidifyMapIso _ _ ((Scheme.Modules.pullback _).mapIso hMSW.some) ≪≫ G7₁.some⟩
 
-#print axioms solution

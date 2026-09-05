@@ -2675,4 +2675,3 @@ theorem solution
     simp only [Set.mem_setOf_eq, not_or]; exact ⟨hℓM, hℓq⟩
   rw [hcoef ℓ hℓ hℓM' hℓS, dif_pos hℓ, hbridge ℓ hℓ hℓM hℓq]
 
-#print axioms solution

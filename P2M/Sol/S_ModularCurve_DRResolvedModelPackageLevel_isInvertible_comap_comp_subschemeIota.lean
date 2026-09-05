@@ -113,4 +113,3 @@ theorem solution
       (by rw [hmax]; exact (IsLocalRing.maximalIdeal.isMaximal _).ne_top)
   · exact AlgebraicGeometry.E5W2aInv.not_mem_support_of_map_germ_eq_top (R.comp v) V hV (hunit v hvw)
 
-#print axioms solution

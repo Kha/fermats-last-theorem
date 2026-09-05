@@ -298,4 +298,3 @@ theorem solution
   simp only [Matrix.mulVec, dotProduct, classSetHeckeMatrix, Matrix.of_apply]
   exact sum_heckeKernel_mul_eq hn.isOrder hSR hU1 hU2 hU3 hsq _ hxa i
 
-#print axioms solution

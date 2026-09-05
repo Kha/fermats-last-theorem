@@ -71,4 +71,3 @@ theorem solution
                   mul_le_mul_of_nonneg_left hq (mul_nonneg (by linarith) hApow)
   exact (key m).1
 
-#print axioms solution

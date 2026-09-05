@@ -49,4 +49,3 @@ theorem solution (N : ℕ) [NeZero N] (K : Type) [Field K] [CharZero K] :
       = (ModularCurve.dedekindPsi N : ℚ) + 2 * (ModularCurve.nuThree N : ℚ) := by exact_mod_cast hST
   linarith
 
-#print axioms solution

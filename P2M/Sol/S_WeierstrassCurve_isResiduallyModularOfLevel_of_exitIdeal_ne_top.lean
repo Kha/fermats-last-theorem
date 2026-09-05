@@ -68,4 +68,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p N : ℕ) [NeZero N]
 
 end
 
-#print axioms solution

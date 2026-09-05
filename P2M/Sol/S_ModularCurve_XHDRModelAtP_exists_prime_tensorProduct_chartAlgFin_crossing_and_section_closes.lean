@@ -255,4 +255,3 @@ theorem solution
   rw [huκt, htpt]
   rfl
 
-#print axioms solution

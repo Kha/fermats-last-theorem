@@ -183,4 +183,3 @@ theorem solution
       rw [reassoc_of% hε, ← hvm t, ← reassoc_of% hε, Iso.hom_inv_id_assoc, E163G.morphismRestrict_homOfLE_assoc,
         hmμ, Scheme.homOfLE_ι_assoc]
 
-#print axioms solution

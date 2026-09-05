@@ -288,4 +288,3 @@ theorem solution
   · simpa only [mul_one] using h1
   · simpa only [mul_one] using h2
 
-#print axioms solution

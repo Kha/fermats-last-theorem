@@ -851,4 +851,3 @@ theorem solution
       (Y ^ (2 * M) * coeffEmb ℂ jq ^ (M + 1) * (coeffEmb ℂ jq - 1728) ^ M) :=
   IsIntegralAdjoinCoeffEmbJqInvSol.target M hΓ h1 f Y hY
 
-#print axioms solution

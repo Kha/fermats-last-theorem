@@ -1521,4 +1521,3 @@ theorem solution
               o.elim jf fun v => fricke v.1) P τ} = ⊤ :=
   FrickeSpan.main (L := L) (hL := hL) (W := W) (hW := hW) (hfricke := hfricke) (hjf := hjf) hK Γ hΓ k a b m hk
 
-#print axioms solution

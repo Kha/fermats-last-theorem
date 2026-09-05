@@ -118,4 +118,3 @@ theorem solution :
       1728 * (PowerSeries.X * dedekindEtaUnit) :=
   ModularCurve.eisenstein4_cube_sub_mk_sq
 
-#print axioms solution

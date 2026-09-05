@@ -24,5 +24,4 @@ theorem solution
   apply mul_left_cancel₀ hv
   rw [← hsum, key, mul_comm]
 
-#print axioms solution
 #check @solution

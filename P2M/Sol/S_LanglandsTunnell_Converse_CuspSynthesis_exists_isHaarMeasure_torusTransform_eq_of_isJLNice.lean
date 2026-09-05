@@ -20367,4 +20367,3 @@ theorem solution
       fun s hs => ⟨(hprimal s hs).1, (hprimal s hs).2.2 hm⟩,
       fun s hs => ⟨(hdual s hs).1, (hdual s hs).2.2 hm⟩⟩
 
-#print axioms solution

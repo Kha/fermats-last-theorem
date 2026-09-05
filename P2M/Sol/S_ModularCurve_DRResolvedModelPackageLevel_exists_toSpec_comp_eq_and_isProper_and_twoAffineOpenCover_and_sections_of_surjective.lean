@@ -365,4 +365,3 @@ theorem solution
   · intro σ hσ hσc
     exact exists_section_of_section R c y M φ hφ σ hσ hσc
 
-#print axioms solution

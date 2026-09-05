@@ -1760,4 +1760,3 @@ theorem solution
     Ihara.mennickeZ q m hmq = ⊤ :=
   Ihara.mennickeZ_eq_top_of_corrected_reading_of_diophantine_impl q m hmq hq hdvd hsupp hsol
 
-#print axioms solution

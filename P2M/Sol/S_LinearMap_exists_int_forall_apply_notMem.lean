@@ -27,4 +27,3 @@ theorem solution
   rw [hφW t ht, Submodule.mem_bot] at hz
   simpa using hz
 
-#print axioms solution

@@ -60,4 +60,3 @@ theorem solution (p : ℕ) :
   change Ideal.map _ (Ideal.span {d}) = _
   rw [Ideal.map_span, Set.image_singleton]
 
-#print axioms solution

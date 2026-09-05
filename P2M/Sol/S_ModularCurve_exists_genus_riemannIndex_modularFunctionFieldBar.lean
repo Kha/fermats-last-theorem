@@ -34,4 +34,3 @@ theorem solution (N : ℕ) [NeZero N] :
   haveI := essFiniteType_modularFunctionFieldBar N
   exact exists_genus_riemannIndex_of_isCurveOver (constantsAreBase_modularFunctionFieldBar N)
 
-#print axioms solution

@@ -45,4 +45,3 @@ theorem solution
   rw [map_prod]
   exact Finset.prod_eq_zero (Finset.mem_univ i) hgi
 
-#print axioms solution

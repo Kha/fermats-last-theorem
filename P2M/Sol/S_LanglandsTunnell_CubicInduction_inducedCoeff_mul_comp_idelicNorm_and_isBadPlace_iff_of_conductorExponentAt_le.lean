@@ -433,4 +433,3 @@ theorem solution
     rw [finsum_mem_eq_finite_toFinset_sum _ hfin]
     push_cast at hle
     linarith
-#print axioms solution

@@ -218,4 +218,3 @@ theorem solution
     O.toricPts m ≤ (toricMonodromyPart (J := JZero (N₀ * p)) p (A.inertiaSubgroupIn ℚ)).toAddSubgroup :=
   BridgeMono.toricPts_le O hΛ hIU m hmp
 
-#print axioms solution

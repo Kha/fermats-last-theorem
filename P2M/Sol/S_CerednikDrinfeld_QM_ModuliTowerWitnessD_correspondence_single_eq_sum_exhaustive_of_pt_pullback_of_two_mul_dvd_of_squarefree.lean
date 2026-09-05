@@ -375,4 +375,3 @@ theorem solution
       rw [← hRpt i, h]
   · rw [if_neg hy, if_neg hy, mul_zero]
 
-#print axioms solution

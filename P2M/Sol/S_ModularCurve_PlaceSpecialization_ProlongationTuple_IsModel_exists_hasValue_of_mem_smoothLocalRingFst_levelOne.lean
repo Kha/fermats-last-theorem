@@ -435,4 +435,3 @@ theorem solution
     have h := add_mem hm ((P.reduceFst W).algebraMap_mem' (red c))
     simpa using h
 
-#print axioms solution

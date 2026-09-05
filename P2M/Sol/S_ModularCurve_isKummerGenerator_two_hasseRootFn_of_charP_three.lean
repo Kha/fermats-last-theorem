@@ -135,4 +135,3 @@ theorem solution
   rw [key]
   exact div_mem_qExpFunctionFieldC E6' g hE6 hg hg0
 
-#print axioms solution

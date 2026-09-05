@@ -175,4 +175,3 @@ theorem solution
       ∑' i, ‖v i‖⁻¹ ^ k ≤ (3 / r) ^ k * ∑' x : Submodule.span ℤ (Set.range (Pi.basisFun ℝ W)), ‖x‖⁻¹ ^ k := by
   exact H2Sol.packing hr hsep hfar hk
 
-#print axioms solution

@@ -242,4 +242,3 @@ theorem solution
   · intro η hη
     exact hsup η hη
 
-#print axioms solution

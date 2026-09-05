@@ -470,4 +470,3 @@ theorem solution
       exact E5W2bTop.mem_and_forall_ne_not_mem
         (hchart _ hw (idx j : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (N₀ * p))) rfl (hfix j) (σ j).1 (σ j).2 (hσ j) (depth (idx j : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (N₀ * p)))) hyd)
 
-#print axioms solution

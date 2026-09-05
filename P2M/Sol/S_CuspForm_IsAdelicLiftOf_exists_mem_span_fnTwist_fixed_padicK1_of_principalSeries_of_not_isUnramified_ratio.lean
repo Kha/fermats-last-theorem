@@ -788,4 +788,3 @@ theorem solution
       PadicInt.isUnit_iff.mp (Units.isUnit u)
     exact centralGL_smul_eq q Φ η hΦg _ hu y
 
-#print axioms solution

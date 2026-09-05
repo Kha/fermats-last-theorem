@@ -1911,4 +1911,3 @@ theorem solution {K : Type*} [Field K]
             qExpand K (a * a) (qTwist (ζ ^ (b * a)) (jqModC K)))) :=
   ModularCurve.minpoly_jqNModC_map_eq_prod_slots M ζ hζ hall
 
-#print axioms solution

@@ -228,4 +228,3 @@ theorem solution
     fun z hz =>
       AdicCompletion.indinv_exists_of_forall_stabilizer_smul_eq J P hJP htrans z hz⟩
 
-#print axioms solution

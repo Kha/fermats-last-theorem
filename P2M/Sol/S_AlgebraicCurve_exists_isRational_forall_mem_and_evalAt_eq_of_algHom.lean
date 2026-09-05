@@ -66,4 +66,3 @@ theorem solution
       (Place.mem_maximalIdeal_iff_ord_pos P hz hmem).mp hmax
     rw [P.evalAt_congr hzV (P.algebraMap_mem' (χ z)) (Or.inr hpos), Place.evalAt_algebraMap]
 
-#print axioms solution

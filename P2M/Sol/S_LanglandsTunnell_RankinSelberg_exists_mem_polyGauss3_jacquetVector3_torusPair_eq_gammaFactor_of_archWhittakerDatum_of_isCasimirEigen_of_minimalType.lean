@@ -174,4 +174,3 @@ theorem solution
     exact hid1 s (lt_of_le_of_lt (le_max_left _ _) hs)
   · exact hid2 s (lt_of_le_of_lt (le_max_left _ _) hs)
 
-#print axioms solution

@@ -131,4 +131,3 @@ theorem solution
     rw [WittVector.teichmuller_coeff_zero]
   exact ⟨F, hF, fun g hg => huniq g F hg hF⟩
 
-#print axioms solution

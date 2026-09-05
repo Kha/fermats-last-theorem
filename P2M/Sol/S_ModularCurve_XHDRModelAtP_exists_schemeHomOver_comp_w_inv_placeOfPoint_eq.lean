@@ -209,4 +209,3 @@ theorem solution
     show (𝔛.efib A hA ρ hρ ≫ 𝔛.comp A hA ρ hρ 0).base P.1 = _
     rw [huκ'pt, Scheme.Hom.comp_apply, hcwz']
 
-#print axioms solution

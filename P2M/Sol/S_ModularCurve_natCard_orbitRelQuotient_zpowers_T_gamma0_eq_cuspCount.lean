@@ -109,4 +109,3 @@ theorem solution (N : ℕ) [NeZero N] :
   rw [Nat.card_congr (BassSerreCuspCount.orbitEquivCuspSpace N)]
   exact ModularCurve.CuspSpace.card_cuspSpace_eq_cuspCount (NeZero.ne N)
 
-#print axioms solution

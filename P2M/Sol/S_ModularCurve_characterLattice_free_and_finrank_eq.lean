@@ -44,4 +44,3 @@ theorem solution (S : Type*) [Fintype S] :
     obtain ⟨s₀⟩ := h
     exact ModularCurve.dzl_finrank_eq_of_nonempty s₀
 
-#print axioms solution

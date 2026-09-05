@@ -256,4 +256,3 @@ theorem solution
   exact mul_ne_zero (mul_ne_zero hκ0 (mul_ne_zero (mul_ne_zero two_ne_zero (Complex.ofReal_ne_zero.2 Real.pi_ne_zero))
     (pow_ne_zero _ (mul_ne_zero hε'0 ha0)))) hsum
 
-#print axioms solution

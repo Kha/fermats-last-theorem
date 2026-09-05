@@ -178,4 +178,3 @@ theorem solution
   unfold HeckeEigensystem.cNorm
   rw [CuspClassTransfer.absNorm_eq_of_under_eq w w' hww']
 
-#print axioms solution

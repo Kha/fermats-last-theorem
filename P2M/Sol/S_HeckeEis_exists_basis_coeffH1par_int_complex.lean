@@ -313,4 +313,3 @@ theorem solution (n N : ℕ) [NeZero N]
       ∀ i, c i = Φ (b i) :=
   HeckeEis.C2Aux.main n N Φ hΦ
 
-#print axioms solution

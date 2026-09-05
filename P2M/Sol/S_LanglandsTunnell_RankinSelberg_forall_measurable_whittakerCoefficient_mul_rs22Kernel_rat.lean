@@ -270,4 +270,3 @@ theorem solution
     exact hc.measurable
   exact (hW1.mul hW2).mul hK
 
-#print axioms solution

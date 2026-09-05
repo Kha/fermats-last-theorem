@@ -85,4 +85,3 @@ theorem solution (f : UpperHalfPlane → ℂ)
     PowerSeries.coeff n (UpperHalfPlane.qExpansion 1 f) = 0 :=
   DecayVanish.main f hper hhol hbdd L hO n hn
 
-#print axioms solution

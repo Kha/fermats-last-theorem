@@ -63,4 +63,3 @@ theorem solution
   calc Nat.card Z = Nat.card (PrimeSpectrum Γ(Z, ⊤)) := Nat.card_congr (Scheme.homeoOfIso Z.isoSpec).toEquiv
     _ ≤ Module.finrank k Γ(Z, ⊤) := natCard_primeSpectrum_le_finrank k Γ(Z, ⊤)
 
-#print axioms solution

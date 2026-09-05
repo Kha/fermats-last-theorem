@@ -17,4 +17,3 @@ theorem solution {N : ℕ} [NeZero N] {f : CuspForm (CongruenceSubgroup.Gamma0 N
   rw [h]
   exact h₀.2.2.1.periodHom_eq_of_hasDerivAt hFprim h₀.1 hFf
 
-#print axioms solution

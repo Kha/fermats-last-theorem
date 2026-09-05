@@ -307,4 +307,3 @@ theorem solution
   exact glue f g U φ hφ {x : X // x ∉ U} (fun i => i.1) V τ hxV hgen hτg hτφ
     (fun x hx => ⟨⟨x, hx⟩, rfl⟩)
 
-#print axioms solution

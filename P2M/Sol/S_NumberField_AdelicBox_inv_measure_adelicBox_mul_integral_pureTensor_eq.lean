@@ -238,4 +238,3 @@ theorem solution
         ((∫ y, f y) * (((ν (integralFiniteAdeles (𝓞 F) F)).toReal : ℂ)⁻¹ * ∫ z, g z ∂ν)) :=
   NumberField.AdelicBox.BoxNormalization.inv_measure_adelicBox_mul_integral_pureTensor_eq_impl F μ ν f g
 
-#print axioms solution

@@ -554,4 +554,3 @@ theorem solution
                   else 0)‖ *
                 (((Ideal.absNorm v.1.asIdeal : ℕ) : ℝ) ^ (-(p.1 + p.2))) ^ τ))) = ∏' v, A v from rfl, hP.tprod_eq, hsup, hiSup, hbase]
 
-#print axioms solution

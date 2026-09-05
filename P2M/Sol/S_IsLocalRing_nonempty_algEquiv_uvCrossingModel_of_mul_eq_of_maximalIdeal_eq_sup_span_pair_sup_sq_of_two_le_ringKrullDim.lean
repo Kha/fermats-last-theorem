@@ -58,4 +58,3 @@ theorem solution
   rw [hιO]
   rfl
 
-#print axioms solution

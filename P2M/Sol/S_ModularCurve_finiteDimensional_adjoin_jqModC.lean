@@ -98,4 +98,3 @@ theorem solution
   rw [h2] at hFD
   exact (IntermediateField.topEquiv (F := IntermediateField.adjoin (ResidueField A) ({⟨jqModC (ResidueField A), jqModC_mem (ResidueField A) N⟩} : Set (modularFunctionFieldC (ResidueField A) N)))).toLinearEquiv.finiteDimensional
 
-#print axioms solution

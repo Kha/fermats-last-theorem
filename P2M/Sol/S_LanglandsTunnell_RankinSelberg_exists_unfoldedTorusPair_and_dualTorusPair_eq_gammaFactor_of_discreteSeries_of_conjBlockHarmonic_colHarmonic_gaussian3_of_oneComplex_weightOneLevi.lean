@@ -638,4 +638,3 @@ theorem solution
         (aR w₀ h₀).val (kC wC hC) hcP hcP₂ hm hn h01 hk0 h1]
     ring
 
-#print axioms solution

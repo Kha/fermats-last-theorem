@@ -886,4 +886,3 @@ theorem solution
               Complex.exp (-((R : ℂ) * (s - conj s'))) / (s - conj s') ) := by
   exact MaassSelbergOneHeight.oneHeight F α β hα hαβ ΦF
 
-#print axioms solution

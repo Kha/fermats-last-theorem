@@ -102,4 +102,3 @@ theorem solution (M : ℕ) (H : Subgroup (ZMod M)ˣ) (ℓ : ℕ) [NeZero ℓ]
   rw [heckeT_apply_eq_sum_rq M H ℓ F γ]
   exact (Fintype.sum_equiv e _ _ fun _ => rfl).symm
 
-#print axioms solution

@@ -390,4 +390,3 @@ theorem solution {V : Type} [AddCommGroup V] [Module ℂ V] [FiniteDimensional �
       ≤ Module.finrank ℂ V :=
   HeckeEis.UASol.main W hneg hinv hcoinv
 
-#print axioms solution

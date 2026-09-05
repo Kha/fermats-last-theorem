@@ -242,4 +242,3 @@ theorem solution
           simp only [Fin.sum_univ_two, Gc, ← Complex.ofReal_mul, ← Real.exp_add]
           congr 1; congr 1; ring
 
-#print axioms solution

@@ -331,4 +331,3 @@ theorem solution
   rw [← hS]
   exact mem_gluedPolarDifferentials_of_isGluedPolarPair hpair
 
-#print axioms solution

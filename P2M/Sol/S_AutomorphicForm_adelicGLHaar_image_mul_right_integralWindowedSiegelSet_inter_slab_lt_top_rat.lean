@@ -50,4 +50,3 @@ theorem solution
   exact (measure_mono hsub).trans_lt
     (adelicGLHaar_mul_right_centreCutSiegelSet_lt_top ℚ hc u (div_pos he₁ hδ0) _ t)
 
-#print axioms solution

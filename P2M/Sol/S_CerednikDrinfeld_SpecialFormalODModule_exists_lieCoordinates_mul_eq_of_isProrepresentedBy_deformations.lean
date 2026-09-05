@@ -619,4 +619,3 @@ theorem solution
   · rw [Matrix.mulVecLin_apply]; exact hu
   · rw [Matrix.mulVecLin_apply]; exact hv
 
-#print axioms solution

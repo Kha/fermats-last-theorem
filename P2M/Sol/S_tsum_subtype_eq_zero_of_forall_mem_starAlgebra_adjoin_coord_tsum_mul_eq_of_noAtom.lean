@@ -169,4 +169,3 @@ theorem solution
   show ∑' i : ↥s, a i = 0
   rw [tsum_subtype s a, h0]
 
-#print axioms solution

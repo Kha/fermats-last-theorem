@@ -99,4 +99,3 @@ theorem solution (W : WeierstrassCurve ℤ) (hΔ : W.Δ ≠ 0) (p : ℕ) (hp : p
       rw [← h10det, hdetτ]; ring
     exact (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp h0
 
-#print axioms solution

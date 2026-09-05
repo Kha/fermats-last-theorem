@@ -90,4 +90,3 @@ theorem solution
       Finset.card_empty, pow_zero, mul_one, mul_one]
     simp only [archOfParamR, RealArchParam.twist, RealArchParam.epsilonFactor, RealArchParam.centralSign]
 
-#print axioms solution

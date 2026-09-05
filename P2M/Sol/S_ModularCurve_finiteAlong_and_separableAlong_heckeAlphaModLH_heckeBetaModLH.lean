@@ -350,4 +350,3 @@ theorem solution
     AlgebraicCurve.SeparableAlong K (ModularCurve.heckeBetaModLH K N H' ℓ) :=
   SepLegsH.main K N H' ℓ hℓK
 
-#print axioms solution

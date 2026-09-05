@@ -571,4 +571,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hp2 : p �
     (fun W' _ _ hn _ _ h' => nsmul_some_eq_zero_iff_eval_prePsi W' hn h')
     (fun W' _ _ h' => two_smul_some_eq_zero_iff W' h') hss h hP
 
-#print axioms solution

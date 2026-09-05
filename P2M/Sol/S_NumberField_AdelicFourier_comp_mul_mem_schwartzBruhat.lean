@@ -98,4 +98,3 @@ theorem solution
     (fun x ↦ f (↑y * x)) ∈ schwartzBruhat F :=
   NumberField.AdelicFourier.D2cPrime.comp_mul_mem_schwartzBruhat_impl F y hf
 
-#print axioms solution

@@ -1151,4 +1151,3 @@ theorem solution (N : ℕ) [NeZero N] :
     (fun _ hg => ModularCurve.SolESINJ.CuspForm.eq_zero_of_charInvolution_periodMap_eq_self
       ModularCurve.SolESINJ.mixedPrimitiveVanishing_holds hg)
 
-#print axioms solution

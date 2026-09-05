@@ -197,4 +197,3 @@ theorem solution
   simp only [ψ]
   rw [← Category.assoc y'.1, ← Category.assoc, Category.assoc y'.1, h1, Category.assoc, IsIso.hom_inv_id, Category.comp_id]
 
-#print axioms solution

@@ -942,4 +942,3 @@ theorem solution
         (C : ℂ) * rs22WhittakerIntegral F W W' μ (moduleChar F) (moduleChar_pos F) Φ s :=
   Ws1.V2Asm.main F ν₀ e₁ e₂ he₁ he
 
-#print axioms solution

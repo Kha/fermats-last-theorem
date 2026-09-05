@@ -1462,4 +1462,3 @@ theorem solution
   exact MOVHCore.corePlus Rpd hmodel hO hTD hcomm hinj.1 hinj.2 SS W hW hcuspV hsides hInftyNA hInftyNA' hZeroNA hZeroNA'
     hφaff hzone hAUX hINTERP hREAL T hT V₀ hV₀
 
-#print axioms solution

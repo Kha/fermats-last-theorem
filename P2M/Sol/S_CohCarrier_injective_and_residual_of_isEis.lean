@@ -221,4 +221,3 @@ theorem solution
       rL2 hrL2 TB (fun f => hTB f)
   exact IharaLemma.resInj_of_reduction (C ϖ) TA (rV.prodMap (rV.prodMap rV)) rL2 TB hsq hkerW hϖL hinjB
 
-#print axioms solution

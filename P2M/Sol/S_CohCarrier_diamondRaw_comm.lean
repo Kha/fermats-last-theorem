@@ -995,4 +995,3 @@ theorem solution (M : ℕ) (H : Subgroup (ZMod M)ˣ) (σ σ' : CongruenceSubgrou
     diamondRaw M H V σ (diamondRaw M H V σ' F) = diamondRaw M H V σ' (diamondRaw M H V σ F) :=
   IharaSolComm.twoDiamonds_impl M H σ σ' V F
 
-#print axioms solution

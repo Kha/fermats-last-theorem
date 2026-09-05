@@ -276,4 +276,3 @@ theorem solution
       ((GaloisRep.ratLocalizedAt p).map (algebraMap ℚ ℂ)) :=
   DiaInt.main p M hpM hpM2 H hHp k d f hf
 
-#print axioms solution

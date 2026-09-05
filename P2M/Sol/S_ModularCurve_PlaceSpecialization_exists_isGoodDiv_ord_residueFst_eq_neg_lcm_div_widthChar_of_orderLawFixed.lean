@@ -274,4 +274,3 @@ theorem solution
   haveI : ∀ w : ↥W, FiniteDimensional ℚ (Ks w) := hfd
   exact ModularCurve.NwRed.nwr_of_coordinates hqN W hW R hR hRL hNV hO e Ks cs us hus hxy
 
-#print axioms solution

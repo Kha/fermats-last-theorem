@@ -1359,4 +1359,3 @@ theorem solution
             ‖(a : NumberField.AdeleRing (NumberField.RingOfIntegers F) F).2 v‖ :=
   P6B.JE2aHMod.distribHaarChar_eq_placeModulus (P6B.JE2aHMod.hasTransversal F) a
 
-#print axioms solution

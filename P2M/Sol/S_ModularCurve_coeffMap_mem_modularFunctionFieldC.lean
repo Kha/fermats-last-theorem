@@ -1000,4 +1000,3 @@ theorem solution {L : Type*} [Field L] (O : Subring L)
     coeffMap res y ∈ modularFunctionFieldC K N :=
   ModularCurve.coeffMap_mem_modularFunctionFieldC O hO res N hdeg hx y hy
 
-#print axioms solution

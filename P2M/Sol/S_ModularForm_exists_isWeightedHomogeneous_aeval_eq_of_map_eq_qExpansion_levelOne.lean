@@ -329,4 +329,3 @@ theorem solution {k : ℤ} (f : ModularForm 𝒮ℒ k) (T : PowerSeries ℚ)
                 (Int.castRingHom ℚ)] : Fin 2 → PowerSeries ℚ) Φ = T :=
   main f hT
 
-#print axioms solution

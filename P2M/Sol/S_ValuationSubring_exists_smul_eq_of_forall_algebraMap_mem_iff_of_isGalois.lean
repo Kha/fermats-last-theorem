@@ -161,4 +161,3 @@ theorem solution
   rw [← mem_centerQ_iff O O₂ hO₂, val_smul_lt_one_iff O O₁ hO₁ σ b, hσ]
   exact Ideal.mem_pointwise_smul_iff_inv_smul_mem (a := σ) (S := centerQ O O₁ hO₁) (x := b)
 
-#print axioms solution

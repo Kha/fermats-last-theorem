@@ -43,4 +43,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
       _ ≤ M * M' := mul_le_mul (hF p.1) (hG p.2) (by positivity) hM
   exact (le_div_iff₀ hpos).mp h
 
-#print axioms solution

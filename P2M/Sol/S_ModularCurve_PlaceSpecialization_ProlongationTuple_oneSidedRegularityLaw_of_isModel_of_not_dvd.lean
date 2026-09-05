@@ -677,4 +677,3 @@ theorem solution
     R.OneSidedRegularityLaw W :=
   oneSidedRegularityLaw_core hqN (red_surjective_of_level P) P W hW R hmodel
 
-#print axioms solution

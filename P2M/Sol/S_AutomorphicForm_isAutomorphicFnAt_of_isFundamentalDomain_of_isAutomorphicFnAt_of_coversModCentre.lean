@@ -322,4 +322,3 @@ theorem solution
   exact memLp_of_coveredBy (χ := fun n => ((ξ ⟨n, Subgroup.mem_top n⟩ : ℂˣ) : ℂ)) hmem hfn.left_invariant
     (fun n w => hfn.central_transform ⟨n, Subgroup.mem_top n⟩ w) (fun n => Units.ne_zero _) hS hSs hX
 
-#print axioms solution

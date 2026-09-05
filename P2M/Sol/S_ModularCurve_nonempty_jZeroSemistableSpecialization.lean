@@ -212,4 +212,3 @@ theorem solution (N q : ℕ) [NeZero N] (hq : q.Prime)
     comp_frob_of_comp_eq_zero sp toPic0Pair_sp_heckeGen toPic0Pair_sp_eq_zero sp_frob
     sp_heckeGen_self sp_injective spN spN_hecke spN_injective spN_surjective⟩⟩
 
-#print axioms solution

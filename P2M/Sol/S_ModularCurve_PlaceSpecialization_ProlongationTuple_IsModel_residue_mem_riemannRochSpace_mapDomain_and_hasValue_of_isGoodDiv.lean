@@ -391,4 +391,3 @@ theorem solution
       (arithFrobC q k N • w).HasValue (R.residue₂ ⟨G, h₂⟩ : ↥(modularFunctionFieldC k N)) c :=
   ModularCurve.RespairN.main hqN hW R hR hRL D (fun V => by simpa using (Finsupp.le_def.mp hD V)) hgood G hG h₁ h₂
 
-#print axioms solution

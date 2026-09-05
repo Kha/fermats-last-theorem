@@ -70,4 +70,3 @@ theorem solution
     simp only [Finset.sum_singleton, one_smul]
     exact hconv w (continuous_of_mem_isotypicCuspSubmodule_inf L w hw)
 
-#print axioms solution

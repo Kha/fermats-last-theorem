@@ -313,4 +313,3 @@ theorem solution
   · simp_rw [tsum_mirabolicSeries_radical_eq_zero_of_not_summable _hψ _hW g hs]
     simp
 
-#print axioms solution

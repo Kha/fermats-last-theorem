@@ -97,4 +97,3 @@ theorem solution
 
   exact AlgebraicGeometry.RelPicard.exists_representsRelSubPic_algEquivZeroCut_of_finiteMapData_of_isDiscreteValuationRing (XHDRLevel.R p) _ _ h𝔉
 
-#print axioms solution

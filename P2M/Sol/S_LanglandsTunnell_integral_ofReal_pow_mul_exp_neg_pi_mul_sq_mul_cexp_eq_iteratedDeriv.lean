@@ -72,4 +72,3 @@ theorem solution (j : ℕ) (ξ : ℝ) :
         rw [show (-2 * (Real.pi : ℂ) * Complex.I) = -(2 * Real.pi * Complex.I) by ring, inv_neg]
         ring
 
-#print axioms solution

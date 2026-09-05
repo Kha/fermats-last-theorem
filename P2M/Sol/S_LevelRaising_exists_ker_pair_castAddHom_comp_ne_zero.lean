@@ -259,4 +259,3 @@ theorem solution
     rw [smul_comm (a ℓ) (p : ℤ) (x : A₁ →+ ℤ)]
     abel
 
-#print axioms solution

@@ -83,7 +83,6 @@ theorem FinFlatHopf.isLocalRing_subalgebra_of_isIntegral
     Ideal.exists_ideal_over_maximal_of_isIntegral P (le_trans hker bot_le)
   rw [← hQcomap, IsLocalRing.eq_maximalIdeal hQmax]
 
-#print axioms FinFlatHopf.isLocalRing_subalgebra_of_isIntegral
 
 set_option autoImplicit false
 
@@ -672,8 +671,6 @@ p2m_reactivate "P2MW.S_FinFlatHopf_exists_subgroup_inertia_trivial_quotient_cycl
 end FinFlatHopf
 p2m_reactivate "P2MW.S_FinFlatHopf_exists_subgroup_inertia_trivial_quotient_cyclotomic.FinFlatHopf P2MW.S_FinFlatHopf_exists_subgroup_inertia_trivial_quotient_cyclotomic.FinFlatHopf.W4"
 
-#print axioms FinFlatHopf.isLocalRing_subring_of_finite
-#print axioms FinFlatHopf.exists_submodule_card_eq_residue
 
 namespace FinFlatHopf
 p2m_export "FinFlatHopf" "not_isLocalRing_dual_of_isLocalRing inertiaFixed_valuationSubring_dvr_fixer_le_inertia dualPoints_equiv_monoidHom"
@@ -774,11 +771,6 @@ p2m_reactivate "P2MW.S_FinFlatHopf_exists_subgroup_inertia_trivial_quotient_cycl
 end FinFlatHopf
 p2m_reactivate "P2MW.S_FinFlatHopf_exists_subgroup_inertia_trivial_quotient_cyclotomic.FinFlatHopf P2MW.S_FinFlatHopf_exists_subgroup_inertia_trivial_quotient_cyclotomic.FinFlatHopf.W4"
 
-#print axioms FinFlatHopf.nonunits_eq_span_of_uniformizer
-#print axioms FinFlatHopf.isLocalRing_of_uniformizer
-#print axioms FinFlatHopf.maximalIdeal_eq_span_of_uniformizer
-#print axioms FinFlatHopf.uniformizer_notMem_maximalIdeal_sq
-#print axioms FinFlatHopf.isPrincipalIdealRing_of_uniformizer
 
 set_option autoImplicit false
 
@@ -915,7 +907,6 @@ theorem FinFlatHopf.finite_withConv_algHom
     exact (linearIndependent_algHom_toLinearMap S H L).finite
   exact Finite.of_equiv _ (WithConv.equiv (H →ₐ[S] L)).symm
 
-#print axioms FinFlatHopf.finite_withConv_algHom
 
 open Pointwise
 
@@ -1006,7 +997,6 @@ theorem FinFlatHopf.isIntegral_of_mem_valuationSubring_of_fixers_le
       hφdef, ← Polynomial.aeval_def, hfdef]
     exact minpoly.aeval (↥T) x
 
-#print axioms FinFlatHopf.isIntegral_of_mem_valuationSubring_of_fixers_le
 
 open scoped TensorProduct
 
@@ -1075,7 +1065,6 @@ theorem FinFlatHopf.injective_eval_points
     exact hV0
   exact hinc hzero
 
-#print axioms FinFlatHopf.injective_eval_points
 
 p2m_open_scoped "FinFlatHopf" in
 
@@ -1215,8 +1204,6 @@ theorem FinFlatHopf.isLocalRing_of_points_cong
   intro a b ha hb
   exact hDnon _ (D.add_mem (hnonD a ha) (hnonD b hb))
 
-#print axioms FinFlatHopf.isUnit_of_injective_of_integral_inv
-#print axioms FinFlatHopf.isLocalRing_of_points_cong
 
 set_option autoImplicit false
 

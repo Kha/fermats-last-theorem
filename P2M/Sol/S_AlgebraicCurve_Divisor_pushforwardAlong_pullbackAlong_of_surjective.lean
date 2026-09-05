@@ -56,4 +56,3 @@ private theorem AlgebraicCurve.Divisor.pushforwardAlong_pullbackAlong_of_surject
 theorem solution {K F F' : Type*} [Field K] [Field F] [Field F'] [Algebra K F] [Algebra K F'] [HasPrincipalDivisors K F'] (φ : F →ₐ[K] F') (hφ : φ.toRingHom.IsIntegral) (hs : Function.Surjective φ) (D : AlgebraicCurve.Divisor K F) : AlgebraicCurve.Divisor.pushforwardAlong φ hφ (AlgebraicCurve.Divisor.pullbackAlong φ hφ D) = D :=
   AlgebraicCurve.Divisor.pushforwardAlong_pullbackAlong_of_surjective φ hφ hs D
 
-#print axioms solution

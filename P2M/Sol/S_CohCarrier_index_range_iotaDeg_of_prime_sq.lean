@@ -263,4 +263,3 @@ theorem solution (N q : ℕ) [NeZero N] [NeZero q]
    index_range_iotaDeg_q N q hq hqN hq',
    index_range_iotaDeg_sq N q hq hqN hq2⟩
 
-#print axioms solution

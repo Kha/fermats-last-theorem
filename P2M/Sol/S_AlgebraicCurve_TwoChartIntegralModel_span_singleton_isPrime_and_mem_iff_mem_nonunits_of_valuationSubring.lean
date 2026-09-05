@@ -213,4 +213,3 @@ theorem solution
   rw [hIeq]
   exact h𝔭 a
 
-#print axioms solution

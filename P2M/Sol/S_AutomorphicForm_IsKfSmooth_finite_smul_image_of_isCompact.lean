@@ -37,4 +37,3 @@ theorem solution {F : Type} [Field F] [NumberField F] {φ : AdelicGL2 (𝓞 F) F
       RightTranslationFn (AdelicGL2 (𝓞 F) F) ℂ)) '' K) :=
   Rho7aSol.IsSmoothVector.finite_smul_image_of_isCompact hφ hK
 
-#print axioms solution

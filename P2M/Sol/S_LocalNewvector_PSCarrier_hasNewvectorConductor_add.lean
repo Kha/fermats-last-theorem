@@ -2395,7 +2395,6 @@ end FLT.PrincipalSeriesGL2Padic
 p2m_reactivate "P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.LocalGL2 P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.FLT P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.FLT.PrincipalSeriesGL2Padic P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.FLT.PrincipalSeriesGL2Padic.PSCarrier"
 p2m_reactivate "P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.LocalGL2 P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.FLT P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.FLT.PrincipalSeriesGL2Padic P2MW.S_LocalNewvector_PSCarrier_hasNewvectorConductor_add.FLT.PrincipalSeriesGL2Padic.PSCarrier"
 
-#print axioms FLT.PrincipalSeriesGL2Padic.PSCarrier.hasNewvectorConductor_add_impl
 
 theorem solution (p : ℕ) [Fact p.Prime] {μ₁ μ₂ : ℚ_[p]ˣ →* ℂˣ}
     {n₁ n₂ : ℕ} (h₁ : LocalNewvector.HasCharConductor p μ₁ n₁) (h₂ : LocalNewvector.HasCharConductor p μ₂ n₂) :

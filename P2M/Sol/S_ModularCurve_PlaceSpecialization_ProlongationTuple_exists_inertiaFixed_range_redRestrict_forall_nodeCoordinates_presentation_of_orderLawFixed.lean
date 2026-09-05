@@ -556,4 +556,3 @@ theorem solution
   choose cs u h1 h2 h3 h4 h5 using pernode
   exact ⟨cs, fun w hw => ⟨u w hw, h1 w hw⟩, h2, h3, h4, h5⟩
 
-#print axioms solution

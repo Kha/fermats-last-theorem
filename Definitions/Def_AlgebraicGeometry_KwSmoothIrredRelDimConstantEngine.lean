@@ -306,7 +306,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kwSmoothIrredRelDimCo
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kwSmoothIrredRelDimConstantEngine_axiomAnchor
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOfRelativeDimension_unique' depends on axioms: [propext,
@@ -314,7 +313,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOf
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOfRelativeDimension_unique
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_smoothOfRelativeDimension_of_irreducible_of_nonempty_open' depends on axioms: [propext,
@@ -322,7 +320,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_smoothOfRelativeDi
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_smoothOfRelativeDimension_of_irreducible_of_nonempty_open
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_of_comp_isOpenImmersion' depends on axioms: [propext,
@@ -330,7 +327,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_of_comp_isOpenImme
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_of_comp_isOpenImmersion
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_not_isStandardSmoothOfRelDim_succ_of_finite' depends on axioms: [propext,
@@ -338,7 +334,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_not_isStandardSmoo
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_not_isStandardSmoothOfRelDim_succ_of_finite
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOfRelativeDimension_finrank' depends on axioms: [propext,
@@ -346,7 +341,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOf
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOfRelativeDimension_finrank
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOfRelDim_basicOpen' depends on axioms: [propext,
@@ -354,7 +348,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOf
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_isStandardSmoothOfRelDim_basicOpen
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_exists_relDim_appLE_top_of_relDim' depends on axioms: [propext,
@@ -362,7 +355,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_exists_relDim_appL
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_exists_relDim_appLE_top_of_relDim
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_exists_relDim_appLE_top' depends on axioms: [propext,
@@ -370,7 +362,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_exists_relDim_appL
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_exists_relDim_appLE_top
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_relDim_eq_of_mem_both' depends on axioms: [propext,
@@ -378,7 +369,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_relDim_eq_of_mem_b
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_relDim_eq_of_mem_both
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_appLE_top_opensImage' depends on axioms: [propext,
@@ -386,7 +376,6 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_appLE_top_opensIma
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_appLE_top_opensImage
 
 /--
 info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_smoothOfRelativeDimension_of_irreducible_of_isOpenImmersion' depends on axioms: [propext,
@@ -394,4 +383,3 @@ info: 'AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_smoothOfRelativeDi
  Quot.sound]
 -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicGeometry.KwSmoothIrredRelDimConstantEngine.kw_smoothOfRelativeDimension_of_irreducible_of_isOpenImmersion

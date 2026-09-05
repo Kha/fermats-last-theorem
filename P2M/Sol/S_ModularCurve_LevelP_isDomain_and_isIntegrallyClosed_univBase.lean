@@ -44,4 +44,3 @@ theorem solution (p : ℕ) (hp : p ≠ 0) :
   exact ⟨IsLocalization.isDomain_of_le_nonZeroDivisors (UnivBase p) hM,
     isIntegrallyClosed_of_isLocalization (UnivBase p) (Submonoid.powers (pDelta p)) hM⟩
 
-#print axioms solution

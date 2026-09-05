@@ -202,4 +202,3 @@ theorem solution
   simp only [hcT]
   ring
 
-#print axioms solution

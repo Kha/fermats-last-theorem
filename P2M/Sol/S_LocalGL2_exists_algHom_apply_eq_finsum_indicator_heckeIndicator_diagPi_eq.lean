@@ -820,4 +820,3 @@ theorem solution
     LocalGL2.IwasawaSlice.ctAlgHom_heckeIndicator_diagPi (K := K) ϖ hϖ0 hϖ,
     LocalGL2.IwasawaSlice.ctAlgHom_heckeIndicator_central (K := K) ϖ hϖ0 hϖ hS⟩
 
-#print axioms solution

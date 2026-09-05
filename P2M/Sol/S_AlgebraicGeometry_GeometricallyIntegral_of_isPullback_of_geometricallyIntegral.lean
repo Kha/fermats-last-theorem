@@ -100,4 +100,3 @@ theorem solution
   haveI : IsReduced (pullback c sK) := isReduced_of_flat_of_surjective π
   exact isIntegral_of_irreducibleSpace_of_isReduced _
 
-#print axioms solution

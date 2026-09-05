@@ -624,4 +624,3 @@ theorem solution
       rw [h6, ← heK] at hmain
       exact eq_div_mul hdvd (by decide) hmain
 
-#print axioms solution

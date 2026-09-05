@@ -211,4 +211,3 @@ theorem solution
     rw [mapPt_coe, mapPt_coe] at h2
     exact Subtype.ext ((cancel_mono u).1 h2)
 
-#print axioms solution

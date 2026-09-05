@@ -76,4 +76,3 @@ theorem solution
     rw [hinv, Complex.cpow_neg]
     field_simp
 
-#print axioms solution

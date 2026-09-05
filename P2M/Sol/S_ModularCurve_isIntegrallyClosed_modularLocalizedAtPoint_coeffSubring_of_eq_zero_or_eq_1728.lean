@@ -287,4 +287,3 @@ theorem solution
   exact IsLocalRing.isIntegrallyClosed_of_maximalIdeal_eq_span_of_mul_eq_pow_mul_isUnit
     ϖ hirr hres G' H' w hw (jWidth a * eK) he hGH' hmax' hpr1' hpr2' hnm1' hnm2'
 
-#print axioms solution

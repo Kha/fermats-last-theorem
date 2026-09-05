@@ -56,4 +56,3 @@ theorem solution {G : Type*} [Group G] (H : Subgroup G) [H.FiniteIndex]
           (MonoidHom.transfer (AddMonoidHom.toMultiplicativeRight φ)) :=
   INH.SolB0.solution_aux H φ
 
-#print axioms solution

@@ -92,4 +92,3 @@ theorem solution
         atImInfty (𝓝 a) :=
   WCuspOrdAux.slash_main Γ k f hf σ h hh hper
 
-#print axioms solution

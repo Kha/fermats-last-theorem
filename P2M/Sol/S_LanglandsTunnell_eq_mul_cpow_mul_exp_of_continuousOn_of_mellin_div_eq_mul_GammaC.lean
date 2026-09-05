@@ -122,4 +122,3 @@ theorem solution
   rw [hW, hg, Complex.cpow_add _ _ ht0, Complex.cpow_one]
   ring
 
-#print axioms solution

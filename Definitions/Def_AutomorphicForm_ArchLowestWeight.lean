@@ -92,8 +92,4 @@ end
 section Battery
 open AutomorphicForm
 #check @IsArchLowestWeightAt
-#print axioms AutomorphicForm.isArchLowestWeightAt_zero
-#print axioms AutomorphicForm.IsArchLowestWeightAt.const_mul
-#print axioms AutomorphicForm.isArchLowestWeightAt_of_rpow
-#print axioms AutomorphicForm.IsArchHolomorphicAt.isArchLowestWeightAt
 end Battery

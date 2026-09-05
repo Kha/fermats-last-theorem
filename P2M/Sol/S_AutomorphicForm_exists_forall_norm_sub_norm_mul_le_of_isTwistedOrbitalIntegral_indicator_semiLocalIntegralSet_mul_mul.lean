@@ -60,4 +60,3 @@ theorem solution
           (mul_nonneg hC (mul_nonneg (Real.rpow_nonneg hX0 _) (Real.rpow_nonneg hm0 _)))
     _ = C * m ^ ((1 : ℝ) / 2) * |1 + Real.log m| ^ A * X ^ ((1 : ℝ) / 2) := by ring
 
-#print axioms solution

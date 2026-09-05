@@ -162,4 +162,3 @@ theorem solution
       (uκ ≫ θM).base (IsLocalRing.closedPoint (ResidueField ↥A))
     rw [Scheme.Hom.comp_apply, h1, Scheme.Hom.comp_apply, hcompP, hP, Scheme.Hom.comp_apply]
 
-#print axioms solution

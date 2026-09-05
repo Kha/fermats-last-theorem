@@ -524,4 +524,3 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] :
       = ⊤ :=
   ModularCurve.adjoin_jBar_jNBar_eq_top L N
 
-#print axioms solution

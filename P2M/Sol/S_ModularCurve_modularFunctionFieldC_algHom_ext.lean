@@ -18,4 +18,3 @@ theorem solution (K : Type*) [Field K] (ℓ : ℕ) [NeZero ℓ] {A : Type*} [Sem
     subst hx
     exact h2
 
-#print axioms solution

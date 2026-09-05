@@ -98,4 +98,3 @@ theorem solution {G : Type*} [Group G] {C : Type*} [CommGroup C] (K L : Subgroup
     _root_.mul_inv_rev]
   group
 
-#print axioms solution

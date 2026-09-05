@@ -33,4 +33,3 @@ theorem solution
   have hTc : IsCompact (↑tset : Set (AdelicGL2 (𝓞 L) L)) := tset.finite_toSet.isCompact
   exact AutomorphicForm.canonicalTruncationData_spec L ⟨((c, u, d₁', d₂'), ↑tset, Φ₀), hc, hTc, hΦ₀S, hΦ₀s, hΦ₀⟩
 
-#print axioms solution

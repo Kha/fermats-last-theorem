@@ -794,4 +794,3 @@ theorem solution (N₀ q : ℕ) [NeZero N₀] [Fact q.Prime] (hqN : ¬ q ∣ N�
         (Fc ((V3AsmLevel.width 𝔛 O ρO κ toκ hϖ H) n) d).comap ((V3AsmLevel.chartIso 𝔛 O ρO κ toκ hϖ H n).inv ≫ (V3AsmLevel.C 𝔛 O ρO κ toκ hϖ H).g n) :=
   E5T3aLabel.Asm.label 𝔛 O ρO hϖ κ toκ H hξ Fc hF
 
-#print axioms solution

@@ -126,4 +126,3 @@ theorem solution
           exact congrArg _ (UM _ _ _)
       _ = _ := by rw [hMs, hM]; ring
 
-#print axioms solution

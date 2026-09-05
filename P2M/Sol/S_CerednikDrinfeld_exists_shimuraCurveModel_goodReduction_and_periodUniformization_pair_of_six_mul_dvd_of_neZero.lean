@@ -362,4 +362,3 @@ theorem solution
       (CerednikDrinfeld.heckeKernelMap_classSetHeckeData_apply_eq_neg_comp_classSetShift N q q' hqq' hqN hq'N
         hdef₁ Λ₁ R₁ hΛ₁ hR₁ hRΛ₁ n₁ hS₁ hn₁ hnorm₁ hsq₁ hlaws₁)
 
-#print axioms solution

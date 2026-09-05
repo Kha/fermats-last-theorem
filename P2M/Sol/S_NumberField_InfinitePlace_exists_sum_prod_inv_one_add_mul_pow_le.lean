@@ -198,8 +198,6 @@ end M4aP3B.Rows.LatticeSum
 
 end
 
-#print axioms M4aP3B.Rows.LatticeSum.exists_sum_prod_inv_one_add_mul_pow_le_impl
-#print axioms M4aP3B.Rows.LatticeSum.gate_empty
 
 theorem solution
     (F : Type) [Field F] [NumberField F] {s : NumberField.RingOfIntegers F} (hs : s ≠ 0) (N : ℕ) :

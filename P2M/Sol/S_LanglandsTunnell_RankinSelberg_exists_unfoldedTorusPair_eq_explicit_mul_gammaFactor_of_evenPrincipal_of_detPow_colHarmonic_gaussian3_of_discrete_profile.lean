@@ -1248,4 +1248,3 @@ theorem solution
   rw [← hPev] at hPi
   rw [h9b s (lt_of_le_of_lt (le_max_left _ _) hs), h, hPi]
 
-#print axioms solution

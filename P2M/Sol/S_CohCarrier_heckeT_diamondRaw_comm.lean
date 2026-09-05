@@ -996,4 +996,3 @@ theorem solution (M : ℕ) (H : Subgroup (ZMod M)ˣ) (ℓ : ℕ) [NeZero ℓ]
     heckeT M H ℓ V (diamondRaw M H V σ F) = diamondRaw M H V σ (heckeT M H ℓ V F) :=
   IharaSolComm.heckeDiamond_impl M H ℓ σ hσ V F
 
-#print axioms solution

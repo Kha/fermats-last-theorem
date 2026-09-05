@@ -105,4 +105,3 @@ theorem solution
     rw [hdvd] at h
     exact h.symm
 
-#print axioms solution

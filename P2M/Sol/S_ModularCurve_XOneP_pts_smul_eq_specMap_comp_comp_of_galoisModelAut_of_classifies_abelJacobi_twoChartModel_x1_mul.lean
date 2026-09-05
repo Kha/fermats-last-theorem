@@ -813,4 +813,3 @@ theorem solution
   rintro _ ⟨V, hV, rfl⟩
   exact hpt (Mη.pointEquivPlace.symm V) ⟨_, hV⟩ (by rw [Equiv.apply_symm_apply])
 
-#print axioms solution

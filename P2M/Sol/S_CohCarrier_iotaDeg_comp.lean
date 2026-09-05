@@ -33,4 +33,3 @@ theorem solution {M₁ M₂ M₃ d₁ d₂ : ℕ} {H₁ : Subgroup (ZMod M₁)ˣ
       Int.mul_ediv_cancel_left _ hd₂, Int.mul_ediv_cancel_left _ hd₁]
   · rfl
 
-#print axioms solution

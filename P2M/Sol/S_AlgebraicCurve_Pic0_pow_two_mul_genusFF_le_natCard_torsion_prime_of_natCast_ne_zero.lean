@@ -111,4 +111,3 @@ theorem solution
     _ ≤ Nat.card (Pic0.torsion (IsLocalRing.ResidueField A) F ℓ) := Nat.card_le_card_of_injective _ hinj
     _ = Nat.card (Pic0.torsion K F ℓ) := Nat.card_congr τ
 
-#print axioms solution

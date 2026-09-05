@@ -94,4 +94,3 @@ theorem solution
     (fun t : ℝ => Wr par₀ default t) hWc hneg hMel t ht
   simpa using h
 
-#print axioms solution

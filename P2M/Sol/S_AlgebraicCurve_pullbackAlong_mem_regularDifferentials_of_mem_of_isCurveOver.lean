@@ -89,4 +89,3 @@ theorem solution
     AlgebraicCurve.Differential.pullbackAlong (w : F →ₐ[K] F) ω ∈ AlgebraicCurve.regularDifferentials K F :=
   RegPull.main w hω
 
-#print axioms solution

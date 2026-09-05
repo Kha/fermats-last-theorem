@@ -475,4 +475,3 @@ theorem solution
       ∫ x, F x ∂μL = (c.toReal : ℂ) * ∫ r, tracePushforward K L F r ∂μK) :=
   AdelicTracePushforward.exists_forall_lintegral_eq_mul_lintegral_lintegral_traceFibre K L μK μL
 
-#print axioms solution

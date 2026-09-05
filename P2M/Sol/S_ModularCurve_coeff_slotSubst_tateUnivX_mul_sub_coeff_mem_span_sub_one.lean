@@ -25,4 +25,3 @@ theorem solution
   simp only [map_add, map_sub, map_mul, map_sum, map_pow, map_natCast, map_ofNat, apply_ite π, map_zero,
     Units.val_mul, mul_inv, mul_pow, hζ, hζi, one_pow, one_mul]
 
-#print axioms solution

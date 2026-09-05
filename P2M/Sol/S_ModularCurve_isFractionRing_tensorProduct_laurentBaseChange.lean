@@ -58,4 +58,3 @@ theorem solution
       obtain ⟨x₂, y₂, rfl⟩ := hb
       exact ⟨x₁ * x₂, y₁ * y₂, by rw [map_mul, map_mul, div_mul_div_comm]⟩
 
-#print axioms solution

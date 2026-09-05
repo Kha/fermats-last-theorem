@@ -164,4 +164,3 @@ private theorem ModularCurve.qExpansionDiffAlong_smul_map_D {K F F' L : Type*} [
 theorem solution {K F L : Type*} [Field K] [Field F] [Algebra K F] [Field L] [Algebra K L] (σ : F →ₐ[K] LaurentSeries L) {φ : Ω[F⁄K] →ₗ[K] LaurentSeries L} (hφ : IsQExpansionDiffAlong σ φ) : φ = qExpansionDiffAlong σ :=
   ModularCurve.eq_qExpansionDiffAlong_of_isQExpansionDiffAlong σ hφ
 
-#print axioms solution

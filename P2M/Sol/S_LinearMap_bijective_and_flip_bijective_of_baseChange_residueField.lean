@@ -139,4 +139,3 @@ theorem solution
     Function.Bijective B ∧ Function.Bijective B.flip :=
   BaseChangeResidueFieldPerfect.bijective_and_flip_bijective_of_baseChange_residueField hπ B Bk eM eN hcomp hBk
 
-#print axioms solution

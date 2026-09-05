@@ -950,7 +950,6 @@ theorem _root_.P2MW.S_AutomorphicForm_exists_finset_central_slab_covering_of_cov
 end AutomorphicForm
 
 section Foot
-#print axioms solution
 set_option pp.funBinderTypes true in
 #check @solution
 end Foot

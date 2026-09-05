@@ -19,4 +19,3 @@ theorem solution
   rw [← neg_sub]
   exact hu.neg
 
-#print axioms solution

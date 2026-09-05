@@ -92,4 +92,3 @@ theorem solution
   rw [e]
   exact ord_pos_along _ hα Q _ ha
 
-#print axioms solution

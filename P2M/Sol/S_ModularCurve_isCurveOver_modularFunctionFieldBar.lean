@@ -159,4 +159,3 @@ theorem solution (N : ℕ) [NeZero N] :
 
 example : ∀ (N : ℕ) [NeZero N], IsCurveOver (AlgebraicClosure ℚ) (modularFunctionFieldBar N) := @solution
 
-#print axioms solution

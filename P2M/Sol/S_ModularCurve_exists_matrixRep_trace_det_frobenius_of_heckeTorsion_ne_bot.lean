@@ -1739,4 +1739,3 @@ theorem solution
   exact ⟨ρ, hρ, ⟨(M * p).primeFactors, fun ℓ hℓ hℓS A hA σ hσ =>
     ⟨(hfrob ℓ hℓ hℓS A hA σ hσ).1.symm, (hfrob ℓ hℓ hℓS A hA σ hσ).2.symm⟩⟩, hss⟩
 
-#print axioms solution

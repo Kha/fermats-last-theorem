@@ -1039,4 +1039,3 @@ theorem solution
     (AutomorphicForm.exists_isSemiLocalFactorization_integral_mul_comp_inv_mul K L)
     U S φ ψ hφ hψ
 
-#print axioms solution

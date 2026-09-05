@@ -192,4 +192,3 @@ theorem solution
   have hc' : IsCusp cc (Matrix.SpecialLinearGroup.mapGL ℝ).range := hc.mono (Subgroup.map_le_range _ _)
   exact (OnePoint.isZeroAt_iff_forall_SL2Z hc').mpr fun γ _ => hcusp' γ
 
-#print axioms solution

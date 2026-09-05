@@ -147,16 +147,13 @@ end
 info: 'NeronModelInfra.IsIndexOneExtension.refl' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.IsIndexOneExtension.refl
 
 /--
 info: 'NeronModelInfra.gate_catchesIndexOnePoints_trivial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_catchesIndexOnePoints_trivial
 
 /--
 info: 'NeronModelInfra.gate_not_catchesIndexOnePoints_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_not_catchesIndexOnePoints_empty

@@ -144,4 +144,3 @@ theorem solution
   have := hp.two_le
   omega
 
-#print axioms solution

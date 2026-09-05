@@ -202,4 +202,3 @@ theorem solution
       (TTR.castHom (Eχ χ₂ hχ₂.1) wu) (TTR.castHom_isIso _ wu hwu)
       (TTR.castHom (Eχ χ₃ hχ₃.1) wu) (TTR.castHom_isIso _ wu hwu) rfl rfl rfl
 
-#print axioms solution

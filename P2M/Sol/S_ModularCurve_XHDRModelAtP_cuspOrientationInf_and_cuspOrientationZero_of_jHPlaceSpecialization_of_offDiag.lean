@@ -339,4 +339,3 @@ theorem solution
         (ModularCurve.JHPlaceSpecialization.not_isInftySide_of_isZeroSide p M H hpM A hA C hC)
     · exact h1 rfl
 
-#print axioms solution

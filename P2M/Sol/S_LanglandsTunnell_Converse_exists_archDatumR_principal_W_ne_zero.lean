@@ -5098,4 +5098,3 @@ theorem solution (u₁ : ℂ) (a₁ : ZMod 2) (u₂ : ℂ)
      decay_zero := ArchEngine.wmem_decay_zero u₁ u₂ a₁ a₂ },
     exists_Wmem_GL_ne_zero u₁ u₂ a₁ a₂⟩
 
-#print axioms solution

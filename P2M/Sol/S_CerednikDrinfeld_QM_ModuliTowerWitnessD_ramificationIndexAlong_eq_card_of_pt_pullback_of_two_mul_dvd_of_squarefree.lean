@@ -143,4 +143,3 @@ theorem solution
   show R.ramificationIndex Fbar = _
   exact Nat.eq_of_mul_eq_mul_right hpos hG
 
-#print axioms solution

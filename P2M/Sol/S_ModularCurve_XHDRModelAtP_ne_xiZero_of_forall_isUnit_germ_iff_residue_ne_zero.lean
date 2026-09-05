@@ -221,4 +221,3 @@ theorem solution
   rw [← hj1, hresj]
   rfl
 
-#print axioms solution

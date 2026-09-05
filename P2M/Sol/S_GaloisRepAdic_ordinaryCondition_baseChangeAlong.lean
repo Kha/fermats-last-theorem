@@ -189,4 +189,3 @@ theorem solution
     GaloisRep.ordinaryCondition 𝒪 p S (ρ.baseChangeAlong φ hφ) :=
   GaloisRepAdic.LCSol.ordinaryCondition_baseChangeAlong 𝒪 φ hφ ρ h
 
-#print axioms solution

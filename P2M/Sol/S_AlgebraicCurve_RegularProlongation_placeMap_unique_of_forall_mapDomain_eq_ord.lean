@@ -344,4 +344,3 @@ theorem solution
     have e₂ : r₂ P₀ = Q₁ := key r₂ h₂ g' hg0 hordg Dg hDg Q₁ (by rw [h₂ g' hg0 Dg hDg]; exact hordQ₁)
     rw [e₁, e₂]
 
-#print axioms solution

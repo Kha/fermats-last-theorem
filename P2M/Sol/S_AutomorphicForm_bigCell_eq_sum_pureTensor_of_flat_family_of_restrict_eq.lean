@@ -7114,4 +7114,3 @@ theorem solution
     intro μ ν φ hφ hφK hφf hφc hφ₀ hφne
     exact absurd ⟨μ, ν, φ, hφ, hφK, hφf, hφc, hφ₀, hφne⟩ hex
 
-#print axioms solution

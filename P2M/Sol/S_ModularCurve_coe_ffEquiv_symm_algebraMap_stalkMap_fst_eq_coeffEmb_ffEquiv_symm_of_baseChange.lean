@@ -1215,4 +1215,3 @@ theorem solution
 end Solution
 p2m_reactivate "P2MW.S_ModularCurve_coe_ffEquiv_symm_algebraMap_stalkMap_fst_eq_coeffEmb_ffEquiv_symm_of_baseChange.HG1b P2MW.S_ModularCurve_coe_ffEquiv_symm_algebraMap_stalkMap_fst_eq_coeffEmb_ffEquiv_symm_of_baseChange.BCPlace"
 
-#print axioms solution

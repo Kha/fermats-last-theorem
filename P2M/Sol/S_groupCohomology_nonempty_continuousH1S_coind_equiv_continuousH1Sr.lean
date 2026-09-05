@@ -241,4 +241,3 @@ theorem solution
 
 end gwShapiroOne
 
-#print axioms solution

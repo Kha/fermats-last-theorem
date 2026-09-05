@@ -50,4 +50,3 @@ theorem solution
     have : (⟨s, hs₂', hs₁⟩ : S.commSq.LiftStruct) = l := Subsingleton.elim _ _
     exact congrArg CommSq.LiftStruct.l this
 
-#print axioms solution

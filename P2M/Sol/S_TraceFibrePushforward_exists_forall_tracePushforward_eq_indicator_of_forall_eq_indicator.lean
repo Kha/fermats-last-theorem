@@ -1874,4 +1874,3 @@ theorem solution
             HasCompactSupport (localTracePushforward K L v (Fv v)) :=
   AdelicTracePushforward.exists_forall_tracePushforward_eq_indicator_of_forall_eq_indicator K L
 
-#print axioms solution

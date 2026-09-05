@@ -123,7 +123,3 @@ set_option pp.universes true in
 #check @Algebra.TensorProduct.rightMulSemiringAction
 set_option pp.universes true in
 #check @Algebra.IsInvariant.isInvariant_tensorProduct_of_flat
-#print axioms Algebra.TensorProduct.rightMulSemiringAction
-#print axioms Algebra.TensorProduct.rightMulSemiringAction_smul_tmul
-#print axioms Algebra.TensorProduct.rightMulSemiringAction_smulCommClass
-#print axioms Algebra.IsInvariant.isInvariant_tensorProduct_of_flat

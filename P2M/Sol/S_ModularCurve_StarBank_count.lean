@@ -189,4 +189,3 @@ theorem solution {K : Type*} [Field K] [IsAlgClosed K] {p : ℕ}
       R = (Polynomial.X - Polynomial.C β₀) ^ p + Polynomial.C β₀ :=
   ModularCurve.StarBank.count hp0 hp2 hR hRdeg hG hc hdvd
 
-#print axioms solution

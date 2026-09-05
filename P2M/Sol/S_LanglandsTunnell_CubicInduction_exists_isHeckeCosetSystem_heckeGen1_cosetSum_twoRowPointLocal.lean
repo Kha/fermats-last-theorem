@@ -139,4 +139,3 @@ theorem solution
   rw [CosetSumCollapse.cosetSum_comp_equiv]
   exact h
 
-#print axioms solution

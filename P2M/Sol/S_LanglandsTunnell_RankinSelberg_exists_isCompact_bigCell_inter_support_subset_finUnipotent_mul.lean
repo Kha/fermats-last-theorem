@@ -351,4 +351,3 @@ theorem solution
   rw [hy, ha]
   group
 
-#print axioms solution

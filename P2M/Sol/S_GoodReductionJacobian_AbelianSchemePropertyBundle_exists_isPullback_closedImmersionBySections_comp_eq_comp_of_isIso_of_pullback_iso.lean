@@ -185,4 +185,3 @@ theorem solution
       σ'.1 ≫ p = p ≫ σ.1 :=
   ModelBCT.main φ hA L M hM hci σ hσiso hσ hpol
 
-#print axioms solution

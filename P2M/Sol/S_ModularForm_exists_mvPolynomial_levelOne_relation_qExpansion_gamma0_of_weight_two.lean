@@ -981,4 +981,3 @@ theorem solution
           = 0 :=
   final p h b hb
 
-#print axioms solution

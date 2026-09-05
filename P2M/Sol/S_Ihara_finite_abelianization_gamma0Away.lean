@@ -118,4 +118,3 @@ theorem solution {N q : ℕ} (hq : q.Prime) (hqN : N.Coprime q) :
     finite_of_fg_of_addHom_eq_zero _ (addHom_int_eq_zero hq hqN)
   exact Finite.of_equiv _ Additive.toMul
 
-#print axioms solution

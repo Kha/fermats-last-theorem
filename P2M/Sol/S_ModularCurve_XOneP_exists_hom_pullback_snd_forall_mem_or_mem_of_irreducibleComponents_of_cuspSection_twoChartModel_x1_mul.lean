@@ -86,4 +86,3 @@ theorem solution
   rw [← hZ'Z]
   exact hmaps hzZz
 
-#print axioms solution

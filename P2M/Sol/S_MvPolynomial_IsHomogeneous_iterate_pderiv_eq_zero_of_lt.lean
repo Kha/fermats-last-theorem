@@ -37,4 +37,3 @@ theorem solution {σ R : Type*} [CommSemiring R] {φ : MvPolynomial σ R}
     (MvPolynomial.pderiv k)^[i] φ = 0 :=
   MvPolynomial.DegAux.iterate_pderiv_eq_zero_of_lt hφ k hi
 
-#print axioms solution

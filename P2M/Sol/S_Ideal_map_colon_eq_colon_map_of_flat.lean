@@ -130,4 +130,3 @@ theorem solution
   obtain ⟨T, rfl⟩ := hJ
   rw [FlatColon.colon_span, Ideal.map_span, FlatColon.colon_span, FlatColon.map_colon_finset]
 
-#print axioms solution

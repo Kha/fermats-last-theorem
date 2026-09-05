@@ -1430,4 +1430,3 @@ theorem solution
           = χ (Deep.NTSupply.primeClass K 𝔣 v hv) :=
   M4aP2.PillarBricks.exists_heckeCharOfRayClassChar_of_bricks K 𝔣 χ
 
-#print axioms solution

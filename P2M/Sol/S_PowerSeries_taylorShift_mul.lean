@@ -42,4 +42,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
   have hab : ‖a + b‖ < ρ := lt_of_le_of_lt (IsUltrametricDist.norm_add_le_max a b) (max_lt ha hb)
   exact tsum_coeff_mul_mul_pow_eq_of_norm_lt F G hρ hF hG (a + b) hab
 
-#print axioms solution

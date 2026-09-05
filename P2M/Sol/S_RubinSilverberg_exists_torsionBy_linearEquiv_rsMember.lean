@@ -334,4 +334,3 @@ theorem solution (a b l t₀ : ℚ) (ha : a ≠ 0) (hb : b ≠ 0)
     rw [he0, LinearEquiv.apply_symm_apply, LinearEquiv.apply_symm_apply]
   rw [LinearEquiv.trans_apply, LinearEquiv.trans_apply, hx, he1]
 
-#print axioms solution

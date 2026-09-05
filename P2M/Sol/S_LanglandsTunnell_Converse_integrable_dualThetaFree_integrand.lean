@@ -398,4 +398,3 @@ theorem solution
   exact integrable_of_dilate _ f hmf.aestronglyMeasurable (fun z : ℝ × ℝ => a₂ * z.1)
     (ae_goodZ.mono fun z hz => mul_ne_zero ha₂0 hz) hG
 
-#print axioms solution

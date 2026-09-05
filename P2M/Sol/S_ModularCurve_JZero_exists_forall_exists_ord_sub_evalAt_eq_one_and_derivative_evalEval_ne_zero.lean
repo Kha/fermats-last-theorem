@@ -906,4 +906,3 @@ theorem solution
   rw [Equiv.apply_symm_apply]
   exact ht
 
-#print axioms solution

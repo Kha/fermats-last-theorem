@@ -227,4 +227,3 @@ theorem solution
         push_cast
         ring
 
-#print axioms solution

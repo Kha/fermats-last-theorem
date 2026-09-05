@@ -68,4 +68,3 @@ theorem solution
     exact zero_ne_one h
   · omega
 
-#print axioms solution

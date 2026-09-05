@@ -46,4 +46,3 @@ theorem solution {G : Type*} [Group G] (K : Subgroup G) [K.FiniteIndex]
     AddMonoidHom.toMultiplicativeRight_apply_apply, toAdd_pow, toAdd_ofAdd]
   rfl
 
-#print axioms solution

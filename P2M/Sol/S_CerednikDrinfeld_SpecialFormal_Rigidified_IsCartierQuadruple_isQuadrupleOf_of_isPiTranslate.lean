@@ -54,4 +54,3 @@ theorem solution
   CerednikDrinfeld.FormalOmega.DrinfeldDatum.IsQuadrupleOf.of_isIsomorphic hd
     (CerednikDrinfeld.SpecialFormal.Rigidified.IsCartierQuadruple.isIsomorphic_quadruple_of_isPiTranslate p k ι Φ hΦ hΦ4 hcΦ rΦ hrΦ ψ hB t t' ht ht' hπ Q Q' hQ hQ')
 
-#print axioms solution

@@ -74,4 +74,3 @@ theorem solution
     h2.elim fun D hD => ⟨mP, D, hD.1, hD.2.1⟩
 
 #check @solution
-#print axioms solution

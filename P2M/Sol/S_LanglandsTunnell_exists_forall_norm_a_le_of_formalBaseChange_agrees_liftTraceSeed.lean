@@ -133,4 +133,3 @@ theorem solution
     · rw [hb]
       exact hD₀ (e (LanglandsTunnell.P2.seedFrob H w))
 
-#print axioms solution

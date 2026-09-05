@@ -423,4 +423,3 @@ theorem solution (n N : ℕ) [NeZero N]
     Function.Injective Φ :=
   HeckeEis.RatAux.injective_of_clause n N Φ hΦ
 
-#print axioms solution

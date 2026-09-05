@@ -199,4 +199,3 @@ theorem solution
     (Etor_torsion R A N ⊤ ℓ₀) (Etor_torsion R A (N * q) ⊤ ℓ₀) (Etor_torsion R A (N * q) ⊤ ℓ₀)
     HC1 (fun g h hgh => HC1 g h hgh) H25 T' hT'
 
-#print axioms solution

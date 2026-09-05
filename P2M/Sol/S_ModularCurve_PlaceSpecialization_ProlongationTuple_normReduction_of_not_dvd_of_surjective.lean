@@ -218,8 +218,6 @@ end LocRing
 
 end Dichotomy
 
-#print axioms valuationRing_locRing
-#print axioms isFractionRing_locRing
 
 end RosatiL1
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_normReduction_of_not_dvd_of_surjective.RosatiL1"
@@ -335,8 +333,6 @@ private theorem finrank_algebraAlong_frobeniusGeomLevel (hqN : ¬ q ∣ N) :
   unfold finrankAlong at h
   exact h
 
-#print axioms finrankAlong_frobeniusGeomLevel
-#print axioms finrank_algebraAlong_frobeniusGeomLevel
 
 end RosatiNormRed
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_normReduction_of_not_dvd_of_surjective.RosatiL1"
@@ -373,8 +369,6 @@ private theorem finrank_bar_algebraAlong_heckeAlphaBar (N q : ℕ) [NeZero N] [F
       Module.finrank (modularFunctionFieldBar N) (modularFunctionFieldBar (N * q))) = q + 1 :=
   finrankAlong_heckeAlphaBar_of_not_dvd (AlgebraicClosure ℚ) N q hqN
 
-#print axioms finrankAlong_heckeAlphaBar_of_not_dvd
-#print axioms finrank_bar_algebraAlong_heckeAlphaBar
 
 end DegreeLegReceipt
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_normReduction_of_not_dvd_of_surjective.RosatiL1"
@@ -990,8 +984,6 @@ private theorem normResidueFactorization_of_engine [IsAlgClosed k]
 end EngineDock
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_normReduction_of_not_dvd_of_surjective.RosatiL1"
 
-#print axioms normResidueFactorization_of_engine
-#print axioms normReduction'_of_factorization
 
 section Closing
 variable {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)}
@@ -1126,8 +1118,6 @@ private theorem normReduction_of_engine' [IsAlgClosed k] (hqN : ¬ q ∣ N) (hre
       (DegreeLegReceipt.finrankAlong_heckeAlphaBar_of_not_dvd (AlgebraicClosure ℚ) N q hqN)
   exact normReduction'_of_factorization R hfac
 
-#print axioms normResidueFactorization_of_engine
-#print axioms normReduction_of_engine'
 
 end Closing
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_normReduction_of_not_dvd_of_surjective.RosatiL1"
@@ -1164,4 +1154,3 @@ theorem solution
   intro f h₁ h₂ hr₁ hr₂
   exact ModularCurve.PlaceSpecialization.normReduction_of_engine' R hqN hred f h₁ h₂ hr₁ hr₂
 
-#print axioms solution

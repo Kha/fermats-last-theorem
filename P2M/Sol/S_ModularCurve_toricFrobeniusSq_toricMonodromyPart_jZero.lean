@@ -94,4 +94,3 @@ theorem solution (N q : ℕ) [NeZero N] [NeZero q] (hq : q.Prime) (hqN : ¬ q �
   intro x hx
   exact hsq x (hle hx)
 
-#print axioms solution

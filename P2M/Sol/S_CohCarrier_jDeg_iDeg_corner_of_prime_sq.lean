@@ -393,4 +393,3 @@ theorem solution (N q : ℕ) [NeZero N] [NeZero q]
   · simp only [AddMonoidHom.comp_apply]
     exact corner_q2_one A hq hqN h1 hq2 φ
 
-#print axioms solution

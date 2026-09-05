@@ -61,4 +61,3 @@ theorem solution
       exact le_trans (by norm_num) h
     exact h2.trans (ringKrullDim_le_of_surjective χ.toRingHom hχ)
 
-#print axioms solution

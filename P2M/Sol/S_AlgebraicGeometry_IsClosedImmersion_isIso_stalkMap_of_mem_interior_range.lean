@@ -56,4 +56,3 @@ theorem solution
 
   rw [← TopCat.Presheaf.germ_res_apply X.presheaf (homOfLE hVU) (i c) hcV s, hsV, map_zero]
 
-#print axioms solution

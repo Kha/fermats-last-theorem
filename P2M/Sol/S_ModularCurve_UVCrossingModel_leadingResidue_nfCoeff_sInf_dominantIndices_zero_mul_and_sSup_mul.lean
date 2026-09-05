@@ -965,4 +965,3 @@ theorem solution
           leadingResidue ϖ (nfCoeff ab' (sSup (dominantIndices (IsDiscreteValuationRing.addVal W) e e ab'))) :=
   AnnulusEndCoeff.leadingResidue_end_mul ϖ hϖ e he x hx ab hb habx y hy ab' hb' haby ab'' hb'' habxy
 
-#print axioms solution

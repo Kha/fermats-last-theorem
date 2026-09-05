@@ -82,4 +82,3 @@ theorem solution
     exact (specializes_iff_mem_closure.mpr hm₁c).map (pullback.fst F.gN (barPt A ≫ shPt A)).base.hom.continuous
   exact hsp.mem_open (IsOpenImmersion.isOpen_range _) hn₁
 
-#print axioms solution

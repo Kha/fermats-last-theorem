@@ -55,4 +55,3 @@ theorem solution (p : ℕ) [Fact p.Prime] (hp2 : p ≠ 2) (W : WeierstrassCurve 
         hgood hap)
   · exact Or.inl (not_not.mp hgood)
 
-#print axioms solution

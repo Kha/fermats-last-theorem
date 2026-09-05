@@ -125,4 +125,3 @@ M.obj B ψ hB → OmegaObj (K := ℚ_[p]) (p : ℤ_[p]) B)
     have hb := CerednikDrinfeld.SpecialFormal.ModuliPackage.IsPeriodMap.bijective_of_charP_of_isNoetherianRing_of_lieVarpi_eq_zero p k ι Φ hΦ hΦ4 h0 M hM η hη hcΦ rΦ hrΦ θ hθ
     exact @hb B _ _ ((ψ.comp c).toAlgebra) ψ hB hp0
 
-#print axioms solution

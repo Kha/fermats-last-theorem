@@ -1114,4 +1114,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_ModularCurve_XOne_chartRing_le_adjoin_gaussReductions_chartAlg_x1.ModularCurve.GaussRedCore.Setup P2MW.S_ModularCurve_XOne_chartRing_le_adjoin_gaussReductions_chartAlg_x1.ModularCurve P2MW.S_ModularCurve_XOne_chartRing_le_adjoin_gaussReductions_chartAlg_x1.ModularCurve.GaussRedCore"
 
-#print axioms solution

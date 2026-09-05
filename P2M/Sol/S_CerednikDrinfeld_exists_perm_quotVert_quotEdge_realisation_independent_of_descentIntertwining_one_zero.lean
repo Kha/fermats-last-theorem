@@ -986,4 +986,3 @@ theorem solution
     have e1 : ρ₁ nσ * ρ₁ (nσ⁻¹ * n) = (ρ₁ nσ * ρ₁ (nσ⁻¹ * n) * (ρ₁ nσ)⁻¹) * ρ₁ nσ := by group
     rw [e1, mul_smul, Mumford.smul_dart_symm]; exact (horbD j _ hmem' _).symm
 
-#print axioms solution

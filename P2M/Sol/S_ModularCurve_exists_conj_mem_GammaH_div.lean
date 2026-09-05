@@ -51,4 +51,3 @@ theorem solution
   · show (p : ℤ) * c' = γ 1 0
     rw [hc']
 
-#print axioms solution

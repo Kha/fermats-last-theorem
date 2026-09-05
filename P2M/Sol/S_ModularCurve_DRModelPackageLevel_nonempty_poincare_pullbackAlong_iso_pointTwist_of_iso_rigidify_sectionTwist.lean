@@ -319,4 +319,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_ModularCurve_DRModelPackageLevel_nonempty_poincare_pullbackAlong_iso_pointTwist_of_iso_rigidify_sectionTwist.PrincTriv"
 
-#print axioms solution

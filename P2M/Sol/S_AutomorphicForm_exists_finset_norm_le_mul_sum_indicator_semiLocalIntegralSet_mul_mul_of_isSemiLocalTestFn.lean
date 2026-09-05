@@ -46,4 +46,3 @@ theorem solution
       _ ≤ max C 0 * ∑ b ∈ t, (U b).indicator (fun _ => (1 : ℝ)) g :=
           mul_le_mul_of_nonneg_left h1 (le_max_right _ _)
 
-#print axioms solution

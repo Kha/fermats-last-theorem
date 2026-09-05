@@ -76,4 +76,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] {n : ℕ} (hn :
   exact ne_algebraMap_mul_pow_of_mk_ne_zero hn hf0 hfD (hD ▸ hx0) 1 b
     (by rw [map_one, one_mul, hb])
 
-#print axioms solution

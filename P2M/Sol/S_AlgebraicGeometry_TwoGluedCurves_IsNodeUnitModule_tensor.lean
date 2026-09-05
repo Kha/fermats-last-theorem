@@ -353,6 +353,5 @@ theorem solution
   · exact tensorJ_app_tensorSections (curveChange i₁.1 i₁.2 h) j₁ j₁' e₀ e₀'
   · exact tensorJ_app_tensorSections (curveChange i₂.1 i₂.2 h) j₂ j₂' e₀ e₀'
 
-#print axioms solution
 end
 p2m_reactivate "P2MW.S_AlgebraicGeometry_TwoGluedCurves_IsNodeUnitModule_tensor.TwoGluedCurvesN7"

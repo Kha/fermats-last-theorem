@@ -5594,4 +5594,3 @@ theorem solution (F : Type) [Field F] [NumberField F]
               * ∏ v ∈ S, LanglandsTunnell.TateLocal.localZeta (μf v) (h v) (localChar χ v) s :=
   M4aLocalCFT.G2Proof.zetaIntegral_mul_eulerFactors_eq_impl F ν S μf μa ϖ hϖ
 
-#print axioms solution

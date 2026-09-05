@@ -837,4 +837,3 @@ theorem solution
   rw [integral_congr_ae hfold, integral_const_mul, hId, show s - (-u₃ - 2) - 2 = s + u₃ by ring]
   ring
 
-#print axioms solution

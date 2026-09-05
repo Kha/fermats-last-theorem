@@ -83,4 +83,3 @@ theorem solution
     _ ≤ ∑ t ∈ T, ν ((fun g : G => g * t⁻¹) ⁻¹' ((H : Set G) * (K₀ : Set G))) := measure_biUnion_finset_le _ _
     _ < ⊤ := ENNReal.sum_lt_top.mpr fun t _ => htrans t
 
-#print axioms solution

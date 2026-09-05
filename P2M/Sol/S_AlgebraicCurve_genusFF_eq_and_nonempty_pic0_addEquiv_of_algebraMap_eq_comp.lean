@@ -297,4 +297,3 @@ theorem solution
     genusFF k F = genusFF K F ∧ Nonempty (Pic0 k F ≃+ Pic0 K F) :=
   ⟨trGenusFF e he, ⟨trPic0Equiv e he⟩⟩
 
-#print axioms solution

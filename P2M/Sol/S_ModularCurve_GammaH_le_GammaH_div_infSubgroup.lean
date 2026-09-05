@@ -30,4 +30,3 @@ theorem solution
   rw [key]
   exact unitsMap_mem_infSubgroup p M H hpM hd
 
-#print axioms solution

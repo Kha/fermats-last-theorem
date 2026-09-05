@@ -254,4 +254,3 @@ theorem solution (R S T : Type u)
     Function.Injective ((Algebra.H1Cotangent.map R R S T).liftBaseChange T) :=
   JZInj.main R S T
 
-#print axioms solution

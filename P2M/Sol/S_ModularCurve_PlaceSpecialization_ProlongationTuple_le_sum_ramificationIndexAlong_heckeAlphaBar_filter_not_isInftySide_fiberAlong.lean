@@ -1469,4 +1469,3 @@ theorem solution
         simpa using hdisc 0
       exact InftySideMass.le_sum_of_forall_ord_sub_nonpos_of_ord_eq_zero hqN P b hdisc h0
 
-#print axioms solution

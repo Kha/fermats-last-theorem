@@ -183,4 +183,3 @@ theorem solution
     rw [snd_scale, snd_scale, hsndt] at h2
     rw [mul_right_cancel₀ hr h2]
 
-#print axioms solution

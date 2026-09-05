@@ -468,4 +468,3 @@ theorem solution (n : ℕ) (Γ : Subgroup SL(2, ℤ)) [Group.FG Γ]
   obtain ⟨S, hS⟩ := Group.fg_def.mp (inferInstance : Group.FG Γ)
   exact HeckeEis.QCAux.mem_span_range n Ψ hΨ S hS X
 
-#print axioms solution

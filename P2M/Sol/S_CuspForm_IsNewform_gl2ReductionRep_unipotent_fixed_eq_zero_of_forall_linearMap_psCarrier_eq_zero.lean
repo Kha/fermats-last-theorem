@@ -52,4 +52,3 @@ theorem solution
       g hg q Φ hgΦ y hy0 hN
   exact hF0 (hps μ₁ μ₂ F hF)
 
-#print axioms solution

@@ -22,4 +22,3 @@ theorem solution
   calc c ≫ φ.hom = φ₀.hom ≫ (φ₀.inv ≫ c ≫ φ.hom) := by rw [Iso.hom_inv_id_assoc]
     _ = φ₀.hom ≫ c := by rw [key]
 
-#print axioms solution

@@ -234,4 +234,3 @@ theorem solution
     AlgebraicCurve.Place.restrictAlong_algEquiv_eq_ofAlgAut_symm_smul θ hθint, hw, smul_smul, ← map_mul,
     AlgEquiv.aut_mul, AlgEquiv.self_trans_symm, ← AlgEquiv.aut_one, map_one, one_smul]
 
-#print axioms solution

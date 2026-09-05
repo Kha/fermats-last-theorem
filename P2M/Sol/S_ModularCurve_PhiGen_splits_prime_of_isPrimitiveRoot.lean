@@ -604,4 +604,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_splits_prime_of_isPri
 theorem solution {K : Type*} [Field K] (p : ℕ) [hp : Fact (Nat.Prime p)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) p) (data : ModularPolynomialData p) : data.Φ.map (Polynomial.eval₂RingHom (Int.castRingHom (LaurentSeries K)) (qExpand K p (jqModC K))) = (Polynomial.X - Polynomial.C (qExpand K (p * p) (jqModC K))) * ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qTwist (ζ ^ b) (jqModC K))) :=
   ModularCurve.PhiGen.splits_prime_of_isPrimitiveRoot p ζ hζ data
 
-#print axioms solution

@@ -407,4 +407,3 @@ theorem solution
   TorAddX1.main (ModularCurve.TwoChart.modelTo A (↥K) j) ε D hrep.some k hreps hPk G.proj pts hadd
     (AlgebraicClosure ℚ) gpts hgadd (↥Pl) Pl.subtype ρ hρ πk hAlgk
 
-#print axioms solution

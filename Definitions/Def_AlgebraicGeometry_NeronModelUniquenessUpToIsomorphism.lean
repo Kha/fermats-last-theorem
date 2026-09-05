@@ -297,55 +297,46 @@ end NeronModelInfra
 info: 'NeronModelInfra.genericFibreRestrict_val_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.genericFibreRestrict_val_eq_id
 
 /--
 info: 'NeronModelInfra.genericFibreRestrict_val_eq_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.genericFibreRestrict_val_eq_comp
 
 /--
 info: 'NeronModelInfra.neronModel_end_eq_id_of_restrict_val_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronModel_end_eq_id_of_restrict_val_eq_id
 
 /--
 info: 'NeronModelInfra.neronTwoModels_extension_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronTwoModels_extension_unique
 
 /--
 info: 'NeronModelInfra.neronTwoModels_existsUnique_homExtension' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronTwoModels_existsUnique_homExtension
 
 /--
 info: 'NeronModelInfra.neronTwoModels_comp_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronTwoModels_comp_eq_id
 
 /--
 info: 'NeronModelInfra.neronTwoModels_exists_isoExtension' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronTwoModels_exists_isoExtension
 
 /--
 info: 'NeronModelInfra.neronTwoModels_existsUnique_isoExtension' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronTwoModels_existsUnique_isoExtension
 
 /--
 info: 'NeronModelInfra.neronTwoModels_isoExtension_isIso' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronTwoModels_isoExtension_isIso
 
 /--
 info: 'NeronModelInfra.neronTwoModels_existsUnique_isoExtension_of_isIso' depends on axioms: [propext,
@@ -353,7 +344,6 @@ info: 'NeronModelInfra.neronTwoModels_existsUnique_isoExtension_of_isIso' depend
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronTwoModels_existsUnique_isoExtension_of_isIso
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.exists_isoExtension' depends on axioms: [propext,
@@ -361,7 +351,6 @@ info: 'NeronModelInfra.NeronModelPropertyBundle.exists_isoExtension' depends on 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.exists_isoExtension
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_isoExtension' depends on axioms: [propext,
@@ -369,13 +358,11 @@ info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_isoExtension' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.existsUnique_isoExtension
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.isoExtension_isIso' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.isoExtension_isIso
 
 /--
 info: 'NeronModelInfra.gate_neronModel_end_eq_id_trivialGroupScheme_zp' depends on axioms: [propext,
@@ -383,7 +370,6 @@ info: 'NeronModelInfra.gate_neronModel_end_eq_id_trivialGroupScheme_zp' depends 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronModel_end_eq_id_trivialGroupScheme_zp
 
 /--
 info: 'NeronModelInfra.gate_neronTwoModels_exists_isoExtension_trivialGroupScheme_zp' depends on axioms: [propext,
@@ -391,7 +377,6 @@ info: 'NeronModelInfra.gate_neronTwoModels_exists_isoExtension_trivialGroupSchem
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronTwoModels_exists_isoExtension_trivialGroupScheme_zp
 
 /--
 info: 'NeronModelInfra.gate_neronTwoModels_existsUnique_isoExtension_trivialGroupScheme_z3' depends on axioms: [propext,
@@ -399,4 +384,3 @@ info: 'NeronModelInfra.gate_neronTwoModels_existsUnique_isoExtension_trivialGrou
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronTwoModels_existsUnique_isoExtension_trivialGroupScheme_z3

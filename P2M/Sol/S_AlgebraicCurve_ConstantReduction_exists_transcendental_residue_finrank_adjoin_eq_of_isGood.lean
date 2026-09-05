@@ -604,4 +604,3 @@ theorem solution
           (IntermediateField.adjoin (IsLocalRing.ResidueField A) ({R.residue x} : Set Fbar)) Fbar :=
   DeuringLift.exists_of_forall_divisor A F hF Fbar R hR fun D => DeuringLift.exists_fin_of_ell R D
 
-#print axioms solution

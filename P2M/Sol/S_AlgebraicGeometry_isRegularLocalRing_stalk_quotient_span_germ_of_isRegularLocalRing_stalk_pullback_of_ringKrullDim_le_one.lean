@@ -254,4 +254,3 @@ theorem solution
             trivial).hom ((f.appTop).hom ((Scheme.ΓSpecIso (CommRingCat.of A)).inv.hom ϖ)))}) :=
   RegDescBeta.regdesc ϖ hmax f K' hϖ z' hreg hdim
 
-#print axioms solution

@@ -995,4 +995,3 @@ theorem solution
     rw [hcoef_eq]
     exact (hTC w p).1
 
-#print axioms solution

@@ -151,4 +151,3 @@ theorem solution
     ∃ X : ModularForm (CohCarrier.GammaH M H) k, ⇑X = ModularForm.alSlash W k ⇑f :=
   ⟨AlFactorHMod.slashMod W.alGL (AlFactorHMod.le_conj_alGL W hHq) f, rfl⟩
 
-#print axioms solution

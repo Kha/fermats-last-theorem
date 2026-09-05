@@ -415,4 +415,3 @@ theorem solution
       Even ((n : ℤ) + 1 - k) := by
   exact TreeParity.parity_twisted ϖ hϖ (fun v => LT.LatticeTree.exists_act_stdVertex_eq R K v) σ δ k u hdet
 
-#print axioms solution

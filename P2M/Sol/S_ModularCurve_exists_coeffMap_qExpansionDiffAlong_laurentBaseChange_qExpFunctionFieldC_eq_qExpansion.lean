@@ -584,4 +584,3 @@ theorem solution
   obtain ⟨H, rfl⟩ := CohCarrier.exists_eq_gammaH_of_gamma1_le_of_le_gamma0 M Γ hΓ₁ hΓ₀
   exact ⟨omega M H ι₀ f hf, coeffMap_qExpansionDiffAlong_omega M H ι₀ f hf⟩
 
-#print axioms solution

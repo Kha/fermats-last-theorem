@@ -400,19 +400,16 @@ end MazurRapoportAppendix
 info: 'MazurRapoportAppendix.multiplicityBeta_intersectionAlpha' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.multiplicityBeta_intersectionAlpha
 
 /--
 info: 'MazurRapoportAppendix.pushforwardStructureSheafIso_of_isIso' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.pushforwardStructureSheafIso_of_isIso
 
 /--
 info: 'MazurRapoportAppendix.cohomologicallyFlatInDimZero_of_isIso' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.cohomologicallyFlatInDimZero_of_isIso
 
 /--
 info: 'MazurRapoportAppendix.subsingleton_appendixComponentGroup_goodReductionTable' depends on axioms: [propext,
@@ -420,7 +417,6 @@ info: 'MazurRapoportAppendix.subsingleton_appendixComponentGroup_goodReductionTa
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.subsingleton_appendixComponentGroup_goodReductionTable
 
 /--
 info: 'MazurRapoportAppendix.appendixComponentGroupClass_twoComponentWitness_ne_zero' depends on axioms: [propext,
@@ -428,7 +424,6 @@ info: 'MazurRapoportAppendix.appendixComponentGroupClass_twoComponentWitness_ne_
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.appendixComponentGroupClass_twoComponentWitness_ne_zero
 
 /--
 info: 'MazurRapoportAppendix.nontrivial_appendixComponentGroup_twoComponentTable' depends on axioms: [propext,
@@ -436,7 +431,6 @@ info: 'MazurRapoportAppendix.nontrivial_appendixComponentGroup_twoComponentTable
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.nontrivial_appendixComponentGroup_twoComponentTable
 
 /--
 info: 'MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_surjective' depends on axioms: [propext,
@@ -444,7 +438,6 @@ info: 'MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_surject
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_surjective
 
 /--
 info: 'MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_eq_zero_of_mem_unitClosure' depends on axioms: [propext,
@@ -452,7 +445,6 @@ info: 'MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_eq_zero
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_eq_zero_of_mem_unitClosure
 
 /--
 info: 'MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_eq_zero_at_goodReduction' depends on axioms: [propext,
@@ -460,7 +452,6 @@ info: 'MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_eq_zero
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.Prop14ComponentPresentationInput.specialise_eq_zero_at_goodReduction
 
 /--
 info: 'MazurRapoportAppendix.gate_thm13RaynaudPicNeronInput_trivialModel_zp' depends on axioms: [propext,
@@ -468,7 +459,6 @@ info: 'MazurRapoportAppendix.gate_thm13RaynaudPicNeronInput_trivialModel_zp' dep
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.gate_thm13RaynaudPicNeronInput_trivialModel_zp
 
 /--
 info: 'MazurRapoportAppendix.gate_prop14ComponentPresentationInput_goodReduction' depends on axioms: [propext,
@@ -476,7 +466,6 @@ info: 'MazurRapoportAppendix.gate_prop14ComponentPresentationInput_goodReduction
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.gate_prop14ComponentPresentationInput_goodReduction
 
 /--
 info: 'MazurRapoportAppendix.gate_prop14ComponentPresentationInput_twoComponent' depends on axioms: [propext,
@@ -484,7 +473,6 @@ info: 'MazurRapoportAppendix.gate_prop14ComponentPresentationInput_twoComponent'
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.gate_prop14ComponentPresentationInput_twoComponent
 
 /--
 info: 'MazurRapoportAppendix.gate_mazurRapoportAppendixPackage_trivialModel_zp' depends on axioms: [propext,
@@ -492,4 +480,3 @@ info: 'MazurRapoportAppendix.gate_mazurRapoportAppendixPackage_trivialModel_zp' 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MazurRapoportAppendix.gate_mazurRapoportAppendixPackage_trivialModel_zp

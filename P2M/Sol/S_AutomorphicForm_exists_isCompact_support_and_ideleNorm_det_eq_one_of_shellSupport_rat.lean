@@ -563,4 +563,3 @@ theorem solution
           rw [det_localAt, ← map_inv, Subgroup.coe_inv, map_inv]; rfl
         rw [this, hv1' v]
 
-#print axioms solution

@@ -32,4 +32,3 @@ theorem solution (N : ℕ) [NeZero N] :
   haveI := essFiniteType_modularFunctionFieldBar N
   exact stichtenothGenusExists_of_isCurveOver (constantsAreBase_modularFunctionFieldBar N)
 
-#print axioms solution

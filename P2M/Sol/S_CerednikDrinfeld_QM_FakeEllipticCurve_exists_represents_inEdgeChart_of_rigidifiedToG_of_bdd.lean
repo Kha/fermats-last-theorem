@@ -323,7 +323,6 @@ theorem exists_pointMap_injective_natural_image
     fun T _ _ _ s s' h => e_injective hred hp1 hp3 hjq hjred hlift T s s' h,
     fun T _ _ _ x => e_image hR0 hred hp1 hjq hjred hlift T x⟩
 
-#print axioms exists_pointMap_injective_natural_image
 
 theorem exists_represents_of_stratumPiece_of_chartScheme
     (𝒪 : Type) [CommRing 𝒪] (C : Type) [CommRing C] [Algebra 𝒪 C] (p : C)
@@ -385,7 +384,6 @@ theorem exists_represents_of_stratumPiece_of_chartScheme
   refine ⟨Xg, q ≫ g, hlft, fun S _ _ _ _ _ y => e S y, fun S S' _ _ _ _ _ _ _ _ _ _ φ y y' h => hnat S S' φ y y' h,
     fun S _ _ _ _ _ y y' h => hinj S y y' h, fun S _ _ _ _ _ x => (himg S x).trans (hDimg S x)⟩
 
-#print axioms exists_represents_of_stratumPiece_of_chartScheme
 
 end ChartIdent46
 

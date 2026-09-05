@@ -87,9 +87,7 @@ end
 p2m_reactivate "P2MW.S_ModularCurve_coeffMap_pow_char_eq_qExpand_of_frobenius.ModularCurve"
 
 #check @ModularCurve.coeffMap_pow_char_eq_qExpand_of_frobenius
-#print axioms ModularCurve.coeffMap_pow_char_eq_qExpand_of_frobenius
 #check @ModularCurve.coeffRed_coeffMap_pow_char_eq_qExpand
-#print axioms ModularCurve.coeffRed_coeffMap_pow_char_eq_qExpand
 #check @ModularCurve.coeffRed_coeffMap_eq_of_inertial
 
 open _root_.ModularCurve _root_.P2MW.S_ModularCurve_coeffMap_pow_char_eq_qExpand_of_frobenius.ModularCurve in

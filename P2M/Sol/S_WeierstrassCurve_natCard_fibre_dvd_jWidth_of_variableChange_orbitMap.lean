@@ -276,4 +276,3 @@ theorem solution
   rw [Nat.card_congr e]
   exact natCard_orbit_dvd_jWidth h2 h3 H
 
-#print axioms solution

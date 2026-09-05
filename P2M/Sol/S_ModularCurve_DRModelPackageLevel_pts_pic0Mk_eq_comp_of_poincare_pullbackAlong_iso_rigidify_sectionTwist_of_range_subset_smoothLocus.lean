@@ -106,4 +106,3 @@ theorem solution
     N₀ p hpN₀ 𝔓 D hD A ρ hρ s hsm (fun i => ⟨_, hxover i⟩) (fun i => rfl) pos neg a ha ⟨_, hb⟩ rfl
   exact congrArg Subtype.val (hD.ext_of_iso (genPt p) (pts (Pic0.mk Dx)) ⟨_, hb⟩ ⟨e1 ≪≫ e2.symm⟩)
 
-#print axioms solution

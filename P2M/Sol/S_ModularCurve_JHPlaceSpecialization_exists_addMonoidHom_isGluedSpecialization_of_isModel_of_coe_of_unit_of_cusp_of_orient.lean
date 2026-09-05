@@ -389,4 +389,3 @@ theorem solution
     (GlueH2.gluedPic0_forall_exists_zsmul_eq hpM2 Psp SS)
     (fun f hf D hDf hgood hadm => ModularCurve.JHPlaceSpecialization.isGluedPrincipal_glueData_of_forall_apply_eq_ord_of_isModel_of_coe_of_unit_of_cusp_of_orient p M H hpM hpM2 hHp A hA θ α β hα hβ pb hpb δ hδ SS hSS Psp Rpd hTD hFix hmodel hO hRL hNV hα_coe hβ_coe hθgal hβθ hLFst hLSnd hUnit hcusp horientInf horient0 hSSne f hf D hDf hgood hadm)
 
-#print axioms solution

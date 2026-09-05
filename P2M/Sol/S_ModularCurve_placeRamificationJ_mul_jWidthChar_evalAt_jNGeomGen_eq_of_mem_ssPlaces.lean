@@ -56,4 +56,3 @@ theorem solution
       rw [jWidthChar_three_of_eq_zero (rfl : (0 : K) = 0)]
       rw [Nat.eq_of_mul_eq_mul_right (by norm_num : 0 < 3) h97]
 
-#print axioms solution

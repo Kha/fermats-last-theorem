@@ -141,4 +141,3 @@ theorem solution (K : Type*) [CommRing K] (N : ℕ) [NeZero N] :
     ((tateLaurent K).map (qExpand K N)).j = jqNModC K N :=
   ModularCurve.j_map_qExpand_tateLaurent K N
 
-#print axioms solution

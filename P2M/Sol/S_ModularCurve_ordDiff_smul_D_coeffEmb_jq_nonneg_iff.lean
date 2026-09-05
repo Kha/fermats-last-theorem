@@ -158,7 +158,6 @@ private theorem _root_.ModularCurve.ordDiff_smul_D_coeffEmb_jq_nonneg_iff (N : �
 p2m_alias "P2MW.S_ModularCurve_ordDiff_smul_D_coeffEmb_jq_nonneg_iff.ModularCurve.ordDiff_smul_D_coeffEmb_jq_nonneg_iff" "ModularCurve.ordDiff_smul_D_coeffEmb_jq_nonneg_iff"
 end CD
 
-#print axioms ModularCurve.ordDiff_smul_D_coeffEmb_jq_nonneg_iff
 
 open ModularCurve AlgebraicCurve in
 
@@ -170,4 +169,3 @@ theorem solution (K : Type*) [Field K] [Algebra ℚ K] (N : ℕ) [NeZero N] (w :
       1 - w.ord ⟨coeffEmb K jq, coeffEmb_mem_laurentBaseChange K (jq_mem_full N)⟩ ≤ w.ord x :=
   ModularCurve.ordDiff_smul_D_coeffEmb_jq_nonneg_iff K N w hw x hx
 
-#print axioms solution

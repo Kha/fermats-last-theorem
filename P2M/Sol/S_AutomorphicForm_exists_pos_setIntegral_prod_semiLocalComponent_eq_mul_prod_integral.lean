@@ -581,4 +581,3 @@ theorem solution
       fun g => ∏ v ∈ S, F v (semiLocalComponent K L v g) from h3] at h1
   exact h1
 
-#print axioms solution

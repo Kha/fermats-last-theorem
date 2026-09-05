@@ -64,5 +64,3 @@ theorem solution
   obtain ⟨B₀, h⟩ := M4aHerbrand.exists_adeleBaseChange_normCoset_index_ne_zero_and_finrank_dvd K L
   rwa [IdelicNormTransport.idelicNorm_range_eq B B₀]
 
-#print axioms IdelicNormTransport.idelicNorm_range_eq
-#print axioms solution

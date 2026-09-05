@@ -303,4 +303,3 @@ theorem solution
   refine ⟨Cₚ, iₚ, g₀, inferInstance, inferInstance, hrange ▸ hZ, sq, ?_⟩
   rw [← Category.assoc, hg₀, Category.assoc, hπfst]
 
-#print axioms solution

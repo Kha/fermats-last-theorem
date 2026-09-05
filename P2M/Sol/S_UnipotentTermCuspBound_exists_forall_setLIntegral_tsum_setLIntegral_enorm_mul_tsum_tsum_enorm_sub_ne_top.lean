@@ -7742,6 +7742,4 @@ theorem solution
   exact exists_forall_setLIntegral_tsum_setLIntegral_enorm_mul_tsum_tsum_enorm_sub_ne_top
     K L α β hα hαβ νZL ΩL hΩL D σ hgen ξL hξc hξt c u d₁ d₂ hc Tc hTc Φ₀ hΦ₀S hΦ₀s hΦ₀ φ hφ reps hreps
 
-#print axioms exists_forall_setLIntegral_tsum_setLIntegral_enorm_mul_tsum_tsum_enorm_sub_ne_top
 
-#print axioms solution

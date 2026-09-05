@@ -31,4 +31,3 @@ theorem solution
   simp only [Fin.sum_univ_one, Fin.val_zero, Function.iterate_zero, id_eq, Function.iterate_one, map_add,
     MvFormalGroup.CartierModule.tangent_homothety, MvFormalGroup.CartierModule.tangent_verschiebungInt, add_zero]
 
-#print axioms solution

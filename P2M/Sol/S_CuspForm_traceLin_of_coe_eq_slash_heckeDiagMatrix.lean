@@ -361,4 +361,3 @@ theorem solution {M q : ℕ} (W : ModularForm.AtkinLehnerDatum M q) [NeZero M]
     traceLin W hq g = heckeTLin (2 : ℤ) hq (W.not_dvd_R_impl hq.one_lt) f :=
   CuspForm.traceLin_of_coe_eq_slash_heckeDiagMatrix_impl W hq hg
 
-#print axioms solution

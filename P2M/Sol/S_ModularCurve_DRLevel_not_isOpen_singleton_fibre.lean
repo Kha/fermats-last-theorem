@@ -132,4 +132,3 @@ theorem solution
     rw [h0] at h1
     exact absurd h1 (by decide)
 
-#print axioms solution

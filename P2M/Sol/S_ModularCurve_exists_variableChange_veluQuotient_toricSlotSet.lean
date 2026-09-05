@@ -2857,4 +2857,3 @@ theorem solution (K : Type*) [Field K]
                 (tateLaurent K).map (qExpand K (p * p)) :=
   ModularCurve.exists_variableChange_veluQuotient_toricSlotSet K p hp ζ hζ hE
 
-#print axioms solution

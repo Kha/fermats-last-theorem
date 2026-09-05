@@ -95,10 +95,3 @@ end MulConvolution
 
 end
 
-#print axioms MulConvolution.integrable_mul_comp
-#print axioms MulConvolution.mulConv_add_left
-#print axioms MulConvolution.mulConv_add_right
-#print axioms MulConvolution.mulConv_smul_left
-#print axioms MulConvolution.mulConv_smul_right
-#print axioms MulConvolution.hasCompactSupport_mulConv
-#print axioms MulConvolution.isLocallyConstant_mulConv

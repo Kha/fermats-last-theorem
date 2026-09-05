@@ -160,4 +160,3 @@ theorem solution
       exact hI
     simpa using isIntegral_adjoin_intermediateField_mk F jb.2 u.2 hD
 
-#print axioms solution

@@ -168,4 +168,3 @@ theorem solution
     refine Finset.sum_congr rfl fun m _ => ?_
     rw [hVit, MvFormalGroup.CartierModule.map_homothety]
 
-#print axioms solution

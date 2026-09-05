@@ -259,4 +259,3 @@ theorem solution
         _ (pullback.fst f f ≫ f) (𝒲.U i) (m i) _ (hmμ i) (hmf i) _ s₀Y hsY
         (by rw [← Category.assoc, hμY, Category.id_comp]) (by rw [pullback.lift_fst_assoc, Category.assoc, e.2, Category.comp_id]) hU
 
-#print axioms solution

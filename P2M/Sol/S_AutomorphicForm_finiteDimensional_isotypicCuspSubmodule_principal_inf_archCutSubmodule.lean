@@ -84,4 +84,3 @@ theorem solution
   exact Submodule.finiteDimensional_of_le
     (window_cut_le_fundamentalDomain_cut F c u d₁ d₂ T hd hcov 1 2 one_pos D hDs hD ξ N S Ψ tys)
 
-#print axioms solution

@@ -349,4 +349,3 @@ theorem solution
       coeffEmb (AlgebraicClosure ℚ) ((b : ↥(qExpFunctionFieldC ℚ (ΓM M H))) : LaurentSeries ℚ) :=
   PoleRead.main 𝔛 b
 
-#print axioms solution

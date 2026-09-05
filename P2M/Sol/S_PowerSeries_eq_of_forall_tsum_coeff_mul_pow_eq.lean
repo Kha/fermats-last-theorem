@@ -152,4 +152,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
     rw [hs1.tsum_sub hs2, h z hz, sub_self])
   exact sub_eq_zero.mp h0
 
-#print axioms solution

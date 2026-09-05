@@ -864,4 +864,3 @@ theorem solution
     exact KerAssembly.summable_and_tsum_le_of_sum_le (fun i => norm_nonneg _) key
   case h3 => exact hD.2
 
-#print axioms solution

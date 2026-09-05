@@ -502,4 +502,3 @@ theorem solution
     show wB.restrict F = wA.restrict F
     rw [← h₁, ← h₂, hrr]
 
-#print axioms solution

@@ -110,4 +110,3 @@ theorem solution {R R' : Type*} [CommRing R] [CommRing R'] (φ : R →+* R') (n 
     T' (Φ x) = Φ (T x) :=
   HeckeEis.SolMain.C1 φ n N ℓ Φ hΦ T hT T' hT' x
 
-#print axioms solution

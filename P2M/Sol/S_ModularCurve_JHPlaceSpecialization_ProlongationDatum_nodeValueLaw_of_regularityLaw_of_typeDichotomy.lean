@@ -84,4 +84,3 @@ theorem solution
   rw [hprod, mul_zero] at h1
   exact one_ne_zero ((Place.hasValue_one _).unique h1)
 
-#print axioms solution

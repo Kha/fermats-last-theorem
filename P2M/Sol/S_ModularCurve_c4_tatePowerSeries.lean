@@ -264,4 +264,3 @@ open PowerSeries HahnSeries _root_.ModularCurve _root_.P2MW.S_ModularCurve_c4_ta
 theorem solution : tatePowerSeries.c₄ = eisenstein4 :=
   ModularCurve.c4_tatePowerSeries
 
-#print axioms solution

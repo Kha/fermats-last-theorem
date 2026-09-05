@@ -835,4 +835,3 @@ theorem solution
   rw [hH]
   exact SupersingularWidthTwo.natCard_fibre_dvd_twelve N f hf H
 
-#print axioms solution

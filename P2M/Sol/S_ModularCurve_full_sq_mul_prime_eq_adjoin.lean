@@ -640,4 +640,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_full
 theorem solution (p ℓ : ℕ) [hp : Fact (Nat.Prime p)] [hl : Fact (Nat.Prime ℓ)] (hpl : p ≠ ℓ) : modularFunctionFieldFull (p * p * ℓ) = IntermediateField.adjoin ℚ ({jq, jqN ℓ, jqN p, jqN (p * p)} : Set (LaurentSeries ℚ)) :=
   ModularCurve.full_sq_mul_prime_eq_adjoin p ℓ hpl
 
-#print axioms solution

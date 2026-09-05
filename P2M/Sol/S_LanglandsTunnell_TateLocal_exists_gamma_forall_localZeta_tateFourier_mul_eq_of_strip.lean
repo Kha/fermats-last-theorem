@@ -1020,4 +1020,3 @@ theorem solution
     simp only [Polynomial.eval_C, Polynomial.eval_one]
     linear_combination FE
 
-#print axioms solution

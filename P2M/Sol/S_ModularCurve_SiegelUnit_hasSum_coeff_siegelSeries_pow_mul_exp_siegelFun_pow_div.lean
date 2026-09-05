@@ -1335,4 +1335,3 @@ theorem solution
   rw [hsummand] at hpow
   simpa only [hval] using hpow
 
-#print axioms solution

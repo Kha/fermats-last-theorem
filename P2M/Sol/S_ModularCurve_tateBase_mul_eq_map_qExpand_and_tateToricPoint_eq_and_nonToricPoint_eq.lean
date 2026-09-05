@@ -223,4 +223,3 @@ theorem solution
   congr 1
   exact RingHom.ext fun f => (qExpand_qExpand p N f).symm
 
-#print axioms solution

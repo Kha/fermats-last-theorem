@@ -344,46 +344,21 @@ end Gates
 
 end
 
-#print axioms IntermediateField.finrank_toSubfield_eq
-#print axioms finrank_fieldRange_algebraMap
-#print axioms Subfield.finrank_map_ringEquiv
-#print axioms map_fieldRange_frobenius
-#print axioms finrank_fieldRange_frobenius_eq_of_ringEquiv
-#print axioms RatFunc.powerBasisAdjoinXPow
-#print axioms RatFunc.powerBasisAdjoinXPow_gen
-#print axioms RatFunc.powerBasisAdjoinXPow_dim
-#print axioms RatFunc.powerBasisAdjoinXPow_basis_apply
-#print axioms RatFunc.pow_ne_X
-#print axioms RatFunc.X_notMem_fieldRange_frobenius
-#print axioms RatFunc.fieldRange_frobenius_ne_top
-#print axioms RatFunc.pow_char_aeval_X
-#print axioms RatFunc.mem_fieldRange_frobenius_iff
-#print axioms RatFunc.fieldRange_frobenius_eq_toSubfield_adjoin
-#print axioms AlgHom.finrank_fieldRange_of_forall_pow
-#print axioms AlgHom.finrank_fieldRange_eq_char_of_ringEquiv_ratFunc
-#print axioms RatFunc.finrank_fieldRange_frobenius_two
-#print axioms RatFunc.gate_finrank_ne_one
-#print axioms RatFunc.gate_engine_self
 
 /-- info: 'RatFunc.finrank_adjoin_X_pow' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms RatFunc.finrank_adjoin_X_pow
 
 /-- info: 'RatFunc.finrank_fieldRange_frobenius' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms RatFunc.finrank_fieldRange_frobenius
 
 /-- info: 'finrank_fieldRange_frobenius_eq_of_finiteDimensional' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms finrank_fieldRange_frobenius_eq_of_finiteDimensional
 
 /-- info: 'finrank_fieldRange_frobenius_eq_of_isSeparable' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms finrank_fieldRange_frobenius_eq_of_isSeparable
 
 /-- info: 'AlgHom.finrank_fieldRange_eq_char_of_finiteDimensional' depends on axioms:
 [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
-#print axioms AlgHom.finrank_fieldRange_eq_char_of_finiteDimensional

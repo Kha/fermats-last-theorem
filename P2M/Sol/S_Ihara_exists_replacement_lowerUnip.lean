@@ -822,4 +822,3 @@ theorem solution (q m : ℕ) [NeZero q] (hmq : Nat.Coprime m q) (X : SL(2, ZAway
         (X : Matrix (Fin 2) (Fin 2) (ZAway q)) 0 1 :=
   Ihara.exists_replacement_lowerUnip_impl q m hmq X hX A B u u' v' hu'v' hα hβ k
 
-#print axioms solution

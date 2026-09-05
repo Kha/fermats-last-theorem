@@ -88,4 +88,3 @@ theorem solution
   unfold kaehlerResidueTerm
   rw [diagonalHom_apply, diagonalHom_apply, htr, hTr, z.differentialCoeff_smul, mul_assoc]
 
-#print axioms solution

@@ -354,4 +354,3 @@ theorem solution (K : Type*) [Field K]
     NumberField.dedekindZeta K s ≠ 0 :=
   P6B.ZetaNeZero.dedekindZeta_ne_zero K hs
 
-#print axioms solution

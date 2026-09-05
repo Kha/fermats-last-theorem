@@ -38,4 +38,3 @@ theorem solution
     obtain ⟨x, rfl⟩ := hf z
     exact ⟨DoubleCoset.mk H K x, hφ x⟩
 
-#print axioms solution

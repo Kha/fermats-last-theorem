@@ -575,4 +575,3 @@ theorem solution
       ∂(ProbabilityTheory.cond (NumberField.AdelicHaar.adelicAddHaar (𝓞 ℚ) ℚ) (AdelicBox.adelicBox ℚ))) = W g
   exact integral_integral_integral_mirabolicSeries_eq _hψ _hW _hsum g
 
-#print axioms solution

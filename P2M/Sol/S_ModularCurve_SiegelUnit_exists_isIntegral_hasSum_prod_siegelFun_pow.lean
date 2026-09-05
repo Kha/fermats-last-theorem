@@ -359,6 +359,5 @@ theorem solution (N : ℕ) [NeZero N]
         UpperHalfPlane.atImInfty (nhds (d 0)) :=
   SExpPi.main N e he
 
-#print axioms solution
 
 end

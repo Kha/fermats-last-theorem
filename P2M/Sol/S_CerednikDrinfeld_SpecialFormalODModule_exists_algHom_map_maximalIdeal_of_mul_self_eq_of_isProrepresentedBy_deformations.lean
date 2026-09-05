@@ -152,4 +152,3 @@ theorem solution
     show algebraMap Onr O' (PowerSeries.constantCoeff (χ₄ x)) ∈ maximalIdeal O'
     exact halg _ h2
 
-#print axioms solution

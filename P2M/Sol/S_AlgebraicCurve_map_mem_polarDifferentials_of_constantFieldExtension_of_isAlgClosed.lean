@@ -165,4 +165,3 @@ theorem solution
     obtain ⟨hreg, hpole⟩ := hω v
     refine ⟨fun hn => hA.1 (hreg fun hvS => hn (hS.mpr hvS)), fun hy => hA.2 (hpole (hS.mp hy))⟩
 
-#print axioms solution

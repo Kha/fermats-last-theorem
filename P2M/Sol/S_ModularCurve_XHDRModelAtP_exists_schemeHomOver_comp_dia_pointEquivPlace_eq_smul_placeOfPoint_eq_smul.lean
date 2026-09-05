@@ -110,4 +110,3 @@ theorem solution
       (uκ ≫ XHDRLevel.fibreMap (overOfIso (𝔛.dia d) (𝔛.dia_over d)) ((IsLocalRing.residue ↥A).comp ρ)).base _
     rw [Scheme.Hom.comp_apply, Scheme.Hom.comp_apply, hinv, hPpt, hkeyP]
 
-#print axioms solution

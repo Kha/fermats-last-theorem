@@ -108,4 +108,3 @@ theorem solution
     beta_reduce
     rw [map_mul, map_mul, hU k hk, mul_one, hW' k hk g]
 
-#print axioms solution

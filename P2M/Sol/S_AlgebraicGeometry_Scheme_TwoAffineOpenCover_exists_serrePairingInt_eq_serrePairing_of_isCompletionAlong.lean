@@ -158,4 +158,3 @@ theorem solution
   refine ⟨hne01, hW, hgerm, e1, he1, eΩ, hne0, heΩ, fun ω x => ?_⟩
   exact TwoChartCech.Cover.serrePairingInt_eq_serrePairing hRT hW (𝒱.cover c) Λ hv ψ hgerm e1 he1 eΩ p hp hres ω x
 
-#print axioms solution

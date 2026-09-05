@@ -778,4 +778,3 @@ theorem solution {N q : ℕ} [NeZero N] [NeZero q] {A : Type} [AddCommGroup A] [
   show _ = _ + _ - φ (Additive.ofMul (iotaDeg N (N * q) ⊤ ⊤ q hq γ'))
   abel
 
-#print axioms solution

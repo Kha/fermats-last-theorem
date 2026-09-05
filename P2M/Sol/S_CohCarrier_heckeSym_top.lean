@@ -413,4 +413,3 @@ theorem solution (M q : ℕ) [NeZero M] [NeZero q] (hq : q.Prime) (hqM : ¬ q �
   rw [hperm]
   abel
 
-#print axioms solution

@@ -788,4 +788,3 @@ theorem solution
       obtain ⟨hW', V, hle⟩ := hW'
       exact local_affine x i₁ i₂ p₁ p₂ h hcover hnode hinter hcr W' hW' V hle) W
 
-#print axioms solution

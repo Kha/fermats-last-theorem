@@ -206,4 +206,3 @@ theorem solution {K : Type*} [Field K] (p : ℕ) [Fact p.Prime] (ζ : Kˣ)
         ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qTwist (ζ ^ b) (jqModC K))) :=
   ModularCurve.StarBank.press p ζ hζ hR
 
-#print axioms solution

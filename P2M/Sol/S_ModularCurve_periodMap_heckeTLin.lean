@@ -932,4 +932,3 @@ theorem solution {N : ℕ} {ℓ : ℕ} (hℓ : ℓ.Prime) (hℓN : ¬ ℓ ∣ N)
     ← CuspForm.coe_heckeTLin_apply 2 hℓ hℓN f]
   exact hF'f τ
 
-#print axioms solution

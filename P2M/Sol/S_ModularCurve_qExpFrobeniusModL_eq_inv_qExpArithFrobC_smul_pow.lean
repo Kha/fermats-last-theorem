@@ -23,4 +23,3 @@ theorem solution
       (((ModularCurve.qExpArithFrobC p K Γ)⁻¹ • f : ModularCurve.qExpFunctionFieldC K Γ) : LaurentSeries K),
     ModularCurve.coeffSemilinearAut.coeffMap_qExpand, ← ModularCurve.coe_qExpArithFrobC_smul, smul_inv_smul]
 
-#print axioms solution

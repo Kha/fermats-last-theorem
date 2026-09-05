@@ -187,4 +187,3 @@ theorem solution
     {q : ℕ} (h : ρ.IsUnramifiedAt q) : (ρ.baseChangeAlong φ hφ).IsUnramifiedAt q :=
   GaloisRepAdic.LCSol.isUnramifiedAt_baseChangeAlong φ hφ ρ h
 
-#print axioms solution

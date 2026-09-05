@@ -582,4 +582,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_jqN_
 theorem solution (S : Finset ℕ) (hS : ∀ q ∈ S, q.Prime) (p : ℕ) [hp : Fact (Nat.Prime p)] (hpS : p ∉ S) : jqN (p * p) ∉ IntermediateField.adjoin ℚ (insert jq (insert (jqN p) {x : LaurentSeries ℚ | ∃ q ∈ S, ∃ _ : NeZero q, x = jqN q})) :=
   ModularCurve.jqN_sq_not_mem_adjoin S hS p hpS
 
-#print axioms solution

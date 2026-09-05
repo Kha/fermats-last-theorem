@@ -108,4 +108,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
     ring
   rw [hLHS, hRHS]
 
-#print axioms solution

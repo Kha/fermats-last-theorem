@@ -513,4 +513,3 @@ theorem solution
   refine ⟨a, ha1, ha2, ?_⟩
   rw [← hx, div_mul_cancel₀ _ hΨ]
 
-#print axioms solution

@@ -362,4 +362,3 @@ theorem solution
     hRT hRT' φα' φβ' hφα hφβ htrα hsepβ hfibα hfibβ hW' hW'
     (eΩ (fq.kaehlerH0map ω)) hωα hωβα _ x' hx'
 
-#print axioms solution

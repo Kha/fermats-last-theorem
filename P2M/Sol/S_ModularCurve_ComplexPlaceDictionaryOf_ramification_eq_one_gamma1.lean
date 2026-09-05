@@ -445,4 +445,3 @@ theorem solution
     have h1 : (D.ramification τ : ℤ) = 1 := Int.eq_one_of_mul_eq_one_right (by positivity) hkey
     exact_mod_cast h1
 
-#print axioms solution

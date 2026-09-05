@@ -657,4 +657,3 @@ theorem solution
   exact LT.LatticeTree.LatticeFlag.nonempty_twistedFixedVertexSet_or_exists_swap_of_transitive R K ϖ hϖ
     (LT.LatticeTree.exists_act_stdVertex_eq R K) σ δ m hm h
 
-#print axioms solution

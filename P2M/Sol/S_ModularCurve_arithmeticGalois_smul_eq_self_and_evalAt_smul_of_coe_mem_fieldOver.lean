@@ -75,4 +75,3 @@ theorem solution
       rw [dif_neg hmem]
     rw [h1, h2, map_zero]
 
-#print axioms solution

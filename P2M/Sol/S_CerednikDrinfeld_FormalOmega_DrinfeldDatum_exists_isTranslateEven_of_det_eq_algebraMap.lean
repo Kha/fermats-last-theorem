@@ -265,4 +265,3 @@ theorem solution
     ∃ Q' : DrinfeldDatum (K := K) π B, Q.IsTranslateEven g c Q' :=
   ⟨ReduceTE.evenTranslate Q (scalarGL c * g⁻¹) e hdet, ⟨ReduceTE.evenWitness Q g c e hdet⟩⟩
 
-#print axioms solution

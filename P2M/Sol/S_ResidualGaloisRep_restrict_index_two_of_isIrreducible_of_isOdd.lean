@@ -1112,4 +1112,3 @@ theorem solution {p : ℕ} [Fact p.Prime] (hp2 : p ≠ 2) (ρ : ResidualGaloisRe
   ResidualGaloisRep.isIrreducible_restrict_index_two hp2 ρ hirr hodd hnoext hq hcyc hp_local h3
     K H₀ hH₀ ℓ hℓ
 
-#print axioms solution

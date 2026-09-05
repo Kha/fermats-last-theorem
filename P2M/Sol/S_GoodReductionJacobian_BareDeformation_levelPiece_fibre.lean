@@ -190,4 +190,3 @@ theorem solution
   exact E163LVf.main B B₀ hπ E₀ D W hW k sk₀ hNk (geomPoint k sk) (by
     rw [hsk, geomPoint, geomPoint, CommRingCat.ofHom_comp, Spec.map_comp])
 
-#print axioms solution

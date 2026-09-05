@@ -30,4 +30,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] {n : ℕ} (hn :
   show v.ord f = (n : ℤ) * D0 v
   rw [← hDf v, ← hsmul, Finsupp.smul_apply, smul_eq_mul]
 
-#print axioms solution

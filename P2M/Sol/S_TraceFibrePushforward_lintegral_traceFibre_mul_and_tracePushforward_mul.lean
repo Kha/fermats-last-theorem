@@ -304,4 +304,3 @@ theorem solution
           tracePushforward K L F ((a : AdeleRing (𝓞 K) K) * r)) :=
   AdelicTracePushforward.lintegral_traceFibre_mul_and_tracePushforward_mul K L a
 
-#print axioms solution

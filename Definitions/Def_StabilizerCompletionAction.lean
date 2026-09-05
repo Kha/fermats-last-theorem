@@ -77,11 +77,3 @@ set_option pp.universes true in
 #check @AdicCompletion.stabilizerMulSemiringAction
 set_option pp.universes true in
 #check @AdicCompletion.stabilizerToCompletionAut
-#print axioms AdicCompletion.smul_mem_of_mem_stabilizer
-#print axioms AdicCompletion.map_toAlgEquiv_le_of_mem_stabilizer
-#print axioms AdicCompletion.toAlgEquiv_symm
-#print axioms AdicCompletion.stabAut
-#print axioms AdicCompletion.evalₐ_stabAut
-#print axioms AdicCompletion.stabilizerToCompletionAut
-#print axioms AdicCompletion.stabilizerMulSemiringAction
-#print axioms AdicCompletion.stabilizerToCompletionAut_of

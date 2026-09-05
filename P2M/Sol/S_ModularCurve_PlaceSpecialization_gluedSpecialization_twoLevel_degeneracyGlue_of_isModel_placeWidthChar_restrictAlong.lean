@@ -1380,4 +1380,3 @@ theorem solution
     subst hφeq
     rfl
 
-#print axioms solution

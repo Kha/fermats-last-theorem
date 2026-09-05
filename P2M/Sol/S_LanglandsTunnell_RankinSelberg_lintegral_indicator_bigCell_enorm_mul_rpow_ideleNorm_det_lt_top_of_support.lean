@@ -236,4 +236,3 @@ theorem solution
         lintegral_indicator_const_le _ _
     _ < ⊤ := ENNReal.mul_lt_top (ENNReal.mul_lt_top ENNReal.ofReal_lt_top ENNReal.ofReal_lt_top) hfin
 
-#print axioms solution

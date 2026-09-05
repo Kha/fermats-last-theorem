@@ -4188,4 +4188,3 @@ theorem solution
         exact SiegelTranslateIntegrability.le_ceil_of_cast_le (SiegelTranslateIntegrability.weight_nonneg _ s)
           (hC₃ y hy s hs w hw))
 
-#print axioms solution

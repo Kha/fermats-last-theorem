@@ -94,21 +94,6 @@ theorem artinSymbol_prime {𝔣 : Ideal (𝓞 K)} {v : HeightOneSpectrum (𝓞 K
 
 end Symbol
 
-#print axioms LanglandsTunnell.P2.Artin.isGaloisGroup_ringOfIntegers
-#print axioms LanglandsTunnell.P2.Artin.algebraMap_ringOfIntegers_injective
-#print axioms LanglandsTunnell.P2.Artin.exists_prime_over
-#print axioms LanglandsTunnell.P2.Artin.primeAbove
-#print axioms LanglandsTunnell.P2.Artin.primeAbove_isMaximal
-#print axioms LanglandsTunnell.P2.Artin.under_primeAbove
-#print axioms LanglandsTunnell.P2.Artin.primeAbove_liesOver
-#print axioms LanglandsTunnell.P2.Artin.ne_bot_of_under_eq
-#print axioms LanglandsTunnell.P2.Artin.primeAbove_ne_bot
-#print axioms LanglandsTunnell.P2.Artin.primeAbove_finite
-#print axioms LanglandsTunnell.P2.Artin.finite_quotient_of_under_eq
-#print axioms LanglandsTunnell.P2.Artin.artinFrob
-#print axioms LanglandsTunnell.P2.Artin.isArithFrobAt_artinFrob
-#print axioms LanglandsTunnell.P2.Artin.artinSymbol
-#print axioms LanglandsTunnell.P2.Artin.artinSymbol_prime
 
 end LanglandsTunnell.P2.Artin
 

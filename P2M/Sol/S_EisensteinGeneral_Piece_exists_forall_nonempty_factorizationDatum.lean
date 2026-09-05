@@ -887,4 +887,3 @@ theorem solution
 
 end PieceLayer
 
-#print axioms solution

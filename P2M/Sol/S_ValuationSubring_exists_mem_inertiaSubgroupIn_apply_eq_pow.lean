@@ -1046,4 +1046,3 @@ theorem solution (A : ValuationSubring (AlgebraicClosure ℚ)) {p : ℕ} (hp : p
     ∃ σ ∈ A.inertiaSubgroupIn ℚ, ∀ μ : AlgebraicClosure ℚ, μ ^ p = 1 → σ μ = μ ^ (a : ZMod p).val :=
   A.exists_mem_inertiaSubgroupIn_cyclotomic_character hp hA a
 
-#print axioms solution

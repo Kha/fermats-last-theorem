@@ -124,4 +124,3 @@ theorem solution
     (fun hΔ' => act_pair_eq_one 𝒢 h𝒢O 𝒯 h𝒯 C x.level.2.2 hΔx hxP hxQ hΔ')
   rw [hx'c, hcurve', hcz, hxc]
 
-#print axioms solution

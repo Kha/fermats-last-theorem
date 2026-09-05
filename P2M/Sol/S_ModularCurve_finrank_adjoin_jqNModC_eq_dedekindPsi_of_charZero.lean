@@ -515,4 +515,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_finrank_adjoin_jqNModC_eq_de
 theorem solution {K : Type*} [Field K] [CharZero K] (d : ℕ) [NeZero d] : Module.finrank (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (IntermediateField.adjoin (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) ({jqNModC K d} : Set (LaurentSeries K))) = dedekindPsi d :=
   ModularCurve.finrank_adjoin_jqNModC_eq_dedekindPsi_of_charZero d
 
-#print axioms solution

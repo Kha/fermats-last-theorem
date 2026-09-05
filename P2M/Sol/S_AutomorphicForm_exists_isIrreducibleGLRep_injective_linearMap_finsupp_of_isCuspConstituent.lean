@@ -2739,4 +2739,3 @@ theorem solution
     (fun x ψ hψ => toFn_smul_mem_of_isCuspConstituent c u d₁ d₂ T ξ V hV q x ψ hψ) W₀ hW₀ hst hirr κ θ hθ hθV
     hspan
 
-#print axioms solution

@@ -264,4 +264,3 @@ open PowerSeries HahnSeries _root_.ModularCurve _root_.P2MW.S_ModularCurve_c6_ta
 theorem solution : tatePowerSeries.c₆ = -eisenstein6 :=
   ModularCurve.c6_tatePowerSeries
 
-#print axioms solution

@@ -663,4 +663,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hp2 : p �
     · exact B6H2.ordLine_of_dvd W p hΔ hW hpΔ A hA
     · exact B6H2.ordLine_of_good W p hp2 hΔ hpΔ hord A hA
 
-#print axioms solution

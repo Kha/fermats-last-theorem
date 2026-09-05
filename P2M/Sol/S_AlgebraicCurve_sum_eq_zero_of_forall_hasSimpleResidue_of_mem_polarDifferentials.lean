@@ -139,4 +139,3 @@ theorem solution
   haveI : ∀ v : AlgebraicCurve.Place K F, v.DCoordGenerates := AlgebraicCurve.dCoordGenerates_of_isCurveOver
   exact AlgebraicCurve.ResThm.main S ω hω a ha
 
-#print axioms solution

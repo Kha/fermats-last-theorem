@@ -178,4 +178,3 @@ theorem solution
   have hF := congrArg (fun t : v.toValuationSubring => (t : F)) hsol
   simpa [hyO, hzO, hy0, hz0, v.coe_algebraMap] using hF
 
-#print axioms solution

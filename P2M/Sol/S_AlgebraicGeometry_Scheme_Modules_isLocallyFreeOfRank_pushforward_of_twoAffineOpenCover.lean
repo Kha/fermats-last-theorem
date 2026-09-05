@@ -243,4 +243,3 @@ theorem solution
     Scheme.Modules.IsLocallyFreeOfRank n ((Scheme.Modules.pushforward π).obj F) :=
   isLocallyFreeOfRank_pushforward_of_twoAffineOpenCover_aux π 𝒱 F htriv hfin n hfib
 
-#print axioms solution

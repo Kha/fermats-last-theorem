@@ -148,4 +148,3 @@ theorem solution (M : ℕ) [NeZero M] (H : Subgroup (ZMod M)ˣ) :
         rw [map_one]
         rfl)) z
 
-#print axioms solution

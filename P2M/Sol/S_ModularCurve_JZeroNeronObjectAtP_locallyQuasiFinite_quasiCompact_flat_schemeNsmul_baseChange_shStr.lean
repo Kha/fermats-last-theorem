@@ -155,4 +155,3 @@ theorem solution
     MorphismProperty.of_isPullback (P := @QuasiCompact) sq.flip hqc,
     MorphismProperty.of_isPullback (P := @Flat) sq.flip hflat⟩
 
-#print axioms solution

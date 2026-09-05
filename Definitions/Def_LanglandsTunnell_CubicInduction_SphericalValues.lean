@@ -389,10 +389,6 @@ end LanglandsTunnell.CubicInduction.SphericalValues
 
 end
 
-#print axioms LanglandsTunnell.CubicInduction.SphericalValues.pieri_first
-#print axioms LanglandsTunnell.CubicInduction.SphericalValues.pieri_second
-#print axioms LanglandsTunnell.CubicInduction.SphericalValues.sphericalValue_natCast_zero_zero
-#print axioms LanglandsTunnell.CubicInduction.SphericalValues.sphericalValue_natCast_succ_zero
 #check @LanglandsTunnell.CubicInduction.SphericalValues.sphericalValue
 #check @LanglandsTunnell.CubicInduction.SphericalValues.schurTwoRow
 #check @LanglandsTunnell.CubicInduction.SphericalValues.pieri_first

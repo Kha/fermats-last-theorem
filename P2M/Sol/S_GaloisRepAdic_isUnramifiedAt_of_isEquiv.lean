@@ -187,4 +187,3 @@ theorem solution
     (h : ρ₁.IsUnramifiedAt q) : ρ₂.IsUnramifiedAt q :=
   GaloisRepAdic.LCSol.isUnramifiedAt_of_isEquiv e h
 
-#print axioms solution

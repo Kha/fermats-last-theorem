@@ -541,4 +541,3 @@ theorem solution {K : Type*} [Field K]
     jqNModC K M ∈ modularFunctionFieldC K (M * p) :=
   ModularCurve.jqNModC_mem_modularFunctionFieldC_mul_prime M p ζ hζ hall
 
-#print axioms solution

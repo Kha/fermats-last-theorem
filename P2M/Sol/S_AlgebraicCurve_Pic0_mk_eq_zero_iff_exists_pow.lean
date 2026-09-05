@@ -79,4 +79,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] [IsAlgClosed K]
   ⟨exists_pow_of_mk_eq_zero hconst hn hf hfD,
     fun ⟨h, _, hfh⟩ => mk_eq_zero_of_eq_pow hn hf hfD h hfh⟩
 
-#print axioms solution

@@ -209,4 +209,3 @@ theorem solution
       rw [coeffMap_coeff, hy0 _ hlt, map_zero]
     exact hne (HahnSeries.coeff_order_eq_zero.mp hz)
 
-#print axioms solution

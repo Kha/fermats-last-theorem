@@ -523,4 +523,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_relf
 theorem solution (S : Finset ℕ) (hS : ∀ p ∈ S, p.Prime) : IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin ℚ (insert jq {x : LaurentSeries ℚ | ∃ p ∈ S, ∃ _ : NeZero p, x = jqN p})) = ∏ p ∈ S, (p + 1) :=
   ModularCurve.relfinrank_adjoin_primes S hS
 
-#print axioms solution

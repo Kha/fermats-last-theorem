@@ -109,4 +109,3 @@ theorem solution
     have h2 : x₀ = Spec.map (CommRingCat.ofHom (IsLocalRing.residue ↥A)) ≫ s := hs₂.symm
     rw [h1, h2, Category.assoc, Category.assoc]
 
-#print axioms solution

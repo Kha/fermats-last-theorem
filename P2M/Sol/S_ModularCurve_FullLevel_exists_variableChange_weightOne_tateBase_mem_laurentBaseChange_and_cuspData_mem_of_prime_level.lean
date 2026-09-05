@@ -893,4 +893,3 @@ theorem solution
       exact IsModular.div_mem (k := 12) (((hDm.pow 3).mul (hYv.smul _)).cast (by norm_num))
         ((hYsq.pow 2).cast (by norm_num)) (pow_ne_zero _ hY2)
 
-#print axioms solution

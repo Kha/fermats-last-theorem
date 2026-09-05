@@ -6795,4 +6795,3 @@ theorem solution
   intro αm hαm μ ν _hμ _hν _hμic _hνic _hμc _hνc τμ τν _hτμ _hτν mμ mν _hmμ _hmν ψf _hψf _hψfK _hψff _hψfjc _hψfhol _hψfKu
   exact NormalisedIntertwiningTail.exists_normalisedIntertwining K hαm μ ν _hμ _hν _hμic _hνic _hμc _hνc τμ τν _hτμ _hτν mμ mν _hmμ _hmν ψf _hψf _hψfK _hψff _hψfjc _hψfhol _hψfKu
 
-#print axioms solution

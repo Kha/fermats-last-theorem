@@ -447,22 +447,4 @@ open AutomorphicForm
 #check @IsArithGenuineCuspRealizable
 #check @IsArithGenuineCuspRealizableVia
 #check @genuineCuspNotionOf
-#print axioms AutomorphicForm.finAssocFracIdeal_ne_zero
-#print axioms AutomorphicForm.count_finAssocFracIdeal
-#print axioms AutomorphicForm.finAssocFracIdeal_mul
-#print axioms AutomorphicForm.finIdeleExponentAt_localUnit_uniformizer
-#print axioms AutomorphicForm.contentHomFin_surjective
-#print axioms AutomorphicForm.classRepFinIdele_spec
-#print axioms AutomorphicForm.glArch_finIdeleDiag
-#print axioms AutomorphicForm.injective_finIdeleDiag
-#print axioms AutomorphicForm.glArch_classRepEmbedding
-#print axioms AutomorphicForm.classRepEmbedding_one
-#print axioms AutomorphicForm.productionPinsGeneral_eq_compact_of_odd
-#print axioms AutomorphicForm.IsGenuineCuspRealizable.isSmoothCuspRealizable
-#print axioms AutomorphicForm.classRepSiegelSet_eq_of_odd
-#print axioms AutomorphicForm.card_classRepTranslates
-#print axioms AutomorphicForm.one_mem_classRepTranslates
-#print axioms AutomorphicForm.classRepTranslates_eq_singleton_one_of_odd
-#print axioms AutomorphicForm.not_ae_zero_restrict_of_continuous_of_mem_interior
-#print axioms AutomorphicForm.productionPinsGeneral_μ_D_pos_lt_top
 end Battery

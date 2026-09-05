@@ -207,4 +207,3 @@ theorem solution
         ⟨_, hK.pow_mem⟩ rfl _ hnss
     exact (congrArg ((q - 1) / 2 / ·) hgcd).trans (Nat.div_div_self hdvd (by omega))
 
-#print axioms solution

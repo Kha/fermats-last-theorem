@@ -152,4 +152,3 @@ example : ∀ {R S : Type*} [CommRing R] [IsDomain R] [CommRing S] [IsDomain S]
     (P : Ideal S) (p : Ideal R) [P.LiesOver p] [P.IsMaximal] [p.IsMaximal],
     Ideal.relNorm R P = p ^ p.inertiaDeg' P := @solution
 
-#print axioms solution

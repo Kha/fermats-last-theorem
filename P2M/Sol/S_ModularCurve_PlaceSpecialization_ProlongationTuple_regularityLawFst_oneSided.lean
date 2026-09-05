@@ -351,4 +351,3 @@ theorem solution {q : ℕ} [Fact q.Prime]
     (fun V hV => ord_modularUnit_nonneg_of_isAffineGeomPlace_reduceFst P U hU V hV)
     (fun v _ haff hvW => ord_residueFst_eq_zero_of_coe_eq_modularUnitSeries_of_notMem_ssPlaces P R U hU hU₁ v haff (fun hss => hvW ((hW v).mpr hss)))
 
-#print axioms solution

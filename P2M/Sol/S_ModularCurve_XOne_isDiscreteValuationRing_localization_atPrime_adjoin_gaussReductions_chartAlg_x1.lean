@@ -1311,7 +1311,6 @@ theorem solution
       (AlgebraicCurve.TwoChartIntegralModel.ιInf A (↥K') j') (AlgebraicCurve.TwoChartIntegralModel.ιInf_toBase A (↥K') j')
       hsm hint _ hfinI htrI 𝔪
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_ModularCurve_XOne_isDiscreteValuationRing_localization_atPrime_adjoin_gaussReductions_chartAlg_x1.ModularCurve.GaussRedCore.Setup P2MW.S_ModularCurve_XOne_isDiscreteValuationRing_localization_atPrime_adjoin_gaussReductions_chartAlg_x1.ModularCurve P2MW.S_ModularCurve_XOne_isDiscreteValuationRing_localization_atPrime_adjoin_gaussReductions_chartAlg_x1.ModularCurve.GaussRedCore"

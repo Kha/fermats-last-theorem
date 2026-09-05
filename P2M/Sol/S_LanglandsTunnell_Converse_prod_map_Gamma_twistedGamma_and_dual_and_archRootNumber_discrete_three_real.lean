@@ -95,4 +95,3 @@ theorem solution
     simp only [archOfParamR, RealArchParam.twist, RealArchParam.epsilonFactor_discrete, RealArchParam.centralSign,
       neg_one_pow_val_natCast_add_one]
 
-#print axioms solution

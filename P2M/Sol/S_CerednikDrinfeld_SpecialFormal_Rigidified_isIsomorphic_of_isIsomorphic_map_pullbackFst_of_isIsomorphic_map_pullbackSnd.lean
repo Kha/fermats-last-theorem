@@ -291,4 +291,3 @@ theorem solution
     Series.comp_assoc _ _ _ (ccA _) ccW, Series.comp_assoc _ _ _ (ccA _) hρ₂]
   exact R
 
-#print axioms solution

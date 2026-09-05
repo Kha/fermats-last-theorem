@@ -70,4 +70,3 @@ theorem solution
       exact ss_aff _ (𝔛.nodeEquiv A hA ρ hρ n).2
     · exact absurd rfl hji
 
-#print axioms solution

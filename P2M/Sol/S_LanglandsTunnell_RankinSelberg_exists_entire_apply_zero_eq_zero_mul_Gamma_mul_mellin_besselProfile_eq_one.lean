@@ -238,4 +238,3 @@ theorem solution
       show (1 - s' : ℂ) = -(s' - 1) by ring, Complex.cpow_neg]
     field_simp
 
-#print axioms solution

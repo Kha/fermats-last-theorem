@@ -22,4 +22,3 @@ theorem solution
     (ModularCurve.qExpFrobeniusModL_isIntegral K Γ p)
     (ModularCurve.qExpFrobeniusModL_eq_inv_qExpArithFrobC_smul_pow p K Γ) w
 
-#print axioms solution

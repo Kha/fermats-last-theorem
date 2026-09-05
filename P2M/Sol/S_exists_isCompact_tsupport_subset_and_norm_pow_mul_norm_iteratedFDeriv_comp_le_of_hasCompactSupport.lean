@@ -128,8 +128,6 @@ theorem gate_empty {f : E' → V} (hf : ContDiff ℝ (⊤ : ℕ∞) f) (hsupp : 
 
 end M4aP3B.Rows.UniformSeminorm
 
-#print axioms M4aP3B.Rows.UniformSeminorm.exists_isCompact_tsupport_subset_and_norm_pow_mul_norm_iteratedFDeriv_comp_le_of_hasCompactSupport_impl
-#print axioms M4aP3B.Rows.UniformSeminorm.gate_empty
 
 theorem solution
     {E E' V P : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]

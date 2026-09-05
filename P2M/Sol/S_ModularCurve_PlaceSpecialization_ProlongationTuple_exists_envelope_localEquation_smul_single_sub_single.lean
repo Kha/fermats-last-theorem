@@ -2110,4 +2110,3 @@ theorem solution
                 * (R.residue₂ ⟨t * g, hg₂⟩ : ↥(modularFunctionFieldC (ResidueField A) N))) l₂ := by
   exact NodeEnvelope.main N q hq hqN A hA
 
-#print axioms solution

@@ -145,4 +145,3 @@ theorem solution {F : Type*} [Field F] [DecidableEq F] (W : WeierstrassCurve F)
     W.fullKernelQuotient Q N = W.veluQuotient (W.oddOrderSummingSet Q ((N - 1) / 2)) :=
   WeierstrassCurve.fullKernelQuotient_eq_veluQuotient_of_odd_aux W Q hN hQ
 
-#print axioms solution

@@ -315,4 +315,3 @@ theorem solution (N : ℕ) [NeZero N] :
       (CongruenceSubgroup.Gamma0 N)).subgroupOf 𝒮ℒ) ≤ ModularCurve.dedekindPsi N :=
   ModularCurve.card_quotient_gamma0_le_dedekindPsi N
 
-#print axioms solution

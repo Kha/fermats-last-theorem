@@ -88,4 +88,3 @@ theorem solution
   ext f
   rw [EvalNilpAux.formula φ' t hφ' N hN f, EvalNilpAux.formula φ t hφX N hN f]
 
-#print axioms solution

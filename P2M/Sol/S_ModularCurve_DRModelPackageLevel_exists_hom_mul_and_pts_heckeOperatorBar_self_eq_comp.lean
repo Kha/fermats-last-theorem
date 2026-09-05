@@ -296,4 +296,3 @@ theorem solution
       exact eq_mul_inv_of_mul_eq hmul
     exact congrArg Subtype.val key
 
-#print axioms solution

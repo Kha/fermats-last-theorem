@@ -142,4 +142,3 @@ theorem solution
   refine ⟨h1.trans hAB', ?_⟩
   rw [hβα, AlgebraicCurve.finrankAlong_comp, h1, hAB', hθ1, mul_one]
 
-#print axioms solution

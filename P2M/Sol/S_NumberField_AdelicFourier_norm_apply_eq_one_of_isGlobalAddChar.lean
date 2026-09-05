@@ -72,8 +72,6 @@ theorem exists_compAddChar_eq_of_isGlobalAddChar_impl {ψ : AddChar 𝔸 ℂ} (h
     ∃ e : AddChar 𝔸 Circle, Circle.coeHom.compAddChar e = ψ :=
   ⟨toCircleAddChar F hψ, by ext x; rfl⟩
 
-#print axioms norm_apply_eq_one_of_isGlobalAddChar_impl
-#print axioms exists_compAddChar_eq_of_isGlobalAddChar_impl
 
 example : ∀ {ψ : AddChar 𝔸 ℂ} (_ : IsGlobalAddChar F ψ) (x : 𝔸), ‖ψ x‖ = 1 :=
   fun hψ x => norm_apply_eq_one_of_isGlobalAddChar_impl F hψ x

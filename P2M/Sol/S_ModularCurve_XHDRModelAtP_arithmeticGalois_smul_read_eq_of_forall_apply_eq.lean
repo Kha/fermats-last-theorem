@@ -330,4 +330,3 @@ theorem solution
       key_aux p M H hpM hpM2 hHp hj 𝔛 O ρO jO hjO U prJ g hprJ₁ hprJ₂ _
         (reg_aux p M H hpM hpM2 hHp hj 𝔛 O ρO jO hjO U prJ hgen g) σ hσ hψ y hy)
 
-#print axioms solution

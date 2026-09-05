@@ -131,4 +131,3 @@ theorem solution {F : Type*} [Field F] [DecidableEq F]
       ∃ g : W.toAffine.Point, addOrderOf g = p ∧ G = AddSubgroup.zmultiples g} = p + 1 :=
   WeierstrassCurve.natCard_cycSub_eq_prime_add_one W p hp h2
 
-#print axioms solution

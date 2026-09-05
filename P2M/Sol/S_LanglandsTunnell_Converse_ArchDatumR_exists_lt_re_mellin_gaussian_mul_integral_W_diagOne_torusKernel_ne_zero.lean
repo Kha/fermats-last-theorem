@@ -633,4 +633,3 @@ theorem solution
   rw [hκeq] at h1
   exact hmx ((mul_eq_zero.1 h1).resolve_left hκ)
 
-#print axioms solution

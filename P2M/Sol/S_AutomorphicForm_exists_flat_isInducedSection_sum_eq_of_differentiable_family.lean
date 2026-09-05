@@ -261,4 +261,3 @@ theorem solution
       exact hall s ⟨k, hk⟩)
   exact congrFun hsec g
 
-#print axioms solution

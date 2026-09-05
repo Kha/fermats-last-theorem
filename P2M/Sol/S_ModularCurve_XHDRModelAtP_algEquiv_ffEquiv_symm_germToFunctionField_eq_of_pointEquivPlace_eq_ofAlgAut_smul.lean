@@ -271,4 +271,3 @@ theorem solution
   have e := congrFun (congrArg DFunLike.coe (CommRingCat.hom_ext_iff.mp key)) g
   simpa only [CommRingCat.hom_comp, RingHom.coe_comp, Function.comp_apply] using e
 
-#print axioms solution

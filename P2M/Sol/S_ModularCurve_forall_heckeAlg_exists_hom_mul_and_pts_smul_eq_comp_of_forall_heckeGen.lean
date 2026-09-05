@@ -190,4 +190,3 @@ theorem solution
   refine ⟨φ, fun s x y => ?_, fun x => congrArg Subtype.val (hφx x)⟩
   exact Subtype.ext (by have h__af := congrArg Subtype.val (hφ s x y); simp only [NeronModelInfra.schemeHomOverComp_coe, compPt_coe] at h__af; exact h__af)
 
-#print axioms solution

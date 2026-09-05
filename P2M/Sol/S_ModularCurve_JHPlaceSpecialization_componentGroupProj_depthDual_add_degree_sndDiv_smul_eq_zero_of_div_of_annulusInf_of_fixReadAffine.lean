@@ -1304,4 +1304,3 @@ theorem solution
         (Divisor.degree (Psp.sndDiv α (θ.toAlgHom.comp α) hα hβ δ D))
         (DepthPrincipalH.bookB p M H hpM hpM2 hHp A hA θ α hα hβ hα_coe pb hpb δ hδ SS hSS Psp Rpd hFix hTD hmodel hO hreg hnv hθgal hβ_coe hFixFin hLFst hLSnd hUnit hcusp horientInf horient0 e he hAnn hFixReadFst hFixReadSnd hOSFst hOSSnd hOSInf hOSZero depth hdepth f hf D hDf hsupp s₀ c₂ h₂ hu₂)
 
-#print axioms solution

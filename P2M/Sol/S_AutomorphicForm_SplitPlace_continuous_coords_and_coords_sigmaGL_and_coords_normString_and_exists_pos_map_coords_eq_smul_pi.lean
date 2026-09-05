@@ -211,4 +211,3 @@ theorem solution
     (AutomorphicForm.SplitPlace.coords A σ ι hdeg hσ) hc1 hc2
   exact ⟨hc1, hc2, hshift, hdiag, hnorm, hnorm0, c, pos_iff_ne_zero.mpr hc0, hc⟩
 
-#print axioms solution

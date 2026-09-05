@@ -204,4 +204,3 @@ theorem solution
       ShiftReal.rightConv_smul_test]
   rw [lhs, rhs, neg_one_smul, sub_eq_add_neg]
 
-#print axioms solution

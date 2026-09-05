@@ -499,4 +499,3 @@ theorem solution.{u, v} {K : Type u} {F : Type v} [Field K] [Field F] [Algebra K
       AlgebraicCurve.DivisorialWeilPairingData.exists_pair_ne_one_of_ne_zero_of_kummer hn e hdiv
         (fun _ hf hnp => AlgebraicCurve.KummerCover.exists_root_aut_eq_const_mul hn hf hnp) x hx0
 
-#print axioms solution

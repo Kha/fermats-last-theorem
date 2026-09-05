@@ -1293,4 +1293,3 @@ theorem solution
   exact forall_ideal_of_eq ((congrArg (Algebra.adjoin k) hset).trans (D.adjoin_red_eq_map_range B hB))
     (fun 𝔪 _ => isDiscreteValuationRing_localization_map_range_θ D B hB hnB hnf 𝔪)
 
-#print axioms solution

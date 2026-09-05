@@ -41,4 +41,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_finrank_adjoin_jqN_eq.Modula
 theorem solution {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (h : PhiIrreducible data) : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N :=
   ModularCurve.finrank_adjoin_jqN_eq data h
 
-#print axioms solution

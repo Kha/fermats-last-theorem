@@ -783,4 +783,3 @@ theorem solution (N : ℕ) [NeZero N] (n : ℕ) (p : ℕ) [Fact p.Prime] (hp : p
     ∃ y' : HeckeEis.coeffH1par ((HeckeEis.binaryFormRepSL ℤ n).comp (CongruenceSubgroup.Gamma0 N).subtype), y = (p : ℤ) • y' :=
   HeckeEis.ModPAux.main N n p hpN hn K Φ hΦ y hy
 
-#print axioms solution

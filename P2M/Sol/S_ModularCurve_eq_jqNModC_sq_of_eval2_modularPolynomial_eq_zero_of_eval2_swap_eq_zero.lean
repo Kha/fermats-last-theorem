@@ -288,4 +288,3 @@ theorem solution
     y = ModularCurve.jqNModC κ (ℓ * ℓ) :=
   ModularCurve.CommonRoot.main7 κ N ℓ hN hℓ dataN dataℓ y h₁ h₂
 
-#print axioms solution

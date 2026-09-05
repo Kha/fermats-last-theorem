@@ -636,4 +636,3 @@ theorem solution
     exact StalkBC.minimal ((hU.primeIdealOf ⟨zz, hzU⟩).asIdeal.primeCompl.map
       (Algebra.TensorProduct.includeRight : Γ(X, U) →ₐ[R] k ⊗[R] Γ(X, U))) 𝔓₀ hmin₀ 𝔮 hcomapq
 
-#print axioms solution

@@ -373,4 +373,3 @@ theorem solution
     simp only [LinearMap.smul_apply, smul_eq_mul, hΛ_apply _ _ hvh]
     rw [mul_assoc (((ν (Ω : Set (GL (Fin 2) (p.adicCompletion ℚ)))).toReal : ℂ)⁻¹), mul_inv_cancel_left₀ hcΩ']
 
-#print axioms solution

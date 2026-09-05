@@ -103,4 +103,3 @@ theorem solution
   rw [hsplit, Pic0.mk_add, hPfpr, add_zero]
   exact key _ hD'mem hD'S
 
-#print axioms solution

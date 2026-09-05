@@ -72,4 +72,3 @@ theorem solution
   · rw [AlgebraicCurve.Pic0.coe_degZeroCorrespondence, AlgebraicCurve.Divisor.correspondence_apply]
     exact hoff' v' hv
 
-#print axioms solution

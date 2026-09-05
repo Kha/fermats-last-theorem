@@ -119,4 +119,3 @@ theorem solution (K : Type*) [Field K] [PerfectField K]
   haveI := AlgebraicCurve.RDOCK.essFiniteType_modularFunctionFieldC K N
   exact stichtenothGenusExists_of_isCurveOver (constantsAreBase_modularFunctionFieldC_of_perfectField K N)
 
-#print axioms solution

@@ -50,4 +50,3 @@ theorem solution {M₁ M₂ M₃ d₁ d₂ : ℕ} {H₁ : Subgroup (ZMod M₁)ˣ
         (iotaDeg M₂ M₃ H₂ H₃ d₂ h₂₃ (Additive.toMul γ))))
   rw [SolAux.iotaDeg_comp_impl h₁₂ h₂₃ h₁₃]
 
-#print axioms solution

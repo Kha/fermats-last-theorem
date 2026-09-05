@@ -187,4 +187,3 @@ theorem solution
     {p : ℕ} (h : ρ.IsOrdinaryAt p) : (ρ.baseChangeAlong φ hφ).IsOrdinaryAt p :=
   GaloisRepAdic.LCSol.isOrdinaryAt_baseChangeAlong φ hφ ρ h
 
-#print axioms solution

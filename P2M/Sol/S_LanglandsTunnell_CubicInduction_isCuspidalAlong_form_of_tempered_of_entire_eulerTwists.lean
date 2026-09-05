@@ -11040,4 +11040,3 @@ theorem solution
   exact MaximalParabolics.isCuspidalAlong_of_projectionContradiction ψ S a ω _hω W lam1 lam2 D U gen A e₁ e₂ _he1
     _he2 _htemp _hE hB hBθ (ProjectedEulerData.projectionContradiction D U gen)
 
-#print axioms solution

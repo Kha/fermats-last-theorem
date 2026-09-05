@@ -967,4 +967,3 @@ theorem solution
   rw [hΘ]
   exact heq
 
-#print axioms solution

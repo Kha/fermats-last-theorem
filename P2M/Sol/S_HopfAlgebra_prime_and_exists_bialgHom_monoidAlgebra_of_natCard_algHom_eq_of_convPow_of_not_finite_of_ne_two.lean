@@ -1696,7 +1696,6 @@ theorem MonoidAlgebra.sub_algebraMap_counit_mul_normElem (x : MonoidAlgebra R G)
     (x - algebraMap R (MonoidAlgebra R G) (Coalgebra.counit (R := R) x)) * MonoidAlgebra.normElem R G = 0 := by
   rw [sub_mul, MonoidAlgebra.mul_normElem_eq_counit_smul, ← Algebra.smul_def, sub_self]
 
-#print axioms MonoidAlgebra.normElem_mul_sub_algebraMap_counit
 end NORM
 p2m_reactivate "P2MW.S_HopfAlgebra_prime_and_exists_bialgHom_monoidAlgebra_of_natCard_algHom_eq_of_convPow_of_not_finite_of_ne_two.GaloisRep P2MW.S_HopfAlgebra_prime_and_exists_bialgHom_monoidAlgebra_of_natCard_algHom_eq_of_convPow_of_not_finite_of_ne_two.MonoidAlgebra P2MW.S_HopfAlgebra_prime_and_exists_bialgHom_monoidAlgebra_of_natCard_algHom_eq_of_convPow_of_not_finite_of_ne_two.Algebra.TensorProduct P2MW.S_HopfAlgebra_prime_and_exists_bialgHom_monoidAlgebra_of_natCard_algHom_eq_of_convPow_of_not_finite_of_ne_two.AlgHom"
 

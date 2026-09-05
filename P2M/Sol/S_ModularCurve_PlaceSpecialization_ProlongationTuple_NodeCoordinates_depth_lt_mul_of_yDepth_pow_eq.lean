@@ -137,4 +137,3 @@ theorem solution
       _ < c.yDepth V ^ e' := hlow'
   exact dbd_lt_of_pow_lt_pow hq0 hq1 hqE
 
-#print axioms solution

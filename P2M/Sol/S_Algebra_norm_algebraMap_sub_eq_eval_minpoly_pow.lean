@@ -38,4 +38,3 @@ theorem solution
   rw [← h2, ← Algebra.norm_norm (S := IntermediateField.adjoin K ({x} : Set L)),
     Algebra.norm_algebraMap, map_pow, h1, hn]
 
-#print axioms solution

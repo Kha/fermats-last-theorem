@@ -169,4 +169,3 @@ theorem solution
   · obtain ⟨U, hU, V, hV, hy, e, hstd⟩ := Smooth.exists_isStandardSmooth g (f.base x₀)
     exact (key _ U hU V hV hy e hstd).2
 
-#print axioms solution

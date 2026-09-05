@@ -123,4 +123,3 @@ theorem solution
   rw [e1, e2]
   exact equiv_toLin_comm _ _ _ x
 
-#print axioms solution

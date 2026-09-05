@@ -1916,4 +1916,3 @@ theorem solution
   exact NRU.S1_assembly A X toBase φ hφ ηi ηj hηi hηj N₀ hNi hNj xN yN hxN hyN hx_nu hx_u hy_nu hy_u T hT 𝔭 h𝔭
     S6i S6j layers
 
-#print axioms solution

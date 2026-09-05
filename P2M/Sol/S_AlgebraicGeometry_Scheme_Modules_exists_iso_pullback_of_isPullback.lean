@@ -167,4 +167,3 @@ theorem solution
           ((Scheme.Modules.pullback (Limits.pullback.fst π' s)).obj ((Scheme.Modules.pullback g').obj G))) :=
   exists_iso_pullback_of_isPullback_aux π π' g' j hcart s
 
-#print axioms solution

@@ -111,8 +111,6 @@ end M4aP3B.Rows.DiscreteAdele
 
 end
 
-#print axioms M4aP3B.Rows.DiscreteAdele.finite_setOf_algebraMap_mem_of_isCompact_impl
-#print axioms M4aP3B.Rows.DiscreteAdele.gate_univ_infinite
 
 theorem solution
     (F : Type) [Field F] [NumberField F]

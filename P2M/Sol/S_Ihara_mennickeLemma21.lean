@@ -1271,4 +1271,3 @@ theorem solution (q m : ℕ) [NeZero q] (hmq : Nat.Coprime m q) :
     Ihara.MennickeLemma21 q m hmq :=
   Ihara.mennickeLemma21_impl q m hmq
 
-#print axioms solution

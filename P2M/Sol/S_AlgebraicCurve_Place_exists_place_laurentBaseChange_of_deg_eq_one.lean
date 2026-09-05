@@ -364,4 +364,3 @@ theorem solution {K K' : Type*} [Field K] [Field K'] [Algebra ℚ K] [Algebra �
             w.ord y = s.inf' hs (fun i => v.ord (x i))) :=
   AlgebraicCurve.Place.exists_place_laurentBaseChange_of_deg_eq_one σ F₀ v hv
 
-#print axioms solution

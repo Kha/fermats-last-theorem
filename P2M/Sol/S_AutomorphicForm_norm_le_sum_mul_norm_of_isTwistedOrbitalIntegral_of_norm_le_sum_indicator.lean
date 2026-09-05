@@ -621,4 +621,3 @@ theorem solution
     _ = ∑ i ∈ s, c i * ∫ x, F i x ∂(AutomorphicForm.semiLocalHaar K L v) := h3
     _ = ∑ i ∈ s, c i * ‖J i‖ := Finset.sum_congr rfl fun i hi => by rw [h4 i hi]
 
-#print axioms solution

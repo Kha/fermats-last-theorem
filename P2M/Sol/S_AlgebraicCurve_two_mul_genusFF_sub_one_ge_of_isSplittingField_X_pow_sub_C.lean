@@ -426,4 +426,3 @@ theorem solution
   rw [genus_eq_genusFF_pkg x hx hfin hsep, genus_eq_genusFF_pkg t ht hfint hsept] at hRH
   linarith
 
-#print axioms solution

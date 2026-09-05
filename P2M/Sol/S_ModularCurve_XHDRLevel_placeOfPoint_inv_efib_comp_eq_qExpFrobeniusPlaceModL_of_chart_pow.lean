@@ -85,4 +85,3 @@ theorem solution
   rw [ModularCurve.qExpFrobeniusPlaceModL_eq_qExpArithFrobC_smul, ← hpl]
   congr 1
 
-#print axioms solution

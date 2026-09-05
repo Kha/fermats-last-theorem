@@ -109,4 +109,3 @@ theorem solution (𝒪 : Type) [CommRing 𝒪]
       exact h (isArtinianTestAlgebra_quotient 𝒪 hloc hres m) (Ideal.Quotient.mkₐ 𝒪 _)
         (IsLocalHom.of_surjective _ Ideal.Quotient.mk_surjective) (Ideal.Quotient.mkₐ_surjective 𝒪 _)
 
-#print axioms solution

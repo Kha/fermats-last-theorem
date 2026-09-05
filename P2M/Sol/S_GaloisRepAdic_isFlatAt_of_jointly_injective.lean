@@ -178,4 +178,3 @@ theorem solution {P A B : Type} [CommRing P]
     (hB : (ρ.baseChangeAlong πB hπB).IsFlatAt p) : ρ.IsFlatAt p :=
   Beta2.isFlatAt_of_jointly_injective πA hπA πB hπB hinj ρ hA hB
 
-#print axioms solution

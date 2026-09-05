@@ -999,4 +999,3 @@ theorem solution
   obtain ⟨D, hD, hadm, hmk, hν⟩ := hA
   exact ⟨D, hD, hadm, hmk.trans hclass, hν⟩
 
-#print axioms solution

@@ -412,4 +412,3 @@ theorem solution
       ¬ (y ∈ Set.range (𝔛.compInf κ).base ∧ y ∈ Set.range (𝔛.compZero κ).base) :=
   SLFPack.mem_preimage_smoothLocus_iff p 𝔛 κ y
 
-#print axioms solution

@@ -469,4 +469,3 @@ theorem solution
     ring
   exact ⟨_, ⟨ReduceTE.oddWitness Q g c₀ c₁ e hc hπK hdet₀ hdet₁⟩⟩
 
-#print axioms solution

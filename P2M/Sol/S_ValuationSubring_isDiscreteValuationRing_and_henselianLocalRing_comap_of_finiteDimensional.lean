@@ -68,4 +68,3 @@ theorem solution
     rfl
   exact HenselLayerAux.core (A.comap (algebraMap ↥k₀ E)) (A.comap (algebraMap ↥K E)) hO'
 
-#print axioms solution

@@ -173,4 +173,3 @@ theorem solution
     · rw [ZeroMemClass.coe_zero, map_zero]
   · omega
 
-#print axioms solution

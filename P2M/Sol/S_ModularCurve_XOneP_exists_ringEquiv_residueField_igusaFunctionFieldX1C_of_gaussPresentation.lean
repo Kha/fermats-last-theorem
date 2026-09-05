@@ -114,4 +114,3 @@ theorem solution
     change HahnSeries.C (IsLocalRing.residue A a) = ((algebraMap (IsLocalRing.ResidueField A) ↥(ModularCurve.igusaFunctionFieldX1C (IsLocalRing.ResidueField A) M w) (IsLocalRing.residue A a) : ↥(ModularCurve.igusaFunctionFieldX1C (IsLocalRing.ResidueField A) M w)) : LaurentSeries (IsLocalRing.ResidueField A))
     rw [hR, hC]
 
-#print axioms solution

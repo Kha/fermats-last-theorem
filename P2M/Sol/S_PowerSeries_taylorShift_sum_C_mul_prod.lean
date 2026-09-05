@@ -128,4 +128,3 @@ theorem solution
         (c1s_bdd_prod Finset.univ (F b) hρ.le hFb) a ha,
       c1s_shift_C, c1s_shift_prod Finset.univ (F b) hρ hFb a ha, ih hFs]
 
-#print axioms solution

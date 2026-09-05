@@ -4737,4 +4737,3 @@ theorem solution
   LanglandsTunnell.WGenPillarSkeleton.exists_agreesLiftTraceSeed_isCusp_pair_of_pillars
     e hdet c₂ u₂ d₂₁ d₂₂ T₂ hd₂ hcov₂ hc₂ hd₂₁ c₃ u₃ d₃₁ d₃₂ T₃ hd₃ hcov₃ hc₃ hd₃₁ c₆ u₆ d₆₁ d₆₂ T₆ hd₆ hcov₆ hc₆ hd₆₁
 
-#print axioms solution

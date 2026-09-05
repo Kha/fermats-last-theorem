@@ -1067,4 +1067,3 @@ theorem solution
   rw [hNsplit]
   ring
 
-#print axioms solution

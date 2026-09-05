@@ -590,4 +590,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_jqNModC_prime_not_mem_adjoin
 theorem solution {K : Type*} [Field K] (p : ℕ) [hp : Fact (Nat.Prime p)] (h : ∀ P : Polynomial K, Polynomial.aeval (jqModC K) P ≠ jqNModC K p) : jqNModC K p ∉ IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)) :=
   ModularCurve.jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne p h
 
-#print axioms solution

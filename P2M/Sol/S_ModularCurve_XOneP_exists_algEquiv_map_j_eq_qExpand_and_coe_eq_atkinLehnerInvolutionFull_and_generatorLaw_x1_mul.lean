@@ -1785,4 +1785,3 @@ theorem solution
   obtain ⟨σ, h1, hgen, hWlaw⟩ := TWISTP.exists_sigma_generators_W p M hpM L K hK
   exact ⟨σ, h1 j hj, TWISTP.clause4_of_generators p M hpM L K hK σ hgen, hWlaw⟩
 
-#print axioms solution

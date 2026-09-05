@@ -386,8 +386,6 @@ private theorem span_le_coeffSpan_of_intertwiner {r : ℕ} (b : Fin r → Q → 
     Submodule.span ℂ (Set.range b) ≤ coeffSpan ρ₀ :=
   (span_le_coeffSpan_of_translate b ρ hlaw).trans (coeffSpan_le_of_intertwiner ρ ρ₀ T hT hconj)
 
-#print axioms finiteDimensional_coeffSpan
-#print axioms span_le_coeffSpan_of_intertwiner
 
 end CoefficientSpan
 
@@ -446,8 +444,6 @@ private theorem exists_forall_mem_exists_forall_eq_sum (ι : Q → G) (reps : Fi
   simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul, slices] at hcq
   exact hcq.symm
 
-#print axioms finiteDimensional_pi_const
-#print axioms exists_forall_mem_exists_forall_eq_sum
 
 end SliceSpan
 
@@ -1517,7 +1513,6 @@ theorem solution
       (Submodule.pi Set.univ fun _ : T => CoefficientSpan.coeffSpan (ρ s₀)) hV
   exact ⟨U₃, hU₃, ⟨s₀, hs₀₃⟩, m, σ, fun s hs => (hσ s hs).imp fun a ha k hk₁ hk₂ => ha k ⟨hk₁, hk₂⟩⟩
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_AutomorphicForm_exists_isOpen_forall_exists_apply_eq_sum_of_isArchKFinite_of_continuous.ArchimedeanIsometryGroup"

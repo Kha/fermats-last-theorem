@@ -191,7 +191,6 @@ theorem LanglandsTunnell.ExplicitLift.map_red_injOn_closure_impl :
   have h' : M.map FLT.ExplicitLift.red = N.map FLT.ExplicitLift.red := h
   rwa [map_red_eq_map_redc, map_red_eq_map_redc] at h'
 
-#print axioms LanglandsTunnell.ExplicitLift.map_red_injOn_closure_impl
 
 theorem solution :
     Set.InjOn (fun M : Matrix (Fin 2) (Fin 2) (ℤ√(-2)) => M.map FLT.ExplicitLift.red)

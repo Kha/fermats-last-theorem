@@ -19,4 +19,3 @@ theorem solution
   haveI : Smooth fQ := AlgebraicGeometry.Smooth.of_comp_of_smooth_of_surjective q fQ
   exact AlgebraicGeometry.SmoothOfRelativeDimension.of_comp_of_smoothOfRelativeDimension_of_surjective q fQ g h
 
-#print axioms solution

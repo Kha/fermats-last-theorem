@@ -155,4 +155,3 @@ theorem solution
   rw [MonoidHom.comp_apply, DistribMulAction.toAddAut'_apply]
   exact CerednikDrinfeld.S4.conorm_galJ M hfg A FC hfg' hgen galFC hgalFC_ext ιT hpin σ c
 
-#print axioms solution

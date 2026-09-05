@@ -747,4 +747,3 @@ theorem solution
   rw [hH]
   exact B3Step3.natCard_fibre_dvd_six N f hf H
 
-#print axioms solution

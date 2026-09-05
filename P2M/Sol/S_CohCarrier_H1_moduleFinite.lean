@@ -71,4 +71,3 @@ theorem solution (M : ℕ) [NeZero M] (H : Subgroup (ZMod M)ˣ) (R : Type*) [Com
   haveI : Finite s := hfin.to_subtype
   exact Module.Finite.of_injective (evalAt R A s) (evalAt_injective R A hs)
 
-#print axioms solution

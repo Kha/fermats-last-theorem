@@ -258,4 +258,3 @@ theorem solution
     rw [← hcard']
     exact Nat.card_congr (Scheme.homeoOfIso m).toEquiv
 
-#print axioms solution

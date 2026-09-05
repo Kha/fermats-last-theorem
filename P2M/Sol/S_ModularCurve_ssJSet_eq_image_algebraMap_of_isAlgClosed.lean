@@ -172,4 +172,3 @@ theorem solution
     rw [ssJSet_two K, ssJSet_two k, Set.image_singleton, map_zero]
   · exact ssJSet_eq_image_odd p k K hp2 _ _
 
-#print axioms solution

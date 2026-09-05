@@ -2858,4 +2858,3 @@ theorem solution
       hfact v hv hvSL w w' hw' ϖ hϖ hϖ0 rT hrT z hz k j hperm Ψ
 
 #check @solution
-#print axioms solution

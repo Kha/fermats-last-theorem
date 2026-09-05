@@ -2665,10 +2665,6 @@ end FLT.PrincipalSeriesGL2Padic
 p2m_reactivate "P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.LocalGL2 P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.FLT P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.FLT.PrincipalSeriesGL2Padic P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.FLT.PrincipalSeriesGL2Padic.PSCarrier"
 p2m_reactivate "P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.LocalGL2 P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.FLT P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.FLT.PrincipalSeriesGL2Padic P2MW.S_LocalNewvector_PSCarrier_finrank_fixedSubmodule_padicK1_of_add_le.FLT.PrincipalSeriesGL2Padic.PSCarrier"
 
-#print axioms FLT.PrincipalSeriesGL2Padic.PSCarrier.finrank_fixedSubmodule_padicK1_of_add_le_impl
-#print axioms FLT.PrincipalSeriesGL2Padic.le_finrank_principalSeries_inf_rightInvariant_padicK1
-#print axioms FLT.PrincipalSeriesGL2Padic.finrank_principalSeries_inf_rightInvariant_padicK1_le
-#print axioms FLT.PrincipalSeriesGL2Padic.PSCarrier.finrank_fixed_padicK1_eq
 
 theorem solution (p : ℕ) [Fact p.Prime] {μ₁ μ₂ : ℚ_[p]ˣ →* ℂˣ}
     {n₁ n₂ : ℕ} (h₁ : LocalNewvector.HasCharConductor p μ₁ n₁) (h₂ : LocalNewvector.HasCharConductor p μ₂ n₂)

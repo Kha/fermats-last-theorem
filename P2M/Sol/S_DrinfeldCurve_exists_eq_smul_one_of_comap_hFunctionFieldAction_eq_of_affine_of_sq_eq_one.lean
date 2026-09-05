@@ -220,4 +220,3 @@ theorem solution
   ext i j
   fin_cases i <;> fin_cases j <;> simp [e00, e11, h10, h01, Matrix.smul_apply]
 
-#print axioms solution

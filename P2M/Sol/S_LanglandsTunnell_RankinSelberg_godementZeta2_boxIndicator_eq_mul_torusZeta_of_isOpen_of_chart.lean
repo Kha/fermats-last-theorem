@@ -647,4 +647,3 @@ theorem solution
     rw [integral_f1, integral_f2, integral_f4, hf3, Complex.real_smul]
     ring
 
-#print axioms solution

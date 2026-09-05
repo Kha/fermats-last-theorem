@@ -540,4 +540,3 @@ theorem solution
   obtain ⟨φ, hφ⟩ := BassSerreCusp.engine H R a ha
   exact ⟨φ, fun g hg => hφ g⟩
 
-#print axioms solution

@@ -49,4 +49,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] {ℓ : ℕ} [Fa
     Algebra.IsSeparable.isSeparable _ x
   exact IsSeparable.tower_top _ hx
 
-#print axioms solution

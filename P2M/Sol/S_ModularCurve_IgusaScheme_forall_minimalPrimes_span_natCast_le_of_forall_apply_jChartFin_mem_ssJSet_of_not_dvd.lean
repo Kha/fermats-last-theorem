@@ -345,4 +345,3 @@ theorem solution
         ModularCurve.pow_q_sq_eq_self_of_mem_ssJSet p (hss Ω φ hφ))⟩
     (fun ψ hψ => hss κ ψ hψ)
 
-#print axioms solution

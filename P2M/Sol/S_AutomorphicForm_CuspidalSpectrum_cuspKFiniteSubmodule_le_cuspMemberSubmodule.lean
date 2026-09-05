@@ -37,4 +37,3 @@ theorem solution
   exact ⟨⟨⟨AutomorphicForm.isAutomorphicFnAt_of_isFundamentalDomain_of_isAutomorphicFnAt_of_coversModCentre F c u d₁ d₂ T hd hcov
         α β hΦ₀.pos Φ₀ hΦ₀.subset hΦ₀.isFundamentalDomain ξ φ h1.1.1, h1.1.2⟩, h1.2⟩, hcont⟩
 
-#print axioms solution

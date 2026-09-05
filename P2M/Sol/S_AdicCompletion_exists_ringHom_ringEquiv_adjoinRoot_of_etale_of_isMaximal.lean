@@ -447,4 +447,3 @@ theorem solution
     rw [he₀root, ← hBmax]
     exact hab
 
-#print axioms solution

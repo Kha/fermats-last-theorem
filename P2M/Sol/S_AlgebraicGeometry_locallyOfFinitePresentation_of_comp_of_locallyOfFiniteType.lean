@@ -41,5 +41,4 @@ theorem solution
   rw [HasRingHomProperty.iff_of_isAffine (P := @LocallyOfFiniteType)] at hg
   exact RingHom.FinitePresentation.of_comp_finiteType _ h hg
 
-#print axioms solution
 #check @solution

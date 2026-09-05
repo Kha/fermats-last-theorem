@@ -670,4 +670,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_TatePoint_fullKernelDiscAt.M
 theorem solution (N : ℕ) [NeZero N] : FullKernelDiscAt N :=
   ModularCurve.TatePoint.fullKernelDiscAt_aux N
 
-#print axioms solution

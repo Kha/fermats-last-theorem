@@ -152,4 +152,3 @@ theorem solution
   · show g ≫ e₁ = gt
     rw [← hgk', Category.assoc, hk'e, hgkt']
 
-#print axioms solution

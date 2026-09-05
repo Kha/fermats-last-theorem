@@ -54,4 +54,3 @@ theorem solution {K : Type*} [Field K] [CharZero K] {r : ℕ} {ι : Type*}
   funext i
   exact (Int.cast_pow N (i.val + 1)).symm
 
-#print axioms solution

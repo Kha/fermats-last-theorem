@@ -1011,4 +1011,3 @@ theorem solution
   push_cast at hχ
   linarith
 
-#print axioms solution

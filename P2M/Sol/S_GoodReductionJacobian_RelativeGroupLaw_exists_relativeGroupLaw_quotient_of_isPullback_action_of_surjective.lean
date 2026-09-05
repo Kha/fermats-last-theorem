@@ -732,4 +732,3 @@ theorem solution
     · rintro ⟨y, hy⟩
       exact ⟨y.1, congrArg Subtype.val hy⟩
 
-#print axioms solution

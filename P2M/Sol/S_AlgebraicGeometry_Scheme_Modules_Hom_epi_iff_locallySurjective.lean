@@ -103,6 +103,5 @@ theorem _root_.P2MW.S_AlgebraicGeometry_Scheme_Modules_Hom_epi_iff_locallySurjec
     obtain ⟨V, i, hxV, t, ht⟩ := h U s x hx
     exact ⟨V, homOfLE i, ⟨t, ht⟩, hxV⟩
 
-#print axioms solution
 
 end AlgebraicGeometry.Scheme.Modules

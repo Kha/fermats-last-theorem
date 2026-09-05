@@ -1065,4 +1065,3 @@ theorem solution
   obtain ⟨e₂, he₂⟩ := G3Glue.exists_comp_eq_of_isReduced_of_range_subset i₂.1 (pullback.fst παk i₂.1 ≫ πβk) hset₂
   exact ⟨⟨e₁, he₁⟩, ⟨e₂, he₂⟩⟩
 
-#print axioms solution

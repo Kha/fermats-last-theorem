@@ -141,4 +141,3 @@ theorem solution
         ∀ t : T, t • x = χ t • x :=
   DeligneSerre.exists_eigenvector_of_mem_minimalPrimes_of_faithfulSMul_impl (h𝔭 := h𝔭)
 
-#print axioms solution

@@ -58,4 +58,3 @@ theorem solution (W : WeierstrassCurve ℤ) (p : ℕ) [Fact p.Prime] (hp2 : p �
     subst hp3
     exact W.card_range_galoisRep_three_le_two hΔ hcard hunr hle2
 
-#print axioms solution

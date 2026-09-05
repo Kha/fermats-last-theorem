@@ -346,13 +346,11 @@ info: 'FaithfullyFlatRegularDescent.isNoetherianRing_of_faithfullyFlat' depends 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isNoetherianRing_of_faithfullyFlat
 
 /--
 info: 'FaithfullyFlatRegularDescent.isLocalRing_of_faithfullyFlat' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isLocalRing_of_faithfullyFlat
 
 /--
 info: 'FaithfullyFlatRegularDescent.isLocalHom_algebraMap_of_faithfullyFlat' depends on axioms: [propext,
@@ -360,7 +358,6 @@ info: 'FaithfullyFlatRegularDescent.isLocalHom_algebraMap_of_faithfullyFlat' dep
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isLocalHom_algebraMap_of_faithfullyFlat
 
 /--
 info: 'FaithfullyFlatRegularDescent.ringKrullDim_le_of_faithfullyFlat' depends on axioms: [propext,
@@ -368,7 +365,6 @@ info: 'FaithfullyFlatRegularDescent.ringKrullDim_le_of_faithfullyFlat' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.ringKrullDim_le_of_faithfullyFlat
 
 /--
 info: 'FaithfullyFlatRegularDescent.maximalIdeal_isPrincipal_of_faithfullyFlat' depends on axioms: [propext,
@@ -376,7 +372,6 @@ info: 'FaithfullyFlatRegularDescent.maximalIdeal_isPrincipal_of_faithfullyFlat' 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.maximalIdeal_isPrincipal_of_faithfullyFlat
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_valuationRing' depends on axioms: [propext,
@@ -384,7 +379,6 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_valu
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_valuationRing
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_valuationRing'' depends on axioms: [propext,
@@ -392,7 +386,6 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_valu
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_valuationRing'
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_field' depends on axioms: [propext,
@@ -400,7 +393,6 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_fiel
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_field
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_isDiscreteValuationRing' depends on axioms: [propext,
@@ -408,7 +400,6 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_isDi
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_isDiscreteValuationRing
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_ringKrullDim_eq_zero' depends on axioms: [propext,
@@ -416,7 +407,6 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_ring
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_ringKrullDim_eq_zero
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_ringKrullDim_le_one' depends on axioms: [propext,
@@ -424,7 +414,6 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_ring
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_faithfullyFlat_of_ringKrullDim_le_one
 
 /--
 info: 'FaithfullyFlatRegularDescent.regularDescendsAlongFaithfullyFlat_iff_flatLocalHom' depends on axioms: [propext,
@@ -432,7 +421,6 @@ info: 'FaithfullyFlatRegularDescent.regularDescendsAlongFaithfullyFlat_iff_flatL
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.regularDescendsAlongFaithfullyFlat_iff_flatLocalHom
 
 /--
 info: 'FaithfullyFlatRegularDescent.carrier_holds_for_valuationRing_targets' depends on axioms: [propext,
@@ -440,7 +428,6 @@ info: 'FaithfullyFlatRegularDescent.carrier_holds_for_valuationRing_targets' dep
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.carrier_holds_for_valuationRing_targets
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_free_of_carrier' depends on axioms: [propext,
@@ -448,7 +435,6 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_free_of_carrier' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_free_of_carrier
 
 /--
 info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_free_of_valuationRing' depends on axioms: [propext,
@@ -456,25 +442,21 @@ info: 'FaithfullyFlatRegularDescent.isRegularLocalRing_of_free_of_valuationRing'
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.isRegularLocalRing_of_free_of_valuationRing
 
 /--
 info: 'FaithfullyFlatRegularDescent.gate_descent_engine_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.gate_descent_engine_rat
 
 /--
 info: 'FaithfullyFlatRegularDescent.gate_descent_engine_padicInt' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.gate_descent_engine_padicInt
 
 /--
 info: 'FaithfullyFlatRegularDescent.gate_km_wiring_padicInt' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.gate_km_wiring_padicInt
 
 /--
 info: 'FaithfullyFlatRegularDescent.not_isRegularLocalRing_dualNumber' depends on axioms: [propext,
@@ -482,7 +464,6 @@ info: 'FaithfullyFlatRegularDescent.not_isRegularLocalRing_dualNumber' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.not_isRegularLocalRing_dualNumber
 
 /--
 info: 'FaithfullyFlatRegularDescent.not_regularDescends_along_surjective_localHom' depends on axioms: [propext,
@@ -490,7 +471,6 @@ info: 'FaithfullyFlatRegularDescent.not_regularDescends_along_surjective_localHo
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.not_regularDescends_along_surjective_localHom
 
 /--
 info: 'FaithfullyFlatRegularDescent.not_regularAscends_alongFaithfullyFlat' depends on axioms: [propext,
@@ -498,6 +478,5 @@ info: 'FaithfullyFlatRegularDescent.not_regularAscends_alongFaithfullyFlat' depe
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FaithfullyFlatRegularDescent.not_regularAscends_alongFaithfullyFlat
 
 end

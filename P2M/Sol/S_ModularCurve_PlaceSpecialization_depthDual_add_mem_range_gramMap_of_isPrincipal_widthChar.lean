@@ -1254,4 +1254,3 @@ theorem solution
     exact e1.trans (e3.trans (e4.trans S4))
   exact (Submodule.Quotient.mk_eq_zero (LinearMap.range (gramMap (widthOfPlaces (arithFrobC q (ResidueField A) N) W (scaledWidthChar q N e'))))).mp hzero
 
-#print axioms solution

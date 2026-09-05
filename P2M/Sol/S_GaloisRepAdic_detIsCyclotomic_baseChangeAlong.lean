@@ -187,4 +187,3 @@ theorem solution
     {p : ℕ} (h : ρ.DetIsCyclotomic p) : (ρ.baseChangeAlong φ hφ).DetIsCyclotomic p :=
   GaloisRepAdic.LCSol.detIsCyclotomic_baseChangeAlong φ hφ ρ h
 
-#print axioms solution

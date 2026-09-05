@@ -86,4 +86,3 @@ p2m_open "ModularCurve~jq_mem_full" in open _root_.P2MW.S_ModularCurve_finiteDim
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N ℓ : ℕ) [NeZero N] [hl : Fact (Nat.Prime ℓ)] (hN : ¬ ℓ ∣ N) (hle : laurentBaseChange L (modularFunctionFieldFull N) ≤ laurentBaseChange L (modularFunctionFieldFull (N * ℓ))) : FiniteDimensional (laurentBaseChange L (modularFunctionFieldFull N)) (IntermediateField.extendScalars hle) :=
   ModularCurve.finiteDimensional_extendScalars_full_prime L N ℓ hN hle
 
-#print axioms solution

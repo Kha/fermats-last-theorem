@@ -84,4 +84,3 @@ theorem solution
   exact ⟨PowerSeries O, inferInstance, instRL, instRR, hdim, instAC, inferInstance, hpR, ι₀, hι₀, hι₀O, π, hπ, E, t, ht,
     tchain, htchain₀, htchain, g₀, hg₀, hV⟩
 
-#print axioms solution

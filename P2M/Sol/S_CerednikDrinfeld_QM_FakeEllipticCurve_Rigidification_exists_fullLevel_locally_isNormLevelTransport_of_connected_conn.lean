@@ -770,4 +770,3 @@ theorem solution
     Spec.map (CommRingCat.ofHom (algebraMap Bc (Localization.Away (φc (c i))))) ≫ (Pst.P).1
   rw [← hPc₃, ← hPst₃, h33]
 
-#print axioms solution

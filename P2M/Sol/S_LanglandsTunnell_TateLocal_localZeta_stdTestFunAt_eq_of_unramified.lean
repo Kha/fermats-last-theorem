@@ -334,4 +334,3 @@ theorem solution
   LanglandsTunnell.TateLocal.UnramB.localZeta_stdTestFunAt_eq K v
     (LanglandsTunnell.TateLocal.modulus_adicCompletion_eq_nnnorm K v) χ s hχ hs
 
-#print axioms solution

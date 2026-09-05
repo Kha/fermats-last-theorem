@@ -104,4 +104,3 @@ theorem solution
       (e : (↥L ≃ₐ[ℚ] ↥L) ≃* GL (Fin 2) (ZMod 3)), LanglandsTunnell.galRep e = ρ :=
   LanglandsTunnell.P4.TowerSol.exists_tower_of_continuous_surjective ρ hcont hsurj
 
-#print axioms solution

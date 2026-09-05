@@ -183,4 +183,3 @@ theorem solution
     rwa [Nat.mod_eq_of_lt haq, Nat.mod_eq_of_lt hq.one_lt] at hmod
   rw [← hτζ, ha, pow_one]
 
-#print axioms solution

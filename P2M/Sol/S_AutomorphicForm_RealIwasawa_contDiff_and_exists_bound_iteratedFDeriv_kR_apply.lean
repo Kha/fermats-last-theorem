@@ -741,4 +741,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_AutomorphicForm_RealIwasawa_contDiff_and_exists_bound_iteratedFDeriv_kR_apply.M4aP3B P2MW.S_AutomorphicForm_RealIwasawa_contDiff_and_exists_bound_iteratedFDeriv_kR_apply.M4aP3B.RealIwasawa"
 
-#print axioms solution

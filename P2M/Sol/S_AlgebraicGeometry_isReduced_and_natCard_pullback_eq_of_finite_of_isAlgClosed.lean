@@ -128,4 +128,3 @@ theorem solution
           Nat.card_congr ((Equiv.Set.univ _).symm.trans (Equiv.setCongr hK.symm))
       _ = Nat.card ↥Z := Nat.card_congr eK
 
-#print axioms solution

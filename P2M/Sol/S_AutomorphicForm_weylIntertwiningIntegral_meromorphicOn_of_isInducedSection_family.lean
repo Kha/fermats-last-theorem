@@ -79,4 +79,3 @@ theorem solution
     rw [h1, h2]
     exact Finset.sum_congr rfl fun i _ => (h3 i).symm
 
-#print axioms solution

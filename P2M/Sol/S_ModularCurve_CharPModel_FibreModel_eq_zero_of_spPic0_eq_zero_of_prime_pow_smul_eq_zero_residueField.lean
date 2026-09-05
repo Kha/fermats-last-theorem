@@ -170,4 +170,3 @@ theorem solution
   exact ModularCurve.eq_zero_of_reductionModL_eq_zero_of_nsmul_eq_zero N hlN A hA h (q ^ n)
     (chp_not_dvd_pow ℓ q hq n) x hn hz
 
-#print axioms solution

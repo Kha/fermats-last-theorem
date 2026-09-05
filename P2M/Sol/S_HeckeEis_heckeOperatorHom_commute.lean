@@ -520,4 +520,3 @@ theorem solution (N : ℕ) (A : Type*) [AddCommGroup A]
       heckeOperatorHom N ℓ₂ A (heckeOperatorHom N ℓ₁ A φ) :=
   HeckeEis.heckeOperatorHom_commute_impl N A ℓ₁ ℓ₂ φ
 
-#print axioms solution

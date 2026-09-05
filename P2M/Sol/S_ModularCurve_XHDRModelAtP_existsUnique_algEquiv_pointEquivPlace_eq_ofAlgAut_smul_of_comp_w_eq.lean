@@ -31,4 +31,3 @@ theorem solution
   exact ⟨θ, hθ, fun θ' hθ' =>
     (ModularCurve.XHDRModelAtP.algEquiv_eq_of_forall_pointEquivPlace_eq_ofAlgAut_smul_of_comp_w_eq p M H hpM hj 𝔛 θ θ' hθ hθ').symm⟩
 
-#print axioms solution

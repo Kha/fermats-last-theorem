@@ -54,4 +54,3 @@ theorem solution
       rfl
   rw [hns, hN, AutomorphicForm.tensorPlace_toTensorGL, hsc]
 
-#print axioms solution

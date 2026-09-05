@@ -444,4 +444,3 @@ theorem solution
     Module.finite_of_finrank_pos (by rw [show Module.finrank _ _ = p + 1 from hfr]; omega)
   exact this
 
-#print axioms solution

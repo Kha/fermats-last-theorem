@@ -41,4 +41,3 @@ example (m : ℕ) [NeZero m]
       Set (AlgebraicClosure ℚ ≃ₐ[ℚ] AlgebraicClosure ℚ)) :=
   solution m cyc hcyc
 
-#print axioms solution

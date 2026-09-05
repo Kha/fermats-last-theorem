@@ -297,4 +297,3 @@ theorem solution
         coeffMap ((IsLocalRing.residue ↥A).comp ρ) y :=
   MfibPin.main p M H hpM hj 𝔓 A hA ρ hρ b
 
-#print axioms solution

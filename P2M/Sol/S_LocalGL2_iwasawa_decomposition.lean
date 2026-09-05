@@ -231,8 +231,6 @@ theorem LocalGL2.iwasawa_decomposition_diag_impl (R : Type*) [CommRing R] [IsDom
       (g : Matrix (Fin 2) (Fin 2) K) = !![1, z; 0, 1] * !![(a₁ : K), 0; 0, (a₂ : K)] * k :=
   LocalGL2.exists_iwasawa_diag (R := R) g
 
-#print axioms LocalGL2.iwasawa_decomposition_impl
-#print axioms LocalGL2.iwasawa_decomposition_diag_impl
 
 theorem solution (R : Type*) [CommRing R] [IsDomain R] [IsDiscreteValuationRing R]
     (K : Type*) [Field K] [Algebra R K] [IsFractionRing R K] (g : GL (Fin 2) K) :

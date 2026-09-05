@@ -199,4 +199,3 @@ theorem solution
   refine ⟨sr₁, hsrr₁, x₁', ?_, h2, h3⟩
   rw [← h1, ← hbxr, hT1]
 
-#print axioms solution

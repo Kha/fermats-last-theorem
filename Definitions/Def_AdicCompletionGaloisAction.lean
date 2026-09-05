@@ -237,21 +237,3 @@ end LiesOver
 
 end AdicCompletion
 
-#print axioms AdicCompletion.mulSemiringActionOfSMulEq
-#print axioms AdicCompletion.smul_of'
-#print axioms AdicCompletion.evalₐ_smul'
-#print axioms AdicCompletion.instMulSemiringActionStabilizer
-#print axioms AdicCompletion.stabilizer_smul_of
-#print axioms AdicCompletion.evalₐ_stabilizer_smul
-#print axioms AdicCompletion.instMulSemiringActionMap
-#print axioms AdicCompletion.map_smul_of
-#print axioms AdicCompletion.evalₐ_map_smul
-#print axioms AdicCompletion.instSMulCommClassStabilizer
-#print axioms AdicCompletion.instSMulCommClassMap
-#print axioms AdicCompletion.instFaithfulSMulStabilizer
-#print axioms AdicCompletion.instAlgebraOfLiesOver
-#print axioms AdicCompletion.instIsScalarTowerOfLiesOver
-#print axioms AdicCompletion.algebraMap_of
-#print axioms AdicCompletion.evalₐ_algebraMap_of_liesOver
-#print axioms AdicCompletion.stabilizer_smul_algebraMap
-#print axioms AdicCompletion.instSMulCommClassStabilizerOfLiesOver

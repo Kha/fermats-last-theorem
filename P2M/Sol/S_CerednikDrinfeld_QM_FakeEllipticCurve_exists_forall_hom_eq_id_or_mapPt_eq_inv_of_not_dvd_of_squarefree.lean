@@ -133,4 +133,3 @@ theorem solution
     exact RigidAux.iso_symm _ _ (hf i')
   exact hE i.1 i'.1 (fun h => hne (Fin.ext h)) hiso
 
-#print axioms solution

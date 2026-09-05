@@ -122,4 +122,3 @@ theorem solution
           (Ideal.Quotient.mkₐ_surjective 𝒪 _)
         exact hm q' hq' hqp hqne
 
-#print axioms solution

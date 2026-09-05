@@ -46,4 +46,3 @@ example :
   solution
 
 #check @solution
-#print axioms solution

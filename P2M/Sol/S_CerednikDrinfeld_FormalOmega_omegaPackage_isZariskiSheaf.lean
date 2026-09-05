@@ -40,4 +40,3 @@ theorem solution
       exact this)
     exact ⟨d, fun i => by rw [omegaPackage_map, e i]; exact hd i⟩
 
-#print axioms solution

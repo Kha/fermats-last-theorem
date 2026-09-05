@@ -387,4 +387,3 @@ theorem solution
     exact ⟨C₀, hc, ht, WeierstrassCurve.DrinfeldGlobal.inLine_level_snd_fst_xP_of_curve_eq_of_level_fst_eq_rigidDataH1Pow
       ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ))) ℓg M' q hℓ hM hL 𝒢 𝒯 (ResidueField ↥(A.comap (algebraMap ↥k₀ (AlgebraicClosure ℚ)))) hMκ hℓg hℓg2 hℓgM' _ x' hc ht⟩
 
-#print axioms solution

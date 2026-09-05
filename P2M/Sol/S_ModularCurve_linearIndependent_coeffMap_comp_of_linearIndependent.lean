@@ -42,4 +42,3 @@ theorem solution
   have hrepr : B.repr (c i₀) = 0 := Finsupp.ext hzero
   simpa using congrArg B.repr.symm hrepr
 
-#print axioms solution

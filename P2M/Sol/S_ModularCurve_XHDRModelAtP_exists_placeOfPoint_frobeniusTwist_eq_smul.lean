@@ -193,4 +193,3 @@ theorem solution
     exact Subtype.ext (Prod.ext hR hBa)
   rw [ModularCurve.qExpFrobeniusPlaceModL_eq_qExpArithFrobC_smul, hfrobEq]
 
-#print axioms solution

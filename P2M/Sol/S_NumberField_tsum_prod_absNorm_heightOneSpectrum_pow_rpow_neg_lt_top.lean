@@ -176,4 +176,3 @@ theorem solution (F : Type) [Field F] [NumberField F] {t : ℝ} (ht : 1 < t) :
         (((k.prod fun v n => Ideal.absNorm v.asIdeal ^ n : ℕ) : ℝ≥0∞) ^ (-t)) < ⊤ :=
   AutomorphicForm.WeylIntegrable.tsum_normProd_rpow_neg_lt_top F ht
 
-#print axioms solution

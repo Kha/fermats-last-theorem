@@ -160,4 +160,3 @@ theorem solution {P : RealArchParam} (D : ArchDatumR P)
     filter_upwards [hopen.mem_nhds hmem] with t ht using hloc t ht
   exact congrFun (AnalyticOnNhd.eq_of_eventuallyEq hF hG hev) s
 
-#print axioms solution

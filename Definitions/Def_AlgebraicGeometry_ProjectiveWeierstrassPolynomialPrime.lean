@@ -239,154 +239,123 @@ end ProjWeierstrassCubicPrime
 info: 'ProjWeierstrassCubicPrime.wCubic' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.wCubic
 /--
 info: 'ProjWeierstrassCubicPrime.wCubic_toPoly_coeff_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.wCubic_toPoly_coeff_zero
 /--
 info: 'ProjWeierstrassCubicPrime.wCubic_toPoly_coeff_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.wCubic_toPoly_coeff_one
 /--
 info: 'ProjWeierstrassCubicPrime.wCubic_toPoly_coeff_two' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.wCubic_toPoly_coeff_two
 /--
 info: 'ProjWeierstrassCubicPrime.finSuccEquiv_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.finSuccEquiv_polynomial
 /--
 info: 'ProjWeierstrassCubicPrime.wCubic_toPoly_monic' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.wCubic_toPoly_monic
 /--
 info: 'ProjWeierstrassCubicPrime.wCubic_toPoly_natDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.wCubic_toPoly_natDegree
 /--
 info: 'ProjWeierstrassCubicPrime.wCubic_isEisensteinAt' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.wCubic_isEisensteinAt
 /--
 info: 'ProjWeierstrassCubicPrime.irreducible_wCubic_toPoly' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.irreducible_wCubic_toPoly
 /--
 info: 'ProjWeierstrassCubicPrime.irreducible_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.irreducible_polynomial
 /--
 info: 'ProjWeierstrassCubicPrime.polynomial_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.polynomial_ne_zero
 /--
 info: 'ProjWeierstrassCubicPrime.not_isUnit_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.not_isUnit_polynomial
 /--
 info: 'ProjWeierstrassCubicPrime.prime_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.prime_polynomial
 /--
 info: 'ProjWeierstrassCubicPrime.span_polynomial_isPrime' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.span_polynomial_isPrime
 /--
 info: 'ProjWeierstrassCubicPrime.isDomain_quotient_span_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.isDomain_quotient_span_polynomial
 /--
 info: 'ProjWeierstrassCubicPrime.isHomogeneous_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.isHomogeneous_polynomial
 /--
 info: 'ProjWeierstrassCubicPrime.totalDegree_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.totalDegree_polynomial
 /--
 info: 'ProjWeierstrassCubicPrime.gateCurveA' depends on axioms: [propext, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gateCurveA
 /--
 info: 'ProjWeierstrassCubicPrime.gateCurveB' depends on axioms: [propext, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gateCurveB
 /--
 info: 'ProjWeierstrassCubicPrime.gate_prime_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_prime_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_prime_B' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_prime_B
 /--
 info: 'ProjWeierstrassCubicPrime.gate_span_isPrime_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_span_isPrime_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_isDomain_quotient_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_isDomain_quotient_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_quotient_nontrivial_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_quotient_nontrivial_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_span_ne_top_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_span_ne_top_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_span_ne_bot_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_span_ne_bot_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_eval_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_eval_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_eval_B' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_eval_B
 /--
 info: 'ProjWeierstrassCubicPrime.gate_polynomial_A_ne_B' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_polynomial_A_ne_B
 /--
 info: 'ProjWeierstrassCubicPrime.gate_isHomogeneous_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_isHomogeneous_A
 /--
 info: 'ProjWeierstrassCubicPrime.gate_totalDegree_A' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms ProjWeierstrassCubicPrime.gate_totalDegree_A

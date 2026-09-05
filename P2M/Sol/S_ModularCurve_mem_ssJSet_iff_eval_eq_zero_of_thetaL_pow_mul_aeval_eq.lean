@@ -175,4 +175,3 @@ theorem solution
     j₀ ∈ ModularCurve.ssJSet p Ω ↔ Polynomial.eval j₀ (X ^ e₄ * (X - C (1728 : Ω)) ^ e₆ * S) = 0 :=
   SSBridge.main p hp5 Ω m e₄ e₆ S hS j₀
 
-#print axioms solution

@@ -41,4 +41,3 @@ theorem solution
   have hnk : n ∈ Set.range (𝒰.f k).base := ⟨s'.base x₀, by rw [hn, ← hs']; rfl⟩
   exact hne k i hki n ⟨hnk, hni⟩ hgn
 
-#print axioms solution

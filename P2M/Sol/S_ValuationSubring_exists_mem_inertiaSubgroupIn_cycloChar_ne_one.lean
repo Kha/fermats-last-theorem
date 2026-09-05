@@ -76,5 +76,3 @@ theorem solution_corollary_neg_one
 #check @ValuationSubring.exists_mem_inertiaSubgroupIn_apply_eq_pow_of_pow_eight_eq_one
 #check @solution
 #check @solution_corollary_neg_one
-#print axioms solution
-#print axioms solution_corollary_neg_one

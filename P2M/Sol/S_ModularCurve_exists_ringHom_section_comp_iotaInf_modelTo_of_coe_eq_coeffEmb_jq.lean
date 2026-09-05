@@ -44,4 +44,3 @@ theorem solution
     rw [Ideal.mem_comap, hψ0]
     exact y.asIdeal.zero_mem
 
-#print axioms solution

@@ -657,4 +657,3 @@ theorem solution
   obtain rfl := hsec s hs
   exact hnorm x
 
-#print axioms solution

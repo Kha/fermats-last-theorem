@@ -277,4 +277,3 @@ theorem solution
       H1Glue.units_pow_eq_one_of_map_eq j j₂ hinj₂ _ (a τ) (a' τ) ha (hC1' P hP τ hτ) _ ((hiff _).mpr hN)
     exact hregτ (H1Glue.pow_sub_one_eq_one_of_pow_succ_eq_one (a τ) q k hq1 haN)
 
-#print axioms solution

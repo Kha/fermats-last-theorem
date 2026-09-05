@@ -956,4 +956,3 @@ theorem solution
   AlgebraicCurve.TwoChartIntegralModel.PlaceTransport.main R K F j F' j' ι ι' C₁ e₁ he₁ hne₁ pin₁ C₂ e₂ he₂ hne₂ pin₂
     πX hπX θ hchart Φ hΦθ hint y x hyx
 
-#print axioms solution

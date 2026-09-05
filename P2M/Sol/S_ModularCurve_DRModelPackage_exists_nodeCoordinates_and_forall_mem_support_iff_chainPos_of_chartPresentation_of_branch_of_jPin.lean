@@ -634,7 +634,6 @@ theorem hrat_bridge
     exact Category.id_comp _
   exact HratBridge.surjective_residue_comp_of_section _ (s ≫ DRModel.baseChangeMap (p := p) (IsLocalRing.residue O)) ht _ hx.symm
 
-#print axioms hrat_bridge
 
 set_option maxHeartbeats 24000000 in
 set_option synthInstance.maxHeartbeats 1600000 in

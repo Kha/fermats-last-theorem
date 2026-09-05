@@ -278,4 +278,3 @@ theorem solution
     rw [this]
     exact hodd.add_even (even_two_mul t)
 
-#print axioms solution

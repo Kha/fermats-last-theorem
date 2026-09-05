@@ -326,4 +326,3 @@ theorem solution
       rw [hθread ⟨(a : ↥K), hCV1 a⟩ x y hy' hxy, map_div₀, CIP.coeffMap_ofPowerSeries_map, CIP.coeffMap_ofPowerSeries_map, hσres])
   exact ⟨Mdl₁', e₁', MdlB, eB, he₁', heB, hpin'⟩
 
-#print axioms solution

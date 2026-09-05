@@ -314,4 +314,3 @@ theorem solution
     refine ⟨R.residue ⟨c • f, hc⟩, hres0, fun v' => ?_⟩
     exact hdiv ⟨c • f, hc⟩ hres0 D (fun P => by rw [hD P]; exact (ConstantReduction.ord_smul P hc0 f).symm) v'
 
-#print axioms solution

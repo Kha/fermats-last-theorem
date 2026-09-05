@@ -974,10 +974,4 @@ theorem solution
   rw [hshift, hord1]
 
 section Probes
-#print axioms solution
-#print axioms glue_pre_zero
-#print axioms glue_lift_zero
-#print axioms glue_noeth_zero
-#print axioms ModularCurve.NodeLocalized.ord_generator_eq_one_of_heightOne_of_ringIff
-#print axioms hasValue_of_sub_ord_pos
 end Probes

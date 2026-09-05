@@ -1572,4 +1572,3 @@ theorem solution
       Pd₁.eval ((Ideal.absNorm p.asIdeal : ℂ) ^ (-s)) * Q₁.eval ((Ideal.absNorm p.asIdeal : ℂ) ^ (-s)) *
       Qd.eval ((Ideal.absNorm p.asIdeal : ℂ) ^ (-s))) * eC
 
-#print axioms solution

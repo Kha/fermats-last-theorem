@@ -254,4 +254,3 @@ theorem solution
   · exact hE e
   · rw [uniq e Ne hNe', ← hAT]
 
-#print axioms solution

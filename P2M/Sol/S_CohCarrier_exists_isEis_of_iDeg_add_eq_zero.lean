@@ -1437,4 +1437,3 @@ theorem solution
     rw [key, key]
     exact hψ _ _ (by rw [coe_cqEquiv_symm_11, coe_cqEquiv_symm_11]; exact hγδ)
 
-#print axioms solution

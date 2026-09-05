@@ -599,4 +599,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_relf
 theorem solution (p : ℕ) [hp : Fact (Nat.Prime p)] : IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (modularFunctionFieldFull (p * p)) = dedekindPsi (p * p) :=
   ModularCurve.relfinrank_full_sq p
 
-#print axioms solution

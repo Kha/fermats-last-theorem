@@ -110,4 +110,3 @@ theorem solution
 
     exact hfrs
 
-#print axioms solution

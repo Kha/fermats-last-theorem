@@ -276,15 +276,6 @@ theorem normClassChar_primeClass {𝔣 : Ideal (𝓞 K)} (hq𝔣 : Ideal.span {(
     normClassChar K q hq𝔣 (primeClass K 𝔣 v hv) = normClass K q v :=
   raySymbolDescend_primeClass K (normClass K q) (normClassKillsRay K q hq𝔣) hv
 
-#print axioms LanglandsTunnell.P2.Artin.norm_int_cast_eq_one_of_sub_one_mem
-#print axioms LanglandsTunnell.P2.Artin.norm_int_pos_of_totPos
-#print axioms LanglandsTunnell.P2.Artin.absNorm_coprime_of_not_dvd
-#print axioms LanglandsTunnell.P2.Artin.normClass
-#print axioms LanglandsTunnell.P2.Artin.normClass_coe
-#print axioms LanglandsTunnell.P2.Artin.raySymbol_normClass_coe
-#print axioms LanglandsTunnell.P2.Artin.normClassKillsRay
-#print axioms LanglandsTunnell.P2.Artin.normClassChar
-#print axioms LanglandsTunnell.P2.Artin.normClassChar_primeClass
 
 end LanglandsTunnell.P2.Artin
 

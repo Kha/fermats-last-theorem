@@ -106,4 +106,3 @@ theorem solution
   ModularCurve.PlaceSpecialization.exists_depth_comp_depthCompLaw_depthValueLaw_sndDegLaw_surjective_repOfKer_repOfInvariant_principalGood_of_widthPinChar_of_isModel
     q A N (IsLocalRing.ResidueField ↥A) (IsLocalRing.residue ↥A) data hKr hα hβ hqN P W hW R hR hRL hNV hO e he
 
-#print axioms solution

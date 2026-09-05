@@ -173,4 +173,3 @@ theorem solution {R : Type*} [CommRing R] [IsDomain R] (n : ℕ)
     ∃ c : R, (P : MvPolynomial (Fin 2) R) = c • MvPolynomial.X 0 ^ n :=
   HeckeEis.SolMain.A2 n hh hn P hP
 
-#print axioms solution

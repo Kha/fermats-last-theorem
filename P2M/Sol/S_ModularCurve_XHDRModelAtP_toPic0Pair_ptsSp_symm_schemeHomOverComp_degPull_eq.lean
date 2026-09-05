@@ -1561,4 +1561,3 @@ theorem solution
   simp only [Lf, Rf, Equiv.apply_symm_apply] at hx
   exact hx
 
-#print axioms solution

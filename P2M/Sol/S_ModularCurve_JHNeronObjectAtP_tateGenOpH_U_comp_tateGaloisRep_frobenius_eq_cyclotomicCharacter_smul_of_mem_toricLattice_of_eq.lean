@@ -439,4 +439,3 @@ theorem solution
     rw [hcm]
     exact hhom _ ((Algebra.ofId ↥A (AlgebraicClosure ℚ)).comp χA)
 
-#print axioms solution

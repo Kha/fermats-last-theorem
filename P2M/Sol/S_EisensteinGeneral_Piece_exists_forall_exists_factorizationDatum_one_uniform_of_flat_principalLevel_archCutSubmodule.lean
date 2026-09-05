@@ -836,4 +836,3 @@ theorem solution
       rw [zero_pow two_ne_zero]
       exact mul_nonneg (mul_nonneg hCb0.le (sq_nonneg _)) hint
 
-#print axioms solution

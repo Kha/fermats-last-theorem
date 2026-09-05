@@ -553,4 +553,3 @@ theorem solution
       rw [hΛ]
       exact Submodule.sum_mem _ fun i _ => key z (hg i) (i : ↥B).2
 
-#print axioms solution

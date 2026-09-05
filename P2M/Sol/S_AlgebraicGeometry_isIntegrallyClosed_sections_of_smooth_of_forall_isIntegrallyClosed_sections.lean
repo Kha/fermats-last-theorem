@@ -37,4 +37,3 @@ theorem solution
   haveI := h2
   exact IsIntegrallyClosed.of_equiv e2.commRingCatIsoToRingEquiv
 
-#print axioms solution

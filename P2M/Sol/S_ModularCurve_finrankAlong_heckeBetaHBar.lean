@@ -346,4 +346,3 @@ theorem solution
   obtain ⟨h, _⟩ := ModularCurve.heckeInputsHAlong L M H ℓ
   exact DBetaH.main M H ℓ L h
 
-#print axioms solution

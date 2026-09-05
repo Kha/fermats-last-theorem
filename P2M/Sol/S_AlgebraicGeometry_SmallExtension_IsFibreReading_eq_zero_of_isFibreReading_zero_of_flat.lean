@@ -108,4 +108,3 @@ theorem solution
     _ = ∑ l, ∑ j, algebraMap B₁ (X.presheaf.obj (Opposite.op U)) (ι (bV.dualBasis l (v j) • bV l)) * s j := Finset.sum_comm
     _ = 0 := Finset.sum_eq_zero fun l _ => h2 (bV l) (bV.dualBasis l)
 
-#print axioms solution

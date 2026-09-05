@@ -439,4 +439,3 @@ theorem solution
     rw [integral_indicator_const _ hS'm, Measure.real, hτS']
     simp
 
-#print axioms solution

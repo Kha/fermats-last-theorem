@@ -18,4 +18,3 @@ theorem solution
     D'.universal D₀.R D₀.residue_surjective D₀.ρ (h D₀.ρ D₀.isOfType) D₀.residual_isEquiv
   exact ⟨θ, hθ⟩
 
-#print axioms solution

@@ -664,4 +664,3 @@ theorem solution
         IsUnit (((XO (ΓM M H) hj ρO).presheaf.stalkSpecializes hzero).hom t)) :=
   OggTH.main p M H hpM hpM2 hHp hj 𝔛 A hA ρ hρ O ρO hϖ toκ htoκ n hinf hzero
 
-#print axioms solution

@@ -265,4 +265,3 @@ theorem solution
     · rw [h0, Place.ord_zero]
     · simpa [hDV] using h
 
-#print axioms solution

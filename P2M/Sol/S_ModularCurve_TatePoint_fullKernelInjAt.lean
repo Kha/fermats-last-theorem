@@ -93,4 +93,3 @@ open ModularCurve ModularCurve.TatePoint in
 theorem solution (N : ℕ) [NeZero N] : FullKernelInjAt N :=
   KernelTower.fullKernelInjAt' N
 
-#print axioms solution

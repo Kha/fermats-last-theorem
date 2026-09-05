@@ -7295,4 +7295,3 @@ theorem solution (P : ComplexArchParam) :
     ∃ D : ArchDatumC P, ∃ g : GL (Fin 2) ℂ, D.W g ≠ 0 :=
   TateComplex.Datum.exists_archDatumC_WmemC P
 
-#print axioms solution

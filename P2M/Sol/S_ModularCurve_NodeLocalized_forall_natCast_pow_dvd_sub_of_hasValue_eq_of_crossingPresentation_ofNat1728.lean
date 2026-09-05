@@ -1119,4 +1119,3 @@ theorem solution
     (by rw [map_ofNat, h1728q]) ϖ hϖm eK ε hε hqϖ (jWidth (1728 : k)) G' H' w hGH hmax
     c m hc hm hcm' hW₁ hW₂ hv₁' hv₂' g hg
 
-#print axioms solution

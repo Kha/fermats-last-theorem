@@ -658,4 +658,3 @@ theorem solution {N : ℕ} [NeZero N] {q : ℕ} (hq : q.Prime) (hqN : q ∣ N)
     ← CuspForm.coe_heckeULin_apply 2 hqN f]
   exact hF'f τ
 
-#print axioms solution

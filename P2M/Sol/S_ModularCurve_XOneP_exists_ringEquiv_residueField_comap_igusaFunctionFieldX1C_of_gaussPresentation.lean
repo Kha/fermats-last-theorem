@@ -81,4 +81,3 @@ theorem solution
     rw [hfix]
     exact hθ₀c a
 
-#print axioms solution

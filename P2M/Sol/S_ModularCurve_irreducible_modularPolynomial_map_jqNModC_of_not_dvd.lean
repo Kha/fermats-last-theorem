@@ -167,4 +167,3 @@ theorem solution
       ⟨ModularCurve.jqNModC κ N, ModularCurve.jqNModC_mem κ N⟩)) :=
   ModularCurve.DegRel.main κ N ℓ p hℓN hpN hpℓ dataℓ
 
-#print axioms solution

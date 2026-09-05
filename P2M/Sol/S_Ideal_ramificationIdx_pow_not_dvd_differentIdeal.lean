@@ -429,4 +429,3 @@ theorem solution (A : Type*) {B : Type*} [CommRing A] [CommRing B] [Algebra A B]
     ¬ P ^ Ideal.ramificationIdx' p P ∣ differentIdeal A B :=
   not_pow_ramificationIdx_dvd_differentIdeal A hp P he
 
-#print axioms solution

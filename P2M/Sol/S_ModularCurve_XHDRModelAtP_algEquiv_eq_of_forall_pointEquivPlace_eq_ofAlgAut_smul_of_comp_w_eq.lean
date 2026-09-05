@@ -59,4 +59,3 @@ theorem solution
   have hx := congrArg (fun g : SemilinearAut (AlgebraicClosure ℚ) ↥(xHFunctionFieldBar M H) => g • x) h
   simpa only [SemilinearAut.ofAlgAut_smul] using hx
 
-#print axioms solution

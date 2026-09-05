@@ -323,4 +323,3 @@ theorem solution
   rw [hsplit, map_mul, map_mul]
   exact mul_ne_zero (hres_const e⁻¹ he'A hvinv hconst') (mul_ne_zero hres_pow hres_zpow)
 
-#print axioms solution

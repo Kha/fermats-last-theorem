@@ -79,5 +79,4 @@ theorem solution
   intro T _ _ φ
   exact hstar T φ
 
-#print axioms solution
 #check @solution

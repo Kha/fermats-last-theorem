@@ -163,4 +163,3 @@ theorem solution
     Algebra.FiniteType R Γ(T, W) :=
   finiteType_algebraOfHom_aux t W hW
 
-#print axioms solution

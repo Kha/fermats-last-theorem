@@ -199,4 +199,3 @@ theorem solution
   have := congrArg (fun w : ↥(qExpFunctionFieldC K (CohCarrier.GammaH N H)) => (w : LaurentSeries K)) main
   exact this.symm.symm
 
-#print axioms solution

@@ -59,4 +59,3 @@ theorem solution (R : Type u) [CommRing R] (M : Type v) [AddCommGroup M] [Finite
     Algebra.Etale R (CartierDual R (AddMonoidAlgebra R M)) :=
   Algebra.Etale.of_equiv (AlgEquiv.ofBijective (MultEtale.ev R M) (MultEtale.ev_bijective R M)).symm
 
-#print axioms solution

@@ -78,4 +78,3 @@ theorem solution (N : ℕ) [NeZero N]
       η * divNaiveHeight N K g' D - C ≤ JZero.heightForm N s D :=
   HeightFormLowerAux.transfer_h N K hN hN5 g' s hs
 
-#print axioms solution

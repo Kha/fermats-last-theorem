@@ -802,4 +802,3 @@ theorem solution
     intro g
     simp
 
-#print axioms solution

@@ -27,4 +27,3 @@ theorem solution
     (AlgebraicCurve.TwoChartIntegralModel.exists_isAffineOpen_forall_mem_of_finset R F j) U
     ((toBase R F j) ⁻¹ᵁ (V : (Spec (CommRingCat.of R)).Opens)) S hS
 
-#print axioms solution

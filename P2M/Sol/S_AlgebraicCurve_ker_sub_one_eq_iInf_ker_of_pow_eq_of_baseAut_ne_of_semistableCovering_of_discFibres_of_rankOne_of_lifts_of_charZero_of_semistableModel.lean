@@ -106,4 +106,3 @@ theorem solution
     rw [LinearMap.smul_apply, hv, smul_zero]
   · exact iInf₂_le s₀ hs₀
 
-#print axioms solution

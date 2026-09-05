@@ -529,4 +529,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_AlgebraicGeometry_eulerChar_sectionsOf_le_one_sub_genusFF_sub_natCard_not_isRegularLocalRing.PAGEGSAux"
 
-#print axioms solution

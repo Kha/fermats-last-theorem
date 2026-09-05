@@ -80,4 +80,3 @@ theorem solution
   rw [e0.finrank_eq, e1.finrank_eq] at hcut
   linarith
 
-#print axioms solution

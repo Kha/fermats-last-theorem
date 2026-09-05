@@ -322,4 +322,3 @@ theorem solution
     show φ₀ k * FlatFamilyThroughSection.hpow (s - s₀) k = φ₀ k * FlatFamilyThroughSection.hpow (s' - s₀) k
     rw [FlatFamilyThroughSection.hpow_of_inK _ ⟨hk1, hk2⟩, FlatFamilyThroughSection.hpow_of_inK _ ⟨hk1, hk2⟩]
 
-#print axioms solution

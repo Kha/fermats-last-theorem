@@ -520,4 +520,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (w : Place K F)
       φ t = HahnSeries.single (1 : ℤ) (1 : K) ∧ ∀ x : F, (φ x).order = w.ord x :=
   AlgebraicCurve.Place.exists_algHom_laurentSeries_of_deg_eq_one w hw t ht
 
-#print axioms solution

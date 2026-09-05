@@ -181,4 +181,3 @@ theorem solution
       (Scheme.Modules.pullback g₀).mapIso eN ≪≫ eBC ≪≫ Scheme.Modules.normModuleMapIso _ d eL
   exact ⟨e1 ≪≫ (Scheme.Modules.pullback (baseChangeSnd c a)).mapIso eT ≪≫ eR ≪≫ Scheme.Modules.rigidifyMapIso _ _ e4⟩
 
-#print axioms solution

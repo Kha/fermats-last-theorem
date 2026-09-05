@@ -92,4 +92,3 @@ theorem solution
       AlgebraicGeometry.isReduced_of_smooth_of_field (pullback.snd (pullback.snd (toBase p (ΓM M H) hj) z) y)
     exact isReduced_of_isOpenImmersion (pullbackLeftPullbackSndIso (toBase p (ΓM M H) hj) z y).inv
 
-#print axioms solution

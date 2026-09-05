@@ -101,4 +101,3 @@ theorem solution
     Module.FaithfullyFlat.of_comap_surjective hsurj
   exact Algebra.FinitePresentation.of_faithfullyFlat_of_finitePresentation (Γ(Z, U) : Type u) (Γ(Y, V) : Type u) (Γ(T, ⊤) : Type u)
 
-#print axioms solution

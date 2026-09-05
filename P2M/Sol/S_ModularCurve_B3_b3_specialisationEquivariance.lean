@@ -2401,4 +2401,3 @@ theorem solution (p : ℕ) [Fact p.Prime] [NeZero p] (j₀ : Qbar) :
           SameOrbit (WeierstrassCurve.ofJ j₀) (β G).1 (β G').1 :=
   ModularCurve.B3.b3_specialisationEquivariance p j₀
 
-#print axioms solution

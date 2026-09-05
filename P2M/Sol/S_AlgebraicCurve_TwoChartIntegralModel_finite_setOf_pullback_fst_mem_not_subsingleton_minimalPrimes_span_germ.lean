@@ -340,4 +340,3 @@ theorem solution
     rw [h1]; exact hz
   · rw [← Scheme.Hom.comp_apply, Iso.inv_hom_id]; rfl
 
-#print axioms solution

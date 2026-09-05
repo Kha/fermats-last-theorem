@@ -175,8 +175,6 @@ end M4aP3B.Rows.SliceTensor
 
 end
 
-#print axioms M4aP3B.Rows.SliceTensor.comp_mul_unipotentGL2_mul_mem_pureTensorSet_impl
-#print axioms M4aP3B.Rows.SliceTensor.gate_unipotentGL2_one_ne_one
 
 theorem solution
     (F : Type) [Field F] [NumberField F]

@@ -40,4 +40,3 @@ theorem solution
   refine Finset.sum_congr rfl fun i _ => ?_
   rw [hbA, Algebra.TensorProduct.tmul_mul_tmul, mul_one, key]
 
-#print axioms solution

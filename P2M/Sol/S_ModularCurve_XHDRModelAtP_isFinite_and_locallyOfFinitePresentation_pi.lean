@@ -617,4 +617,3 @@ theorem solution
     · show LocallyOfFinitePresentation (pullback.snd 𝔛.π.1 (ιInf p (ΓN p M H hpM) hj)); rw [hI]; infer_instance
     · show LocallyOfFinitePresentation (pullback.snd 𝔛.π.1 (ιFin p (ΓN p M H hpM) hj)); rw [hF]; infer_instance
 
-#print axioms solution

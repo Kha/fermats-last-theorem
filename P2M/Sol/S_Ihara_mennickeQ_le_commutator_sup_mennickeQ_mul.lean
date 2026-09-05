@@ -990,4 +990,3 @@ theorem solution (q : ℕ) [NeZero q] (m' m'' : ℕ) [NeZero m']
     Ihara.mennickeQ q m'' ≤ ⁅Ihara.mennickeQ q m'', Ihara.mennickeQ q m''⁆ ⊔ Ihara.mennickeQ q (m' * m'') :=
   Ihara.mennickeQ_le_commutator_sup_mennickeQ_mul_impl q m' m'' hcop hm'q hm''q hmq hm'n hsat
 
-#print axioms solution

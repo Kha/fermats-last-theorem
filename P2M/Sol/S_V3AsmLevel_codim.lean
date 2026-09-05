@@ -182,4 +182,3 @@ theorem solution (N₀ q : ℕ) [NeZero N₀] [Fact q.Prime] (hqN : ¬ q ∣ N�
     (fun e he o ho hmax => MvPolynomial.CrossingQuotient.Resolution.exists_eq_lineUGen_of_toCrossing_eq_vertexPt_of_forall_specializes
       ((q : ℕ) : O) e (IsLocalRing.maximalIdeal O) (V3AsmLevel.p_mem_maximalIdeal O hϖ) he o ho hmax) hξ
 
-#print axioms solution

@@ -85,4 +85,3 @@ theorem solution
   rw [hneg, Pi.neg_apply, ← hsum]
   linarith
 
-#print axioms solution

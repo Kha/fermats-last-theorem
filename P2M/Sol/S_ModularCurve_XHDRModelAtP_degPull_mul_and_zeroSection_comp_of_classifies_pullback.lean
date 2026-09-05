@@ -65,4 +65,3 @@ theorem solution
   · rw [huniq i]; exact hmul i s x y
   · rw [huniq i]; exact hzero i
 
-#print axioms solution

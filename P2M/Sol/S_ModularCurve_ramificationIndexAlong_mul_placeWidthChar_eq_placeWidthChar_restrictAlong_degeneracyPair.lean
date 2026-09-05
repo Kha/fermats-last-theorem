@@ -202,4 +202,3 @@ theorem solution
   · exact transport_of_jNGeomGen q' hq'M hq'Ms (φ 1) (hφ 1) hgen1 ↑p p.2 hvss (hdvd hq'Ms p.2)
       (hdvd hq'M hvss)
 
-#print axioms solution

@@ -525,4 +525,3 @@ theorem solution
 
   exact SSBottomAsm.forall_minimalPrimes_span_le_of_algEquiv e ϖ y htrans
 
-#print axioms solution

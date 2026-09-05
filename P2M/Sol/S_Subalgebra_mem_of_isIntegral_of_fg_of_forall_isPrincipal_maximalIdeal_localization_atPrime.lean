@@ -42,4 +42,3 @@ theorem solution
   rw [← hm]
   exact m.2
 
-#print axioms solution

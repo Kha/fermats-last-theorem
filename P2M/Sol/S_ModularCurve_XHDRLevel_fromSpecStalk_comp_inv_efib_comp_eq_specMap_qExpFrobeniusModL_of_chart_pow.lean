@@ -729,4 +729,3 @@ theorem solution
   rw [← hπMdef]
   exact fromSpecStalk_comp_eq_of_fieldMap_eq πM hξ Fc hB
 
-#print axioms solution

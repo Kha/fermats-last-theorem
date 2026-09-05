@@ -100,4 +100,3 @@ theorem solution
   · exact ModularCurve.XHDRModelAtP.exists_hasValue_residue_pair_of_mem_ssNodePairs_of_orderLawFixed_of_prolongationDatum
       p M H hpM hpM2 hHp hj 𝔛 A hA ρ hρ pb hpb δ hδ SS hSS θ hwgen α hα hβ hα_coe Psp Rpd hcomp hO
 
-#print axioms solution

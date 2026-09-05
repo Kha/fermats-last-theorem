@@ -188,7 +188,6 @@ theorem LanglandsTunnell.ExplicitLift.exists_mem_closure_map_red_eq_of_det_ne_ze
   obtain ⟨M, hM, hMg⟩ := List.mem_map.1 (mem_map_redc_K48_of_det_ne_zero g hg)
   exact ⟨M, (mem_closure_iff_mem_K48 M).2 hM, by rw [map_red_eq_map_redc]; exact hMg⟩
 
-#print axioms LanglandsTunnell.ExplicitLift.exists_mem_closure_map_red_eq_of_det_ne_zero_impl
 
 theorem solution (g : Matrix (Fin 2) (Fin 2) (ZMod 3))
     (hg : g.det ≠ 0) :

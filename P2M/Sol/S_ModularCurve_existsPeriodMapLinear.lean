@@ -73,4 +73,3 @@ theorem solution (N : ℕ) : ModularCurve.ExistsPeriodMapLinear N := by
                exact ModularCurve.periodMap_smul c f },
       fun _ => rfl⟩
 
-#print axioms solution

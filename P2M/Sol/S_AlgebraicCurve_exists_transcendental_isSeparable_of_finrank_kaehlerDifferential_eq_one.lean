@@ -52,4 +52,3 @@ theorem solution
   have hKF : Algebra.IsAlgebraic K F := Algebra.IsAlgebraic.trans (R := K) (S := K⟮t⟯) (A := F)
   exact Algebra.transcendental_iff_not_isAlgebraic.mp ‹Algebra.Transcendental K F› hKF
 
-#print axioms solution

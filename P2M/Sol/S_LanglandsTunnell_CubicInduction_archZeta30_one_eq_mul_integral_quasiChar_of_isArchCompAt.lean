@@ -212,4 +212,3 @@ theorem solution
   unfold archZeta30
   rw [h1, hint]
 
-#print axioms solution

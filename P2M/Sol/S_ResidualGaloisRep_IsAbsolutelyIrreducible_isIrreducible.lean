@@ -14,4 +14,3 @@ theorem solution {k : Type} [Field k] {ρ : ResidualGaloisRep k}
     (Representation.isIrreducible_of_span_range_eq_top ρ.ρ
       ((ResidualGaloisRep.isAbsolutelyIrreducible_iff_span_eq_top ρ).mp h))
 
-#print axioms solution

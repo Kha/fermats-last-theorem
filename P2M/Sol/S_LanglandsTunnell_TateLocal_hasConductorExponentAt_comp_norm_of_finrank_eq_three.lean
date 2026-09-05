@@ -309,4 +309,3 @@ theorem solution
       _ ≤ v.asIdeal.ramificationIdx' w.1.asIdeal * (c - 2) + 1 :=
           Nat.add_le_add_right (Nat.mul_le_mul_right _ he2) 1
       _ ≤ a := hlt
-#print axioms solution

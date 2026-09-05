@@ -174,4 +174,3 @@ theorem solution
   obtain ⟨hflβ, hdβ⟩ := hrest πβ _ inferInstance inferInstance hrkβ
   exact ⟨hfinα, hfinβ, hlfpα, hlfpβ, hflα, hflβ, hdα, hdβ⟩
 
-#print axioms solution

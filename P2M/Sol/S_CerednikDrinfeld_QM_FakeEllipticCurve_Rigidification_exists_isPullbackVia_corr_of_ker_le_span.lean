@@ -286,4 +286,3 @@ theorem solution
   refine ⟨ρ, ρ₀, ⟨ub, uA, hub, hubg, huA, huAg, rfl, hgφ⟩, 𝟙 _, by simp, by simp, 𝟙 _, isPullbackVia_refl _, by simp,
     0, 0, by simp only [Category.id_comp]⟩
 
-#print axioms solution

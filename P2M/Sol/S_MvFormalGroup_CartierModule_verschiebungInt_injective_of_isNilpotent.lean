@@ -140,4 +140,3 @@ theorem solution
     exact eq_zero_of_subst_frobPolyFam_eq_zero hp _ hj
   exact sub_eq_zero.mp hzero
 
-#print axioms solution

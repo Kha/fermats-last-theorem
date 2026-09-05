@@ -2962,4 +2962,3 @@ theorem solution
       A.valuation (c₁ / c₂) ^ e' = A.valuation (((q : ℕ) : AlgebraicClosure ℚ)) ^ (G (e' * ew) - G 0) := by
   exact SlopeLaw.nodeGauss_scaled R hqN hmodel hO W₀ hW₀ hreg hval K K' hKK' w hw hwφ hVI hBB' ϖ hϖ eK heK ε hε hqϖ c ew hew e' he' u hu hxy hmax hmax' hbr hres depth f hf hfK hfrac c₁ c₂ h₁ hu₁ h₂ hu₂ hc₁ hc₂ hc₁0 hc₂0 D hDf hdepth hN
 
-#print axioms solution

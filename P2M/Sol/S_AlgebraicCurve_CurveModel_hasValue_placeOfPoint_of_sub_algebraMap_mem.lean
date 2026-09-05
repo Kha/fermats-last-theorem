@@ -137,4 +137,3 @@ theorem solution
         ((G.appIso ⊤).inv ((Scheme.ΓSpecIso (CommRingCat.of B)).inv f)))) a :=
   AlgebraicCurve.CurveModel.PlaceRead.hasValue_placeOfPoint_of_sub_algebraMap_mem M G hG z hz f a hfa
 
-#print axioms solution

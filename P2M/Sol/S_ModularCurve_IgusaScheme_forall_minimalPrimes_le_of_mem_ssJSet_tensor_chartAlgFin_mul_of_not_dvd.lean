@@ -184,4 +184,3 @@ theorem solution
   · exact both.1
   · exact both.2
 
-#print axioms solution

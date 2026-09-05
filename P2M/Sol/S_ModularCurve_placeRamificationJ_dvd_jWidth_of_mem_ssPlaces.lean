@@ -88,4 +88,3 @@ theorem solution
   exact toNat_ord_dvd_jWidth_of_eq_full K N hNK h2 h3 (modularFunctionFieldC K N) hCF
     (jqModC_mem K N) w (w.evalAt (jGeomGen K N)) hne hpos
 
-#print axioms solution

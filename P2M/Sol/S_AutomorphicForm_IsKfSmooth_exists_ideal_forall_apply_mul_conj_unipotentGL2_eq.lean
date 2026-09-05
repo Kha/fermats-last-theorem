@@ -325,4 +325,3 @@ theorem solution
     (KfLevelSol.glFin_conj_unipotentGL2_sub_one_mem x hx htN)
     (KfLevelSol.glFin_conj_unipotentGL2_inv_sub_one_mem x hx htN) g⟩
 
-#print axioms solution

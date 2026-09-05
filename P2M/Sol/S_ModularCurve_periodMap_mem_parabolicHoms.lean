@@ -76,4 +76,3 @@ theorem solution {N : ℕ} (R : Type*) [Semiring R] [Module R ℂ]
   rw [periodMap_eq_periodHom hFe hFf, mem_parabolicHoms_iff]
   exact hFe.isParabolicHom_periodHom hFlim
 
-#print axioms solution

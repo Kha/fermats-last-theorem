@@ -136,4 +136,3 @@ theorem solution (b : ℝ) (hb : 0 < b) (N : ℝ) :
       mellin (fun w : ℝ => ((w ^ N * Real.exp (-(b * (w ^ 2 + (w ^ 2)⁻¹))) : ℝ) : ℂ)) (x : ℂ) = (r : ℂ) :=
   ⟨fun s => mellinConvergent_kb hb N s, fun x => ⟨_, mellin_kb_re_pos hb N x, mellin_kb_ofReal hb N x⟩⟩
 
-#print axioms solution

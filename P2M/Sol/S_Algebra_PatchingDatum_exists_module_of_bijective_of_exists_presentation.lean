@@ -33,4 +33,3 @@ theorem solution
   obtain ⟨P⟩ := Algebra.PatchingDatum.nonempty_of_exists_presentation_of_free ℓ hCI' T
   exact ⟨T, inferInstance, instRT, inferInstance, inferInstance, fun _ _ => rfl, n, ⟨P⟩⟩
 
-#print axioms solution

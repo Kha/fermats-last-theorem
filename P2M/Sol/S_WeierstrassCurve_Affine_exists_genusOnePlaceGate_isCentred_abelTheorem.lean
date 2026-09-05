@@ -388,4 +388,3 @@ theorem solution {F : Type*} [Field F] [DecidableEq F] [IsAlgClosed F]
         @WeierstrassCurve.Affine.AbelTheorem F _ _ W g :=
   D5S.main_impl
 
-#print axioms solution

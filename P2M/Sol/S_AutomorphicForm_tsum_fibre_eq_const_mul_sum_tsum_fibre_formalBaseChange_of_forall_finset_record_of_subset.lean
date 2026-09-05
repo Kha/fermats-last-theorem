@@ -189,4 +189,3 @@ theorem solution
   rw [div_mul_eq_mul_div, eq_div_iff hbandL]
   linear_combination -hlim
 
-#print axioms solution

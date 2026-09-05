@@ -1136,4 +1136,3 @@ theorem solution
     refine Finset.sum_congr rfl fun mj _ => ?_
     rw [one_zpow, mul_one, ← cpow_neg_int_mul (Ideal.absNorm p.asIdeal) mj.1 s]
 
-#print axioms solution

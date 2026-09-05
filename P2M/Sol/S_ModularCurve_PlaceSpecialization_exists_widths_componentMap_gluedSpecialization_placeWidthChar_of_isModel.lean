@@ -776,7 +776,6 @@ theorem solution (N q : ℕ) [NeZero N] (hq : q.Prime) (hqN : ¬ q ∣ N)
           N q hq hqN A hA W hW data hKr hα hβ P R hmodel hreg hnv hO K hK))
     (GluedAssembly.exists_gluedSpecialization hqN P R hmodel hO W (fun w hw => (hW w).mp hw) hWne hreg hnv)
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_exists_widths_componentMap_gluedSpecialization_placeWidthChar_of_isModel.GoodClassSubgroup"

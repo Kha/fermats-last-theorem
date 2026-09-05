@@ -115,4 +115,3 @@ theorem solution
   exact ⟨Z', hZ', hne, InvolSwapAux.mapsTo_of_ι_comp_eq U φ τ hUτ (fun x hx => (hval x hx).2) hZ
     (isClosed_of_mem_irreducibleComponents Z' hZ') hmaps⟩
 
-#print axioms solution

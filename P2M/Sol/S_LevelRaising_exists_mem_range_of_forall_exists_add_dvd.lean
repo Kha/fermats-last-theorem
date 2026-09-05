@@ -137,4 +137,3 @@ theorem solution
       ∃ x : C₁, (Polynomial.aeval τ₀ s) h = β x :=
   LevelRaisingAux.LocalNakayama.exists_mem_range_of_forall_exists_add_dvd τ₁ τ₀ β hβτ a hyp
 
-#print axioms solution

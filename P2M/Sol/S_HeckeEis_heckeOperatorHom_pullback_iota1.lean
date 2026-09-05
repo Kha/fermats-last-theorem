@@ -556,4 +556,3 @@ theorem solution (N q ℓ : ℕ) [NeZero ℓ] {A : Type*} [AddCommGroup A]
       heckeOperatorHom (N * q) ℓ A (pullbackHom (Ihara.ι₁ N q) φ) :=
   HeckeEis.heckeOperatorHom_pullback_iota1_impl N q ℓ hℓ hℓq φ
 
-#print axioms solution

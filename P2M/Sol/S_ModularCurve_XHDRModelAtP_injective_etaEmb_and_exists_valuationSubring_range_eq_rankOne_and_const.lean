@@ -1659,4 +1659,3 @@ theorem solution
         algebraMap (IsLocalRing.ResidueField ↥Pl) ↥(ModularCurve.qExpFunctionFieldC (IsLocalRing.ResidueField ↥Pl) (ΓN p M H hpM)) (IsLocalRing.residue ↥Pl a)) := by
   refine ⟨EtaValPieces.etaEmb_injective p M hpM hpM2 H hHp Pl hPl hj 𝔛 ρ hρ gA hgA₁ hgA₂ bc hbc₁ hbc₂ hsp, EtaVal.E2 p M hpM hpM2 H hHp Pl hPl hj 𝔛 ρ hρ gA hgA₁ hgA₂ bc hbc₁ hbc₂ hsp, fun a => ⟨EtaValPieces.etaEmb_const p M hpM hpM2 H hHp Pl hPl hj 𝔛 ρ hρ gA hgA₁ hgA₂ bc hbc₁ hbc₂ hsp a, EtaValPieces.etaRes_const p M hpM hpM2 H hHp Pl hPl hj 𝔛 ρ hρ gA hgA₁ hgA₂ bc hbc₁ hbc₂ hsp a⟩⟩
 
-#print axioms solution

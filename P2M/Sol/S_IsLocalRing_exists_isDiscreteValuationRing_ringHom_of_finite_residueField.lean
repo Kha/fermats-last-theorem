@@ -173,4 +173,3 @@ theorem solution
     ext a
     simp only [σ, RingHom.comp_apply, hτof, hψι]
 
-#print axioms solution

@@ -681,4 +681,3 @@ theorem solution
   exact ((congrArg (fun t => O.ptsSp.symm (GoodReductionJacobian.schemeHomOverComp τ.1 τ.2 t)) (O.ptsSp.apply_symm_apply y)).symm.trans
     ((hΨ _).symm.trans key))
 
-#print axioms solution

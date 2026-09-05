@@ -749,4 +749,3 @@ theorem solution
   refine setIntegral_congr_fun measurableSet_Ioi fun y₂ _ => ?_
   simp only [TT, mul_pow]
 
-#print axioms solution

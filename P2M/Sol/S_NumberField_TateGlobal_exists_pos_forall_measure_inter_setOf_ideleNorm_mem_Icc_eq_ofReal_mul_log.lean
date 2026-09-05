@@ -77,4 +77,3 @@ theorem solution
     exact_mod_cast h
   rw [← ENNReal.ofReal_toReal hfin.ne, hval]
 
-#print axioms solution

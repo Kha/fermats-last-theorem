@@ -1445,11 +1445,3 @@ theorem solution
       obtain ⟨v, φ, hfin, -, heq⟩ := M4aHerbrand.AdeleBaseChange.exists_arch_corner B w
       exact ⟨v, φ, hfin, heq⟩⟩
 
-#print axioms solution
-#print axioms M4aHerbrand.adeleBaseChange_fin_rigidity
-#print axioms M4aHerbrand.AdeleBaseChange.exists_arch_corner
-#print axioms M4aHerbrand.AdeleBaseChange.beta_snd_apply_eq
-#print axioms M4aHerbrand.archRigid_of_corner
-#print axioms M4aHerbrand.LocalRigidity.eq_adicCompletionSemialgHom
-#print axioms M4aHerbrand.LocalRigidity.under_eq_of_compat
-#print axioms M4aHerbrand.ArchRigidityCore.exists_ringEquiv_comp

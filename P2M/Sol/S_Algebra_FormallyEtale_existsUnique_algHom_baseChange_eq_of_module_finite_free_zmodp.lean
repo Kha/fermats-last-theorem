@@ -58,4 +58,3 @@ theorem solution
   apply EtqLiftE96.mem_span_of_one_tmul_eq_zero p hk hker T
   rw [TensorProduct.tmul_sub, h, sub_self]
 
-#print axioms solution

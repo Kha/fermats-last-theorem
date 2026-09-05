@@ -222,4 +222,3 @@ theorem solution (N : ℕ)
       (UpperHalfPlane.qExpansion 1 ((⇑f : UpperHalfPlane → ℂ) ∣[k] W)).coeff n) :=
   BDFricke.main N f a hf W hW
 
-#print axioms solution

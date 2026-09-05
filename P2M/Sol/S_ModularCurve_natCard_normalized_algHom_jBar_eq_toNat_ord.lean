@@ -101,4 +101,3 @@ theorem solution (N : ℕ) [NeZero N]
       (w.ord (jBar N - algebraMap (AlgebraicClosure ℚ) (modularFunctionFieldBar N) j₀)).toNat :=
   ModularCurve.natCard_normalized_algHom_jBar_eq_toNat_ord N j₀
 
-#print axioms solution

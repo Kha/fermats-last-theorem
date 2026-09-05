@@ -390,4 +390,3 @@ theorem solution
       simp only [hsheet] at IH'
       split_ifs at IH' with hs <;> omega
 
-#print axioms solution

@@ -70,4 +70,3 @@ theorem solution
     show (pullback.fst F.gN r).base (pt.base ξ) = _
     rw [pointOfClosedPoint_apply]
 
-#print axioms solution

@@ -57,4 +57,3 @@ theorem solution
       isOpen_Ioi.preimage (Complex.continuous_re.comp (hcont σ hσ))
     exact lt_of_lt_of_le (hopen _ hop (hpt σ hσ)) (measure_mono hsub)
 
-#print axioms solution

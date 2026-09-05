@@ -127,5 +127,4 @@ theorem solution
 
 end
 
-#print axioms solution
 #check @solution

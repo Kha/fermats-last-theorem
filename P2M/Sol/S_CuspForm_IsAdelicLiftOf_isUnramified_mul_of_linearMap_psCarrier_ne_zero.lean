@@ -191,4 +191,3 @@ theorem solution
     LocalNewvector.IsUnramified q (μ₁ * μ₂) :=
   FrobLineAIILight.isUnramified_mul_of_linearMap_psCarrier_ne_zero g q Φ hgΦ μ₁ μ₂ f hf hne
 
-#print axioms solution

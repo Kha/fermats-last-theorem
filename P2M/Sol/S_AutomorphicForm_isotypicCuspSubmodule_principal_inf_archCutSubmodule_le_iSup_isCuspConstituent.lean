@@ -98,4 +98,3 @@ theorem solution
     AutomorphicForm.CuspidalConstituent.mem_iSup_isCuspConstituent_of_mem_isotypicCuspSubmodule_principal_inf_archCutSubmodule_of_rightConv_eq_smul
       F c u d₁ d₂ T hd hcov ξ N hN S tys Ψ f hf (lam i) (hlam i) (ψ i) (hψ i).1 (hψ i).2
 
-#print axioms solution

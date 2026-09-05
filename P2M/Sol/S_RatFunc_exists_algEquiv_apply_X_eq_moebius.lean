@@ -65,4 +65,3 @@ end RatFunc
 theorem solution {K : Type*} [Field K] (a b c d : K) (hdet : a * d - b * c ≠ 0) : ∃ φ : RatFunc K ≃ₐ[K] RatFunc K, φ RatFunc.X = (RatFunc.C a * RatFunc.X + RatFunc.C b) / (RatFunc.C c * RatFunc.X + RatFunc.C d) :=
   RatFunc.moebius_aux a b c d hdet
 
-#print axioms solution

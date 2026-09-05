@@ -32,4 +32,3 @@ theorem solution
     (h : f ≫ q = g ≫ q) (hFin : ιFin R F j ≫ f = ιFin R F j ≫ g) : f = g :=
   PinsBody.hom_ext R F j f g q h hFin
 
-#print axioms solution

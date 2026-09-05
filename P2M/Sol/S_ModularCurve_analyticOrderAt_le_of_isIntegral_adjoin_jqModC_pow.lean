@@ -406,4 +406,3 @@ theorem solution (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.Fin
   exact ANb.core m (ANb.ofMF g (ANb.one_mem_strictPeriods_of_T_mem hT)) (ANb.ofMF h (ANb.one_mem_strictPeriods_of_T_mem hT))
     X hX h₁' τ
 
-#print axioms solution

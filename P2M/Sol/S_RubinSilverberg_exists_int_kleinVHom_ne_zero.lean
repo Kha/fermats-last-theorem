@@ -57,4 +57,3 @@ open RubinSilverberg in
 theorem solution {K : Type*} [Field K] [CharZero K] (β γ u₀ : K) (hV : kleinV u₀ ≠ 0) : ∃ l : ℤ, kleinVHom (β + l * u₀) (γ + l) ≠ 0 :=
   Slope.exists_int_kleinVHom_ne_zero β γ u₀ hV
 
-#print axioms solution

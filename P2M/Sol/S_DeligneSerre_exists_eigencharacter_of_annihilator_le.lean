@@ -97,4 +97,3 @@ theorem solution
       ∃ x : V, x ≠ 0 ∧ ∀ t : T, t • x = ((χ t : integralClosure ℤ ℂ) : ℂ) • x :=
   DeligneSerre.exists_eigencharacter_of_annihilator_le_impl (𝔪 := 𝔪) (hsupp := hsupp)
 
-#print axioms solution

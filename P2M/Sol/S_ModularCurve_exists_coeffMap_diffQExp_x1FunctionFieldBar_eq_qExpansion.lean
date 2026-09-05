@@ -31,4 +31,3 @@ theorem solution
   rw [← ModularCurve.qExpansionDiffAlong_val_eq_diffQExp]
   exact hω
 
-#print axioms solution

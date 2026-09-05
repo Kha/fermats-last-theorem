@@ -2986,7 +2986,6 @@ theorem solution :
       integral_mul_splitTransform_bracket_eq_zero_of_not_two_dvd hneg hpar
         (fun t => (Real.sinh (((j : ℝ) - 1) * |t|) : ℂ)) r, mul_zero]
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_AutomorphicForm_GL2Real_exists_intervalIntegral_ellipticTransform_mul_chebyshevU_eq_of_le_weight.FLT P2MW.S_AutomorphicForm_GL2Real_exists_intervalIntegral_ellipticTransform_mul_chebyshevU_eq_of_le_weight.FLT.BandStripFubini"

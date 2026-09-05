@@ -731,4 +731,3 @@ theorem solution (R E F : Type*) [CommRing R] [IsDedekindDomain R] [Field E] [Fi
     Subsingleton (M4aHerbrand.IdeleGaloisDescent R E F) :=
   M4aHerbrandSolUniq.subsingleton_ideleGaloisDescent_impl R E F
 
-#print axioms solution

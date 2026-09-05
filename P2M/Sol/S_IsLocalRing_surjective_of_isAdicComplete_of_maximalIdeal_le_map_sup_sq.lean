@@ -32,4 +32,3 @@ theorem solution
   rw [RingHom.comp_apply, eq_comm, Ideal.Quotient.mk_eq_mk_iff_sub_mem, ← heq]
   exact hr
 
-#print axioms solution

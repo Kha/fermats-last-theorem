@@ -1139,4 +1139,3 @@ theorem solution
   subst hsp hpic
   rfl
 
-#print axioms solution

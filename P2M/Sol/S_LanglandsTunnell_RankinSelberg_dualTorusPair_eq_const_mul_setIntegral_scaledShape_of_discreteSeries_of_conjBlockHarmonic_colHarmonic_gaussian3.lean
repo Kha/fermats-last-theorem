@@ -1050,4 +1050,3 @@ theorem solution
   simp_rw [integral_const_mul]
   rfl
 
-#print axioms solution

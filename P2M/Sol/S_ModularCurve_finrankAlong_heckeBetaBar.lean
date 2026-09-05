@@ -607,4 +607,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_finr
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] (A : ℕ) [NeZero A] (ℓ : ℕ) [hl : Fact (Nat.Prime ℓ)] : AlgebraicCurve.finrankAlong L (heckeBetaBar L A ℓ) = if ℓ ∣ A then ℓ else ℓ + 1 :=
   ModularCurve.finrankAlong_heckeBetaBar L A ℓ
 
-#print axioms solution

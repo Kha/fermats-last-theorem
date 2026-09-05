@@ -432,4 +432,3 @@ theorem solution
 
 end
 
-#print axioms solution

@@ -59,6 +59,5 @@ theorem _root_.P2MW.S_AlgebraicGeometry_Scheme_Modules_epi_sheafification_map_of
       exact ⟨V, homOfLE i, ⟨t, ht⟩, hxV⟩⟩
   exact PresheafOfModules.epi_sheafification_map_of_isLocallySurjective (𝟙 X.ringCatSheaf.obj) ψ
 
-#print axioms solution
 
 end AlgebraicGeometry.Scheme.Modules

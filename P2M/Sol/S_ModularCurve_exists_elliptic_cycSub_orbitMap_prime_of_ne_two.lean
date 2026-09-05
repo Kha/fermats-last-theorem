@@ -553,4 +553,3 @@ theorem solution (p : ℕ) [Fact p.Prime]
             Nat.card {H : CycSub E₀ p // f H = w} :=
   ModularCurve.exists_elliptic_cycSub_orbitMap_prime_of_ne_two p j₀ hp2
 
-#print axioms solution

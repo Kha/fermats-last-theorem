@@ -677,4 +677,3 @@ theorem solution
   exact GaloisDescent.exists_smul_eq_and_mk_eq (qExpFunctionFieldC ℚ (CohCarrier.GammaH M H)) hC hO
     (A.inertiaSubgroupIn ℚ) x (fun σ hσ => hx σ hσ)
 
-#print axioms solution

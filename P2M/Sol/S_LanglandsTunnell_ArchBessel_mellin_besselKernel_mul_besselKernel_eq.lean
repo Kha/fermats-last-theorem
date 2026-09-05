@@ -379,4 +379,3 @@ theorem solution (μ ν s : ℂ) (hs : |μ.re| + |ν.re| < s.re) :
           ring
       _ = _ := by rw [e5, hαd, hβd, hγd]
 
-#print axioms solution

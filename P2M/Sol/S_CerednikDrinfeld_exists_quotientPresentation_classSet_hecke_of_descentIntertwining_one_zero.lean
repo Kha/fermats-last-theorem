@@ -1564,4 +1564,3 @@ theorem solution
         (n' ℓ) (hn'T ℓ) (hS' ℓ) (hnorm' ℓ) (hsq' ℓ) (hnn' ℓ) (hsn' ℓ)
         (D none) (D (some ℓ)) cE₁ hwN eE'' hwL e₁ he2 (μF₁ (ℓ, 0)) (μF₁ (ℓ, 1)) h0 h1 z
 
-#print axioms solution

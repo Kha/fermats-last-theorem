@@ -467,4 +467,3 @@ theorem solution (n : ℕ) (Γ : Subgroup SL(2, ℤ))
     LinearIndependent ℂ (fun i => Ψ (y i)) :=
   HeckeEis.QCAux.linearIndependent_comp n Ψ hΨ y hy
 
-#print axioms solution

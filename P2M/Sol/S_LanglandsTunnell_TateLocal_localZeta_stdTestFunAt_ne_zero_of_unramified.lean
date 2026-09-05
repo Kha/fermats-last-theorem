@@ -39,4 +39,3 @@ theorem solution
     rw [← h, norm_one] at hn
     exact lt_irrefl _ hn
 
-#print axioms solution

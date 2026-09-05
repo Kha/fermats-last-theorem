@@ -74,4 +74,3 @@ theorem solution
   rw [heq]
   exact DeligneDatum.isPullback_pullback (K := ℚ_[p]) (p : ℤ_[p]) B g d
 
-#print axioms solution

@@ -56,4 +56,3 @@ theorem solution
     AddChar.inv_apply, WhittakerDuality.longWeyl3_mul_transposeInv3_upperUnipotent3, mul_assoc,
     _hW (-y) (-x) (x * y - z) (longWeyl3 * transposeInv3 g), show -y + -x = -(x + y) by ring]
 
-#print axioms solution

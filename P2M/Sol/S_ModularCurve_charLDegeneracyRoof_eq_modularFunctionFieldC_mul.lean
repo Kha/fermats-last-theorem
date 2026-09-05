@@ -42,4 +42,3 @@ theorem solution
     · exact Or.inl rfl
     · exact Or.inr (Or.inr (Or.inr rfl))
 
-#print axioms solution

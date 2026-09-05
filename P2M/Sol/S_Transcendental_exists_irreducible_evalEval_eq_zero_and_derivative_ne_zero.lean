@@ -165,4 +165,3 @@ theorem solution
     simpa using Algebra.IsAlgebraic.trdeg_le_cardinalMk K ({x₀} : Set F)
   exact G1.exists_irreducible_evalEval_eq_zero_and_derivative_ne_zero_of_trdeg_le_one h3 hz y
 
-#print axioms solution

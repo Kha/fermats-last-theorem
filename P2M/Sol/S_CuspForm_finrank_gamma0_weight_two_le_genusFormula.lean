@@ -19,4 +19,3 @@ theorem solution (N : ℕ) [NeZero N] :
     exact_mod_cast h1
   linarith
 
-#print axioms solution

@@ -769,4 +769,3 @@ theorem solution
             o.elim jf fun v => fricke ![v.1 0, (s : ZMod N) * v.1 1]) (P.map φ) τ :=
   FrickeCuspTransport.main L hL W hW fricke hfricke jf hjf K hK s hs φ hφ hk f P Q hQ0 hid
 
-#print axioms solution

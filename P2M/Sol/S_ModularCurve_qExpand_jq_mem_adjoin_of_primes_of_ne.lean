@@ -337,13 +337,4 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_ModularCurve_qExpand_jq_mem_adjoin_of_primes_of_ne.Key1"
 
-#print axioms Key1.map_eval₂_eq_slotMultiset_prod
-#print axioms Key1.coeffEmb_qExpand_mem_slotMultiset
-#print axioms Key1.exists_primitiveRoot_unit
-#print axioms Key1.data_exists
-#print axioms Key1.slotMultiset_nodup
-#print axioms Key1.slotMultiset_meet
-#print axioms Key1.mem_of_common_simple_root
-#print axioms Key1.map_map_specialize
-#print axioms solution
 #check @solution

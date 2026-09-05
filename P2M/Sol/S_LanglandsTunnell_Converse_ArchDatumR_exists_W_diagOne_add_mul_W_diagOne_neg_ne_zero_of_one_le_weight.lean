@@ -311,4 +311,3 @@ theorem solution
   refine lt_of_lt_of_le (hopen.measure_pos MeasureTheory.volume ⟨τ₁, hτ₁, hne₁⟩) (MeasureTheory.measure_mono ?_)
   exact fun τ hτ => ⟨hτ.1, hτ.2⟩
 
-#print axioms solution

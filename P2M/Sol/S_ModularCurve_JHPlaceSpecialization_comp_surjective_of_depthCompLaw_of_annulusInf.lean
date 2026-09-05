@@ -528,4 +528,3 @@ theorem solution
       exact SurjAux.eq_one_of_pow_eq_self hv0 hv1 h.symm
     exact SurjAux.widthTwo θ α hα hβ δ SS hSS Psp hFix e depth comp hlaw hdeg1 V₀ hV₀'.1 hV₀'.2 s Vs hVs3.1 hVs3.2.2 hVsfix hdepthVs
 
-#print axioms solution

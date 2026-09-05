@@ -327,4 +327,3 @@ theorem solution
     exact sub_eq_zero.mp (hγ.2.mul_left_eq_zero.mp hdet)
   exact ⟨a, fun i N => H i N, hprod⟩
 
-#print axioms solution

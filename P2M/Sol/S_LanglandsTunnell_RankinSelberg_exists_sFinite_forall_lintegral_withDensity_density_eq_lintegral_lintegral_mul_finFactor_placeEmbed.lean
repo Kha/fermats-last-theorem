@@ -635,4 +635,3 @@ theorem solution
     show Φ (splitAtHomeo v (x, k)) = Φ ((k : ↥(finiteAdelicGL2Subgroup ℚ)) * RSCarrier.finFactor (placeEmbed ℚ v x))
     rw [splitAtHomeo_apply, splitAt_apply, embAt_mul_comm, finFactor_placeEmbed]
 
-#print axioms solution

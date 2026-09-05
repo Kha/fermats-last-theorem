@@ -553,4 +553,3 @@ theorem solution
   show localAt ℚ v ((g₀ : AdelicGL2 (𝓞 ℚ) ℚ) * (k : AdelicGL2 (𝓞 ℚ) ℚ)⁻¹) = 1
   rw [map_mul, map_inv, hk2 v hvC, mul_inv_cancel]
 
-#print axioms solution

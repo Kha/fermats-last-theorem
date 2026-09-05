@@ -240,4 +240,3 @@ theorem solution
   · exact evalAt_jNGeomGen_eq_zero hqN (Or.inr (ringChar.eq K 3)) hw
       (eq_zero_of_mem_ssJSet_three _ hjss hpow)
 
-#print axioms solution

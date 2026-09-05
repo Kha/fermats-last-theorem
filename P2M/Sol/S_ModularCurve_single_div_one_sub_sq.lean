@@ -1648,4 +1648,3 @@ theorem solution (K : Type*) [Field K] (j : ℕ) (hj : 0 < j) (c : K) :
       HahnSeries.ofPowerSeries ℤ K (PowerSeries.mk fun n => if j ∣ n then ((n / j : ℕ) : K) * c ^ (n / j) else 0) :=
   ModularCurve.single_div_one_sub_sq K j hj c
 
-#print axioms solution

@@ -174,4 +174,3 @@ theorem solution
         (Spec.map (CommRingCat.ofHom (algebraMap κ (DualNumber κ))) ≫ x.1)
     rw [hx, ← Category.assoc, hrt, Category.id_comp]
 
-#print axioms solution

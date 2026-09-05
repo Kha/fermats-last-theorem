@@ -416,4 +416,3 @@ theorem solution
     · rw [ModularCurve.LevelPData.map_xQ]; exact hxq1
     · rw [ModularCurve.LevelPData.map_yQ]; exact hyq1
 
-#print axioms solution

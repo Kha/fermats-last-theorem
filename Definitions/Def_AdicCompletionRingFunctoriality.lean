@@ -215,11 +215,3 @@ end Equiv
 
 end AdicCompletion
 
-#print axioms AdicCompletion.mapₐ
-#print axioms AdicCompletion.mapₐ_of
-#print axioms AdicCompletion.mapₐ_id
-#print axioms AdicCompletion.mapₐ_comp
-#print axioms AdicCompletion.mapAlgEquiv
-#print axioms AdicCompletion.mapAlgEquivOfBijective
-#print axioms AdicCompletion.mapAlgEquivOfBijective_apply
-#print axioms AdicCompletion.mapₐ_bijective

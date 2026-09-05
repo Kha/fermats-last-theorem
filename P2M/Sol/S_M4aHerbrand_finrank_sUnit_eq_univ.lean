@@ -385,4 +385,3 @@ theorem solution (K : Type*) [Field K] [NumberField K]
     Module.finrank ℤ (Additive (S.unit K)) = Nat.card S + NumberField.Units.rank K :=
   ⟨inferInstance, M4aHerbrandSolH2.finrank_unit_eq (K := K) S⟩
 
-#print axioms solution

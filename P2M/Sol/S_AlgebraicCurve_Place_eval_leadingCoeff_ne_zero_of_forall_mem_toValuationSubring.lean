@@ -461,4 +461,3 @@ theorem solution
     rw [hH, natDegree_mul (C_ne_zero.mpr (X_sub_C_ne_zero z₀)) hu.ne_zero, natDegree_C,
       natDegree_eq_zero_of_isUnit hu]
 
-#print axioms solution

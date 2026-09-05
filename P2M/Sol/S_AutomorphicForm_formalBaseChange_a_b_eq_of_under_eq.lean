@@ -22,4 +22,3 @@ theorem solution
   simp only [formalBaseChange_a, formalBaseChange_b, h]
   rw [show (HeightOneSpectrum.under (𝓞 K) w').asIdeal = w'.asIdeal.under (𝓞 K) from rfl, hf]
 
-#print axioms solution

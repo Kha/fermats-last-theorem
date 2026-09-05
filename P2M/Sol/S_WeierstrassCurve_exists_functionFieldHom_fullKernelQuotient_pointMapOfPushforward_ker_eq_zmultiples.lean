@@ -910,4 +910,3 @@ theorem solution {F : Type*} [Field F] [DecidableEq F] [CharZero F] [IsAlgClosed
           = AddSubgroup.zmultiples Q :=
   WeierstrassCurve.exists_functionFieldHom_fullKernelQuotient_pointMapOfPushforward_ker_eq_zmultiples_aux hord hΔ'
 
-#print axioms solution

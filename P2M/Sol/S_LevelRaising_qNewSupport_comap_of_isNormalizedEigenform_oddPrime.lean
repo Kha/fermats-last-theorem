@@ -4198,7 +4198,6 @@ theorem solution
   exact LRf.Endgame.mem_comap_of_new_class hq' hq'N A p h𝔪 hp𝔪 χ₁ r ws hspan H hHpar hH₀ hH₁ hHne
     (fun i hi => by obtain ⟨ψ, hψ⟩ := hHU i hi; exact ⟨ψ, by rw [← hUM_apply]; exact hψ⟩)
 
-#print axioms solution
 
 end Assembly
 p2m_reactivate "P2MW.S_LevelRaising_qNewSupport_comap_of_isNormalizedEigenform_oddPrime.LRf P2MW.S_LevelRaising_qNewSupport_comap_of_isNormalizedEigenform_oddPrime.LRf.Engine P2MW.S_LevelRaising_qNewSupport_comap_of_isNormalizedEigenform_oddPrime.INHX2"

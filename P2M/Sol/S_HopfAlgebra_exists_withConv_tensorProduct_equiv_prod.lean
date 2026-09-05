@@ -85,4 +85,3 @@ theorem solution
   · rw [SolB5.tensorPointsEquiv_snd, SolB5.tensorPointsEquiv_snd]
     exact hfg ((1 : H₁) ⊗ₜ[R] z)
 
-#print axioms solution

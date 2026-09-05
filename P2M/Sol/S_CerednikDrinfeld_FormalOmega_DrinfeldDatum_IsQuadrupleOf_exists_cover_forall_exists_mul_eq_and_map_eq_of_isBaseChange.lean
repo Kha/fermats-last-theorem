@@ -340,4 +340,3 @@ theorem solution
   · rw [← map_mul, hab', IsScalarTower.algebraMap_apply 𝒪 B' L'r π]
     exact RingHom.congr_fun he' _
 
-#print axioms solution

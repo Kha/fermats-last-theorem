@@ -102,4 +102,3 @@ theorem solution
   change (k ≫ f₁).base w = _
   rw [hk]
 
-#print axioms solution

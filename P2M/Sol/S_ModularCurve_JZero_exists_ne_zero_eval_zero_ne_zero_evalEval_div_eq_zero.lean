@@ -78,4 +78,3 @@ theorem solution (N : ℕ) [NeZero N] {r : ℕ}
       (by rw [ModularCurve.CompEq.finrank_adjoin_jBar_eq_dedekindPsi N]; exact ModularCurve.c22_dedekindPsi_pos N)
   exact AlgebraicCurve.c22_exists_ne_zero_eval_zero_ne_zero_evalEval_eq_zero (jBar N) _ h hh
 
-#print axioms solution

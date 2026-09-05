@@ -156,4 +156,3 @@ theorem solution
   rw [← IsLocalRing.residue_eq_zero_iff]
   exact hdj
 
-#print axioms solution

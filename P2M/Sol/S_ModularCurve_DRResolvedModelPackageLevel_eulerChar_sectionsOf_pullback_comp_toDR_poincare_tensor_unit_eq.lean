@@ -64,4 +64,3 @@ theorem solution
 
   exact IsAlgEquivZero.eulerChar_sectionsOf_tensor_eq y 𝒲 _ (𝟙_ _) hL (Scheme.Modules.isInvertible_unit _) h2
 
-#print axioms solution

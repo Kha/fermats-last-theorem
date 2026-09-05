@@ -5277,4 +5277,3 @@ theorem solution
     (hφT1 := fun p hp => isCosetEigenfunction_mirabolicSeries _hsum (_hT1 p hp))
     (hφT2 := fun p hp => isCosetEigenfunction_mirabolicSeries _hsum (_hT2 p hp))
 
-#print axioms solution

@@ -41,4 +41,3 @@ theorem solution
     hF.cocycle - hG.cocycle ∈ HeckeEis.coeffCoboundaries ρ :=
   HeckeEis.SolMain.cob hF hG h
 
-#print axioms solution

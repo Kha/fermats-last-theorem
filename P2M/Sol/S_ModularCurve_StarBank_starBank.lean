@@ -450,4 +450,3 @@ theorem solution {K : Type*} [Field K] {ℓ : ℕ} [Fact ℓ.Prime]
     jqNModC K p ∉ IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)) :=
   ModularCurve.StarBank.starBank hpℓ
 
-#print axioms solution

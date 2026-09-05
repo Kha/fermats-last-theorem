@@ -51,4 +51,3 @@ theorem solution
   · rw [hslash]
     rfl
 
-#print axioms solution

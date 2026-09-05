@@ -53,4 +53,3 @@ theorem solution (N : ℕ) [NeZero N]
         ↥(modularFunctionFieldBar N) :=
   ModularCurve.sum_ord_jBar_sub_eq_finrank_aux N j₀ S hS
 
-#print axioms solution

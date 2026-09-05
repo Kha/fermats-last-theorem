@@ -851,5 +851,4 @@ theorem solution
   exact ends_leg red hker ha hq K ϖ hϖ eK ε hε hqϖ heK1 G' H' w hw hGH hpr1 hpr2 hnm1 hnm2 hsp1 hsp2 f c₀ hc₀ g hg l i j u hu hfac
 
 section Probes
-#print axioms solution
 end Probes

@@ -845,4 +845,3 @@ theorem solution
     (AutomorphicForm.exists_pos_setIntegral_prod_semiLocalComponent_eq_mul_prod_integral K L)
     S ψ φ ψa φa ψf φf ψS φS hψ hφ
 
-#print axioms solution

@@ -648,4 +648,3 @@ theorem solution
     ∃ I' : ℂ, IsTwistedOrbitalIntegralOn K L ℝ σ μL δ τ' φ I' := by
   exact exists_isTwistedOrbitalIntegralOn_of_isNormConjugator_of_isRegularSemisimple_of_field K L hdeg σ hσ ℝ ι μL hμL γ hγ δ y hy τ' hτ' φ hφc hφs
 
-#print axioms solution

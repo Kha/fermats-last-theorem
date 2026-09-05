@@ -6947,4 +6947,3 @@ theorem solution
     beta_reduce at this
     linear_combination this
 
-#print axioms solution

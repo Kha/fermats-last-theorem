@@ -176,4 +176,3 @@ theorem solution
     ∀ a : H', φ a = algebraMap R H (Coalgebra.counit a) :=
   RigidMult.main H H' φ hφ
 
-#print axioms solution

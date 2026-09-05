@@ -263,4 +263,3 @@ theorem solution
   obtain ⟨n, c, a, hsum⟩ := UnifCore.key3 p M H hpM hj 𝔛 A hA ρ hρ P hP (Localization.AtPrime 𝔮.asIdeal) ψ k1 k2 r
   exact ⟨hne, n, c, a, by rw [← hsum]; exact hord⟩
 
-#print axioms solution

@@ -166,4 +166,3 @@ theorem solution
   have hcoe : ((u : A) : L) = x ^ N * (((π : A) : L) ^ a)⁻¹ := by rw [hu]
   rw [hcoe, inv_mul_cancel_right₀ hπa]
 
-#print axioms solution

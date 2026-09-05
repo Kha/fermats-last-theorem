@@ -84,4 +84,3 @@ open RubinSilverberg in
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (b u₀ l : K) (x : F) : rsFamilyB (algebraMap K F b) (algebraMap K F u₀) (algebraMap K F l) x = Polynomial.aeval x (Polynomial.C (b / kleinT u₀) * kleinTHom (Polynomial.C (rsBeta u₀ + l * u₀) * Polynomial.X + Polynomial.C u₀) (Polynomial.C (rsGamma u₀ + l) * Polynomial.X + 1)) :=
   Glue.rsFamilyB_eq_aeval b u₀ l x
 
-#print axioms solution

@@ -761,4 +761,3 @@ p2m_reactivate "P2MW.S_AutomorphicForm_PseudoEisensteinSlab_eLpNorm_pseudoEisens
 
 #check @solution
 
-#print axioms solution

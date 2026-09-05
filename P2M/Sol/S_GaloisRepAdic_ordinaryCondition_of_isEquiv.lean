@@ -188,4 +188,3 @@ theorem solution
     (h : GaloisRep.ordinaryCondition 𝒪 p S ρ₁) : GaloisRep.ordinaryCondition 𝒪 p S ρ₂ :=
   GaloisRepAdic.LCSol.ordinaryCondition_of_isEquiv 𝒪 e h
 
-#print axioms solution

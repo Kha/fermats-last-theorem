@@ -123,4 +123,3 @@ theorem solution
       rw [← hx, hxη, hη]
   exact IsFinite.of_isProper_of_locallyQuasiFinite ν
 
-#print axioms solution

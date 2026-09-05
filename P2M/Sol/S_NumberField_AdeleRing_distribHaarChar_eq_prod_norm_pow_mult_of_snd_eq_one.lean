@@ -670,11 +670,6 @@ example : ∀ (F : Type) [Field F] [NumberField F]
   fun F _ _ a ha =>
     NumberField.AdeleRing.distribHaarChar_eq_prod_norm_pow_mult_of_snd_eq_one_impl F a ha
 
-#print axioms NumberField.AdeleRing.distribHaarChar_eq_prod_norm_pow_mult_of_snd_eq_one_impl
-#print axioms M4aS4.placeMeasure_image_mul
-#print axioms M4aS4.archMeasure_image_mul_pi
-#print axioms M4aS4.adelicMeasure_refSet_ne_zero
-#print axioms NumberField.AdelicCountability.instSecondCountableFiniteAdeleRing
 
 theorem solution
     (F : Type) [Field F] [NumberField F]

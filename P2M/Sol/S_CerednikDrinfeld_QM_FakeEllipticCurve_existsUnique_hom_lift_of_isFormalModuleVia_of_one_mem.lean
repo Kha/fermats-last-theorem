@@ -95,7 +95,6 @@ theorem CerednikDrinfeld.QM.FakeEllipticCurve.hom_eq_of_comp_eq_of_isNilpotent_k
   intro T t P
   rw [← hg.lift_fst P.1 t P.2, Category.assoc, hg12, Category.assoc]
 
-#print axioms CerednikDrinfeld.QM.FakeEllipticCurve.hom_eq_of_comp_eq_of_isNilpotent_ker
 
 namespace CerednikDrinfeld
 p2m_export "CerednikDrinfeld" "Zp2 FormalODModule FormalODModule.IsODHom FormalODModule.Hom FormalODModule.IsODHom.act_natCast_pow FormalODModule.Hom.ext FormalODModule.HasKernelOfDegree FormalODModule.Hom.toSeries QM.FakeEllipticCurve QM.FakeEllipticCurve.exists_hom_lift_nsmul_pow QM.FakeEllipticCurve.existsUnique_hom_isFormalCompletionAlong_of_isFormalModuleVia QM.FakeEllipticCurve.isFinite_flat_surjective_of_mapPt_mapPt_eq_nsmulPt FormalODModule.Hom.eq_of_comp_act_pow_eq_of_hasKernelOfDegree QM.FakeEllipticCurve.exists_isNilpotent_isInfinitesimal_of_nsmulPt_pow_eq_one_of_one_mem QM.FakeEllipticCurve.hasHeight_four_of_isFormalModuleVia_of_one_mem"

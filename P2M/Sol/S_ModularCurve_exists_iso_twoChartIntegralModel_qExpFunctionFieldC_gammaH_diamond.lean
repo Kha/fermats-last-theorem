@@ -244,4 +244,3 @@ theorem solution
     · rw [hEF, toAlgEquivR_apply, hγρ]
     · rw [hEI, toAlgEquivR_apply, hγρ]
 
-#print axioms solution

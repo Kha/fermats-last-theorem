@@ -269,7 +269,6 @@ info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.baseChangeRingEquiv_one_tmu
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms InfinitePlaceData.baseChangeRingEquiv_one_tmul
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.conorm_algebraMap' depends on axioms: [propext,
@@ -277,7 +276,6 @@ info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.conorm_algebraMap' depends 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms InfinitePlaceData.conorm_algebraMap
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.baseChangeRingEquiv_tmul_one' depends on axioms: [propext,
@@ -285,7 +283,6 @@ info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.baseChangeRingEquiv_tmul_on
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms InfinitePlaceData.baseChangeRingEquiv_tmul_one
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.baseChangeAlgEquiv' depends on axioms: [propext,
@@ -293,7 +290,6 @@ info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.baseChangeAlgEquiv' depends
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms InfinitePlaceData.baseChangeAlgEquiv
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.baseChangeAlgEquiv_one_tmul' depends on axioms: [propext,
@@ -301,19 +297,16 @@ info: 'FLT.InfiniteAdeleBaseChange.InfinitePlaceData.baseChangeAlgEquiv_one_tmul
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms InfinitePlaceData.baseChangeAlgEquiv_one_tmul
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.tensorPiAlgHom_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms tensorPiAlgHom_bijective
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.collapsePlaces' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms collapsePlaces
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.BaseChangeData.ofInfinitePlaceData' depends on axioms: [propext,
@@ -321,19 +314,16 @@ info: 'FLT.InfiniteAdeleBaseChange.BaseChangeData.ofInfinitePlaceData' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms BaseChangeData.ofInfinitePlaceData
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.selfInfinitePlaceData' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms selfInfinitePlaceData
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.selfBaseChangeData' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms selfBaseChangeData
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.gate_baseChangeRingEquiv_separates' depends on axioms: [propext,
@@ -341,7 +331,6 @@ info: 'FLT.InfiniteAdeleBaseChange.gate_baseChangeRingEquiv_separates' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms gate_baseChangeRingEquiv_separates
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.gate_conorm_self_fixes_principal' depends on axioms: [propext,
@@ -349,12 +338,10 @@ info: 'FLT.InfiniteAdeleBaseChange.gate_conorm_self_fixes_principal' depends on 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms gate_conorm_self_fixes_principal
 
 /--
 info: 'FLT.InfiniteAdeleBaseChange.gate_conorm_separates' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms gate_conorm_separates
 
 end FLT.InfiniteAdeleBaseChange

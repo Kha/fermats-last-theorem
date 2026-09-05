@@ -14,4 +14,3 @@ theorem solution (M : ℕ) [NeZero M] :
     HasPrincipalDivisors (AlgebraicClosure ℚ) (modularFunctionFieldBar M) :=
   hasPrincipalDivisors_modularFunctionFieldBar modularPolynomialFamily M
 
-#print axioms solution

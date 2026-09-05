@@ -786,4 +786,3 @@ theorem solution (n N : ℕ) [NeZero N]
       m ≠ 0 ∧ Φ y = m • x :=
   HeckeEis.ZQAux.main n N Φ hΦ x
 
-#print axioms solution

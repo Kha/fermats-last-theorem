@@ -11,4 +11,3 @@ theorem solution {A : Type*} [SubtractionMonoid A]
   SubtractionMonoid.exists_zsmul_eq_of_forall_prime (fun p hp x =>
     (h p hp x).imp fun y hy => by rw [natCast_zsmul]; exact hy)
 
-#print axioms solution

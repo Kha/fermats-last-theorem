@@ -306,4 +306,3 @@ theorem solution
         coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (jq_mem_full N)⟩ : modularFunctionFieldBar N) ≠ 0 → w = cuspInftyBar N :=
   K1aAux.main N p hpN A hA r hr Pinf hPinf
 
-#print axioms solution

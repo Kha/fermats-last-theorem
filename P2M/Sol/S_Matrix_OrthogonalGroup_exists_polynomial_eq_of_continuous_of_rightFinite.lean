@@ -745,4 +745,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_Matrix_OrthogonalGroup_exists_polynomial_eq_of_continuous_of_rightFinite.M4aP3C P2MW.S_Matrix_OrthogonalGroup_exists_polynomial_eq_of_continuous_of_rightFinite.M4aP3C.O2Finite"
 
-#print axioms solution

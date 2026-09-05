@@ -114,4 +114,3 @@ theorem solution
   exact ModularCurve.XOneP.map_jChartFin_mem_ssJSet_of_exists_two_minimalPrimes_span_le_chartAlgFin_x1_mul
     p M hM hpM L ζ hζ K hK A hAp hζA j hj ϖ hϖ y.asIdeal hyϖ hcross Ω φ hφ
 
-#print axioms solution

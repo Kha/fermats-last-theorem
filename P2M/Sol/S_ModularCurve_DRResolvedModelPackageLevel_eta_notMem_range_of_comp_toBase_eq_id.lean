@@ -259,4 +259,3 @@ theorem solution
   obtain ⟨U, hU, hmax, hunit⟩ := R.η_stalk c
   exact E5W2aEta.false_of_generic_data R hϖ σ hσ c t (R.η c) ht U hU hmax hunit (R.η_not_mem c)
 
-#print axioms solution

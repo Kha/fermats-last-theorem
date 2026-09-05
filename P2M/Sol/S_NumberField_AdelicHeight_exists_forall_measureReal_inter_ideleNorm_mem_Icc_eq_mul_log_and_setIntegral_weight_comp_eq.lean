@@ -501,4 +501,3 @@ theorem solution
     field_simp
     ring
 
-#print axioms solution

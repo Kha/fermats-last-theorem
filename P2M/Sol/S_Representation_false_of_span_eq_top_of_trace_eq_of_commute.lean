@@ -99,4 +99,3 @@ theorem solution
     (htr : ∀ g : G, LinearMap.trace k V (ρ g) = LinearMap.trace k V' (τ g)) : False :=
   Representation.false_of_span_eq_top_of_trace_eq_of_commute_impl (h2 := h2) (ρ := ρ) (hspan := hspan) (τ := τ) (hcomm := hcomm) (htr := htr)
 
-#print axioms solution

@@ -97,4 +97,3 @@ theorem solution
     hP0 (by rw [RingHom.mem_ker, map_sub, hyx, sub_self])
   simpa using 𝔮.add_mem hxy hy
 
-#print axioms solution

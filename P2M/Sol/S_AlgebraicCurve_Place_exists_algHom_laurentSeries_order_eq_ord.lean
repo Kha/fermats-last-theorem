@@ -518,4 +518,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (w : Place K F)
     ∃ φ : F →ₐ[K] LaurentSeries K, ∀ x : F, (φ x).order = w.ord x :=
   AlgebraicCurve.Place.exists_algHom_laurentSeries_order_eq_ord w hw
 
-#print axioms solution

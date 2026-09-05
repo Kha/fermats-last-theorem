@@ -19,4 +19,3 @@ theorem solution
     φ₁ = φ₂ :=
   (D.universal A hA ρA hρA hres).unique ⟨h₁, e₁⟩ ⟨h₂, e₂⟩
 
-#print axioms solution

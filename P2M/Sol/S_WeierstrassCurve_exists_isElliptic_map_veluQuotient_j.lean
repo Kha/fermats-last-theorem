@@ -61,4 +61,3 @@ theorem solution {R R' : Type*} [Field R] [Field R']
         f (@WeierstrassCurve.j R _ (W.veluQuotient S) hQ) :=
   WeierstrassCurve.exists_isElliptic_map_veluQuotient_j W f S hQ
 
-#print axioms solution

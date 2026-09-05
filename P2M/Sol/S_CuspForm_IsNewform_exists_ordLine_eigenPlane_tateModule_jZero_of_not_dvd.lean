@@ -320,4 +320,3 @@ theorem solution
     exact hLne (Submodule.finrank_eq_zero.mp h0)
   omega
 
-#print axioms solution

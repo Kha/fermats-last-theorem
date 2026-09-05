@@ -791,4 +791,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_relf
 theorem solution (N ℓ : ℕ) [NeZero N] [hl : Fact (Nat.Prime ℓ)] : IntermediateField.relfinrank ((modularFunctionFieldFull N).map (qExpandₐ ℓ)) (modularFunctionFieldFull (N * ℓ)) = if ℓ ∣ N then ℓ else ℓ + 1 :=
   ModularCurve.relfinrank_qExpand_full N ℓ
 
-#print axioms solution

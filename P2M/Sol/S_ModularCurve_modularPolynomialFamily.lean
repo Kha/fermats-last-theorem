@@ -55,4 +55,3 @@ end
 
 theorem solution : ModularCurve.ModularPolynomialFamily := ModularCurve.modularPolynomialFamily'
 
-#print axioms solution

@@ -1046,4 +1046,3 @@ theorem solution (N q : ℕ) [NeZero N] (hq : q.Prime) (hqN : ¬ q ∣ N)
 end
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_exists_inertia_smul_sub_self_sp_eq_nodeUnit_of_isModel.ToricLift"
 
-#print axioms solution

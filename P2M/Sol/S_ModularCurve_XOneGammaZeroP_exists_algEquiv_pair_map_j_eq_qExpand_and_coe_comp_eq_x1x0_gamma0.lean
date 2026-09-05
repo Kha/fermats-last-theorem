@@ -119,4 +119,3 @@ theorem solution
   rw [hι₂' y]
   rfl
 
-#print axioms solution

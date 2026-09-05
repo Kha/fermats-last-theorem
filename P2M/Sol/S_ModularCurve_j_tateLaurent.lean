@@ -141,4 +141,3 @@ theorem solution (K : Type*) [CommRing K] :
     (tateLaurent K).j = jqModC K :=
   ModularCurve.j_tateLaurent K
 
-#print axioms solution

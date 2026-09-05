@@ -25,7 +25,6 @@ theorem PSCarrier.finrank_fixedSubmodule_padicK1_impl (p : ℕ) [Fact p.Prime] {
 
 end FLT.PrincipalSeriesGL2Padic
 
-#print axioms FLT.PrincipalSeriesGL2Padic.PSCarrier.finrank_fixedSubmodule_padicK1_impl
 
 theorem solution (p : ℕ) [Fact p.Prime] {μ₁ μ₂ : ℚ_[p]ˣ →* ℂˣ}
     {n₁ n₂ : ℕ} (h₁ : LocalNewvector.HasCharConductor p μ₁ n₁) (h₂ : LocalNewvector.HasCharConductor p μ₂ n₂)

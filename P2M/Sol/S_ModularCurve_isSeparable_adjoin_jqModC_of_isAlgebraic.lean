@@ -300,4 +300,3 @@ theorem solution (K : Type*) [Field K] [PerfectField K] (F : IntermediateField K
       exact hmemF
     exact isSeparable_of_mem_adjoin_pow p hyint hmem
 
-#print axioms solution

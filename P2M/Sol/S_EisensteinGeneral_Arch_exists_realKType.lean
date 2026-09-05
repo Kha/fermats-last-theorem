@@ -787,4 +787,3 @@ theorem solution (k : ℤ) :
     rw [hJ w t ht]
     exact hB β hβ w t hw ht
 
-#print axioms solution

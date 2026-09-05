@@ -341,4 +341,3 @@ theorem solution (n : ℕ) {p : ℕ} (hp : p.Prime) (hn : n < p)
     v ∈ LinearMap.range (HeckeEis.binaryFormRepSL ℤ n (ModularGroup.T ^ h) - 1) :=
   HeckeEis.SolMain.G2 n hp hn hph v hv
 
-#print axioms solution

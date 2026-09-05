@@ -264,4 +264,3 @@ theorem solution
     rw [hchart]
     exact MorphismProperty.comp_mem _ _ _ hflatG (MorphismProperty.comp_mem _ _ _ inferInstance inferInstance)
 
-#print axioms solution

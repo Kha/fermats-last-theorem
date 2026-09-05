@@ -41,4 +41,3 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_aeval_jqN_toAdjoin.ModularCu
 theorem solution {N : ℕ} [NeZero N] (data : ModularPolynomialData N) : Polynomial.aeval (jqN N) data.toAdjoin = 0 :=
   ModularCurve.aeval_jqN_toAdjoin data
 
-#print axioms solution

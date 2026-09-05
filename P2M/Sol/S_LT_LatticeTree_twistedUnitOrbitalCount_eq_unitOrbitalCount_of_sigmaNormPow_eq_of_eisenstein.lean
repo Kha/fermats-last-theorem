@@ -6768,4 +6768,3 @@ theorem solution
   exact LT.LatticeTree.twistedUnitOrbitalCount_eq_unitOrbitalCount_of_eisenstein R K ϖ hϖ RE E ι hϖE n hres σ hσ hσn hfix d γ
     mu Y hY δ hnorm w hdet htr
 
-#print axioms solution

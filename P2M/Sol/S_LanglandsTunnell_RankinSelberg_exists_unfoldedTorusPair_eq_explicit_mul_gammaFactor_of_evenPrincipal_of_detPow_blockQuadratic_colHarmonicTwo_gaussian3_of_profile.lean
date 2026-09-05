@@ -794,5 +794,4 @@ theorem solution
   rw [h05 s (lt_of_le_of_lt (le_max_left _ _) hs), hR, hC, mul_one, h, ← hinj.1, ← hinj.2.1, ← hinj.2.2.1, ← hinj.2.2.2]
   ring
 
-#print axioms solution
 end

@@ -2465,4 +2465,3 @@ theorem solution
       hvN ϖK hϖK hϖK0 rT hrT z hz k j π
 
 #check @solution
-#print axioms solution

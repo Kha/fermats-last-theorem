@@ -322,4 +322,3 @@ theorem solution (N : ℕ) [NeZero N]
       have e9 : 0 ≤ (η + 1) * B := by positivity
       linarith [e1, e6, e7, e8, e9]
 
-#print axioms solution

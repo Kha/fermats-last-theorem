@@ -396,4 +396,3 @@ theorem solution
     rw [hP, hP]
     exact hev.symm
 
-#print axioms solution

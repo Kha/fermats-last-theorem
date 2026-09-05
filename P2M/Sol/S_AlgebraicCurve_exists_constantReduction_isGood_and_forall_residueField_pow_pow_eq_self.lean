@@ -307,4 +307,3 @@ theorem solution
       R.residue ⟨x, hxR⟩, htr, hfdb⟩
     exact hgood
 
-#print axioms solution

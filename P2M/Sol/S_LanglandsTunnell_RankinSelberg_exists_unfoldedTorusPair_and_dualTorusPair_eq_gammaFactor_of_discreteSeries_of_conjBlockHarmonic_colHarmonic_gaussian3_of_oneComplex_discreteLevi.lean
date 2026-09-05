@@ -471,4 +471,3 @@ theorem solution
     exact K7B1.dual_alg s uP (uC wC hC) (uR w₀ h₀) ρ nP m n (kC wC hC).natAbs (aR w₀ h₀).val
       (min nP (kC wC hC).natAbs) hm ε' (kC wC hC) rfl rfl hn hcol'
 
-#print axioms solution

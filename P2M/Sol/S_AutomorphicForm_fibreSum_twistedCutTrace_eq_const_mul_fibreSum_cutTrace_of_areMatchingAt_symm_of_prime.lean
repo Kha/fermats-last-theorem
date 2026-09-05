@@ -243,4 +243,3 @@ theorem solution
     hΦKs hΦK (NumberField.Idele.idelicHaar K) ΩK hΩK hgeo
 
 #check @solution
-#print axioms solution

@@ -379,4 +379,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_ModularCurve_DRModelPackageLevel_nonempty_rigidify_pointTwist_comp1_iso_unit_of_pic0Mk_eq_zero.PrincTriv"
 
-#print axioms solution

@@ -703,4 +703,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_modu
 theorem solution (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (data : ModularPolynomialData ℓ) : data.Φ.map (Polynomial.mapRingHom (Int.castRingHom (ZMod ℓ))) = (Polynomial.C Polynomial.X ^ ℓ - Polynomial.X) * (Polynomial.C Polynomial.X - Polynomial.X ^ ℓ) :=
   ModularCurve.modularPolynomial_kronecker ℓ data
 
-#print axioms solution

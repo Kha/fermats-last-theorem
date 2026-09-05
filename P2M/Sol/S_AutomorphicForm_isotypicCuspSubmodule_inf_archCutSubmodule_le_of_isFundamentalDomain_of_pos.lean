@@ -1450,4 +1450,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_AutomorphicForm_isotypicCuspSubmodule_inf_archCutSubmodule_le_of_isFundamentalDomain_of_pos.SlabWindowTransport"
 
-#print axioms solution

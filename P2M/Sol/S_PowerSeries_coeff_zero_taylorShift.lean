@@ -24,4 +24,3 @@ theorem solution {L : Type*} [NontriviallyNormedField L] [CompleteSpace L] [IsUl
   refine tsum_congr fun k => ?_
   simp
 
-#print axioms solution

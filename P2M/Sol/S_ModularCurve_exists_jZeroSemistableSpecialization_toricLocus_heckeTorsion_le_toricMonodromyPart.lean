@@ -236,4 +236,3 @@ theorem solution (N q : ℕ) [NeZero N] (hq : q.Prime)
                       (A.inertiaSubgroupIn ℚ) :=
   ModularCurve.exists_jZeroSemistableSpecialization_toricLocus_heckeTorsion_le_toricMonodromyPart_aux N q hq hqN A hA
 
-#print axioms solution

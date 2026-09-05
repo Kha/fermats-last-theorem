@@ -189,7 +189,6 @@ theorem fourierIntegral_comp_mul_left_impl [MeasurableSpace 𝔸] [BorelSpace �
     Complex.ofReal_inv]
   rfl
 
-#print axioms fourierIntegral_comp_mul_left_impl
 
 example : ∀ [MeasurableSpace 𝔸] [BorelSpace 𝔸] (μ : Measure 𝔸) [μ.IsAddHaarMeasure] (ψ : AddChar 𝔸 ℂ) (f : 𝔸 → ℂ)
     (a : 𝔸ˣ) (w : 𝔸),

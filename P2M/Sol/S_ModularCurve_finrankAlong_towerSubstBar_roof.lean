@@ -607,4 +607,3 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_finr
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] (ℓ ℓ' M : ℕ) [hl : Fact (Nat.Prime ℓ)] [hl' : Fact (Nat.Prime ℓ')] [NeZero M] (hM : M = N * ℓ * ℓ') (hne : ℓ ≠ ℓ') : AlgebraicCurve.finrankAlong L (towerSubstBar L (N * ℓ') ℓ (dvd_of_eq_roof N ℓ ℓ' M hM).2) = AlgebraicCurve.finrankAlong L (heckeBetaBar L N ℓ) :=
   ModularCurve.finrankAlong_towerSubstBar_roof L N ℓ ℓ' M hM hne
 
-#print axioms solution

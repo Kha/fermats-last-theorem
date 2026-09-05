@@ -176,4 +176,3 @@ theorem solution
   refine ⟨hs, ?_, hf, hfd⟩
   rw [hk, hkerSub]
 
-#print axioms solution

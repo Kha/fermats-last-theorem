@@ -313,49 +313,41 @@ end FLT.HaarFiniteOrderGates
 info: 'MeasureTheory.mulEquivHaarChar_eq_one_of_iterate_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.mulEquivHaarChar_eq_one_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.addEquivAddHaarChar_eq_one_of_iterate_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.addEquivAddHaarChar_eq_one_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.map_haar_eq_self_of_iterate_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.map_haar_eq_self_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.map_addHaar_eq_self_of_iterate_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.map_addHaar_eq_self_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.measurePreserving_haar_of_iterate_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.measurePreserving_haar_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.measure_preimage_haar_eq_of_iterate_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.measure_preimage_haar_eq_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.integral_comp_haar_eq_of_iterate_eq_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.integral_comp_haar_eq_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.measurePreserving_restrict_of_map_eq_self' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.measurePreserving_restrict_of_map_eq_self
 
 /--
 info: 'MeasureTheory.measurePreserving_restrict_haar_of_iterate_eq_id' depends on axioms: [propext,
@@ -363,7 +355,6 @@ info: 'MeasureTheory.measurePreserving_restrict_haar_of_iterate_eq_id' depends o
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.measurePreserving_restrict_haar_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.measurePreserving_restrict_haar_symm_of_iterate_eq_id' depends on axioms: [propext,
@@ -371,7 +362,6 @@ info: 'MeasureTheory.measurePreserving_restrict_haar_symm_of_iterate_eq_id' depe
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.measurePreserving_restrict_haar_symm_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.mulEquiv_measurePreserving_restrict_pair_of_iterate_eq_id' depends on axioms: [propext,
@@ -379,7 +369,6 @@ info: 'MeasureTheory.mulEquiv_measurePreserving_restrict_pair_of_iterate_eq_id' 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.mulEquiv_measurePreserving_restrict_pair_of_iterate_eq_id
 
 /--
 info: 'MeasureTheory.addEquiv_measurePreserving_restrict_pair_of_iterate_eq_id' depends on axioms: [propext,
@@ -387,19 +376,16 @@ info: 'MeasureTheory.addEquiv_measurePreserving_restrict_pair_of_iterate_eq_id' 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms MeasureTheory.addEquiv_measurePreserving_restrict_pair_of_iterate_eq_id
 
 /--
 info: 'FLT.HaarFiniteOrderGates.gate_inv_two_routes' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms FLT.HaarFiniteOrderGates.gate_inv_two_routes
 
 /--
 info: 'FLT.HaarFiniteOrderGates.gate_real_two_routes' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms FLT.HaarFiniteOrderGates.gate_real_two_routes
 
 /--
 info: 'FLT.HaarFiniteOrderGates.gate_real_neg_measurePreserving_restrict_Icc' depends on axioms: [propext,
@@ -407,10 +393,8 @@ info: 'FLT.HaarFiniteOrderGates.gate_real_neg_measurePreserving_restrict_Icc' de
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms FLT.HaarFiniteOrderGates.gate_real_neg_measurePreserving_restrict_Icc
 
 /--
 info: 'FLT.HaarFiniteOrderGates.gate_doubling_addHaarChar_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms FLT.HaarFiniteOrderGates.gate_doubling_addHaarChar_ne_one

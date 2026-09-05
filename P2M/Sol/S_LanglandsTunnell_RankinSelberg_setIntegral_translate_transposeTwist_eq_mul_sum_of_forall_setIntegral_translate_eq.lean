@@ -146,4 +146,3 @@ theorem solution
   refine Finset.sum_congr rfl fun j _ => ?_
   ring
 
-#print axioms solution

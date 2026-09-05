@@ -160,4 +160,3 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L]
 example : ∀ (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N],
     IsCurveOver L (laurentBaseChange L (modularFunctionFieldFull N)) := @solution
 
-#print axioms solution

@@ -101,4 +101,3 @@ theorem solution
   have hN : (N₀ : κ) ≠ 0 := fun h => hpN₀ ((CharP.cast_eq_zero_iff κ p N₀).mp h)
   exact CoordSS.reduceFst_mem_ssPlaces_of_ord_jFun_sub_pos P hN _ _ hord hss
 
-#print axioms solution

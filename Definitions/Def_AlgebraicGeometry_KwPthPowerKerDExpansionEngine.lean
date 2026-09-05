@@ -266,34 +266,26 @@ section Audits
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_axiomAnchor' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_axiomAnchor
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_mem_of_isSeparable_of_pow_mem' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_mem_of_isSeparable_of_pow_mem
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_mem_pthPowers_iff' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_mem_pthPowers_iff
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_prime_field_pow' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_prime_field_pow
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_mem_expansionField' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_mem_expansionField
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_isIntegral_gen' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_isIntegral_gen
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_minpoly_natDegree_le' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_minpoly_natDegree_le
 
 /-- info: 'AlgebraicCurve.KwPke.kw_pke_ker_d_pthPower' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs (whitespace := lax) in
-#print axioms AlgebraicCurve.KwPke.kw_pke_ker_d_pthPower
 
 end Audits

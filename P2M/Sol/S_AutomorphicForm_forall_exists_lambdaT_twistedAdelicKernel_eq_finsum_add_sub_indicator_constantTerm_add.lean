@@ -1283,4 +1283,3 @@ theorem solution
   exact SlabTransport.setIntegral_eq_of_isFundamentalDomain L α β Φ₀ ΦL hΦ₀s hΦ₀ hΦs hΦ _ fun γ x => by
     simp only [TwistedKernelRationalInvariance.finsum_centralElliptic_globalPoints_mul K L D σ hgen φ]
 
-#print axioms solution

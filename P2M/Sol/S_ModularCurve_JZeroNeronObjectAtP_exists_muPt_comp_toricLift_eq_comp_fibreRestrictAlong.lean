@@ -213,4 +213,3 @@ theorem solution
   refine ⟨χ.comp ψ, ?_⟩
   rw [← hpt_v, ← huv', hpt_u]
 
-#print axioms solution

@@ -487,4 +487,3 @@ theorem solution
     (FinDivX1.divisible_of_gluedPic0_igusa p M hM hpM k w nodes Ψ d hd0.ne')
     (FinDivX1.isUnit_natCast_of_not_dvd (Fact.out : p.Prime) hAp hpmd)
 
-#print axioms solution

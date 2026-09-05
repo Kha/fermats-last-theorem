@@ -242,8 +242,3 @@ theorem adicCompletionAlgEquivMvPowerSeries_X (i : σ) :
 
 end MvPolynomial
 
-#print axioms AdicCompletion.ofLevelwiseEquiv
-#print axioms Localization.AtPrime.quotientPowEquiv
-#print axioms AdicCompletion.localizationEquiv
-#print axioms MvPolynomial.adicCompletionAlgEquivMvPowerSeries
-#print axioms MvPolynomial.adicCompletionAlgEquivMvPowerSeries_of

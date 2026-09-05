@@ -908,4 +908,3 @@ example : ∀ (K : Type*) [Field K] (F' : Type*) [Field F'] [Algebra K F'] [Alge
     [IsScalarTower K (RatFunc K) F'] [FiniteDimensional (RatFunc K) F'] [Algebra.IsSeparable (RatFunc K) F'],
     HasPrincipalDivisors K F' := @solution
 
-#print axioms solution

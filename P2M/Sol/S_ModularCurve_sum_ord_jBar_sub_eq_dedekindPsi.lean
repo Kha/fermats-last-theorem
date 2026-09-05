@@ -376,4 +376,3 @@ theorem solution (N : ℕ) [NeZero N] (j₀ : AlgebraicClosure ℚ)
       dedekindPsi N :=
   ModularCurve.sum_ord_jBar_sub_eq_dedekindPsi N j₀ hdeg S hS
 
-#print axioms solution

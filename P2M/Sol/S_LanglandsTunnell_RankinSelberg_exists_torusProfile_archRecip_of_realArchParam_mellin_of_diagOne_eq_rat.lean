@@ -565,4 +565,3 @@ theorem solution
       exact hHid s hk1 hs
     exact ⟨0, H, hHd, hH0, hident⟩
 
-#print axioms solution

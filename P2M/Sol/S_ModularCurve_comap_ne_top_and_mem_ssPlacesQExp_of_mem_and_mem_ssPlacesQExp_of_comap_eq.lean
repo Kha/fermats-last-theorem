@@ -173,4 +173,3 @@ theorem solution
     · rw [hss]
       exact ⟨a₀, ha₀, rfl⟩
 
-#print axioms solution

@@ -164,4 +164,3 @@ private theorem ModularCurve.qExpansionDiffAlong_smul_map_D {K F F' L : Type*} [
 theorem solution {K F L : Type*} [Field K] [Field F] [Algebra K F] [Field L] [Algebra K L] (σ : F →ₐ[K] LaurentSeries L) (x : F) : qExpansionDiffAlong σ (KaehlerDifferential.D K F x) = thetaL L (σ x) :=
   ModularCurve.qExpansionDiffAlong_D σ x
 
-#print axioms solution

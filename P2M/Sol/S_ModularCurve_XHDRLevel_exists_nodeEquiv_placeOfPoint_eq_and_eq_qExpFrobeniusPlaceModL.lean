@@ -149,4 +149,3 @@ theorem solution
   · obtain ⟨h₀, h₀eq⟩ := hfst n (hmem n).choose
     exact ⟨h₀, by rw [Equiv.ofBijective_apply, hf]; exact h₀eq⟩
 
-#print axioms solution

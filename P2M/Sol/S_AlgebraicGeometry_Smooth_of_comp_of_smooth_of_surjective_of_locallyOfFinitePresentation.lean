@@ -50,4 +50,3 @@ theorem solution
     exact congr($(IsAffineOpen.comap_primeIdealOf_appLE V hV W hW hWV hxW).1)
   exact Algebra.IsSmoothAt.of_isSmoothAt_of_smooth Γ(Z, U) Γ(Y, V) Γ(X, W) _ hx' _ hunder
 
-#print axioms solution

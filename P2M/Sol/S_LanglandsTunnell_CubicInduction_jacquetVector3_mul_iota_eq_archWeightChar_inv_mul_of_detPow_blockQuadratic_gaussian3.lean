@@ -218,4 +218,3 @@ theorem solution
   rw [show ((0 : ℤ)) = ((0 : ℕ) : ℤ) from rfl, archWeightCharℝ_coe_inv 0 hκ, jacquetVector3_eq, jacquetVector3_eq, hdet3, hint, integral_const_mul]
   ring
 
-#print axioms solution

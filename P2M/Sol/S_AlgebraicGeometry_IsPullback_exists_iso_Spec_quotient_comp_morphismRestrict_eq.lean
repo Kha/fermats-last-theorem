@@ -107,4 +107,3 @@ theorem solution
     (E163TC.isPushout_quotient π hπ (algebraMap T' Γ(P, D)))
   exact ⟨sq4.isoIsPullback _ _ sq3, by rw [← Category.assoc]; exact sq4.isoIsPullback_hom_fst _ _ sq3⟩
 
-#print axioms solution

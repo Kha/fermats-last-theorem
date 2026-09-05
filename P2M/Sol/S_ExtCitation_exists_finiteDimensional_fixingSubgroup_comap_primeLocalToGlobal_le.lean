@@ -64,4 +64,3 @@ theorem solution
   refine Finset.sum_congr rfl (fun i _ => ?_)
   rw [Algebra.smul_def, map_mul, AlgEquiv.commutes, hfix i]
 
-#print axioms solution

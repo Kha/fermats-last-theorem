@@ -310,5 +310,3 @@ end AlgebraicCurve.SymmetricPower
 
 end
 
-#print axioms AlgebraicCurve.SymmetricPower.mvPowerSeriesEsymmAlgEquiv
-#print axioms AlgebraicCurve.SymmetricPower.mvPowerSeriesEsymmAlgEquiv_symm_X

@@ -238,6 +238,3 @@ end
 #check @LanglandsTunnell.CubicInduction.AutomorphyDatum31
 #check @LanglandsTunnell.CubicInduction.HasVanishingUnipotentIntegralAlong
 #check @LanglandsTunnell.CubicInduction.IsCongruenceEquivariantAlong
-#print axioms LanglandsTunnell.CubicInduction.localToAdelicN
-#print axioms LanglandsTunnell.CubicInduction.one_mem_converseCongruenceSet3
-#print axioms LanglandsTunnell.CubicInduction.AutomorphyDatum31.zero

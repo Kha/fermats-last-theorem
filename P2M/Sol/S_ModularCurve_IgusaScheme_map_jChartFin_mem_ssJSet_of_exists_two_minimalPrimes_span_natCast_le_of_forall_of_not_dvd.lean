@@ -435,4 +435,3 @@ theorem solution
     (jChartFin (N * p) p) a (by convert hj using 2 <;> first | rfl | exact Subsingleton.elim _ _) (by rwa [hssdec κ (Classical.decEq κ) inferInstance]) φ hφ
   rwa [hssdec Ω inferInstance (Classical.decEq Ω)]
 
-#print axioms solution

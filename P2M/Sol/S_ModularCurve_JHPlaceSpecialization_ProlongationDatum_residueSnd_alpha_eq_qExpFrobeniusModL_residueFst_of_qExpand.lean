@@ -185,4 +185,3 @@ theorem solution
   intro v h₁ h₂
   exact Res2Frob.core p M H hpM hpM2 hHp A hA α hα_coe θ₀ hθ₀ Psp Rpd v h₁ h₂
 
-#print axioms solution

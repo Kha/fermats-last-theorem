@@ -704,4 +704,3 @@ theorem solution
     apply hD₀κ.ext_of_iso (𝟙 _)
     exact ⟨(habq1 (𝟙 _) sκ).some ≪≫ TRIV₁.some ≪≫ hone_unit.some.symm⟩
 
-#print axioms solution

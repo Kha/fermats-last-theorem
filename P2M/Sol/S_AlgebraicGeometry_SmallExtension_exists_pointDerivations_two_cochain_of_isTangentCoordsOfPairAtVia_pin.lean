@@ -201,4 +201,3 @@ theorem solution
   show σ r (cs r a ξ) = L r ((D r).1 a ξ)
   rw [hL, hD]
 
-#print axioms solution

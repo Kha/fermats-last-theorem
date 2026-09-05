@@ -3426,4 +3426,3 @@ theorem solution
               (((Ideal.absNorm v.1.asIdeal : ℕ) : ℂ) ^ (-s)))⁻¹) := by
   exact HeckeFunctionalEquation.exists_entire_functionalEquation K χ _hχ _hχc _hχu _hχ1
 
-#print axioms solution

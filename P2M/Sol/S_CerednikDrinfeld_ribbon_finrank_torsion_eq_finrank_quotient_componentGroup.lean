@@ -505,4 +505,3 @@ theorem solution
       (Submodule.mem_map_of_mem hf))
     eΨ hΨ eΨa hΨa 𝔪
 
-#print axioms solution

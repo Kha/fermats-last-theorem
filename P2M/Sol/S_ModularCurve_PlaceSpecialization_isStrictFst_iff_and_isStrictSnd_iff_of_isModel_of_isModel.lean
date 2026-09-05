@@ -677,4 +677,3 @@ theorem solution
       have ha := hsp' _ (htr _ _ h1.symm h2)
       rw [ha, hb]; exact ⟨h1, h2⟩
 
-#print axioms solution

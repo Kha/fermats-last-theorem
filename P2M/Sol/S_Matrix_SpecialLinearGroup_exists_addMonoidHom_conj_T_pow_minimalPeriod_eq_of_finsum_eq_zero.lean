@@ -191,4 +191,3 @@ theorem solution (Γ : Subgroup (Matrix.SpecialLinearGroup (Fin 2) ℤ)) [Γ.Fin
   show a ((Θ Γ hneg).symm (Θ Γ hneg (Quotient.mk _ (g : SL(2, ℤ) ⧸ Γ)))) = _
   rw [Equiv.symm_apply_apply]
 
-#print axioms solution

@@ -566,4 +566,3 @@ theorem solution
   exact ⟨Mf, iF, iA0, iA1, iA2, iT1, iT2, iFD1, iFD2, iGal, c, m, hmU, M, πM, ptF, hM, G, iG, inferInstance, ρ, χ, hρ, hℓm,
     L₀, hL₀, hℓL₀, hL₀l, hL₀i, H, hH, P, i₀, hK₀, hpt₀, hφ, hcR, hcount⟩
 
-#print axioms solution

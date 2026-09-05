@@ -316,8 +316,3 @@ theorem SmoothOfRelativeDimension.of_forall_isClosed
 
 end AlgebraicGeometry
 
-#print axioms SmoothOfClosedPoints.bijective_algebraMap_quotient
-#print axioms SmoothOfClosedPoints.mapCotangentEquiv
-#print axioms SmoothOfClosedPoints.finrank_cotangent_ker_eq
-#print axioms SmoothOfClosedPoints.exists_isStandardSmoothOfRelativeDimension_of_formallySmooth
-#print axioms AlgebraicGeometry.SmoothOfRelativeDimension.of_forall_isClosed

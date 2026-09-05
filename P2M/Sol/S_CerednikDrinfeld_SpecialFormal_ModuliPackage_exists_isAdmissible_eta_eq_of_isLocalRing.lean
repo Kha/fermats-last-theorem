@@ -43,4 +43,3 @@ theorem solution
   obtain ⟨t, ht, hηt⟩ := hloc i B hB
   exact ⟨t, ht, hηt.trans (M.map_id hB m)⟩
 
-#print axioms solution

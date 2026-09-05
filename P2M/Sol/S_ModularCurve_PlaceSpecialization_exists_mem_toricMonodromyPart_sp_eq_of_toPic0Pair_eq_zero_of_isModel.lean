@@ -161,4 +161,3 @@ theorem solution (N q : ℕ) [NeZero N] (hq : q.Prime) (hqN : ¬ q ∣ N)
 
 end
 
-#print axioms solution

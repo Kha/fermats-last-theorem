@@ -815,4 +815,3 @@ theorem solution
     rw [hplace'] at hpole
     exact hpole hreg
 
-#print axioms solution

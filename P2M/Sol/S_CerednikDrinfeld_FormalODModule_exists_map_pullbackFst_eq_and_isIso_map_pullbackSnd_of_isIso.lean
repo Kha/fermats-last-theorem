@@ -350,4 +350,3 @@ theorem solution
   · exact FormalODModule.Hom.ext hΨΦs
   · exact FormalODModule.Hom.ext hΦΨs
 
-#print axioms solution

@@ -368,4 +368,3 @@ theorem solution
       have h := rehome K cK uK d₁K d₂K TK ξK N'' SK hN''S π φ hφP hφL
       exact ⟨h.smoothCusp, h.continuous, h.level_invariant, h.hecke_eigen, h.central_eigen⟩, hφ0⟩
 
-#print axioms solution

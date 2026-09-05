@@ -172,4 +172,3 @@ theorem solution {h : ℝ} (hh : 0 < h) {u v : UpperHalfPlane → ℂ}
     UpperHalfPlane.IsBoundedAtImInfty v :=
   UpperHalfPlane.PrimBddAux.isBoundedAtImInfty_of_hasDerivAt_of_periodic hh hu_per hu_hol hu_bdd hv hv_per
 
-#print axioms solution

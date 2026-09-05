@@ -372,4 +372,3 @@ theorem solution (N : ℕ) [NeZero N] (j₀ : AlgebraicClosure ℚ) :
       0 < v.ord (jBar N - algebraMap (AlgebraicClosure ℚ) (modularFunctionFieldBar N) j₀) :=
   ModularCurve.exists_finset_ord_jBar_sub_pos N j₀
 
-#print axioms solution

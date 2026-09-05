@@ -77,4 +77,3 @@ theorem solution (M : ℕ) [NeZero M] (n : ℕ) (hn : n ≠ 0) :
       right_inv := fun _ => rfl }
   exact Finite.of_equiv _ e
 
-#print axioms solution

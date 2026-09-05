@@ -1465,4 +1465,3 @@ theorem solution
   exact famGoal_transport p inferInstance inferInstance (Nat.div_mul_cancel hpM) _ _ _ hpM hp2 hMp P hP
     (fam_core P p (M / p) hMp hpM' hP)
 
-#print axioms solution

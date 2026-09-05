@@ -188,4 +188,3 @@ theorem solution
     (ρ.baseChangeAlong φ hφ).IsUnipotentOnInertiaAt q :=
   GaloisRepAdic.LCSol.isUnipotentOnInertiaAt_baseChangeAlong φ hφ ρ h
 
-#print axioms solution

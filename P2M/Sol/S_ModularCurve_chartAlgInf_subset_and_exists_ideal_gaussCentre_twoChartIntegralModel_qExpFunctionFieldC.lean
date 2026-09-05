@@ -562,4 +562,3 @@ theorem solution
     fun b hb => coeff_zero_of_mem_centre Γ p j hj W₀ hW₀ b hb, jInv_not_mem_centre Γ p j hj W₀ hW₀,
     coeff_zero_jInv Γ p j hj⟩
 
-#print axioms solution

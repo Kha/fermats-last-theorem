@@ -966,4 +966,3 @@ theorem solution
         ((η (Matrix.GeneralLinearGroup.det (heckeGen (𝓞 F) F v)) : ℂˣ) : ℂ) = Φ.b v :=
   DeterminantCharacter.solution_of_criterion (ideleChar_eq_one F) D Φ hΦ n hn hbn
 
-#print axioms solution

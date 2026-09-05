@@ -150,4 +150,3 @@ theorem solution
       have := congrArg Subtype.val (L.one_natural D.toBase (genPt p) (pts x).1 (pts x).2)
       simpa only [NeronModelInfra.schemeHomOverComp_coe, GoodReductionJacobian.schemeHomOverComp_coe] using this.symm
 
-#print axioms solution

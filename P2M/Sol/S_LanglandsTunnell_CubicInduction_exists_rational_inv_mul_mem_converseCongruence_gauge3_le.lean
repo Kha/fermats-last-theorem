@@ -1491,4 +1491,3 @@ theorem solution
           gauge3_ratPoint_mul_le hN hQ0 hB1 hQB (fun i j => (hNB i j).trans hDB) x
       _ = 384 * (K : ℝ) ^ 8 * gauge3 ℚ x ^ (16 * E + 1) := by rw [hB8]; ring
 
-#print axioms solution

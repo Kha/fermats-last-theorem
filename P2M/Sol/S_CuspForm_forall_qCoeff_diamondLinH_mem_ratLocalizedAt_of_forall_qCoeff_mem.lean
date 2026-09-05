@@ -61,4 +61,3 @@ theorem solution
   exact CuspForm.forall_qCoeff_diamondLinH_mem_ratLocalizedAt_of_forall_qCoeff_mem_ratLocalizedAt
     p M hpM hpM2 H hHp 2 d' G hGinf n
 
-#print axioms solution

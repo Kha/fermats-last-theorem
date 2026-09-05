@@ -258,4 +258,3 @@ theorem solution (K : Type*) [Field K] (ℓ : ℕ) [Fact ℓ.Prime]
   exact ⟨BZeroSol.sigma K ℓ hdeg data hsymm,
     by rw [BZeroSol.sigma_apply, BZeroSol.endo_jq], by rw [BZeroSol.sigma_apply, BZeroSol.endo_jl]⟩
 
-#print axioms solution

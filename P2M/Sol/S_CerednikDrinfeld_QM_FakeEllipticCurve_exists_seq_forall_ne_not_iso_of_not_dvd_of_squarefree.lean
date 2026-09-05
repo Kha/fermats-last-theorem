@@ -79,4 +79,3 @@ theorem solution
   rw [← hE m, ← hE n]
   exact hcoarse.pt_iso _ (𝟙 _) (E m) (E n) hiso
 
-#print axioms solution

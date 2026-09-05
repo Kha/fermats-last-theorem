@@ -114,4 +114,3 @@ theorem solution
   by_contra hnot
   exact hothers v (fun h => hnot (h ▸ hv)) hv
 
-#print axioms solution

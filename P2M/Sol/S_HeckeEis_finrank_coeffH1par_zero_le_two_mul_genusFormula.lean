@@ -164,4 +164,3 @@ theorem solution (N : ℕ) [NeZero N] :
       ≤ Module.finrank ℂ ↥(ModularCurve.Period.parabolicHoms ℂ (CongruenceSubgroup.Gamma0 N) ℂ) := by exact_mod_cast h1
     _ ≤ 2 * ModularCurve.genusFormula N := h2
 
-#print axioms solution

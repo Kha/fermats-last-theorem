@@ -242,13 +242,11 @@ end NeronModelInfra
 info: 'NeronModelInfra.genericFibreRestrict_coe_eq_pullbackMap' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.genericFibreRestrict_coe_eq_pullbackMap
 
 /--
 info: 'NeronModelInfra.neronModelPropertyBundle_iff_propertyList' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronModelPropertyBundle_iff_propertyList
 
 /--
 info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_extension' depends on axioms: [propext,
@@ -256,25 +254,21 @@ info: 'NeronModelInfra.NeronModelPropertyBundle.existsUnique_extension' depends 
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.NeronModelPropertyBundle.existsUnique_extension
 
 /--
 info: 'NeronModelInfra.genericFibreRestrict_bijective_of_isIso' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.genericFibreRestrict_bijective_of_isIso
 
 /--
 info: 'NeronModelInfra.neronUniqueExtension_of_isIso' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronUniqueExtension_of_isIso
 
 /--
 info: 'NeronModelInfra.neronModelPropertyBundle_id' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.neronModelPropertyBundle_id
 
 /--
 info: 'NeronModelInfra.gate_neronModelPropertyBundle_trivialGroupScheme_zp' depends on axioms: [propext,
@@ -282,7 +276,6 @@ info: 'NeronModelInfra.gate_neronModelPropertyBundle_trivialGroupScheme_zp' depe
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronModelPropertyBundle_trivialGroupScheme_zp
 
 /--
 info: 'NeronModelInfra.gate_neronModelPropertyBundle_trivialGroupScheme_z3' depends on axioms: [propext,
@@ -290,7 +283,6 @@ info: 'NeronModelInfra.gate_neronModelPropertyBundle_trivialGroupScheme_z3' depe
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronModelPropertyBundle_trivialGroupScheme_z3
 
 /--
 info: 'NeronModelInfra.isEmpty_schemeHomOver_id_specGenericFibreInclusion_zp' depends on axioms: [propext,
@@ -298,7 +290,6 @@ info: 'NeronModelInfra.isEmpty_schemeHomOver_id_specGenericFibreInclusion_zp' de
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.isEmpty_schemeHomOver_id_specGenericFibreInclusion_zp
 
 /--
 info: 'NeronModelInfra.gate_neronUniqueExtension_fails_genericFibreOnly' depends on axioms: [propext,
@@ -306,7 +297,6 @@ info: 'NeronModelInfra.gate_neronUniqueExtension_fails_genericFibreOnly' depends
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronUniqueExtension_fails_genericFibreOnly
 
 /--
 info: 'NeronModelInfra.gate_neronModelPropertyBundle_not_genericFibreOnly' depends on axioms: [propext,
@@ -314,7 +304,6 @@ info: 'NeronModelInfra.gate_neronModelPropertyBundle_not_genericFibreOnly' depen
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronModelPropertyBundle_not_genericFibreOnly
 
 /--
 info: 'NeronModelInfra.gate_neronUniqueExtension_fails_genericFibreOnly_three' depends on axioms: [propext,
@@ -322,4 +311,3 @@ info: 'NeronModelInfra.gate_neronUniqueExtension_fails_genericFibreOnly_three' d
  Quot.sound]
 -/
 #guard_msgs in
-#print axioms NeronModelInfra.gate_neronUniqueExtension_fails_genericFibreOnly_three

@@ -2504,16 +2504,8 @@ theorem exists_forall_cuspTruncation_eq_finsum (K L : Type) [Field K] [NumberFie
   rw [finsum_mem_eq_sum_of_subset _ hsub (by simpa using hρ₀), Finset.sum_singleton,
     cuspTruncation_globalPoints_mul K L D σ R φ z ρ₀ hρ₀B' x]
 
-#print axioms exists_isCuspTransversal
-#print axioms exists_forall_cuspTruncation_globalPoints_mul_eq_zero
-#print axioms exists_forall_cuspTruncation_eq_finsum
 
-#print axioms cuspKernel_globalPoints_mul
-#print axioms cuspTruncation_globalPoints_mul
 
-#print axioms existsUnique_mem_mul_mul_inv_mem_borelSubgroup
-#print axioms finsum_normUnipotent_eq_finsum_cuspKernel
-#print axioms cuspTruncation_apply
 
 end AutomorphicForm.TwistedBruhat
 
@@ -3903,7 +3895,6 @@ p2m_reactivate "P2MW.S_UnipotentTermUnfolding_exists_forall_integrableOn_and_lin
 end TwistedUnipotentTerm
 p2m_reactivate "P2MW.S_UnipotentTermUnfolding_exists_forall_integrableOn_and_lintegral_ne_top_and_setIntegral_unipotentTerm_eq_mul_integral_iwasawa_of_isSemiLocalFactorization.BorelWord"
 
-#print axioms TwistedUnipotentTerm.exists_forall_setLIntegral_tsum_eq_mul_lintegral_iwasawa
 
 end UnfoldingProof
 p2m_reactivate "P2MW.S_UnipotentTermUnfolding_exists_forall_integrableOn_and_lintegral_ne_top_and_setIntegral_unipotentTerm_eq_mul_integral_iwasawa_of_isSemiLocalFactorization.BorelWord"

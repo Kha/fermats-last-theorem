@@ -675,4 +675,3 @@ theorem solution
   · exact isLocallyConstant_boxIndicator p L 0 Mc Md
   · exact hasCompactSupport_boxIndicator p hL0 le_rfl hMc0 (le_trans zero_le_one hMd1)
 
-#print axioms solution

@@ -1173,4 +1173,3 @@ theorem solution
     rw [hsplit, ← hn₁, ← hn₂]
     linarith
 
-#print axioms solution

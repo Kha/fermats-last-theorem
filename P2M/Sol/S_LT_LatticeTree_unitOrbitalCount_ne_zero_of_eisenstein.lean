@@ -2208,4 +2208,3 @@ theorem solution
   rw [h, Finset.sum_range_succ', pow_zero]
   omega
 
-#print axioms solution

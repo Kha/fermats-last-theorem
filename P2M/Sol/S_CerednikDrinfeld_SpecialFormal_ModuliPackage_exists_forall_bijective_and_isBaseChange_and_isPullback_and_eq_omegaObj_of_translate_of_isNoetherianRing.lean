@@ -795,4 +795,3 @@ M.obj B ψ hB → OmegaObj (K := ℚ_[p]) (p : ℤ_[p]) B)
     rw [e1, e2]
     exact hPieq B ψ hB t t' ht ht' hF hvarpi hact hρ _ _ (hPD B ψ hB t).1 (hPD B _ hB t').1
 
-#print axioms solution

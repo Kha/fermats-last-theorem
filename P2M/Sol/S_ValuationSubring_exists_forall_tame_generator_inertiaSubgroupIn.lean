@@ -736,4 +736,3 @@ theorem solution
       ValuationSubring.exists_mem_inertiaSubgroupIn_pow_eq_of_forall_apply_eq hp hq' hpq P hq m h hh hrad)
   exact ⟨γ, hγ, fun p hp hpq m τ hτ => h p hp hpq m τ hτ⟩
 
-#print axioms solution

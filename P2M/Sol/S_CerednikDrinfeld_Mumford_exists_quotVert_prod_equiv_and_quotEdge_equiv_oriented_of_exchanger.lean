@@ -239,4 +239,3 @@ theorem solution
     · intro δ; rfl
     · intro δ; rfl
 
-#print axioms solution

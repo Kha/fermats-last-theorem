@@ -218,4 +218,3 @@ theorem solution
   rw [Scheme.IdealSheafData.ideal_mul, Pi.mul_apply, hIr]
   exact FlatMulAux.flat_quotient_span_singleton_mul _ hgr _
 
-#print axioms solution

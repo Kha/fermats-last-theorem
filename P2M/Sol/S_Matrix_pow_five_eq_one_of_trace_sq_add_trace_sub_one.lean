@@ -38,4 +38,3 @@ end Matrix
 theorem solution {R : Type*} [CommRing R] (g : Matrix (Fin 2) (Fin 2) R) (hdet : g.det = 1) (ht : g.trace ^ 2 + g.trace - 1 = 0) : g ^ 5 = 1 :=
   Matrix.pow_five_aux g hdet ht
 
-#print axioms solution

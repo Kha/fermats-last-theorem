@@ -671,4 +671,3 @@ theorem solution
     simp only [psiD, harg] at h
     exact hgτ h
 
-#print axioms solution

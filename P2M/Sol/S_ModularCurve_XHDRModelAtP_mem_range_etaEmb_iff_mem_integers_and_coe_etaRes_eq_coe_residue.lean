@@ -197,4 +197,3 @@ theorem solution
   · obtain ⟨hO, h⟩ := GP g
     exact h
 
-#print axioms solution

@@ -226,4 +226,3 @@ theorem solution (q m : ℕ) [NeZero q] (hmq : Nat.Coprime m q) (hcop : Nat.Copr
   SolH7a.mennickeCSP_of_mennickeZ_eq_top_of_stem q m hmq
     (SolH7a.mennickeZ_eq_top_of_coprime q hmq hcop) hhabel hsurj hstem
 
-#print axioms solution

@@ -97,4 +97,3 @@ theorem solution
       exact (cancel_mono χ).1 this
     rw [← hinjχ]; exact hlev1 t P₀ hP₀
 
-#print axioms solution

@@ -119,4 +119,3 @@ theorem solution (F : Type) [Field F] [NumberField F]
 end Solution
 p2m_reactivate "P2MW.S_EisensteinGeneral_Glue_whittakerCoefficient_bruhatSeries_eq_finset_sum.EgenGlue"
 
-#print axioms solution

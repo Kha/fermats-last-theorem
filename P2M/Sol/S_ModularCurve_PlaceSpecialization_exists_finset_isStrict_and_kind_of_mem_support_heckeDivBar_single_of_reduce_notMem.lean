@@ -755,4 +755,3 @@ theorem solution
   have hstrict : P.IsStrictFst V' ∨ P.IsStrictSnd V' := hkind V' hstep
   exact ⟨hstrict, fun hF => hKT.1 hF hstrict, fun hS => hKT.2 hS hstrict⟩
 
-#print axioms solution

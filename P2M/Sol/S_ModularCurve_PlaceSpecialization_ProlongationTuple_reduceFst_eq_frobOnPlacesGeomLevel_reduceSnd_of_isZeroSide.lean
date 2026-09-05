@@ -31,4 +31,3 @@ theorem solution
   rwa [ModularCurve.PlaceSpecialization.reduceSnd_atkinLehnerBar_smul P hqN c,
     ModularCurve.PlaceSpecialization.reduceFst_atkinLehnerBar_smul P hqN c] at h
 
-#print axioms solution

@@ -215,4 +215,3 @@ theorem solution
   simp only [Equiv.trans_apply, Equiv.piCongrRight_apply, Pi.map_apply, Equiv.apply_symm_apply]
   exact hρ T T' u g i
 
-#print axioms solution

@@ -106,4 +106,3 @@ theorem solution
     intro T t P
     rw [h2 t P, hone]
 
-#print axioms solution

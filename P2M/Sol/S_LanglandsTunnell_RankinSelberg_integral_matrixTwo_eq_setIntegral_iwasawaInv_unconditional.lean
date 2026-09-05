@@ -447,4 +447,3 @@ theorem solution
           ((p.2.2.1 ^ 2 * (|p.2.1 * p.2.2.1| ^ 4)⁻¹ : ℝ) : ℂ) :=
   ⟨Ws23K1A.integrable_iff F, Ws23K1A.integral_eq F⟩
 
-#print axioms solution

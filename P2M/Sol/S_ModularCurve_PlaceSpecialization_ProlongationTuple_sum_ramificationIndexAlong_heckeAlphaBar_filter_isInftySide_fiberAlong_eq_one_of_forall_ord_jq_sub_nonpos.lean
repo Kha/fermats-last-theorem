@@ -224,4 +224,3 @@ theorem solution
   rw [htot] at hsplit
   omega
 
-#print axioms solution

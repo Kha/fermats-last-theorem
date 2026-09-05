@@ -78,4 +78,3 @@ theorem solution (N : ℕ) [NeZero N] :
     Function.Injective (diffQExpBar N) :=
   ModularCurve.diffQExpBar_injective_of_neZero N
 
-#print axioms solution

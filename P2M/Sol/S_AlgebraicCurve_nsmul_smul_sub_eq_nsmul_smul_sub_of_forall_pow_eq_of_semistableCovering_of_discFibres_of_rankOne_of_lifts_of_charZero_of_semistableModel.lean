@@ -294,4 +294,3 @@ theorem solution
   rw [pow_smul_eq_add_nsmul s P (hlev s hs) a, pow_smul_eq_add_nsmul s' P (hlev s' hs') b] at hab'
   exact add_left_cancel hab'
 
-#print axioms solution

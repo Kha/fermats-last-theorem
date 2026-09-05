@@ -142,4 +142,3 @@ theorem solution
       w.hom ⁻¹ᵁ (ιFin R F j).opensRange = (ιFin R F j).opensRange :=
   AlgebraicCurve.TwoChartIntegralModel.WExistsGen.main R F j σ hfin hfin' hvis hvis'
 
-#print axioms solution

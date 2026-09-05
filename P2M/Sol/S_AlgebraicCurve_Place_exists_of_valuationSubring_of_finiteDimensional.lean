@@ -14,4 +14,3 @@ theorem solution
     ∃ v : AlgebraicCurve.Place K F, v.toValuationSubring = A :=
   ⟨⟨A, hAK, hA, ValuationSubring.isPrincipalIdealRing_of_finiteDimensional_adjoin x A hAK hA⟩, rfl⟩
 
-#print axioms solution

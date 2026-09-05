@@ -521,4 +521,3 @@ theorem solution (N : ℕ) [NeZero N] :
       = ModularCurve.dedekindPsi N + ModularCurve.nuTwo N := by
   rw [EllipticCount.two_mul_card_orbits_S N, EllipticCount.natCard_X, EllipticCount.natCard_fixedBy_S]
 
-#print axioms solution

@@ -369,4 +369,3 @@ theorem solution
     have := hregroup (fun p : ↥SQ => localAt ℚ (p : HeightOneSpectrum (𝓞 ℚ)) g) g
     simpa only [hUdef] using this
 
-#print axioms solution

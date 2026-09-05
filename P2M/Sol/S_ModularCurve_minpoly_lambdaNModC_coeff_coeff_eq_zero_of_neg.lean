@@ -339,4 +339,3 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq2 : q ≠ 2)
         : LaurentSeries ℚ)).coeff n = 0 :=
   LambdaPsiQIntSol.qint q hq2 k n hn
 
-#print axioms solution

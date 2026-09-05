@@ -888,4 +888,3 @@ theorem solution
           ((c * μK XK).toReal : ℂ) * ∑' r : K, tracePushforward K L F (algebraMap K (AdeleRing (𝓞 K) K) r)) :=
   AdelicTracePushforward.setLIntegral_tsum_actSubId_eq_mul_measure_mul_tsum K L μK μL D σ hgen c hc
 
-#print axioms solution

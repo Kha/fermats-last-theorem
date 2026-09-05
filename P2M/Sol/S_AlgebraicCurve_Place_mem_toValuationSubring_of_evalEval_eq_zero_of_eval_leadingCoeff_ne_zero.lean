@@ -176,4 +176,3 @@ theorem solution
   rw [← heq, h1] at h2
   exact lt_irrefl _ h2
 
-#print axioms solution

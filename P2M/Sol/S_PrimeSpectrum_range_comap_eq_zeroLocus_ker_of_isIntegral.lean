@@ -14,4 +14,3 @@ theorem solution
   rw [← (PrimeSpectrum.isClosedMap_comap_of_isIntegral f hf).isClosed_range.closure_eq,
     PrimeSpectrum.closure_range_comap]
 
-#print axioms solution

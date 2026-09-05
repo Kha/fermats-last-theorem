@@ -96,4 +96,3 @@ theorem solution
     refine le_trans (haBdd x) ?_
     rw [Finsupp.sub_apply, hEv1 x hx]
 
-#print axioms solution

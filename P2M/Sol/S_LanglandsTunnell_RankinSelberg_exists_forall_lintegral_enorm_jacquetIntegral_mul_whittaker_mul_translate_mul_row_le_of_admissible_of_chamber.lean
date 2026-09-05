@@ -1003,4 +1003,3 @@ theorem solution
           congr 1
           rw [hL]; ring
 
-#print axioms solution

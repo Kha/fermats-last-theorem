@@ -175,4 +175,3 @@ theorem solution
     exact_mod_cast ha
   exact mul_ne_zero (mul_ne_zero (mul_ne_zero hκ0 hπ) (Complex.Gammaℝ_ne_zero_of_re_pos hsu)) hne
 
-#print axioms solution

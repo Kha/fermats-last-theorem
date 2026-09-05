@@ -817,4 +817,3 @@ theorem solution
   rw [mul_assoc]
   exact Ws25K7fibaF.alg D W a u₀ cP a₀ sP k n s a₁ a₂ ha₂ hp ha₁ hq
 
-#print axioms solution

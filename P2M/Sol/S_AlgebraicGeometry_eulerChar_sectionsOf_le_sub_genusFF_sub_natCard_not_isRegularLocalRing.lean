@@ -378,4 +378,3 @@ theorem solution
     exact_mod_cast DIneqAux.natCard_not_isRegularLocalRing_le I₁.1 I₂.1 hcov
   linarith [hMV, h₁, h₂, hunit₁, hunit₂, hN]
 
-#print axioms solution

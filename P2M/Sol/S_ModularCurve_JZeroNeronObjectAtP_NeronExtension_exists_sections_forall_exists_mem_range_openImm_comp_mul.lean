@@ -186,4 +186,3 @@ theorem solution
     rw [h0, COVERAsm.transl_one, Category.comp_id]
     exact hx
 
-#print axioms solution

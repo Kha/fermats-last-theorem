@@ -453,4 +453,3 @@ theorem solution
   refine ((_hsum h).comp_injective torusIdx_injective).congr fun α => ?_
   exact torus_term_eq _hψ _hW α h
 
-#print axioms solution

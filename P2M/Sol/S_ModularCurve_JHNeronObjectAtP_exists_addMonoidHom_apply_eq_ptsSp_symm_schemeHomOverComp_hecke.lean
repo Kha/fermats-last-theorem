@@ -41,4 +41,3 @@ theorem solution
   apply O.ptsSp.injective
   rw [Equiv.apply_symm_apply, O.ptsSp_add, O.ptsSp_add, Equiv.apply_symm_apply, Equiv.apply_symm_apply, key]
 
-#print axioms solution

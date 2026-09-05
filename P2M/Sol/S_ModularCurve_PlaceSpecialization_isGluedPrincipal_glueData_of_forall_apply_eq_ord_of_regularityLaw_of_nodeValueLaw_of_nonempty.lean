@@ -775,4 +775,3 @@ theorem solution {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosur
   obtain ⟨g, h₁, h₂, hr₁, hr₂, hDg⟩ := hnorm
   exact isGluedPrincipal_glueData_of_unit hqN P R hmodel hO W hW hreg hnv g h₁ h₂ hr₁ hr₂ D hDg hgood
 
-#print axioms solution

@@ -72,4 +72,3 @@ theorem solution
     calc w.hom ≫ w.hom = δ.hom ≫ (δ.inv ≫ w.hom ≫ w.hom) := by simp
       _ = δ.hom := by rw [key, Category.comp_id]
 
-#print axioms solution

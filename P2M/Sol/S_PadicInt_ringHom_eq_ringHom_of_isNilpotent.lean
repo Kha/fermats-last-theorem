@@ -17,4 +17,3 @@ theorem solution (p : ℕ) [Fact p.Prime] {B : Type u} [CommRing B]
   rw [hx', map_add, map_add, map_mul, map_mul, map_pow, map_pow, map_natCast, map_natCast, map_natCast,
     map_natCast, hn, zero_mul, zero_mul]
 
-#print axioms solution

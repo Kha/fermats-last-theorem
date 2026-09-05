@@ -296,4 +296,3 @@ theorem solution
     rw [h, h0, mul_zero]
   · exact hne (hfzero τ₀ hgt)
 
-#print axioms solution

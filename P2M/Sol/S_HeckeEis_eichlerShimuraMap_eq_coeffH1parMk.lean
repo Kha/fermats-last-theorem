@@ -45,4 +45,3 @@ theorem solution (n N : ℕ) (f : UpperHalfPlane → ℂ)
       = HeckeEis.coeffH1parMk _ ⟨hF.cocycle, ⟨hF.cocycle_mem_coeffCocycles, hpar⟩⟩ :=
   HeckeEis.SolMain.eqmk n N f hEI hF hpar
 
-#print axioms solution

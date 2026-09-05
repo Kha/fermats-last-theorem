@@ -1663,4 +1663,3 @@ theorem solution
       (by simp only [Complex.add_re, Complex.one_re]; linarith [le_max_right (σ₁ - 1) (-(σ₂ - 1))])
     simp only [lam, dif_pos hχ, key, add_sub_cancel_right]
 
-#print axioms solution

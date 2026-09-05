@@ -17,4 +17,3 @@ theorem solution
     AlgebraicGeometry.LocallyOfFinitePresentation.of_comp_of_flat_of_surjective f g
   exact AlgebraicGeometry.Smooth.of_comp_of_smooth_of_surjective_of_locallyOfFinitePresentation f g
 
-#print axioms solution

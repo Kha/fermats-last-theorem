@@ -65,4 +65,3 @@ theorem solution {K K' : Type*} [Field K] [Field K'] (σ : K →+* K') {ι : Typ
         = s.inf' hs (fun i => (f i).order) :=
   ModularCurve.order_sum_algebraMap_mul_coeffMap σ s hs c hc f hf
 
-#print axioms solution

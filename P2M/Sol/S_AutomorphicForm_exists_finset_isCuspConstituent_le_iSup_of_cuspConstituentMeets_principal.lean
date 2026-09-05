@@ -52,4 +52,3 @@ theorem solution
   have hVmem : V ∈ hsub.finite.toFinset := (Set.Finite.mem_toFinset hsub.finite).mpr ⟨hV, hM⟩
   exact le_iSup₂_of_le V hVmem le_rfl
 
-#print axioms solution

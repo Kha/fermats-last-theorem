@@ -29,4 +29,3 @@ theorem solution
   exact ((Algebra.isUnramifiedAt_iff_not_le_comap_one_div_traceDual_of_free_of_isIntegrallyClosed
     A K B L Q).mp hunr) hDQ
 
-#print axioms solution

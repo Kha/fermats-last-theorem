@@ -215,4 +215,3 @@ theorem solution
   rw [hglue, hε, Scheme.Hom.comp_apply]
   exact hspec.map (ιInf A (↥K) j).base.hom.continuous
 
-#print axioms solution

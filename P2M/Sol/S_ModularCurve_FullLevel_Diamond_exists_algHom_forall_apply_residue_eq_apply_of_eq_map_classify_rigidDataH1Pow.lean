@@ -699,4 +699,3 @@ theorem solution
   rw [h1, hχ'_apply, hχ₁ ⟨gf, ht⟩]
   exact ρ_apply ⟨gf, ht⟩
 
-#print axioms solution

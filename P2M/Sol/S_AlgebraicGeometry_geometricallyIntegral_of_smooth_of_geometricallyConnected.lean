@@ -36,4 +36,3 @@ theorem solution
   haveI : IsIntegral (pullback f y) := isIntegral_of_smooth_of_connectedSpace (pullback.snd f y)
   exact IsIntegral.of_isIso h.isoPullback.inv
 
-#print axioms solution

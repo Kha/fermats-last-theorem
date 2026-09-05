@@ -227,4 +227,3 @@ theorem solution
   rw [Functor.map_comp, Category.assoc, hU'.2.1, ← Category.assoc, ← Functor.map_comp,
     IsOpenImmersion.lift_fac]
 
-#print axioms solution

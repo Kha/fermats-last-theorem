@@ -305,4 +305,3 @@ theorem solution
 end
 p2m_reactivate "P2MW.S_ModularCurve_JZeroNeronObjectAtP_LevelModel_nonempty_poincare_pullbackAlong_pts_pic0Mk_iso_pointTwist.PrincTriv"
 
-#print axioms solution

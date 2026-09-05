@@ -503,7 +503,6 @@ p2m_reactivate "P2MW.S_NumberField_AdelicLevel_finiteIdeleClassNumberOne_rat.M4a
 end M4aP1R
 p2m_reactivate "P2MW.S_NumberField_AdelicLevel_finiteIdeleClassNumberOne_rat.M4aP1R.ClassFieldAxiom P2MW.S_NumberField_AdelicLevel_finiteIdeleClassNumberOne_rat.M4aP1R"
 
-#print axioms M4aP1R.GL2StrongApprox.finiteIdeleClassNumberOne_rat_impl
 
 theorem solution
     (δ : (IsDedekindDomain.FiniteAdeleRing (NumberField.RingOfIntegers ℚ) ℚ)ˣ) :

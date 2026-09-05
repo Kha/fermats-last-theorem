@@ -739,4 +739,3 @@ theorem solution
     exact hh.symm
   exact ⟨u', hu', hππ, hsubset _ u'.1 hsm, uκ', huκ'₁, huκ'₂, hx'0, P', hP'pt, hplace⟩
 
-#print axioms solution

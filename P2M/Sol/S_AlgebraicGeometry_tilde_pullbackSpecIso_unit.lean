@@ -34,4 +34,3 @@ theorem solution {R S : CommRingCat.{u}} (φ : R ⟶ S)
   simp only [Category.assoc, Iso.inv_hom_id_app, Category.comp_id] at h2
   exact h2
 
-#print axioms solution

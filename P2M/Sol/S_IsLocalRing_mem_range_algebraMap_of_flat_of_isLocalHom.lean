@@ -47,4 +47,3 @@ theorem solution
   have hbK : algebraMap R K b ≠ 0 := fun h => hb0 ((IsFractionRing.to_map_eq_zero_iff (K := K)).mp h)
   rw [eq_div_iff hbK, ← map_mul, hr]
 
-#print axioms solution

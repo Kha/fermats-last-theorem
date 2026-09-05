@@ -317,4 +317,3 @@ theorem solution
         lam = lam') :=
   Ws23.L2Reduce.main c u d₁ d₂ T hd hcov Θ hΘ w hw
 
-#print axioms solution

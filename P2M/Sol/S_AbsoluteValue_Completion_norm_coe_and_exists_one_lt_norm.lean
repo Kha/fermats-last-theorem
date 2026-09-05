@@ -15,4 +15,3 @@ theorem solution
   obtain ⟨x, hx⟩ := hnt.exists_abv_gt_one
   exact ⟨x, by rwa [h]⟩
 
-#print axioms solution

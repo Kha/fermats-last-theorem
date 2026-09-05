@@ -290,4 +290,3 @@ theorem solution
            ne_top' := hne'
            isPrincipalIdealRing' := AlgebraicCurve.Place.isPrincipalIdealRing_comap' w hne' }, rfl⟩
 
-#print axioms solution

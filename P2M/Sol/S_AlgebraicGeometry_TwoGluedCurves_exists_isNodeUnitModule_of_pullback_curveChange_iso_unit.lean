@@ -371,7 +371,6 @@ theorem solution
   exact ⟨W, e, toR₁ x i₁ h W (J₁.app W e), toR₂ x i₂ h W (J₂.app W e), hyW, he, rfl, rfl, (hj W e he).1,
     (hj W e he).2, fun j => (nodeCondition_iff x i₁ i₂ p₁ p₂ h u W j _ _).mpr (hu j W e he)⟩
 
-#print axioms solution
 
 end
 p2m_reactivate "P2MW.S_AlgebraicGeometry_TwoGluedCurves_exists_isNodeUnitModule_of_pullback_curveChange_iso_unit.TwoGluedCurvesN7"

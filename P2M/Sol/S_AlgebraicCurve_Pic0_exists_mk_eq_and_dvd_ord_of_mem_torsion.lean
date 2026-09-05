@@ -45,4 +45,3 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] {n : ℕ} {x : 
   obtain ⟨D, f, hD, hf0, hf⟩ := exists_mk_eq_and_ord_eq_mul_of_mem_torsion hx
   exact ⟨D, f, hD, hf0, fun v => ⟨(D : Divisor K F) v, hf v⟩, hf⟩
 
-#print axioms solution

@@ -219,7 +219,6 @@ theorem summable_translate_of_mem_schwartzBruhat_impl {f : 𝔸 → ℂ} (hf : f
   · intro c f _ hf x
     simpa [Pi.smul_apply, smul_eq_mul] using (hf x).mul_left c
 
-#print axioms summable_translate_of_mem_schwartzBruhat_impl
 
 example : ∀ {f : 𝔸 → ℂ} (_ : f ∈ schwartzBruhat F) (x : 𝔸), Summable fun ξ : F => f (x + ι ξ) :=
   fun hf x => summable_translate_of_mem_schwartzBruhat_impl F hf x

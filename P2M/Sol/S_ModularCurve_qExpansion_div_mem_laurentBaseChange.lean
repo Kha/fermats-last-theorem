@@ -317,4 +317,3 @@ theorem solution (N : ℕ) [NeZero N] {k : ℤ}
       ModularCurve.laurentBaseChange ℂ (ModularCurve.modularFunctionFieldFull N) :=
   ModularCurve.qExpansion_div_mem_laurentBaseChange N g h hh
 
-#print axioms solution

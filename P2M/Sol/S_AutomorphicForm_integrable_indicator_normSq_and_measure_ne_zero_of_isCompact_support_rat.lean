@@ -817,4 +817,3 @@ theorem solution
   rw [Measure.restrict_apply_univ] at this
   exact absurd this (hOo.measure_pos μf ⟨1, h1O⟩).ne'
 
-#print axioms solution

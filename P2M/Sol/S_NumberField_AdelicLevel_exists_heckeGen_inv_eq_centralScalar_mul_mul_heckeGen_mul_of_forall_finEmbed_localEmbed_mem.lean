@@ -118,4 +118,3 @@ theorem solution
     · rw [map_mul, map_mul, map_mul, map_mul, map_mul, map_mul, map_mul, map_mul, hHne v hv, hUne v hv, hCne v hv]
       simp
 
-#print axioms solution

@@ -54,4 +54,3 @@ theorem solution (p : ℕ) :
   IsFractionRing.isFractionRing_of_isDomain_of_isLocalization (SolB0C.ratLocalizedAtMonoid p)
     (GaloisRep.ratLocalizedAt p) ℚ
 
-#print axioms solution
