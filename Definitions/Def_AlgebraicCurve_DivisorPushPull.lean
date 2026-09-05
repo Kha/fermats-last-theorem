@@ -283,8 +283,8 @@ def restrict : Place K F where
   algebraMap_mem' a := by
     rw [ValuationSubring.mem_comap, ← IsScalarTower.algebraMap_apply]
     exact w.algebraMap_mem' a
-  ne_top' := w.comap_algebraMap_ne_top
-  isPrincipalIdealRing' := w.isPrincipalIdealRing_comap
+  ne_top' := private w.comap_algebraMap_ne_top
+  isPrincipalIdealRing' := private w.isPrincipalIdealRing_comap
 
 @[simp]
 theorem restrict_toValuationSubring :

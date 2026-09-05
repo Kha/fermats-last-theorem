@@ -450,7 +450,7 @@ theorem eq_placeOfPoint_or_eq_placeInfty [IsAlgClosed K] [DecidableEq (RatFunc K
     exact Or.inl ⟨a, hw.trans ha⟩
   · exact Or.inr hw
 
-private def ofOption [DecidableEq (RatFunc K)] : Option K → Place K (RatFunc K) :=
+def ofOption [DecidableEq (RatFunc K)] : Option K → Place K (RatFunc K) :=
   fun o => o.elim (placeInfty K) (placeOfPoint K)
 
 private theorem ofOption_bijective [IsAlgClosed K] [DecidableEq (RatFunc K)] :
@@ -468,7 +468,7 @@ private theorem ofOption_bijective [IsAlgClosed K] [DecidableEq (RatFunc K)] :
 
 def placeEquivOption [IsAlgClosed K] [DecidableEq (RatFunc K)] :
     Place K (RatFunc K) ≃ Option K :=
-  (Equiv.ofBijective (ofOption K) (ofOption_bijective K)).symm
+  (Equiv.ofBijective (ofOption K) (private_decl% (ofOption_bijective K))).symm
 
 @[scoped simp]
 theorem placeEquivOption_symm_some [IsAlgClosed K] [DecidableEq (RatFunc K)] (a : K) :
