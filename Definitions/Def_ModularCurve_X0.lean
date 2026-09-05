@@ -250,6 +250,9 @@ variable (N : ℕ) [NeZero N]
 def modularFunctionField : IntermediateField ℚ (LaurentSeries ℚ) :=
   IntermediateField.adjoin ℚ {jq, qExpand ℚ N jq}
 
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraModularFunctionField : Algebra ℚ (modularFunctionField N) := inferInstance
+
 theorem jq_mem : jq ∈ modularFunctionField N :=
   IntermediateField.subset_adjoin ℚ _ (Set.mem_insert _ _)
 
@@ -304,6 +307,10 @@ theorem mem_divisorExpansions {d : ℕ} [NeZero d] (hd : d ∣ N) :
 
 def modularFunctionFieldFull : IntermediateField ℚ (LaurentSeries ℚ) :=
   IntermediateField.adjoin ℚ (divisorExpansions N)
+
+omit [NeZero N] in
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraModularFunctionFieldFull : Algebra ℚ (modularFunctionFieldFull N) := inferInstance
 
 omit [NeZero N] in
 theorem jqd_mem_full {d : ℕ} [NeZero d] (hd : d ∣ N) :

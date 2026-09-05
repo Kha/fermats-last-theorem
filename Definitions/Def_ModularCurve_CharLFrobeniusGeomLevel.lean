@@ -116,6 +116,11 @@ theorem frobeniusGeomLevel_map_le :
 def frobeniusGeomLevelImage : IntermediateField K (LaurentSeries K) :=
   (modularFunctionFieldC K N).map (qExpandAlgC K ℓ)
 
+omit [CharP K ℓ] in
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraFrobeniusGeomLevelImage : Algebra K (frobeniusGeomLevelImage K N (ℓ := ℓ)) :=
+  inferInstance
+
 def frobeniusGeomLevelEquiv :
     (modularFunctionFieldC K N) ≃ₐ[K] (frobeniusGeomLevelImage K N (ℓ := ℓ)) :=
   (modularFunctionFieldC K N).equivMap (qExpandAlgC K ℓ)

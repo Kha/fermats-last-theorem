@@ -15,6 +15,9 @@ variable (K : Type*) [Field K] (M : ℕ) [NeZero M]
 def jqNField : IntermediateField K (LaurentSeries K) :=
   IntermediateField.adjoin K {jqNModC K M}
 
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraJqNField : Algebra K (jqNField K M) := inferInstance
+
 theorem jqNModC_mem_jqNField : jqNModC K M ∈ jqNField K M :=
   IntermediateField.subset_adjoin K _ (Set.mem_singleton _)
 
@@ -49,6 +52,9 @@ theorem toJqNField_map :
 
 def rootField : IntermediateField K (LaurentSeries K) :=
   IntermediateField.adjoin K (insert (jqNModC K M) ((data.toJqNField K).rootSet (LaurentSeries K)))
+
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraRootField : Algebra K (data.rootField K) := inferInstance
 
 theorem jqNField_le_rootField : jqNField K M ≤ data.rootField K :=
   IntermediateField.adjoin.mono K _ _ (Set.singleton_subset_iff.mpr (Set.mem_insert _ _))

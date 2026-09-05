@@ -76,6 +76,9 @@ variable (K : Type*) [Field K] (M : ℕ) (H : Subgroup (ZMod M)ˣ)
 def xHFunctionFieldC : IntermediateField K (LaurentSeries K) :=
   qExpFunctionFieldC K (CohCarrier.GammaH M H)
 
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraXHFunctionFieldC : Algebra K (xHFunctionFieldC K M H) := inferInstance
+
 abbrev xHFunctionField : IntermediateField ℚ (LaurentSeries ℚ) :=
   xHFunctionFieldC ℚ M H
 
@@ -83,6 +86,10 @@ theorem xHFunctionFieldC_rat : xHFunctionFieldC ℚ M H = xHFunctionField M H :=
 
 def xHTopFunctionFieldC (t : ℕ) : IntermediateField K (LaurentSeries K) :=
   qExpFunctionFieldC K (CohCarrier.GammaH M H ⊓ Gamma0 t)
+
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraXHTopFunctionFieldC (t : ℕ) : Algebra K (xHTopFunctionFieldC K M H t) :=
+  inferInstance
 
 theorem xHFunctionFieldC_le_top (t : ℕ) : xHFunctionFieldC K M H ≤ xHTopFunctionFieldC K M H t :=
   qExpFunctionFieldC_mono K inf_le_left

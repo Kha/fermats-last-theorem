@@ -101,6 +101,13 @@ def modularFunctionFieldFullC : IntermediateField K (LaurentSeries K) :=
   IntermediateField.adjoin K (divisorExpansionsC K N)
 
 omit [NeZero N] in
+/-- Shortcut instance, as `instAlgebraModularFunctionFieldC`: avoids re-running the instance search
+(with its failing `IsScalarTower.of_algHom` attempt, about 0.36 s) in every declaration mentioning
+`modularFunctionFieldFullC K N`; `Def_ModularCurve_FrobeniusModL` ran it 40 times. -/
+instance instAlgebraModularFunctionFieldFullC : Algebra K (modularFunctionFieldFullC K N) :=
+  inferInstance
+
+omit [NeZero N] in
 
 theorem modularFunctionFieldFullC_rat : modularFunctionFieldFullC ℚ N = modularFunctionFieldFull N :=
   rfl

@@ -39,6 +39,14 @@ abbrev ι : LaurentSeries A →+* LaurentSeries L := coeffMap A.subtype
 abbrev ϖ : LaurentSeries A →+* LaurentSeries (IsLocalRing.ResidueField A) :=
   coeffMap (IsLocalRing.residue A)
 
+/-- Shortcut instance: `Algebra (ResidueField A) (LaurentSeries (ResidueField A))` is otherwise
+re-searched by most declarations below (about 0.65 s each, 16 times in this file); half of each search
+is a failing `RingHom.Finite.instFinite` attempt on `Module.Finite ↥A (LaurentSeries (ResidueField ↥A))`
+that unfolds the `HahnSeries` algebra structure. -/
+instance instAlgebraResidueFieldLaurentSeries :
+    Algebra (IsLocalRing.ResidueField A) (LaurentSeries (IsLocalRing.ResidueField A)) :=
+  inferInstance
+
 theorem ι_injective : Function.Injective (ι A) := by
   intro x y h
   ext n
@@ -737,6 +745,10 @@ def resField : IntermediateField kk (LaurentSeries kk) where
       refine ⟨↑u⁻¹, ?_⟩
       exact (inv_eq_of_mul_eq_one_left (by rw [← map_mul, Units.inv_mul, map_one])).symm
 
+/-- Shortcut instance, see `ModularCurve.instAlgebraModularFunctionFieldC`: every declaration
+mentioning `resField A N` otherwise re-runs this search (about 1.5 s each, 23 times in this file). -/
+instance instAlgebraResField : Algebra kk (resField A N) := inferInstance
+
 theorem mem_resField_iff {z : LaurentSeries kk} : z ∈ resField A N ↔ ∃ f, resHom A N f = z :=
   Iff.rfl
 
@@ -831,7 +843,7 @@ def Rsigma (σ : FF ≃ₐ[L] FF) : RegularProlongation A FF (resField A N) wher
     convert resR_algebraMap A N a ((algebraMap_mem_gaussRing_iff A N a).mpr a.2) using 2
     exact Subtype.ext (σ.commutes a)
   exists_smul_mem f hf := by
-    obtain ⟨c, h, hne⟩ := exists_smul_mem_gaussRing A N (σ f) ((map_ne_zero σ).mpr hf)
+    obtain ⟨c, h, hne⟩ := exists_smul_mem_gaussRing A N (σ f) ((_root_.map_ne_zero σ).mpr hf)
     have hσ : σ (c • f) = c • σ f := map_smul σ c f
     have hmem : c • f ∈ gaussComap A N σ := by rw [mem_gaussComap, hσ]; exact h
     refine ⟨c, hmem, fun h0 => hne ?_⟩
@@ -1190,7 +1202,7 @@ private def _root_.AlgebraicCurve.RegularProlongation.transport (R : RegularProl
     convert R.residue_algebraMap a using 2
     exact Subtype.ext (σ.commutes a)
   exists_smul_mem f hf := by
-    obtain ⟨c, h, hne⟩ := R.exists_smul_mem (σ f) ((map_ne_zero σ).mpr hf)
+    obtain ⟨c, h, hne⟩ := R.exists_smul_mem (σ f) ((_root_.map_ne_zero σ).mpr hf)
     have hσ : σ (c • f) = c • σ f := map_smul σ c f
     have hmem : c • f ∈ R.integers.comap (σ : F →+* F) := by
       show σ (c • f) ∈ R.integers

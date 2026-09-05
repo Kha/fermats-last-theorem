@@ -103,6 +103,12 @@ variable (F₀ : IntermediateField ℚ (LaurentSeries ℚ))
 def laurentBaseChange : IntermediateField L (LaurentSeries L) :=
   IntermediateField.adjoin L (⇑(coeffEmb L) '' (F₀ : Set (LaurentSeries ℚ)))
 
+/-- Shortcut instance. Without it, every declaration mentioning `laurentBaseChange L F₀` (and hence
+`modularFunctionFieldBar N`, an abbreviation for it) re-runs an instance search that spends most of
+its time in a failing `IsScalarTower.of_algHom` attempt unfolding the `HahnSeries`/`LaurentSeries`
+algebra structure (about 0.4 s per search; `Def_ModularCurve_ReductionModL` ran it 39 times). -/
+instance instAlgebraLaurentBaseChange : Algebra L (laurentBaseChange L F₀) := inferInstance
+
 variable {F₀} in
 
 theorem coeffEmb_mem_laurentBaseChange {x : LaurentSeries ℚ} (hx : x ∈ F₀) :

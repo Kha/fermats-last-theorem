@@ -217,6 +217,9 @@ def charLDegeneracyRoof : IntermediateField k (LaurentSeries k) :=
   IntermediateField.adjoin k
     {jqModC k, jqNModC k N, jqNModC k q, jqNModC k (N * q)}
 
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraCharLDegeneracyRoof : Algebra k (charLDegeneracyRoof k N q) := inferInstance
+
 theorem modularFunctionFieldC_le_charLDegeneracyRoof :
     modularFunctionFieldC k N ≤ charLDegeneracyRoof k N q := by
   unfold modularFunctionFieldC charLDegeneracyRoof

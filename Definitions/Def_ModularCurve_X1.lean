@@ -101,6 +101,9 @@ theorem one_mem_intFormRatiosC : (1 : LaurentSeries K) ∈ intFormRatiosC K Γ :
 def qExpFunctionFieldC : IntermediateField K (LaurentSeries K) :=
   IntermediateField.adjoin K (intFormRatiosC K Γ)
 
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraQExpFunctionFieldC : Algebra K (qExpFunctionFieldC K Γ) := inferInstance
+
 theorem intFormRatiosC_subset : intFormRatiosC K Γ ⊆ (qExpFunctionFieldC K Γ : Set (LaurentSeries K)) :=
   IntermediateField.subset_adjoin K _
 
@@ -134,6 +137,9 @@ variable (K : Type*) [Field K] (M : ℕ)
 def x1FunctionFieldC : IntermediateField K (LaurentSeries K) :=
   qExpFunctionFieldC K (Gamma1 M)
 
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraX1FunctionFieldC : Algebra K (x1FunctionFieldC K M) := inferInstance
+
 abbrev x1FunctionField : IntermediateField ℚ (LaurentSeries ℚ) :=
   x1FunctionFieldC ℚ M
 
@@ -141,6 +147,10 @@ theorem x1FunctionFieldC_rat : x1FunctionFieldC ℚ M = x1FunctionField M := rfl
 
 def x1x0FunctionFieldC (t : ℕ) : IntermediateField K (LaurentSeries K) :=
   qExpFunctionFieldC K (Gamma1 M ⊓ Gamma0 t)
+
+/-- Shortcut instance, see `instAlgebraModularFunctionFieldC`. -/
+instance instAlgebraX1x0FunctionFieldC (t : ℕ) : Algebra K (x1x0FunctionFieldC K M t) :=
+  inferInstance
 
 theorem x1FunctionFieldC_le_x1x0 (t : ℕ) : x1FunctionFieldC K M ≤ x1x0FunctionFieldC K M t :=
   qExpFunctionFieldC_mono K inf_le_left
