@@ -827,7 +827,11 @@ lemma normEDS_mul_complEDS (m n : ℤ) :
     normEDS b c d m * EllSequence.complEDS b c d m n = normEDS b c d (n * m) := by
   obtain rfl|hm := eq_or_ne m 0
   · simp
-  rw [normEDS_eq_aeval, universalNormEDS, complEDS_eq_aeval, ← map_mul]; congr 1
+  rw [normEDS_eq_aeval, universalNormEDS, complEDS_eq_aeval, ← map_mul]
+  -- `congr 1` here would twice try to unify `normEDS … m * complEDS … m n =?= normEDS … (n * m)`
+  -- at default transparency (unfolding `MvPolynomial` multiplication down to `Finsupp` sums,
+  -- ~7.7 s before failing); `congrArg` yields the same subgoal without those attempts.
+  refine congrArg _ ?_
   have := @universalNormEDS_mem_nonZeroDivisors
   exact IsEllSequence'.normEDS.mul_compl_eq_apply_mul_of_mem_nonZeroDivisors (this one_ne_zero)
     (this two_ne_zero) _ _ (fun _ ↦ by simp) (fun _ ↦ normEDS_mul_compl₂EDS _ _ _ _) _ _ (this hm)
@@ -1042,6 +1046,22 @@ protected abbrev Ring : Type := curve.CoordinateRing
 protected abbrev Field : Type := FractionRing Univ.Ring
 
 instance : CommRing Poly := Polynomial.commRing
+
+/-! Shortcut instances. `Univ.Field` is an `abbrev` for `FractionRing Univ.Ring`, an
+`OreLocalization` of the `AdjoinRoot` `Univ.Ring`, so in every declaration (the instance cache is
+per declaration) the first instance search on `Univ.Field` re-synthesises
+`DistribMulAction Univ.Ring Univ.Ring` (~50 ms) while unifying with the generic `OreLocalization`
+instances, and every `map_add`/`map_mul`/... on `polyToField` tries a dozen `AlgHom`/`LinearMap`
+hom-class instances before reaching `RingHomClass` (~130 ms). These are the instances found anyway;
+declaring them here makes them the first candidates tried. -/
+
+instance : DistribMulAction Univ.Ring Univ.Ring := inferInstance
+instance : AddHomClass (Poly →+* Univ.Field) Poly Univ.Field := inferInstance
+instance : AddMonoidHomClass (Poly →+* Univ.Field) Poly Univ.Field := inferInstance
+instance : MulHomClass (Poly →+* Univ.Field) Poly Univ.Field := inferInstance
+instance : MonoidHomClass (Poly →+* Univ.Field) Poly Univ.Field := inferInstance
+instance : OneHomClass (Poly →+* Univ.Field) Poly Univ.Field := inferInstance
+instance : ZeroHomClass (Poly →+* Univ.Field) Poly Univ.Field := inferInstance
 
 lemma Poly.two_ne_zero : (2 : Poly) ≠ 0 :=
   Polynomial.C_ne_zero.mpr <| Polynomial.C_ne_zero.mpr fun h ↦ two_ne_zero' (α := ℤ) <|
