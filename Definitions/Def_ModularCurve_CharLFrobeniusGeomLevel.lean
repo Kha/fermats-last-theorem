@@ -9,8 +9,7 @@ public import Definitions.Def_AlgebraicCurve_FrobeniusEndoPic0
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_FibrePoly
 public import Definitions.Def_HeckeGalois_EichlerShimura
-public import Theorems.Thm_ModularCurve_frobenius_identity_geom_unconditional
-
+public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 @[expose] public section
 
 set_option autoImplicit false

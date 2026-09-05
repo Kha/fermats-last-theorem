@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_AlgebraicCurve_ResidueDiscs
-import Theorems.Thm_AlgebraicCurve_Place_evalAt_mul
+import P2M.Sol.S_AlgebraicCurve_Place_evalAt_mul
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_RegularProlongation_isResidueDisc_of_etaleChart_of_sections
 

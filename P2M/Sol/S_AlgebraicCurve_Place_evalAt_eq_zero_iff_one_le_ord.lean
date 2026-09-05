@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_PlaceWidth
 import Definitions.Def_ModularCurve_ModPFormFn
-import Theorems.Thm_AlgebraicCurve_Place_evalAt_ne_zero
+import P2M.Sol.S_AlgebraicCurve_Place_evalAt_ne_zero
 import Theorems.Thm_AlgebraicCurve_Place_mk_mem_maximalIdeal_iff
 import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import P2M.Util

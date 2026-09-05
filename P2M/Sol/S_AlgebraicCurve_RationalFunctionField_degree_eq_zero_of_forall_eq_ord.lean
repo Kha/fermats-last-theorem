@@ -2,11 +2,10 @@ module
 
 public import Mathlib.FieldTheory.RatFunc.Basic
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord_algebraMap
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord_algebraMap
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord
 
 set_option autoImplicit false
@@ -46,3 +45,10 @@ theorem solution {K : Type*} [Field K] {f : RatFunc K} (D : Divisor K (RatFunc K
       f.denom Dden hDden
     rw [map_add, h2, add_zero] at h1
     exact h1
+end S_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.RationalFunctionField.degree_eq_zero_of_forall_eq_ord {K : Type*} [Field K] {f : RatFunc K} (D : Divisor K (RatFunc K)) (hD : ∀ v : Place K (RatFunc K), D v = v.ord f) : Divisor.degree D = 0 := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord.solution
+end

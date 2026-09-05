@@ -1,5 +1,5 @@
 import Definitions.Def_AlgebraicCurve_PlacesOverDVR
-import Theorems.Thm_AlgebraicCurve_Place_ord_nonneg_of_mem
+import P2M.Sol.S_AlgebraicCurve_Place_ord_nonneg_of_mem
 import Mathlib.NumberTheory.RamificationInertia.Inertia
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_Place_inertiaDeg_pos

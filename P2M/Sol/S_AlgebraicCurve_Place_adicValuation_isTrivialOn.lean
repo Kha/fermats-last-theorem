@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_adicValuation_isTrivialOn
 
 open IsDedekindDomain WithZero IsLocalRing
@@ -52,3 +51,11 @@ open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_Place_adicValuation_isTr
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) :
     v.adicValuation.IsTrivialOn K :=
   AlgebraicCurve.Place.rowMain v
+end S_AlgebraicCurve_Place_adicValuation_isTrivialOn
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Place.adicValuation_isTrivialOn {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) :
+    v.adicValuation.IsTrivialOn K := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_adicValuation_isTrivialOn.solution
+end

@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_ord_algebraMap
 
 open IsDedekindDomain WithZero IsLocalRing
@@ -46,3 +45,11 @@ open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_Place_ord_algebraMap.Alg
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) (c : K) :
     v.ord (algebraMap K F c) = 0 :=
   AlgebraicCurve.Place.rowMain v c
+end S_AlgebraicCurve_Place_ord_algebraMap
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Place.ord_algebraMap {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) (c : K) :
+    v.ord (algebraMap K F c) = 0 := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_ord_algebraMap.solution
+end

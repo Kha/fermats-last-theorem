@@ -4,8 +4,8 @@ import Mathlib.RingTheory.DedekindDomain.Factorization
 import Mathlib.Algebra.Polynomial.Lifts
 import Mathlib.FieldTheory.Minpoly.Field
 import Mathlib.NumberTheory.RamificationInertia.Basic
-import Theorems.Thm_AlgebraicCurve_Place_ord_nonneg_of_mem
-import Theorems.Thm_AlgebraicCurve_Place_mem_of_ord_nonneg
+import P2M.Sol.S_AlgebraicCurve_Place_ord_nonneg_of_mem
+import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
 import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import Theorems.Thm_AlgebraicCurve_Place_exists_ord_pos
 import Theorems.Thm_AlgebraicCurve_Place_ord_eq_zero_iff_adicValuation_eq_one

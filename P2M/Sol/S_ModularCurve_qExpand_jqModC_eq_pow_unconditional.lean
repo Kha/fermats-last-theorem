@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_map_intCast_pow_char_eq_qExpand
+import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
 import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 namespace P2MW.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional

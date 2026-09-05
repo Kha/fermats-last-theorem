@@ -4,8 +4,8 @@ public import Mathlib.NumberTheory.RatFunc.Ostrowski
 public import Mathlib.RingTheory.DedekindDomain.Factorization
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
+public import Mathlib.FieldTheory.RatFunc.Basic
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
 
 set_option autoImplicit false
@@ -198,3 +198,10 @@ open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_RationalFunctionField_fi
 theorem solution {K : Type*} [Field K] {f : RatFunc K} (hf : f ≠ 0) :
     {v : Place K (RatFunc K) | v.ord f ≠ 0}.Finite :=
   AlgebraicCurve.RationalFunctionField.rowMain hf
+end S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.RationalFunctionField.finite_setOf_ord_ne_zero {K : Type*} [Field K] {f : RatFunc K} (hf : f ≠ 0) : {v : Place K (RatFunc K) | v.ord f ≠ 0}.Finite := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero.solution
+end

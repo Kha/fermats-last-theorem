@@ -2,12 +2,12 @@ module
 
 public import Mathlib.NumberTheory.RatFunc.Ostrowski
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Theorems.Thm_AlgebraicCurve_Place_adicValuation_valuationSubring
-public import Theorems.Thm_AlgebraicCurve_Place_adicValuation_isRankOneDiscrete
-public import Theorems.Thm_AlgebraicCurve_Place_adicValuation_isTrivialOn
+import P2M.Sol.S_AlgebraicCurve_Place_adicValuation_valuationSubring
+import P2M.Sol.S_AlgebraicCurve_Place_adicValuation_isRankOneDiscrete
+import P2M.Sol.S_AlgebraicCurve_Place_adicValuation_isTrivialOn
 import P2M.Util
+public import Mathlib.FieldTheory.RatFunc.Valuation
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_toValuationSubring_eq_of_forall_ne_ofHeightOneSpectrum
 attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation
 attribute [-simp] AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint
@@ -27,3 +27,12 @@ theorem solution {K : Type*} [Field K] [DecidableEq (RatFunc K)] (v : Place K (R
   · obtain ⟨w, hw, -⟩ := h
     exact absurd (Place.ext (v.adicValuation_valuationSubring.symm.trans
       ((Valuation.isEquiv_iff_valuationSubring _ _).mp hw))) (hv w)
+end S_AlgebraicCurve_RationalFunctionField_toValuationSubring_eq_of_forall_ne_ofHeightOneSpectrum
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation
+attribute [-simp] AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint
+open AlgebraicCurve
+theorem AlgebraicCurve.RationalFunctionField.toValuationSubring_eq_of_forall_ne_ofHeightOneSpectrum {K : Type*} [Field K] [DecidableEq (RatFunc K)] (v : Place K (RatFunc K)) (hv : ∀ w : IsDedekindDomain.HeightOneSpectrum (Polynomial K), v ≠ Place.ofHeightOneSpectrum w) : v.toValuationSubring = (RatFunc.inftyValuation K).valuationSubring := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_toValuationSubring_eq_of_forall_ne_ofHeightOneSpectrum.solution
+end

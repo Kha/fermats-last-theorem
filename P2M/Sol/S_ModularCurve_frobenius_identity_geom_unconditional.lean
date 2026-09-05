@@ -1,11 +1,10 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_map_intCast_pow_char_eq_qExpand
+import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
 public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_frobenius_identity_geom_unconditional
 
 noncomputable section
@@ -107,3 +106,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_frobenius_identity_geom_unco
 theorem solution (K : Type*) [CommRing K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ] :
     jqNModC K ℓ = (jqModC K) ^ ℓ :=
   CharLRows.frobenius_identity_geom K ℓ
+end S_ModularCurve_frobenius_identity_geom_unconditional
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.frobenius_identity_geom_unconditional (K : Type*) [CommRing K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ] :
+    jqNModC K ℓ = (jqModC K) ^ ℓ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_frobenius_identity_geom_unconditional.solution
+end

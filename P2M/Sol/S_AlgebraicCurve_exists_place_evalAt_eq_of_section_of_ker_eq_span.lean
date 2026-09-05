@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-import Theorems.Thm_AlgebraicCurve_Place_evalAt_algebraMap
+import P2M.Sol.S_AlgebraicCurve_Place_evalAt_algebraMap
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_exists_place_evalAt_eq_of_section_of_ker_eq_span
 

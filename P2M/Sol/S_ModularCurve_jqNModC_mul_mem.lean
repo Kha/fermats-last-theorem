@@ -1,6 +1,6 @@
 import Definitions.Def_ModularCurve_JqCoeff
 import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
-import Theorems.Thm_ModularCurve_frobenius_identity_geom_unconditional
+import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 import P2M.Util
 namespace P2MW.S_ModularCurve_jqNModC_mul_mem
 

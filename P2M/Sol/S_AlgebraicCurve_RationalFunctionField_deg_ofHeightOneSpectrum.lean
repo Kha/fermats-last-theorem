@@ -3,12 +3,12 @@ module
 public import Mathlib.FieldTheory.RatFunc.Basic
 public import Mathlib.RingTheory.AdjoinRoot
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Theorems.Thm_AlgebraicCurve_Place_mem_iff_adicValuation_le_one
-public import Theorems.Thm_AlgebraicCurve_Place_mem_maximalIdeal_iff_adicValuation_lt_one
-public import Theorems.Thm_AlgebraicCurve_Place_isEquiv_adicValuation_ofHeightOneSpectrum
+import P2M.Sol.S_AlgebraicCurve_Place_mem_iff_adicValuation_le_one
+import P2M.Sol.S_AlgebraicCurve_Place_mem_maximalIdeal_iff_adicValuation_lt_one
+import P2M.Sol.S_AlgebraicCurve_Place_isEquiv_adicValuation_ofHeightOneSpectrum
 import P2M.Util
+public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_deg_ofHeightOneSpectrum
 attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation
 attribute [-simp] AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint
@@ -131,3 +131,13 @@ theorem solution (K : Type*) [Field K] {w : IsDedekindDomain.HeightOneSpectrum (
   rw [Place.deg, ← (AlgebraicCurve.RationalFunctionField.WFf.residueFieldEquivOfHeightOneSpectrum K
     w).toLinearEquiv.finrank_eq, hw]
   exact finrank_quotient_span_eq_natDegree
+end S_AlgebraicCurve_RationalFunctionField_deg_ofHeightOneSpectrum
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation
+attribute [-simp] AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint
+open AlgebraicCurve
+theorem P2M.Dup.AlgebraicCurve.RationalFunctionField.deg_ofHeightOneSpectrum (K : Type*) [Field K] {w : IsDedekindDomain.HeightOneSpectrum (Polynomial K)} {p : Polynomial K} (hw : w.asIdeal = Ideal.span {p}) : (Place.ofHeightOneSpectrum (K := K) (F := RatFunc K) w).deg = p.natDegree := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_deg_ofHeightOneSpectrum.solution
+#p2m_type_eq_warn P2M.Dup.AlgebraicCurve.RationalFunctionField.deg_ofHeightOneSpectrum AlgebraicCurve.RationalFunctionField.deg_ofHeightOneSpectrum
+end

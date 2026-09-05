@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_isRational_iff_deg_eq_one
 
 open AlgebraicCurve
@@ -23,3 +22,10 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
       rw [hbot]
       exact Algebra.mem_top
     exact Algebra.mem_bot.mp hx
+end S_AlgebraicCurve_Place_isRational_iff_deg_eq_one
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Place.isRational_iff_deg_eq_one {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) : v.IsRational ↔ v.deg = 1 := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_isRational_iff_deg_eq_one.solution
+end

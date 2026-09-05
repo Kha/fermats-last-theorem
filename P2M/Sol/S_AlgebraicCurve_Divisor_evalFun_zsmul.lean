@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Divisor_evalFun_zsmul
 
 open AlgebraicCurve AlgebraicCurve.Divisor
@@ -14,3 +13,10 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (f : F) (D : Di
     evalFun_def, ← Finset.prod_zpow]
   refine Finset.prod_congr rfl fun v _ => ?_
   rw [Finsupp.smul_apply, smul_eq_mul, mul_comm n (D v), zpow_mul]
+end S_AlgebraicCurve_Divisor_evalFun_zsmul
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Divisor.evalFun_zsmul {K F : Type*} [Field K] [Field F] [Algebra K F] (f : F) (D : Divisor K F) (n : ℤ) : Divisor.evalFun f (n • D) = Divisor.evalFun f D ^ n := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Divisor_evalFun_zsmul.solution
+end

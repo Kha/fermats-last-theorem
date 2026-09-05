@@ -1,5 +1,5 @@
 import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import Theorems.Thm_AlgebraicCurve_Place_ord_algebraMap
+import P2M.Sol.S_AlgebraicCurve_Place_ord_algebraMap
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_Place_ord_natCast
 

@@ -2,11 +2,10 @@ module
 
 public import Mathlib.FieldTheory.RatFunc.Basic
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_hasPrincipalDivisors
 
 set_option autoImplicit false
@@ -21,3 +20,10 @@ theorem solution (K : Type*) [Field K] : HasPrincipalDivisors K (RatFunc K) :=
         (AlgebraicCurve.RationalFunctionField.finite_setOf_ord_ne_zero hf),
       fun _ => rfl,
       AlgebraicCurve.RationalFunctionField.degree_eq_zero_of_forall_eq_ord _ fun _ => rfl⟩⟩
+end S_AlgebraicCurve_RationalFunctionField_hasPrincipalDivisors
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.RationalFunctionField.hasPrincipalDivisors (K : Type*) [Field K] : HasPrincipalDivisors K (RatFunc K) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_hasPrincipalDivisors.solution
+end

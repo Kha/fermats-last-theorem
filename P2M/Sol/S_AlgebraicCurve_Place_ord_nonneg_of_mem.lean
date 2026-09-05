@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
+public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_ord_nonneg_of_mem
 
 open IsDedekindDomain WithZero IsLocalRing
@@ -45,3 +45,12 @@ open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_Place_ord_nonneg_of_mem.
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) {f : F} (hf : f ∈ v.toValuationSubring) :
     0 ≤ v.ord f :=
   AlgebraicCurve.Place.rowMain v hf
+end S_AlgebraicCurve_Place_ord_nonneg_of_mem
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem P2M.Dup.AlgebraicCurve.Place.ord_nonneg_of_mem {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) {f : F} (hf : f ∈ v.toValuationSubring) :
+    0 ≤ v.ord f := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_ord_nonneg_of_mem.solution
+#p2m_type_eq_warn P2M.Dup.AlgebraicCurve.Place.ord_nonneg_of_mem AlgebraicCurve.Place.ord_nonneg_of_mem
+end

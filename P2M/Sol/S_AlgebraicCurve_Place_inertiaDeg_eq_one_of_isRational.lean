@@ -1,6 +1,6 @@
 import Definitions.Def_AlgebraicCurve_PlaceEvaluation
 import Definitions.Def_AlgebraicCurve_DivisorPushPull
-import Theorems.Thm_AlgebraicCurve_Place_isRational_iff_deg_eq_one
+import P2M.Sol.S_AlgebraicCurve_Place_isRational_iff_deg_eq_one
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_Place_inertiaDeg_eq_one_of_isRational
 

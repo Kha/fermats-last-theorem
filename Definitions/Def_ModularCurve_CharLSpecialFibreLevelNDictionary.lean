@@ -3,10 +3,9 @@ import Definitions.Def_ModularCurve_QAdicPlaceMod
 import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 import Definitions.Def_ModularCurve_SpecializeModuli
 import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-import Theorems.Thm_AlgebraicCurve_Place_evalAt_congr
-import Theorems.Thm_AlgebraicCurve_Place_evalAt_ne_zero
-import Theorems.Thm_AlgebraicCurve_Place_evalAt_algebraMap
-
+import P2M.Sol.S_AlgebraicCurve_Place_evalAt_congr
+import P2M.Sol.S_AlgebraicCurve_Place_evalAt_ne_zero
+import P2M.Sol.S_AlgebraicCurve_Place_evalAt_algebraMap
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 800000

@@ -4,8 +4,8 @@ public import Mathlib.NumberTheory.RatFunc.Ostrowski
 public import Mathlib.RingTheory.DedekindDomain.Factorization
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
+public import Mathlib.FieldTheory.RatFunc.Basic
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 
 set_option autoImplicit false
@@ -160,3 +160,10 @@ open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_RationalFunctionField_su
 theorem solution {K : Type*} [Field K] :
     {v : Place K (RatFunc K) | ∀ w : IsDedekindDomain.HeightOneSpectrum (Polynomial K), v ≠ Place.ofHeightOneSpectrum w}.Subsingleton :=
   AlgebraicCurve.RationalFunctionField.rowMain
+end S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.RationalFunctionField.subsingleton_setOf_forall_ne_ofHeightOneSpectrum {K : Type*} [Field K] : {v : Place K (RatFunc K) | ∀ w : IsDedekindDomain.HeightOneSpectrum (Polynomial K), v ≠ Place.ofHeightOneSpectrum w}.Subsingleton := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum.solution
+end
