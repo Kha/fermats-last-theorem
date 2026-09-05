@@ -9,7 +9,6 @@ import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_constantsAreBase_of_deg_eq_one
-attribute [-instance] AlgebraicCurve.IsCurveOver.instNontrivialKaehler AlgebraicCurve.IsCurveOver.instFreeKaehler AlgebraicCurve.IsCurveOver.toHasPrincipalDivisors AlgebraicCurve.IsCurveOver.instFiniteResidue
 
 open AlgebraicCurve
 

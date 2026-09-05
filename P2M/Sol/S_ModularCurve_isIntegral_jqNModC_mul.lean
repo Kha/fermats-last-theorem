@@ -7,7 +7,6 @@ import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_mul
-attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
 
 open ModularCurve IntermediateField Polynomial
 

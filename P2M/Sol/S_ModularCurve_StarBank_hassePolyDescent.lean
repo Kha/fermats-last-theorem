@@ -9,7 +9,6 @@ import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_hassePolyDescent
-attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
 
 set_option autoImplicit false
 

@@ -7,7 +7,6 @@ import P2M.Util
 import P2M.Sol.S_AlgebraicCurve_constantsAreBase_of_deg_eq_one
 
 @[expose] public section
-attribute [-instance] AlgebraicCurve.IsCurveOver.instNontrivialKaehler AlgebraicCurve.IsCurveOver.instFreeKaehler AlgebraicCurve.IsCurveOver.toHasPrincipalDivisors AlgebraicCurve.IsCurveOver.instFiniteResidue
 
 theorem AlgebraicCurve.constantsAreBase_of_deg_eq_one {K F : Type*} [Field K] [Field F] [Algebra K F]
     [AlgebraicCurve.HasPrincipalDivisors K F]
