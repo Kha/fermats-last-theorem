@@ -38,13 +38,13 @@ theorem mem_integralCoeffs {x : LaurentSeries L} :
     x ∈ integralCoeffs A ↔ ∀ n : ℤ, x.coeff n ∈ A :=
   Iff.rfl
 
-private def packCoeffs (x : integralCoeffs A) : LaurentSeries A where
+def packCoeffs_aux (x : integralCoeffs A) : LaurentSeries A where
   coeff n := ⟨(x : LaurentSeries L).coeff n, x.2 n⟩
   isPWO_support' := (x : LaurentSeries L).isPWO_support.mono
     (fun _ hn h => hn (Subtype.ext h))
 
 private theorem coeffMap_subtype_packCoeffs (x : integralCoeffs A) :
-    coeffMap A.subtype (packCoeffs A x) = (x : LaurentSeries L) := by
+    coeffMap A.subtype (packCoeffs_aux A x) = (x : LaurentSeries L) := by
   ext n
   rfl
 
@@ -54,23 +54,23 @@ private theorem coeffMap_subtype_injective :
   ext n
   exact congrArg (fun z : LaurentSeries L => z.coeff n) h
 
-private def packCoeffsHom : integralCoeffs A →+* LaurentSeries A where
-  toFun := packCoeffs A
-  map_one' := coeffMap_subtype_injective A <| by
+def packCoeffsHom_aux : integralCoeffs A →+* LaurentSeries A where
+  toFun := packCoeffs_aux A
+  map_one' := private coeffMap_subtype_injective A <| by
     rw [coeffMap_subtype_packCoeffs, map_one, OneMemClass.coe_one]
-  map_mul' x y := coeffMap_subtype_injective A <| by
+  map_mul' x y := private coeffMap_subtype_injective A <| by
     rw [map_mul, coeffMap_subtype_packCoeffs, coeffMap_subtype_packCoeffs,
       coeffMap_subtype_packCoeffs, MulMemClass.coe_mul]
-  map_zero' := coeffMap_subtype_injective A <| by
+  map_zero' := private coeffMap_subtype_injective A <| by
     rw [coeffMap_subtype_packCoeffs, map_zero, ZeroMemClass.coe_zero]
-  map_add' x y := coeffMap_subtype_injective A <| by
+  map_add' x y := private coeffMap_subtype_injective A <| by
     rw [map_add, coeffMap_subtype_packCoeffs, coeffMap_subtype_packCoeffs,
       coeffMap_subtype_packCoeffs, AddMemClass.coe_add]
 
 variable {k : Type*} [CommRing k] (red : A →+* k)
 
 def coeffRed : integralCoeffs A →+* LaurentSeries k :=
-  (coeffMap red).comp (packCoeffsHom A)
+  (coeffMap red).comp (packCoeffsHom_aux A)
 
 @[simp]
 theorem coeffRed_coeff (x : integralCoeffs A) (n : ℤ) :

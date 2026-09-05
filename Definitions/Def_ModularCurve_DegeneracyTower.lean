@@ -16,7 +16,7 @@ section PrivateSupply
 
 variable (L : Type*) [Field L] [Algebra ℚ L]
 
-private theorem laurentBaseChange_mono'' {F₀ F₁ : IntermediateField ℚ (LaurentSeries ℚ)}
+theorem laurentBaseChange_mono''_aux {F₀ F₁ : IntermediateField ℚ (LaurentSeries ℚ)}
     (h : F₀ ≤ F₁) : laurentBaseChange L F₀ ≤ laurentBaseChange L F₁ := by
   rw [laurentBaseChange, IntermediateField.adjoin_le_iff]
   rintro _ ⟨y, hy, rfl⟩
@@ -31,7 +31,7 @@ variable (L : Type*) [Field L] [Algebra ℚ L] {N M : ℕ} [NeZero N] [NeZero M]
 def towerInclBar (h : N ∣ M) :
     laurentBaseChange L (modularFunctionFieldFull N) →ₐ[L]
       laurentBaseChange L (modularFunctionFieldFull M) :=
-  IntermediateField.inclusion (laurentBaseChange_mono'' L (full_degeneracy_le h))
+  IntermediateField.inclusion (laurentBaseChange_mono''_aux L (full_degeneracy_le h))
 
 @[simp]
 theorem coe_towerInclBar (h : N ∣ M) (x : laurentBaseChange L (modularFunctionFieldFull N)) :

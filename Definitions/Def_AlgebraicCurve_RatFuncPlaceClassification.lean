@@ -85,11 +85,11 @@ theorem eq_placeOfPoint_or_eq_placeInfty [IsAlgClosed K] [DecidableEq (RatFunc K
     exact Or.inl ⟨a, hw.trans ha⟩
   · exact Or.inr hw
 
-private def ofOption [DecidableEq (RatFunc K)] : Option K → Place K (RatFunc K) :=
+def ofOption_aux [DecidableEq (RatFunc K)] : Option K → Place K (RatFunc K) :=
   fun o => o.elim (placeInfty K) (placeOfPoint K)
 
-private theorem ofOption_bijective [IsAlgClosed K] [DecidableEq (RatFunc K)] :
-    Function.Bijective (ofOption K) := by
+theorem ofOption_bijective_aux [IsAlgClosed K] [DecidableEq (RatFunc K)] :
+    Function.Bijective (ofOption_aux K) := by
   constructor
   · rintro (_ | a) (_ | b) h
     · rfl
@@ -103,7 +103,7 @@ private theorem ofOption_bijective [IsAlgClosed K] [DecidableEq (RatFunc K)] :
 
 def placeEquivOption [IsAlgClosed K] [DecidableEq (RatFunc K)] :
     Place K (RatFunc K) ≃ Option K :=
-  (Equiv.ofBijective (ofOption K) (ofOption_bijective K)).symm
+  (Equiv.ofBijective (ofOption_aux K) (ofOption_bijective_aux K)).symm
 
 @[simp]
 theorem placeEquivOption_symm_some [IsAlgClosed K] [DecidableEq (RatFunc K)] (a : K) :
@@ -116,12 +116,12 @@ theorem placeEquivOption_symm_none [IsAlgClosed K] [DecidableEq (RatFunc K)] :
 @[simp]
 theorem placeEquivOption_placeOfPoint [IsAlgClosed K] [DecidableEq (RatFunc K)] (a : K) :
     placeEquivOption K (placeOfPoint K a) = some a :=
-  (Equiv.ofBijective (ofOption K) (ofOption_bijective K)).symm_apply_apply (some a)
+  (Equiv.ofBijective (ofOption_aux K) (ofOption_bijective_aux K)).symm_apply_apply (some a)
 
 @[simp]
 theorem placeEquivOption_placeInfty [IsAlgClosed K] [DecidableEq (RatFunc K)] :
     placeEquivOption K (placeInfty K) = none :=
-  (Equiv.ofBijective (ofOption K) (ofOption_bijective K)).symm_apply_apply none
+  (Equiv.ofBijective (ofOption_aux K) (ofOption_bijective_aux K)).symm_apply_apply none
 
 end RationalFunctionField
 

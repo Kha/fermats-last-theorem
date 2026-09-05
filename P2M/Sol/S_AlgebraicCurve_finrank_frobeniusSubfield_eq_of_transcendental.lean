@@ -7,6 +7,7 @@ public import Mathlib.FieldTheory.Relrank
 public import Mathlib.LinearAlgebra.Dimension.Free
 public import Mathlib.Algebra.CharP.Algebra
 public import P2M.Util
+import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental

@@ -352,16 +352,7 @@ def UInvFinite (W : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 
   ∃ a : A, ((uFun (q := q))⁻¹ : ↥(modularFunctionFieldBar (1 * q)))
       - algebraMap (AlgebraicClosure ℚ) _ (a : AlgebraicClosure ℚ) ∈ W.toValuationSubring.nonunits
 
-private def _root_.ModularCurve.PlaceSpecialization.LevelOneProlongationPair.ReducesOnUInvChart (W : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 * q)))
-    (Q : Place (ResidueField A) ↥(modularFunctionFieldFullC (ResidueField A) 1)) : Prop :=
-  ∀ h : R.R₁.integers,
-    IsIntegral (Algebra.adjoin (AlgebraicClosure ℚ)
-      {(((uFun (q := q))⁻¹ : ↥(modularFunctionFieldBar (1 * q))) : ↥(modularFunctionFieldBar (1 * q)))}) (h : ↥(modularFunctionFieldBar (1 * q))) →
-    ∀ a : A, (h : ↥(modularFunctionFieldBar (1 * q))) - algebraMap (AlgebraicClosure ℚ) _ (a : AlgebraicClosure ℚ)
-        ∈ W.toValuationSubring.nonunits →
-      R.R₁.residue h - algebraMap (ResidueField A) _ (IsLocalRing.residue A a) ∈ Q.toValuationSubring.nonunits
-
-p2m_export "ModularCurve.PlaceSpecialization.LevelOneProlongationPair" "ReducesOnUInvChart"
+p2m_export "ModularCurve.PlaceSpecialization.LevelOneProlongationPair" "ReducesOnUInvChart_aux"
 set_option maxHeartbeats 16000000 in
 
 private theorem _root_.ModularCurve.PlaceSpecialization.LevelOneProlongationPair.residue_sub_mem_nonunits_of_reducesOnUInvChart
@@ -369,7 +360,7 @@ private theorem _root_.ModularCurve.PlaceSpecialization.LevelOneProlongationPair
     (hu0 : R.R₁.residue ⟨uFun, hu⟩ ≠ 0)
     (W : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 * q)))
     (Q : Place (ResidueField A) ↥(modularFunctionFieldFullC (ResidueField A) 1))
-    (hfin : UInvFinite (A := A) W) (hred : R.ReducesOnUInvChart W Q)
+    (hfin : UInvFinite (A := A) W) (hred : R.ReducesOnUInvChart_aux W Q)
     (hūQ : Q.ord (R.R₁.residue ⟨uFun, hu⟩ : ↥(modularFunctionFieldFullC (ResidueField A) 1)) = 0)
     (h : ↥(modularFunctionFieldBar (1 * q))) (hh : h ∈ R.R₁.integers) (m : ℕ)
     (hint : IsIntegral (Algebra.adjoin (AlgebraicClosure ℚ)
@@ -839,7 +830,7 @@ theorem not_isStrictTypeTwo_of_reducesOnUInvChart
     (hu0 : R.R₁.residue ⟨uFun, hu⟩ ≠ 0)
     (W : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 * q)))
     (Q : Place (ResidueField A) ↥(modularFunctionFieldFullC (ResidueField A) 1))
-    (hfin : UInvFinite (A := A) W) (hred : R.ReducesOnUInvChart W Q)
+    (hfin : UInvFinite (A := A) W) (hred : R.ReducesOnUInvChart_aux W Q)
     (hūQ : Q.ord (R.R₁.residue ⟨uFun, hu⟩ : ↥(modularFunctionFieldFullC (ResidueField A) 1)) = 0)
     (hjint : IsIntegral (Algebra.adjoin (AlgebraicClosure ℚ)
       {(((uFun (q := q))⁻¹ : ↥(modularFunctionFieldBar (1 * q))) : ↥(modularFunctionFieldBar (1 * q)))})
@@ -1185,17 +1176,13 @@ theorem n1N_isIntegral_adjoin_uInv_jFun_pow_mul (i d : ℕ) (hid : i ≤ d * (q 
     push_cast
     nlinarith
 
-private noncomputable def _root_.ModularCurve.PlaceSpecialization.LevelOneProlongationPair.n1N_constHom : A →+* R.R₁.integers :=
-  RingHom.codRestrict ((algebraMap (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 * q))).comp A.subtype)
-    R.R₁.integers (fun a => (R.R₁.algebraMap_mem_iff (a : AlgebraicClosure ℚ)).mpr a.2)
-
-p2m_export "ModularCurve.PlaceSpecialization.LevelOneProlongationPair" "n1N_constHom"
+p2m_export "ModularCurve.PlaceSpecialization.LevelOneProlongationPair" "n1N_constHom_aux"
 theorem n1N_constHom_coe (a : A) :
-    ((R.n1N_constHom a : R.R₁.integers) : ↥(modularFunctionFieldBar (1 * q)))
+    ((R.n1N_constHom_aux a : R.R₁.integers) : ↥(modularFunctionFieldBar (1 * q)))
       = algebraMap (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 * q)) (a : AlgebraicClosure ℚ) := rfl
 
 theorem n1N_residue_constHom (a : A) :
-    R.R₁.residue (R.n1N_constHom a) = algebraMap (ResidueField A) _ (IsLocalRing.residue A a) := by
+    R.R₁.residue (R.n1N_constHom_aux a) = algebraMap (ResidueField A) _ (IsLocalRing.residue A a) := by
   have h := R.R₁.residue_algebraMap a
   exact h
 
@@ -1892,7 +1879,7 @@ theorem solution
   have hQh := hQ ⟨h, hhR⟩ hhint a hhval
 
   have hres0 : R.R₁.residue ⟨h, hhR⟩ = 0 := by
-    have e : (⟨h, hhR⟩ : R.R₁.integers) = R.n1N_constHom ⟨ξ⁻¹, hξiA⟩ * (⟨jFun, hj⟩ * ⟨(uFun (q := q))⁻¹, hu'⟩) := Subtype.ext rfl
+    have e : (⟨h, hhR⟩ : R.R₁.integers) = R.n1N_constHom_aux ⟨ξ⁻¹, hξiA⟩ * (⟨jFun, hj⟩ * ⟨(uFun (q := q))⁻¹, hu'⟩) := Subtype.ext rfl
     rw [e, map_mul, n1N_residue_constHom, (IsLocalRing.residue_eq_zero_iff _).mpr hξim, map_zero, zero_mul]
   rw [hres0, zero_sub] at hQh
   have hneg := (ValuationSubring.mem_nonunits_iff_exists_mem_maximalIdeal.mp hQh)

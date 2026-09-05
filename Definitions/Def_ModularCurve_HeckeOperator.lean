@@ -33,13 +33,13 @@ private theorem coeffEmb_qExpand' (L : Type*) [Field L] [Algebra ℚ L] (n : ℕ
   coeffMap_qExpand' _ n x
 
 variable (L) in
-private theorem laurentBaseChange_mono' {F₀ F₁ : IntermediateField ℚ (LaurentSeries ℚ)}
+theorem laurentBaseChange_mono'_aux {F₀ F₁ : IntermediateField ℚ (LaurentSeries ℚ)}
     (h : F₀ ≤ F₁) : laurentBaseChange L F₀ ≤ laurentBaseChange L F₁ := by
   rw [laurentBaseChange, IntermediateField.adjoin_le_iff]
   rintro _ ⟨y, hy, rfl⟩
   exact coeffEmb_mem_laurentBaseChange L (h hy)
 
-private theorem qExpand_mem_laurentBaseChange' {F₀ : IntermediateField ℚ (LaurentSeries ℚ)} (n : ℕ)
+theorem qExpand_mem_laurentBaseChange'_aux {F₀ : IntermediateField ℚ (LaurentSeries ℚ)} (n : ℕ)
     [NeZero n] {F₁ : IntermediateField ℚ (LaurentSeries ℚ)} (hF : ∀ y ∈ F₀, qExpand ℚ n y ∈ F₁)
     {x : LaurentSeries L} (hx : x ∈ laurentBaseChange L F₀) :
     qExpand L n x ∈ laurentBaseChange L F₁ := by
@@ -71,7 +71,7 @@ def heckeAlphaBar :
     laurentBaseChange L (modularFunctionFieldFull N) →ₐ[L]
       laurentBaseChange L (modularFunctionFieldFull (N * ℓ)) :=
   IntermediateField.inclusion
-    (laurentBaseChange_mono' L (full_degeneracy_le (dvd_mul_right N ℓ)))
+    (laurentBaseChange_mono'_aux L (full_degeneracy_le (dvd_mul_right N ℓ)))
 
 @[simp]
 theorem coe_heckeAlphaBar (x : laurentBaseChange L (modularFunctionFieldFull N)) :
@@ -84,7 +84,7 @@ def heckeBetaBarRingHom :
     laurentBaseChange L (modularFunctionFieldFull N) →+*
       laurentBaseChange L (modularFunctionFieldFull (N * ℓ)) where
   toFun x := ⟨qExpand L ℓ (x : LaurentSeries L),
-    qExpand_mem_laurentBaseChange' ℓ
+    qExpand_mem_laurentBaseChange'_aux ℓ
       (fun y hy => full_degeneracy_map_le (N := N) ℓ ⟨y, hy, rfl⟩) x.2⟩
   map_one' := Subtype.ext (map_one (qExpand L ℓ))
   map_mul' _ _ := Subtype.ext (map_mul (qExpand L ℓ) _ _)
