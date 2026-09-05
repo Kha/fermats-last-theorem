@@ -1,4 +1,8 @@
-import Definitions.Def_AlgebraicCurve_FrobeniusEndo
+module
+
+public import Definitions.Def_AlgebraicCurve_FrobeniusEndo
+
+@[expose] public section
 
 set_option autoImplicit false
 

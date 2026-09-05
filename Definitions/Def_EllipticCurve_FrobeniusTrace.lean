@@ -1,7 +1,11 @@
-import Mathlib.LinearAlgebra.Trace
-import Mathlib.RingTheory.Valuation.RamificationGroup
-import Definitions.Def_FLTPrelim_GaloisRep
-import Definitions.Def_FLTPrelim_Ramification
+module
+
+public import Mathlib.LinearAlgebra.Trace
+public import Mathlib.RingTheory.Valuation.RamificationGroup
+public import Definitions.Def_FLTPrelim_GaloisRep
+public import Definitions.Def_FLTPrelim_Ramification
+
+@[expose] public section
 
 noncomputable section
 

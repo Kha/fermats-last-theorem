@@ -1,7 +1,11 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_Place_ord_ofHeightOneSpectrum_ne_zero_iff
-import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_Place_ord_ofHeightOneSpectrum_ne_zero_iff
+public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+
+@[expose] public section
 
 open AlgebraicCurve
 theorem P2M.Dup.AlgebraicCurve.Place.ord_ofHeightOneSpectrum_ne_zero_iff {K F : Type*} [Field K] [Field F] [Algebra K F] {R : Type*} [CommRing R] [IsDedekindDomain R] [Algebra R F] [IsFractionRing R F]

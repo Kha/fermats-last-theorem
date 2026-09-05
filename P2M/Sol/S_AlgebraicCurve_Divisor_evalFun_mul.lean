@@ -1,6 +1,10 @@
-import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-import Theorems.Thm_AlgebraicCurve_Place_evalAt_mul
-import P2M.Util
+module
+
+public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
+public import Theorems.Thm_AlgebraicCurve_Place_evalAt_mul
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Divisor_evalFun_mul
 
 open AlgebraicCurve

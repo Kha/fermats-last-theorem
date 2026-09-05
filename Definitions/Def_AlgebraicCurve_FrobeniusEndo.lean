@@ -1,5 +1,9 @@
-import Definitions.Def_AlgebraicCurve_Correspondence
-import Mathlib.Algebra.CharP.Reduced
+module
+
+public import Definitions.Def_AlgebraicCurve_Correspondence
+public import Mathlib.Algebra.CharP.Reduced
+
+@[expose] public section
 
 set_option autoImplicit false
 

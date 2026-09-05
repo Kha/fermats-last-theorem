@@ -1,4 +1,8 @@
-import Lean
+module
+
+public meta import Lean
+
+public meta section
 
 open Lean Elab Tactic Meta in
 elab "p2m_exact_reverting " e:term : tactic => do

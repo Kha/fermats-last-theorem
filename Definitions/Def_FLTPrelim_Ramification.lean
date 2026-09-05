@@ -1,7 +1,11 @@
-import Mathlib.RingTheory.Valuation.RamificationGroup
-import Mathlib.RingTheory.Valuation.ValuationSubring
-import Definitions.Def_FLTPrelim_FreyPackage
-import Definitions.Def_FLTPrelim_GaloisRep
+module
+
+public import Mathlib.RingTheory.Valuation.RamificationGroup
+public import Mathlib.RingTheory.Valuation.ValuationSubring
+public import Definitions.Def_FLTPrelim_FreyPackage
+public import Definitions.Def_FLTPrelim_GaloisRep
+
+@[expose] public section
 
 set_option autoImplicit false
 

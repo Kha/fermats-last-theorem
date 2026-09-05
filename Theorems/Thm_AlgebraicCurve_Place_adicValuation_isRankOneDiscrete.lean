@@ -1,6 +1,10 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_Place_adicValuation_isRankOneDiscrete
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_Place_adicValuation_isRankOneDiscrete
+
+@[expose] public section
 
 open AlgebraicCurve
 theorem AlgebraicCurve.Place.adicValuation_isRankOneDiscrete {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) :

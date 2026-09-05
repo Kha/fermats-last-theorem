@@ -1,6 +1,10 @@
-import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_Place_evalAt_congr
+module
+
+public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_Place_evalAt_congr
+
+@[expose] public section
 attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation
 attribute [-simp] AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint
 

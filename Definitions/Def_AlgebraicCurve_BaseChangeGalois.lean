@@ -1,6 +1,10 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import Mathlib.Algebra.Ring.Action.End
-import Mathlib.LinearAlgebra.Dimension.Finrank
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import Mathlib.Algebra.Ring.Action.End
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+
+@[expose] public section
 
 set_option autoImplicit false
 

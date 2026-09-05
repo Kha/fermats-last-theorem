@@ -1,7 +1,11 @@
-import Mathlib.NumberTheory.RatFunc.Ostrowski
-import Mathlib.RingTheory.DedekindDomain.Factorization
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import P2M.Util
+module
+
+public import Mathlib.NumberTheory.RatFunc.Ostrowski
+public import Mathlib.RingTheory.DedekindDomain.Factorization
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 
 set_option autoImplicit false

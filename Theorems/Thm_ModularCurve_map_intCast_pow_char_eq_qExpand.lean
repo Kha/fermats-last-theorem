@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_X0
-import P2M.Util
-import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.map_intCast_pow_char_eq_qExpand {K : Type*} [CommRing K] (ℓ : ℕ) [Fact ℓ.Prime] [CharP K ℓ]

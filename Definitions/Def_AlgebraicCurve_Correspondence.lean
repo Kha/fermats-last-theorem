@@ -1,5 +1,9 @@
-import Definitions.Def_AlgebraicCurve_DivisorPushPull
-import Definitions.Def_AlgebraicCurve_BaseChangeGalois
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorPushPull
+public import Definitions.Def_AlgebraicCurve_BaseChangeGalois
+
+@[expose] public section
 
 set_option autoImplicit false
 

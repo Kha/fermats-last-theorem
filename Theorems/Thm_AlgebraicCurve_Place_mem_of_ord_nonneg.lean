@@ -1,7 +1,11 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
-import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
+public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+
+@[expose] public section
 
 open AlgebraicCurve
 theorem P2M.Dup.AlgebraicCurve.Place.mem_of_ord_nonneg {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) {f : F} (hf : f ≠ 0) (h : 0 ≤ v.ord f) :

@@ -1,13 +1,17 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_IsCurveOver
-import Definitions.Def_AlgebraicCurve_DivisorPushPull
-import Definitions.Def_AlgebraicCurve_RatFuncPlaces
-import Definitions.Def_AlgebraicCurve_FrobeniusEndo
-import Definitions.Def_AlgebraicCurve_FrobeniusEndoPic0
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_FibrePoly
-import Definitions.Def_HeckeGalois_EichlerShimura
-import Theorems.Thm_ModularCurve_frobenius_identity_geom_unconditional
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_IsCurveOver
+public import Definitions.Def_AlgebraicCurve_DivisorPushPull
+public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+public import Definitions.Def_AlgebraicCurve_FrobeniusEndo
+public import Definitions.Def_AlgebraicCurve_FrobeniusEndoPic0
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_FibrePoly
+public import Definitions.Def_HeckeGalois_EichlerShimura
+public import Theorems.Thm_ModularCurve_frobenius_identity_geom_unconditional
+
+@[expose] public section
 
 set_option autoImplicit false
 

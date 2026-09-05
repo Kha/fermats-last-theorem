@@ -1,5 +1,9 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import P2M.Util
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_ord_ofHeightOneSpectrum_ne_zero_iff
 
 open IsDedekindDomain WithZero IsLocalRing
