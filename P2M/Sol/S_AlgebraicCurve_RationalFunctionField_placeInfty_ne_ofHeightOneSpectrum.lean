@@ -1,6 +1,7 @@
 import Mathlib.FieldTheory.RatFunc.AsPolynomial
 import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 import P2M.Util
+import Mathlib.NumberTheory.RatFunc.Ostrowski
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_placeInfty_ne_ofHeightOneSpectrum
 
 open IsDedekindDomain AlgebraicCurve AlgebraicCurve.RationalFunctionField

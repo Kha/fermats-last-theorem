@@ -53,11 +53,14 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L]
     (hΦ : ModularPolynomialFamily) (N : ℕ) [NeZero N] :
     HasPrincipalDivisors L (laurentBaseChange L (modularFunctionFieldFull N)) := by
   haveI : CharZero L := charZero_of_injective_algebraMap (algebraMap ℚ L).injective
-  rw [laurentBaseChange_modularFunctionFieldFull, ← ModularCurve.R8.insert_gens]
-  refine AlgebraicCurve.hasPrincipalDivisors_adjoin_of_transcendental L (jqModC L) (transcendental_jqModC L)
-    (ModularCurve.R8.gens L N) ?_
-  intro t ht
-  obtain ⟨d, hd, -, rfl⟩ := (ModularCurve.R8.mem_gens_iff L N t).mp ht
-  exact isIntegral_jqNModC_all_of_modularPolynomialFamily L hΦ d
+  -- The goal carries the shortcut instance `instAlgebraLaurentBaseChange L (modularFunctionFieldFull N)`,
+  -- which does not abstract over the rewritten field, so rewriting the goal fails with an ill-typed
+  -- motive; rewrite the hypothesis (generic instance) instead and convert.
+  have h := AlgebraicCurve.hasPrincipalDivisors_adjoin_of_transcendental L (jqModC L) (transcendental_jqModC L)
+    (ModularCurve.R8.gens L N) (fun t ht => by
+      obtain ⟨d, hd, -, rfl⟩ := (ModularCurve.R8.mem_gens_iff L N t).mp ht
+      exact isIntegral_jqNModC_all_of_modularPolynomialFamily L hΦ d)
+  rw [ModularCurve.R8.insert_gens, ← laurentBaseChange_modularFunctionFieldFull] at h
+  exact h
 
 end
