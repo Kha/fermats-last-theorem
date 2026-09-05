@@ -66,6 +66,13 @@ def modularFunctionFieldC (N : ℕ) [NeZero N] :
     IntermediateField K (LaurentSeries K) :=
   IntermediateField.adjoin K {jqModC K, jqNModC K N}
 
+/-- Shortcut instance. Without it, every declaration mentioning `modularFunctionFieldC K N`
+re-runs an instance search that spends most of its time in a failing `IsScalarTower.of_algHom`
+attempt unfolding the `HahnSeries`/`LaurentSeries` algebra structure (about 0.36 s per search;
+`Def_ModularCurve_CharLFrobeniusGeomLevel` ran it 155 times). -/
+instance instAlgebraModularFunctionFieldC (N : ℕ) [NeZero N] :
+    Algebra K (modularFunctionFieldC K N) := inferInstance
+
 theorem jqModC_mem (N : ℕ) [NeZero N] : jqModC K ∈ modularFunctionFieldC K N :=
   IntermediateField.subset_adjoin _ _ (Set.mem_insert _ _)
 
