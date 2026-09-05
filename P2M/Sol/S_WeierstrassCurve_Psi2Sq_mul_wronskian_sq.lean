@@ -29,6 +29,40 @@ abbrev L : Type _ := FractionRing (A W)
 abbrev T : Type _ := TrivSqZeroExt (L W) (L W)
 
 scoped instance instIsDomainA : IsDomain (A W) := inferInstance
+
+/-! Shortcut instances for `A W` and `L W`.
+
+`L W` unfolds reducibly to `OreLocalization (nonZeroDivisors (A W)) (A W)` and `A W` to
+`AdjoinRoot _`, so without these every `Add (L W)`, `Semiring (L W)`, ... goal is solved by the generic
+`OreLocalization` instances (tried before the structure projections), and each of them re-derives
+`DistribMulAction (A W) (A W)` in every command; that search first tries
+`AdjoinRoot.instDistribMulActionOfIsScalarTower`, which fails only after exploring `Field (A W)`,
+`Module (A W) K`, .... The `inferInstance` bodies resolve to exactly the terms the search finds anyway. -/
+
+noncomputable scoped instance instDistribMulActionA : DistribMulAction (A W) (A W) := inferInstance
+noncomputable scoped instance instZeroL : Zero (L W) := inferInstance
+noncomputable scoped instance instOneL : One (L W) := inferInstance
+noncomputable scoped instance instAddL : Add (L W) := inferInstance
+noncomputable scoped instance instMulL : Mul (L W) := inferInstance
+noncomputable scoped instance instNegL : Neg (L W) := inferInstance
+noncomputable scoped instance instSubL : Sub (L W) := inferInstance
+noncomputable scoped instance instInvL : Inv (L W) := inferInstance
+noncomputable scoped instance instDivL : Div (L W) := inferInstance
+noncomputable scoped instance instNatCastL : NatCast (L W) := inferInstance
+noncomputable scoped instance instSMulNatL : SMul ℕ (L W) := inferInstance
+noncomputable scoped instance instAddMonoidL : AddMonoid (L W) := inferInstance
+noncomputable scoped instance instAddCommMonoidL : AddCommMonoid (L W) := inferInstance
+noncomputable scoped instance instAddGroupL : AddGroup (L W) := inferInstance
+noncomputable scoped instance instAddCommGroupL : AddCommGroup (L W) := inferInstance
+noncomputable scoped instance instMonoidL : Monoid (L W) := inferInstance
+noncomputable scoped instance instMonoidWithZeroL : MonoidWithZero (L W) := inferInstance
+noncomputable scoped instance instGroupWithZeroL : GroupWithZero (L W) := inferInstance
+noncomputable scoped instance instCommGroupWithZeroL : CommGroupWithZero (L W) := inferInstance
+noncomputable scoped instance instSemiringL : Semiring (L W) := inferInstance
+noncomputable scoped instance instCommSemiringL : CommSemiring (L W) := inferInstance
+noncomputable scoped instance instRingL : Ring (L W) := inferInstance
+noncomputable scoped instance instDivisionRingL : DivisionRing (L W) := inferInstance
+scoped instance instNontrivialL : Nontrivial (L W) := inferInstance
 noncomputable scoped instance instFieldL : Field (L W) := inferInstance
 noncomputable scoped instance instCommRingL : CommRing (L W) := inferInstance
 noncomputable scoped instance instAlgKA : Algebra K (A W) := inferInstance
@@ -36,6 +70,13 @@ noncomputable scoped instance instAlgKL : Algebra K (L W) := inferInstance
 noncomputable scoped instance instAlgAL : Algebra (A W) (L W) := inferInstance
 noncomputable scoped instance instModL : Module (L W) (L W) := inferInstance
 noncomputable scoped instance instModLop : Module (L W)ᵐᵒᵖ (L W) := inferInstance
+/-- Shortcuts for the right action of `L W` on itself (used by the `TrivSqZeroExt` lemmas): the
+`SMul (L W)ᵐᵒᵖ (L W)` search otherwise goes through `OreLocalization.instSMulOfIsScalarTower` and
+explores `Module (L W)ᵐᵒᵖ (A W)`, `Algebra (L W)ᵐᵒᵖ K`, ... before finding this. -/
+noncomputable scoped instance instDistribMulActionLop : DistribMulAction (L W)ᵐᵒᵖ (L W) := inferInstance
+noncomputable scoped instance instDistribSMulLop : DistribSMul (L W)ᵐᵒᵖ (L W) := inferInstance
+noncomputable scoped instance instSMulZeroClassLop : SMulZeroClass (L W)ᵐᵒᵖ (L W) := inferInstance
+noncomputable scoped instance instSMulLop : SMul (L W)ᵐᵒᵖ (L W) := inferInstance
 scoped instance instCentral : IsCentralScalar (L W) (L W) := inferInstance
 noncomputable scoped instance instCommRingT : CommRing (T W) := inferInstance
 noncomputable scoped instance instRingT : Ring (T W) := inferInstance
@@ -44,6 +85,8 @@ noncomputable scoped instance instMonoidT : Monoid (T W) := inferInstance
 noncomputable scoped instance instMulT : Mul (T W) := inferInstance
 noncomputable scoped instance instAddT : Add (T W) := inferInstance
 noncomputable scoped instance instAddCommMonoidT : AddCommMonoid (T W) := inferInstance
+noncomputable scoped instance instNonAssocSemiringT : NonAssocSemiring (T W) := inferInstance
+noncomputable scoped instance instCommSemiringT : CommSemiring (T W) := inferInstance
 
 noncomputable def x₀ : L W := algebraMap (A W) (L W) (AdjoinRoot.mk _ (C X))
 
@@ -503,6 +546,10 @@ p2m_open "WeierstrassCurve P2MW.S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq.Weier
 
 variable {K L : Type*} [Field K] [Field L] [Algebra K L] [DecidableEq L]
   (W : WeierstrassCurve K) (D : Derivation K L L)
+
+/-- Shortcut: `simp only [map_add, map_sub, ...]` on a `Derivation K L L` synthesizes this (a `Prop`)
+once per command, and the search is slow. -/
+scoped instance instAddHomClassDerivation : AddHomClass (Derivation K L L) L L := inferInstance
 
 private theorem map_baseChange_a (D : Derivation K L L) (W : WeierstrassCurve K) :
     D (W.baseChange L).a₁ = 0 ∧ D (W.baseChange L).a₂ = 0 ∧ D (W.baseChange L).a₃ = 0 ∧
@@ -1038,7 +1085,7 @@ theorem two_ne_zero_zmod (p : ℕ) [hp : Fact p.Prime] (hp2 : p ≠ 2) : (2 : ZM
     rw [Ne, CharP.cast_eq_zero_iff (ZMod p) p]
     intro h
     exact hp2 ((Nat.prime_dvd_prime_iff_eq hp.out Nat.prime_two).mp h)
-  simpa using this
+  rwa [Nat.cast_ofNat] at this
 
 theorem Δ_𝓦p_ne_zero (p : ℕ) [hp : Fact p.Prime] (hp2 : p ≠ 2) : (𝓦p p).Δ ≠ 0 := by
   intro h
@@ -1061,7 +1108,7 @@ theorem two_ne_zero_Fp (p : ℕ) [hp : Fact p.Prime] (hp2 : p ≠ 2) : (2 : Fp p
     rw [Ne, CharP.cast_eq_zero_iff (Fp p) p]
     intro h
     exact hp2 ((Nat.prime_dvd_prime_iff_eq hp.out Nat.prime_two).mp h)
-  simpa using this
+  rwa [Nat.cast_ofNat] at this
 
 theorem four_ne_zero_Rp (p : ℕ) [hp : Fact p.Prime] (hp2 : p ≠ 2) : (4 : Rp p) ≠ 0 := by
   have h2 : ((2 : ℕ) : Rp p) ≠ 0 := by
