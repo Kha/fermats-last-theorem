@@ -20,7 +20,7 @@ p2m_open "AlgebraicCurve.Place"
 
 variable {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
 
-private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring :
+private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring_priv :
     v.adicValuation.valuationSubring = v.toValuationSubring := by
   ext x
   rw [Valuation.mem_valuationSubring_iff]
@@ -31,15 +31,15 @@ private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring :
   · intro hx
     exact v.heightOneSpectrum.valuation_le_one (⟨x, hx⟩ : v.toValuationSubring)
 
-p2m_export "AlgebraicCurve.Place" "adicValuation_valuationSubring"
-private theorem _root_.AlgebraicCurve.Place.isEquiv_adicValuation_of_valuationSubring_eq {Γ : Type*}
+p2m_export "AlgebraicCurve.Place" "adicValuation_valuationSubring_priv"
+private theorem _root_.AlgebraicCurve.Place.isEquiv_adicValuation_of_valuationSubring_eq_priv {Γ : Type*}
     [LinearOrderedCommGroupWithZero Γ] {w : Valuation F Γ}
     (h : w.valuationSubring = v.toValuationSubring) : w.IsEquiv v.adicValuation :=
   (Valuation.isEquiv_iff_valuationSubring _ _).mpr
-    (h.trans v.adicValuation_valuationSubring.symm)
+    (h.trans v.adicValuation_valuationSubring_priv.symm)
 
-p2m_export "AlgebraicCurve.Place" "isEquiv_adicValuation_of_valuationSubring_eq"
-private theorem _root_.AlgebraicCurve.Place.ord_eq_zero_iff_adicValuation_eq_one {f : F} (hf : f ≠ 0) :
+p2m_export "AlgebraicCurve.Place" "isEquiv_adicValuation_of_valuationSubring_eq_priv"
+private theorem _root_.AlgebraicCurve.Place.ord_eq_zero_iff_adicValuation_eq_one_priv {f : F} (hf : f ≠ 0) :
     v.ord f = 0 ↔ v.adicValuation f = 1 := by
   simp only [ord, neg_eq_zero]
   constructor
@@ -50,7 +50,7 @@ private theorem _root_.AlgebraicCurve.Place.ord_eq_zero_iff_adicValuation_eq_one
   · intro h
     rw [h, log_one]
 
-p2m_export "AlgebraicCurve.Place" "ord_eq_zero_iff_adicValuation_eq_one"
+p2m_export "AlgebraicCurve.Place" "ord_eq_zero_iff_adicValuation_eq_one_priv"
 section OfHeightOneSpectrum
 
 variable {R : Type*} [CommRing R] [IsDedekindDomain R] [Algebra R F] [IsFractionRing R F]
@@ -58,13 +58,13 @@ variable {R : Type*} [CommRing R] [IsDedekindDomain R] [Algebra R F] [IsFraction
 
 private theorem isEquiv_adicValuation_ofHeightOneSpectrum (w : HeightOneSpectrum R) :
     (w.valuation F).IsEquiv (ofHeightOneSpectrum (K := K) w).adicValuation :=
-  (ofHeightOneSpectrum (K := K) w).isEquiv_adicValuation_of_valuationSubring_eq rfl
+  (ofHeightOneSpectrum (K := K) w).isEquiv_adicValuation_of_valuationSubring_eq_priv rfl
 
 private theorem rowMain (w : HeightOneSpectrum R) {q : R} (hq : q ≠ 0) :
     (ofHeightOneSpectrum (K := K) (F := F) w).ord (algebraMap R F q) ≠ 0 ↔ q ∈ w.asIdeal := by
   have hq' : algebraMap R F q ≠ 0 :=
     (map_ne_zero_iff _ (IsFractionRing.injective R F)).mpr hq
-  rw [ne_eq, (ofHeightOneSpectrum (K := K) w).ord_eq_zero_iff_adicValuation_eq_one hq',
+  rw [ne_eq, (ofHeightOneSpectrum (K := K) w).ord_eq_zero_iff_adicValuation_eq_one_priv hq',
     ← (isEquiv_adicValuation_ofHeightOneSpectrum (K := K) (F := F) w).eq_one_iff_eq_one,
     HeightOneSpectrum.valuation_eq_one_iff_notMem, not_not]
 

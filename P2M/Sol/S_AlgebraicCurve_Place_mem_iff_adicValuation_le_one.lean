@@ -20,7 +20,7 @@ p2m_open "AlgebraicCurve.Place"
 
 variable {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
 
-private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring :
+private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring_priv :
     v.adicValuation.valuationSubring = v.toValuationSubring := by
   ext x
   rw [Valuation.mem_valuationSubring_iff]
@@ -31,10 +31,10 @@ private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring :
   · intro hx
     exact v.heightOneSpectrum.valuation_le_one (⟨x, hx⟩ : v.toValuationSubring)
 
-p2m_export "AlgebraicCurve.Place" "adicValuation_valuationSubring"
+p2m_export "AlgebraicCurve.Place" "adicValuation_valuationSubring_priv"
 private theorem rowMain {f : F} :
     f ∈ v.toValuationSubring ↔ v.adicValuation f ≤ 1 := by
-  rw [← v.adicValuation_valuationSubring]
+  rw [← v.adicValuation_valuationSubring_priv]
   exact Valuation.mem_valuationSubring_iff _ _
 
 end Place

@@ -20,7 +20,7 @@ p2m_open "AlgebraicCurve.Place"
 
 variable {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
 
-private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring :
+private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring_priv :
     v.adicValuation.valuationSubring = v.toValuationSubring := by
   ext x
   rw [Valuation.mem_valuationSubring_iff]
@@ -31,12 +31,12 @@ private theorem _root_.AlgebraicCurve.Place.adicValuation_valuationSubring :
   · intro hx
     exact v.heightOneSpectrum.valuation_le_one (⟨x, hx⟩ : v.toValuationSubring)
 
-p2m_export "AlgebraicCurve.Place" "adicValuation_valuationSubring"
+p2m_export "AlgebraicCurve.Place" "adicValuation_valuationSubring_priv"
 private theorem rowMain {Γ : Type*}
     [LinearOrderedCommGroupWithZero Γ] {w : Valuation F Γ}
     (h : w.valuationSubring = v.toValuationSubring) : w.IsEquiv v.adicValuation :=
   (Valuation.isEquiv_iff_valuationSubring _ _).mpr
-    (h.trans v.adicValuation_valuationSubring.symm)
+    (h.trans v.adicValuation_valuationSubring_priv.symm)
 
 end Place
 
