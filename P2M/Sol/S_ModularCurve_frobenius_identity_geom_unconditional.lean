@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
 import P2M.Util
-import Mathlib.Data.Nat.Choose.Multinomial
 
 namespace P2MW.S_ModularCurve_frobenius_identity_geom_unconditional
 

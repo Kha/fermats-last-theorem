@@ -2,17 +2,7 @@ module
 
 public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Defs
 import Mathlib.Algebra.Field.IsField
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
 import Mathlib.Algebra.Polynomial.Monic
-import Mathlib.CategoryTheory.Category.Init
-import Mathlib.Combinatorics.Matroid.Init
-import Mathlib.Data.NNReal.Defs
-import Mathlib.Data.Nat.Totient
-import Mathlib.Data.Sym.Sym2.Init
-import Mathlib.Tactic.Continuity.Init
-import Mathlib.Tactic.ContinuousFunctionalCalculus
-import Mathlib.Tactic.NormNum.GCD
-import Mathlib.Tactic.Positivity.Finset
 
 @[expose] public section
 
