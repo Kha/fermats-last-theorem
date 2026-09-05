@@ -3,7 +3,7 @@ import Definitions.Def_ModularCurve_PlaceWidth
 import Definitions.Def_ModularCurve_ModPFormFn
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_ne_zero
 import Theorems.Thm_AlgebraicCurve_Place_mk_mem_maximalIdeal_iff
-import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
+import P2M.Sol.S_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import P2M.Util
 namespace P2MW.S_ModularCurve_evalAt_zpow_mul_eq_zero_iff_one_le_stackOrd
 set_option autoImplicit false

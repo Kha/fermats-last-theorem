@@ -4,13 +4,12 @@ public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-public import Theorems.Thm_ModularCurve_hasSum_jq_qParam
-public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
-public import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
-public import Theorems.Thm_ModularCurve_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_hasSum_jq_qParam
+import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
+import P2M.Sol.S_ModularCurve_laurent_qParam_coeff_unique
+import P2M.Sol.S_ModularCurve_coeffEmb_jq
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
 
 open UpperHalfPlane
@@ -113,3 +112,12 @@ theorem solution : ModularCurve.jqModC ℂ =
     simp at h2
   rw [eq_div_iff hΔne]
   exact key
+end S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
+end P2MW
+
+public section
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
+
+open UpperHalfPlane
+theorem ModularCurve.jqModC_eq_qExpansion_E4_cube_div_discriminant : ModularCurve.jqModC ℂ = (((qExpansion 1 (ModularForm.E₄ : ℍ → ℂ) : PowerSeries ℂ) : LaurentSeries ℂ) ^ 3 / ((qExpansion 1 (ModularForm.discriminant : ℍ → ℂ) : PowerSeries ℂ) : LaurentSeries ℂ)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant.solution
+end

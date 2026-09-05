@@ -7,7 +7,6 @@ public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_finiteDimensional_lSpace
 
 set_option autoImplicit false
@@ -1094,3 +1093,12 @@ open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_finiteDimensional_lSpace
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] [IsCurveOver K F] [hL0 : FiniteDimensional K ↥(LSpace (0 : Divisor K F))]
     (D : Divisor K F) : FiniteDimensional K ↥(LSpace D) :=
   AlgebraicCurve.finiteDimensional_lSpace_port (K := K) (F := F) (D := D)
+end S_AlgebraicCurve_finiteDimensional_lSpace
+end P2MW
+
+public section
+namespace AlgebraicCurve
+theorem finiteDimensional_lSpace {K F : Type*} [Field K] [Field F] [Algebra K F] [IsCurveOver K F] [hL0 : FiniteDimensional K ↥(LSpace (0 : Divisor K F))]
+    (D : Divisor K F) : FiniteDimensional K ↥(LSpace D) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_finiteDimensional_lSpace.solution
+end AlgebraicCurve
+end

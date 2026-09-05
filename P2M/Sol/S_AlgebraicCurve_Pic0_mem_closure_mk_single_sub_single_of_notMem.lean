@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_AlgebraicCurve_IsCurveOver
 import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import Theorems.Thm_AlgebraicCurve_Pic0_mem_closure_mk_single_sub_single
-import Theorems.Thm_AlgebraicCurve_Place_exists_forall_ord_eq
+import P2M.Sol.S_AlgebraicCurve_Place_exists_forall_ord_eq
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_Pic0_mem_closure_mk_single_sub_single_of_notMem
 

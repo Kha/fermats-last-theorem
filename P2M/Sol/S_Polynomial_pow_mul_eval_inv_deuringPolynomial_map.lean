@@ -4,7 +4,6 @@ public import Mathlib
 public import Definitions.Def_Polynomial_DeuringPolynomial
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_Polynomial_pow_mul_eval_inv_deuringPolynomial_map
 
 set_option autoImplicit false
@@ -144,3 +143,13 @@ theorem solution {F : Type*} [Field F] (q : ℕ) (t : F)
     t ^ ((q - 1) / 2) * ((deuringPolynomial q).map (Int.castRingHom F)).eval t⁻¹
       = ((deuringPolynomial q).map (Int.castRingHom F)).eval t :=
   Polynomial.pow_mul_eval_inv_deuringPolynomial_map' q t ht
+end S_Polynomial_pow_mul_eval_inv_deuringPolynomial_map
+end P2MW
+
+public section
+open Polynomial
+theorem Polynomial.pow_mul_eval_inv_deuringPolynomial_map {F : Type*} [Field F] (q : ℕ) (t : F)
+    (ht : t ≠ 0) :
+    t ^ ((q - 1) / 2) * ((deuringPolynomial q).map (Int.castRingHom F)).eval t⁻¹
+      = ((deuringPolynomial q).map (Int.castRingHom F)).eval t := by p2m_exact_reverting @_root_.P2MW.S_Polynomial_pow_mul_eval_inv_deuringPolynomial_map.solution
+end

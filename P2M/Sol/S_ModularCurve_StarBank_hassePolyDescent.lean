@@ -1,13 +1,13 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
-public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
-public import Theorems.Thm_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
+import P2M.Sol.S_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+import P2M.Sol.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
 public import Mathlib.Algebra.Polynomial.Lifts
 import P2M.Util
+public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_hassePolyDescent
 
 set_option autoImplicit false
@@ -406,4 +406,19 @@ theorem solution {N : ℕ}
           * (HahnSeries.single (1 : ℤ) 1
               * HahnSeries.ofPowerSeries ℤ ℤ ModularCurve.etaProd ^ 24) ^ N :=
   ModularCurve.StarBank.hassePolyDescent F hT h0
+end S_ModularCurve_StarBank_hassePolyDescent
+end P2MW
 
+public section
+open Polynomial HahnSeries ModularCurve UpperHalfPlane
+open scoped MatrixGroups
+theorem ModularCurve.StarBank.hassePolyDescent {N : ℕ}
+    (F : ModularForm 𝒮ℒ (12 * (N : ℤ))) {T : PowerSeries ℤ}
+    (hT : T.map (Int.castRingHom ℂ) = UpperHalfPlane.qExpansion 1 ⇑F)
+    (h0 : PowerSeries.constantCoeff T ≠ 0) :
+    ∃ G : Polynomial ℤ, G.natDegree = N ∧ G.coeff N = PowerSeries.constantCoeff T ∧
+      HahnSeries.ofPowerSeries ℤ ℤ T
+        = Polynomial.aeval (ModularCurve.jqModC ℤ) G
+          * (HahnSeries.single (1 : ℤ) 1
+              * HahnSeries.ofPowerSeries ℤ ℤ ModularCurve.etaProd ^ 24) ^ N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_StarBank_hassePolyDescent.solution
+end

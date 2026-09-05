@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_JHNeronObjectAtP
 import Definitions.Def_ModularCurve_JHPlaceSpecialization
 import Definitions.Def_AlgebraicCurve_Correspondence
-import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 import P2M.Util
 namespace P2MW.S_ModularCurve_JHPlaceSpecialization_ProlongationDatum_exists_residue_alpha_eq
 

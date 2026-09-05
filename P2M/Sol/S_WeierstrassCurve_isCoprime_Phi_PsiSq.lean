@@ -30,8 +30,8 @@ public import Mathlib.Algebra.Module.Torsion.Basic
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 public import Definitions.Def_WeierstrassCurve_EDSEngine
 import P2M.Util
+public import Mathlib
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_isCoprime_Phi_PsiSq
 
 section PortGenNetIdentities
@@ -299,3 +299,12 @@ end PortCardCopr
 
 theorem solution {F : Type*} [Field F] (W : WeierstrassCurve F) [W.IsElliptic] (n : ℤ) : IsCoprime (W.Φ n) (W.ΨSq n) :=
   PortCard.isCoprime_Φ_ΨSq W n
+end S_WeierstrassCurve_isCoprime_Phi_PsiSq
+end P2MW
+
+public section
+attribute [-instance] WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly
+attribute [-simp] compl₂EDSAux_neg_two compl₂EDSAux_zero WeierstrassCurve.ωe_zero WeierstrassCurve.Univ.pointedCurve_a₁ WeierstrassCurve.Univ.polyToField_polynomial WeierstrassCurve.Coeff.A₁.sizeOf_spec compl₂EDS_zero compl₂EDS_one WeierstrassCurve.Univ.Affine.smulY_zero Param.C.sizeOf_spec EllSequence.redInvarDenom_zero compl₂EDSAux_two compl₂EDSAux_neg_one compl₂EDSAux_one WeierstrassCurve.Coeff.A₆.sizeOf_spec WeierstrassCurve.ψc_neg WeierstrassCurve.Univ.Affine.smulY_one WeierstrassCurve.Univ.Affine.smulX_one WeierstrassCurve.Coeff.A₂.sizeOf_spec WeierstrassCurve.Univ.pointedCurve_a₄ compl₂EDS_neg WeierstrassCurve.Univ.pointedCurve_a₃ EllSequence.redInvarDenom_two WeierstrassCurve.Univ.pointedCurve_a₆ Param.D.sizeOf_spec WeierstrassCurve.ωe_one WeierstrassCurve.Univ.Affine.smulX_zero WeierstrassCurve.Coeff.A₃.sizeOf_spec EllSequence.redInvarDenom_one WeierstrassCurve.Coeff.A₄.sizeOf_spec WeierstrassCurve.Univ.pointedCurve_a₂ Param.B.sizeOf_spec compl₂EDS_two
+
+theorem WeierstrassCurve.isCoprime_Phi_PsiSq {F : Type*} [Field F] (W : WeierstrassCurve F) [W.IsElliptic] (n : ℤ) : IsCoprime (W.Φ n) (W.ΨSq n) := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_isCoprime_Phi_PsiSq.solution
+end

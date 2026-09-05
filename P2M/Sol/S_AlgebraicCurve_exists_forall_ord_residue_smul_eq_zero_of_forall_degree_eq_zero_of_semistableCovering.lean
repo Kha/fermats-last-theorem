@@ -4,7 +4,7 @@ import Theorems.Thm_WeightedMultigraph_slope_eq_zero_of_gradient_of_harmonic
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_mul
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_algebraMap
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_ne_zero
-import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
+import P2M.Sol.S_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import P2M.Sol.S_AlgebraicCurve_Place_ord_algebraMap
 import P2M.Sol.S_AlgebraicCurve_Place_isRational_iff_deg_eq_one
 import P2M.Util

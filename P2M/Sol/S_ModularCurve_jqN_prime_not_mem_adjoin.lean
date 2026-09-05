@@ -3,14 +3,14 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_prime_of_not_mem
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import Theorems.Thm_ModularCurve_coeffMap_injective
-public import Theorems.Thm_Polynomial_mem_range_of_eval_eq_const
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_prime_of_not_mem
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_coeffMap_injective
+import P2M.Sol.S_Polynomial_mem_range_of_eval_eq_const
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.FieldTheory.Minpoly.Field
@@ -18,7 +18,6 @@ public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.RingTheory.PowerBasis
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_jqN_prime_not_mem_adjoin
 
 set_option autoImplicit false
@@ -652,4 +651,13 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_jqN_
 
 theorem solution (S : Finset ℕ) (hS : ∀ p ∈ S, p.Prime) (r : ℕ) [hr : Fact (Nat.Prime r)] (hrS : r ∉ S) : jqN r ∉ IntermediateField.adjoin ℚ (insert jq {x : LaurentSeries ℚ | ∃ p ∈ S, ∃ _ : NeZero p, x = jqN p}) :=
   ModularCurve.jqN_prime_not_mem_adjoin S hS r hrS
+end S_ModularCurve_jqN_prime_not_mem_adjoin
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.jqN_prime_not_mem_adjoin (S : Finset ℕ) (hS : ∀ p ∈ S, p.Prime) (r : ℕ) [hr : Fact (Nat.Prime r)] (hrS : r ∉ S) : jqN r ∉ IntermediateField.adjoin ℚ (insert jq {x : LaurentSeries ℚ | ∃ p ∈ S, ∃ _ : NeZero p, x = jqN p}) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_jqN_prime_not_mem_adjoin.solution
+end

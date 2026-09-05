@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_eisenstein4_cube_sub_mk_sq
-import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+import P2M.Sol.S_ModularCurve_eisenstein4_cube_sub_mk_sq
+import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 import P2M.Util
 namespace P2MW.S_ModularForm_exists_isWeightedHomogeneous_aeval_eq_map_qExpansion_levelOne
 

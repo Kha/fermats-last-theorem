@@ -3,7 +3,7 @@ import Definitions.Def_AlgebraicCurve_Differentials
 import Mathlib.FieldTheory.Perfect
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import Theorems.Thm_AlgebraicCurve_existsUnique_pDigits_of_transcendental
-import Theorems.Thm_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
+import P2M.Sol.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_pDigits_existsUnique
 

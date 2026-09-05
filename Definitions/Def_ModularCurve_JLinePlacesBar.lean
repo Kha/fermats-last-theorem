@@ -2,8 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_ArithmeticGalois
 import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-import Theorems.Thm_ModularCurve_transcendental_coeffEmb_jq
-
+import P2M.Sol.S_ModularCurve_transcendental_coeffEmb_jq
 set_option autoImplicit false
 
 noncomputable section

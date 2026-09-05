@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_LambdaSeries
 import Theorems.Thm_ModularCurve_transcendental_lambdaModC
 import Theorems.Thm_ModularCurve_jq_mul_lambdaModC_mul_one_sub_pow_four
-import Theorems.Thm_ModularCurve_modularPolynomialFamily
+import P2M.Sol.S_ModularCurve_modularPolynomialFamily
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_pow_mul_minpoly_lambdaNModC_coeff_mem_adjoin
 attribute [-instance] ModularCurve.instFiniteProjectiveLine ModularCurve.unimodularRowSetoid

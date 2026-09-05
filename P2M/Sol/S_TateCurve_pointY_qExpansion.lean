@@ -2,14 +2,13 @@ module
 
 public import Definitions.Def_TateCurve_PointSeries
 public import Definitions.Def_TateCurve_Tails
-public import Theorems.Thm_TateCurve_pointY_normalForm
-public import Theorems.Thm_TateCurve_hasSum_xfun
-public import Theorems.Thm_TateCurve_hasSum_yfun
-public import Theorems.Thm_TateCurve_tsum_succ_prod_eq_tsum_divisors
+import P2M.Sol.S_TateCurve_pointY_normalForm
+import P2M.Sol.S_TateCurve_hasSum_xfun
+import P2M.Sol.S_TateCurve_hasSum_yfun
+import P2M.Sol.S_TateCurve_tsum_succ_prod_eq_tsum_divisors
 public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_TateCurve_pointY_qExpansion
 
 set_option autoImplicit false
@@ -286,3 +285,11 @@ theorem solution {K : Type*} [NontriviallyNormedField K] [IsUltrametricDist K]
       = ∑' N : ℕ, yCoeff u (N + 1) * q ^ (N + 1) := by
     simpa only [yCoeff] using TateCurve.tsum_succ_prod_eq_tsum_divisors hC1 hh hrC
   rw [TateCurve.pointY_normalForm hq0 hq hu0 hu, ← hrows, hdivisors]
+end S_TateCurve_pointY_qExpansion
+end P2MW
+
+public section
+open TateCurve
+open scoped NNReal
+theorem TateCurve.pointY_qExpansion {K : Type*} [NontriviallyNormedField K] [IsUltrametricDist K] [CompleteSpace K] {q u : K} (hq0 : q ≠ 0) (hq : ‖q‖₊ < 1) (hu0 : u ≠ 0) (hu : ∀ n : ℤ, q ^ n * u ≠ 1) (hqu : ‖q * u‖₊ < 1) (hqu' : ‖q * u⁻¹‖₊ < 1) : pointY q u = yfun u + ∑' N : ℕ, yCoeff u (N + 1) * q ^ (N + 1) := by p2m_exact_reverting @_root_.P2MW.S_TateCurve_pointY_qExpansion.solution
+end

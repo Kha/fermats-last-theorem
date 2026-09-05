@@ -6,7 +6,6 @@ public import Mathlib.Analysis.Complex.TaylorSeries
 public import Mathlib.Analysis.Complex.LocallyUniformLimit
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod
 
 set_option autoImplicit false
@@ -200,4 +199,11 @@ theorem solution : UpperHalfPlane.qExpansion 1 ModularForm.discriminant = PowerS
   rw [CuspForm.coe_discriminant] at h
   rw [← h]
   rfl
+end
+end S_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod
+end P2MW
+
+public section
+open scoped PowerSeries.WithPiTopology
+theorem ModularCurve.qExpansion_discriminant_eq_X_mul_tprod : UpperHalfPlane.qExpansion 1 ModularForm.discriminant = PowerSeries.X * ∏' n : ℕ, ((1 : PowerSeries ℂ) - PowerSeries.X ^ (n + 1)) ^ 24 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod.solution
 end

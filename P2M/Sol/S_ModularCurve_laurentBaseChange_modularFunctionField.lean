@@ -2,11 +2,10 @@ module
 
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeffEmb_jq
-public import Theorems.Thm_ModularCurve_coeffEmb_jqN
+import P2M.Sol.S_ModularCurve_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_coeffEmb_jqN
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_laurentBaseChange_modularFunctionField
 
 open ModularCurve IntermediateField HahnSeries
@@ -42,3 +41,9 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] : Mo
     rintro _ (rfl | rfl)
     · exact ⟨jq, jq_mem N, coeffEmb_jq L⟩
     · exact ⟨qExpand ℚ N jq, jqN_mem N, coeffEmb_jqN L N⟩
+end S_ModularCurve_laurentBaseChange_modularFunctionField
+end P2MW
+
+public section
+theorem ModularCurve.laurentBaseChange_modularFunctionField (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] : ModularCurve.laurentBaseChange L (ModularCurve.modularFunctionField N) = ModularCurve.modularFunctionFieldC L N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_laurentBaseChange_modularFunctionField.solution
+end

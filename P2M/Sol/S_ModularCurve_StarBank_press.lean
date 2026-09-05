@@ -2,13 +2,12 @@ module
 
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_self
-public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_self
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_of_lt
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_press
 
 set_option autoImplicit false
@@ -209,4 +208,16 @@ theorem solution {K : Type*} [Field K] (p : ℕ) [Fact p.Prime] (ζ : Kˣ)
       R.map (algebraMap K (LaurentSeries K)) - Polynomial.C (jqNModC K p) =
         ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qTwist (ζ ^ b) (jqModC K))) :=
   ModularCurve.StarBank.press p ζ hζ hR
+end
+end S_ModularCurve_StarBank_press
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.StarBank.press {K : Type*} [Field K] (p : ℕ) [Fact p.Prime] (ζ : Kˣ)
+    (hζ : IsPrimitiveRoot (ζ : K) p) {R : Polynomial K}
+    (hR : Polynomial.aeval (jqModC K) R = jqNModC K p) :
+    R.Monic ∧ R.natDegree = p ∧
+      R.map (algebraMap K (LaurentSeries K)) - Polynomial.C (jqNModC K p) =
+        ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qTwist (ζ ^ b) (jqModC K))) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_StarBank_press.solution
+end

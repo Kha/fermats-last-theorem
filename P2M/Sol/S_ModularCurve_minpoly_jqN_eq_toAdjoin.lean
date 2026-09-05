@@ -5,7 +5,6 @@ public import Definitions.Def_ModularCurve_PhiGen
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_minpoly_jqN_eq_toAdjoin
 
 noncomputable section
@@ -44,4 +43,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_minpoly_jqN_eq_toAdjoin.Modu
 
 theorem solution {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (h : PhiIrreducible data) : minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN N) = data.toAdjoin :=
   ModularCurve.minpoly_jqN_eq_toAdjoin data h
+end S_ModularCurve_minpoly_jqN_eq_toAdjoin
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.minpoly_jqN_eq_toAdjoin {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (h : PhiIrreducible data) : minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN N) = data.toAdjoin := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_minpoly_jqN_eq_toAdjoin.solution
+end

@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
+import P2M.Sol.S_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import Theorems.Thm_AlgebraicCurve_Place_exists_of_valuationSubring_of_isSeparable
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_Place_exists_ord_sub_algebraMap_pos_of_transcendental

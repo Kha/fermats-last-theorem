@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_AlgebraicCurve_FrobeniusEndo
-import Theorems.Thm_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
+import P2M.Sol.S_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
 import Theorems.Thm_AlgebraicCurve_finrankAlong_comp
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_IsFrobeniusEndo_finrankAlong_pow_eq

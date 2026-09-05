@@ -3,8 +3,8 @@ module
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.RingTheory.Valuation.LocalSubring
 import P2M.Util
+public import Mathlib
 
-@[expose] public section
 namespace P2MW.S_ValuationSubring_exists_root_mem_of_monic
 
 set_option autoImplicit false
@@ -25,3 +25,11 @@ theorem solution {K : Type*} [Field K] [IsAlgClosed K]
   have hyx : (y : K) = x := hy
   rw [Polynomial.aeval_def, hyx]
   rwa [Polynomial.IsRoot, Polynomial.eval_map] at hx
+end S_ValuationSubring_exists_root_mem_of_monic
+end P2MW
+
+public section
+theorem ValuationSubring.exists_root_mem_of_monic {K : Type*} [Field K] [IsAlgClosed K]
+    (A : ValuationSubring K) (f : Polynomial A) (hf : f.Monic) (hd : f.natDegree ≠ 0) :
+    ∃ x : A, Polynomial.aeval (x : K) f = 0 := by p2m_exact_reverting @_root_.P2MW.S_ValuationSubring_exists_root_mem_of_monic.solution
+end

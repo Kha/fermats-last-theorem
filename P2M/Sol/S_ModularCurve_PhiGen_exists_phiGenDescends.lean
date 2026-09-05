@@ -2,12 +2,11 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Galois.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_exists_phiGenDescends
 
 noncomputable section
@@ -315,4 +314,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_exists_phiGenDescends
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (ζ : Kˣ) [IsGalois ℚ K] [FiniteDimensional ℚ K] (hζ : IsPrimitiveRoot (ζ : K) ℓ) : ∃ c : ℕ → LaurentSeries ℚ, PhiGenDescends ℓ ζ c :=
   ModularCurve.PhiGen.exists_phiGenDescends ℓ ζ hζ
+end S_ModularCurve_PhiGen_exists_phiGenDescends
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.exists_phiGenDescends {K : Type*} [Field K] [Algebra ℚ K] (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (ζ : Kˣ) [IsGalois ℚ K] [FiniteDimensional ℚ K] (hζ : IsPrimitiveRoot (ζ : K) ℓ) : ∃ c : ℕ → LaurentSeries ℚ, PhiGenDescends ℓ ζ c := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_exists_phiGenDescends.solution
+end

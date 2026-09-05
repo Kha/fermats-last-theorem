@@ -5,7 +5,7 @@ import Mathlib.RingTheory.LaurentSeries
 import Mathlib.RingTheory.IntegralClosure.IsIntegral.Defs
 import Mathlib.LinearAlgebra.Lagrange
 import Mathlib.RingTheory.Adjoin.Polynomial.Basic
-import Theorems.Thm_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
+import P2M.Sol.S_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
 import P2M.Util
 namespace P2MW.S_ModularForm_isIntegral_adjoin_qExpansion_div_discriminant_pow_of_isArithmetic
 

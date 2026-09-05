@@ -2,7 +2,7 @@ import Definitions.Def_ModularForm_HeckeOperator
 import Definitions.Def_ModularCurve_X0
 import Mathlib.NumberTheory.ModularForms.QExpansion
 import Theorems.Thm_ModularForm_exists_degeneracy_Gamma0
-import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
+import P2M.Sol.S_ModularCurve_laurent_qParam_coeff_unique
 import P2M.Util
 namespace P2MW.S_ModularForm_qExpansion_heckeDiagMatrix_smul_eq_qExpand_of_levelOne
 

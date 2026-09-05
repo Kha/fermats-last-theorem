@@ -1,6 +1,6 @@
 import Definitions.Def_ModularCurve_LaurentCoeff
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_qExpand_mem_laurentBaseChange
 

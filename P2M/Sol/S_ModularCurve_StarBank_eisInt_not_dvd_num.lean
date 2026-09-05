@@ -5,7 +5,6 @@ public import Mathlib.NumberTheory.Bernoulli
 public import Mathlib.Data.Rat.Lemmas
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_eisInt_not_dvd_num
 
 set_option autoImplicit false
@@ -156,4 +155,12 @@ open Finset in
 theorem solution {ℓ : ℕ} [Fact ℓ.Prime] (hℓ5 : 5 ≤ ℓ) :
     ¬ (ℓ : ℤ) ∣ (bernoulli (ℓ - 1)).num :=
   ModularCurve.StarBank.eisInt_not_dvd_num hℓ5
+end S_ModularCurve_StarBank_eisInt_not_dvd_num
+end P2MW
 
+public section
+open scoped ArithmeticFunction.sigma
+open Finset
+theorem ModularCurve.StarBank.eisInt_not_dvd_num {ℓ : ℕ} [Fact ℓ.Prime] (hℓ5 : 5 ≤ ℓ) :
+    ¬ (ℓ : ℤ) ∣ (bernoulli (ℓ - 1)).num := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_StarBank_eisInt_not_dvd_num.solution
+end

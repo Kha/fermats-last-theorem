@@ -4,8 +4,8 @@ public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
 public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
 public import Mathlib.Tactic.LinearCombination
 import P2M.Util
+public import Mathlib
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
 
 open Polynomial
@@ -46,3 +46,9 @@ theorem PortCard.Ψ₂Sq_ne_zero_of_isElliptic {F : Type*} [Field F] (W : Weiers
 
 theorem solution {F : Type*} [Field F] (W : WeierstrassCurve F) [W.IsElliptic] : W.Ψ₂Sq ≠ 0 :=
   PortCard.Ψ₂Sq_ne_zero_of_isElliptic W
+end S_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
+end P2MW
+
+public section
+theorem WeierstrassCurve.Psi2Sq_ne_zero_of_isElliptic {F : Type*} [Field F] (W : WeierstrassCurve F) [W.IsElliptic] : W.Ψ₂Sq ≠ 0 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic.solution
+end

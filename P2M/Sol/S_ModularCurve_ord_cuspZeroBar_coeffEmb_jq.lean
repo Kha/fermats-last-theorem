@@ -1,10 +1,9 @@
 module
 
 public import Definitions.Def_ModularCurve_CuspidalClass
-public import Theorems.Thm_ModularCurve_ord_cuspZeroBar_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_ord_cuspZeroBar_coeffEmb_qExpand
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_ord_cuspZeroBar_coeffEmb_jq
 
 open ModularCurve AlgebraicCurve
@@ -17,3 +16,11 @@ theorem solution (N : ℕ) [NeZero N] (h : IsFrickeAutFull N (frickeInvolutionFu
       ⟨coeffEmb (AlgebraicClosure ℚ) jq, coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (jq_mem_full N)⟩ :=
     Subtype.ext (by simp only [qExpand_one_apply])
   rwa [hj] at e
+end S_ModularCurve_ord_cuspZeroBar_coeffEmb_jq
+end P2MW
+
+public section
+open ModularCurve AlgebraicCurve
+
+theorem ModularCurve.ord_cuspZeroBar_coeffEmb_jq (N : ℕ) [NeZero N] (h : IsFrickeAutFull N (frickeInvolutionFull N)) : (cuspZeroBar N).ord ⟨coeffEmb (AlgebraicClosure ℚ) jq, coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (jq_mem_full N)⟩ = -N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_ord_cuspZeroBar_coeffEmb_jq.solution
+end

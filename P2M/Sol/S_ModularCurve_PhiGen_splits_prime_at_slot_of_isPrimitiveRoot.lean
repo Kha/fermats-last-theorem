@@ -4,20 +4,19 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffMap_injective
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-public import Theorems.Thm_ModularCurve_order_jqModC
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
-public import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_order_jqModC
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
+import P2M.Sol.S_ModularCurve_PhiGen_splits_of_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.RingTheory.AdjoinRoot
 public import Mathlib.RingTheory.Polynomial.Cyclotomic.Roots
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot
 
 set_option autoImplicit false
@@ -606,4 +605,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot_
 
 theorem solution {K : Type*} [Field K] (p : ℕ) [hp : Fact (Nat.Prime p)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) p) (data : ModularPolynomialData p) (e : ℕ) [NeZero e] (u : Kˣ) : data.Φ.map (Polynomial.eval₂RingHom (Int.castRingHom (LaurentSeries K)) (qExpand K (p * e) (qTwist (u ^ p) (jqModC K)))) = (Polynomial.X - Polynomial.C (qExpand K (p * (p * e)) (qTwist (u ^ (p * p)) (jqModC K)))) * ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qExpand K e (qTwist (u * ζ ^ b) (jqModC K)))) :=
   ModularCurve.PhiGen.splits_prime_at_slot_of_isPrimitiveRoot p ζ hζ data e u
+end S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.splits_prime_at_slot_of_isPrimitiveRoot {K : Type*} [Field K] (p : ℕ) [hp : Fact (Nat.Prime p)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) p) (data : ModularPolynomialData p) (e : ℕ) [NeZero e] (u : Kˣ) : data.Φ.map (Polynomial.eval₂RingHom (Int.castRingHom (LaurentSeries K)) (qExpand K (p * e) (qTwist (u ^ p) (jqModC K)))) = (Polynomial.X - Polynomial.C (qExpand K (p * (p * e)) (qTwist (u ^ (p * p)) (jqModC K)))) * ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qExpand K e (qTwist (u * ζ ^ b) (jqModC K)))) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot.solution
+end

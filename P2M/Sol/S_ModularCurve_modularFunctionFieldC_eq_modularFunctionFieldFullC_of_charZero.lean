@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_X0ModL
-import Theorems.Thm_ModularCurve_functionFieldGeneration
+import P2M.Sol.S_ModularCurve_functionFieldGeneration
 import P2M.Util
 namespace P2MW.S_ModularCurve_modularFunctionFieldC_eq_modularFunctionFieldFullC_of_charZero
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_CharLSpecialFibreLevelNDictionary
 import Definitions.Def_AlgebraicCurve_Repartitions
-import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import P2M.Util
 namespace P2MW.S_ModularCurve_isAffineGeomPlace_or_ord_jGeomGen_lt_zero
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

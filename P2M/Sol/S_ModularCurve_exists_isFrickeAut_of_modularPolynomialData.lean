@@ -2,12 +2,11 @@ module
 
 public import Definitions.Def_ModularCurve_AtkinLehner
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_isIntegral_jqN
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_isIntegral_jqN
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.RingTheory.AdjoinRoot
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
 
 set_option autoImplicit false
@@ -301,3 +300,10 @@ theorem solution {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (hsymm : 
 
 end
 p2m_reactivate "P2MW.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData.IntermediateField.W2B P2MW.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData.ModularCurve.W2B P2MW.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData.ModularCurve"
+end S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
+end P2MW
+
+public section
+open ModularCurve AlgebraicCurve IntermediateField
+theorem ModularCurve.exists_isFrickeAut_of_modularPolynomialData {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (hsymm : EvalSymm data.Φ) (hirr : PhiIrreducible data) : ∃ σ : modularFunctionField N ≃ₐ[ℚ] modularFunctionField N, IsFrickeAut N σ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData.solution
+end

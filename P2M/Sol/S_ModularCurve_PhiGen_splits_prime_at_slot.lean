@@ -3,14 +3,13 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_of_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.Algebra.Polynomial.Roots
 public import Mathlib.Algebra.BigOperators.Fin
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot
 
 set_option autoImplicit false
@@ -287,4 +286,10 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_PhiG
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] (N : ℕ) [NeZero N] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) N) (p : ℕ) [hp : Fact (Nat.Prime p)] (hpN : p ∣ N) (data : ModularPolynomialData p) (e : ℕ) [NeZero e] (u : Kˣ) : data.Φ.map (Polynomial.eval₂RingHom (Int.castRingHom (LaurentSeries K)) (qExpand K (p * e) (qTwist (u ^ p) (coeffEmb K jq)))) = (Polynomial.X - Polynomial.C (qExpand K (p * (p * e)) (qTwist (u ^ (p * p)) (coeffEmb K jq)))) * ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qExpand K e (qTwist (u * ζ ^ (b * (N / p))) (coeffEmb K jq)))) :=
   ModularCurve.PhiGen.splits_prime_at_slot N ζ hζ p hpN data e u
+end S_ModularCurve_PhiGen_splits_prime_at_slot
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.splits_prime_at_slot {K : Type*} [Field K] [Algebra ℚ K] (N : ℕ) [NeZero N] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) N) (p : ℕ) [hp : Fact (Nat.Prime p)] (hpN : p ∣ N) (data : ModularPolynomialData p) (e : ℕ) [NeZero e] (u : Kˣ) : data.Φ.map (Polynomial.eval₂RingHom (Int.castRingHom (LaurentSeries K)) (qExpand K (p * e) (qTwist (u ^ p) (coeffEmb K jq)))) = (Polynomial.X - Polynomial.C (qExpand K (p * (p * e)) (qTwist (u ^ (p * p)) (coeffEmb K jq)))) * ∏ b ∈ Finset.range p, (Polynomial.X - Polynomial.C (qExpand K e (qTwist (u * ζ ^ (b * (N / p))) (coeffEmb K jq)))) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot.solution
+end

@@ -1,7 +1,7 @@
 import Definitions.Def_ModularCurve_AtkinLehnerPartial
 import Definitions.Def_ModularCurve_HeckeOperator
 import Definitions.Def_ModularCurve_GeometricBaseChange
-import Theorems.Thm_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_algEquiv_comp_heckeAlphaBar_eq_heckeBetaBar
 

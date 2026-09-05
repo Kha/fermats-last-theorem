@@ -2,8 +2,8 @@ module
 
 public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
 import P2M.Util
+public import Mathlib
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_Affine_evalEval_psi_sq
 
 open Polynomial
@@ -31,3 +31,9 @@ theorem PortCard.evalEval_φ {R : Type*} [CommRing R] (W : WeierstrassCurve R) {
 
 theorem solution {R : Type*} [CommRing R] (W : WeierstrassCurve R) {x y : R} (h : W.toAffine.Equation x y) (n : ℤ) : (W.ψ n).evalEval x y ^ 2 = (W.ΨSq n).eval x :=
   PortCard.evalEval_ψ_sq W h n
+end S_WeierstrassCurve_Affine_evalEval_psi_sq
+end P2MW
+
+public section
+theorem WeierstrassCurve.Affine.evalEval_psi_sq {R : Type*} [CommRing R] (W : WeierstrassCurve R) {x y : R} (h : W.toAffine.Equation x y) (n : ℤ) : (W.ψ n).evalEval x y ^ 2 = (W.ΨSq n).eval x := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_Affine_evalEval_psi_sq.solution
+end

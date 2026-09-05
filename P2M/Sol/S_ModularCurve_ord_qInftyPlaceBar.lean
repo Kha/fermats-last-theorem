@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_QAdicPlace
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_ord_qInftyPlaceBar
 
 open ModularCurve AlgebraicCurve
@@ -35,3 +34,11 @@ theorem solution (L : Type*) [Field L] {F : IntermediateField L (LaurentSeries L
     exact (div_mul_cancel₀ f hπn).symm
   rw [hdecomp]
   exact (qInftyPlaceBar L F ⟨j, hj⟩).ord_unit_smul_zpow huu.unit (irreducible_uniformizerBar hj) n
+end S_ModularCurve_ord_qInftyPlaceBar
+end P2MW
+
+public section
+open ModularCurve AlgebraicCurve
+
+theorem ModularCurve.ord_qInftyPlaceBar (L : Type*) [Field L] {F : IntermediateField L (LaurentSeries L)} (h : ∃ j : F, (qSeriesBar L F j).order = -1) (f : F) : (qInftyPlaceBar L F h).ord f = (qSeriesBar L F f).order := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_ord_qInftyPlaceBar.solution
+end

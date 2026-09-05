@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_exists_forall_ord_eq
 
 set_option autoImplicit false
@@ -409,3 +408,12 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F]
   obtain ⟨z, hzv, hzT⟩ :=
     Place.exists_ord_neg_forall_ord_pos (T.erase v) (Finset.notMem_erase v T)
   exact ⟨z, hzv, fun w hw hwv => hzT w (Finset.mem_erase.mpr ⟨hwv, hw⟩)⟩
+end S_AlgebraicCurve_Place_exists_forall_ord_eq
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Place.exists_forall_ord_eq {K F : Type*} [Field K] [Field F] [Algebra K F]
+    (T : Finset (Place K F)) (n : Place K F → ℤ) :
+    ∃ f : F, f ≠ 0 ∧ ∀ v ∈ T, v.ord f = n v := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_exists_forall_ord_eq.solution
+end

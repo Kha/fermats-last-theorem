@@ -2,8 +2,8 @@ import Mathlib
 import Definitions.Def_ModularCurve_IgusaScheme
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_LaurentCoeff
-import Theorems.Thm_ModularCurve_coeffEmb_jq
-import Theorems.Thm_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
 import Theorems.Thm_ModularCurve_sub_mul_sub_mem_span_natCast_of_jqModC_mem_of_jqNModC_mem
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_sub_mul_sub_eq_natCast_mul_of_coe_eq_qExpand

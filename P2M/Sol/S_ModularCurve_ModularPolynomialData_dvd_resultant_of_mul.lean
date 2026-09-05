@@ -1,9 +1,9 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_phiIrreducible_all
+import P2M.Sol.S_ModularCurve_phiIrreducible_all
 import Theorems.Thm_ModularCurve_ModularPolynomialData_minpoly_jqN_eq
-import Theorems.Thm_ModularCurve_transcendental_jq
+import P2M.Sol.S_ModularCurve_transcendental_jq
 import P2M.Util
 namespace P2MW.S_ModularCurve_ModularPolynomialData_dvd_resultant_of_mul
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL

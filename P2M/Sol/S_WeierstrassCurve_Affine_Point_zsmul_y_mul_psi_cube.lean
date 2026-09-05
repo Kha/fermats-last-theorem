@@ -1,5 +1,5 @@
 import Definitions.Def_EllipticCurve_DivisionPolynomialOmega
-import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 import Mathlib.NumberTheory.EllipticDivisibilitySequence
 import Mathlib.Algebra.Ring.NegOnePow
 import Mathlib.Data.Fin.VecNotation

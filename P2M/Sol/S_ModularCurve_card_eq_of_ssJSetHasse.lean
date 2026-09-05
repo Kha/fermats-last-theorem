@@ -3,12 +3,11 @@ module
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_JWidth
-public import Theorems.Thm_ModularCurve_sum_inv_jWidth_of_ssJSetHasse
-public import Theorems.Thm_ModularCurve_zero_mem_ssJSetHasse_iff
-public import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
+import P2M.Sol.S_ModularCurve_sum_inv_jWidth_of_ssJSetHasse
+import P2M.Sol.S_ModularCurve_zero_mem_ssJSetHasse_iff
+import P2M.Sol.S_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_card_eq_of_ssJSetHasse
 
 set_option autoImplicit false
@@ -98,3 +97,13 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
     (S : Finset K) (hS : ∀ j, j ∈ S ↔ j ∈ ssJSetHasse q K) :
     S.card = q / 12 + (if q % 3 = 2 then 1 else 0) + (if q % 4 = 3 then 1 else 0) :=
   ModularCurve.card_eq_of_ssJSetHasse' q hq K S hS
+end S_ModularCurve_card_eq_of_ssJSetHasse
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.card_eq_of_ssJSetHasse (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
+    (K : Type*) [Field K] [IsAlgClosed K] [CharP K q] [DecidableEq K]
+    (S : Finset K) (hS : ∀ j, j ∈ S ↔ j ∈ ssJSetHasse q K) :
+    S.card = q / 12 + (if q % 3 = 2 then 1 else 0) + (if q % 4 = 3 then 1 else 0) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_card_eq_of_ssJSetHasse.solution
+end

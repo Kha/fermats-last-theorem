@@ -7,11 +7,10 @@ public import Definitions.Def_AlgebraicCurve_Repartitions
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
 public import Definitions.Def_AlgebraicCurve_PoleDivisorPackage
-public import Theorems.Thm_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg
+import P2M.Sol.S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg
 import P2M.Util
 public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_linearIndependent_pow_mul
 
 set_option autoImplicit false
@@ -2285,3 +2284,13 @@ theorem solution {K : Type*} {E : Type*} {F : Type*} [Field K] [Field E] [Field 
     (hx : LinearIndependent K (fun j : ℕ => x ^ j)) (hu : LinearIndependent E u) :
     LinearIndependent K (fun p : ℕ × Fin n => (algebraMap E F x) ^ p.1 * u p.2) :=
   AlgebraicCurve.linearIndependent_pow_mul_port (K := K) (F := F) (E := E) (x := x) (n := n) (u := u) (hx := hx) (hu := hu)
+end S_AlgebraicCurve_linearIndependent_pow_mul
+end P2MW
+
+public section
+namespace AlgebraicCurve
+theorem linearIndependent_pow_mul {K : Type*} {E : Type*} {F : Type*} [Field K] [Field E] [Field F] [Algebra K E] [Algebra K F] [Algebra E F] [IsScalarTower K E F] {x : E} {n : ℕ} {u : Fin n → F}
+    (hx : LinearIndependent K (fun j : ℕ => x ^ j)) (hu : LinearIndependent E u) :
+    LinearIndependent K (fun p : ℕ × Fin n => (algebraMap E F x) ^ p.1 * u p.2) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_linearIndependent_pow_mul.solution
+end AlgebraicCurve
+end

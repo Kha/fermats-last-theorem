@@ -3,9 +3,9 @@ import Definitions.Def_TateCurve_XMultDistinctRouteB
 import Definitions.Def_TateCurve_KeystoneVocab
 import Theorems.Thm_TateCurve_ks17_A_exports
 import Theorems.Thm_TateCurve_pointX_inv
-import Theorems.Thm_TateCurve_pointX_zpow_mul
+import P2M.Sol.S_TateCurve_pointX_zpow_mul
 import Theorems.Thm_TateCurve_pointY_inv
-import Theorems.Thm_TateCurve_pointY_zpow_mul
+import P2M.Sol.S_TateCurve_pointY_zpow_mul
 import P2M.Util
 namespace P2MW.S_TateCurve_ks17_D2_exports
 

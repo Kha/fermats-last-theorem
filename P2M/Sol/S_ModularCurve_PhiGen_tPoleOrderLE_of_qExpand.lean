@@ -1,7 +1,7 @@
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_coeffEmb_injective
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_injective
 import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Algebra.Polynomial.Eval.Degree
 import Mathlib.Tactic.Linarith

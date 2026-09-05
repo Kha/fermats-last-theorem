@@ -7,7 +7,6 @@ public import Mathlib.RingTheory.MvPowerSeries.Substitution
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_toricPoint_snd_coeff_mul_eq_sum_divisors
 
 set_option autoImplicit false
@@ -1649,4 +1648,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_mul_eq_
 
 theorem solution (K : Type*) [Field K] (p : ℕ) (hp : 0 < p) (c : K) {M : ℕ} (hM : M ≠ 0) : (toricPoint K p c).2.coeff ((p * M : ℕ) : ℤ) = ∑ e ∈ M.divisors, (((e.choose 2 : ℕ) : K) * (c ^ e - c⁻¹ ^ e) - (e : K) * c⁻¹ ^ e + (e : K)) :=
   ModularCurve.toricPoint_snd_coeff_mul' K p hp c hM
+end S_ModularCurve_toricPoint_snd_coeff_mul_eq_sum_divisors
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.toricPoint_snd_coeff_mul_eq_sum_divisors (K : Type*) [Field K] (p : ℕ) (hp : 0 < p) (c : K) {M : ℕ} (hM : M ≠ 0) : (toricPoint K p c).2.coeff ((p * M : ℕ) : ℤ) = ∑ e ∈ M.divisors, (((e.choose 2 : ℕ) : K) * (c ^ e - c⁻¹ ^ e) - (e : K) * c⁻¹ ^ e + (e : K)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_mul_eq_sum_divisors.solution
+end

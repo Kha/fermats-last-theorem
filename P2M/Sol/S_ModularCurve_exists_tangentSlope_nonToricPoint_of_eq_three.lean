@@ -1,10 +1,10 @@
 import Mathlib
 import Definitions.Def_ModularCurve_TateSlots
 import Definitions.Def_TateCurve_TorsionParametrization
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivX
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivY
-import Theorems.Thm_TateCurve_pointX_qExpansion
-import Theorems.Thm_TateCurve_pointY_qExpansion
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivX
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivY
+import P2M.Sol.S_TateCurve_pointX_qExpansion
+import P2M.Sol.S_TateCurve_pointY_qExpansion
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_tangentSlope_nonToricPoint_of_eq_three
 

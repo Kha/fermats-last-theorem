@@ -8,7 +8,7 @@ import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import Definitions.Def_ModularCurve_KroneckerTransport
 import Definitions.Def_ModularCurve_ModularUnit
 import Theorems.Thm_ModularCurve_thetaL_jq_pow_six
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_pow_twelve_mul_pow_sub_one_eq_of_coe_eq_hasseRootFn_pow
 attribute [-instance] ModularCurve.instIsElliptic_tateLaurent ModularCurve.PhiGen.instNeZeroPhiGenCosetA

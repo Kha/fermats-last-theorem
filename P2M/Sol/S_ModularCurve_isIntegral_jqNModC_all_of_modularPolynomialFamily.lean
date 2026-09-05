@@ -2,10 +2,9 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_mul
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_mul
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
 
 noncomputable section
@@ -79,4 +78,13 @@ theorem solution (K : Type*) [Field K] (hΦ : ModularPolynomialFamily)
     IsIntegral (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (jqNModC K N) :=
   ModularCurve.AllLevels.isIntegral_jqNModC_all K hΦ N
 
+end
+end S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.isIntegral_jqNModC_all_of_modularPolynomialFamily (K : Type*) [Field K] (hΦ : ModularPolynomialFamily)
+    (N : ℕ) [NeZero N] :
+    IsIntegral (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (jqNModC K N) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily.solution
 end

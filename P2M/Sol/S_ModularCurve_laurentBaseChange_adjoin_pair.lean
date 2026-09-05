@@ -5,18 +5,17 @@ public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_DegeneracyTower
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-public import Theorems.Thm_ModularCurve_laurentBaseChange_modularFunctionField
-public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
-public import Theorems.Thm_ModularCurve_laurentBaseChange_mono
-public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_mul
-public import Theorems.Thm_ModularCurve_coeffEmb_jqN
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_laurentBaseChange_modularFunctionField
+import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
+import P2M.Sol.S_ModularCurve_laurentBaseChange_mono
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_mul
+import P2M.Sol.S_ModularCurve_coeffEmb_jqN
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_laurentBaseChange_adjoin_pair
 
 set_option autoImplicit false
@@ -570,4 +569,13 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_laur
 
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] (M : ℕ) [NeZero M] (hgenQ : FunctionFieldGeneration M) : laurentBaseChange L (modularFunctionFieldFull M) = IntermediateField.adjoin L {jqModC L, jqNModC L M} :=
   ModularCurve.laurentBaseChange_adjoin_pair L M hgenQ
+end S_ModularCurve_laurentBaseChange_adjoin_pair
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.laurentBaseChange_adjoin_pair (L : Type*) [Field L] [Algebra ℚ L] (M : ℕ) [NeZero M] (hgenQ : FunctionFieldGeneration M) : laurentBaseChange L (modularFunctionFieldFull M) = IntermediateField.adjoin L {jqModC L, jqNModC L M} := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_laurentBaseChange_adjoin_pair.solution
+end

@@ -7,7 +7,6 @@ public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Divisor_degree_eq_sum_support
 
 set_option autoImplicit false
@@ -91,3 +90,12 @@ open _root_.AlgebraicCurve _root_.P2MW.S_AlgebraicCurve_Divisor_degree_eq_sum_su
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (D : Divisor K F) :
     Divisor.degree D = ∑ v ∈ D.support, D v * (v.deg : ℤ) :=
   AlgebraicCurve.Divisor.degree_eq_sum_support_port (K := K) (F := F) (D := D)
+end S_AlgebraicCurve_Divisor_degree_eq_sum_support
+end P2MW
+
+public section
+namespace AlgebraicCurve
+theorem Divisor.degree_eq_sum_support {K F : Type*} [Field K] [Field F] [Algebra K F] (D : Divisor K F) :
+    Divisor.degree D = ∑ v ∈ D.support, D v * (v.deg : ℤ) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Divisor_degree_eq_sum_support.solution
+end AlgebraicCurve
+end

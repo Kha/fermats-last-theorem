@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_X0
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_functionFieldGeneration_of_prime
 
 open ModularCurve IntermediateField
@@ -18,4 +17,11 @@ theorem solution {ℓ : ℕ} [NeZero ℓ] (hℓ : ℓ.Prime) : FunctionFieldGene
     exact subset_adjoin ℚ _ (Set.mem_insert _ _)
   · exact subset_adjoin ℚ _ (Set.mem_insert_of_mem _ rfl)
 
+end
+end S_ModularCurve_functionFieldGeneration_of_prime
+end P2MW
+
+public section
+open ModularCurve IntermediateField
+theorem ModularCurve.functionFieldGeneration_of_prime {ℓ : ℕ} [NeZero ℓ] (hℓ : ℓ.Prime) : FunctionFieldGeneration ℓ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_functionFieldGeneration_of_prime.solution
 end

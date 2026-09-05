@@ -1,6 +1,6 @@
 import Definitions.Def_DrinfeldCurve_FunctionField
 import Definitions.Def_AlgebraicCurve_IsCurveOver
-import Theorems.Thm_AlgebraicCurve_isCurveOver_of_transcendental
+import P2M.Sol.S_AlgebraicCurve_isCurveOver_of_transcendental
 import Mathlib.RingTheory.Polynomial.Eisenstein.Basic
 import Mathlib.Algebra.Polynomial.Reverse
 import Mathlib.Algebra.Polynomial.Degree.Units

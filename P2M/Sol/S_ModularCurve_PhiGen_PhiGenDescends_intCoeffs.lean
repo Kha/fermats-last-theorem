@@ -6,7 +6,6 @@ public import Mathlib.RingTheory.IntegralClosure.IntegrallyClosed
 public import Mathlib.RingTheory.Polynomial.RationalRoot
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_PhiGenDescends_intCoeffs
 
 noncomputable section
@@ -239,4 +238,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_PhiGenDescends_intCoe
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hc : PhiGenDescends ℓ ζ c) (hζ1 : ζ ^ ℓ = 1) (k : ℕ) : IntCoeffs (c k) :=
   ModularCurve.PhiGen.PhiGenDescends.intCoeffs hc hζ1 k
+end S_ModularCurve_PhiGen_PhiGenDescends_intCoeffs
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.PhiGenDescends.intCoeffs {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hc : PhiGenDescends ℓ ζ c) (hζ1 : ζ ^ ℓ = 1) (k : ℕ) : IntCoeffs (c k) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_PhiGenDescends_intCoeffs.solution
+end

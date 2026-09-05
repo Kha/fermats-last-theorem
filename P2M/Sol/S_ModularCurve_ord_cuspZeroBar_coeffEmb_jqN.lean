@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_CuspidalClass
-import Theorems.Thm_ModularCurve_ord_cuspZeroBar_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_ord_cuspZeroBar_coeffEmb_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_ord_cuspZeroBar_coeffEmb_jqN
 

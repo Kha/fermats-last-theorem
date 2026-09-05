@@ -1,11 +1,10 @@
 module
 
 public import Mathlib
-public import Theorems.Thm_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
-public import Theorems.Thm_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
+import P2M.Sol.S_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
+import P2M.Sol.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
 
 open IntermediateField
@@ -150,3 +149,15 @@ theorem solution
       FiniteDimensional (IntermediateField.adjoin K ({t} : Set F)) F ∧
       Algebra.IsSeparable (IntermediateField.adjoin K ({t} : Set F)) F :=
   AlgebraicCurve.SeparatingTranscendentalOfPerfectField.exists_separating htr hfd
+end S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
+end P2MW
+
+public section
+theorem AlgebraicCurve.exists_separating_transcendental_of_perfectField
+    {K F : Type*} [Field K] [Field F] [Algebra K F] [PerfectField K]
+    {x : F} (htr : Transcendental K x)
+    (hfd : FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F) :
+    ∃ t : F, Transcendental K t ∧
+      FiniteDimensional (IntermediateField.adjoin K ({t} : Set F)) F ∧
+      Algebra.IsSeparable (IntermediateField.adjoin K ({t} : Set F)) F := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField.solution
+end

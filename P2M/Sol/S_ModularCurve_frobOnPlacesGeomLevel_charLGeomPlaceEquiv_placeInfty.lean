@@ -4,10 +4,9 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 public import Definitions.Def_ModularCurve_SpecializeModuli
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import Theorems.Thm_ModularCurve_eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg
+import P2M.Sol.S_ModularCurve_eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_frobOnPlacesGeomLevel_charLGeomPlaceEquiv_placeInfty
 set_option synthInstance.maxHeartbeats 1600000
 set_option maxHeartbeats 3200000
@@ -68,3 +67,17 @@ theorem solution
   have hq : (0 : ℤ) < (q : ℤ) := by exact_mod_cast (Fact.out : q.Prime).pos
   have h3 : 0 ≤ inf.ord J := le_of_mul_le_mul_left (by simpa using h2) hq
   exact absurd hneg (not_lt.mpr h3)
+end S_ModularCurve_frobOnPlacesGeomLevel_charLGeomPlaceEquiv_placeInfty
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+
+open AlgebraicCurve ModularCurve
+theorem ModularCurve.frobOnPlacesGeomLevel_charLGeomPlaceEquiv_placeInfty
+    (k : Type*) [Field k] [DecidableEq (RatFunc k)] {q : ℕ} [Fact q.Prime] [CharP k q]
+    (data : ModularPolynomialData q) (hKr : KroneckerCongruence q data) :
+    frobOnPlacesGeomLevel k 1 data hKr (charLGeomPlaceEquiv k (RationalFunctionField.placeInfty k))
+      = charLGeomPlaceEquiv k (RationalFunctionField.placeInfty k) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_frobOnPlacesGeomLevel_charLGeomPlaceEquiv_placeInfty.solution
+end

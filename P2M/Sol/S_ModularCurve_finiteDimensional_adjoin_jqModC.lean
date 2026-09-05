@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_isIntegral_jqNModC_all
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all
 import P2M.Util
 namespace P2MW.S_ModularCurve_finiteDimensional_adjoin_jqModC
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

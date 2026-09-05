@@ -5,7 +5,6 @@ public import Mathlib.Analysis.SpecificLimits.Normed
 public import Mathlib.NumberTheory.Divisors
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_TateCurve_tsum_succ_prod_eq_tsum_divisors
 
 set_option autoImplicit false
@@ -159,3 +158,9 @@ theorem solution {K : Type*} [NontriviallyNormedField K] [CompleteSpace K]
     ∑' p : ℕ × ℕ, h (p.2 + 1) * r ^ ((p.1 + 1) * (p.2 + 1))
       = ∑' N : ℕ, (∑ d ∈ (N + 1).divisors, h d) * r ^ (N + 1) :=
   tsum_succ_prod_main hC1 hh hrC
+end S_TateCurve_tsum_succ_prod_eq_tsum_divisors
+end P2MW
+
+public section
+theorem TateCurve.tsum_succ_prod_eq_tsum_divisors {K : Type*} [NontriviallyNormedField K] [CompleteSpace K] {h : ℕ → K} {C : ℝ} {r : K} (hC1 : 1 ≤ C) (hh : ∀ m : ℕ, 0 < m → ‖h m‖ ≤ C ^ m) (hrC : ‖r‖ * C < 1) : ∑' p : ℕ × ℕ, h (p.2 + 1) * r ^ ((p.1 + 1) * (p.2 + 1)) = ∑' N : ℕ, (∑ d ∈ (N + 1).divisors, h d) * r ^ (N + 1) := by p2m_exact_reverting @_root_.P2MW.S_TateCurve_tsum_succ_prod_eq_tsum_divisors.solution
+end

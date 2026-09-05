@@ -2,24 +2,23 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
-public import Theorems.Thm_ModularCurve_StarBank_closure
-public import Theorems.Thm_ModularCurve_StarBank_count
-public import Theorems.Thm_ModularCurve_StarBank_deltaNorm
-public import Theorems.Thm_ModularCurve_StarBank_delta_pow_ne
-public import Theorems.Thm_ModularCurve_StarBank_eisInt_not_dvd_num
-public import Theorems.Thm_ModularCurve_StarBank_eisInt_series
-public import Theorems.Thm_ModularCurve_StarBank_hassePolyDescent
-public import Theorems.Thm_ModularCurve_StarBank_onePoint
-public import Theorems.Thm_ModularCurve_StarBank_press
-public import Theorems.Thm_ModularCurve_StarBank_starK
+import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
+import P2M.Sol.S_ModularCurve_StarBank_closure
+import P2M.Sol.S_ModularCurve_StarBank_count
+import P2M.Sol.S_ModularCurve_StarBank_deltaNorm
+import P2M.Sol.S_ModularCurve_StarBank_delta_pow_ne
+import P2M.Sol.S_ModularCurve_StarBank_eisInt_not_dvd_num
+import P2M.Sol.S_ModularCurve_StarBank_eisInt_series
+import P2M.Sol.S_ModularCurve_StarBank_hassePolyDescent
+import P2M.Sol.S_ModularCurve_StarBank_onePoint
+import P2M.Sol.S_ModularCurve_StarBank_press
+import P2M.Sol.S_ModularCurve_StarBank_starK
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 public import Mathlib.Algebra.Field.ZMod
 public import Mathlib.Algebra.CharP.Algebra
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_starBank
 
 set_option autoImplicit false
@@ -452,4 +451,15 @@ theorem solution {K : Type*} [Field K] {ℓ : ℕ} [Fact ℓ.Prime]
     [CharP K ℓ] {p : ℕ} [Fact p.Prime] (hpℓ : p ≠ ℓ) :
     jqNModC K p ∉ IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)) :=
   ModularCurve.StarBank.starBank hpℓ
+end S_ModularCurve_StarBank_starBank
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
+
+open ModularCurve
+theorem ModularCurve.StarBank.starBank {K : Type*} [Field K] {ℓ : ℕ} [Fact ℓ.Prime]
+    [CharP K ℓ] {p : ℕ} [Fact p.Prime] (hpℓ : p ≠ ℓ) :
+    jqNModC K p ∉ IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_StarBank_starBank.solution
+end

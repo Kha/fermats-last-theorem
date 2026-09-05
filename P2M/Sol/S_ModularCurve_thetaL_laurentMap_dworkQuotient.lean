@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_KroneckerTransport
 import Definitions.Def_ModularCurve_QExpansionDiff
-import Theorems.Thm_ModularCurve_pow_char_eq_map_frobenius_qExpand
+import P2M.Sol.S_ModularCurve_pow_char_eq_map_frobenius_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_thetaL_laurentMap_dworkQuotient
 

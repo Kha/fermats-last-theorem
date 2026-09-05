@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_KroneckerTransport
-import Theorems.Thm_ModularCurve_exists_kroneckerCongruence_of_prime
+import P2M.Sol.S_ModularCurve_exists_kroneckerCongruence_of_prime
 import Theorems.Thm_ModularCurve_modularPolynomialData_phi_unique_of_prime
 import P2M.Util
 namespace P2MW.S_ModularCurve_kroneckerCongruence_of_prime

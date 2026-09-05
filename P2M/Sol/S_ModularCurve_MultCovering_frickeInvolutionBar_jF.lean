@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_MultCoveringCharts
-import Theorems.Thm_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
-import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull_of_neZero
 import P2M.Util
 namespace P2MW.S_ModularCurve_MultCovering_frickeInvolutionBar_jF
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

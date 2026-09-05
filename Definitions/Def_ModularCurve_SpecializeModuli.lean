@@ -3,8 +3,7 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
-
+public import P2M.Sol.S_ModularCurve_transcendental_jqModC
 @[expose] public section
 
 set_option autoImplicit false

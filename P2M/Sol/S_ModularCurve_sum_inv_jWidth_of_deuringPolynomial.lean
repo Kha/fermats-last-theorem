@@ -4,16 +4,15 @@ public import Mathlib
 public import Definitions.Def_Polynomial_DeuringPolynomial
 public import Definitions.Def_ModularCurve_LegendreJ
 public import Definitions.Def_ModularCurve_JWidth
-public import Theorems.Thm_Polynomial_eval_zero_deuringPolynomial_map
-public import Theorems.Thm_Polynomial_eval_one_deuringPolynomial_map
-public import Theorems.Thm_Polynomial_card_roots_toFinset_deuringPolynomial_map
-public import Theorems.Thm_Polynomial_eval_one_sub_deuringPolynomial_map
-public import Theorems.Thm_Polynomial_pow_mul_eval_inv_deuringPolynomial_map
-public import Theorems.Thm_ModularCurve_legendreJ_eq_legendreJ_iff
-public import Theorems.Thm_ModularCurve_card_orbit_mul_jWidth
+import P2M.Sol.S_Polynomial_eval_zero_deuringPolynomial_map
+import P2M.Sol.S_Polynomial_eval_one_deuringPolynomial_map
+import P2M.Sol.S_Polynomial_card_roots_toFinset_deuringPolynomial_map
+import P2M.Sol.S_Polynomial_eval_one_sub_deuringPolynomial_map
+import P2M.Sol.S_Polynomial_pow_mul_eval_inv_deuringPolynomial_map
+import P2M.Sol.S_ModularCurve_legendreJ_eq_legendreJ_iff
+import P2M.Sol.S_ModularCurve_card_orbit_mul_jWidth
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
 
 set_option autoImplicit false
@@ -155,3 +154,13 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
     ∑ j ∈ ((deuringPolynomial q).map (Int.castRingHom K)).roots.toFinset.image legendreJ,
       ((jWidth j : ℚ))⁻¹ = ((q : ℚ) - 1) / 12 :=
   ModularCurve.sum_inv_jWidth_of_deuringPolynomial' q hq K
+end S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
+end P2MW
+
+public section
+open Polynomial ModularCurve
+theorem ModularCurve.sum_inv_jWidth_of_deuringPolynomial (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
+    (K : Type*) [Field K] [IsAlgClosed K] [CharP K q] [DecidableEq K] :
+    ∑ j ∈ ((deuringPolynomial q).map (Int.castRingHom K)).roots.toFinset.image legendreJ,
+      ((jWidth j : ℚ))⁻¹ = ((q : ℚ) - 1) / 12 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial.solution
+end

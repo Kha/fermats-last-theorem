@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_JLinePlaces
 import Definitions.Def_AlgebraicCurve_DivisorPushPull
 import Definitions.Def_ModularCurve_GenusNumerics
-import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
 import P2M.Util
 namespace P2MW.S_ModularCurve_finrank_jAdjoin_modularFunctionField_eq_dedekindPsi
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

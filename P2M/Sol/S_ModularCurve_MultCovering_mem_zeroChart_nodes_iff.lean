@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_MultCoveringCharts
 import Theorems.Thm_ModularCurve_pow_mem_ssJSet_iff_of_perfectField
-import Theorems.Thm_ValuationSubring_isAlgClosed_residueField
+import P2M.Sol.S_ValuationSubring_isAlgClosed_residueField
 import P2M.Util
 namespace P2MW.S_ModularCurve_MultCovering_mem_zeroChart_nodes_iff
 

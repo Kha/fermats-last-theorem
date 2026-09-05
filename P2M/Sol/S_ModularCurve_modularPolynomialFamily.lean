@@ -2,15 +2,14 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_PhiGen_exists_phiGenDescends
-public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_intCoeffs
-public import Theorems.Thm_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
-public import Theorems.Thm_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq
-public import Theorems.Thm_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
+import P2M.Sol.S_ModularCurve_PhiGen_exists_phiGenDescends
+import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_intCoeffs
+import P2M.Sol.S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
+import P2M.Sol.S_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq
+import P2M.Sol.S_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_modularPolynomialFamily
 
 noncomputable section
@@ -57,4 +56,10 @@ end ModularCurve
 end
 
 theorem solution : ModularCurve.ModularPolynomialFamily := ModularCurve.modularPolynomialFamily'
+end S_ModularCurve_modularPolynomialFamily
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.modularPolynomialFamily : ModularPolynomialFamily := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_modularPolynomialFamily.solution
+end

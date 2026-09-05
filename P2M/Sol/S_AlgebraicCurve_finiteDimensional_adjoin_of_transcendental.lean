@@ -6,8 +6,10 @@ public import Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCondition
 import P2M.Util
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Defs
+public import Mathlib.RingTheory.Algebraic.Defs
+public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
 
 open Set Cardinal
@@ -93,3 +95,11 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (x : F)
     [FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F] {t : F} (ht : Transcendental K t) :
     FiniteDimensional (IntermediateField.adjoin K ({t} : Set F)) F :=
   AlgebraicCurve.FF2KE3.finiteDimensional_adjoin_of_transcendental' x ht
+end S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
+end P2MW
+
+public section
+theorem AlgebraicCurve.finiteDimensional_adjoin_of_transcendental {K F : Type*} [Field K] [Field F] [Algebra K F] (x : F)
+    [FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F] {t : F} (ht : Transcendental K t) :
+    FiniteDimensional (IntermediateField.adjoin K ({t} : Set F)) F := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental.solution
+end

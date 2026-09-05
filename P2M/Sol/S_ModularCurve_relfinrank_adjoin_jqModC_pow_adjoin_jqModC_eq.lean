@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_relfinrank_adjoin_jqModC_pow_adjoin_jqModC_eq
 

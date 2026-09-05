@@ -1,8 +1,8 @@
 import Mathlib
 import Definitions.Def_ModularCurve_IgusaScheme
-import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
-import Theorems.Thm_ModularCurve_functionFieldGeneration
-import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_functionFieldGeneration
+import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 import P2M.Util
 namespace P2MW.S_ModularCurve_IgusaScheme_exists_mul_mem_adjoin_jFull_jqN
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

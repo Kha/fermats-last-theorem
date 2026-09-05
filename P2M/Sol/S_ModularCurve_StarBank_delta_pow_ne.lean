@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_JqCoeff
 public import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_delta_pow_ne
 
 set_option autoImplicit false
@@ -254,4 +253,15 @@ theorem solution (K : Type*) [CommRing K] {ℓ : ℕ} [Fact ℓ.Prime]
       HahnSeries.C γ * qExpand K p (HahnSeries.single (1 : ℤ) (1 : K) *
         HahnSeries.ofPowerSeries ℤ K (PowerSeries.map (Int.castRingHom K) etaProd) ^ 24) :=
   ModularCurve.StarBank.delta_pow_ne K hpℓ γ
+end S_ModularCurve_StarBank_delta_pow_ne
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.StarBank.delta_pow_ne (K : Type*) [CommRing K] {ℓ : ℕ} [Fact ℓ.Prime]
+    [CharP K ℓ] {p : ℕ} [Fact p.Prime] (hpℓ : p ≠ ℓ) (γ : K) :
+    (HahnSeries.single (1 : ℤ) (1 : K) *
+        HahnSeries.ofPowerSeries ℤ K (PowerSeries.map (Int.castRingHom K) etaProd) ^ 24) ^ p ≠
+      HahnSeries.C γ * qExpand K p (HahnSeries.single (1 : ℤ) (1 : K) *
+        HahnSeries.ofPowerSeries ℤ K (PowerSeries.map (Int.castRingHom K) etaProd) ^ 24) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_StarBank_delta_pow_ne.solution
+end

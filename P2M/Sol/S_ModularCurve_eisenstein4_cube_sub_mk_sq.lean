@@ -1,12 +1,11 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
-public import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 public import Mathlib.NumberTheory.ModularForms.LevelOne.GradedRing
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_eisenstein4_cube_sub_mk_sq
 
 set_option autoImplicit false
@@ -121,4 +120,13 @@ theorem solution :
         (PowerSeries.mk fun n => if n = 0 then 1 else -504 * ∑ d ∈ n.divisors, (d : ℤ) ^ 5) ^ 2 =
       1728 * (PowerSeries.X * dedekindEtaUnit) :=
   ModularCurve.eisenstein4_cube_sub_mk_sq
+end S_ModularCurve_eisenstein4_cube_sub_mk_sq
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.eisenstein4_cube_sub_mk_sq :
+    eisenstein4 ^ 3 -
+        (PowerSeries.mk fun n => if n = 0 then 1 else -504 * ∑ d ∈ n.divisors, (d : ℤ) ^ 5) ^ 2 =
+      1728 * (PowerSeries.X * dedekindEtaUnit) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_eisenstein4_cube_sub_mk_sq.solution
+end

@@ -1,12 +1,11 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.Data.Nat.Factorization.Induction
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_dedekindPsi_of_squarefree
 
 namespace ModularCurve
@@ -67,4 +66,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_dedekindPsi_of_squarefree.Mo
 
 theorem solution {N : ℕ} (hN : Squarefree N) : dedekindPsi N = ∏ p ∈ N.primeFactors, (p + 1) :=
   ModularCurve.dedekindPsi_of_squarefree hN
+end S_ModularCurve_dedekindPsi_of_squarefree
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.dedekindPsi_of_squarefree {N : ℕ} (hN : Squarefree N) : dedekindPsi N = ∏ p ∈ N.primeFactors, (p + 1) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_dedekindPsi_of_squarefree.solution
+end

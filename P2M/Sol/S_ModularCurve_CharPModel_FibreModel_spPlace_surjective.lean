@@ -3,8 +3,8 @@ import Definitions.Def_ModularCurve_LaurentCoeff
 import Definitions.Def_ModularCurve_PhiGen
 import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-import Theorems.Thm_ModularCurve_transcendental_coeffEmb_jq
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Mathlib.RingTheory.IntegralClosure.GoingDown
 import Mathlib.RingTheory.Polynomial.IsIntegral
 import Mathlib.RingTheory.Valuation.LocalSubring
@@ -24,7 +24,7 @@ import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 import Mathlib.RingTheory.Ideal.Maps
 import Mathlib.RingTheory.Ideal.Maximal
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Theorems.Thm_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
+import P2M.Sol.S_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
 import Definitions.Def_ModularCurve_FibreModel
 import Definitions.Def_ModularCurve_SpecializationMap
 import P2M.Util

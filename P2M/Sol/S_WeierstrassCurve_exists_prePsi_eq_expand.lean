@@ -1,11 +1,10 @@
 module
 
 public import Mathlib
-public import Theorems.Thm_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
-public import Theorems.Thm_WeierstrassCurve_isCoprime_Phi_PsiSq
+import P2M.Sol.S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
+import P2M.Sol.S_WeierstrassCurve_isCoprime_Phi_PsiSq
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_exists_prePsi_eq_expand
 
 set_option autoImplicit false
@@ -378,3 +377,10 @@ theorem solution {R : Type*} [CommRing R] (p : ℕ) [Fact p.Prime] [CharP R p]
   · haveI := isElliptic_𝓦p_Fp p hp2
     exact exists_preΨ'_eq_expand_of_UIdentity_int p hp2 (UIdentity_univ p)
       (WeierstrassCurve.isCoprime_Phi_PsiSq _ (p : ℤ)) W
+end S_WeierstrassCurve_exists_prePsi_eq_expand
+end P2MW
+
+public section
+open Polynomial WeierstrassCurve
+theorem WeierstrassCurve.exists_prePsi_eq_expand {R : Type*} [CommRing R] (p : ℕ) [Fact p.Prime] [CharP R p] (W : WeierstrassCurve R) : ∃ g : Polynomial R, W.preΨ' p = Polynomial.expand R p g := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_exists_prePsi_eq_expand.solution
+end

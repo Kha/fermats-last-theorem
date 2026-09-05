@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_X0
 public import Mathlib.FieldTheory.Relrank
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_relfinrank_modularFunctionField
 
 namespace ModularCurve p2m_export "ModularCurve" "qExpand jq jqN modularFunctionField adjoin_jq_le" end ModularCurve
@@ -31,4 +30,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_relfinrank_modularFunctionFi
 
 theorem solution (N : ℕ) [NeZero N] : IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (modularFunctionField N) = Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) :=
   ModularCurve.relfinrank_modularFunctionField N
+end S_ModularCurve_relfinrank_modularFunctionField
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.relfinrank_modularFunctionField (N : ℕ) [NeZero N] : IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (modularFunctionField N) = Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_relfinrank_modularFunctionField.solution
+end

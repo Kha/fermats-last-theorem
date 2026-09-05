@@ -2,8 +2,8 @@ import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_LaurentCoeff
 import Definitions.Def_ModularCurve_PhiGen
 import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-import Theorems.Thm_ModularCurve_transcendental_coeffEmb_jq
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Definitions.Def_ModularCurve_FibreModel
 import Definitions.Def_ModularCurve_X0
 import P2M.Util

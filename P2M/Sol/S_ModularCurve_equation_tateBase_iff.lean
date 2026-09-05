@@ -7,7 +7,6 @@ public import Mathlib.RingTheory.MvPowerSeries.Substitution
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_equation_tateBase_iff
 
 set_option autoImplicit false
@@ -1649,4 +1648,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_equation_tateBase_iff.Modula
 
 theorem solution (K : Type*) [CommRing K] (p : ℕ) [NeZero p] (x y : LaurentSeries K) : (tateBase K p).toAffine.Equation x y ↔ y ^ 2 + x * y = x ^ 3 + qExpand K p (laurentOfInt K tateA4) * x + qExpand K p (laurentOfInt K tateA6) :=
   ModularCurve.equation_tateBase_iff K p x y
+end S_ModularCurve_equation_tateBase_iff
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.equation_tateBase_iff (K : Type*) [CommRing K] (p : ℕ) [NeZero p] (x y : LaurentSeries K) : (tateBase K p).toAffine.Equation x y ↔ y ^ 2 + x * y = x ^ 3 + qExpand K p (laurentOfInt K tateA4) * x + qExpand K p (laurentOfInt K tateA6) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_equation_tateBase_iff.solution
+end

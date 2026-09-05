@@ -2,11 +2,11 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_one_le_coeff_jq
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffEmb_qExpand
-public import Theorems.Thm_ModularCurve_transcendental_jq
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_one_le_coeff_jq
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_transcendental_jq
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.Algebra.Polynomial.Roots
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 public import Mathlib.FieldTheory.Minpoly.Field
@@ -16,8 +16,8 @@ public import Mathlib.RingTheory.Polynomial.RationalRoot
 public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.LinearCombination
 import P2M.Util
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_evalSymm_of_splits
 
 noncomputable section
@@ -894,4 +894,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_evalSymm_of_splits.Mo
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) ℓ) (data : ModularPolynomialData ℓ) (hsplit : data.Φ.map (((coeffEmb K).comp (qExpand ℚ ℓ)).comp evalAtJ) = phiProd ℓ (conj ℓ ζ)) (hTmonic : ((swapBivar data.Φ).map evalAtJGen).Monic) (hTdeg : ((swapBivar data.Φ).map evalAtJGen).natDegree ≤ dedekindPsi ℓ) : EvalSymm data.Φ :=
   ModularCurve.PhiGen.evalSymm_of_splits ℓ ζ ModularCurve.one_le_coeff_jq hζ data hsplit hTmonic hTdeg
+end S_ModularCurve_PhiGen_evalSymm_of_splits
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.evalSymm_of_splits {K : Type*} [Field K] [Algebra ℚ K] (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) ℓ) (data : ModularPolynomialData ℓ) (hsplit : data.Φ.map (((coeffEmb K).comp (qExpand ℚ ℓ)).comp evalAtJ) = phiProd ℓ (conj ℓ ζ)) (hTmonic : ((swapBivar data.Φ).map evalAtJGen).Monic) (hTdeg : ((swapBivar data.Φ).map evalAtJGen).natDegree ≤ dedekindPsi ℓ) : EvalSymm data.Φ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_evalSymm_of_splits.solution
+end

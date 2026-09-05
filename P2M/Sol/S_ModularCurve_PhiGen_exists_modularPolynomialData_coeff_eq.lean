@@ -2,18 +2,17 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_c_top
-public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_c_eq_zero
-public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE
-public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_sum_mul_jqN_pow_eq_zero
-public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
-public import Theorems.Thm_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_c_top
+import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_c_eq_zero
+import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE
+import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_sum_mul_jqN_pow_eq_zero
+import P2M.Sol.S_ModularCurve_PhiGen_evalAtJ_injective
+import P2M.Sol.S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.Algebra.Polynomial.Lifts
 public import Mathlib.RingTheory.Adjoin.Polynomial.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq
 
 noncomputable section
@@ -191,4 +190,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_exists_modularPolynom
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hc : PhiGenDescends ℓ ζ c) (hint : ∀ k, IntCoeffs (c k)) (hmem : ∀ k, c k ∈ Algebra.adjoin ℚ {jq}) : ∃ data : ModularPolynomialData ℓ, ∀ k, evalAtJ (data.Φ.coeff k) = c k :=
   ModularCurve.PhiGen.exists_modularPolynomialData_coeff_eq hc hint hmem
+end S_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.exists_modularPolynomialData_coeff_eq {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hc : PhiGenDescends ℓ ζ c) (hint : ∀ k, IntCoeffs (c k)) (hmem : ∀ k, c k ∈ Algebra.adjoin ℚ {jq}) : ∃ data : ModularPolynomialData ℓ, ∀ k, evalAtJ (data.Φ.coeff k) = c k := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq.solution
+end

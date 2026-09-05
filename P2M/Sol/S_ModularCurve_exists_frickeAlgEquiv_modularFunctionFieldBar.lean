@@ -1,8 +1,8 @@
 import Mathlib
 import Definitions.Def_ModularCurve_ArithmeticGalois
 import Definitions.Def_ModularCurve_CuspidalClass
-import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
-import Theorems.Thm_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull_of_neZero
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_frickeAlgEquiv_modularFunctionFieldBar
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

@@ -4,16 +4,16 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-public import Theorems.Thm_ModularCurve_order_jqModC
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
-public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
-public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_self
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import Theorems.Thm_ModularCurve_one_le_coeff_jq
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_order_jqModC
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_of_lt
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_self
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_one_le_coeff_jq
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
@@ -21,7 +21,6 @@ public import Mathlib.RingTheory.Polynomial.RationalRoot
 public import Mathlib.Algebra.Polynomial.Roots
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero
 
 set_option autoImplicit false
@@ -592,4 +591,13 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_jqNModC_prime_not_mem_adjoin
 
 theorem solution {K : Type*} [Field K] [CharZero K] (p : ℕ) [hp : Fact (Nat.Prime p)] : jqNModC K p ∉ IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)) :=
   ModularCurve.jqNModC_prime_not_mem_adjoin_of_charZero p
+end S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.jqNModC_prime_not_mem_adjoin_of_charZero {K : Type*} [Field K] [CharZero K] (p : ℕ) [hp : Fact (Nat.Prime p)] : jqNModC K p ∉ IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero.solution
+end

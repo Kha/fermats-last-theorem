@@ -3,9 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_X0ModL
 public import Definitions.Def_AlgebraicCurve_Correspondence
-public import Theorems.Thm_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
-public import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
-
+public import P2M.Sol.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
+public import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 @[expose] public section
 
 set_option autoImplicit false

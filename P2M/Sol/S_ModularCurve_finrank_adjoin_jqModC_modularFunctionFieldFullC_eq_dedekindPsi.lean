@@ -2,14 +2,13 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_X0ModL
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqNModC_eq_dedekindPsi_of_socket
-public import Theorems.Thm_ModularCurve_StarBank_starBank
-public import Theorems.Thm_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
-public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_eq_dedekindPsi_of_socket
+import P2M.Sol.S_ModularCurve_StarBank_starBank
+import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
 
 p2m_open "ModularCurve~dedekindPsi_prime IntermediateField Polynomial Module"
@@ -239,3 +238,19 @@ theorem solution
           ({⟨jqModC K, jqModC_mem_full K N⟩} : Set (modularFunctionFieldFullC K N)))
         (modularFunctionFieldFullC K N) = dedekindPsi N :=
   (finrank_rel_eq K N hN).trans (finrank_adjoin_eq K N hN N (dvd_refl N))
+end S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
+end P2MW
+
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+
+theorem ModularCurve.finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
+    (K : Type*) [Field K] (N : ℕ) [NeZero N] (hN : (N : K) ≠ 0) :
+    Module.finrank
+        (IntermediateField.adjoin K
+          ({⟨jqModC K, jqModC_mem_full K N⟩} : Set (modularFunctionFieldFullC K N)))
+        (modularFunctionFieldFullC K N) = dedekindPsi N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi.solution
+end

@@ -4,12 +4,11 @@ public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_TateFormal
 public import Definitions.Def_ModularCurve_TateOrigin
-public import Theorems.Thm_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant
-public import Theorems.Thm_ModularCurve_one_add_single_mul_derivative_tateOriginX
-public import Theorems.Thm_ModularCurve_tateOrigin_equation
+import P2M.Sol.S_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant
+import P2M.Sol.S_ModularCurve_one_add_single_mul_derivative_tateOriginX
+import P2M.Sol.S_ModularCurve_tateOrigin_equation
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_tatePowerSeries_map
 
 set_option autoImplicit false
@@ -72,3 +71,16 @@ end WeierstrassCurve.HTasm
 theorem solution (q : ℕ) [Fact q.Prime] (hq : q ≠ 2) :
     WeierstrassCurve.hasseInvariant q (ModularCurve.tatePowerSeries.map (PowerSeries.map (Int.castRingHom (ZMod q)))) = 1 :=
   WeierstrassCurve.HTasm.main q hq
+end S_WeierstrassCurve_hasseInvariant_tatePowerSeries_map
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+open ModularCurve
+
+theorem WeierstrassCurve.hasseInvariant_tatePowerSeries_map
+    (q : ℕ) [Fact q.Prime] (hq : q ≠ 2) :
+    WeierstrassCurve.hasseInvariant q (ModularCurve.tatePowerSeries.map (PowerSeries.map (Int.castRingHom (ZMod q)))) = 1 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_hasseInvariant_tatePowerSeries_map.solution
+end

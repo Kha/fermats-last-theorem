@@ -1,11 +1,11 @@
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_LaurentCoeff
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
-import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-import Theorems.Thm_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_coeffMap_injective
 import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import Mathlib.NumberTheory.Cyclotomic.Basic
 import P2M.Util

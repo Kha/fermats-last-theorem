@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_GenusNumerics
-import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 import Theorems.Thm_ModularCurve_nuTwo_mul_of_coprime
 import Theorems.Thm_ModularCurve_nuThree_mul_of_coprime
 import Theorems.Thm_ModularCurve_cuspCount_mul_of_coprime

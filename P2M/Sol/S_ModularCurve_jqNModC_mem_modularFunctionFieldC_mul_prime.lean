@@ -4,19 +4,18 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-public import Theorems.Thm_ModularCurve_order_jqModC
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
-public import Theorems.Thm_ModularCurve_minpoly_jqNModC_map_eq_prod_slots
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_order_jqModC
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
+import P2M.Sol.S_ModularCurve_minpoly_jqNModC_map_eq_prod_slots
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_prime
 
 set_option autoImplicit false
@@ -543,4 +542,21 @@ theorem solution {K : Type*} [Field K]
             {x : LaurentSeries K | ∃ (d' : ℕ) (_ : NeZero d'), d' ∣ d ∧ x = jqNModC K d'}) :
     jqNModC K M ∈ modularFunctionFieldC K (M * p) :=
   ModularCurve.jqNModC_mem_modularFunctionFieldC_mul_prime M p ζ hζ hall
+end S_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_prime
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.jqNModC_mem_modularFunctionFieldC_mul_prime {K : Type*} [Field K]
+    (M : ℕ) [NeZero M] (p : ℕ) [hp : Fact (Nat.Prime p)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) (M * p))
+    (hall : ∀ d : ℕ, d ∣ M → ∀ [NeZero d],
+      Module.finrank (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)))
+          (IntermediateField.adjoin (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)))
+            ({jqNModC K d} : Set (LaurentSeries K))) = dedekindPsi d
+        ∧ modularFunctionFieldC K d = IntermediateField.adjoin K
+            {x : LaurentSeries K | ∃ (d' : ℕ) (_ : NeZero d'), d' ∣ d ∧ x = jqNModC K d'}) :
+    jqNModC K M ∈ modularFunctionFieldC K (M * p) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_prime.solution
+end

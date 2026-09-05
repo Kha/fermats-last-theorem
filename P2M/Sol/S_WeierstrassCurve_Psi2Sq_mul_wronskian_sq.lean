@@ -1,12 +1,11 @@
 module
 
 public import Mathlib
-public import Theorems.Thm_WeierstrassCurve_Affine_evalEval_psi_sq
-public import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
-public import Theorems.Thm_WeierstrassCurve_Affine_Point_zsmul_some_eq_some_div
+import P2M.Sol.S_WeierstrassCurve_Affine_evalEval_psi_sq
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_zsmul_some_eq_some_div
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
 
 set_option autoImplicit false
@@ -1234,3 +1233,10 @@ theorem solution {R : Type*} [CommRing R] (W : WeierstrassCurve R) (n : ℤ) :
       C ((n : R) ^ 2) * (W.ΨSq n * (C 4 * W.Φ n ^ 3 + C W.b₂ * W.Φ n ^ 2 * W.ΨSq n
         + C (2 * W.b₄) * W.Φ n * W.ΨSq n ^ 2 + C W.b₆ * W.ΨSq n ^ 3)) :=
   WeierstrassCurve.Psi2Sq_mul_wronskian_sq' W n
+end S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
+end P2MW
+
+public section
+open Polynomial WeierstrassCurve
+theorem WeierstrassCurve.Psi2Sq_mul_wronskian_sq {R : Type*} [CommRing R] (W : WeierstrassCurve R) (n : ℤ) : W.Ψ₂Sq * (derivative (W.Φ n) * W.ΨSq n - W.Φ n * derivative (W.ΨSq n)) ^ 2 = C ((n : R) ^ 2) * (W.ΨSq n * (C 4 * W.Φ n ^ 3 + C W.b₂ * W.Φ n ^ 2 * W.ΨSq n + C (2 * W.b₄) * W.Φ n * W.ΨSq n ^ 2 + C W.b₆ * W.ΨSq n ^ 3)) := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq.solution
+end

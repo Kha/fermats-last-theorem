@@ -3,11 +3,10 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_LegendreJ
 public import Definitions.Def_ModularCurve_JWidth
-public import Theorems.Thm_ModularCurve_legendreJ_eq_zero_iff
-public import Theorems.Thm_ModularCurve_legendreJ_eq_ofNat_iff
+import P2M.Sol.S_ModularCurve_legendreJ_eq_zero_iff
+import P2M.Sol.S_ModularCurve_legendreJ_eq_ofNat_iff
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_card_orbit_mul_jWidth
 
 set_option autoImplicit false
@@ -126,3 +125,13 @@ theorem solution {K : Type*} [Field K] [DecidableEq K] (h2 : (2 : K) ≠ 0)
     ({t, 1 - t, t⁻¹, 1 - t⁻¹, (1 - t)⁻¹, 1 - (1 - t)⁻¹} : Finset K).card * jWidth (legendreJ t)
       = 6 :=
   ModularCurve.card_orbit_mul_jWidth' h2 h3 ht0 ht1
+end S_ModularCurve_card_orbit_mul_jWidth
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.card_orbit_mul_jWidth {K : Type*} [Field K] [DecidableEq K] (h2 : (2 : K) ≠ 0)
+    (h3 : (3 : K) ≠ 0) {t : K} (ht0 : t ≠ 0) (ht1 : t ≠ 1) :
+    ({t, 1 - t, t⁻¹, 1 - t⁻¹, (1 - t)⁻¹, 1 - (1 - t)⁻¹} : Finset K).card * jWidth (legendreJ t)
+      = 6 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_card_orbit_mul_jWidth.solution
+end

@@ -1,10 +1,10 @@
 module
 
-public import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
 import P2M.Util
+public import Mathlib
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi
 
 set_option autoImplicit false
@@ -23,3 +23,10 @@ theorem solution {F : Type*} [Field F] [DecidableEq F] (W : WeierstrassCurve F) 
   have h1 := congrArg (evalEval x y) hp
   rw [evalEval_sub, evalEval_mul, h0, zero_mul, sub_eq_zero] at h1
   rw [h1, Ψ_ofNat, if_neg (Nat.not_even_iff_odd.mpr hn), mul_one, evalEval_C]
+end S_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi
+end P2MW
+
+public section
+open WeierstrassCurve WeierstrassCurve.Affine WeierstrassCurve.Affine.Point
+theorem WeierstrassCurve.Affine.Point.nsmul_some_eq_zero_iff_eval_prePsi {F : Type*} [Field F] [DecidableEq F] (W : WeierstrassCurve F) [W.IsElliptic] {n : ℕ} (hn : Odd n) {x y : F} (h : W.toAffine.Nonsingular x y) : n • Point.some x y h = 0 ↔ (W.preΨ' n).eval x = 0 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi.solution
+end

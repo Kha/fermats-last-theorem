@@ -3,18 +3,17 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Theorems.Thm_Polynomial_irreducible_of_transitive_ringAut
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_Polynomial_irreducible_of_transitive_ringAut
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.NumberTheory.Cyclotomic.Gal
 public import Mathlib.FieldTheory.Finite.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem
 
 set_option autoImplicit false
@@ -757,4 +756,13 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_finr
 
 theorem solution (F : IntermediateField ℚ (LaurentSeries ℚ)) (p : ℕ) [hp : Fact (Nat.Prime p)] (k : ℕ) (h0 : jqN (p ^ k) ∈ F) (h1 : jqN (p ^ (k + 1)) ∈ F) (hF : jqN (p ^ (k + 2)) ∉ F) : Module.finrank F (IntermediateField.adjoin F ({jqN (p ^ (k + 2))} : Set (LaurentSeries ℚ))) = p :=
   ModularCurve.finrank_adjoin_jqN_pow_succ_of_not_mem F p k h0 h1 hF
+end S_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.finrank_adjoin_jqN_pow_succ_of_not_mem (F : IntermediateField ℚ (LaurentSeries ℚ)) (p : ℕ) [hp : Fact (Nat.Prime p)] (k : ℕ) (h0 : jqN (p ^ k) ∈ F) (h1 : jqN (p ^ (k + 1)) ∈ F) (hF : jqN (p ^ (k + 2)) ∉ F) : Module.finrank F (IntermediateField.adjoin F ({jqN (p ^ (k + 2))} : Set (LaurentSeries ℚ))) = p := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem.solution
+end

@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_NodeDepth
-import Theorems.Thm_ModularCurve_isCurveOver_modularFunctionFieldBar
+import P2M.Sol.S_ModularCurve_isCurveOver_modularFunctionFieldBar
 import P2M.Sol.S_AlgebraicCurve_Place_isRational_iff_deg_eq_one
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_mul
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_algebraMap

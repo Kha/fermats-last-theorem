@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_X0ModL
 import Definitions.Def_AlgebraicCurve_Repartitions
 import Definitions.Def_ModularCurve_ModPFormFn
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_mem_riemannRochSpace_of_isModPFormFn
 

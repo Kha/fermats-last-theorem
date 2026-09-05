@@ -2,10 +2,9 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
-public import Theorems.Thm_ModularCurve_coe_mem_modularLocalized_or_coe_inv_mem_modularLocalized
+import P2M.Sol.S_ModularCurve_coe_mem_modularLocalized_or_coe_inv_mem_modularLocalized
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_mem_integersFst_iff_coe_mem_modularLocalized
 
 set_option autoImplicit false
@@ -95,3 +94,22 @@ theorem solution
     g ∈ R.R₁.integers ↔
       (g : LaurentSeries (AlgebraicClosure ℚ)) ∈ CharPReduction.modularLocalized (1 * q) A.toSubring red :=
   ⟨Ws14Port.coe_mem_of_mem_integersFst R, fun hg => (Ws14Port.mem_integersFst_of_coe_mem R hg).1⟩
+end S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_mem_integersFst_iff_coe_mem_modularLocalized
+end P2MW
+
+public section
+set_option autoImplicit false
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+
+open AlgebraicCurve ModularCurve IsLocalRing
+theorem ModularCurve.PlaceSpecialization.LevelOneProlongationPair.mem_integersFst_iff_coe_mem_modularLocalized
+    {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)}
+    {k : Type*} [Field k] [CharP k q] {red : A →+* k}
+    {data : ModularPolynomialData q} {hKr : KroneckerCongruence q data}
+    {hα : HeckeAlphaBarIntegral (AlgebraicClosure ℚ) 1 q} {hβ : HeckeBetaBarIntegral (AlgebraicClosure ℚ) 1 q}
+    {P : PlaceSpecialization A q 1 data hKr k red hα hβ} (R : P.LevelOneProlongationPair)
+    (g : ↥(modularFunctionFieldBar (1 * q))) :
+    g ∈ R.R₁.integers ↔
+      (g : LaurentSeries (AlgebraicClosure ℚ)) ∈ CharPReduction.modularLocalized (1 * q) A.toSubring red := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_mem_integersFst_iff_coe_mem_modularLocalized.solution
+end

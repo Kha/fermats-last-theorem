@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_finiteDimensional_and_isSeparable_adjoin_jGeomGen_of_isSeparable_jqNModC
 open ModularCurve IntermediateField Polynomial

@@ -3,12 +3,11 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_RouteBCoordRing
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
-public import Theorems.Thm_ModularCurve_evalAtJGen_injective
-public import Theorems.Thm_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
+import P2M.Sol.S_ModularCurve_evalAtJGen_injective
+import P2M.Sol.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_nonempty_modularPolynomialData
 
 noncomputable section
@@ -121,3 +120,10 @@ p2m_reactivate "P2MW.S_ModularCurve_nonempty_modularPolynomialData.Ws10NP"
 
 theorem solution (N : ℕ) [NeZero N] : Nonempty (ModularCurve.ModularPolynomialData N) :=
   Ws10NP.main N
+end S_ModularCurve_nonempty_modularPolynomialData
+end P2MW
+
+public section
+theorem ModularCurve.nonempty_modularPolynomialData (N : ℕ) [NeZero N] :
+    Nonempty (ModularCurve.ModularPolynomialData N) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_nonempty_modularPolynomialData.solution
+end

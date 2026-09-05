@@ -4,14 +4,13 @@ public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_Polynomial_DeuringPolynomial
 public import Definitions.Def_ModularCurve_LegendreJ
-public import Theorems.Thm_WeierstrassCurve_isElliptic_legendreCurve_iff
-public import Theorems.Thm_WeierstrassCurve_j_legendreCurve
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_legendreCurve
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_variableChange
-public import Theorems.Thm_ModularCurve_exists_legendreJ_eq
+import P2M.Sol.S_WeierstrassCurve_isElliptic_legendreCurve_iff
+import P2M.Sol.S_WeierstrassCurve_j_legendreCurve
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_legendreCurve
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_variableChange
+import P2M.Sol.S_ModularCurve_exists_legendreJ_eq
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_ssJSetHasse_eq_image_legendreJ
 
 set_option autoImplicit false
@@ -189,3 +188,13 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq : q ≠ 2) (K : Type*) [Field K]
     ssJSetHasse q K
       = legendreJ '' {t | ((Polynomial.deuringPolynomial q).map (Int.castRingHom K)).eval t = 0} :=
   ModularCurve.ssJSetHasse_eq_image_legendreJ' q hq K
+end S_ModularCurve_ssJSetHasse_eq_image_legendreJ
+end P2MW
+
+public section
+open Polynomial ModularCurve
+theorem ModularCurve.ssJSetHasse_eq_image_legendreJ (q : ℕ) [Fact q.Prime] (hq : q ≠ 2) (K : Type*) [Field K]
+    [IsAlgClosed K] [CharP K q] :
+    ssJSetHasse q K
+      = legendreJ '' {t | ((Polynomial.deuringPolynomial q).map (Int.castRingHom K)).eval t = 0} := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_ssJSetHasse_eq_image_legendreJ.solution
+end

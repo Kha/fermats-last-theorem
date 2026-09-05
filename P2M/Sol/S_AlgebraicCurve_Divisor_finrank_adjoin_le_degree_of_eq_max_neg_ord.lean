@@ -5,16 +5,15 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Definitions.Def_AlgebraicCurve_Repartitions
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
-public import Theorems.Thm_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
+import P2M.Sol.S_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
 public import P2M.Sol.S_AlgebraicCurve_Place_ord_nonneg_of_mem
 public import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
-public import Theorems.Thm_AlgebraicCurve_linearIndependent_pow_mul
-public import Theorems.Thm_AlgebraicCurve_ell_le_degree_add_ellZero
-public import Theorems.Thm_AlgebraicCurve_finiteDimensional_lSpace
+import P2M.Sol.S_AlgebraicCurve_linearIndependent_pow_mul
+import P2M.Sol.S_AlgebraicCurve_ell_le_degree_add_ellZero
+import P2M.Sol.S_AlgebraicCurve_finiteDimensional_lSpace
 import P2M.Util
 import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Divisor_finrank_adjoin_le_degree_of_eq_max_neg_ord
 
 set_option autoImplicit false
@@ -230,3 +229,21 @@ theorem solution
     nlinarith [this]
   have hcontra : (m : ℤ) ≤ n * c - n + ell (0 : Divisor K F) := by linarith
   linarith [hmZ, Int.natCast_nonneg c, Int.natCast_nonneg n, Int.natCast_nonneg (ell (0 : Divisor K F))]
+end S_AlgebraicCurve_Divisor_finrank_adjoin_le_degree_of_eq_max_neg_ord
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion
+attribute [-simp] AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom
+attribute [-simp] AlgebraicCurve.TranscendenceTower.mk.sizeOf_spec AlgebraicCurve.IntegralBasisInLSpace.mk.injEq AlgebraicCurve.TranscendenceTower.mk.injEq AlgebraicCurve.PoleDivisorPackage.mk.sizeOf_spec AlgebraicCurve.IntegralBasisInLSpace.mk.sizeOf_spec AlgebraicCurve.PoleDivisorPackage.mk.injEq
+
+open AlgebraicCurve
+
+theorem AlgebraicCurve.Divisor.finrank_adjoin_le_degree_of_eq_max_neg_ord
+    {K F : Type*} [Field K] [Field F] [Algebra K F] [IsCurveOver K F]
+    [FiniteDimensional K (LSpace (0 : Divisor K F))]
+    (x : F) (hx : Transcendental K x)
+    [FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F]
+    (D : Divisor K F) (hD : ∀ v : Place K F, D v = max 0 (-v.ord x)) :
+    (Module.finrank (IntermediateField.adjoin K ({x} : Set F)) F : ℤ) ≤ Divisor.degree D := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Divisor_finrank_adjoin_le_degree_of_eq_max_neg_ord.solution
+end

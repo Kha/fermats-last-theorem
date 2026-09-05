@@ -2,14 +2,13 @@ module
 
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
-public import Theorems.Thm_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi
-public import Theorems.Thm_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
-public import Theorems.Thm_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
-public import Theorems.Thm_WeierstrassCurve_exists_prePsi_eq_expand
-public import Theorems.Thm_WeierstrassCurve_coeff_prePsi_eq_hasseInvariant
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
+import P2M.Sol.S_WeierstrassCurve_exists_prePsi_eq_expand
+import P2M.Sol.S_WeierstrassCurve_coeff_prePsi_eq_hasseInvariant
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_forall_nsmul_eq_zero_iff_hasseInvariant_eq_zero
 
 set_option autoImplicit false
@@ -197,3 +196,10 @@ theorem solution {K : Type*} [Field K] [IsAlgClosed K] [DecidableEq K] (q : ℕ)
     (hq : q ≠ 2) [CharP K q] (W : WeierstrassCurve K) [W.IsElliptic] :
     (∀ P : W.toAffine.Point, q • P = 0 → P = 0) ↔ W.hasseInvariant q = 0 :=
   W.forall_nsmul_eq_zero_iff_hasseInvariant_eq_zero' q hq
+end S_WeierstrassCurve_forall_nsmul_eq_zero_iff_hasseInvariant_eq_zero
+end P2MW
+
+public section
+open Polynomial WeierstrassCurve
+theorem WeierstrassCurve.forall_nsmul_eq_zero_iff_hasseInvariant_eq_zero {K : Type*} [Field K] [IsAlgClosed K] [DecidableEq K] (q : ℕ) [Fact q.Prime] (hq : q ≠ 2) [CharP K q] (W : WeierstrassCurve K) [W.IsElliptic] : (∀ P : W.toAffine.Point, q • P = 0 → P = 0) ↔ W.hasseInvariant q = 0 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_forall_nsmul_eq_zero_iff_hasseInvariant_eq_zero.solution
+end

@@ -4,15 +4,14 @@ public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_QAdicPlace
-public import Theorems.Thm_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull_unconditional
-public import Theorems.Thm_ModularCurve_laurentBaseChange_adjoin_pair
-public import Theorems.Thm_ModularCurve_functionFieldGeneration
-public import Theorems.Thm_ModularCurve_order_jqModC
-public import Theorems.Thm_ModularCurve_deg_qInftyPlaceBar
-public import Theorems.Thm_AlgebraicCurve_constantsAreBase_of_deg_eq_one
+import P2M.Sol.S_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull_unconditional
+import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin_pair
+import P2M.Sol.S_ModularCurve_functionFieldGeneration
+import P2M.Sol.S_ModularCurve_order_jqModC
+import P2M.Sol.S_ModularCurve_deg_qInftyPlaceBar
+import P2M.Sol.S_AlgebraicCurve_constantsAreBase_of_deg_eq_one
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_constantsAreBase_modularFunctionFieldBar
 
 set_option autoImplicit false
@@ -56,4 +55,15 @@ theorem solution (N : ℕ) [NeZero N] :
   AlgebraicCurve.RCAB.constantsAreBase_laurentBaseChange (AlgebraicClosure ℚ) N
 
 example : ∀ (N : ℕ) [NeZero N], ConstantsAreBase (AlgebraicClosure ℚ) (modularFunctionFieldBar N) := @solution
+end S_ModularCurve_constantsAreBase_modularFunctionFieldBar
+end P2MW
 
+public section
+attribute [-instance] AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion
+attribute [-simp] ModularCurve.jqNModC_one ModularCurve.qInftyPlaceBar_toValuationSubring ModularCurve.qSeriesBar_zero ModularCurve.qSeriesBar_add ModularCurve.cuspInftyFull_toValuationSubring ModularCurve.qInftyPlaceRat_toValuationSubring ModularCurve.qSeriesBar_mul ModularCurve.qSeriesBar_div ModularCurve.qSeriesBar_eq_zero_iff ModularCurve.coe_uniformizerBar ModularCurve.qSeriesBar_pow ModularCurve.cuspInfty_toValuationSubring ModularCurve.qSeriesBar_one ModularCurve.qSeriesBar_inv ModularCurve.qSeriesBar_sub ModularCurve.qSeriesBar_neg AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom
+attribute [-simp] AlgebraicCurve.Pic0.coe_pullbackDegZeroHom AlgebraicCurve.Divisor.degree_pushforwardAlong AlgebraicCurve.Pic0.coe_degZeroCorrespondence AlgebraicCurve.Place.mem_fiberAlong
+attribute [-simp] ModularCurve.coe_towerInclBar ModularCurve.coe_towerSubstBar ModularCurve.coe_heckeBetaBarRingHom ModularCurve.coe_heckeBetaBar ModularCurve.coe_heckeAlphaBar AlgebraicCurve.Divisor.evalFun_zero AlgebraicCurve.Place.evalAt_one
+open ModularCurve AlgebraicCurve
+theorem ModularCurve.constantsAreBase_modularFunctionFieldBar (N : ℕ) [NeZero N] :
+    ConstantsAreBase (AlgebraicClosure ℚ) (modularFunctionFieldBar N) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_constantsAreBase_modularFunctionFieldBar.solution
+end

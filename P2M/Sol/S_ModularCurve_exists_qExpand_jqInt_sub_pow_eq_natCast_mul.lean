@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_KroneckerTransport
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_qExpand_jqInt_sub_pow_eq_natCast_mul
 

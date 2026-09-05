@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_JqCoeff
 public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_coeff_jqModC_pow_self
 
 noncomputable section
@@ -93,3 +92,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_coeff_jqModC_pow_self.Modula
 theorem solution (K : Type*) [CommRing K] (b : ℕ) :
     ((jqModC K) ^ b).coeff (-(b : ℤ)) = 1 :=
   CharLRows.coeff_jqModC_pow_self K b
+end S_ModularCurve_coeff_jqModC_pow_self
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.coeff_jqModC_pow_self (K : Type*) [CommRing K] (b : ℕ) :
+    ((jqModC K) ^ b).coeff (-(b : ℤ)) = 1 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_coeff_jqModC_pow_self.solution
+end

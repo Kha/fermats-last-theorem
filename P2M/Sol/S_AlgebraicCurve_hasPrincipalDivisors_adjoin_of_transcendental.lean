@@ -1,10 +1,9 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
-public import Theorems.Thm_AlgebraicCurve_hasPrincipalDivisors_of_transcendental
+import P2M.Sol.S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental
 
 noncomputable section
@@ -83,4 +82,14 @@ theorem solution (K : Type*) [Field K] [CharZero K] {LF : Type*} [Field LF] [Alg
     HasPrincipalDivisors K (IntermediateField.adjoin K (insert x (T : Set LF))) :=
   AlgebraicCurve.W2.hasPrincipalDivisors_adjoin K x hx T hT
 
+end
+end S_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.hasPrincipalDivisors_adjoin_of_transcendental (K : Type*) [Field K] [CharZero K] {LF : Type*} [Field LF] [Algebra K LF]
+    (x : LF) (hx : Transcendental K x) (T : Finset LF)
+    (hT : ∀ t ∈ T, IsIntegral (IntermediateField.adjoin K ({x} : Set LF)) t) :
+    HasPrincipalDivisors K (IntermediateField.adjoin K (insert x (T : Set LF))) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental.solution
 end

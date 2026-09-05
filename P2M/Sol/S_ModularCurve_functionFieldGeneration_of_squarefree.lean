@@ -2,16 +2,15 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
-public import Theorems.Thm_ModularCurve_relfinrank_full_of_squarefree
-public import Theorems.Thm_ModularCurve_relfinrank_modularFunctionField
-public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
-public import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
+import P2M.Sol.S_ModularCurve_relfinrank_full_of_squarefree
+import P2M.Sol.S_ModularCurve_relfinrank_modularFunctionField
+import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
+import P2M.Sol.S_ModularCurve_dedekindPsi_of_squarefree
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.FieldTheory.Minpoly.Field
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_functionFieldGeneration_of_squarefree
 
 noncomputable section
@@ -53,4 +52,14 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_functionFieldGeneration_of_s
 
 theorem solution (N : ℕ) [NeZero N] (hN : Squarefree N) : FunctionFieldGeneration N :=
   ModularCurve.functionFieldGeneration_of_squarefree N hN
+end
+end S_ModularCurve_functionFieldGeneration_of_squarefree
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
+
+open ModularCurve
+theorem ModularCurve.functionFieldGeneration_of_squarefree (N : ℕ) [NeZero N] (hN : Squarefree N) : FunctionFieldGeneration N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_functionFieldGeneration_of_squarefree.solution
+end

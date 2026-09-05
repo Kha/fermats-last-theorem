@@ -1,11 +1,10 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_modularFunctionFieldC_self_collapse_unconditional
 
 noncomputable section
@@ -103,3 +102,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_modularFunctionFieldC_self_c
 theorem solution (K : Type*) [Field K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ] :
     modularFunctionFieldC K ℓ = modularFunctionFieldC K 1 :=
   Collapse.modularFunctionFieldC_self_collapse_unconditional K
+end S_ModularCurve_modularFunctionFieldC_self_collapse_unconditional
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.modularFunctionFieldC_self_collapse_unconditional (K : Type*) [Field K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ] :
+    modularFunctionFieldC K ℓ = modularFunctionFieldC K 1 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_modularFunctionFieldC_self_collapse_unconditional.solution
+end

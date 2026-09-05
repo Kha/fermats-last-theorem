@@ -5,16 +5,15 @@ public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_Polynomial_DeuringPolynomial
 public import Definitions.Def_ModularCurve_LegendreJ
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_legendreCurve
-public import Theorems.Thm_WeierstrassCurve_j_legendreCurve
-public import Theorems.Thm_WeierstrassCurve_isElliptic_legendreCurve_iff
-public import Theorems.Thm_ModularCurve_ssJSetHasse_eq_image_legendreJ
-public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
-public import Theorems.Thm_Polynomial_separable_deuringPolynomial_map
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_legendreCurve
+import P2M.Sol.S_WeierstrassCurve_j_legendreCurve
+import P2M.Sol.S_WeierstrassCurve_isElliptic_legendreCurve_iff
+import P2M.Sol.S_ModularCurve_ssJSetHasse_eq_image_legendreJ
+import P2M.Sol.S_ModularCurve_ssJSet_eq_ssJSetHasse
+import P2M.Sol.S_Polynomial_separable_deuringPolynomial_map
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_rootMultiplicity_hasseInvariant_jFamily_eq_one
 set_option synthInstance.maxHeartbeats 1600000
 set_option autoImplicit false
@@ -502,3 +501,18 @@ theorem solution
     (a : k) (ha : a ∈ ssJSet q k) (h0 : a ≠ 0) (h1728 : a ≠ 1728) :
     Polynomial.rootMultiplicity (a - 1728)⁻¹ (WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k))) = 1 :=
   P2mWs11DK3.main q hq a ha h0 h1728
+end S_WeierstrassCurve_rootMultiplicity_hasseInvariant_jFamily_eq_one
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+open ModularCurve
+
+theorem WeierstrassCurve.rootMultiplicity_hasseInvariant_jFamily_eq_one
+    (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
+    (k : Type*) [Field k] [CharP k q] [IsAlgClosed k] [DecidableEq k]
+    (a : k) (ha : a ∈ ssJSet q k) (h0 : a ≠ 0) (h1728 : a ≠ 1728) :
+    Polynomial.rootMultiplicity (a - 1728)⁻¹ (WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k))) = 1 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_rootMultiplicity_hasseInvariant_jFamily_eq_one.solution
+end

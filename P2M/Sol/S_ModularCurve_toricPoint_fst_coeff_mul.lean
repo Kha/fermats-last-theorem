@@ -7,7 +7,6 @@ public import Mathlib.RingTheory.MvPowerSeries.Substitution
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_toricPoint_fst_coeff_mul
 
 set_option autoImplicit false
@@ -1649,4 +1648,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_fst_coeff_mul.Mod
 
 theorem solution (K : Type*) [Field K] (p : ℕ) (hp : 0 < p) (c : K) {M : ℕ} (hM : M ≠ 0) : (toricPoint K p c).1.coeff ((p * M : ℕ) : ℤ) = ∑ e ∈ M.divisors, (e : K) * (c ^ e + c⁻¹ ^ e - 2) :=
   ModularCurve.toricPoint_fst_coeff_mul K p hp c hM
+end S_ModularCurve_toricPoint_fst_coeff_mul
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.toricPoint_fst_coeff_mul (K : Type*) [Field K] (p : ℕ) (hp : 0 < p) (c : K) {M : ℕ} (hM : M ≠ 0) : (toricPoint K p c).1.coeff ((p * M : ℕ) : ℤ) = ∑ e ∈ M.divisors, (e : K) * (c ^ e + c⁻¹ ^ e - 2) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_toricPoint_fst_coeff_mul.solution
+end

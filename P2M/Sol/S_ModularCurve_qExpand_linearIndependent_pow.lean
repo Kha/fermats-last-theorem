@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_LaurentSeries_coeff_pow_char
+import P2M.Sol.S_LaurentSeries_coeff_pow_char
 import P2M.Util
 namespace P2MW.S_ModularCurve_qExpand_linearIndependent_pow
 

@@ -1,7 +1,7 @@
 import Definitions.Def_ModularCurve_SpecializationMap
 import Theorems.Thm_ModularCurve_CharPModel_chart_dichotomy_jBar
-import Theorems.Thm_ModularCurve_transcendental_coeffEmb_jq
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_CharPModel_FibreModel_spPlace_d0_jN_pole
 attribute [-instance] ModularCurve.instIsDomainTensorProduct AlgebraicClosure.Rat.isGalois

@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 import Mathlib.FieldTheory.PurelyInseparable.PerfectClosure
 import P2M.Util

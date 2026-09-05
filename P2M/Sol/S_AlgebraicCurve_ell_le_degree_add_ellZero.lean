@@ -7,7 +7,6 @@ public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_ell_le_degree_add_ellZero
 
 set_option autoImplicit false
@@ -356,3 +355,13 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] [IsCurveOver K 
     (hD : 0 ≤ D) [FiniteDimensional K ↥(LSpace (0 : Divisor K F))] :
     (ell D : ℤ) ≤ Divisor.degree D + ell (0 : Divisor K F) :=
   AlgebraicCurve.ell_le_degree_add_ellZero_port (K := K) (F := F) (D := D) (hD := hD)
+end S_AlgebraicCurve_ell_le_degree_add_ellZero
+end P2MW
+
+public section
+namespace AlgebraicCurve
+theorem ell_le_degree_add_ellZero {K F : Type*} [Field K] [Field F] [Algebra K F] [IsCurveOver K F] {D : Divisor K F}
+    (hD : 0 ≤ D) [FiniteDimensional K ↥(LSpace (0 : Divisor K F))] :
+    (ell D : ℤ) ≤ Divisor.degree D + ell (0 : Divisor K F) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_ell_le_degree_add_ellZero.solution
+end AlgebraicCurve
+end

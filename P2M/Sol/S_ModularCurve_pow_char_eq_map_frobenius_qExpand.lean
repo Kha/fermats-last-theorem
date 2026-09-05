@@ -5,7 +5,6 @@ public import Mathlib.RingTheory.PowerSeries.Expand
 public import Mathlib.FieldTheory.Finite.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_pow_char_eq_map_frobenius_qExpand
 
 noncomputable section
@@ -178,3 +177,12 @@ theorem solution {R : Type*} [CommRing R] (p : ℕ) [Fact p.Prime] [CharP R p]
     (s : LaurentSeries R) :
     s ^ p = (qExpand R p s).map (frobenius R p) :=
   ModularCurve.CharL.pow_char_eq_laurentMap_frobenius_qExpand p s
+end S_ModularCurve_pow_char_eq_map_frobenius_qExpand
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.pow_char_eq_map_frobenius_qExpand {R : Type*} [CommRing R] (p : ℕ) [Fact p.Prime] [CharP R p]
+    (s : LaurentSeries R) :
+    s ^ p = (qExpand R p s).map (frobenius R p) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_pow_char_eq_map_frobenius_qExpand.solution
+end

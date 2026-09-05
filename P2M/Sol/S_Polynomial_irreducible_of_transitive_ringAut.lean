@@ -4,7 +4,6 @@ public import Mathlib.Algebra.Polynomial.Splits
 public import Mathlib.Algebra.Polynomial.FieldDivision
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_Polynomial_irreducible_of_transitive_ringAut
 
 p2m_open "Polynomial P2MW.S_Polynomial_irreducible_of_transitive_ringAut.Polynomial"
@@ -182,4 +181,9 @@ private theorem Polynomial.irreducible_of_transitive_ringAut {F L : Type*} [Fiel
 
 theorem solution {F L : Type*} [Field F] [Field L] [Algebra F L] (P : Polynomial F) (hP : P.Monic) (hPs : (P.map (algebraMap F L)).Splits) (σ : L ≃+* L) (hσ : ∀ a : F, σ (algebraMap F L a) = algebraMap F L a) (y₀ : L) (r : ℕ → L) (n : ℕ) (hroots : (P.map (algebraMap F L)).roots = y₀ ::ₘ (Multiset.range n).map r) (hnodup : (P.map (algebraMap F L)).roots.Nodup) (hcycle : ∀ i < n, σ (r i) = r ((i + 1) % n)) (hy₀ : y₀ ∉ (algebraMap F L).range) : Irreducible P :=
   Polynomial.irreducible_of_transitive_ringAut P hP hPs σ hσ y₀ r n hroots hnodup hcycle hy₀
+end S_Polynomial_irreducible_of_transitive_ringAut
+end P2MW
 
+public section
+theorem Polynomial.irreducible_of_transitive_ringAut {F L : Type*} [Field F] [Field L] [Algebra F L] (P : Polynomial F) (hP : P.Monic) (hPs : (P.map (algebraMap F L)).Splits) (σ : L ≃+* L) (hσ : ∀ a : F, σ (algebraMap F L a) = algebraMap F L a) (y₀ : L) (r : ℕ → L) (n : ℕ) (hroots : (P.map (algebraMap F L)).roots = y₀ ::ₘ (Multiset.range n).map r) (hnodup : (P.map (algebraMap F L)).roots.Nodup) (hcycle : ∀ i < n, σ (r i) = r ((i + 1) % n)) (hy₀ : y₀ ∉ (algebraMap F L).range) : Irreducible P := by p2m_exact_reverting @_root_.P2MW.S_Polynomial_irreducible_of_transitive_ringAut.solution
+end

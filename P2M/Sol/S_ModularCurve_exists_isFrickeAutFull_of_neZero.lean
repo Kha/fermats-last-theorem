@@ -4,16 +4,15 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_AtkinLehner
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Theorems.Thm_ModularCurve_functionFieldGeneration
-public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
-public import Theorems.Thm_ModularCurve_phiIrreducible_all
-public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
-public import Theorems.Thm_ModularCurve_minpoly_jqN_eq_toAdjoin
-public import Theorems.Thm_ModularCurve_minpoly_jqN_map_eq_prod_slots
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
+import P2M.Sol.S_ModularCurve_functionFieldGeneration
+import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
+import P2M.Sol.S_ModularCurve_phiIrreducible_all
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_minpoly_jqN_eq_toAdjoin
+import P2M.Sol.S_ModularCurve_minpoly_jqN_map_eq_prod_slots
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_exists_isFrickeAutFull_of_neZero
 
 p2m_open "Polynomial IntermediateField ModularCurve~coeffEmb_qExpand~coeffEmb_injective ModularCurve.PhiGen AlgebraicCurve"
@@ -498,3 +497,15 @@ p2m_reactivate "P2MW.S_ModularCurve_exists_isFrickeAutFull_of_neZero.FrickeGener
 theorem solution (N : ℕ) [NeZero N] :
     ∃ σ : modularFunctionFieldFull N ≃ₐ[ℚ] modularFunctionFieldFull N, IsFrickeAutFull N σ :=
   ⟨FrickeGeneral.frickeAlgEquivFull N, FrickeGeneral.isFrickeAutFull_frickeAlgEquivFull N⟩
+end S_ModularCurve_exists_isFrickeAutFull_of_neZero
+end P2MW
+
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve AlgebraicCurve IntermediateField
+
+theorem ModularCurve.exists_isFrickeAutFull_of_neZero (N : ℕ) [NeZero N] :
+    ∃ σ : modularFunctionFieldFull N ≃ₐ[ℚ] modularFunctionFieldFull N, IsFrickeAutFull N σ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_isFrickeAutFull_of_neZero.solution
+end

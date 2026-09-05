@@ -7,7 +7,6 @@ public import Mathlib.RingTheory.MvPowerSeries.Substitution
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_coeff_slotSubst_tateUnivX
 
 set_option autoImplicit false
@@ -1649,4 +1648,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_coeff_slotSubst_tateUnivX.Mo
 
 theorem solution {K : Type*} [CommRing K] (p : ℕ) (c : Kˣ) (j : ℕ) (hj : 0 < j) (hjp : j < p) (n : ℕ) : PowerSeries.coeff n (slotSubst K p c j tateUnivX) = (if j ∣ n then ((n / j : ℕ) : K) * (c : K) ^ (n / j) else 0) + ∑ M ∈ Finset.range (n + 1), ∑ e ∈ M.divisors, (e : K) * ((if n = p * M + j * e then (c : K) ^ e else 0) + (if n + j * e = p * M then ((c⁻¹ : Kˣ) : K) ^ e else 0) - (if n = p * M then 2 else 0)) :=
   ModularCurve.W4Bdev.coeff_slotSubst_tateUnivX p c j hj hjp n
+end S_ModularCurve_coeff_slotSubst_tateUnivX
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.coeff_slotSubst_tateUnivX {K : Type*} [CommRing K] (p : ℕ) (c : Kˣ) (j : ℕ) (hj : 0 < j) (hjp : j < p) (n : ℕ) : PowerSeries.coeff n (slotSubst K p c j tateUnivX) = (if j ∣ n then ((n / j : ℕ) : K) * (c : K) ^ (n / j) else 0) + ∑ M ∈ Finset.range (n + 1), ∑ e ∈ M.divisors, (e : K) * ((if n = p * M + j * e then (c : K) ^ e else 0) + (if n + j * e = p * M then ((c⁻¹ : Kˣ) : K) ^ e else 0) - (if n = p * M then 2 else 0)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_coeff_slotSubst_tateUnivX.solution
+end

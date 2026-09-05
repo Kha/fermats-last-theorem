@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_DivisorPushPull
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_inertiaDeg_pos_of_finiteDimensional
 
 open AlgebraicCurve
@@ -92,3 +91,11 @@ end S09G2
 theorem solution {K F F' : Type*} [Field K] [Field F] [Field F'] [Algebra K F] [Algebra K F'] [Algebra F F'] [IsScalarTower K F F'] [FiniteDimensional F F'] (w : Place K F') : 0 < w.inertiaDeg F := by
   haveI := S09G2.finite_residueField (F := F) w
   exact Module.finrank_pos
+end S_AlgebraicCurve_Place_inertiaDeg_pos_of_finiteDimensional
+end P2MW
+
+public section
+open AlgebraicCurve
+
+theorem AlgebraicCurve.Place.inertiaDeg_pos_of_finiteDimensional {K F F' : Type*} [Field K] [Field F] [Field F'] [Algebra K F] [Algebra K F'] [Algebra F F'] [IsScalarTower K F F'] [FiniteDimensional F F'] (w : Place K F') : 0 < w.inertiaDeg F := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_inertiaDeg_pos_of_finiteDimensional.solution
+end

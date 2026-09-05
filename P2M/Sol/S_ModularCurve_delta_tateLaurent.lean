@@ -3,11 +3,10 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_TateFormal
 public import Definitions.Def_ModularCurve_X0
-public import Theorems.Thm_ModularCurve_c4_tateLaurent
-public import Theorems.Thm_ModularCurve_c4_pow_three_tateLaurent
+import P2M.Sol.S_ModularCurve_c4_tateLaurent
+import P2M.Sol.S_ModularCurve_c4_pow_three_tateLaurent
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_delta_tateLaurent
 
 set_option autoImplicit false
@@ -60,3 +59,16 @@ open PowerSeries HahnSeries in
 theorem solution (K : Type*) [CommRing K] :
     (tateLaurent K).Δ = HahnSeries.ofPowerSeries ℤ K (PowerSeries.map (Int.castRingHom K) (PowerSeries.X * dedekindEtaUnit)) :=
   ModularCurve.TD2.main K
+end S_ModularCurve_delta_tateLaurent
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+p2m_open "ModularCurve~eisenstein4_cube_sub_mk_sq~c4_pow_three_tateLaurent"
+open PowerSeries HahnSeries in
+
+theorem ModularCurve.delta_tateLaurent (K : Type*) [CommRing K] :
+    (tateLaurent K).Δ = HahnSeries.ofPowerSeries ℤ K (PowerSeries.map (Int.castRingHom K) (PowerSeries.X * dedekindEtaUnit)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_delta_tateLaurent.solution
+end

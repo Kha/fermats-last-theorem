@@ -6,19 +6,18 @@ public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_ModularCurve_JWidth
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_TateFormal
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_tatePowerSeries_map
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_jFamily
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
-public import Theorems.Thm_ModularCurve_delta_tateLaurent
-public import Theorems.Thm_ModularCurve_j_tateLaurent
-public import Theorems.Thm_ModularCurve_card_eq_of_ssJSet
-public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
-public import Theorems.Thm_ModularCurve_zero_mem_ssJSetHasse_iff
-public import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_tatePowerSeries_map
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_jFamily
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
+import P2M.Sol.S_ModularCurve_delta_tateLaurent
+import P2M.Sol.S_ModularCurve_j_tateLaurent
+import P2M.Sol.S_ModularCurve_card_eq_of_ssJSet
+import P2M.Sol.S_ModularCurve_ssJSet_eq_ssJSetHasse
+import P2M.Sol.S_ModularCurve_zero_mem_ssJSetHasse_iff
+import P2M.Sol.S_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_delta_pow_mul_prod_jqModC_sub_pow_eq_one
 
 set_option autoImplicit false
@@ -257,3 +256,19 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
     HahnSeries.ofPowerSeries ℤ k (PowerSeries.map (Int.castRingHom k) (PowerSeries.X * ModularCurve.dedekindEtaUnit)) ^ (q - 1) *
         ∏ a ∈ S₀, (ModularCurve.jqModC k - HahnSeries.C a) ^ (12 / ModularCurve.jWidth a) = 1 :=
   ModularCurve.FACEasm.main q hq k S₀ hS₀
+end S_ModularCurve_delta_pow_mul_prod_jqModC_sub_pow_eq_one
+end P2MW
+
+public section
+attribute [-instance] ModularCurve.instIsElliptic_tateLaurent
+attribute [-simp] ModularCurve.tateLaurent_a₆ ModularCurve.tatePowerSeries_a₄ ModularCurve.tatePowerSeries_a₆ ModularCurve.tateLaurent_a₄ ModularCurve.tatePowerSeries_a₁ ModularCurve.tatePowerSeries_a₂ ModularCurve.tatePowerSeries_a₃
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+open ModularCurve
+theorem ModularCurve.delta_pow_mul_prod_jqModC_sub_pow_eq_one
+    (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
+    (k : Type*) [Field k] [CharP k q] [IsAlgClosed k] [DecidableEq k]
+    (S₀ : Finset k) (hS₀ : ∀ a, a ∈ S₀ ↔ a ∈ ssJSet q k) :
+    HahnSeries.ofPowerSeries ℤ k (PowerSeries.map (Int.castRingHom k) (PowerSeries.X * dedekindEtaUnit)) ^ (q - 1) *
+        ∏ a ∈ S₀, (jqModC k - HahnSeries.C a) ^ (12 / jWidth a) = 1 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_delta_pow_mul_prod_jqModC_sub_pow_eq_one.solution
+end

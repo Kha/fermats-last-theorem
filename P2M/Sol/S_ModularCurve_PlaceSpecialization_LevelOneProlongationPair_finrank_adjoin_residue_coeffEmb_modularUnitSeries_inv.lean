@@ -3,15 +3,14 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
 public import Definitions.Def_ModularCurve_ModularUnit
-public import Theorems.Thm_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_order_residue_coeffEmb_modularUnitSeries
-public import Theorems.Thm_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv
-public import Theorems.Thm_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
+import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_order_residue_coeffEmb_modularUnitSeries
+import P2M.Sol.S_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv
+import P2M.Sol.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_of_lt
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_finrank_adjoin_residue_coeffEmb_modularUnitSeries_inv
 
 set_option autoImplicit false
@@ -360,3 +359,26 @@ theorem solution
   haveI := hfin
 
   exact le_antisymm (hub.trans hgen.le) (UnitDeg.sub_one_le_finrank_adjoin_inv_of_order _ hord)
+end S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_finrank_adjoin_residue_coeffEmb_modularUnitSeries_inv
+end P2MW
+
+public section
+set_option autoImplicit false
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+
+open AlgebraicCurve ModularCurve IsLocalRing
+theorem ModularCurve.PlaceSpecialization.LevelOneProlongationPair.finrank_adjoin_residue_coeffEmb_modularUnitSeries_inv
+    {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)}
+    {k : Type*} [Field k] [CharP k q] {red : A →+* k}
+    {data : ModularPolynomialData q} {hKr : KroneckerCongruence q data}
+    {hα : HeckeAlphaBarIntegral (AlgebraicClosure ℚ) 1 q} {hβ : HeckeBetaBarIntegral (AlgebraicClosure ℚ) 1 q}
+    {P : PlaceSpecialization A q 1 data hKr k red hα hβ} (R : P.LevelOneProlongationPair)
+    (h : (⟨coeffEmb (AlgebraicClosure ℚ) (modularUnitSeries (1 * q)),
+      coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (modularUnitSeries_mem_modularFunctionFieldFull (1 * q))⟩ :
+      ↥(modularFunctionFieldBar (1 * q))) ∈ R.R₁.integers) :
+    Module.finrank (IntermediateField.adjoin (ResidueField A)
+        ({(R.R₁.residue ⟨_, h⟩ : modularFunctionFieldFullC (ResidueField A) 1)⁻¹} :
+          Set ↥(modularFunctionFieldFullC (ResidueField A) 1)))
+      ↥(modularFunctionFieldFullC (ResidueField A) 1) = q - 1 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_finrank_adjoin_residue_coeffEmb_modularUnitSeries_inv.solution
+end

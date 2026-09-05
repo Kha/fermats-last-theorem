@@ -1,8 +1,8 @@
 import Definitions.Def_ModularCurve_FibreModelCuspChart
 import Definitions.Def_ModularCurve_CharPReduction
-import Theorems.Thm_ModularCurve_CharPReduction_modularRedLocHom_mem
+import P2M.Sol.S_ModularCurve_CharPReduction_modularRedLocHom_mem
 import Theorems.Thm_ModularCurve_CharPReduction_mem_modularLocalized_of_eval2_monic
-import Theorems.Thm_ModularCurve_functionFieldGeneration
+import P2M.Sol.S_ModularCurve_functionFieldGeneration
 import Mathlib.FieldTheory.Relrank
 import Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Basic
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Defs
@@ -11,7 +11,7 @@ import Mathlib.Algebra.Polynomial.Eval.Degree
 import Mathlib.Algebra.Polynomial.Monic
 import Mathlib.Algebra.Polynomial.Bivariate
 import Mathlib.Algebra.BigOperators.Fin
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import Mathlib.FieldTheory.IntermediateField.Algebraic
 import Mathlib.RingTheory.AlgebraTower

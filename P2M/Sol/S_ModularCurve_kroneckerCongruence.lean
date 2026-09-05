@@ -3,10 +3,9 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_KroneckerTransport
-public import Theorems.Thm_ModularCurve_modularPolynomial_kronecker
+import P2M.Sol.S_ModularCurve_modularPolynomial_kronecker
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_kroneckerCongruence
 
 set_option autoImplicit false
@@ -99,4 +98,12 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_kroneckerCongruence.ModularC
 
 theorem solution (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (data : ModularPolynomialData ℓ) : KroneckerCongruence ℓ data :=
   ModularCurve.kroneckerCongruence ℓ data
+end S_ModularCurve_kroneckerCongruence
+end P2MW
 
+public section
+attribute [-simp] ModularCurve.jqNModC_one
+
+open ModularCurve
+theorem ModularCurve.kroneckerCongruence (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (data : ModularPolynomialData ℓ) : KroneckerCongruence ℓ data := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_kroneckerCongruence.solution
+end

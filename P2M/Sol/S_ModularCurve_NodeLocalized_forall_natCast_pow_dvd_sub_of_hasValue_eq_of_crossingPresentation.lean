@@ -1,6 +1,6 @@
 import Mathlib
-import Theorems.Thm_ModularCurve_transcendental_jqModC
-import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 import Theorems.Thm_ModularCurve_deg_eq_one_modularFunctionFieldBar
 import Definitions.Def_ModularCurve_NodeLocalized
 import Definitions.Def_ModularCurve_NodeDescent

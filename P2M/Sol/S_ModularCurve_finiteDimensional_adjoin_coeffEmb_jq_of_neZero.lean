@@ -5,10 +5,9 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_ModularCurve_CuspidalClass
-public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_finiteDimensional_adjoin_coeffEmb_jq_of_neZero
 
 open ModularCurve
@@ -150,3 +149,17 @@ theorem solution (M : ℕ) [NeZero M] :
           : Set (modularFunctionFieldBar M)))
       (modularFunctionFieldBar M) :=
   BFall.finiteDimensional_adjoin_coeffEmb_jq (AlgebraicClosure ℚ) M (jq_mem_full M)
+end S_ModularCurve_finiteDimensional_adjoin_coeffEmb_jq_of_neZero
+end P2MW
+
+public section
+open ModularCurve AlgebraicCurve
+
+theorem ModularCurve.finiteDimensional_adjoin_coeffEmb_jq_of_neZero (M : ℕ) [NeZero M] :
+    FiniteDimensional
+      (IntermediateField.adjoin (AlgebraicClosure ℚ)
+        ({⟨coeffEmb (AlgebraicClosure ℚ) jq,
+            coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (jq_mem_full M)⟩}
+          : Set (modularFunctionFieldBar M)))
+      (modularFunctionFieldBar M) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_finiteDimensional_adjoin_coeffEmb_jq_of_neZero.solution
+end

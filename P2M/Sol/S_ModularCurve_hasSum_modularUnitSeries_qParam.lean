@@ -6,12 +6,11 @@ public import Mathlib.NumberTheory.ModularForms.Discriminant
 public import Mathlib.NumberTheory.ModularForms.QExpansion
 public import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
 public import Mathlib.Analysis.Complex.TaylorSeries
-public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
-public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
-public import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
+import P2M.Sol.S_ModularCurve_laurent_qParam_coeff_unique
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_hasSum_modularUnitSeries_qParam
 
 set_option autoImplicit false
@@ -260,3 +259,9 @@ end
 
 theorem solution (N : ℕ) [NeZero N] (τ : UpperHalfPlane) : HasSum (fun m : ℤ => (((ModularCurve.modularUnitSeries N).coeff m : ℚ) : ℂ) * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (ModularForm.discriminant τ / ModularForm.discriminant (ModularForm.heckeDiagMatrix N • τ)) :=
   ModularCurve.QexpN.hasSum_modularUnit N τ
+end S_ModularCurve_hasSum_modularUnitSeries_qParam
+end P2MW
+
+public section
+theorem ModularCurve.hasSum_modularUnitSeries_qParam (N : ℕ) [NeZero N] (τ : UpperHalfPlane) : HasSum (fun m : ℤ => (((ModularCurve.modularUnitSeries N).coeff m : ℚ) : ℂ) * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (ModularForm.discriminant τ / ModularForm.discriminant (ModularForm.heckeDiagMatrix N • τ)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_hasSum_modularUnitSeries_qParam.solution
+end

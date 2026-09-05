@@ -1,5 +1,5 @@
 import Mathlib
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Theorems.Thm_ModularCurve_PlaceSpecialization_ProlongationTuple_residue_jFun_sub_jQFun_sub
 import Definitions.Def_ModularCurve_DRModelPackage
 import Definitions.Def_ModularCurve_ProlongationTuple

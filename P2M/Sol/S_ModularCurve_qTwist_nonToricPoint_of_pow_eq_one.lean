@@ -1,8 +1,8 @@
 import Mathlib
 import Definitions.Def_ModularCurve_TateSlots
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivX
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivY
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivX
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivY
 import P2M.Util
 namespace P2MW.S_ModularCurve_qTwist_nonToricPoint_of_pow_eq_one
 

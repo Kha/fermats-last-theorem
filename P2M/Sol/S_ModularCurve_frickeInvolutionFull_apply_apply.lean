@@ -1,10 +1,9 @@
 module
 
 public import Definitions.Def_ModularCurve_AtkinLehner
-public import Theorems.Thm_ModularCurve_modularFunctionFieldFull_algHom_ext
+import P2M.Sol.S_ModularCurve_modularFunctionFieldFull_algHom_ext
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_frickeInvolutionFull_apply_apply
 
 set_option autoImplicit false
@@ -29,4 +28,11 @@ theorem solution (N : ℕ) [NeZero N] (x : modularFunctionFieldFull N) : frickeI
   · rw [ModularCurve.frickeInvolutionFull_eq_refl N h]
     rfl
 
+end
+end S_ModularCurve_frickeInvolutionFull_apply_apply
+end P2MW
+
+public section
+open ModularCurve AlgebraicCurve IntermediateField
+theorem ModularCurve.frickeInvolutionFull_apply_apply (N : ℕ) [NeZero N] (x : modularFunctionFieldFull N) : frickeInvolutionFull N (frickeInvolutionFull N x) = x := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_frickeInvolutionFull_apply_apply.solution
 end

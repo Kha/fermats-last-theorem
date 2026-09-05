@@ -3,12 +3,11 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_injective
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqNModC_le
 
 noncomputable section
@@ -116,4 +115,12 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_finrank_adjoin_jqNModC_le.Mo
 
 theorem solution (K : Type*) [Field K] {N : ℕ} [NeZero N] (data : ModularPolynomialData N) : Module.finrank (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (IntermediateField.adjoin (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) ({jqNModC K N} : Set (LaurentSeries K))) ≤ dedekindPsi N :=
   ModularCurve.finrank_adjoin_jqNModC_le K data
+end S_ModularCurve_finrank_adjoin_jqNModC_le
+end P2MW
 
+public section
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
+
+open ModularCurve
+theorem ModularCurve.finrank_adjoin_jqNModC_le (K : Type*) [Field K] {N : ℕ} [NeZero N] (data : ModularPolynomialData N) : Module.finrank (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (IntermediateField.adjoin (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) ({jqNModC K N} : Set (LaurentSeries K))) ≤ dedekindPsi N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_finrank_adjoin_jqNModC_le.solution
+end

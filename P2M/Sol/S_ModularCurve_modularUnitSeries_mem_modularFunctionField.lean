@@ -3,15 +3,14 @@ module
 public import Definitions.Def_ModularCurve_ModularUnit
 public import Definitions.Def_ModularForm_HeckeOperator
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import Theorems.Thm_ModularCurve_hasSum_modularUnitSeries_qParam
-public import Theorems.Thm_ModularCurve_hasSum_smul_modularUnitSeries_inv_qParam
-public import Theorems.Thm_ModularCurve_hasSum_modularUnitSeries_inv_qParam
-public import Theorems.Thm_ModularCurve_hasSum_smul_modularUnitSeries_qParam
-public import Theorems.Thm_ModularCurve_discriminant_div_discriminant_heckeDiagMatrix_smul
-public import Theorems.Thm_ModularCurve_mem_modularFunctionField_of_hasSum_of_gamma0_invariant
+import P2M.Sol.S_ModularCurve_hasSum_modularUnitSeries_qParam
+import P2M.Sol.S_ModularCurve_hasSum_smul_modularUnitSeries_inv_qParam
+import P2M.Sol.S_ModularCurve_hasSum_modularUnitSeries_inv_qParam
+import P2M.Sol.S_ModularCurve_hasSum_smul_modularUnitSeries_qParam
+import P2M.Sol.S_ModularCurve_discriminant_div_discriminant_heckeDiagMatrix_smul
+import P2M.Sol.S_ModularCurve_mem_modularFunctionField_of_hasSum_of_gamma0_invariant
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_modularUnitSeries_mem_modularFunctionField
 
 set_option autoImplicit false
@@ -25,3 +24,11 @@ theorem solution (ℓ : ℕ) [Fact (Nat.Prime ℓ)] : ModularCurve.modularUnitSe
     (fun τ => ModularCurve.hasSum_modularUnitSeries_qParam ℓ τ)
     (fun τ => ModularCurve.hasSum_smul_modularUnitSeries_inv_qParam ℓ τ)
     (fun γ hγ τ => ModularCurve.discriminant_div_discriminant_heckeDiagMatrix_smul ℓ γ hγ τ)
+end S_ModularCurve_modularUnitSeries_mem_modularFunctionField
+end P2MW
+
+public section
+attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
+
+theorem ModularCurve.modularUnitSeries_mem_modularFunctionField (ℓ : ℕ) [Fact (Nat.Prime ℓ)] : ModularCurve.modularUnitSeries ℓ ∈ ModularCurve.modularFunctionField ℓ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_modularUnitSeries_mem_modularFunctionField.solution
+end

@@ -1,7 +1,7 @@
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
-import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
+import P2M.Sol.S_ModularCurve_PhiGen_evalAtJ_injective
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import Mathlib.FieldTheory.Minpoly.Field
 import P2M.Util

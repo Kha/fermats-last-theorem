@@ -1,4 +1,4 @@
-import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 import Theorems.Thm_WeierstrassCurve_reducePoint_some_eq_zero_iff
 import Definitions.Def_EllipticCurve_PointReduction
 import P2M.Util

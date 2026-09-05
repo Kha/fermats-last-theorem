@@ -2,10 +2,9 @@ module
 
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_variableChange
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_variableChange
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_zero_mem_ssJSetHasse_iff
 
 set_option autoImplicit false
@@ -148,3 +147,11 @@ p2m_open "ModularCurve P2MW.S_ModularCurve_zero_mem_ssJSetHasse_iff.ModularCurve
 theorem solution (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q) (K : Type*) [Field K]
     [IsAlgClosed K] [CharP K q] : (0 : K) ∈ ssJSetHasse q K ↔ q % 3 = 2 :=
   ModularCurve.zero_mem_ssJSetHasse_iff' q hq K
+end S_ModularCurve_zero_mem_ssJSetHasse_iff
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.zero_mem_ssJSetHasse_iff (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q) (K : Type*) [Field K]
+    [IsAlgClosed K] [CharP K q] : (0 : K) ∈ ssJSetHasse q K ↔ q % 3 = 2 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_zero_mem_ssJSetHasse_iff.solution
+end

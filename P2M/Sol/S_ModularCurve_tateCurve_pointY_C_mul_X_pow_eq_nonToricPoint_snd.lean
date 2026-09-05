@@ -3,8 +3,8 @@ import Definitions.Def_LaurentSeries_XAdic
 import Definitions.Def_TateCurve_PointSeries
 import Definitions.Def_ModularCurve_TateSlots
 import Definitions.Def_ModularCurve_KatzLevelPCusps
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivX
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivY
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivX
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivY
 import P2M.Util
 namespace P2MW.S_ModularCurve_tateCurve_pointY_C_mul_X_pow_eq_nonToricPoint_snd
 

@@ -2,18 +2,18 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE
-public import Theorems.Thm_ModularCurve_PhiGen_phiProd_conj_coeff_zero_lead
-public import Theorems.Thm_ModularCurve_PhiGen_phiProd_conj_coeff_eq_zero_of_le
-public import Theorems.Thm_ModularCurve_PhiGen_splits_of_coeff_evalAtJ_eq
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion
-public import Theorems.Thm_ModularCurve_PhiGen_evalSymm_of_splits
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE
+import P2M.Sol.S_ModularCurve_PhiGen_phiProd_conj_coeff_zero_lead
+import P2M.Sol.S_ModularCurve_PhiGen_phiProd_conj_coeff_eq_zero_of_le
+import P2M.Sol.S_ModularCurve_PhiGen_splits_of_coeff_evalAtJ_eq
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion
+import P2M.Sol.S_ModularCurve_PhiGen_evalSymm_of_splits
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.Ring
 import P2M.Util
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
 
 noncomputable section
@@ -124,4 +124,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_evalSymm_of_coeff_eva
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hζ : IsPrimitiveRoot (ζ : K) ℓ) (hc : PhiGenDescends ℓ ζ c) (data : ModularPolynomialData ℓ) (hcoeff : ∀ k, evalAtJ (data.Φ.coeff k) = c k) : EvalSymm data.Φ :=
   ModularCurve.PhiGen.evalSymm_of_coeff_evalAtJ_eq hζ hc data hcoeff
+end S_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.evalSymm_of_coeff_evalAtJ_eq {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hζ : IsPrimitiveRoot (ζ : K) ℓ) (hc : PhiGenDescends ℓ ζ c) (data : ModularPolynomialData ℓ) (hcoeff : ∀ k, evalAtJ (data.Φ.coeff k) = c k) : EvalSymm data.Φ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq.solution
+end

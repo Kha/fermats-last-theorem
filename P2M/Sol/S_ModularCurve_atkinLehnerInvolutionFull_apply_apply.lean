@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_AtkinLehnerPartial
 import Theorems.Thm_ModularCurve_exists_isAtkinLehnerAutFull_of_prime_of_not_dvd
-import Theorems.Thm_ModularCurve_modularFunctionFieldFull_algHom_ext
+import P2M.Sol.S_ModularCurve_modularFunctionFieldFull_algHom_ext
 import P2M.Util
 namespace P2MW.S_ModularCurve_atkinLehnerInvolutionFull_apply_apply
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

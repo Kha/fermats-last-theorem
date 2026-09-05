@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_QAdicPlace
-import Theorems.Thm_ModularCurve_deg_qInftyPlaceBar
+import P2M.Sol.S_ModularCurve_deg_qInftyPlaceBar
 import P2M.Util
 namespace P2MW.S_ModularCurve_deg_of_toValuationSubring_eq_qIntegersBar
 

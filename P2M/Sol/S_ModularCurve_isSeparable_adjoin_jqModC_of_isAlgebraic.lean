@@ -6,7 +6,7 @@ import Mathlib.FieldTheory.KummerPolynomial
 import Mathlib.RingTheory.PowerSeries.Expand
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_LaurentCoeff
-import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
 import P2M.Util
 namespace P2MW.S_ModularCurve_isSeparable_adjoin_jqModC_of_isAlgebraic
 

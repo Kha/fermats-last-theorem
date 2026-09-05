@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import Theorems.Thm_ModularCurve_ModularPolynomialData_evalSymm_of_prime
 import Theorems.Thm_ModularCurve_swapBivar_eq_of_evalSymm
 import P2M.Util

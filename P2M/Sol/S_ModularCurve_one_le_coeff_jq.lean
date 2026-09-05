@@ -5,7 +5,6 @@ public import Mathlib.Algebra.Order.BigOperators.Group.Finset
 public import Mathlib.Algebra.BigOperators.Intervals
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_one_le_coeff_jq
 
 set_option autoImplicit false
@@ -384,5 +383,11 @@ p2m_reactivate "P2MW.S_ModularCurve_one_le_coeff_jq.ModularCurve"
 
 theorem solution (n : ℕ) : (1 : ℚ) ≤ ModularCurve.jq.coeff (n : ℤ) :=
   ModularCurve.one_le_coeff_jq' n
+end
+end S_ModularCurve_one_le_coeff_jq
+end P2MW
 
-
+public section
+open ModularCurve
+theorem ModularCurve.one_le_coeff_jq (n : ℕ) : (1 : ℚ) ≤ jq.coeff (n : ℤ) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_one_le_coeff_jq.solution
+end

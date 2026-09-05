@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_X1
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_X0ModL
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Theorems.Thm_ModularCurve_jqModC_mem_intFormRatiosC
 import Theorems.Thm_ModularCurve_JOneES_exists_transcendental_finiteDimensional_laurentBaseChange
 import P2M.Util

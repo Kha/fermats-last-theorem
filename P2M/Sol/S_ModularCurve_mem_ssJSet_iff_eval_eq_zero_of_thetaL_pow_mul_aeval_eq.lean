@@ -3,8 +3,8 @@ import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_QExpansionDiff
 import Definitions.Def_ModularCurve_SupersingularModuli
 import Theorems.Thm_ModularCurve_thetaL_jqModC_pow_mul_prod_sq_eq
-import Theorems.Thm_ModularCurve_transcendental_jqModC
-import Theorems.Thm_ModularCurve_ssJSet_finite
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_ssJSet_finite
 import Theorems.Thm_ModularCurve_zero_mem_ssJSet_iff
 import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSet_iff
 import P2M.Util

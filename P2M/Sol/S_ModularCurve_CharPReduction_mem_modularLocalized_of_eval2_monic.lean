@@ -1,8 +1,8 @@
 import Definitions.Def_ModularCurve_CharPReduction
 import Definitions.Def_ModularCurve_X0
 import Mathlib.FieldTheory.Relrank
-import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Mathlib.RingTheory.Valuation.ValuationSubring
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import Mathlib.FieldTheory.IntermediateField.Algebraic

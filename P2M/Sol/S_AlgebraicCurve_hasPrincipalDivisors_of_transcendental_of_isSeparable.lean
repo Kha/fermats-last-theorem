@@ -2,10 +2,10 @@ module
 
 public import Mathlib
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
-public import Theorems.Thm_AlgebraicCurve_hasPrincipalDivisors_of_finiteDimensional_of_isSeparable
+import P2M.Sol.S_AlgebraicCurve_hasPrincipalDivisors_of_finiteDimensional_of_isSeparable
 import P2M.Util
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental_of_isSeparable
 open AlgebraicCurve IntermediateField
 set_option synthInstance.maxHeartbeats 1600000
@@ -37,3 +37,18 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F]
   haveI : Algebra.IsSeparable (RatFunc K) F :=
     Algebra.IsSeparable.of_equiv_equiv e.symm.toRingEquiv (RingEquiv.refl F) hsq
   exact hasPrincipalDivisors_of_finiteDimensional_of_isSeparable F
+end
+end S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental_of_isSeparable
+end P2MW
+
+public section
+open AlgebraicCurve IntermediateField
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+theorem AlgebraicCurve.hasPrincipalDivisors_of_transcendental_of_isSeparable
+    {K F : Type*} [Field K] [Field F] [Algebra K F]
+    {x : F} (htr : Transcendental K x)
+    (hfd : FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F)
+    (hsep : Algebra.IsSeparable (IntermediateField.adjoin K ({x} : Set F)) F) :
+    HasPrincipalDivisors K F := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental_of_isSeparable.solution
+end

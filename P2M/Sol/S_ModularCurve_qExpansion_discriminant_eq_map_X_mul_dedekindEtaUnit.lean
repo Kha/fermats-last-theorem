@@ -1,11 +1,11 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod
 public import Mathlib.RingTheory.PowerSeries.PiTopology
 import P2M.Util
+public import Mathlib.NumberTheory.ModularForms.Discriminant
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 
 set_option autoImplicit false
@@ -77,4 +77,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_qExpansion_discriminant_eq_m
 theorem solution : UpperHalfPlane.qExpansion 1 ModularForm.discriminant = PowerSeries.map (Int.castRingHom ℂ) (PowerSeries.X * ModularCurve.dedekindEtaUnit) := by
   rw [qExpansion_discriminant_eq_X_mul_tprod, map_mul, PowerSeries.map_X,
     tprod_eq_map_dedekindEtaUnit]
+end
+end S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+end P2MW
+
+public section
+theorem ModularCurve.qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit : UpperHalfPlane.qExpansion 1 ModularForm.discriminant = PowerSeries.map (Int.castRingHom ℂ) (PowerSeries.X * ModularCurve.dedekindEtaUnit) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit.solution
 end

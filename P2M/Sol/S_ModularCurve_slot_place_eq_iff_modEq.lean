@@ -1,10 +1,10 @@
 import Definitions.Def_ModularCurve_PhiGen
 import Definitions.Def_ModularCurve_QAdicPlace
-import Theorems.Thm_ModularCurve_laurentBaseChange_adjoin_pair
-import Theorems.Thm_ModularCurve_functionFieldGeneration
-import Theorems.Thm_ModularCurve_coeffEmb_jq
-import Theorems.Thm_ModularCurve_coeffEmb_jqN
-import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
+import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin_pair
+import P2M.Sol.S_ModularCurve_functionFieldGeneration
+import P2M.Sol.S_ModularCurve_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_coeffEmb_jqN
+import P2M.Sol.S_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import Mathlib.Tactic.LinearCombination
 import P2M.Util

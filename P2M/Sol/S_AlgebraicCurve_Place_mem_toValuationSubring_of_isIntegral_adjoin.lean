@@ -4,7 +4,6 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Mathlib.RingTheory.Valuation.Integral
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
 
 set_option autoImplicit false
@@ -53,3 +52,10 @@ end ModularCurve
 
 theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) {j x : F} (hj : j ∈ v.toValuationSubring) (hx : IsIntegral (Algebra.adjoin K {j}) x) : x ∈ v.toValuationSubring :=
   ModularCurve.QexpN.mem_of_isIntegral_adjoin v hj hx
+end S_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Place.mem_toValuationSubring_of_isIntegral_adjoin {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) {j x : F} (hj : j ∈ v.toValuationSubring) (hx : IsIntegral (Algebra.adjoin K {j}) x) : x ∈ v.toValuationSubring := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin.solution
+end

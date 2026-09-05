@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0ModL
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Theorems.Thm_ModularCurve_adjoin_jqModC_eq_top
 import Theorems.Thm_IntermediateField_finrank_adjoin_aeval_of_transcendental
 import P2M.Util

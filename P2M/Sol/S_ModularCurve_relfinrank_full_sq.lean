@@ -1,8 +1,8 @@
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_LaurentCoeff
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import Mathlib.NumberTheory.Cyclotomic.Basic
 import Theorems.Thm_ModularCurve_full_sq_eq_adjoin
@@ -10,9 +10,9 @@ import Theorems.Thm_ModularCurve_full_sq_mul_prime_eq_adjoin
 import Theorems.Thm_ModularCurve_relfinrank_adjoin_primes
 import Theorems.Thm_ModularCurve_jqN_sq_not_mem_adjoin
 import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_sq_of_not_mem
-import Theorems.Thm_ModularCurve_dedekindPsi_prime_pow
-import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import Mathlib.FieldTheory.Relrank
 import P2M.Util
 namespace P2MW.S_ModularCurve_relfinrank_full_sq

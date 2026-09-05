@@ -2,10 +2,9 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_mul
 
 open ModularCurve IntermediateField Polynomial
@@ -23,3 +22,9 @@ private theorem isIntegral_of_eval₂_eq_zero {L : Type*} [Field L] (F : Interme
 
 theorem solution {K : Type*} [Field K] (F : IntermediateField K (LaurentSeries K)) {ℓ : ℕ} [NeZero ℓ] (data : ModularCurve.ModularPolynomialData ℓ) (d : ℕ) [NeZero d] (hd : ModularCurve.jqNModC K d ∈ F) : IsIntegral F (ModularCurve.jqNModC K (d * ℓ)) :=
   isIntegral_of_eval₂_eq_zero F data.monic hd (data.eval_jqNModC_mul_eq_zero K d)
+end S_ModularCurve_isIntegral_jqNModC_mul
+end P2MW
+
+public section
+theorem ModularCurve.isIntegral_jqNModC_mul {K : Type*} [Field K] (F : IntermediateField K (LaurentSeries K)) {ℓ : ℕ} [NeZero ℓ] (data : ModularCurve.ModularPolynomialData ℓ) (d : ℕ) [NeZero d] (hd : ModularCurve.jqNModC K d ∈ F) : IsIntegral F (ModularCurve.jqNModC K (d * ℓ)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_isIntegral_jqNModC_mul.solution
+end

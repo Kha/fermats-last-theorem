@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_X0
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_order_qExpand
 
 open ModularCurve
@@ -27,3 +26,11 @@ theorem solution {R : Type*} [CommRing R] (N : ℕ) [NeZero N] (f : LaurentSerie
       exact lt_of_mul_lt_mul_left hlt hNpos.le
     exact hk (HahnSeries.coeff_eq_zero_of_lt_order hmlt)
   · exact hk (qExpand_coeff_of_not_dvd N f hdvd)
+end S_ModularCurve_order_qExpand
+end P2MW
+
+public section
+open ModularCurve
+
+theorem ModularCurve.order_qExpand {R : Type*} [CommRing R] (N : ℕ) [NeZero N] (f : LaurentSeries R) : (qExpand R N f).order = N * f.order := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_order_qExpand.solution
+end

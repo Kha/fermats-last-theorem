@@ -2,7 +2,7 @@ import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Degree
 import Mathlib.RingTheory.Valuation.ValuationSubring
 import Definitions.Def_FLTPrelim_GaloisRep
 import Definitions.Def_FLTPrelim_Ramification
-import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 import Theorems.Thm_ValuationSubring_valuation_natCast_eq_one_of_not_dvd
 import Theorems.Thm_Valuation_map_eval_eq_pow_of_one_lt
 import P2M.Util

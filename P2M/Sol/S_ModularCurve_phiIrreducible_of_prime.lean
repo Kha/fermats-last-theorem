@@ -2,15 +2,14 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
-public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_PhiGen_evalAtJ_injective
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.FieldTheory.Minpoly.Field
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_phiIrreducible_of_prime
 
 noncomputable section
@@ -72,4 +71,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_phiIrreducible_of_prime.Modu
 
 theorem solution (p : ℕ) [hp : Fact (Nat.Prime p)] (data : ModularPolynomialData p) : PhiIrreducible data :=
   ModularCurve.phiIrreducible_of_prime p data
+end
+end S_ModularCurve_phiIrreducible_of_prime
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.phiIrreducible_of_prime (p : ℕ) [hp : Fact (Nat.Prime p)] (data : ModularPolynomialData p) : PhiIrreducible data := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_phiIrreducible_of_prime.solution
+end

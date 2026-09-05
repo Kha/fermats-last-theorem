@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_IgusaScheme
 import Definitions.Def_AlgebraicCurve_TwoChartIntegralModel
-import Theorems.Thm_ModularCurve_transcendental_jq
+import P2M.Sol.S_ModularCurve_transcendental_jq
 import Theorems.Thm_ModularCurve_exists_sub_mul_sub_eq_natCast_mul_of_coe_eq_qExpand
 import Theorems.Thm_IntermediateField_not_mem_adjoin_pow_of_transcendental
 import P2M.Util

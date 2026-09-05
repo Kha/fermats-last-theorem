@@ -1,10 +1,9 @@
 module
 
 public import Definitions.Def_ModularCurve_TateFormal
-public import Theorems.Thm_ModularCurve_eisenstein4_cube_sub_mk_sq
+import P2M.Sol.S_ModularCurve_eisenstein4_cube_sub_mk_sq
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_c4_pow_three_tateLaurent
 
 set_option autoImplicit false
@@ -144,4 +143,11 @@ open PowerSeries HahnSeries _root_.ModularCurve _root_.P2MW.S_ModularCurve_c4_po
 theorem solution (K : Type*) [CommRing K] :
     (tateLaurent K).c₄ ^ 3 = jqModC K * (tateLaurent K).Δ :=
   ModularCurve.c4_pow_three_tateLaurent K
+end S_ModularCurve_c4_pow_three_tateLaurent
+end P2MW
 
+public section
+open PowerSeries HahnSeries ModularCurve
+theorem ModularCurve.c4_pow_three_tateLaurent (K : Type*) [CommRing K] :
+    (tateLaurent K).c₄ ^ 3 = jqModC K * (tateLaurent K).Δ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_c4_pow_three_tateLaurent.solution
+end

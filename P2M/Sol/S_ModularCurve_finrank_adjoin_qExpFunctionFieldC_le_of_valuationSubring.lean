@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X1
-import Theorems.Thm_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
+import P2M.Sol.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
 import P2M.Util
 namespace P2MW.S_ModularCurve_finrank_adjoin_qExpFunctionFieldC_le_of_valuationSubring
 

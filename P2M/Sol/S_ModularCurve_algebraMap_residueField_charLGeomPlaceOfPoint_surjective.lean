@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_SpecializeModuli
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_algebraMap_residueField_charLGeomPlaceOfPoint_surjective
 
 open AlgebraicCurve ModularCurve
@@ -21,3 +20,12 @@ theorem solution
     have hx : x ∈ (⊥ : Subalgebra K v.ResidueField) := hbt ▸ Algebra.mem_top
     exact Algebra.mem_bot.mp hx
   exact key _ (ModularCurve.deg_charLGeomPlaceOfPoint K a)
+end S_ModularCurve_algebraMap_residueField_charLGeomPlaceOfPoint_surjective
+end P2MW
+
+public section
+open AlgebraicCurve ModularCurve
+theorem ModularCurve.algebraMap_residueField_charLGeomPlaceOfPoint_surjective
+    (K : Type*) [Field K] (a : K) :
+    Function.Surjective (algebraMap K (ModularCurve.charLGeomPlaceOfPoint K a).ResidueField) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_algebraMap_residueField_charLGeomPlaceOfPoint_surjective.solution
+end

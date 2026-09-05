@@ -4,7 +4,6 @@ public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_natDegree_hasseInvariant_jFamily
 
 set_option autoImplicit false
@@ -252,3 +251,17 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q) (k : Type*) [Field k] [
     (WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k))).natDegree = (q - 1) / 4 ∧
       (WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k))).coeff 0 = 1 :=
   WeierstrassCurve.DK1.main q hq k
+end S_WeierstrassCurve_natDegree_hasseInvariant_jFamily
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+open ModularCurve
+
+theorem WeierstrassCurve.natDegree_hasseInvariant_jFamily
+    (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q) (k : Type*) [Field k] [CharP k q] :
+    (WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k))).natDegree = (q - 1) / 4 ∧
+      (WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k))).coeff 0 = 1 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_natDegree_hasseInvariant_jFamily.solution
+end

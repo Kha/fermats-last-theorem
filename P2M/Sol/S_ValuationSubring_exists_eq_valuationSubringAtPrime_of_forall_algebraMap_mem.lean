@@ -3,7 +3,6 @@ module
 public import Mathlib
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
 
 set_option autoImplicit false
@@ -83,3 +82,13 @@ theorem solution
       rw [← key]
       exact (ValuationSubring.ofPrime.congr_simp W Q _ hQeq).trans (ValuationSubring.ofPrime_top W)
   · rw [ValuationSubring.mem_nonunits_iff]; exact hmem𝔭 r
+end S_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
+end P2MW
+
+public section
+theorem ValuationSubring.exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
+    {R K : Type*} [CommRing R] [IsDedekindDomain R] [Field K] [Algebra R K] [IsFractionRing R K]
+    (V : ValuationSubring K) (hRV : ∀ r : R, algebraMap R K r ∈ V) (hV : V ≠ ⊤) :
+    ∃ v : IsDedekindDomain.HeightOneSpectrum R, V = v.valuationSubringAtPrime K ∧
+      ∀ r : R, r ∈ v.asIdeal ↔ algebraMap R K r ∈ V.nonunits := by p2m_exact_reverting @_root_.P2MW.S_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem.solution
+end

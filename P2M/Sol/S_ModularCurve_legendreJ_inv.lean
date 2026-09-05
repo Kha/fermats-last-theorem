@@ -4,7 +4,6 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_LegendreJ
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_legendreJ_inv
 
 set_option autoImplicit false
@@ -31,3 +30,10 @@ p2m_open "ModularCurve P2MW.S_ModularCurve_legendreJ_inv.ModularCurve"
 
 theorem solution {K : Type*} [Field K] (t : K) : legendreJ t⁻¹ = legendreJ t :=
   ModularCurve.legendreJ_inv' t
+end S_ModularCurve_legendreJ_inv
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.legendreJ_inv {K : Type*} [Field K] (t : K) : legendreJ t⁻¹ = legendreJ t := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_legendreJ_inv.solution
+end

@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 import P2M.Util
 namespace P2MW.S_ModularCurve_hasSum_coeff_eisenstein4_qParam
 set_option autoImplicit false

@@ -2,7 +2,7 @@ import Definitions.Def_ModularCurve_QAdicPlace
 import Definitions.Def_ModularCurve_ArithmeticGalois
 import Definitions.Def_ModularCurve_QExpansionDiff
 import Theorems.Thm_ModularCurve_theta_coeff
-import Theorems.Thm_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_coeffMap_injective
 import Mathlib.NumberTheory.ModularForms.QExpansion
 
 set_option autoImplicit false

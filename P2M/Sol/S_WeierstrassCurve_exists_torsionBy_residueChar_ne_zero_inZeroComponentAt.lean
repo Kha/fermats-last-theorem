@@ -5,7 +5,7 @@ import Mathlib.Algebra.CharP.IntermediateField
 import Mathlib.RingTheory.LocalRing.ResidueField.Basic
 import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Degree
 import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 import Theorems.Thm_WeierstrassCurve_psiSq_ne_zero_of_nodal
 import Definitions.Def_FLTPrelim_GaloisRep
 import Definitions.Def_FLTPrelim_Ramification

@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_PhiGen
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_mem_range_qExpand_of_qTwist_eq
 
 set_option autoImplicit false
@@ -51,3 +50,9 @@ end ModularCurve
 
 theorem solution {K : Type*} [Field K] (n : ℕ) [NeZero n] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) n) (f : LaurentSeries K) (h : ModularCurve.qTwist ζ f = f) : f ∈ Set.range (ModularCurve.qExpand K n) :=
   ModularCurve.mem_range_qExpand_of_qTwist_eq' n ζ hζ f h
+end S_ModularCurve_mem_range_qExpand_of_qTwist_eq
+end P2MW
+
+public section
+theorem ModularCurve.mem_range_qExpand_of_qTwist_eq {K : Type*} [Field K] (n : ℕ) [NeZero n] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) n) (f : LaurentSeries K) (h : ModularCurve.qTwist ζ f = f) : f ∈ Set.range (ModularCurve.qExpand K n) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_mem_range_qExpand_of_qTwist_eq.solution
+end

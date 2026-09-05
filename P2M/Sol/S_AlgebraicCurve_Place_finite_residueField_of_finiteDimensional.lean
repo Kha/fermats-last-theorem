@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_DivisorPushPull
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
 
 open AlgebraicCurve
@@ -91,3 +90,11 @@ end S09G2F
 
 theorem solution {K F F' : Type*} [Field K] [Field F] [Field F'] [Algebra K F] [Algebra K F'] [Algebra F F'] [IsScalarTower K F F'] [FiniteDimensional F F'] (w : Place K F') : Module.Finite (w.restrict F).ResidueField w.ResidueField :=
   S09G2F.finite_residueField (F := F) w
+end S_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
+end P2MW
+
+public section
+open AlgebraicCurve
+
+theorem AlgebraicCurve.Place.finite_residueField_of_finiteDimensional {K F F' : Type*} [Field K] [Field F] [Field F'] [Algebra K F] [Algebra K F'] [Algebra F F'] [IsScalarTower K F F'] [FiniteDimensional F F'] (w : Place K F') : Module.Finite (w.restrict F).ResidueField w.ResidueField := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional.solution
+end

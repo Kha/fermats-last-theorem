@@ -1,7 +1,7 @@
 import Definitions.Def_AlgebraicCurve_Correspondence
 import Definitions.Def_AlgebraicCurve_PlacesOverDVR
 import Theorems.Thm_AlgebraicCurve_Place_ord_norm_eq_sum_fiberOver
-import Theorems.Thm_AlgebraicCurve_Place_exists_forall_ord_eq
+import P2M.Sol.S_AlgebraicCurve_Place_exists_forall_ord_eq
 import Mathlib.RingTheory.TensorProduct.Free
 import Mathlib.RingTheory.Ideal.Quotient.Operations
 import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas

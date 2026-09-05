@@ -3,14 +3,14 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-public import Theorems.Thm_ModularCurve_full_eq_adjoin_primes
-public import Theorems.Thm_ModularCurve_relfinrank_full_of_squarefree
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_full_eq_adjoin_primes
+import P2M.Sol.S_ModularCurve_relfinrank_full_of_squarefree
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_dedekindPsi_of_squarefree
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.RingTheory.Coprime.Lemmas
@@ -19,8 +19,8 @@ public import Mathlib.FieldTheory.PrimitiveElement
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.Data.Nat.Factorization.Induction
 import P2M.Util
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
 
 noncomputable section
@@ -863,4 +863,14 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_finr
 
 theorem solution (N : ℕ) [NeZero N] (hN : Squarefree N) : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N :=
   ModularCurve.finrank_adjoin_jqN_eq_of_squarefree N hN
+end
+end S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.finrank_adjoin_jqN_eq_of_squarefree (N : ℕ) [NeZero N] (hN : Squarefree N) : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree.solution
+end

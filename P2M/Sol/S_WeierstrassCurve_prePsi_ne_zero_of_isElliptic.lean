@@ -1,12 +1,11 @@
 module
 
 public import Mathlib
-public import Theorems.Thm_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi
-public import Theorems.Thm_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
-public import Theorems.Thm_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_prePsi_ne_zero_of_isElliptic
 
 set_option autoImplicit false
@@ -93,3 +92,10 @@ end WeierstrassCurve
 theorem solution {K : Type*} [Field K] (W : WeierstrassCurve K) [W.IsElliptic]
     {n : ℕ} (hn : Odd n) : W.preΨ' n ≠ 0 :=
   WeierstrassCurve.prePsi_ne_zero_of_isElliptic' W hn
+end S_WeierstrassCurve_prePsi_ne_zero_of_isElliptic
+end P2MW
+
+public section
+open Polynomial WeierstrassCurve
+theorem WeierstrassCurve.prePsi_ne_zero_of_isElliptic {K : Type*} [Field K] (W : WeierstrassCurve K) [W.IsElliptic] {n : ℕ} (hn : Odd n) : W.preΨ' n ≠ 0 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_prePsi_ne_zero_of_isElliptic.solution
+end

@@ -1,10 +1,9 @@
 module
 
 public import Definitions.Def_TateCurve_PointSeries
-public import Theorems.Thm_TateCurve_hasSum_xfun
+import P2M.Sol.S_TateCurve_hasSum_xfun
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_TateCurve_sOne_eq_tsum_xfun
 p2m_open "TateCurve P2MW.S_TateCurve_sOne_eq_tsum_xfun.TateCurve IsUltrametricDist Filter"
 open scoped NNReal
@@ -103,3 +102,11 @@ theorem solution {K : Type*} [NontriviallyNormedField K] [IsUltrametricDist K]
     rw [s₁, coeffSum, (summable_term (fun k => k) hq).tsum_eq_zero_add]
     simp
   rw [hs₁, ← hcols, hrows]
+end S_TateCurve_sOne_eq_tsum_xfun
+end P2MW
+
+public section
+open TateCurve
+open scoped NNReal
+theorem TateCurve.sOne_eq_tsum_xfun {K : Type*} [NontriviallyNormedField K] [IsUltrametricDist K] [CompleteSpace K] {q : K} (hq0 : q ≠ 0) (hq : ‖q‖₊ < 1) : s₁ q = ∑' n : ℕ, xfun (q ^ (n + 1)) := by p2m_exact_reverting @_root_.P2MW.S_TateCurve_sOne_eq_tsum_xfun.solution
+end

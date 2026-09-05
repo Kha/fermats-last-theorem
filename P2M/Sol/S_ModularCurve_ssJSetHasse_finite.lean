@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_WeierstrassCurve_HasseInvariant
 import Definitions.Def_Polynomial_DeuringPolynomial
 import Definitions.Def_ModularCurve_LegendreJ
-import Theorems.Thm_ModularCurve_ssJSetHasse_eq_image_legendreJ
+import P2M.Sol.S_ModularCurve_ssJSetHasse_eq_image_legendreJ
 import P2M.Util
 namespace P2MW.S_ModularCurve_ssJSetHasse_finite
 

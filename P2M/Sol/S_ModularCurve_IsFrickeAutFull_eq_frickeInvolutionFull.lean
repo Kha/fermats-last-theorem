@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_AtkinLehner
-import Theorems.Thm_ModularCurve_modularFunctionFieldFull_algHom_ext
+import P2M.Sol.S_ModularCurve_modularFunctionFieldFull_algHom_ext
 import P2M.Util
 namespace P2MW.S_ModularCurve_IsFrickeAutFull_eq_frickeInvolutionFull
 

@@ -2,8 +2,8 @@ import Mathlib
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_isSeparable_jqNModC_of_separable_phi_map
 p2m_open "ModularCurve P2MW.S_ModularCurve_isSeparable_jqNModC_of_separable_phi_map.ModularCurve"

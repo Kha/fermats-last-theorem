@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_EichlerMass
 import Theorems.Thm_ModularCurve_genusFormula_mul_expand
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import Theorems.Thm_ModularCurve_cuspCount_prime
 import P2M.Util
 namespace P2MW.S_ModularCurve_ssCountFormula_eq_genus

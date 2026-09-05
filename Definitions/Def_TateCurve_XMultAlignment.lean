@@ -3,10 +3,9 @@ import Definitions.Def_TateCurve_XMultStructure
 import Definitions.Def_TateCurve_TateParameter
 import Definitions.Def_WeierstrassCurve_AddFormula
 import Definitions.Def_NetPairing_Basic
-import Theorems.Thm_TateCurve_equation_pointX_pointY
+import P2M.Sol.S_TateCurve_equation_pointX_pointY
 import Theorems.Thm_TateCurve_pointX_inv
-import Theorems.Thm_TateCurve_pointX_zpow_mul
-
+import P2M.Sol.S_TateCurve_pointX_zpow_mul
 set_option autoImplicit false
 set_option linter.unusedSectionVars false
 

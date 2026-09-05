@@ -1,5 +1,5 @@
 import Definitions.Def_AlgebraicCurve_PlacesOverDVR
-import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
+import P2M.Sol.S_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import P2M.Sol.S_AlgebraicCurve_Place_ord_nonneg_of_mem
 import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
 import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero

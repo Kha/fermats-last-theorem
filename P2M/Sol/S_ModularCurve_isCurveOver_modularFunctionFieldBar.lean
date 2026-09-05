@@ -3,20 +3,20 @@ module
 public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull_unconditional
-public import Theorems.Thm_ModularCurve_laurentBaseChange_adjoin_pair
-public import Theorems.Thm_ModularCurve_functionFieldGeneration
-public import Theorems.Thm_ModularCurve_deg_ne_zero_modularFunctionFieldC
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_all
-public import Theorems.Thm_KaehlerDifferential_D_ne_zero_of_transcendental
-public import Theorems.Thm_KaehlerDifferential_span_D_eq_top_of_transcendental
+import P2M.Sol.S_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull_unconditional
+import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin_pair
+import P2M.Sol.S_ModularCurve_functionFieldGeneration
+import P2M.Sol.S_ModularCurve_deg_ne_zero_modularFunctionFieldC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all
+import P2M.Sol.S_KaehlerDifferential_D_ne_zero_of_transcendental
+import P2M.Sol.S_KaehlerDifferential_span_D_eq_top_of_transcendental
 public import Mathlib.FieldTheory.Perfect
 public import Mathlib.Algebra.CharP.Algebra
 public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
 import P2M.Util
+public import Mathlib
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_isCurveOver_modularFunctionFieldBar
 
 set_option autoImplicit false
@@ -159,4 +159,15 @@ theorem solution (N : ℕ) [NeZero N] :
   AlgebraicCurve.R0.isCurveOver_laurentBaseChange (AlgebraicClosure ℚ) N
 
 example : ∀ (N : ℕ) [NeZero N], IsCurveOver (AlgebraicClosure ℚ) (modularFunctionFieldBar N) := @solution
+end S_ModularCurve_isCurveOver_modularFunctionFieldBar
+end P2MW
 
+public section
+attribute [-instance] AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion
+attribute [-simp] ModularCurve.jqNModC_one AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom
+attribute [-simp] AlgebraicCurve.Divisor.degree_pushforwardAlong AlgebraicCurve.Pic0.coe_degZeroCorrespondence AlgebraicCurve.Place.mem_fiberAlong ModularCurve.coe_towerInclBar ModularCurve.coe_towerSubstBar ModularCurve.coe_heckeBetaBarRingHom ModularCurve.coe_heckeBetaBar ModularCurve.coe_heckeAlphaBar
+
+open AlgebraicCurve ModularCurve
+theorem ModularCurve.isCurveOver_modularFunctionFieldBar (N : ℕ) [NeZero N] :
+    IsCurveOver (AlgebraicClosure ℚ) (modularFunctionFieldBar N) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_isCurveOver_modularFunctionFieldBar.solution
+end

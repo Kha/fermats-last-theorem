@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_NodeLocalizedPlaces
-import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_ne_zero_mul_eq_isIntegral_of_mem_closure_of_mem_valuationSubring
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

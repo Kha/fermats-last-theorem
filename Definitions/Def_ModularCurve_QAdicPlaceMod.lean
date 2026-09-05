@@ -1,9 +1,8 @@
 import Mathlib
 import Definitions.Def_ModularCurve_QAdicPlace
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
-
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_of_lt
 set_option autoImplicit false
 
 noncomputable section

@@ -5,11 +5,10 @@ public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_Polynomial_DeuringPolynomial
 public import Definitions.Def_ModularCurve_LegendreJ
 public import Definitions.Def_ModularCurve_JWidth
-public import Theorems.Thm_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
-public import Theorems.Thm_ModularCurve_ssJSetHasse_eq_image_legendreJ_toFinset
+import P2M.Sol.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
+import P2M.Sol.S_ModularCurve_ssJSetHasse_eq_image_legendreJ_toFinset
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_sum_inv_jWidth_of_ssJSetHasse
 
 set_option autoImplicit false
@@ -27,3 +26,13 @@ theorem solution (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q) (K : Type*) [Field K]
     rw [hS, ssJSetHasse_eq_image_legendreJ_toFinset q hq2 K, ← Finset.coe_image, Finset.mem_coe]
   rw [hSZ]
   exact sum_inv_jWidth_of_deuringPolynomial q hq K
+end S_ModularCurve_sum_inv_jWidth_of_ssJSetHasse
+end P2MW
+
+public section
+open Polynomial ModularCurve Finset
+theorem ModularCurve.sum_inv_jWidth_of_ssJSetHasse (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q) (K : Type*) [Field K]
+    [IsAlgClosed K] [CharP K q] [DecidableEq K] (S : Finset K)
+    (hS : ∀ j, j ∈ S ↔ j ∈ ssJSetHasse q K) :
+    ∑ j ∈ S, ((jWidth j : ℚ))⁻¹ = ((q : ℚ) - 1) / 12 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_sum_inv_jWidth_of_ssJSetHasse.solution
+end

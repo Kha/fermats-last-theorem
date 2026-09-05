@@ -2,13 +2,13 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
-public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
+import P2M.Sol.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
+import P2M.Sol.S_ModularCurve_PhiGen_evalAtJ_injective
 public import Mathlib.FieldTheory.Minpoly.IsIntegrallyClosed
 public import Mathlib.RingTheory.Localization.Integral
 import P2M.Util
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_exists_phiIrreducible_of_finrank_eq
 
 noncomputable section
@@ -157,4 +157,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_exists_phiIrreducible_of_fin
 
 theorem solution (N : ℕ) [NeZero N] (h : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N) : ∃ data : ModularPolynomialData N, PhiIrreducible data :=
   ModularCurve.exists_phiIrreducible_of_finrank_eq N h
+end S_ModularCurve_exists_phiIrreducible_of_finrank_eq
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.exists_phiIrreducible_of_finrank_eq (N : ℕ) [NeZero N] (h : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N) : ∃ data : ModularPolynomialData N, PhiIrreducible data := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_phiIrreducible_of_finrank_eq.solution
+end

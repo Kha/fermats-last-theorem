@@ -3,27 +3,26 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-public import Theorems.Thm_ModularCurve_minpoly_jqN_map_eq_prod_slots
-public import Theorems.Thm_ModularCurve_jqN_prime_not_mem_full
-public import Theorems.Thm_ModularCurve_jqN_pow_not_mem_adjoin_full
-public import Theorems.Thm_ModularCurve_full_eq_adjoin_full_div_prime
-public import Theorems.Thm_ModularCurve_relfinrank_full_eq_mul
-public import Theorems.Thm_ModularCurve_jqN_div_mem_modularFunctionField
-public import Theorems.Thm_ModularCurve_modularFunctionField_eq_full_of
-public import Theorems.Thm_ModularCurve_relfinrank_modularFunctionField
-public import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime_pow
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_of_finrank_eq
-public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_minpoly_jqN_map_eq_prod_slots
+import P2M.Sol.S_ModularCurve_jqN_prime_not_mem_full
+import P2M.Sol.S_ModularCurve_jqN_pow_not_mem_adjoin_full
+import P2M.Sol.S_ModularCurve_full_eq_adjoin_full_div_prime
+import P2M.Sol.S_ModularCurve_relfinrank_full_eq_mul
+import P2M.Sol.S_ModularCurve_jqN_div_mem_modularFunctionField
+import P2M.Sol.S_ModularCurve_modularFunctionField_eq_full_of
+import P2M.Sol.S_ModularCurve_relfinrank_modularFunctionField
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_of_finrank_eq
+import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.Data.Nat.Factorization.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
 
 set_option autoImplicit false
@@ -751,4 +750,13 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_finr
 
 theorem solution (N : ℕ) [NeZero N] : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N :=
   ModularCurve.finrank_adjoin_jqN_eq_dedekindPsi N
+end S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.finrank_adjoin_jqN_eq_dedekindPsi (N : ℕ) [NeZero N] : Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN N} : Set (LaurentSeries ℚ))) = dedekindPsi N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi.solution
+end

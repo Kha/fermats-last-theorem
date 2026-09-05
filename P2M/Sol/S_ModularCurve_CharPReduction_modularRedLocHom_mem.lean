@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_CharPReduction
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_CharPReduction_modularRedLocHom_mem
 
 p2m_open "ModularCurve P2MW.S_ModularCurve_CharPReduction_modularRedLocHom_mem.ModularCurve ModularCurve.CharPReduction"
@@ -172,3 +171,13 @@ theorem solution {L : Type*} [CommRing L] (A : Subring L)
     (f : modularLocalized N A red) :
     modularRedLocHom N A red f ∈ modularFunctionFieldC k N:=
   ModularCurve.CharpSD2.redLoc_mem_mffC N A red f
+end S_ModularCurve_CharPReduction_modularRedLocHom_mem
+end P2MW
+
+public section
+open ModularCurve CharPReduction
+theorem ModularCurve.CharPReduction.modularRedLocHom_mem {L : Type*} [CommRing L] (A : Subring L)
+    {k : Type*} [Field k] (red : A →+* k) (N : ℕ) [NeZero N]
+    (f : modularLocalized N A red) :
+    modularRedLocHom N A red f ∈ modularFunctionFieldC k N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_CharPReduction_modularRedLocHom_mem.solution
+end

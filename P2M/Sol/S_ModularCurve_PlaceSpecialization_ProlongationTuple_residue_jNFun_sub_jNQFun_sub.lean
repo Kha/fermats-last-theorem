@@ -1,8 +1,8 @@
 import Mathlib
 import Definitions.Def_ModularCurve_ProlongationTuple
-import Theorems.Thm_ModularCurve_geomAut_atkinLehner_comp_legs
+import P2M.Sol.S_ModularCurve_geomAut_atkinLehner_comp_legs
 import Theorems.Thm_ModularCurve_exists_isAtkinLehnerAutFull_of_prime_of_not_dvd
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_residue_jNFun_sub_jNQFun_sub
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

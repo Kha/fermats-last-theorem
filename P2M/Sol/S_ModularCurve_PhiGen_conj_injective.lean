@@ -6,7 +6,6 @@ public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.Tactic.Linarith
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_conj_injective
 
 set_option autoImplicit false
@@ -91,4 +90,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_conj_injective.Modula
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) ℓ) : Function.Injective (conj ℓ ζ (K := K)) :=
   ModularCurve.PhiGen.conj_injective ℓ ζ hζ
+end S_ModularCurve_PhiGen_conj_injective
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.conj_injective {K : Type*} [Field K] [Algebra ℚ K] (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) ℓ) : Function.Injective (conj ℓ ζ (K := K)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_conj_injective.solution
+end

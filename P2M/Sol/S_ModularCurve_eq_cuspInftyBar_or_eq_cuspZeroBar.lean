@@ -3,25 +3,24 @@ module
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
 public import Mathlib.FieldTheory.RatFunc.AsPolynomial
-public import Theorems.Thm_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_le_finrank
-public import Theorems.Thm_AlgebraicCurve_Place_inertiaDeg_pos
+import P2M.Sol.S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_le_finrank
+import P2M.Sol.S_AlgebraicCurve_Place_inertiaDeg_pos
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import Theorems.Thm_ModularCurve_coeffEmb_jq
-public import Theorems.Thm_ModularCurve_laurentBaseChange_modularFunctionField
-public import Theorems.Thm_ModularCurve_full_eq_of_prime
-public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData_of_squarefree
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqNModC_le
-public import Theorems.Thm_ModularCurve_finiteDimensional_adjoin_jqNModC
-public import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
-public import Theorems.Thm_ModularCurve_ord_cuspZeroBar_coeffEmb_jq
-public import Theorems.Thm_ModularCurve_cuspZeroBar_ne_cuspInftyBar
-public import Theorems.Thm_ModularCurve_isCusp_cuspZeroBar
-public import Theorems.Thm_ModularCurve_isCusp_cuspInftyBar
-public import Theorems.Thm_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_laurentBaseChange_modularFunctionField
+import P2M.Sol.S_ModularCurve_full_eq_of_prime
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData_of_squarefree
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_le
+import P2M.Sol.S_ModularCurve_finiteDimensional_adjoin_jqNModC
+import P2M.Sol.S_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_ord_cuspZeroBar_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_cuspZeroBar_ne_cuspInftyBar
+import P2M.Sol.S_ModularCurve_isCusp_cuspZeroBar
+import P2M.Sol.S_ModularCurve_isCusp_cuspInftyBar
+import P2M.Sol.S_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_eq_cuspInftyBar_or_eq_cuspZeroBar
 set_option maxHeartbeats 4000000
 set_option synthInstance.maxHeartbeats 400000
@@ -235,3 +234,16 @@ open TwoCuspAux in
 theorem solution (ℓ : ℕ) [Fact ℓ.Prime] (w : Place (AlgebraicClosure ℚ) (modularFunctionFieldBar ℓ)) (hc : IsCusp (⟨coeffEmb (AlgebraicClosure ℚ) jq, coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (jq_mem_full ℓ)⟩ : modularFunctionFieldBar ℓ) w) :
     w = cuspInftyBar ℓ ∨ w = cuspZeroBar ℓ :=
   TwoCuspAux.eq_cuspInftyBar_or_eq_cuspZeroBar ℓ (isFrickeAutFull_frickeInvolutionFull_prime ℓ) w hc
+end
+end S_ModularCurve_eq_cuspInftyBar_or_eq_cuspZeroBar
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.Place.instIsPrimeCenter AlgebraicCurve.Place.instIsFractionRingIntegralClosureAt AlgebraicCurve.Place.instIsTorsionFreeSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.Place.instIsDedekindDomainIntegralClosureAt AlgebraicCurve.Place.instFiniteSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion
+attribute [-simp] AlgebraicCurve.Place.placeOfPrime_toValuationSubring AlgebraicCurve.Place.mem_fiberOver AlgebraicCurve.Place.fiberEquiv_symm_apply AlgebraicCurve.Place.fiberEquiv_apply AlgebraicCurve.Place.centerHeightOneSpectrum_asIdeal AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom
+attribute [-simp] ModularCurve.jqNModC_one
+
+open ModularCurve AlgebraicCurve
+
+theorem ModularCurve.eq_cuspInftyBar_or_eq_cuspZeroBar (ℓ : ℕ) [Fact ℓ.Prime] (w : Place (AlgebraicClosure ℚ) (modularFunctionFieldBar ℓ)) (hc : IsCusp (⟨coeffEmb (AlgebraicClosure ℚ) jq, coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (jq_mem_full ℓ)⟩ : modularFunctionFieldBar ℓ) w) : w = cuspInftyBar ℓ ∨ w = cuspZeroBar ℓ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_eq_cuspInftyBar_or_eq_cuspZeroBar.solution
+end

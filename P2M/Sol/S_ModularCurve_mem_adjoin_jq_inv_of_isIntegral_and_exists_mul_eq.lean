@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_GaloisRep_Flat
-import Theorems.Thm_ModularCurve_transcendental_jq
+import P2M.Sol.S_ModularCurve_transcendental_jq
 import Theorems.Thm_GaloisRep_isDiscreteValuationRing_ratLocalizedAt
 import Theorems.Thm_GaloisRep_isFractionRing_ratLocalizedAt
 import P2M.Util

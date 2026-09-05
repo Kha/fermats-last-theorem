@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_X0
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_aeval_jq_eq_zero
 
 open ModularCurve IntermediateField
@@ -29,4 +28,11 @@ theorem solution {p : Polynomial ℚ} (hp : Polynomial.aeval jq p = 0) : p = 0 :
   simp only [HahnSeries.coeff_zero] at hcoeff
   exact hp0 (Polynomial.leadingCoeff_eq_zero.mp hcoeff.symm)
 
+end
+end S_ModularCurve_aeval_jq_eq_zero
+end P2MW
+
+public section
+open ModularCurve IntermediateField
+theorem ModularCurve.aeval_jq_eq_zero {p : Polynomial ℚ} (hp : Polynomial.aeval jq p = 0) : p = 0 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_aeval_jq_eq_zero.solution
 end

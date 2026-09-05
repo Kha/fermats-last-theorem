@@ -6,7 +6,7 @@ import Mathlib.FieldTheory.IntermediateField.Adjoin.Defs
 import Mathlib.LinearAlgebra.Lagrange
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 import Mathlib.RingTheory.Adjoin.Polynomial.Basic
-import Theorems.Thm_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
+import P2M.Sol.S_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
 import P2M.Util
 namespace P2MW.S_ModularForm_exists_polynomial_aeval_qExpansion_div_eq_zero_of_isArithmetic
 

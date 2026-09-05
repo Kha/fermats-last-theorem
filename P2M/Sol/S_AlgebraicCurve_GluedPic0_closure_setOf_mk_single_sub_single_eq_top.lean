@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_AlgebraicCurve_GluedPic0
-import Theorems.Thm_AlgebraicCurve_Place_exists_forall_ord_eq
+import P2M.Sol.S_AlgebraicCurve_Place_exists_forall_ord_eq
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_GluedPic0_closure_setOf_mk_single_sub_single_eq_top
 

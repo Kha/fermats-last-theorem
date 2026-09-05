@@ -1,6 +1,6 @@
 import Definitions.Def_ModularCurve_CharPReduction
 import Definitions.Def_ModularCurve_CoeffSemilinearAut
-import Theorems.Thm_ModularCurve_pow_char_eq_map_frobenius_qExpand
+import P2M.Sol.S_ModularCurve_pow_char_eq_map_frobenius_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_coeffMap_pow_char_eq_qExpand_of_frobenius
 

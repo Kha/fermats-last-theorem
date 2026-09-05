@@ -4,11 +4,10 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_PlaceSpecialization
 public import Definitions.Def_ModularCurve_SpecializeModuli
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_sp_eq_charLGeomPlaceOfPoint_of_ord_pos
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_sp_eq_placeInfty_of_forall_ord_le_zero
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_sp_eq_charLGeomPlaceOfPoint_of_ord_pos
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_sp_eq_placeInfty_of_forall_ord_le_zero
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_isAlgClosed
 
 set_option autoImplicit false
@@ -93,3 +92,22 @@ theorem solution
     have hdvd : (Polynomial.X - Polynomial.C (red a)) ∣ p :=
       Ideal.span_singleton_le_span_singleton.mp hideal.le
     exact Polynomial.dvd_iff_isRoot.mp hdvd
+end S_ModularCurve_PlaceSpecialization_isAlgClosed
+end P2MW
+
+public section
+attribute [-simp] ModularCurve.charLGeomModuliDictionary_single ModularCurve.specializeModuli_single ModularCurve.specializePlace_def AlgebraicCurve.RationalFunctionField.placeInfty_toValuationSubring
+
+set_option autoImplicit false
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+
+open AlgebraicCurve ModularCurve
+theorem ModularCurve.PlaceSpecialization.isAlgClosed
+    {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)}
+    {k : Type*} [Field k] [CharP k q] {red : A →+* k}
+    {data : ModularPolynomialData q} {hKr : KroneckerCongruence q data}
+    {hα : HeckeAlphaBarIntegral (AlgebraicClosure ℚ) 1 q}
+    {hβ : HeckeBetaBarIntegral (AlgebraicClosure ℚ) 1 q}
+    (P : PlaceSpecialization A q 1 data hKr k red hα hβ) : IsAlgClosed k := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PlaceSpecialization_isAlgClosed.solution
+end

@@ -3,7 +3,6 @@ module
 public import Mathlib
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_kaehlerRankOne_of_transcendental
 
 set_option autoImplicit false
@@ -75,3 +74,14 @@ theorem solution
     (hsep : Algebra.IsSeparable (IntermediateField.adjoin K ({x} : Set F)) F) :
     Module.Free F Ω[F⁄K] ∧ Module.finrank F Ω[F⁄K] = 1 := by
   exact S12Kaehler.kaehlerRankOne_of_transcendental htr hsep
+end S_AlgebraicCurve_kaehlerRankOne_of_transcendental
+end P2MW
+
+public section
+open KaehlerDifferential
+theorem AlgebraicCurve.kaehlerRankOne_of_transcendental
+    {K F : Type*} [Field K] [Field F] [Algebra K F]
+    {x : F} (htr : Transcendental K x)
+    (hsep : Algebra.IsSeparable (IntermediateField.adjoin K ({x} : Set F)) F) :
+    Module.Free F Ω[F⁄K] ∧ Module.finrank F Ω[F⁄K] = 1 := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_kaehlerRankOne_of_transcendental.solution
+end

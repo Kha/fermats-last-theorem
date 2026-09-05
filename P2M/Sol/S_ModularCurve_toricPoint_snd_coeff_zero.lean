@@ -7,7 +7,6 @@ public import Mathlib.RingTheory.MvPowerSeries.Substitution
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_toricPoint_snd_coeff_zero
 
 set_option autoImplicit false
@@ -1649,4 +1648,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_zero.Mo
 
 theorem solution (K : Type*) [Field K] (p : ℕ) (c : K) : (toricPoint K p c).2.coeff 0 = c ^ 2 / (1 - c) ^ 3 :=
   ModularCurve.toricPoint_snd_coeff_zero K p c
+end S_ModularCurve_toricPoint_snd_coeff_zero
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.toricPoint_snd_coeff_zero (K : Type*) [Field K] (p : ℕ) (c : K) : (toricPoint K p c).2.coeff 0 = c ^ 2 / (1 - c) ^ 3 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_zero.solution
+end

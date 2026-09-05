@@ -1,13 +1,12 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
-public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 public import Mathlib.NumberTheory.ModularForms.Discriminant
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_hasSum_jNum_qParam
 
 set_option autoImplicit false
@@ -236,4 +235,10 @@ theorem solution (τ : UpperHalfPlane) : HasSum (fun m : ℕ => ((PowerSeries.co
   rw [qExpansion_qJ] at h
   refine h.congr_fun fun m => ?_
   rw [PowerSeries.coeff_map, smul_eq_mul, eq_intCast]
+end
+end S_ModularCurve_hasSum_jNum_qParam
+end P2MW
+
+public section
+theorem ModularCurve.hasSum_jNum_qParam (τ : UpperHalfPlane) : HasSum (fun m : ℕ => ((PowerSeries.coeff m ModularCurve.jNum : ℤ) : ℂ) * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (Function.Periodic.qParam 1 (τ : ℂ) * (ModularForm.E₄ τ ^ 3 / ModularForm.discriminant τ)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_hasSum_jNum_qParam.solution
 end

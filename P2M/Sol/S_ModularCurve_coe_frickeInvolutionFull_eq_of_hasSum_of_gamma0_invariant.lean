@@ -12,27 +12,28 @@ public import Mathlib.GroupTheory.Perm.Fin
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffEmb_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_exists_galoisPerm
-public import Theorems.Thm_ModularCurve_PhiGen_mem_range_coeffEmb_of_forall_coeffMap_eq
-public import Theorems.Thm_ModularCurve_PhiGen_mem_range_coeffEmb_qExpand_of_mem_inter
-public import Theorems.Thm_ModularCurve_PhiGen_conj_injective
-public import Theorems.Thm_ModularCurve_mem_range_qExpand_of_qTwist_eq
-public import Theorems.Thm_ModularCurve_hasSum_jq_qParam
-public import Theorems.Thm_ModularCurve_E4_cube_div_discriminant_smul
-public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
-public import Theorems.Thm_ModularCurve_hasSum_qParam_heckeMatrix_smul
-public import Theorems.Thm_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
-public import Theorems.Thm_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
-public import Theorems.Thm_ModularCurve_exists_perm_gamma0_cosetReps
-public import Theorems.Thm_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
-public import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_exists_galoisPerm
+import P2M.Sol.S_ModularCurve_PhiGen_mem_range_coeffEmb_of_forall_coeffMap_eq
+import P2M.Sol.S_ModularCurve_PhiGen_mem_range_coeffEmb_qExpand_of_mem_inter
+import P2M.Sol.S_ModularCurve_PhiGen_conj_injective
+import P2M.Sol.S_ModularCurve_mem_range_qExpand_of_qTwist_eq
+import P2M.Sol.S_ModularCurve_hasSum_jq_qParam
+import P2M.Sol.S_ModularCurve_E4_cube_div_discriminant_smul
+import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
+import P2M.Sol.S_ModularCurve_hasSum_qParam_heckeMatrix_smul
+import P2M.Sol.S_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
+import P2M.Sol.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
+import P2M.Sol.S_ModularCurve_exists_perm_gamma0_cosetReps
+import P2M.Sol.S_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
+import P2M.Sol.S_ModularCurve_laurent_qParam_coeff_unique
 public import Definitions.Def_ModularCurve_AtkinLehner
-public import Theorems.Thm_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
+import P2M.Sol.S_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
 import P2M.Util
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
+public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_coe_frickeInvolutionFull_eq_of_hasSum_of_gamma0_invariant
 
 set_option autoImplicit false
@@ -1157,3 +1158,12 @@ theorem solution (ℓ : ℕ) [Fact (Nat.Prime ℓ)] (f g : LaurentSeries ℚ) (F
   exact ModularCurve.QExpN.fricke_transport ℓ hzu.unit hζ (ModularCurve.QExpN.sigma ℓ hzu.unit hζ)
     (ModularCurve.QExpN.sigma_zeta ℓ hzu.unit hζ) f g F hF hG hinv (ModularCurve.frickeInvolutionFull ℓ)
     (ModularCurve.isFrickeAutFull_frickeInvolutionFull_prime ℓ) hf
+end S_ModularCurve_coe_frickeInvolutionFull_eq_of_hasSum_of_gamma0_invariant
+end P2MW
+
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
+
+theorem ModularCurve.coe_frickeInvolutionFull_eq_of_hasSum_of_gamma0_invariant (ℓ : ℕ) [Fact (Nat.Prime ℓ)] (f g : LaurentSeries ℚ) (F : UpperHalfPlane → ℂ) (hF : ∀ τ : UpperHalfPlane, HasSum (fun m : ℤ => ((f.coeff m : ℚ) : ℂ) * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (F τ)) (hG : ∀ τ : UpperHalfPlane, HasSum (fun m : ℤ => ((g.coeff m : ℚ) : ℂ) * Function.Periodic.qParam ℓ (τ : ℂ) ^ m) (F (ModularGroup.S • τ))) (hinv : ∀ γ ∈ CongruenceSubgroup.Gamma0 ℓ, ∀ τ : UpperHalfPlane, F (γ • τ) = F τ) (hf : f ∈ ModularCurve.modularFunctionFieldFull ℓ) : ((ModularCurve.frickeInvolutionFull ℓ ⟨f, hf⟩ : ModularCurve.modularFunctionFieldFull ℓ) : LaurentSeries ℚ) = g := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_coe_frickeInvolutionFull_eq_of_hasSum_of_gamma0_invariant.solution
+end

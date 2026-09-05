@@ -1,8 +1,8 @@
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import Mathlib.Algebra.Polynomial.Bivariate
 import Mathlib.FieldTheory.Separable

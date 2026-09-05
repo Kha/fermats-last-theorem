@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_FLTPrelim_Ramification
-import Theorems.Thm_ValuationSubring_isAlgClosed_residueField
+import P2M.Sol.S_ValuationSubring_isAlgClosed_residueField
 import P2M.Util
 namespace P2MW.S_ValuationSubring_nonempty_ringHom_residueField_of_finite_of_charP
 set_option autoImplicit false

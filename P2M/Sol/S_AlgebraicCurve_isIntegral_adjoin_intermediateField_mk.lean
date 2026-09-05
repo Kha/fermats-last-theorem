@@ -5,7 +5,6 @@ public import Mathlib.Algebra.Algebra.Subalgebra.Lattice
 public import Mathlib.FieldTheory.IntermediateField.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_isIntegral_adjoin_intermediateField_mk
 
 set_option autoImplicit false
@@ -46,3 +45,9 @@ theorem solution {L F : Type*} [Field L] [Field F] [Algebra L F] (E : Intermedia
     { toRingHom := (E.val : E →+* F), commutes' := fun t => rfl }
   have hinjf : Function.Injective f := hinjE
   exact (isIntegral_algHom_iff f hinjf).mp hxT
+end S_AlgebraicCurve_isIntegral_adjoin_intermediateField_mk
+end P2MW
+
+public section
+theorem AlgebraicCurve.isIntegral_adjoin_intermediateField_mk {L F : Type*} [Field L] [Field F] [Algebra L F] (E : IntermediateField L F) {j x : F} (hj : j ∈ E) (hx : x ∈ E) (h : IsIntegral (Algebra.adjoin L {j}) x) : IsIntegral (Algebra.adjoin L {(⟨j, hj⟩ : E)}) (⟨x, hx⟩ : E) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_isIntegral_adjoin_intermediateField_mk.solution
+end

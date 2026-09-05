@@ -3,17 +3,16 @@ module
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_SupersingularModuli
-public import Theorems.Thm_WeierstrassCurve_natDegree_hasseInvariant_jFamily
-public import Theorems.Thm_WeierstrassCurve_eval_hasseInvariant_jFamily_eq_zero_of_mem_ssJSet
-public import Theorems.Thm_WeierstrassCurve_mem_ssJSet_of_eval_hasseInvariant_jFamily_eq_zero
-public import Theorems.Thm_WeierstrassCurve_rootMultiplicity_hasseInvariant_jFamily_eq_one
-public import Theorems.Thm_ModularCurve_card_eq_of_ssJSet
-public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
-public import Theorems.Thm_ModularCurve_zero_mem_ssJSetHasse_iff
-public import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
+import P2M.Sol.S_WeierstrassCurve_natDegree_hasseInvariant_jFamily
+import P2M.Sol.S_WeierstrassCurve_eval_hasseInvariant_jFamily_eq_zero_of_mem_ssJSet
+import P2M.Sol.S_WeierstrassCurve_mem_ssJSet_of_eval_hasseInvariant_jFamily_eq_zero
+import P2M.Sol.S_WeierstrassCurve_rootMultiplicity_hasseInvariant_jFamily_eq_one
+import P2M.Sol.S_ModularCurve_card_eq_of_ssJSet
+import P2M.Sol.S_ModularCurve_ssJSet_eq_ssJSetHasse
+import P2M.Sol.S_ModularCurve_zero_mem_ssJSetHasse_iff
+import P2M.Sol.S_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_jFamily
 
 set_option autoImplicit false
@@ -192,3 +191,21 @@ theorem solution
       (1 + 1728 * Polynomial.X) ^ (2 * m + e₄ + e₆) *
         ∏ a ∈ S₀ \ {0, 1728}, (1 + Polynomial.C (1728 - a) * Polynomial.X) :=
   WeierstrassCurve.DKasm.main q hq m e₄ e₆ hm he₄ he₆ k S₀ hS₀
+end S_WeierstrassCurve_hasseInvariant_jFamily
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+open ModularCurve
+
+theorem WeierstrassCurve.hasseInvariant_jFamily
+    (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
+    (m e₄ e₆ : ℕ) (hm : 12 * m + 4 * e₄ + 6 * e₆ = q - 1) (he₄ : e₄ ≤ 2) (he₆ : e₆ ≤ 1)
+    (k : Type*) [Field k] [CharP k q] [IsAlgClosed k] [DecidableEq k]
+    (S₀ : Finset k) (hS₀ : ∀ a, a ∈ S₀ ↔ a ∈ ssJSet q k) :
+    WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k)) =
+      (1 + 1728 * Polynomial.X) ^ (2 * m + e₄ + e₆) *
+        ∏ a ∈ S₀ \ {0, 1728}, (1 + Polynomial.C (1728 - a) * Polynomial.X) := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_hasseInvariant_jFamily.solution
+end

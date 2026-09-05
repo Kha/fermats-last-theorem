@@ -1,9 +1,9 @@
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_coeffEmb_qExpand
-import Theorems.Thm_ModularCurve_transcendental_jq
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_transcendental_jq
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import Mathlib.Algebra.Polynomial.Roots
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 import Mathlib.FieldTheory.Minpoly.Field

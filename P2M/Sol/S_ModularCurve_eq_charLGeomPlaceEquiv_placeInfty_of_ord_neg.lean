@@ -3,10 +3,9 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_SpecializeModuli
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_eq_placeInfty_of_ord_X_neg
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_eq_placeInfty_of_ord_X_neg
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg
 
 p2m_open "AlgebraicCurve ModularCurve P2MW.S_ModularCurve_eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg.ModularCurve"
@@ -41,3 +40,13 @@ theorem solution
   obtain ⟨v₀, rfl⟩ := (charLGeomPlaceEquiv k).surjective v
   rw [← ModularCurve.ratFuncEquivCharLOneC_X, ModularCurve.ord_charLGeomPlaceEquiv] at h
   rw [RationalFunctionField.eq_placeInfty_of_ord_X_neg v₀ h]
+end S_ModularCurve_eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg
+end P2MW
+
+public section
+open AlgebraicCurve ModularCurve
+theorem ModularCurve.eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg
+    {k : Type*} [Field k] [DecidableEq (RatFunc k)] {v : Place k ↥(modularFunctionFieldC k 1)}
+    (h : v.ord ((⟨jqModC k, jqModC_mem k 1⟩ : modularFunctionFieldC k 1)) < 0) :
+    v = charLGeomPlaceEquiv k (RationalFunctionField.placeInfty k) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg.solution
+end

@@ -3,16 +3,16 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
-public import Theorems.Thm_ModularCurve_coeffMap_injective
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
+import P2M.Sol.S_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Util
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_full_eq_adjoin_primes
 
 set_option autoImplicit false
@@ -599,4 +599,13 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_full
 
 theorem solution (N : ℕ) [NeZero N] (hN : Squarefree N) : modularFunctionFieldFull N = IntermediateField.adjoin ℚ (insert jq {x : LaurentSeries ℚ | ∃ p ∈ N.primeFactors, ∃ _ : NeZero p, x = jqN p}) :=
   ModularCurve.full_eq_adjoin_primes N hN
+end S_ModularCurve_full_eq_adjoin_primes
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.full_eq_adjoin_primes (N : ℕ) [NeZero N] (hN : Squarefree N) : modularFunctionFieldFull N = IntermediateField.adjoin ℚ (insert jq {x : LaurentSeries ℚ | ∃ p ∈ N.primeFactors, ∃ _ : NeZero p, x = jqN p}) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_full_eq_adjoin_primes.solution
+end

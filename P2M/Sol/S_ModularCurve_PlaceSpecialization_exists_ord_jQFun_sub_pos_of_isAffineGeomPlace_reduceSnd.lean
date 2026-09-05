@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_ProlongationTuple
 import Theorems.Thm_AlgebraicCurve_Place_one_le_ramificationIndexAlong
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_PlaceSpecialization_exists_ord_jQFun_sub_pos_of_isAffineGeomPlace_reduceSnd
 set_option synthInstance.maxHeartbeats 1600000

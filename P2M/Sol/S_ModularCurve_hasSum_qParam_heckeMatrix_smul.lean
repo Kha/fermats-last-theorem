@@ -5,7 +5,6 @@ public import Mathlib.RingTheory.LaurentSeries
 public import Definitions.Def_ModularForm_HeckeOperator
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_hasSum_qParam_heckeMatrix_smul
 
 set_option autoImplicit false
@@ -56,3 +55,9 @@ end
 
 theorem solution (ℓ : ℕ) [NeZero ℓ] (b : ℕ) (A : LaurentSeries ℂ) (F : UpperHalfPlane → ℂ) (hA : ∀ τ : UpperHalfPlane, HasSum (fun m : ℤ => A.coeff m * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (F τ)) (τ : UpperHalfPlane) : HasSum (fun m : ℤ => (Complex.exp (2 * Real.pi * Complex.I * b * m / ℓ) * A.coeff m) * Function.Periodic.qParam ℓ (τ : ℂ) ^ m) (F (ModularForm.heckeMatrix ℓ b • τ)) :=
   ModularCurve.Realized.hasSum_qParam_heckeMatrix_smul' ℓ b A F hA τ
+end S_ModularCurve_hasSum_qParam_heckeMatrix_smul
+end P2MW
+
+public section
+theorem ModularCurve.hasSum_qParam_heckeMatrix_smul (ℓ : ℕ) [NeZero ℓ] (b : ℕ) (A : LaurentSeries ℂ) (F : UpperHalfPlane → ℂ) (hA : ∀ τ : UpperHalfPlane, HasSum (fun m : ℤ => A.coeff m * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (F τ)) (τ : UpperHalfPlane) : HasSum (fun m : ℤ => (Complex.exp (2 * Real.pi * Complex.I * b * m / ℓ) * A.coeff m) * Function.Periodic.qParam ℓ (τ : ℂ) ^ m) (F (ModularForm.heckeMatrix ℓ b • τ)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_hasSum_qParam_heckeMatrix_smul.solution
+end

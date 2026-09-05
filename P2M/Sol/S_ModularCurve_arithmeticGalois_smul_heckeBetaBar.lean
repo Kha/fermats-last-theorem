@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_HeckeOperator
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_arithmeticGalois_smul_heckeBetaBar
 

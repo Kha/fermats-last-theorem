@@ -1,11 +1,10 @@
 module
 
 public import Definitions.Def_ModularCurve_AtkinLehner
-public import Theorems.Thm_ModularCurve_exists_isFrickeAut
-public import Theorems.Thm_ModularCurve_full_eq_of_prime
+import P2M.Sol.S_ModularCurve_exists_isFrickeAut
+import P2M.Sol.S_ModularCurve_full_eq_of_prime
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_exists_isFrickeAutFull
 
 set_option autoImplicit false
@@ -58,4 +57,11 @@ theorem solution (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] : ∃ σ : modularFun
     rw [hσ']
     exact H _ _ rfl
 
+end
+end S_ModularCurve_exists_isFrickeAutFull
+end P2MW
+
+public section
+open ModularCurve AlgebraicCurve IntermediateField
+theorem ModularCurve.exists_isFrickeAutFull (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] : ∃ σ : modularFunctionFieldFull ℓ ≃ₐ[ℚ] modularFunctionFieldFull ℓ, IsFrickeAutFull ℓ σ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_isFrickeAutFull.solution
 end

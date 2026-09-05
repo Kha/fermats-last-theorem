@@ -3,7 +3,7 @@ import Definitions.Def_ModularCurve_FrobeniusModL
 import Definitions.Def_ModularCurve_QExpansionDiff
 import Theorems.Thm_ModularCurve_qExpansionDiffAlong_D
 import Theorems.Thm_ModularCurve_qExpansionDiffAlong_smul
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_coeff_qExpansionDiffAlong_dlog_of_frobeniusModL_eq_pow
 

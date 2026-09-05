@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_NodeDescent
-import Theorems.Thm_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
+import P2M.Sol.S_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
 import P2M.Util
 namespace P2MW.S_ModularCurve_NodeLocalized_exists_coeffSubring_inertQuadratic_cubeRoot
 set_option synthInstance.maxHeartbeats 1600000

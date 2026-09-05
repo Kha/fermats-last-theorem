@@ -1,7 +1,7 @@
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
 import P2M.Util
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_of_mul
 

@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_IgusaScheme
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import Theorems.Thm_ModularCurve_ModularPolynomialData_evalSymm_of_one_lt
 import P2M.Util
 namespace P2MW.S_ModularCurve_IgusaScheme_jqN_mem_chartAlgFin_and_jFull_mem_chartAlg_jqN

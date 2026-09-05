@@ -1,6 +1,6 @@
 import Definitions.Def_ModularCurve_CharLDegeneracyHecke
-import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
-import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
 import P2M.Util
 namespace P2MW.S_ModularCurve_heckeAlphaCIntegral_unconditional
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

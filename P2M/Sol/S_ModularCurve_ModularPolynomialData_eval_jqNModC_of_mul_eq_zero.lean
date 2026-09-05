@@ -4,11 +4,10 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_injective
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
 
 open ModularCurve IntermediateField Polynomial
@@ -49,3 +48,9 @@ theorem solution {ℓ : ℕ} [NeZero ℓ] (data : ModularCurve.ModularPolynomial
     exact hQ
   have := congrArg (coeffMap (Int.castRingHom K)) hZ
   rwa [coeffMap_eval₂_jqNModC, map_zero] at this
+end S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
+end P2MW
+
+public section
+theorem ModularCurve.ModularPolynomialData.eval_jqNModC_of_mul_eq_zero {ℓ : ℕ} [NeZero ℓ] (data : ModularCurve.ModularPolynomialData ℓ) (hsymm : ModularCurve.EvalSymm data.Φ) (K : Type*) [CommRing K] (d : ℕ) [NeZero d] : data.Φ.eval₂ (Polynomial.aeval (R := ℤ) (ModularCurve.jqNModC K (d * ℓ))).toRingHom (ModularCurve.jqNModC K d) = 0 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero.solution
+end

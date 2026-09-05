@@ -9,15 +9,14 @@ public import Definitions.Def_AlgebraicCurve_AdelicIndex
 public import Definitions.Def_AlgebraicCurve_PoleDivisorPackage
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import Theorems.Thm_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_ord_placeInfty
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_deg_placeInfty
-public import Theorems.Thm_AlgebraicCurve_Place_exists_restrict_eq
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
+import P2M.Sol.S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_placeInfty
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_deg_placeInfty
+import P2M.Sol.S_AlgebraicCurve_Place_exists_restrict_eq
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
 import P2M.Util
 public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase
 attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
 attribute [-simp] AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none
@@ -2547,3 +2546,15 @@ p2m_open "AlgebraicCurve~Place.ord_nonneg_of_mem~Place.mem_of_ord_nonneg~Place.m
 theorem solution (K : Type*) [Field K] (F : Type*) [Field F] [Algebra K F] (hC : ConstantsAreBase K F) :
     FiniteDimensional K (LSpace (0 : Divisor K F)) :=
   AlgebraicCurve.RationalFunctionField.finiteDimensional_lSpace_zero_of_constantsAreBase_port (K := K) (F := F) (hC := hC)
+end S_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
+attribute [-simp] AlgebraicCurve.Divisor.evalFun_zero AlgebraicCurve.Place.evalAt_one AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none
+
+namespace AlgebraicCurve
+theorem RationalFunctionField.finiteDimensional_lSpace_zero_of_constantsAreBase (K : Type*) [Field K] (F : Type*) [Field F] [Algebra K F] (hC : ConstantsAreBase K F) :
+    FiniteDimensional K (LSpace (0 : Divisor K F)) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase.solution
+end AlgebraicCurve
+end

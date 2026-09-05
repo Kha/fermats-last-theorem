@@ -3,7 +3,7 @@ import Mathlib.NumberTheory.ArithmeticFunction.Misc
 import Mathlib.FieldTheory.Finite.Basic
 import Theorems.Thm_ModularForm_exists_gamma0_qExpansion_eq_of_levelOne
 import Theorems.Thm_ModularForm_exists_degeneracy_Gamma0
-import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 import P2M.Util
 namespace P2MW.S_ModPForms_mk_sigma_one_sub_sigma_one_div_mem_modPMod_four_of_dvd
 set_option autoImplicit false

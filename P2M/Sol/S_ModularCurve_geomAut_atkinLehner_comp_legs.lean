@@ -3,10 +3,9 @@ module
 public import Definitions.Def_ModularCurve_AtkinLehnerPartial
 public import Definitions.Def_ModularCurve_HeckeOperator
 public import Definitions.Def_ModularCurve_GeometricBaseChange
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_geomAut_atkinLehner_comp_legs
 
 set_option autoImplicit false
@@ -195,3 +194,10 @@ open ModularCurve in
 
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] [Algebra.IsAlgebraic ℚ L] (N ℓ : ℕ) [NeZero N] [NeZero ℓ] (σ : modularFunctionFieldFull (N * ℓ) ≃ₐ[ℚ] modularFunctionFieldFull (N * ℓ)) (hσ : IsAtkinLehnerAutFull N ℓ σ) : (geomAut L (modularFunctionFieldFull (N * ℓ)) σ).toAlgHom.comp (heckeAlphaBar L N ℓ) = heckeBetaBar L N ℓ ∧ (geomAut L (modularFunctionFieldFull (N * ℓ)) σ).toAlgHom.comp (heckeBetaBar L N ℓ) = heckeAlphaBar L N ℓ :=
   ⟨AL2Sol.geomAut_comp_alpha N ℓ σ hσ L, AL2Sol.geomAut_comp_beta N ℓ σ hσ L⟩
+end S_ModularCurve_geomAut_atkinLehner_comp_legs
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.geomAut_atkinLehner_comp_legs (L : Type*) [Field L] [Algebra ℚ L] [Algebra.IsAlgebraic ℚ L] (N ℓ : ℕ) [NeZero N] [NeZero ℓ] (σ : modularFunctionFieldFull (N * ℓ) ≃ₐ[ℚ] modularFunctionFieldFull (N * ℓ)) (hσ : IsAtkinLehnerAutFull N ℓ σ) : (geomAut L (modularFunctionFieldFull (N * ℓ)) σ).toAlgHom.comp (heckeAlphaBar L N ℓ) = heckeBetaBar L N ℓ ∧ (geomAut L (modularFunctionFieldFull (N * ℓ)) σ).toAlgHom.comp (heckeBetaBar L N ℓ) = heckeAlphaBar L N ℓ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_geomAut_atkinLehner_comp_legs.solution
+end

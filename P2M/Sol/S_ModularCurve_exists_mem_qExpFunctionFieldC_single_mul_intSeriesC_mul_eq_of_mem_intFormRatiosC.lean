@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X1
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_mem_qExpFunctionFieldC_single_mul_intSeriesC_mul_eq_of_mem_intFormRatiosC
 

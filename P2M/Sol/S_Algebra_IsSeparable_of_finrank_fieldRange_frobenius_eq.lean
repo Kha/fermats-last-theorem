@@ -3,8 +3,12 @@ module
 public import Mathlib.RingTheory.Unramified.Field
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import P2M.Util
+public import Mathlib.Algebra.CharP.Frobenius
+public import Mathlib.Algebra.Field.Subfield.Basic
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
+public import Mathlib.FieldTheory.Separable
 
-@[expose] public section
 namespace P2MW.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
 
 set_option autoImplicit false
@@ -73,3 +77,9 @@ theorem solution
     exact (Submodule.mem_bot F).mp (hle hω)
   haveI : Algebra.FormallyUnramified E F := ⟨inferInstance⟩
   exact Algebra.FormallyUnramified.isSeparable E F
+end S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
+end P2MW
+
+public section
+theorem Algebra.IsSeparable.of_finrank_fieldRange_frobenius_eq {E F : Type*} [Field E] [Field F] [Algebra E F] [FiniteDimensional E F] (p : ℕ) [Fact p.Prime] [CharP F p] (hdeg : Module.finrank (frobenius F p).fieldRange F = p) (y : E) (hy : algebraMap E F y ∉ (frobenius F p).fieldRange) : Algebra.IsSeparable E F := by p2m_exact_reverting @_root_.P2MW.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq.solution
+end

@@ -1,8 +1,8 @@
 import Mathlib
 import Definitions.Def_ModularCurve_SupersingularModuli
-import Theorems.Thm_ModularCurve_zero_mem_ssJSet_of_lt_five
-import Theorems.Thm_ModularCurve_ssJSet_finite
-import Theorems.Thm_ModularCurve_card_eq_of_ssJSet
+import P2M.Sol.S_ModularCurve_zero_mem_ssJSet_of_lt_five
+import P2M.Sol.S_ModularCurve_ssJSet_finite
+import P2M.Sol.S_ModularCurve_card_eq_of_ssJSet
 import P2M.Util
 namespace P2MW.S_ModularCurve_ssJSet_nonempty
 attribute [-instance] WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly

@@ -3,10 +3,9 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_SpecializeModuli
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos
 attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
 attribute [-simp] AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none
@@ -116,3 +115,17 @@ theorem solution
   rw [key, ModularCurve.ord_charLGeomPlaceEquiv] at h
   rw [RationalFunctionField.eq_placeOfPoint_of_ord_X_sub_pos k v₀ c h]
   rfl
+end S_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
+attribute [-simp] AlgebraicCurve.RationalFunctionField.placeInfty_toValuationSubring AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none AlgebraicCurve.Divisor.evalFun_zero AlgebraicCurve.Place.evalAt_one
+
+open AlgebraicCurve ModularCurve
+theorem ModularCurve.eq_charLGeomPlaceOfPoint_of_ord_pos
+    {k : Type*} [Field k] {v : Place k ↥(modularFunctionFieldC k 1)} {c : k}
+    (h : 0 < v.ord ((⟨jqModC k, jqModC_mem k 1⟩ : modularFunctionFieldC k 1)
+      - algebraMap k (modularFunctionFieldC k 1) c)) :
+    v = charLGeomPlaceOfPoint k c := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos.solution
+end

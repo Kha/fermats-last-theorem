@@ -2,8 +2,8 @@ import Mathlib
 import Definitions.Def_ModularCurve_TateFormal
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_WeierstrassCurve_Generic
-import Theorems.Thm_ModularCurve_j_tateLaurent
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_j_tateLaurent
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_algebraicIndependent_variableChange_tateLaurent
 

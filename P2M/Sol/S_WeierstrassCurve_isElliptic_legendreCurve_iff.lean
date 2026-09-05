@@ -5,7 +5,6 @@ public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_LegendreJ
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_isElliptic_legendreCurve_iff
 
 set_option autoImplicit false
@@ -92,3 +91,11 @@ p2m_open "WeierstrassCurve P2MW.S_WeierstrassCurve_isElliptic_legendreCurve_iff.
 theorem solution {K : Type*} [Field K] (t : K) (h2 : (2 : K) ≠ 0) :
     (legendreCurve t).IsElliptic ↔ t ≠ 0 ∧ t ≠ 1 :=
   WeierstrassCurve.isElliptic_legendreCurve_iff' t h2
+end S_WeierstrassCurve_isElliptic_legendreCurve_iff
+end P2MW
+
+public section
+open WeierstrassCurve
+theorem WeierstrassCurve.isElliptic_legendreCurve_iff {K : Type*} [Field K] (t : K) (h2 : (2 : K) ≠ 0) :
+    (legendreCurve t).IsElliptic ↔ t ≠ 0 ∧ t ≠ 1 := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_isElliptic_legendreCurve_iff.solution
+end

@@ -5,13 +5,13 @@ public import Mathlib.FieldTheory.Relrank
 public import Mathlib.RingTheory.AlgebraTower
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 public import Definitions.Def_ModularCurve_QAdicPlace
-public import Theorems.Thm_ModularCurve_transcendental_jq
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqNModC_eq_of_prime
-public import Theorems.Thm_ModularCurve_modularFunctionFieldBar_eq_restrictScalars
-public import Theorems.Thm_ModularCurve_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_transcendental_jq
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_eq_of_prime
+import P2M.Sol.S_ModularCurve_modularFunctionFieldBar_eq_restrictScalars
+import P2M.Sol.S_ModularCurve_coeffEmb_jq
 import P2M.Util
+public import Definitions.Def_ModularCurve_LaurentCoeff
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_relfinrank_laurentBaseChange_modularFunctionFieldFull
 
 noncomputable section
@@ -338,3 +338,14 @@ open ModularCurve in
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] :
     IntermediateField.relfinrank (IntermediateField.adjoin L ({coeffEmb L jq} : Set (LaurentSeries L))) (laurentBaseChange L (modularFunctionFieldFull N)) = IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (modularFunctionFieldFull N) :=
   TransportRows.relfinrank_laurentBaseChange_full L N
+end S_ModularCurve_relfinrank_laurentBaseChange_modularFunctionFieldFull
+end P2MW
+
+public section
+attribute [-instance] ModularCurve.instIsDomainTensorProduct AlgebraicClosure.Rat.isGalois ModularCurve.instSMulAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange ModularCurve.instDistribMulActionAlgEquivRatPic0SubtypeLaurentSeriesMemIntermediateFieldLaurentBaseChange AlgebraicCurve.SemilinearAut.instDistribMulActionSubtypeProdRingAutMemSubgroupPic0 AlgebraicCurve.SemilinearAut.instDistribMulActionSubtypeProdRingAutMemSubgroupDivisor AlgebraicCurve.Pic0.instModuleZModTorsion AlgebraicCurve.SemilinearAut.instSMulSubtypeProdRingAutMemSubgroupPlace AlgebraicCurve.SemilinearAut.instDistribMulActionTorsion AlgebraicCurve.SemilinearAut.instSMulSubtypeProdRingAutMemSubgroupPic0 AlgebraicCurve.SemilinearAut.instSMulTorsion AlgebraicCurve.SemilinearAut.instMulActionSubtypeProdRingAutMemSubgroupPlace AlgebraicCurve.SemilinearAut.instSMulCommClassZModTorsion AlgebraicCurve.SemilinearAut.instMulSemiringActionSubtypeProdRingAutMemSubgroup
+attribute [-simp] ModularCurve.coe_baseChangeEquiv_apply ModularCurve.baseChangeHom_tmul ModularCurve.jqNModC_one ModularCurve.baseAut_arithmeticGalois ModularCurve.JZero.torsionGaloisRep_apply ModularCurve.coe_arithmeticRingAut_apply ModularCurve.toRingAut_arithmeticGalois AlgebraicCurve.SemilinearAut.toRingAut_inv AlgebraicCurve.SemilinearAut.smul_def AlgebraicCurve.SemilinearAut.smul_single AlgebraicCurve.SemilinearAut.smul_toValuationSubring AlgebraicCurve.SemilinearAut.baseAut_inv AlgebraicCurve.SemilinearAut.baseAut_ofAlgAut AlgebraicCurve.SemilinearAut.toRingAut_ofAlgAut AlgebraicCurve.SemilinearAut.torsionRep_apply AlgebraicCurve.SemilinearAut.toRingAut_one AlgebraicCurve.SemilinearAut.deg_smul AlgebraicCurve.SemilinearAut.degree_smul AlgebraicCurve.SemilinearAut.coe_degZeroSMulHom AlgebraicCurve.SemilinearAut.baseAut_mul AlgebraicCurve.SemilinearAut.coe_smulValuationSubringEquiv_apply AlgebraicCurve.SemilinearAut.baseAut_one AlgebraicCurve.SemilinearAut.ofAlgAut_smul AlgebraicCurve.SemilinearAut.coe_torsion_smul AlgebraicCurve.SemilinearAut.toRingAut_mul
+
+open ModularCurve
+
+theorem ModularCurve.relfinrank_laurentBaseChange_modularFunctionFieldFull (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] : IntermediateField.relfinrank (IntermediateField.adjoin L ({coeffEmb L jq} : Set (LaurentSeries L))) (laurentBaseChange L (modularFunctionFieldFull N)) = IntermediateField.relfinrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (modularFunctionFieldFull N) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_relfinrank_laurentBaseChange_modularFunctionFieldFull.solution
+end

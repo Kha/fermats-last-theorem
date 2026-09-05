@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_SpecializationMap
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import Theorems.Thm_ModularCurve_isSeparable_jqNModC_of_separable_phi_map
 import Theorems.Thm_ModularCurve_finiteDimensional_and_isSeparable_adjoin_jGeomGen_of_isSeparable_jqNModC
 import P2M.Util

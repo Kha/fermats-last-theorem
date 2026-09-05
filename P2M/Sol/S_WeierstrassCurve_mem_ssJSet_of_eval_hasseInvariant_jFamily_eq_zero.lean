@@ -3,12 +3,11 @@ module
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_SupersingularModuli
-public import Theorems.Thm_WeierstrassCurve_natDegree_hasseInvariant_jFamily
-public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
+import P2M.Sol.S_WeierstrassCurve_natDegree_hasseInvariant_jFamily
+import P2M.Sol.S_ModularCurve_ssJSet_eq_ssJSetHasse
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_mem_ssJSet_of_eval_hasseInvariant_jFamily_eq_zero
 
 set_option autoImplicit false
@@ -91,3 +90,19 @@ theorem solution
   rcases mul_eq_zero.mp hcmp.symm with h12 | hΔ0
   · exact pow_eq_zero_iff (by norm_num) |>.mp h12
   · exact absurd (pow_eq_zero_iff (by omega) |>.mp hΔ0) hΔ
+end S_WeierstrassCurve_mem_ssJSet_of_eval_hasseInvariant_jFamily_eq_zero
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+open ModularCurve
+
+theorem WeierstrassCurve.mem_ssJSet_of_eval_hasseInvariant_jFamily_eq_zero
+    (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)
+    (k : Type*) [Field k] [CharP k q] [IsAlgClosed k] [DecidableEq k]
+    (t₀ : k) (h : (WeierstrassCurve.hasseInvariant q (⟨1, 0, 0, -36 * Polynomial.X, -Polynomial.X⟩ : WeierstrassCurve (Polynomial k))).eval t₀ = 0)
+    (hc : 1 + 1728 * t₀ ≠ 0) :
+    t₀ ≠ 0 ∧ 1728 + t₀⁻¹ ∈ ssJSet q k := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_mem_ssJSet_of_eval_hasseInvariant_jFamily_eq_zero.solution
+end

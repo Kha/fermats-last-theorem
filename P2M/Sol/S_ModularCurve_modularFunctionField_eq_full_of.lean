@@ -3,16 +3,15 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
-public import Theorems.Thm_ModularCurve_coeffMap_injective
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
+import P2M.Sol.S_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_modularFunctionField_eq_full_of
 
 set_option autoImplicit false
@@ -734,4 +733,13 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_modu
 
 theorem solution (N : ℕ) [NeZero N] (hstep : ∀ (M : ℕ) [NeZero M] (p : ℕ), p.Prime → M * p = N → jqN M ∈ modularFunctionField N) (hgen' : ∀ (M : ℕ) [NeZero M] (p : ℕ), p.Prime → M * p = N → modularFunctionField M = modularFunctionFieldFull M) : modularFunctionField N = modularFunctionFieldFull N :=
   ModularCurve.modularFunctionField_eq_full_of N hstep hgen'
+end S_ModularCurve_modularFunctionField_eq_full_of
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ
+
+open ModularCurve
+theorem ModularCurve.modularFunctionField_eq_full_of (N : ℕ) [NeZero N] (hstep : ∀ (M : ℕ) [NeZero M] (p : ℕ), p.Prime → M * p = N → jqN M ∈ modularFunctionField N) (hgen' : ∀ (M : ℕ) [NeZero M] (p : ℕ), p.Prime → M * p = N → modularFunctionField M = modularFunctionFieldFull M) : modularFunctionField N = modularFunctionFieldFull N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_modularFunctionField_eq_full_of.solution
+end

@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
 import Theorems.Thm_ModularCurve_ModularPolynomialData_weighted_support_le
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import P2M.Util
 namespace P2MW.S_ModularCurve_natDegree_kroneckerRemainder_le
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

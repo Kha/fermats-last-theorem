@@ -2,14 +2,13 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffEmb_injective
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_injective
 public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.Algebra.Polynomial.Eval.Degree
 public import Mathlib.Tactic.Linarith
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_evalAtJ_injective
 
 set_option autoImplicit false
@@ -327,4 +326,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_evalAtJ_injective.Mod
 
 theorem solution : Function.Injective evalAtJ :=
   ModularCurve.PhiGen.evalAtJ_injective
+end S_ModularCurve_PhiGen_evalAtJ_injective
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.evalAtJ_injective : Function.Injective evalAtJ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_evalAtJ_injective.solution
+end

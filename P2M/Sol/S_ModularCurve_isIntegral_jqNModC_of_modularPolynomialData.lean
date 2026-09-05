@@ -2,16 +2,15 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.Algebra.Polynomial.Bivariate
 public import Mathlib.FieldTheory.Separable
 public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_of_modularPolynomialData
 
 noncomputable section
@@ -264,3 +263,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_isIntegral_jqNModC_of_modula
 theorem solution (K : Type*) [Field K] {N : ℕ} [NeZero N] (data : ModularPolynomialData N) :
     IsIntegral (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (jqNModC K N) :=
   SepFibre.isIntegral_jqNModC K data
+end S_ModularCurve_isIntegral_jqNModC_of_modularPolynomialData
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.isIntegral_jqNModC_of_modularPolynomialData (K : Type*) [Field K] {N : ℕ} [NeZero N] (data : ModularPolynomialData N) :
+    IsIntegral (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (jqNModC K N) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_isIntegral_jqNModC_of_modularPolynomialData.solution
+end

@@ -3,7 +3,6 @@ module
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_ord_smul_of_ne_zero
 
 set_option autoImplicit false
@@ -24,3 +23,10 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
         (v.adicValuation_coe_eq_one_iff ⟨algebraMap K F c, v.algebraMap_mem' c⟩).mpr hunit
       simp [AlgebraicCurve.Place.ord, h1]
     rw [Algebra.smul_def, v.ord_mul halg hx0, h0, zero_add]
+end S_AlgebraicCurve_Place_ord_smul_of_ne_zero
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Place.ord_smul_of_ne_zero {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) {c : K} (hc : c ≠ 0) (x : F) : v.ord (c • x) = v.ord x := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_ord_smul_of_ne_zero.solution
+end

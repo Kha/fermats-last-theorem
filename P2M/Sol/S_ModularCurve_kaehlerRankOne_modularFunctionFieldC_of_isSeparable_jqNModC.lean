@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_AlgebraicCurve_IsCurveOver
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_kaehlerRankOne_modularFunctionFieldC_of_isSeparable_jqNModC
 open AlgebraicCurve ModularCurve KaehlerDifferential IntermediateField Polynomial TensorProduct Module

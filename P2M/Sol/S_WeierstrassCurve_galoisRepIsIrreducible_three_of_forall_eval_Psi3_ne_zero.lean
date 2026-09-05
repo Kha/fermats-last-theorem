@@ -5,7 +5,7 @@ import Mathlib.Algebra.Lie.OfAssociative
 import Mathlib.Algebra.Algebra.Rat
 import Definitions.Def_FLTPrelim_GaloisRep
 import Theorems.Thm_WeierstrassCurve_card_torsion_of_isAlgClosed
-import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 import Theorems.Thm_Submodule_eq_span_singleton_of_card_eq_sq
 import P2M.Util
 namespace P2MW.S_WeierstrassCurve_galoisRepIsIrreducible_three_of_forall_eval_Psi3_ne_zero

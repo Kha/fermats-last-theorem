@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 import Definitions.Def_AlgebraicCurve_DivisorPushPull
-import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
 set_option autoImplicit false

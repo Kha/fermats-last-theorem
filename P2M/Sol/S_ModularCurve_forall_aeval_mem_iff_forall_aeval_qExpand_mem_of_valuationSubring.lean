@@ -1,5 +1,5 @@
 import Theorems.Thm_ModularCurve_exists_modularPolynomialData_evalSymm
-import Theorems.Thm_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
 import Theorems.Thm_ValuationSubring_forall_aeval_mem_and_inv_mem_of_isRoot_of_isRoot
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_PhiGen

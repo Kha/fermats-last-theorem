@@ -2,12 +2,11 @@ module
 
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
-public import Theorems.Thm_LaurentSeries_derivative_mul
-public import Theorems.Thm_LaurentSeries_coeff_neg_one_inv_mul_derivative
-public import Theorems.Thm_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
+import P2M.Sol.S_LaurentSeries_derivative_mul
+import P2M.Sol.S_LaurentSeries_coeff_neg_one_inv_mul_derivative
+import P2M.Sol.S_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant
 
 set_option autoImplicit false
@@ -319,3 +318,20 @@ theorem solution
     (hω : ω * (2 * y + HahnSeries.C W.a₁ * x + HahnSeries.C W.a₃) = LaurentSeries.derivative R x) :
     ω.coeff ((q : ℤ) - 1) = W.hasseInvariant q :=
   WeierstrassCurve.KATZ.main q hq W x y ω heq hx2 hx hy3 hy hω
+end S_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+theorem WeierstrassCurve.coeff_invariantDifferential_eq_hasseInvariant
+    {R : Type*} [CommRing R] (q : ℕ) [Fact q.Prime] [CharP R q] (hq : q ≠ 2)
+    (W : WeierstrassCurve R) (x y ω : LaurentSeries R)
+    (heq : y ^ 2 + HahnSeries.C W.a₁ * x * y + HahnSeries.C W.a₃ * y
+      = x ^ 3 + HahnSeries.C W.a₂ * x ^ 2 + HahnSeries.C W.a₄ * x + HahnSeries.C W.a₆)
+    (hx2 : x.coeff (-2) = 1) (hx : ∀ n < -2, x.coeff n = 0)
+    (hy3 : y.coeff (-3) = -1) (hy : ∀ n < -3, y.coeff n = 0)
+    (hω : ω * (2 * y + HahnSeries.C W.a₁ * x + HahnSeries.C W.a₃) = LaurentSeries.derivative R x) :
+    ω.coeff ((q : ℤ) - 1) = W.hasseInvariant q := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant.solution
+end

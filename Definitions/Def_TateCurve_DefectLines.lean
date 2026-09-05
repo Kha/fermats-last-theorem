@@ -3,8 +3,7 @@ module
 public import Mathlib
 public import Definitions.Def_TateCurve_Defect
 public import Definitions.Def_NumberTheory_DivisorConvolution
-public import Theorems.Thm_TateCurve_defectCoeff_one
-
+public import P2M.Sol.S_TateCurve_defectCoeff_one
 @[expose] public section
 
 set_option autoImplicit false

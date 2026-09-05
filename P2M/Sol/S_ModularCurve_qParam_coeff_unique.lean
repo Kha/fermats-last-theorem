@@ -2,8 +2,10 @@ module
 
 public import Mathlib.NumberTheory.ModularForms.QExpansion
 import P2M.Util
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Manifold
+public import Mathlib.Analysis.Complex.UpperHalfPlane.FunctionsBoundedAtInfty
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_qParam_coeff_unique
 
 set_option autoImplicit false
@@ -159,4 +161,10 @@ end ModularCurve
 theorem solution (h : ℝ) (hh : 0 < h) (F : UpperHalfPlane → ℂ) (c d : ℕ → ℂ) (hc : ∀ τ : UpperHalfPlane, HasSum (fun m : ℕ => c m * Function.Periodic.qParam h (τ : ℂ) ^ m) (F τ)) (hd : ∀ τ : UpperHalfPlane, HasSum (fun m : ℕ => d m * Function.Periodic.qParam h (τ : ℂ) ^ m) (F τ)) : c = d :=
   ModularCurve.Realized.coeff_unique hh hc hd
 
+end
+end S_ModularCurve_qParam_coeff_unique
+end P2MW
+
+public section
+theorem ModularCurve.qParam_coeff_unique (h : ℝ) (hh : 0 < h) (F : UpperHalfPlane → ℂ) (c d : ℕ → ℂ) (hc : ∀ τ : UpperHalfPlane, HasSum (fun m : ℕ => c m * Function.Periodic.qParam h (τ : ℂ) ^ m) (F τ)) (hd : ∀ τ : UpperHalfPlane, HasSum (fun m : ℕ => d m * Function.Periodic.qParam h (τ : ℂ) ^ m) (F τ)) : c = d := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_qParam_coeff_unique.solution
 end

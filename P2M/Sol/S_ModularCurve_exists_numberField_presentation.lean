@@ -3,8 +3,8 @@ import Definitions.Def_ModularCurve_NodeLocalized
 import Definitions.Def_ModularCurve_NodeDescent
 import Definitions.Def_ModularCurve_ArithmeticGalois
 import Theorems.Thm_ModularCurve_laurentBaseChange_le_of_divisor_generators_mem
-import Theorems.Thm_ModularCurve_coeffEmb_qExpand
-import Theorems.Thm_ModularCurve_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_jq
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_numberField_presentation
 

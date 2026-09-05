@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_relfinrank_full_eq_dedekindPsi
+import P2M.Sol.S_ModularCurve_relfinrank_full_eq_dedekindPsi
 import Theorems.Thm_ModularCurve_dedekindPsi_mul_prime
 import P2M.Util
 namespace P2MW.S_ModularCurve_finrank_modularFunctionFieldFull_mul_prime_eq_of_coe_eq

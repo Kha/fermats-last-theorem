@@ -3,21 +3,20 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
 public import Definitions.Def_ModularCurve_ModularUnit
-public import Theorems.Thm_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
-public import Theorems.Thm_AlgebraicCurve_Divisor_degree_eq_finrank_adjoin_of_eq_max_neg_ord
-public import Theorems.Thm_ModularCurve_smul_cuspidalDivisor_apply_eq_ord
-public import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_modularUnitSeries
-public import Theorems.Thm_ModularCurve_ord_cuspZeroBar_coeffEmb_modularUnitSeries
-public import Theorems.Thm_ModularCurve_deg_cuspInftyBar
-public import Theorems.Thm_ModularCurve_isCurveOver_modularFunctionFieldBar
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase
-public import Theorems.Thm_ModularCurve_constantsAreBase_modularFunctionFieldBar
-public import Theorems.Thm_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
-public import Theorems.Thm_ModularCurve_exists_transcendental_finiteDimensional_modularFunctionFieldBar
-public import Theorems.Thm_AlgebraicCurve_Place_transcendental_of_ord_ne_zero
+import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
+import P2M.Sol.S_AlgebraicCurve_Divisor_degree_eq_finrank_adjoin_of_eq_max_neg_ord
+import P2M.Sol.S_ModularCurve_smul_cuspidalDivisor_apply_eq_ord
+import P2M.Sol.S_ModularCurve_ord_cuspInftyBar_coeffEmb_modularUnitSeries
+import P2M.Sol.S_ModularCurve_ord_cuspZeroBar_coeffEmb_modularUnitSeries
+import P2M.Sol.S_ModularCurve_deg_cuspInftyBar
+import P2M.Sol.S_ModularCurve_isCurveOver_modularFunctionFieldBar
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase
+import P2M.Sol.S_ModularCurve_constantsAreBase_modularFunctionFieldBar
+import P2M.Sol.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
+import P2M.Sol.S_ModularCurve_exists_transcendental_finiteDimensional_modularFunctionFieldBar
+import P2M.Sol.S_AlgebraicCurve_Place_transcendental_of_ord_ne_zero
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv
 
 set_option autoImplicit false
@@ -99,3 +98,22 @@ theorem solution {q : ℕ} [Fact q.Prime] :
   have hfin : (Module.finrank (IntermediateField.adjoin (AlgebraicClosure ℚ) ({u} : Set _))
       ↥(modularFunctionFieldBar (1 * q)) : ℤ) = (q : ℤ) - 1 := by rw [← hdeg, hdegD]
   omega
+end S_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv
+end P2MW
+
+public section
+attribute [-simp] AlgebraicCurve.mulAdele_apply AlgebraicCurve.residuePairing_apply_coe AlgebraicCurve.mem_adeleBdd AlgebraicCurve.weilSmul_one AlgebraicCurve.diagonalHom_apply AlgebraicCurve.weilSmul_apply AlgebraicCurve.adeleSpaceMul_coe AlgebraicCurve.mulAdele_one AlgebraicCurve.TranscendenceTower.mk.sizeOf_spec AlgebraicCurve.IntegralBasisInLSpace.mk.injEq AlgebraicCurve.TranscendenceTower.mk.injEq AlgebraicCurve.PoleDivisorPackage.mk.sizeOf_spec AlgebraicCurve.IntegralBasisInLSpace.mk.sizeOf_spec AlgebraicCurve.PoleDivisorPackage.mk.injEq
+attribute [-simp] AlgebraicCurve.RationalFunctionField.placeInfty_toValuationSubring
+
+set_option autoImplicit false
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+
+open AlgebraicCurve ModularCurve IsLocalRing
+theorem ModularCurve.finrank_adjoin_coeffEmb_modularUnitSeries_inv {q : ℕ} [Fact q.Prime] :
+    Module.finrank (IntermediateField.adjoin (AlgebraicClosure ℚ)
+        ({((⟨coeffEmb (AlgebraicClosure ℚ) (modularUnitSeries (1 * q)),
+      coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (modularUnitSeries_mem_modularFunctionFieldFull (1 * q))⟩ :
+      ↥(modularFunctionFieldBar (1 * q))))⁻¹} : Set ↥(modularFunctionFieldBar (1 * q))))
+      ↥(modularFunctionFieldBar (1 * q)) = q - 1 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv.solution
+end

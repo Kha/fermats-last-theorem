@@ -8,14 +8,15 @@ public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.RingTheory.RootsOfUnity.Complex
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import Theorems.Thm_ModularCurve_hasSum_jq_qParam
-public import Theorems.Thm_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant
-public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
-public import Theorems.Thm_ModularCurve_E4_cube_div_discriminant_smul
-public import Theorems.Thm_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty
+import P2M.Sol.S_ModularCurve_hasSum_jq_qParam
+import P2M.Sol.S_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant
+import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
+import P2M.Sol.S_ModularCurve_E4_cube_div_discriminant_smul
+import P2M.Sol.S_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty
 import P2M.Util
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
+public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
 
 set_option autoImplicit false
@@ -215,4 +216,13 @@ end ModularCurve
 theorem solution (f : LaurentSeries ℚ) (F : UpperHalfPlane → ℂ) (hF : ∀ τ : UpperHalfPlane, HasSum (fun m : ℤ => ((f.coeff m : ℚ) : ℂ) * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (F τ)) (hinv : ∀ (γ : Matrix.SpecialLinearGroup (Fin 2) ℤ) (τ : UpperHalfPlane), F (γ • τ) = F τ) : f ∈ Algebra.adjoin ℚ {ModularCurve.jq} :=
   ModularCurve.mem_adjoin_jq_of_realL_invariant f F hF hinv
 
+end
+end S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
+end P2MW
+
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
+
+theorem ModularCurve.mem_adjoin_jq_of_hasSum_of_slash_invariant (f : LaurentSeries ℚ) (F : UpperHalfPlane → ℂ) (hF : ∀ τ : UpperHalfPlane, HasSum (fun m : ℤ => ((f.coeff m : ℚ) : ℂ) * Function.Periodic.qParam 1 (τ : ℂ) ^ m) (F τ)) (hinv : ∀ (γ : Matrix.SpecialLinearGroup (Fin 2) ℤ) (τ : UpperHalfPlane), F (γ • τ) = F τ) : f ∈ Algebra.adjoin ℚ {ModularCurve.jq} := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant.solution
 end

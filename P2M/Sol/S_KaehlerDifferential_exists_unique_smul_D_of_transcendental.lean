@@ -1,5 +1,5 @@
-import Theorems.Thm_KaehlerDifferential_span_D_eq_top_of_transcendental
-import Theorems.Thm_KaehlerDifferential_D_ne_zero_of_transcendental
+import P2M.Sol.S_KaehlerDifferential_span_D_eq_top_of_transcendental
+import P2M.Sol.S_KaehlerDifferential_D_ne_zero_of_transcendental
 import P2M.Util
 namespace P2MW.S_KaehlerDifferential_exists_unique_smul_D_of_transcendental
 

@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_JqCoeff
 public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_transcendental_jqModC
 
 noncomputable section
@@ -93,3 +92,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_transcendental_jqModC.Modula
 theorem solution (K : Type*) [CommRing K] :
     Transcendental K (jqModC K) :=
   CharLRows.transcendental_jqModC K
+end S_ModularCurve_transcendental_jqModC
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.transcendental_jqModC (K : Type*) [CommRing K] :
+    Transcendental K (jqModC K) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_transcendental_jqModC.solution
+end

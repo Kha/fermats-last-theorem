@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_ArithmeticGalois
-import Theorems.Thm_ModularCurve_laurentBaseChange_mono
+import P2M.Sol.S_ModularCurve_laurentBaseChange_mono
 import P2M.Util
 namespace P2MW.S_ModularCurve_modularFunctionFieldBar_le
 

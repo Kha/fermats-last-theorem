@@ -3,7 +3,6 @@ module
 public import Definitions.Def_TateCurve_PointSeries
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_TateCurve_hasSum_yfun
 open TateCurve
 open scoped NNReal
@@ -19,3 +18,11 @@ theorem solution {K : Type*} [NontriviallyNormedField K] [IsUltrametricDist K]
   have hval : w ^ 2 * (1 / (1 - w) ^ 3) = yfun w := by rw [yfun]; ring
   rw [hfun, hval] at h
   exact h
+end S_TateCurve_hasSum_yfun
+end P2MW
+
+public section
+open TateCurve
+open scoped NNReal
+theorem TateCurve.hasSum_yfun {K : Type*} [NontriviallyNormedField K] [IsUltrametricDist K] {w : K} (hw : ‖w‖₊ < 1) : HasSum (fun m : ℕ => (((m + 2).choose 2 : ℕ) : K) * w ^ (m + 2)) (yfun w) := by p2m_exact_reverting @_root_.P2MW.S_TateCurve_hasSum_yfun.solution
+end

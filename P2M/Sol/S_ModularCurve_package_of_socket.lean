@@ -4,26 +4,25 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-public import Theorems.Thm_ModularCurve_order_jqModC
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
-public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime_pow
-public import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
-public import Theorems.Thm_ModularCurve_relfinrank_fullC_mul_prime_pow
-public import Theorems.Thm_ModularCurve_jqNModC_prime_not_mem_fullC
-public import Theorems.Thm_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_prime
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_order_jqModC
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_relfinrank_fullC_mul_prime_pow
+import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_fullC
+import P2M.Sol.S_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.Data.Nat.Factorization.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_package_of_socket
 
 set_option autoImplicit false
@@ -1002,4 +1001,18 @@ theorem solution {K : Type*} [Field K] (M : ℕ) [NeZero M] (ζ : Kˣ) (hζ : Is
         ∧ modularFunctionFieldC K d = IntermediateField.adjoin K
             {x : LaurentSeries K | ∃ (d' : ℕ) (_ : NeZero d'), d' ∣ d ∧ x = jqNModC K d'} :=
   ModularCurve.package_of_socket M ζ hζ hbase
+end S_ModularCurve_package_of_socket
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.package_of_socket {K : Type*} [Field K] (M : ℕ) [NeZero M] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) M)
+    (hbase : ∀ (p : ℕ) [Fact (Nat.Prime p)], p ∣ M →
+      jqNModC K p ∉ IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) :
+    ∀ d : ℕ, d ∣ M → ∀ [NeZero d],
+      Module.finrank (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)))
+          (IntermediateField.adjoin (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K)))
+            ({jqNModC K d} : Set (LaurentSeries K))) = dedekindPsi d
+        ∧ modularFunctionFieldC K d = IntermediateField.adjoin K
+            {x : LaurentSeries K | ∃ (d' : ℕ) (_ : NeZero d'), d' ∣ d ∧ x = jqNModC K d'} := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_package_of_socket.solution
+end

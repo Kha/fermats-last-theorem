@@ -3,16 +3,15 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
-public import Theorems.Thm_ModularCurve_coeffMap_injective
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
+import P2M.Sol.S_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_jqN_div_mem_modularFunctionField
 
 set_option autoImplicit false
@@ -734,4 +733,10 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_jqN_
 
 theorem solution (M : ℕ) [NeZero M] (p : ℕ) [hp : Fact (Nat.Prime p)] {K : Type*} [Field K] [Algebra ℚ K] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) (M * p)) (htw : ∀ y : LaurentSeries K, Polynomial.eval y ((minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN M)).map (((coeffEmb K).comp (qExpand ℚ (M * p))).comp (algebraMap (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (LaurentSeries ℚ)))) = 0 → ∀ w : Kˣ, y = qExpand K (M * p * M) (qTwist w (coeffEmb K jq)) → w = 1) (hsp : ∀ y : LaurentSeries K, Polynomial.eval y ((minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN M)).map (((coeffEmb K).comp (qExpand ℚ (M * p))).comp (algebraMap (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (LaurentSeries ℚ)))) = 0 → y ≠ coeffEmb K (qExpand ℚ (M * p) (jqN (M * p * p)))) : jqN M ∈ modularFunctionField (M * p) :=
   ModularCurve.jqN_div_mem_modularFunctionField M p ζ hζ htw hsp
+end S_ModularCurve_jqN_div_mem_modularFunctionField
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.jqN_div_mem_modularFunctionField (M : ℕ) [NeZero M] (p : ℕ) [hp : Fact (Nat.Prime p)] {K : Type*} [Field K] [Algebra ℚ K] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) (M * p)) (htw : ∀ y : LaurentSeries K, Polynomial.eval y ((minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN M)).map (((coeffEmb K).comp (qExpand ℚ (M * p))).comp (algebraMap (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (LaurentSeries ℚ)))) = 0 → ∀ w : Kˣ, y = qExpand K (M * p * M) (qTwist w (coeffEmb K jq)) → w = 1) (hsp : ∀ y : LaurentSeries K, Polynomial.eval y ((minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN M)).map (((coeffEmb K).comp (qExpand ℚ (M * p))).comp (algebraMap (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (LaurentSeries ℚ)))) = 0 → y ≠ coeffEmb K (qExpand ℚ (M * p) (jqN (M * p * p)))) : jqN M ∈ modularFunctionField (M * p) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_jqN_div_mem_modularFunctionField.solution
+end

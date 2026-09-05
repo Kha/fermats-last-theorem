@@ -1,9 +1,9 @@
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
-import Theorems.Thm_ModularCurve_StarBank_hassePolyDescent
-import Theorems.Thm_ModularCurve_StarBank_eisInt_series
-import Theorems.Thm_ModularCurve_StarBank_eisInt_not_dvd_num
+import P2M.Sol.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
+import P2M.Sol.S_ModularCurve_StarBank_hassePolyDescent
+import P2M.Sol.S_ModularCurve_StarBank_eisInt_series
+import P2M.Sol.S_ModularCurve_StarBank_eisInt_not_dvd_num
 import Mathlib.Algebra.Polynomial.Degree.Lemmas
 import Mathlib.Algebra.CharP.Lemmas
 import Mathlib.FieldTheory.Finite.Basic

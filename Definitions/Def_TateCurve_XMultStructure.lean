@@ -1,9 +1,8 @@
 import Mathlib
 import Definitions.Def_TateCurve_QShift
 import Theorems.Thm_TateCurve_pointX_inv
-import Theorems.Thm_TateCurve_pointX_q_mul
-import Theorems.Thm_TateCurve_pointX_zpow_mul
-
+import P2M.Sol.S_TateCurve_pointX_q_mul
+import P2M.Sol.S_TateCurve_pointX_zpow_mul
 set_option autoImplicit false
 
 open scoped NNReal

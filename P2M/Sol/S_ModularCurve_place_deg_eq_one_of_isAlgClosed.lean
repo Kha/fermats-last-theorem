@@ -2,7 +2,7 @@ import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 import Definitions.Def_AlgebraicCurve_DivisorPushPull
 import Theorems.Thm_AlgebraicCurve_Place_deg_eq_one_of_isAlgClosed
-import Theorems.Thm_ModularCurve_deg_ne_zero_modularFunctionFieldC
+import P2M.Sol.S_ModularCurve_deg_ne_zero_modularFunctionFieldC
 import P2M.Util
 namespace P2MW.S_ModularCurve_place_deg_eq_one_of_isAlgClosed
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

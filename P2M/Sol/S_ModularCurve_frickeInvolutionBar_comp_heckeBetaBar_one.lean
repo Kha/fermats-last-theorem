@@ -4,11 +4,10 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_HeckeOperator
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_AtkinLehnerPartial
-public import Theorems.Thm_ModularCurve_geomAut_atkinLehner_comp_legs
-public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
+import P2M.Sol.S_ModularCurve_geomAut_atkinLehner_comp_legs
+import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull_of_neZero
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_frickeInvolutionBar_comp_heckeBetaBar_one
 
 set_option autoImplicit false
@@ -38,3 +37,14 @@ theorem solution (q : ℕ) [NeZero q] :
       = heckeAlphaBar (AlgebraicClosure ℚ) 1 q :=
   (geomAut_atkinLehner_comp_legs (AlgebraicClosure ℚ) 1 q (frickeInvolutionFull (1 * q))
     (Ws14Fricke.isAtkinLehnerAutFull_one_frickeInvolutionFull q)).2
+end S_ModularCurve_frickeInvolutionBar_comp_heckeBetaBar_one
+end P2MW
+
+public section
+set_option autoImplicit false
+
+open AlgebraicCurve ModularCurve
+theorem ModularCurve.frickeInvolutionBar_comp_heckeBetaBar_one (q : ℕ) [NeZero q] :
+    (frickeInvolutionBar (1 * q)).toAlgHom.comp (heckeBetaBar (AlgebraicClosure ℚ) 1 q)
+      = heckeAlphaBar (AlgebraicClosure ℚ) 1 q := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_frickeInvolutionBar_comp_heckeBetaBar_one.solution
+end

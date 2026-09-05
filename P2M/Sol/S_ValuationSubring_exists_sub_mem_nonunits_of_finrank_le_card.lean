@@ -1,5 +1,5 @@
 import Mathlib
-import Theorems.Thm_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
+import P2M.Sol.S_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
 import P2M.Util
 namespace P2MW.S_ValuationSubring_exists_sub_mem_nonunits_of_finrank_le_card
 

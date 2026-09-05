@@ -4,11 +4,10 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_self
-public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
-public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-
+public import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+public import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_self
+public import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_of_lt
+public import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
 @[expose] public section
 
 set_option autoImplicit false

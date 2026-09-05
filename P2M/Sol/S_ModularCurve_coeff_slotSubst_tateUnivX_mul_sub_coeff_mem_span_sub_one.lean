@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_TateSlots
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivX
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivX
 import P2M.Util
 namespace P2MW.S_ModularCurve_coeff_slotSubst_tateUnivX_mul_sub_coeff_mem_span_sub_one
 

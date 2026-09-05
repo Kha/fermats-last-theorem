@@ -1,5 +1,5 @@
-import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
-import Theorems.Thm_ModularCurve_dedekindPsi_prime_pow
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
 import Mathlib
 import Definitions.Def_ModularCurve_X0
 import P2M.Util

@@ -2,10 +2,9 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_NodeDescent
-public import Theorems.Thm_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
+import P2M.Sol.S_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing
 
 set_option autoImplicit false
@@ -101,3 +100,15 @@ theorem solution
     apply IsDiscreteValuationRing.not_a_field (A.comap (algebraMap K (AlgebraicClosure ℚ)))
     exact (IsLocalRing.isField_iff_maximalIdeal_eq).mp
       (MulEquiv.isField ((IsLocalRing.isField_iff_maximalIdeal_eq).mpr h) e.toMulEquiv)
+end S_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing
+end P2MW
+
+public section
+set_option autoImplicit false
+
+open ModularCurve ModularCurve.NodeLocalized
+theorem ModularCurve.NodeLocalized.coeffSubring_eq_or_isDiscreteValuationRing
+    (A : ValuationSubring (AlgebraicClosure ℚ)) (K : IntermediateField ℚ (AlgebraicClosure ℚ))
+    [FiniteDimensional ℚ K] :
+    coeffSubring A K = K.toSubalgebra.toSubring ∨ IsDiscreteValuationRing ↥(coeffSubring A K) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing.solution
+end

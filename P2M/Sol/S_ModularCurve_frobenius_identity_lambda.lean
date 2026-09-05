@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_LambdaSeries
-import Theorems.Thm_ModularCurve_pow_char_eq_map_frobenius_qExpand
+import P2M.Sol.S_ModularCurve_pow_char_eq_map_frobenius_qExpand
 import P2M.Util
 namespace P2MW.S_ModularCurve_frobenius_identity_lambda
 

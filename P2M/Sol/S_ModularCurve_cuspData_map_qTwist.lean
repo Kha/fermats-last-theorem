@@ -2,8 +2,8 @@ import Mathlib
 import Definitions.Def_ModularForm_KatzLevelOne
 import Definitions.Def_ModularCurve_KatzLevelP
 import Definitions.Def_ModularCurve_KatzLevelPCusps
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivX
-import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivY
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivX
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivY
 import P2M.Util
 namespace P2MW.S_ModularCurve_cuspData_map_qTwist
 

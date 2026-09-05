@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_AlgebraicCurve_IsCurveOver
 import Definitions.Def_AlgebraicCurve_AdelicIndex
-import Theorems.Thm_AlgebraicCurve_finiteDimensional_lSpace
+import P2M.Sol.S_AlgebraicCurve_finiteDimensional_lSpace
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_card_effective_sub_isPrincipal_of_finite
 

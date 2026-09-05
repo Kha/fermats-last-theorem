@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_MultCoveringFamily
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_MultCovering_mem_of_eq_sum_smul_goodFamily
 

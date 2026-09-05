@@ -5,7 +5,6 @@ public import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
 public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 
 noncomputable section
@@ -107,3 +106,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_qExpand_jqModC_eq_pow_uncond
 theorem solution (K : Type*) [CommRing K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ] :
     qExpand K ℓ (jqModC K) = (jqModC K) ^ ℓ :=
   CharLRows.qExpand_jqModC_eq_pow K ℓ
+end S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.qExpand_jqModC_eq_pow_unconditional (K : Type*) [CommRing K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ] :
+    qExpand K ℓ (jqModC K) = (jqModC K) ^ ℓ := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional.solution
+end

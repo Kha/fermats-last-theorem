@@ -1,4 +1,4 @@
-import Theorems.Thm_ModularCurve_minpoly_jqN_eq_toAdjoin
+import P2M.Sol.S_ModularCurve_minpoly_jqN_eq_toAdjoin
 import P2M.Util
 namespace P2MW.S_ModularCurve_ModularPolynomialData_minpoly_jqN_eq
 

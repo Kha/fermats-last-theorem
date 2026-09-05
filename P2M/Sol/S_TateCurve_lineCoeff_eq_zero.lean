@@ -3,12 +3,12 @@ module
 public import Mathlib
 public import Mathlib.NumberTheory.Padics.PadicNumbers
 public import Definitions.Def_TateCurve_QShift
-public import Theorems.Thm_TateCurve_defect_qExpansion
-public import Theorems.Thm_TateCurve_pointX_q_mul
-public import Theorems.Thm_TateCurve_pointY_q_mul
+import P2M.Sol.S_TateCurve_defect_qExpansion
+import P2M.Sol.S_TateCurve_pointX_q_mul
+import P2M.Sol.S_TateCurve_pointY_q_mul
 import P2M.Util
+public import Definitions.Def_TateCurve_DefectLines
 
-@[expose] public section
 namespace P2MW.S_TateCurve_lineCoeff_eq_zero
 
 open scoped NNReal
@@ -144,3 +144,10 @@ theorem solution : ∀ N k : ℕ, 1 ≤ k → k ≤ N → lineCoeff N k = 0 := b
   haveI : Fact (Nat.Prime 2) := ⟨Nat.prime_two⟩
   exact lineCoeff_eq_zero_of_qshift (K := ℚ_[2])
     fun v hv M => TateCurve.four_mul_defectCoeff_eq_qshift' hv M
+end S_TateCurve_lineCoeff_eq_zero
+end P2MW
+
+public section
+open TateCurve
+theorem TateCurve.lineCoeff_eq_zero : ∀ N k : ℕ, 1 ≤ k → k ≤ N → lineCoeff N k = 0 := by p2m_exact_reverting @_root_.P2MW.S_TateCurve_lineCoeff_eq_zero.solution
+end

@@ -1,6 +1,6 @@
 import Definitions.Def_ModularCurve_X1
 
-import Theorems.Thm_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
+import P2M.Sol.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
 import P2M.Util
 namespace P2MW.S_ModularCurve_qExpand_mem_qExpFunctionFieldC_of_charP
 

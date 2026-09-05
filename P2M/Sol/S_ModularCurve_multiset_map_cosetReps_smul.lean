@@ -1,7 +1,7 @@
 import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
 import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 import Mathlib.Tactic.Group
-import Theorems.Thm_ModularCurve_exists_perm_gamma0_cosetReps
+import P2M.Sol.S_ModularCurve_exists_perm_gamma0_cosetReps
 import P2M.Util
 namespace P2MW.S_ModularCurve_multiset_map_cosetReps_smul
 

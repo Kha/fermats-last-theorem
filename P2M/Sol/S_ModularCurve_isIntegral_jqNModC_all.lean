@@ -2,11 +2,10 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
-public import Theorems.Thm_ModularCurve_modularPolynomialFamily
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
+import P2M.Sol.S_ModularCurve_modularPolynomialFamily
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_all
 
 open ModularCurve
@@ -14,4 +13,13 @@ open ModularCurve
 theorem solution (K : Type*) [Field K] (N : ℕ) [NeZero N] :
     IsIntegral (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (jqNModC K N) :=
   isIntegral_jqNModC_all_of_modularPolynomialFamily K modularPolynomialFamily N
+end S_ModularCurve_isIntegral_jqNModC_all
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
+open ModularCurve
+theorem ModularCurve.isIntegral_jqNModC_all (K : Type*) [Field K] (N : ℕ) [NeZero N] :
+    IsIntegral (IntermediateField.adjoin K ({jqModC K} : Set (LaurentSeries K))) (jqNModC K N) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_isIntegral_jqNModC_all.solution
+end

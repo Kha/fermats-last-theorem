@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_JHNeronObjectAtP
 import Definitions.Def_ModularCurve_JHPlaceSpecialization
-import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
+import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
 import P2M.Util
 namespace P2MW.S_ModularCurve_JHPlaceSpecialization_isCuspidal_of_isZeroSide
 

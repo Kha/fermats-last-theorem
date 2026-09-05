@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_SiegelFunction
 import Theorems.Thm_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_siegelFun
-import Theorems.Thm_ModularCurve_hasSum_qParam_mul
+import P2M.Sol.S_ModularCurve_hasSum_qParam_mul
 import P2M.Util
 namespace P2MW.S_ModularCurve_SiegelUnit_exists_isIntegral_hasSum_prod_siegelFun_pow
 

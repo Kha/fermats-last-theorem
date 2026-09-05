@@ -6,7 +6,6 @@ public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.Tactic.Linarith
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
 
 set_option autoImplicit false
@@ -307,4 +306,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_aeval_jq_intCoeffs_de
 
 theorem solution (P : Polynomial ℚ) (hP : IntCoeffs (Polynomial.aeval jq P)) (k : ℕ) : ∃ z : ℤ, P.coeff k = (z : ℚ) :=
   ModularCurve.PhiGen.aeval_jq_intCoeffs_descent P hP k
+end S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.aeval_jq_intCoeffs_descent (P : Polynomial ℚ) (hP : IntCoeffs (Polynomial.aeval jq P)) (k : ℕ) : ∃ z : ℤ, P.coeff k = (z : ℚ) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent.solution
+end

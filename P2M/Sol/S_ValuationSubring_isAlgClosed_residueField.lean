@@ -3,10 +3,10 @@ module
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.RingTheory.Valuation.LocalSubring
 public import Mathlib.Algebra.Polynomial.Lifts
-public import Theorems.Thm_ValuationSubring_exists_root_mem_of_monic
+import P2M.Sol.S_ValuationSubring_exists_root_mem_of_monic
 import P2M.Util
+public import Mathlib
 
-@[expose] public section
 namespace P2MW.S_ValuationSubring_isAlgClosed_residueField
 
 set_option autoImplicit false
@@ -32,3 +32,10 @@ theorem solution {K : Type*} [Field K] [IsAlgClosed K] (A : ValuationSubring K) 
       exact (Polynomial.eval₂_at_apply (algebraMap A K) x).symm
     exact Subtype.coe_injective (by simpa using h1)
   rw [← hmap, Polynomial.eval_map, Polynomial.eval₂_at_apply, hx0, map_zero]
+end S_ValuationSubring_isAlgClosed_residueField
+end P2MW
+
+public section
+theorem ValuationSubring.isAlgClosed_residueField {K : Type*} [Field K] [IsAlgClosed K]
+    (A : ValuationSubring K) : IsAlgClosed (IsLocalRing.ResidueField A) := by p2m_exact_reverting @_root_.P2MW.S_ValuationSubring_isAlgClosed_residueField.solution
+end

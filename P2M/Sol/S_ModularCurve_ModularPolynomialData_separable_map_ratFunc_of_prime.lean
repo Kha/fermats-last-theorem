@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_JqCoeff
 import Theorems.Thm_ModularCurve_ModularPolynomialData_separable_map_jqModC_of_prime
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 namespace P2MW.S_ModularCurve_ModularPolynomialData_separable_map_ratFunc_of_prime
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

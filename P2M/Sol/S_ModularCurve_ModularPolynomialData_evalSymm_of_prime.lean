@@ -1,6 +1,6 @@
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_ModularPolynomialData_eq_of_prime
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_eq_of_prime
 import Theorems.Thm_ModularCurve_exists_modularPolynomialData_evalSymm
 import P2M.Util
 namespace P2MW.S_ModularCurve_ModularPolynomialData_evalSymm_of_prime

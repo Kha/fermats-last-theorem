@@ -7,16 +7,16 @@ import Definitions.Def_TateCurve_KeystoneVocab
 import Theorems.Thm_TateCurve_ks17_A_exports
 import Theorems.Thm_TateCurve_ks17_B_exports
 import Theorems.Thm_TateCurve_pointX_inv
-import Theorems.Thm_TateCurve_pointX_q_mul
-import Theorems.Thm_TateCurve_pointX_zpow_mul
-import Theorems.Thm_TateCurve_defectCoeff_one
-import Theorems.Thm_TateCurve_pointX_qExpansion
-import Theorems.Thm_TateCurve_pointY_qExpansion
-import Theorems.Thm_TateCurve_pointY_q_mul
+import P2M.Sol.S_TateCurve_pointX_q_mul
+import P2M.Sol.S_TateCurve_pointX_zpow_mul
+import P2M.Sol.S_TateCurve_defectCoeff_one
+import P2M.Sol.S_TateCurve_pointX_qExpansion
+import P2M.Sol.S_TateCurve_pointY_qExpansion
+import P2M.Sol.S_TateCurve_pointY_q_mul
 import Theorems.Thm_TateCurve_pointY_inv
-import Theorems.Thm_TateCurve_pointY_zpow_mul
-import Theorems.Thm_TateCurve_exists_zpow_mul_mem_annulus
-import Theorems.Thm_TateCurve_equation_pointX_pointY_of_defectCoeff_eq_zero
+import P2M.Sol.S_TateCurve_pointY_zpow_mul
+import P2M.Sol.S_TateCurve_exists_zpow_mul_mem_annulus
+import P2M.Sol.S_TateCurve_equation_pointX_pointY_of_defectCoeff_eq_zero
 import P2M.Util
 namespace P2MW.S_TateCurve_ks17_C2_exports
 

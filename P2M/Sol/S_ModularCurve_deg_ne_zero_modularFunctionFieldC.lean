@@ -4,14 +4,13 @@ public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 public import Definitions.Def_AlgebraicCurve_DivisorPushPull
-public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_deg_ne_zero
-public import Theorems.Thm_AlgebraicCurve_Place_inertiaDeg_pos_of_finiteDimensional
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import Theorems.Thm_ModularCurve_finiteDimensional_adjoin_jqNModC
-public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_deg_ne_zero
+import P2M.Sol.S_AlgebraicCurve_Place_inertiaDeg_pos_of_finiteDimensional
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_finiteDimensional_adjoin_jqNModC
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_deg_ne_zero_modularFunctionFieldC
 
 open AlgebraicCurve ModularCurve IntermediateField Polynomial
@@ -104,3 +103,14 @@ theorem solution (K : Type*) [Field K] (N : ℕ) [NeZero N] (w : Place K (modula
   haveI : FiniteDimensional (Fj K) (FjN K N) := finiteDimensional_adjoin_jqNModC K data
   rw [← Place.deg_congrRingEquiv (toFjN K N) (toFjN_algebraMap K N) w]
   exact deg_ne_zero_of_restrict (F := Fj K) _ (deg_ne_zero_Fj K _)
+end S_ModularCurve_deg_ne_zero_modularFunctionFieldC
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion
+attribute [-simp] AlgebraicCurve.Place.congrEquiv_symm_apply AlgebraicCurve.RationalFunctionField.heightOneSpectrumOfIrreducible_asIdeal AlgebraicCurve.Place.congrRingEquiv_toValuationSubring AlgebraicCurve.Place.congrEquiv_apply AlgebraicCurve.Place.coe_comapSymmRingEquiv_apply AlgebraicCurve.RationalFunctionField.deg_placeOfPoint AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom
+
+open AlgebraicCurve ModularCurve
+
+theorem ModularCurve.deg_ne_zero_modularFunctionFieldC (K : Type*) [Field K] (N : ℕ) [NeZero N] (w : Place K (modularFunctionFieldC K N)) : w.deg ≠ 0 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_deg_ne_zero_modularFunctionFieldC.solution
+end

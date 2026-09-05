@@ -3,44 +3,43 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
 public import Definitions.Def_ModularCurve_ModularUnit
-public import Theorems.Thm_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
+import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_redFst_eq_charLGeomPlaceOfPoint_of_ord_pos
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_redSnd_eq_charLGeomPlaceOfPoint_of_ord_pos
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_redFst_eq_placeInfty_of_forall_ord_le_zero
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_sp_eq_placeInfty_of_forall_ord_le_zero
-public import Theorems.Thm_ModularCurve_frobOnPlacesGeomLevel_charLGeomPlaceEquiv_placeInfty
-public import Theorems.Thm_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_redFst_eq_charLGeomPlaceOfPoint_of_ord_pos
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_redSnd_eq_charLGeomPlaceOfPoint_of_ord_pos
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_redFst_eq_placeInfty_of_forall_ord_le_zero
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_sp_eq_placeInfty_of_forall_ord_le_zero
+import P2M.Sol.S_ModularCurve_frobOnPlacesGeomLevel_charLGeomPlaceEquiv_placeInfty
+import P2M.Sol.S_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_X_sub_C
-public import Theorems.Thm_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv
-public import Theorems.Thm_ModularCurve_hasPrincipalDivisors_modularFunctionFieldBar_unconditional
-public import Theorems.Thm_ModularCurve_isCusp_iff_ord_neg
-public import Theorems.Thm_ModularCurve_eq_cuspInftyBar_or_eq_cuspZeroBar
-public import Theorems.Thm_ModularCurve_isCusp_cuspInftyBar
-public import Theorems.Thm_ModularCurve_isCusp_cuspZeroBar
-public import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_modularUnitSeries
-public import Theorems.Thm_ModularCurve_ord_cuspZeroBar_coeffEmb_modularUnitSeries
-public import Theorems.Thm_ModularCurve_ord_coeffEmb_modularUnitSeries_of_not_isCusp
-public import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
-public import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_qExpand
-public import Theorems.Thm_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
-public import Theorems.Thm_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
-public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
-public import Theorems.Thm_AlgebraicCurve_isIntegral_adjoin_of_forall_ord_nonneg
-public import Theorems.Thm_AlgebraicCurve_Place_transcendental_of_ord_ne_zero
+import P2M.Sol.S_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv
+import P2M.Sol.S_ModularCurve_hasPrincipalDivisors_modularFunctionFieldBar_unconditional
+import P2M.Sol.S_ModularCurve_isCusp_iff_ord_neg
+import P2M.Sol.S_ModularCurve_eq_cuspInftyBar_or_eq_cuspZeroBar
+import P2M.Sol.S_ModularCurve_isCusp_cuspInftyBar
+import P2M.Sol.S_ModularCurve_isCusp_cuspZeroBar
+import P2M.Sol.S_ModularCurve_ord_cuspInftyBar_coeffEmb_modularUnitSeries
+import P2M.Sol.S_ModularCurve_ord_cuspZeroBar_coeffEmb_modularUnitSeries
+import P2M.Sol.S_ModularCurve_ord_coeffEmb_modularUnitSeries_of_not_isCusp
+import P2M.Sol.S_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
+import P2M.Sol.S_ModularCurve_ord_cuspInftyBar_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull_of_neZero
+import P2M.Sol.S_AlgebraicCurve_isIntegral_adjoin_of_forall_ord_nonneg
+import P2M.Sol.S_AlgebraicCurve_Place_transcendental_of_ord_ne_zero
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_ModularCurve_JWidth
 public import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
-public import Theorems.Thm_ModularCurve_delta_pow_mul_prod_jqModC_sub_pow_eq_one
-public import Theorems.Thm_ModularCurve_zero_mem_ssJSet_of_lt_five
-public import Theorems.Thm_ModularCurve_ssJSet_finite
-public import Theorems.Thm_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_coeffEmb_modularUnitSeries_mem_integersFst
-public import Theorems.Thm_ValuationSubring_isAlgClosed_residueField_algebraicClosure_rat
+import P2M.Sol.S_ModularCurve_delta_pow_mul_prod_jqModC_sub_pow_eq_one
+import P2M.Sol.S_ModularCurve_zero_mem_ssJSet_of_lt_five
+import P2M.Sol.S_ModularCurve_ssJSet_finite
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_coeffEmb_modularUnitSeries_mem_integersFst
+import P2M.Sol.S_ValuationSubring_isAlgClosed_residueField_algebraicClosure_rat
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_exists_isIntegral_and_residue_eq_of_isIntegral_adjoin_residue_modularUnitSeries_inv
 
 set_option autoImplicit false
@@ -1212,4 +1211,35 @@ theorem solution
     show R.R₁.residue (f₀ * ⟨(uFun (q := q))⁻¹, hx⟩ ^ d) = h
     rw [map_mul, map_pow, ← hxbar_def, hres₀, ← hh_eq]
 
+end
+end S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_exists_isIntegral_and_residue_eq_of_isIntegral_adjoin_residue_modularUnitSeries_inv
+end P2MW
+
+public section
+attribute [-simp] AlgebraicCurve.RationalFunctionField.placeInfty_toValuationSubring
+
+set_option autoImplicit false
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+
+open AlgebraicCurve ModularCurve IsLocalRing
+theorem ModularCurve.PlaceSpecialization.LevelOneProlongationPair.exists_isIntegral_and_residue_eq_of_isIntegral_adjoin_residue_modularUnitSeries_inv
+    {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)}
+    {k : Type*} [Field k] [CharP k q] {red : A →+* k}
+    {data : ModularPolynomialData q} {hKr : KroneckerCongruence q data}
+    {hα : HeckeAlphaBarIntegral (AlgebraicClosure ℚ) 1 q} {hβ : HeckeBetaBarIntegral (AlgebraicClosure ℚ) 1 q}
+    {P : PlaceSpecialization A q 1 data hKr k red hα hβ} (R : P.LevelOneProlongationPair)
+    (hx : ((⟨coeffEmb (AlgebraicClosure ℚ) (modularUnitSeries (1 * q)),
+        coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (modularUnitSeries_mem_modularFunctionFieldFull (1 * q))⟩ :
+        ↥(modularFunctionFieldBar (1 * q))))⁻¹ ∈ R.R₁.integers)
+    (h : ↥(modularFunctionFieldFullC (ResidueField A) 1))
+    (hh : IsIntegral (Algebra.adjoin (ResidueField A)
+      {(R.R₁.residue ⟨_, hx⟩ : ↥(modularFunctionFieldFullC (ResidueField A) 1))}) h) :
+    ∃ f : R.R₁.integers,
+      IsIntegral (Algebra.adjoin (AlgebraicClosure ℚ)
+        {(((⟨coeffEmb (AlgebraicClosure ℚ) (modularUnitSeries (1 * q)),
+        coeffEmb_mem_laurentBaseChange (AlgebraicClosure ℚ) (modularUnitSeries_mem_modularFunctionFieldFull (1 * q))⟩ :
+        ↥(modularFunctionFieldBar (1 * q))))⁻¹ : ↥(modularFunctionFieldBar (1 * q)))})
+        (f : ↥(modularFunctionFieldBar (1 * q))) ∧
+      R.R₁.residue f = h := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_exists_isIntegral_and_residue_eq_of_isIntegral_adjoin_residue_modularUnitSeries_inv.solution
 end

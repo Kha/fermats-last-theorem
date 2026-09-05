@@ -1,9 +1,8 @@
 import Mathlib
 import Definitions.Def_TateCurve_XMultAlignment
 import Theorems.Thm_TateCurve_pointY_inv
-import Theorems.Thm_TateCurve_pointY_zpow_mul
-import Theorems.Thm_TateCurve_pointX_qExpansion
-
+import P2M.Sol.S_TateCurve_pointY_zpow_mul
+import P2M.Sol.S_TateCurve_pointX_qExpansion
 set_option autoImplicit false
 set_option linter.unusedSectionVars false
 

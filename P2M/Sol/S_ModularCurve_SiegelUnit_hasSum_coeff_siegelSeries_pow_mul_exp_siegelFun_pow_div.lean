@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_SiegelFunction
 import Definitions.Def_ModularCurve_LevelFunctionField
-import Theorems.Thm_ModularCurve_hasSum_qParam_mul
+import P2M.Sol.S_ModularCurve_hasSum_qParam_mul
 import P2M.Util
 namespace P2MW.S_ModularCurve_SiegelUnit_hasSum_coeff_siegelSeries_pow_mul_exp_siegelFun_pow_div
 

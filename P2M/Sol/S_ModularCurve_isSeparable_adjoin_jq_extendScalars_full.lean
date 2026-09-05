@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_LaurentCoeff
 import Definitions.Def_ModularCurve_QAdicPlace
-import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import P2M.Util
 namespace P2MW.S_ModularCurve_isSeparable_adjoin_jq_extendScalars_full
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

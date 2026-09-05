@@ -2,10 +2,9 @@ module
 
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
-public import Theorems.Thm_WeierstrassCurve_hasseInvariant_variableChange
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_variableChange
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
 
 set_option autoImplicit false
@@ -33,3 +32,19 @@ theorem solution
       WeierstrassCurve.hasseInvariant q W' ^ 12 * W.Δ ^ (q - 1) := by
   obtain ⟨φ, rfl⟩ := WeierstrassCurve.exists_variableChange_of_j_eq W W' h
   exact (P2mWs11W0.hasseInvariant_pow_mul_Δ_pow_variableChange q W φ).symm
+end S_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
+end P2MW
+
+public section
+set_option synthInstance.maxHeartbeats 400000
+set_option autoImplicit false
+
+open ModularCurve
+
+theorem WeierstrassCurve.hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
+    (q : ℕ) [Fact q.Prime]
+    {F : Type*} [Field F] [CharP F q] [IsSepClosed F]
+    (W W' : WeierstrassCurve F) [W.IsElliptic] [W'.IsElliptic] (h : W.j = W'.j) :
+    WeierstrassCurve.hasseInvariant q W ^ 12 * W'.Δ ^ (q - 1) =
+      WeierstrassCurve.hasseInvariant q W' ^ 12 * W.Δ ^ (q - 1) := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq.solution
+end

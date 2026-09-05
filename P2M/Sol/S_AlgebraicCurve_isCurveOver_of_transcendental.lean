@@ -3,13 +3,13 @@ module
 public import Mathlib
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_DivisorPushPull
-public import Theorems.Thm_AlgebraicCurve_hasPrincipalDivisors_of_transcendental_of_isSeparable
-public import Theorems.Thm_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
-public import Theorems.Thm_AlgebraicCurve_instIsCurveOverRatFunc
-public import Theorems.Thm_AlgebraicCurve_kaehlerRankOne_of_transcendental
+import P2M.Sol.S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental_of_isSeparable
+import P2M.Sol.S_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
+import P2M.Sol.S_AlgebraicCurve_instIsCurveOverRatFunc
+import P2M.Sol.S_AlgebraicCurve_kaehlerRankOne_of_transcendental
 import P2M.Util
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_isCurveOver_of_transcendental
 
 set_option autoImplicit false
@@ -55,3 +55,19 @@ theorem solution
       (AlgebraicCurve.instIsCurveOverRatFunc K).finiteResidue _
     exact Module.Finite.trans (v.restrict (RatFunc K)).ResidueField v.ResidueField
   exact { toHasPrincipalDivisors := hprin, finiteResidue := hfin, kaehler_free_rank_one := hkae }
+end S_AlgebraicCurve_isCurveOver_of_transcendental
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion
+attribute [-simp] AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom
+open AlgebraicCurve IntermediateField
+set_option synthInstance.maxHeartbeats 400000
+set_option maxHeartbeats 800000
+theorem AlgebraicCurve.isCurveOver_of_transcendental
+    {K F : Type*} [Field K] [Field F] [Algebra K F]
+    {x : F} (htr : Transcendental K x)
+    (hfd : FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F)
+    (hsep : Algebra.IsSeparable (IntermediateField.adjoin K ({x} : Set F)) F) :
+    IsCurveOver K F := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_isCurveOver_of_transcendental.solution
+end

@@ -1,32 +1,31 @@
 module
 
-public import Theorems.Thm_ModularCurve_equation_tateBase_iff
-public import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivX
-public import Theorems.Thm_ModularCurve_coeff_slotSubst_tateUnivY
-public import Theorems.Thm_ModularCurve_toricPoint_fst_coeff_zero
-public import Theorems.Thm_ModularCurve_toricPoint_fst_coeff_of_not_dvd
-public import Theorems.Thm_ModularCurve_toricPoint_fst_coeff_mul
-public import Theorems.Thm_ModularCurve_toricPoint_snd_coeff_zero
-public import Theorems.Thm_ModularCurve_toricPoint_snd_coeff_of_not_dvd
-public import Theorems.Thm_ModularCurve_toricPoint_snd_coeff_mul_eq_sum_divisors
-public import Theorems.Thm_ModularCurve_tsum_of_coeff_lt_eq_zero
-public import Theorems.Thm_ModularCurve_slotSubst_gen_injective
-public import Theorems.Thm_ModularCurve_single_div_one_sub_sq
-public import Theorems.Thm_ModularCurve_single_sq_div_one_sub_cube
-public import Theorems.Thm_ModularCurve_tsum_lambertTerm_eq
+import P2M.Sol.S_ModularCurve_equation_tateBase_iff
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivX
+import P2M.Sol.S_ModularCurve_coeff_slotSubst_tateUnivY
+import P2M.Sol.S_ModularCurve_toricPoint_fst_coeff_zero
+import P2M.Sol.S_ModularCurve_toricPoint_fst_coeff_of_not_dvd
+import P2M.Sol.S_ModularCurve_toricPoint_fst_coeff_mul
+import P2M.Sol.S_ModularCurve_toricPoint_snd_coeff_zero
+import P2M.Sol.S_ModularCurve_toricPoint_snd_coeff_of_not_dvd
+import P2M.Sol.S_ModularCurve_toricPoint_snd_coeff_mul_eq_sum_divisors
+import P2M.Sol.S_ModularCurve_tsum_of_coeff_lt_eq_zero
+import P2M.Sol.S_ModularCurve_slotSubst_gen_injective
+import P2M.Sol.S_ModularCurve_single_div_one_sub_sq
+import P2M.Sol.S_ModularCurve_single_sq_div_one_sub_cube
+import P2M.Sol.S_ModularCurve_tsum_lambertTerm_eq
 public import Definitions.Def_TateCurve_QSeries
 public import Definitions.Def_TateCurve_PointSeries
 public import Definitions.Def_TateCurve_Tails
-public import Theorems.Thm_TateCurve_equation_pointX_pointY
-public import Theorems.Thm_TateCurve_pointX_qExpansion
-public import Theorems.Thm_TateCurve_pointY_qExpansion
+import P2M.Sol.S_TateCurve_equation_pointX_pointY
+import P2M.Sol.S_TateCurve_pointX_qExpansion
+import P2M.Sol.S_TateCurve_pointY_qExpansion
 public import Mathlib.Topology.Algebra.Valued.NormedValued
 public import Mathlib.RingTheory.Valuation.Discrete.RankOne
 public import Definitions.Def_ModularCurve_TateSlots
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_toricPoint_equation
 
 set_option autoImplicit false
@@ -1114,4 +1113,13 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_equation.ModularC
 theorem solution (K : Type*) [Field K] [CharZero K] (p : ℕ) [NeZero p] (c : K) (hc0 : c ≠ 0) (hc1 : c ≠ 1) :
     (tateBase K p).toAffine.Equation (toricPoint K p c).1 (toricPoint K p c).2 :=
   ModularCurve.toricPoint_equation K p c hc0 hc1
+end S_ModularCurve_toricPoint_equation
+end P2MW
 
+public section
+attribute [-simp] TateCurve.curve_a₂ TateCurve.b_one TateCurve.curve_a₁ TateCurve.term_zero TateCurve.curve_a₆ TateCurve.curve_a₄ TateCurve.curve_a₃ TateCurve.yfun_zero TateCurve.xfun_zero TateCurve.yTerm_zero TateCurve.xTerm_zero TateCurve.xCoeffFull_succ TateCurve.a₆Coeff_zero TateCurve.a₄Coeff_succ TateCurve.a₄Coeff_zero TateCurve.cauchyMul_zero TateCurve.a₆Coeff_succ TateCurve.yCoeffFull_succ TateCurve.xCoeffFull_zero TateCurve.yCoeffFull_zero
+
+open ModularCurve
+theorem ModularCurve.toricPoint_equation (K : Type*) [Field K] [CharZero K] (p : ℕ) [NeZero p] (c : K) (hc0 : c ≠ 0) (hc1 : c ≠ 1) :
+    (tateBase K p).toAffine.Equation (toricPoint K p c).1 (toricPoint K p c).2 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_toricPoint_equation.solution
+end

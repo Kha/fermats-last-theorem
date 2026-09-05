@@ -1,5 +1,5 @@
 import Mathlib
-import Theorems.Thm_AlgebraicCurve_exists_separating_transcendental_of_perfectField
+import P2M.Sol.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
 import P2M.Util
 namespace P2MW.S_AlgebraicCurve_exists_finiteDimensional_isSeparable_adjoin_of_constantFieldExtension_of_perfectField
 

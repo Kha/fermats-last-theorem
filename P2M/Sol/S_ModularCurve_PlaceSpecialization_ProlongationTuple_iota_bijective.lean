@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_ProlongationTuple
-import Theorems.Thm_ModularCurve_PlaceSpecialization_red_surjective
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_red_surjective
 import Theorems.Thm_ModularCurve_modularFunctionFieldFullC_one
 import P2M.Util
 namespace P2MW.S_ModularCurve_PlaceSpecialization_ProlongationTuple_iota_bijective

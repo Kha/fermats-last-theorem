@@ -1,10 +1,9 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Theorems.Thm_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
+import P2M.Sol.S_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_ord_eq_zero_of_isIntegral_adjoin
 
 set_option autoImplicit false
@@ -25,3 +24,10 @@ theorem solution {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F)
     have h1 : v.adicValuation x = 1 :=
       (v.adicValuation_coe_eq_one_iff ⟨x, hxa⟩).mpr hunit
     simp [AlgebraicCurve.Place.ord, h1]
+end S_AlgebraicCurve_Place_ord_eq_zero_of_isIntegral_adjoin
+end P2MW
+
+public section
+open AlgebraicCurve
+theorem AlgebraicCurve.Place.ord_eq_zero_of_isIntegral_adjoin {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) {j x : F} (hj : j ∈ v.toValuationSubring) (hx : IsIntegral (Algebra.adjoin K {j}) x) (hx' : IsIntegral (Algebra.adjoin K {j}) x⁻¹) : v.ord x = 0 := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_Place_ord_eq_zero_of_isIntegral_adjoin.solution
+end

@@ -7,7 +7,6 @@ public import Mathlib.RingTheory.MvPowerSeries.Substitution
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_toricPoint_snd_coeff_of_not_dvd
 
 set_option autoImplicit false
@@ -1649,4 +1648,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_of_not_
 
 theorem solution (K : Type*) [Field K] (p : ℕ) (c : K) {m : ℕ} (hpm : ¬ p ∣ m) : (toricPoint K p c).2.coeff (m : ℤ) = 0 :=
   ModularCurve.toricPoint_snd_coeff_of_not_dvd K p c hpm
+end S_ModularCurve_toricPoint_snd_coeff_of_not_dvd
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.toricPoint_snd_coeff_of_not_dvd (K : Type*) [Field K] (p : ℕ) (c : K) {m : ℕ} (hpm : ¬ p ∣ m) : (toricPoint K p c).2.coeff (m : ℤ) = 0 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_toricPoint_snd_coeff_of_not_dvd.solution
+end

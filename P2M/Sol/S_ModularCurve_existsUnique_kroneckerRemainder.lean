@@ -4,7 +4,6 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_KroneckerTransport
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_existsUnique_kroneckerRemainder
 
 p2m_open "Polynomial ModularCurve P2MW.S_ModularCurve_existsUnique_kroneckerRemainder.ModularCurve"
@@ -51,3 +50,13 @@ theorem solution (p : ℕ) [Fact p.Prime]
     ∃! R : Polynomial (Polynomial ℤ),
       data.Φ = (C X ^ p - X) * (C X - X ^ p) + C (C (p : ℤ)) * R :=
   ModularCurve.K2R.main p data hK
+end S_ModularCurve_existsUnique_kroneckerRemainder
+end P2MW
+
+public section
+open Polynomial ModularCurve
+theorem ModularCurve.existsUnique_kroneckerRemainder (p : ℕ) [Fact p.Prime]
+    (data : ModularPolynomialData p) (hK : KroneckerCongruence p data) :
+    ∃! R : Polynomial (Polynomial ℤ),
+      data.Φ = (C X ^ p - X) * (C X - X ^ p) + C (C (p : ℤ)) * R := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_existsUnique_kroneckerRemainder.solution
+end

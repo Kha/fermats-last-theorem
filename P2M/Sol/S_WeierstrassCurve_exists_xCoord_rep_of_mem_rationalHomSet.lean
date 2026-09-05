@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_WeierstrassCurve_RationalEnd
-import Theorems.Thm_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
+import P2M.Sol.S_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
 import P2M.Util
 namespace P2MW.S_WeierstrassCurve_exists_xCoord_rep_of_mem_rationalHomSet
 

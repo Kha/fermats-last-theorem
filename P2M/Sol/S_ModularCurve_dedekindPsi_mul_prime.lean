@@ -1,8 +1,8 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
-import Theorems.Thm_ModularCurve_dedekindPsi_prime_pow
-import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 import P2M.Util
 namespace P2MW.S_ModularCurve_dedekindPsi_mul_prime
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

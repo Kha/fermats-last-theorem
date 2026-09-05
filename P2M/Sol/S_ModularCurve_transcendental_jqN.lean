@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_aeval_jq_eq_zero
+import P2M.Sol.S_ModularCurve_aeval_jq_eq_zero
 import P2M.Util
 namespace P2MW.S_ModularCurve_transcendental_jqN
 

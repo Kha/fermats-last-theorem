@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty
 
 noncomputable section
@@ -84,4 +83,11 @@ theorem solution (n : ℕ) :
     ∀ f : LaurentSeries ℚ, ModularCurve.PoleOrderLE f n →
       ∃ P : Polynomial ℚ, P.natDegree ≤ n ∧ ModularCurve.PoleOrderLE (f - Polynomial.aeval ModularCurve.jq P) 0 :=
   ModularCurve.exists_aeval_jq_sub_holomorphicAtInfty' n
+end
+end S_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.exists_aeval_jq_sub_holomorphicAtInfty (n : ℕ) : ∀ f : LaurentSeries ℚ, PoleOrderLE f n → ∃ P : Polynomial ℚ, P.natDegree ≤ n ∧ PoleOrderLE (f - Polynomial.aeval jq P) 0 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty.solution
+end

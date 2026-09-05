@@ -1,5 +1,5 @@
 import Definitions.Def_ModularCurve_CuspidalClass
-import Theorems.Thm_ModularCurve_deg_cuspInftyBar
+import P2M.Sol.S_ModularCurve_deg_cuspInftyBar
 import P2M.Util
 namespace P2MW.S_ModularCurve_deg_cuspZeroBar
 

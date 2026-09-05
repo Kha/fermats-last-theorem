@@ -4,7 +4,7 @@ import Definitions.Def_ModularCurve_QExpansionDiff
 import Definitions.Def_ModularCurve_TateFormal
 import Definitions.Def_ModularCurve_ModularUnit
 import Theorems.Thm_EisensteinSeries_ramanujan_system_qExpansion_int
-import Theorems.Thm_ModularCurve_eisenstein4_cube_sub_mk_sq
+import P2M.Sol.S_ModularCurve_eisenstein4_cube_sub_mk_sq
 import Theorems.Thm_ModularCurve_thetaL_jq_mul_deltaSeries
 import Theorems.Thm_ModularCurve_theta_mul
 import P2M.Util

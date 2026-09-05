@@ -4,7 +4,6 @@ public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
 public import Mathlib.Algebra.Algebra.Subalgebra.Lattice
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_isIntegral_adjoin_map_algHom
 
 set_option autoImplicit false
@@ -24,3 +23,9 @@ theorem solution {K F F' : Type*} [CommRing K] [CommRing F] [CommRing F'] [Algeb
     ((φ.comp (Algebra.adjoin K {j}).val).codRestrict (Algebra.adjoin K {φ j}) hmem).toRingHom
     φ.toRingHom (by ext a; rfl) hx
   exact key
+end S_AlgebraicCurve_isIntegral_adjoin_map_algHom
+end P2MW
+
+public section
+theorem AlgebraicCurve.isIntegral_adjoin_map_algHom {K F F' : Type*} [CommRing K] [CommRing F] [CommRing F'] [Algebra K F] [Algebra K F'] (φ : F →ₐ[K] F') {j x : F} (hx : IsIntegral (Algebra.adjoin K {j}) x) : IsIntegral (Algebra.adjoin K {φ j}) (φ x) := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_isIntegral_adjoin_map_algHom.solution
+end

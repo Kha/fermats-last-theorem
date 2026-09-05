@@ -4,7 +4,6 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_LegendreJ
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_exists_legendreJ_eq
 
 set_option autoImplicit false
@@ -56,3 +55,11 @@ p2m_open "Polynomial ModularCurve P2MW.S_ModularCurve_exists_legendreJ_eq.Modula
 theorem solution {K : Type*} [Field K] [IsAlgClosed K] (h2 : (2 : K) ≠ 0) (j : K) :
     ∃ t : K, t ≠ 0 ∧ t ≠ 1 ∧ legendreJ t = j :=
   ModularCurve.exists_legendreJ_eq' h2 j
+end S_ModularCurve_exists_legendreJ_eq
+end P2MW
+
+public section
+open Polynomial ModularCurve
+theorem ModularCurve.exists_legendreJ_eq {K : Type*} [Field K] [IsAlgClosed K] (h2 : (2 : K) ≠ 0) (j : K) :
+    ∃ t : K, t ≠ 0 ∧ t ≠ 1 ∧ legendreJ t = j := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_legendreJ_eq.solution
+end

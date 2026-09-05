@@ -3,7 +3,6 @@ module
 public import Mathlib
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ValuationSubring_isAlgClosed_residueField_algebraicClosure_rat
 
 open IsLocalRing Polynomial
@@ -32,3 +31,12 @@ theorem solution (A : ValuationSubring (AlgebraicClosure ℚ)) :
     apply IsFractionRing.injective A (AlgebraicClosure ℚ)
     rw [map_zero, ← Polynomial.eval₂_at_apply, ← Polynomial.eval_map, ha]; exact hα
   rw [← hFmap, Polynomial.eval_map, Polynomial.eval₂_at_apply, hFa, map_zero]
+end S_ValuationSubring_isAlgClosed_residueField_algebraicClosure_rat
+end P2MW
+
+public section
+open IsLocalRing
+theorem ValuationSubring.isAlgClosed_residueField_algebraicClosure_rat
+    (A : ValuationSubring (AlgebraicClosure ℚ)) :
+    IsAlgClosed (ResidueField A) := by p2m_exact_reverting @_root_.P2MW.S_ValuationSubring_isAlgClosed_residueField_algebraicClosure_rat.solution
+end

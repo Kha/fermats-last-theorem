@@ -1,7 +1,7 @@
 import Definitions.Def_ModularCurve_FibreModel
 import Definitions.Def_ModularCurve_ArithmeticGalois
 import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-import Theorems.Thm_ModularCurve_isCusp_iff_ord_neg
+import P2M.Sol.S_ModularCurve_isCusp_iff_ord_neg
 import Theorems.Thm_ModularCurve_exists_slot_of_isCusp
 import Theorems.Thm_ModularCurve_slot_ord_of_algHom_laurentBaseChange
 import P2M.Util

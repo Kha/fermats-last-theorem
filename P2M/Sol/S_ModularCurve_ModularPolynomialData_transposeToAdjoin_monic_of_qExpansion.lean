@@ -2,10 +2,10 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffEmb_qExpand
-public import Theorems.Thm_ModularCurve_transcendental_jq
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_transcendental_jq
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.Algebra.Polynomial.Roots
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 public import Mathlib.FieldTheory.Minpoly.Field
@@ -16,7 +16,6 @@ public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.LinearCombination
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion
 
 noncomputable section
@@ -893,4 +892,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_ModularPolynomialData_transp
 
 theorem solution {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (h0top : (evalAtJ (data.Φ.coeff 0)).coeff (-(dedekindPsi N : ℤ)) = 1) (h0le : ∀ m : ℕ, dedekindPsi N < m → (evalAtJ (data.Φ.coeff 0)).coeff (-(m : ℤ)) = 0) (hk : ∀ k, k ≠ 0 → ∀ m : ℕ, dedekindPsi N ≤ m → (evalAtJ (data.Φ.coeff k)).coeff (-(m : ℤ)) = 0) : ((swapBivar data.Φ).map evalAtJGen).Monic ∧ ((swapBivar data.Φ).map evalAtJGen).natDegree = dedekindPsi N :=
   ModularCurve.ModularPolynomialData.transposeToAdjoin_monic_of_qExpansion data h0top h0le hk
+end S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.ModularPolynomialData.transposeToAdjoin_monic_of_qExpansion {N : ℕ} [NeZero N] (data : ModularPolynomialData N) (h0top : (evalAtJ (data.Φ.coeff 0)).coeff (-(dedekindPsi N : ℤ)) = 1) (h0le : ∀ m : ℕ, dedekindPsi N < m → (evalAtJ (data.Φ.coeff 0)).coeff (-(m : ℤ)) = 0) (hk : ∀ k, k ≠ 0 → ∀ m : ℕ, dedekindPsi N ≤ m → (evalAtJ (data.Φ.coeff k)).coeff (-(m : ℤ)) = 0) : ((swapBivar data.Φ).map evalAtJGen).Monic ∧ ((swapBivar data.Φ).map evalAtJGen).natDegree = dedekindPsi N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion.solution
+end

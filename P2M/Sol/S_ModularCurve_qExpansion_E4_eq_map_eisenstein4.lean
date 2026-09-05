@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_X0
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 
 set_option autoImplicit false
@@ -35,4 +34,10 @@ theorem solution : UpperHalfPlane.qExpansion 1 ⇑ModularForm.E₄ = PowerSeries
       Int.cast_natCast]
     push_cast
     ring
+end
+end S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+end P2MW
+
+public section
+theorem ModularCurve.qExpansion_E4_eq_map_eisenstein4 : UpperHalfPlane.qExpansion 1 ⇑ModularForm.E₄ = PowerSeries.map (Int.castRingHom ℂ) ModularCurve.eisenstein4 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4.solution
 end

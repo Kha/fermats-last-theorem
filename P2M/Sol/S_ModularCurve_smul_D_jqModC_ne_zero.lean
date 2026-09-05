@@ -1,8 +1,8 @@
 import Definitions.Def_AlgebraicCurve_Differentials
 import Definitions.Def_ModularCurve_QAdicPlace
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_order_jqModC
-import Theorems.Thm_ModularCurve_ord_qInftyPlaceBar
+import P2M.Sol.S_ModularCurve_order_jqModC
+import P2M.Sol.S_ModularCurve_ord_qInftyPlaceBar
 import Theorems.Thm_AlgebraicCurve_Place_D_ne_zero_of_ord_eq_one
 import P2M.Util
 namespace P2MW.S_ModularCurve_smul_D_jqModC_ne_zero

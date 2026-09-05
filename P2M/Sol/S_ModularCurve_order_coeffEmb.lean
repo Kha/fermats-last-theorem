@@ -3,7 +3,6 @@ module
 public import Definitions.Def_ModularCurve_LaurentCoeff
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_order_coeffEmb
 
 open ModularCurve
@@ -23,3 +22,11 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L] (x : LaurentSeries ℚ) :
       ((map_eq_zero_iff _ (algebraMap ℚ L).injective).mp h)
   · intro h
     exact HahnSeries.coeff_order_eq_zero.not.mpr hLx (by rw [coeffEmb_coeff, h, map_zero])
+end S_ModularCurve_order_coeffEmb
+end P2MW
+
+public section
+open ModularCurve
+
+theorem ModularCurve.order_coeffEmb (L : Type*) [Field L] [Algebra ℚ L] (x : LaurentSeries ℚ) : (coeffEmb L x).order = x.order := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_order_coeffEmb.solution
+end

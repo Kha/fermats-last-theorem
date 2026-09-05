@@ -1,12 +1,11 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 public import Mathlib.Data.Nat.Factorization.Induction
 public import Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
 
 noncomputable section
@@ -107,4 +106,13 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_
 
 theorem solution (N : ℕ) [NeZero N] : ∃ P : Polynomial (Polynomial ℤ), P.Monic ∧ P.eval₂ evalAtJ (jqN N) = 0 :=
   ModularCurve.exists_monic_evalAtJ_jqN_eq_zero N
+end S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
+
+open ModularCurve
+theorem ModularCurve.exists_monic_evalAtJ_jqN_eq_zero (N : ℕ) [NeZero N] : ∃ P : Polynomial (Polynomial ℤ), P.Monic ∧ P.eval₂ evalAtJ (jqN N) = 0 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero.solution
+end

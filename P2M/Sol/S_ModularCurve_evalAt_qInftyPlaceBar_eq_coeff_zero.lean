@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_QAdicPlace
 import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-import Theorems.Thm_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
+import P2M.Sol.S_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
 import Theorems.Thm_AlgebraicCurve_Place_mk_mem_maximalIdeal_iff
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_congr
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_algebraMap

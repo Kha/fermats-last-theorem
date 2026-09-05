@@ -4,19 +4,18 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_NodeLocalized
 public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 public import Definitions.Def_ModularCurve_NodeDescent
-public import Theorems.Thm_ModularCurve_modularRing_eq_range_modularEval
-public import Theorems.Thm_ModularCurve_redRes_modularEval
-public import Theorems.Thm_ModularCurve_isPrime_span_uniformizer_and_maximalIdeal_modularLocalizedAtPoint_eq_of_pow_sq_ne
-public import Theorems.Thm_ModularCurve_isIntegrallyClosed_modularLocalizedAtPoint_coeffSubring_of_pow_sq_ne
-public import Theorems.Thm_ModularCurve_NodeLocalized_isNoetherianRing_isLocalRing_modularLocalizedAtPoint_coeffSubring
-public import Theorems.Thm_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing
-public import Theorems.Thm_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
-public import Theorems.Thm_IsIntegrallyClosed_exists_algebraMap_eq_of_isIntegral_pow_mul
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_modularRing_eq_range_modularEval
+import P2M.Sol.S_ModularCurve_redRes_modularEval
+import P2M.Sol.S_ModularCurve_isPrime_span_uniformizer_and_maximalIdeal_modularLocalizedAtPoint_eq_of_pow_sq_ne
+import P2M.Sol.S_ModularCurve_isIntegrallyClosed_modularLocalizedAtPoint_coeffSubring_of_pow_sq_ne
+import P2M.Sol.S_ModularCurve_NodeLocalized_isNoetherianRing_isLocalRing_modularLocalizedAtPoint_coeffSubring
+import P2M.Sol.S_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing
+import P2M.Sol.S_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
+import P2M.Sol.S_IsIntegrallyClosed_exists_algebraMap_eq_of_isIntegral_pow_mul
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_mem_modularLocalizedAtPoint_of_mem_modularLocalized_of_isIntegral
 set_option synthInstance.maxHeartbeats 1600000
 set_option maxHeartbeats 3200000
@@ -538,4 +537,23 @@ theorem solution
     g ∈ modularLocalizedAtPoint (1 * q) A.toSubring red (red x₀) (red x₀ ^ q) :=
   ModularCurve.RegG.mainRegG red hker g hg hint x₀ hb
 
+end
+end S_ModularCurve_NodeLocalized_mem_modularLocalizedAtPoint_of_mem_modularLocalized_of_isIntegral
+end P2MW
+
+public section
+set_option autoImplicit false
+
+open ModularCurve
+open ModularCurve.NodeLocalized
+theorem ModularCurve.NodeLocalized.mem_modularLocalizedAtPoint_of_mem_modularLocalized_of_isIntegral
+    {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)}
+    {k : Type*} [Field k] [CharP k q] (red : A →+* k)
+    (hker : ∀ a : A, red a = 0 ↔ a ∈ IsLocalRing.maximalIdeal A)
+    (data : ModularPolynomialData q) (hKr : KroneckerCongruence q data)
+    (g : LaurentSeries (AlgebraicClosure ℚ))
+    (hg : g ∈ CharPReduction.modularLocalized (1 * q) A.toSubring red)
+    (hint : IsIntegral (Algebra.adjoin (AlgebraicClosure ℚ) {jqModC (AlgebraicClosure ℚ)}) g)
+    (x₀ : A) (hb : red x₀ ^ (q ^ 2) ≠ red x₀) :
+    g ∈ modularLocalizedAtPoint (1 * q) A.toSubring red (red x₀) (red x₀ ^ q) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_NodeLocalized_mem_modularLocalizedAtPoint_of_mem_modularLocalized_of_isIntegral.solution
 end

@@ -1,6 +1,6 @@
 import Definitions.Def_ModularCurve_X0ModL
 import Theorems.Thm_ModularCurve_exists_modularPolynomialData_evalSymm
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import Theorems.Thm_ModularCurve_exists_monic_natDegree_le_aeval_jqModC_eq_zero
 import P2M.Util
 namespace P2MW.S_ModularCurve_isIntegral_inclusion_adjoin_jqNModC

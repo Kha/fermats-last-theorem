@@ -5,7 +5,7 @@ import Theorems.Thm_AlgebraicCurve_Place_evalAt_eq_zero_iff_one_le_ord
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_mul
 import P2M.Sol.S_AlgebraicCurve_Place_ord_algebraMap
 import Theorems.Thm_AlgebraicCurve_Place_mem_and_evalAt_eq_iff_ord_sub_algebraMap_pos
-import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
+import P2M.Sol.S_AlgebraicCurve_Place_mem_iff_ord_nonneg
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_zpow
 import P2M.Sol.S_AlgebraicCurve_Place_evalAt_inv
 import P2M.Util

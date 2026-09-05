@@ -2,7 +2,7 @@ import Mathlib
 import Definitions.Def_ModularCurve_ModularUnit
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_LaurentCoeff
-import Theorems.Thm_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
+import P2M.Sol.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_laurentSeries_int_modularUnitSeries_coeffMap_eq_jqModC_pow_of_lt_five
 

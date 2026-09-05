@@ -1,6 +1,6 @@
 import Mathlib
 import Definitions.Def_ModularCurve_FrobeniusModL
-import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
+import P2M.Sol.S_ModularCurve_nonempty_modularPolynomialData
 import P2M.Util
 namespace P2MW.S_ModularCurve_finrankAlong_frobeniusModL
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

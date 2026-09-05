@@ -5,7 +5,6 @@ public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_coeffEmb_jqN
 
 noncomputable section
@@ -40,3 +39,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_coeffEmb_jqN.ModularCurve in
 theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] :
     coeffEmb L (jqN N) = jqNModC L N :=
   CharLRows.coeffEmb_jqN L N
+end S_ModularCurve_coeffEmb_jqN
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.coeffEmb_jqN (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] :
+    coeffEmb L (jqN N) = jqNModC L N := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_coeffEmb_jqN.solution
+end

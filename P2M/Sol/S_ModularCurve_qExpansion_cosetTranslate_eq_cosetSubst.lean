@@ -3,7 +3,7 @@ import Definitions.Def_ModularCurve_X0
 import Definitions.Def_ModularCurve_JqCoeff
 import Definitions.Def_ModularCurve_PrimCosetReps
 import Theorems.Thm_ModularCurve_hasSum_cosetSubst_coeff_mul_qParam_pow
-import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
+import P2M.Sol.S_ModularCurve_laurent_qParam_coeff_unique
 import P2M.Util
 namespace P2MW.S_ModularCurve_qExpansion_cosetTranslate_eq_cosetSubst
 

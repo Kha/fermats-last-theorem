@@ -3,18 +3,17 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
-public import Theorems.Thm_ModularCurve_aeval_jqN_toAdjoin
-public import Theorems.Thm_ModularCurve_phiIrreducible_of_prime
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
+import P2M.Sol.S_ModularCurve_aeval_jqN_toAdjoin
+import P2M.Sol.S_ModularCurve_phiIrreducible_of_prime
 public import Mathlib.FieldTheory.Separable
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_phiIrreducible_all
 
 set_option autoImplicit false
@@ -433,4 +432,10 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_phiI
 
 theorem solution (N : ℕ) [NeZero N] (data : ModularPolynomialData N) : PhiIrreducible data :=
   ModularCurve.phiIrreducible_all N data
+end S_ModularCurve_phiIrreducible_all
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.phiIrreducible_all (N : ℕ) [NeZero N] (data : ModularPolynomialData N) : PhiIrreducible data := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_phiIrreducible_all.solution
+end

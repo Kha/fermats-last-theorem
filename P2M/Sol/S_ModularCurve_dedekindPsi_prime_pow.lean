@@ -6,7 +6,6 @@ public import Mathlib.NumberTheory.Divisors
 public import Mathlib.Tactic.IntervalCases
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_dedekindPsi_prime_pow
 
 p2m_open "ModularCurve Finset Nat Finset.Nat"
@@ -40,3 +39,10 @@ theorem solution (p k : ℕ) (hp : p.Prime) (hk : k ≠ 0) :
     conv_lhs => rw [show k = (k - 1) + 1 by omega, pow_succ]
     exact Nat.mul_div_cancel _ hp.pos
   rw [dedekindPsi, hfilter, Finset.sum_pair hp.one_lt.ne, Nat.div_one, hdiv]
+end S_ModularCurve_dedekindPsi_prime_pow
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.dedekindPsi_prime_pow (p k : ℕ) (hp : p.Prime) (hk : k ≠ 0) : dedekindPsi (p ^ k) = p ^ k + p ^ (k - 1) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_dedekindPsi_prime_pow.solution
+end

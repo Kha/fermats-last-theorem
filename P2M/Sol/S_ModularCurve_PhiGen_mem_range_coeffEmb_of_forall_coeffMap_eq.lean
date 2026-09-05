@@ -2,12 +2,11 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Galois.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_mem_range_coeffEmb_of_forall_coeffMap_eq
 
 noncomputable section
@@ -315,4 +314,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_mem_range_coeffEmb_of
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] (hfix : ∀ c : K, (∀ σ : K ≃ₐ[ℚ] K, σ c = c) → ∃ r : ℚ, algebraMap ℚ K r = c) {f : LaurentSeries K} (hf : ∀ σ : K ≃ₐ[ℚ] K, coeffMap (σ : K →+* K) f = f) : f ∈ Set.range (coeffEmb K) :=
   ModularCurve.PhiGen.mem_range_coeffEmb_of_forall_coeffMap_eq hfix hf
+end S_ModularCurve_PhiGen_mem_range_coeffEmb_of_forall_coeffMap_eq
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.mem_range_coeffEmb_of_forall_coeffMap_eq {K : Type*} [Field K] [Algebra ℚ K] (hfix : ∀ c : K, (∀ σ : K ≃ₐ[ℚ] K, σ c = c) → ∃ r : ℚ, algebraMap ℚ K r = c) {f : LaurentSeries K} (hf : ∀ σ : K ≃ₐ[ℚ] K, coeffMap (σ : K →+* K) f = f) : f ∈ Set.range (coeffEmb K) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_mem_range_coeffEmb_of_forall_coeffMap_eq.solution
+end

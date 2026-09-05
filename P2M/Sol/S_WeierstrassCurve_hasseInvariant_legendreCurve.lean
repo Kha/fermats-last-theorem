@@ -6,7 +6,6 @@ public import Definitions.Def_Polynomial_DeuringPolynomial
 public import Definitions.Def_ModularCurve_LegendreJ
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_legendreCurve
 
 set_option autoImplicit false
@@ -187,3 +186,12 @@ theorem solution {R : Type*} [CommRing R] {q : ℕ} (hq : Odd q) (t : R) :
     (legendreCurve t).hasseInvariant q
       = (-4) ^ ((q - 1) / 2) * ((Polynomial.deuringPolynomial q).map (Int.castRingHom R)).eval t :=
   WeierstrassCurve.hasseInvariant_legendreCurve' hq t
+end S_WeierstrassCurve_hasseInvariant_legendreCurve
+end P2MW
+
+public section
+open Polynomial WeierstrassCurve
+theorem WeierstrassCurve.hasseInvariant_legendreCurve {R : Type*} [CommRing R] {q : ℕ} (hq : Odd q) (t : R) :
+    (legendreCurve t).hasseInvariant q
+      = (-4) ^ ((q - 1) / 2) * ((Polynomial.deuringPolynomial q).map (Int.castRingHom R)).eval t := by p2m_exact_reverting @_root_.P2MW.S_WeierstrassCurve_hasseInvariant_legendreCurve.solution
+end

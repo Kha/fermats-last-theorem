@@ -1,7 +1,7 @@
 import Mathlib
 import Definitions.Def_ModularCurve_X1
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 import P2M.Util
 namespace P2MW.S_ModularCurve_exists_polynomial_ofPowerSeries_qExpansion_eq_aeval_jqModC_mul_of_levelOne
 

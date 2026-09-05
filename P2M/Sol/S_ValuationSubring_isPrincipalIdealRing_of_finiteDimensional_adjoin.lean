@@ -3,7 +3,6 @@ module
 public import Mathlib
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin
 
 set_option autoImplicit false
@@ -261,3 +260,13 @@ theorem solution
     (O : ValuationSubring F) (hK : ∀ a : K, algebraMap K F a ∈ O) (hO : O ≠ ⊤) :
     IsPrincipalIdealRing O :=
   P2mFunctionFieldPlacesDiscrete.isPrincipalIdealRing_of_finiteDimensional_adjoin x O hK hO
+end S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin
+end P2MW
+
+public section
+theorem ValuationSubring.isPrincipalIdealRing_of_finiteDimensional_adjoin
+    {K F : Type*} [Field K] [Field F] [Algebra K F] (x : F)
+    [FiniteDimensional (IntermediateField.adjoin K ({x} : Set F)) F]
+    (O : ValuationSubring F) (hK : ∀ a : K, algebraMap K F a ∈ O) (hO : O ≠ ⊤) :
+    IsPrincipalIdealRing O := by p2m_exact_reverting @_root_.P2MW.S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin.solution
+end

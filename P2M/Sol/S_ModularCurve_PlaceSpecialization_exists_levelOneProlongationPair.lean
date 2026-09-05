@@ -7,18 +7,17 @@ public import Definitions.Def_AlgebraicCurve_RegularProlongation
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_CharPReduction
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
-public import Theorems.Thm_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
-public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
-public import Theorems.Thm_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
-public import Theorems.Thm_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
+import P2M.Sol.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
+import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull_of_neZero
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
 public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
-public import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
-public import Theorems.Thm_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
+import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+import P2M.Sol.S_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair
 
 set_option linter.unusedSectionVars false
@@ -1733,3 +1732,19 @@ theorem solution
 
 end
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.Ws25.GaussE.AlgebraicCurve.RegularProlongation P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.Ws25 P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.Ws25.GaussE"
+end S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair
+end P2MW
+
+public section
+attribute [-simp] ModularCurve.reductionDivAlong_apply ModularCurve.coe_reductionDegZeroAlong
+open AlgebraicCurve IsLocalRing ModularCurve
+set_option synthInstance.maxHeartbeats 400000 in
+theorem ModularCurve.PlaceSpecialization.exists_levelOneProlongationPair
+    {q : ℕ} [Fact q.Prime] {A : ValuationSubring (AlgebraicClosure ℚ)} (hA : A.LiesOverPrime q)
+    {k : Type*} [Field k] [CharP k q] {red : A →+* k}
+    {data : ModularPolynomialData q} {hKr : KroneckerCongruence q data}
+    {hα : HeckeAlphaBarIntegral (AlgebraicClosure ℚ) 1 q}
+    {hβ : HeckeBetaBarIntegral (AlgebraicClosure ℚ) 1 q}
+    (P : PlaceSpecialization A q 1 data hKr k red hα hβ) :
+    Nonempty (P.LevelOneProlongationPair) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.solution
+end

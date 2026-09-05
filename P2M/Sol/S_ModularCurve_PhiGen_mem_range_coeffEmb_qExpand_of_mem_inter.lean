@@ -2,12 +2,11 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Galois.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_mem_range_coeffEmb_qExpand_of_mem_inter
 
 noncomputable section
@@ -315,4 +314,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_mem_range_coeffEmb_qE
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {f : LaurentSeries K} (h1 : f ∈ Set.range (ModularCurve.qExpand K ℓ)) (h2 : f ∈ Set.range (coeffEmb K)) : ∃ g : LaurentSeries ℚ, f = coeffEmb K (ModularCurve.qExpand ℚ ℓ g) :=
   ModularCurve.PhiGen.mem_range_coeffEmb_qExpand_of_mem_inter h1 h2
+end S_ModularCurve_PhiGen_mem_range_coeffEmb_qExpand_of_mem_inter
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.mem_range_coeffEmb_qExpand_of_mem_inter {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {f : LaurentSeries K} (h1 : f ∈ Set.range (ModularCurve.qExpand K ℓ)) (h2 : f ∈ Set.range (coeffEmb K)) : ∃ g : LaurentSeries ℚ, f = coeffEmb K (ModularCurve.qExpand ℚ ℓ g) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_mem_range_coeffEmb_qExpand_of_mem_inter.solution
+end

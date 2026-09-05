@@ -3,11 +3,10 @@ module
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_laurentBaseChange_adjoin
-public import Theorems.Thm_ModularCurve_coeffEmb_jqN
+import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin
+import P2M.Sol.S_ModularCurve_coeffEmb_jqN
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_laurentBaseChange_modularFunctionFieldFull
 
 open ModularCurve IntermediateField Polynomial
@@ -22,3 +21,9 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] : Mo
     exact ⟨d, hd, hdvd, (coeffEmb_jqN L d)⟩
   · rintro ⟨d, hd, hdvd, rfl⟩
     exact ⟨qExpand ℚ d jq, ⟨d, hd, hdvd, rfl⟩, coeffEmb_jqN L d⟩
+end S_ModularCurve_laurentBaseChange_modularFunctionFieldFull
+end P2MW
+
+public section
+theorem ModularCurve.laurentBaseChange_modularFunctionFieldFull (L : Type*) [Field L] [Algebra ℚ L] (N : ℕ) [NeZero N] : ModularCurve.laurentBaseChange L (ModularCurve.modularFunctionFieldFull N) = IntermediateField.adjoin L {x | ∃ (d : ℕ) (_ : NeZero d), d ∣ N ∧ x = ModularCurve.jqNModC L d} := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_laurentBaseChange_modularFunctionFieldFull.solution
+end

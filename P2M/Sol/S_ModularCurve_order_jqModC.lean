@@ -4,7 +4,6 @@ public import Definitions.Def_ModularCurve_JqCoeff
 public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_order_jqModC
 
 noncomputable section
@@ -93,3 +92,11 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_order_jqModC.ModularCurve in
 theorem solution (K : Type*) [CommRing K] [Nontrivial K] :
     (jqModC K).order = -1 :=
   CharLRows.order_jqModC K
+end S_ModularCurve_order_jqModC
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.order_jqModC (K : Type*) [CommRing K] [Nontrivial K] :
+    (jqModC K).order = -1 := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_order_jqModC.solution
+end

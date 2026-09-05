@@ -4,7 +4,6 @@ public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
 public import Mathlib.Algebra.Algebra.Subalgebra.Tower
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_isIntegral_adjoin_of_isScalarTower
 
 set_option autoImplicit false
@@ -20,3 +19,9 @@ theorem solution {K L F : Type*} [CommRing K] [CommRing L] [CommRing F] [Algebra
       map_zero' := rfl
       map_add' := fun _ _ => rfl }
   exact IsIntegral.map_of_comp_eq φ' (RingHom.id F) (by ext a; rfl) hx
+end S_AlgebraicCurve_isIntegral_adjoin_of_isScalarTower
+end P2MW
+
+public section
+theorem AlgebraicCurve.isIntegral_adjoin_of_isScalarTower {K L F : Type*} [CommRing K] [CommRing L] [CommRing F] [Algebra K L] [Algebra K F] [Algebra L F] [IsScalarTower K L F] {j x : F} (hx : IsIntegral (Algebra.adjoin K {j}) x) : IsIntegral (Algebra.adjoin L {j}) x := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_isIntegral_adjoin_of_isScalarTower.solution
+end

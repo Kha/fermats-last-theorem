@@ -2,14 +2,13 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_coeffEmb_injective
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeffEmb_injective
 public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.Algebra.Polynomial.Eval.Degree
 public import Mathlib.Tactic.Linarith
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE
 
 set_option autoImplicit false
@@ -327,4 +326,10 @@ open _root_.ModularCurve _root_.P2MW.S_ModularCurve_PhiGen_PhiGenDescends_poleOr
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hc : PhiGenDescends ℓ ζ c) (k : ℕ) : PoleOrderLE (c k) (ℓ + 1) :=
   ModularCurve.PhiGen.PhiGenDescends.poleOrderLE hc k
+end S_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE
+end P2MW
 
+public section
+open ModularCurve ModularCurve.PhiGen
+theorem ModularCurve.PhiGen.PhiGenDescends.poleOrderLE {K : Type*} [Field K] [Algebra ℚ K] {ℓ : ℕ} [hℓ : Fact (Nat.Prime ℓ)] {ζ : Kˣ} {c : ℕ → LaurentSeries ℚ} (hc : PhiGenDescends ℓ ζ c) (k : ℕ) : PoleOrderLE (c k) (ℓ + 1) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE.solution
+end

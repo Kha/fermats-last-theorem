@@ -2,9 +2,9 @@ import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
 import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 import Definitions.Def_ModularCurve_HeckeOperator
 import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_coeffEmb_jqN
-import Theorems.Thm_ModularCurve_laurentBaseChange_modularFunctionFieldFull
-import Theorems.Thm_ModularCurve_isIntegral_jqNModC_mul
+import P2M.Sol.S_ModularCurve_coeffEmb_jqN
+import P2M.Sol.S_ModularCurve_laurentBaseChange_modularFunctionFieldFull
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_mul
 import P2M.Util
 namespace P2MW.S_ModularCurve_finiteAlong_heckeAlphaBar_of_modularPolynomialData
 

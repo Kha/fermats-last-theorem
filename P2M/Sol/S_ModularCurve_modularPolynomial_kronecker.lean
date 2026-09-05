@@ -4,20 +4,20 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-public import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
-public import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import Theorems.Thm_ModularCurve_coeffMap_injective
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_PhiGen_splits_of_prime
+import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_ModularCurve_coeffMap_injective
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.RingTheory.AdjoinRoot
 public import Mathlib.RingTheory.Polynomial.Cyclotomic.Eval
 public import Mathlib.Algebra.CharP.Lemmas
 import P2M.Util
+public import Mathlib.Algebra.Polynomial.Eval.Defs
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_modularPolynomial_kronecker
 
 set_option autoImplicit false
@@ -705,4 +705,13 @@ p2m_open "ModularCurve~coeffEmb_qExpand" in open _root_.P2MW.S_ModularCurve_modu
 
 theorem solution (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (data : ModularPolynomialData ℓ) : data.Φ.map (Polynomial.mapRingHom (Int.castRingHom (ZMod ℓ))) = (Polynomial.C Polynomial.X ^ ℓ - Polynomial.X) * (Polynomial.C Polynomial.X - Polynomial.X ^ ℓ) :=
   ModularCurve.modularPolynomial_kronecker ℓ data
+end S_ModularCurve_modularPolynomial_kronecker
+end P2MW
 
+public section
+attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
+attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.jqNModC_one
+
+open ModularCurve
+theorem ModularCurve.modularPolynomial_kronecker (ℓ : ℕ) [hℓ : Fact (Nat.Prime ℓ)] (data : ModularPolynomialData ℓ) : data.Φ.map (Polynomial.mapRingHom (Int.castRingHom (ZMod ℓ))) = (Polynomial.C Polynomial.X ^ ℓ - Polynomial.X) * (Polynomial.C Polynomial.X - Polynomial.X ^ ℓ) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_modularPolynomial_kronecker.solution
+end

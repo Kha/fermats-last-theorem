@@ -3,13 +3,12 @@ module
 public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental
-public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
-public import Theorems.Thm_ModularCurve_laurentBaseChange_modularFunctionFieldFull
-public import Theorems.Thm_ModularCurve_transcendental_jqModC
+import P2M.Sol.S_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
+import P2M.Sol.S_ModularCurve_laurentBaseChange_modularFunctionFieldFull
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull
 
 noncomputable section
@@ -65,4 +64,16 @@ theorem solution (L : Type*) [Field L] [Algebra ℚ L]
   rw [ModularCurve.R8.insert_gens, ← laurentBaseChange_modularFunctionFieldFull] at h
   exact h
 
+end
+end S_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull
+end P2MW
+
+public section
+attribute [-instance] AlgebraicCurve.Place.instIsPrimeCenter AlgebraicCurve.Place.instIsFractionRingIntegralClosureAt AlgebraicCurve.Place.instIsTorsionFreeSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.Place.instIsDedekindDomainIntegralClosureAt AlgebraicCurve.Place.instFiniteSubtypeMemValuationSubringToValuationSubringIntegralClosureAt AlgebraicCurve.instFundamentalIdentityOfSumRamificationInertia AlgebraicCurve.Place.instIsScalarTowerResidueFieldRestrictPushforward AlgebraicCurve.Place.instAlgebraResidueFieldRestrictPushforward AlgebraicCurve.Place.instIsLocalHomRestrictInclusion
+attribute [-simp] ModularCurve.jqNModC_one AlgebraicCurve.Place.placeOfPrime_toValuationSubring AlgebraicCurve.Place.mem_fiberOver AlgebraicCurve.Place.fiberEquiv_symm_apply AlgebraicCurve.Place.fiberEquiv_apply AlgebraicCurve.Place.centerHeightOneSpectrum_asIdeal AlgebraicCurve.Divisor.mapRestrict_single AlgebraicCurve.Divisor.pushforward_single AlgebraicCurve.Place.coe_restrictInclusion AlgebraicCurve.Place.mem_fiber AlgebraicCurve.Place.restrict_toValuationSubring AlgebraicCurve.Divisor.degree_pushforward AlgebraicCurve.Place.restrictResidueMap_residue AlgebraicCurve.Pic0.coe_pushforwardDegZeroHom AlgebraicCurve.Pic0.coe_pullbackDegZeroHom
+
+open ModularCurve AlgebraicCurve
+theorem ModularCurve.hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull (L : Type*) [Field L] [Algebra ℚ L]
+    (hΦ : ModularPolynomialFamily) (N : ℕ) [NeZero N] :
+    HasPrincipalDivisors L (laurentBaseChange L (modularFunctionFieldFull N)) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull.solution
 end

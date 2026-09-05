@@ -5,7 +5,6 @@ public import Mathlib.NumberTheory.Bernoulli
 public import Mathlib.Data.Rat.Lemmas
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_eisInt_series
 
 set_option autoImplicit false
@@ -161,4 +160,17 @@ theorem solution {ℓ : ℕ} [Fact ℓ.Prime] (hℓ5 : 5 ≤ ℓ)
       ∧ PowerSeries.constantCoeff T = (bernoulli (ℓ - 1)).num
       ∧ ∀ m, 1 ≤ m → (ℓ : ℤ) ∣ T.coeff m :=
   ModularCurve.StarBank.eisInt_series hℓ5 hk
+end S_ModularCurve_StarBank_eisInt_series
+end P2MW
 
+public section
+open scoped ArithmeticFunction.sigma
+open Finset
+theorem ModularCurve.StarBank.eisInt_series {ℓ : ℕ} [Fact ℓ.Prime] (hℓ5 : 5 ≤ ℓ)
+    (hk : 3 ≤ ℓ - 1) :
+    ∃ T : PowerSeries ℤ,
+      T.map (Int.castRingHom ℂ)
+        = ((bernoulli (ℓ - 1)).num : ℂ) • UpperHalfPlane.qExpansion 1 (⇑(ModularForm.E hk))
+      ∧ PowerSeries.constantCoeff T = (bernoulli (ℓ - 1)).num
+      ∧ ∀ m, 1 ≤ m → (ℓ : ℤ) ∣ T.coeff m := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_StarBank_eisInt_series.solution
+end

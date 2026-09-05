@@ -3,7 +3,6 @@ module
 public import Mathlib
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_IsLocalRing_uniqueFactorizationMonoid_of_isPrincipalIdealRing_quotient
 
 theorem solution
@@ -59,3 +58,12 @@ theorem solution
     rintro rfl
     exact hI (by rw [hIeq, Ideal.span_singleton_eq_bot])
   exact ⟨f, hfI, (Ideal.span_singleton_prime hf0).mp (hIeq ▸ hIp)⟩
+end S_IsLocalRing_uniqueFactorizationMonoid_of_isPrincipalIdealRing_quotient
+end P2MW
+
+public section
+theorem IsLocalRing.uniqueFactorizationMonoid_of_isPrincipalIdealRing_quotient
+    {A : Type*} [CommRing A] [IsDomain A] [IsNoetherianRing A] [IsLocalRing A] (t : A)
+    [IsDomain (A ⧸ Ideal.span {t})] [IsPrincipalIdealRing (A ⧸ Ideal.span {t})] :
+    UniqueFactorizationMonoid A := by p2m_exact_reverting @_root_.P2MW.S_IsLocalRing_uniqueFactorizationMonoid_of_isPrincipalIdealRing_quotient.solution
+end

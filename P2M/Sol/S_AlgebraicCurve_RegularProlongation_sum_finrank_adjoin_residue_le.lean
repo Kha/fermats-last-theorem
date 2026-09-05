@@ -2,10 +2,9 @@ module
 
 public import Mathlib
 public import Definitions.Def_AlgebraicCurve_RegularProlongation
-public import Theorems.Thm_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
+import P2M.Sol.S_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
 
 p2m_open "AlgebraicCurve P2MW.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le.AlgebraicCurve IsLocalRing"
@@ -429,3 +428,25 @@ theorem solution
         ({(R i).residue ⟨f, hf i⟩} : Set (Fb i))) (Fb i)
       ≤ Module.finrank (IntermediateField.adjoin L ({f} : Set F)) F :=
   sum_finrank_adjoin_residue_le' R hR f hf htr
+end S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
+end P2MW
+
+public section
+open AlgebraicCurve
+
+theorem AlgebraicCurve.RegularProlongation.sum_finrank_adjoin_residue_le
+    {L : Type*} [Field L] (A : ValuationSubring L)
+    {F : Type*} [Field F] [Algebra L F]
+    {ι : Type*} [Fintype ι] (Fb : ι → Type*) [∀ i, Field (Fb i)]
+    [∀ i, Algebra (IsLocalRing.ResidueField A) (Fb i)]
+    (R : ∀ i, RegularProlongation A F (Fb i))
+    (hR : Function.Injective fun i => (R i).integers)
+    (f : F) (hf : ∀ i, f ∈ (R i).integers)
+    (htr : ∀ i, Transcendental (IsLocalRing.ResidueField A) ((R i).residue ⟨f, hf i⟩))
+    [FiniteDimensional (IntermediateField.adjoin L ({f} : Set F)) F] :
+    (∀ i, FiniteDimensional (IntermediateField.adjoin (IsLocalRing.ResidueField A)
+        ({(R i).residue ⟨f, hf i⟩} : Set (Fb i))) (Fb i)) ∧
+    ∑ i, Module.finrank (IntermediateField.adjoin (IsLocalRing.ResidueField A)
+        ({(R i).residue ⟨f, hf i⟩} : Set (Fb i))) (Fb i)
+      ≤ Module.finrank (IntermediateField.adjoin L ({f} : Set F)) F := by p2m_exact_reverting @_root_.P2MW.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le.solution
+end

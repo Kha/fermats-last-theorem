@@ -3,14 +3,14 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import Theorems.Thm_ModularCurve_coeffMap_qExpand
-public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
-public import Theorems.Thm_ModularCurve_dedekindPsi_prime_pow
-public import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
-public import Theorems.Thm_ModularCurve_functionFieldGeneration_of_squarefree
-public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
+import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_prime
+import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Sol.S_ModularCurve_functionFieldGeneration_of_squarefree
+import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
@@ -18,7 +18,6 @@ public import Mathlib.FieldTheory.Extension
 public import Mathlib.Data.Nat.Factorization.Induction
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_minpoly_jqN_map_eq_prod_slots
 
 set_option autoImplicit false
@@ -2001,4 +2000,10 @@ p2m_open "ModularCurve~dedekindPsi_prime~coeffEmb_qExpand~jqN_prime_not_mem_adjo
 
 theorem solution {K : Type*} [Field K] [Algebra ℚ K] (M : ℕ) [NeZero M] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) M) (hall : ∀ d : ℕ, d ∣ M → ∀ [NeZero d], Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN d} : Set (LaurentSeries ℚ))) = dedekindPsi d ∧ modularFunctionField d = modularFunctionFieldFull d) : (minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN M)).map (((coeffEmb K).comp (qExpand ℚ M)).comp (algebraMap (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (LaurentSeries ℚ))) = ∏ a ∈ M.divisors, ∏ b ∈ (Finset.range (M / a)).filter (fun b => Nat.gcd (Nat.gcd a b) (M / a) = 1), (Polynomial.X - Polynomial.C (if h : a = 0 then 0 else letI : NeZero a := ⟨h⟩; qExpand K (a * a) (qTwist (ζ ^ (b * a)) (coeffEmb K jq)))) :=
   ModularCurve.minpoly_jqN_map_eq_prod_slots M ζ hζ hall
+end S_ModularCurve_minpoly_jqN_map_eq_prod_slots
+end P2MW
 
+public section
+open ModularCurve
+theorem ModularCurve.minpoly_jqN_map_eq_prod_slots {K : Type*} [Field K] [Algebra ℚ K] (M : ℕ) [NeZero M] (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) M) (hall : ∀ d : ℕ, d ∣ M → ∀ [NeZero d], Module.finrank (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (IntermediateField.adjoin (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) ({jqN d} : Set (LaurentSeries ℚ))) = dedekindPsi d ∧ modularFunctionField d = modularFunctionFieldFull d) : (minpoly (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (jqN M)).map (((coeffEmb K).comp (qExpand ℚ M)).comp (algebraMap (IntermediateField.adjoin ℚ ({jq} : Set (LaurentSeries ℚ))) (LaurentSeries ℚ))) = ∏ a ∈ M.divisors, ∏ b ∈ (Finset.range (M / a)).filter (fun b => Nat.gcd (Nat.gcd a b) (M / a) = 1), (Polynomial.X - Polynomial.C (if h : a = 0 then 0 else letI : NeZero a := ⟨h⟩; qExpand K (a * a) (qTwist (ζ ^ (b * a)) (coeffEmb K jq)))) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_minpoly_jqN_map_eq_prod_slots.solution
+end

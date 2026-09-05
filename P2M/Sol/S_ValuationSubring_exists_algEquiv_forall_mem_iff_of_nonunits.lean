@@ -1,5 +1,5 @@
 import Mathlib
-import Theorems.Thm_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
+import P2M.Sol.S_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
 import P2M.Util
 namespace P2MW.S_ValuationSubring_exists_algEquiv_forall_mem_iff_of_nonunits
 

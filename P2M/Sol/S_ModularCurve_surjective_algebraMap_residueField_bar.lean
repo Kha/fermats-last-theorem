@@ -1,10 +1,9 @@
 module
 
 public import Definitions.Def_ModularCurve_QAdicPlace
-public import Theorems.Thm_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
+import P2M.Sol.S_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_surjective_algebraMap_residueField_bar
 
 open ModularCurve AlgebraicCurve
@@ -23,3 +22,11 @@ theorem solution (L : Type*) [Field L] {F : IntermediateField L (LaurentSeries L
     (I := IsLocalRing.maximalIdeal (qInftyPlaceBar L F h).toValuationSubring)
     (algebraMap L (qInftyPlaceBar L F h).toValuationSubring
       ((qSeriesBar L F (f : F)).coeff 0)) f).mpr hmem
+end S_ModularCurve_surjective_algebraMap_residueField_bar
+end P2MW
+
+public section
+open ModularCurve AlgebraicCurve
+
+theorem ModularCurve.surjective_algebraMap_residueField_bar (L : Type*) [Field L] {F : IntermediateField L (LaurentSeries L)} (h : ∃ j : F, (qSeriesBar L F j).order = -1) : Function.Surjective (algebraMap L (qInftyPlaceBar L F h).ResidueField) := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_surjective_algebraMap_residueField_bar.solution
+end

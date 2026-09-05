@@ -5,7 +5,6 @@ public import Mathlib.RingTheory.PowerSeries.Expand
 public import Mathlib.FieldTheory.Finite.Basic
 import P2M.Util
 
-@[expose] public section
 namespace P2MW.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
 
 noncomputable section
@@ -178,3 +177,12 @@ theorem solution {R : Type*} [CommRing R] (p : ℕ) [Fact p.Prime] [CharP R p]
     (s : LaurentSeries R) (hfix : ∀ k : ℤ, (s.coeff k) ^ p = s.coeff k) :
     s ^ p = qExpand R p s :=
   ModularCurve.CharL.pow_char_eq_qExpand_of_coeff_fixed p s hfix
+end S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
+end P2MW
+
+public section
+open ModularCurve
+theorem ModularCurve.pow_char_eq_qExpand_of_coeff_fixed {R : Type*} [CommRing R] (p : ℕ) [Fact p.Prime] [CharP R p]
+    (s : LaurentSeries R) (hfix : ∀ k : ℤ, (s.coeff k) ^ p = s.coeff k) :
+    s ^ p = qExpand R p s := by p2m_exact_reverting @_root_.P2MW.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed.solution
+end
