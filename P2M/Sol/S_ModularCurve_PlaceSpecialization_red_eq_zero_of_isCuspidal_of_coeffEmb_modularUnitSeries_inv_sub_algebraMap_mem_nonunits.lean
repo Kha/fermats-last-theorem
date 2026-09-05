@@ -348,6 +348,15 @@ def UInvFinite (W : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 
   ∃ a : A, ((uFun (q := q))⁻¹ : ↥(modularFunctionFieldBar (1 * q)))
       - algebraMap (AlgebraicClosure ℚ) _ (a : AlgebraicClosure ℚ) ∈ W.toValuationSubring.nonunits
 
+def _root_.ModularCurve.PlaceSpecialization.LevelOneProlongationPair.ReducesOnUInvChart_aux (W : Place (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 * q)))
+    (Q : Place (ResidueField A) ↥(modularFunctionFieldFullC (ResidueField A) 1)) : Prop :=
+  ∀ h : R.R₁.integers,
+    IsIntegral (Algebra.adjoin (AlgebraicClosure ℚ)
+      {(((uFun (q := q))⁻¹ : ↥(modularFunctionFieldBar (1 * q))) : ↥(modularFunctionFieldBar (1 * q)))}) (h : ↥(modularFunctionFieldBar (1 * q))) →
+    ∀ a : A, (h : ↥(modularFunctionFieldBar (1 * q))) - algebraMap (AlgebraicClosure ℚ) _ (a : AlgebraicClosure ℚ)
+        ∈ W.toValuationSubring.nonunits →
+      R.R₁.residue h - algebraMap (ResidueField A) _ (IsLocalRing.residue A a) ∈ Q.toValuationSubring.nonunits
+
 p2m_export "ModularCurve.PlaceSpecialization.LevelOneProlongationPair" "ReducesOnUInvChart_aux"
 set_option maxHeartbeats 16000000 in
 
@@ -1171,6 +1180,10 @@ theorem n1N_isIntegral_adjoin_uInv_jFun_pow_mul (i d : ℕ) (hid : i ≤ d * (q 
       rw [← this]; exact_mod_cast hid
     push_cast
     nlinarith
+
+noncomputable def _root_.ModularCurve.PlaceSpecialization.LevelOneProlongationPair.n1N_constHom_aux : A →+* R.R₁.integers :=
+  RingHom.codRestrict ((algebraMap (AlgebraicClosure ℚ) ↥(modularFunctionFieldBar (1 * q))).comp A.subtype)
+    R.R₁.integers (fun a => (R.R₁.algebraMap_mem_iff (a : AlgebraicClosure ℚ)).mpr a.2)
 
 p2m_export "ModularCurve.PlaceSpecialization.LevelOneProlongationPair" "n1N_constHom_aux"
 theorem n1N_constHom_coe (a : A) :

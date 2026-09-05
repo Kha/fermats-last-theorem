@@ -22,7 +22,7 @@ open Polynomial
 
 namespace ModularCurve.StarBank
 
-private theorem _root_.ModularCurve.StarBank.count {K : Type*} [Field K] [IsAlgClosed K] {p : ℕ}
+private theorem _root_.ModularCurve.StarBank.count_priv {K : Type*} [Field K] [IsAlgClosed K] {p : ℕ}
     (hp0 : (p : K) ≠ 0) (hp2 : 2 ≤ p) {R G : Polynomial K} (hR : R.Monic)
     (hRdeg : R.natDegree = p) (hG : 0 < G.natDegree) {c : K} (hc : c ≠ 0)
     (hdvd : G.comp R ∣ Polynomial.C c * G ^ (p + 1)) :
@@ -159,7 +159,7 @@ private theorem _root_.ModularCurve.StarBank.count {K : Type*} [Field K] [IsAlgC
   exact hf₀
 
 end ModularCurve.StarBank
-p2m_export "" "ModularCurve.StarBank.count"
+p2m_export "" "ModularCurve.StarBank.count_priv"
 
 private abbrev Kbar2 : Type := AlgebraicClosure (ZMod 2)
 
@@ -190,7 +190,7 @@ theorem solution {K : Type*} [Field K] [IsAlgClosed K] {p : ℕ}
     (hdvd : G.comp R ∣ Polynomial.C c * G ^ (p + 1)) :
     ∃ β₀ : K, (∀ β : K, G.IsRoot β → β = β₀) ∧
       R = (Polynomial.X - Polynomial.C β₀) ^ p + Polynomial.C β₀ :=
-  ModularCurve.StarBank.count hp0 hp2 hR hRdeg hG hc hdvd
+  ModularCurve.StarBank.count_priv hp0 hp2 hR hRdeg hG hc hdvd
 end S_ModularCurve_StarBank_count
 end P2MW
 

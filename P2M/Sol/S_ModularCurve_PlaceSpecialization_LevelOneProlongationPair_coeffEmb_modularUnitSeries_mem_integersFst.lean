@@ -3,7 +3,7 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
 public import Definitions.Def_ModularCurve_ModularUnit
-import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
+public import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_coeffEmb_modularUnitSeries_mem_integersFst
