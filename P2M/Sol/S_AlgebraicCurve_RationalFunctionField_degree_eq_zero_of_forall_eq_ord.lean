@@ -4,7 +4,7 @@ public import Mathlib.FieldTheory.RatFunc.Basic
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord_algebraMap
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord

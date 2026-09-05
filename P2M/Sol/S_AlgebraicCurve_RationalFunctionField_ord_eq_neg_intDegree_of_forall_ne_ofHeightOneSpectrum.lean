@@ -5,7 +5,7 @@ public import Mathlib.FieldTheory.RatFunc.Valuation
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Theorems.Thm_AlgebraicCurve_Place_ord_eq_neg_log_of_valuationSubring_eq
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_toValuationSubring_eq_of_forall_ne_ofHeightOneSpectrum
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_ord_eq_neg_intDegree_of_forall_ne_ofHeightOneSpectrum

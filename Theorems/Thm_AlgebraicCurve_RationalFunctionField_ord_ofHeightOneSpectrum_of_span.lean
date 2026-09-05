@@ -2,8 +2,8 @@ module
 
 public import Mathlib.FieldTheory.RatFunc.Basic
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_ofHeightOneSpectrum_of_span
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_ofHeightOneSpectrum_of_span
 
 @[expose] public section
 attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation

@@ -2,8 +2,8 @@ module
 
 public import Mathlib.FieldTheory.RatFunc.Basic
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 
 @[expose] public section
 

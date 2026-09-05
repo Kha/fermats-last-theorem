@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
 public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
 @[expose] public section

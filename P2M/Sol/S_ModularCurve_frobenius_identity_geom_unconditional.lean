@@ -3,7 +3,7 @@ module
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Theorems.Thm_ModularCurve_map_intCast_pow_char_eq_qExpand
 public import Mathlib.RingTheory.Algebraic.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_frobenius_identity_geom_unconditional

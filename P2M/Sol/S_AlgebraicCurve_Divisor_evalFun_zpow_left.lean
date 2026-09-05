@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
 public import Theorems.Thm_AlgebraicCurve_Place_evalAt_zpow
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_Divisor_evalFun_zpow_left

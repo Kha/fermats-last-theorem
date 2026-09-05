@@ -10,7 +10,7 @@ public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_deg_ofHeightOneS
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_deg_eq_one_of_forall_ne_ofHeightOneSpectrum
 public import Theorems.Thm_AlgebraicCurve_Place_ord_ofHeightOneSpectrum_ne_zero_iff
 public import Theorems.Thm_AlgebraicCurve_Place_ord_algebraMap
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_degree_eq_zero_of_forall_eq_ord_algebraMap

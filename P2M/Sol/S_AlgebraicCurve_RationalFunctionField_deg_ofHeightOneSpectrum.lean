@@ -6,7 +6,7 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Theorems.Thm_AlgebraicCurve_Place_mem_iff_adicValuation_le_one
 public import Theorems.Thm_AlgebraicCurve_Place_mem_maximalIdeal_iff_adicValuation_lt_one
 public import Theorems.Thm_AlgebraicCurve_Place_isEquiv_adicValuation_ofHeightOneSpectrum
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_deg_ofHeightOneSpectrum

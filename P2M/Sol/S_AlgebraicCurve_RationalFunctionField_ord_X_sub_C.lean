@@ -30,7 +30,7 @@ public import Theorems.Thm_AlgebraicCurve_Divisor_evalFun_ne_zero
 public import Theorems.Thm_AlgebraicCurve_Divisor_evalFun_zsmul
 public import Theorems.Thm_AlgebraicCurve_Divisor_evalFun_zpow_left
 public import Theorems.Thm_AlgebraicCurve_Divisor_evalFun_single_sub_single
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_ord_X_sub_C

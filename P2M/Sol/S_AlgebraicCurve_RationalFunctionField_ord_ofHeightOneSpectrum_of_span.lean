@@ -3,7 +3,7 @@ module
 public import Mathlib.FieldTheory.RatFunc.Basic
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_ord_ofHeightOneSpectrum_eq_neg_log
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_ord_ofHeightOneSpectrum_of_span

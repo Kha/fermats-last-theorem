@@ -5,7 +5,7 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Theorems.Thm_AlgebraicCurve_Place_adicValuation_valuationSubring
 public import Theorems.Thm_AlgebraicCurve_Place_adicValuation_isRankOneDiscrete
 public import Theorems.Thm_AlgebraicCurve_Place_adicValuation_isTrivialOn
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_toValuationSubring_eq_of_forall_ne_ofHeightOneSpectrum

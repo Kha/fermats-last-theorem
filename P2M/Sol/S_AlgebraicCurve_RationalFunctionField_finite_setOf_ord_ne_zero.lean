@@ -3,7 +3,7 @@ module
 public import Mathlib.NumberTheory.RatFunc.Ostrowski
 public import Mathlib.RingTheory.DedekindDomain.Factorization
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero

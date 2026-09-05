@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_Divisor_evalFun_add
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_Divisor_evalFun_add
 
 @[expose] public section
 
