@@ -169,6 +169,12 @@ structure JZeroSemistableSpecialization where
   spN_surjective : ∀ c : Pic0 (ResidueField A) (modularFunctionFieldC (ResidueField A) N),
     PrimeToTorsion q c → ∃ y : JZero N, PrimeToTorsion q y ∧ spN y = c
 
+-- The `LibrarySuggestions` symbol-frequency export (run when the `.olean` is written) folds over the
+-- types of all theorems of the module without memoisation; on the auto-generated `mk.injEq` and
+-- `mk.sizeOf_spec` of this structure that costs about 680 s. Denying the name skips them.
+run_cmd Lean.modifyEnv fun env =>
+  Lean.LibrarySuggestions.nameDenyListExt.addEntry env "JZeroSemistableSpecialization"
+
 end Semistable
 
 end ModularCurve
