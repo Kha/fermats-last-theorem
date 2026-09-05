@@ -9,6 +9,7 @@ public import Definitions.Def_AlgebraicCurve_AdelicIndex
 public import Definitions.Def_AlgebraicCurve_PoleDivisorPackage
 public import Theorems.Thm_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg
 import P2M.Util
+public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_linearIndependent_pow_mul

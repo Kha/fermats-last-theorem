@@ -14,6 +14,7 @@ public import Theorems.Thm_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_c
 public import Theorems.Thm_IsIntegrallyClosed_exists_algebraMap_eq_of_isIntegral_pow_mul
 public import Theorems.Thm_ModularCurve_transcendental_jqModC
 import P2M.Util
+import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_mem_modularLocalizedAtPoint_of_mem_modularLocalized_of_isIntegral

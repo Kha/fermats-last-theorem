@@ -12,6 +12,7 @@ public import Theorems.Thm_AlgebraicCurve_linearIndependent_pow_mul
 public import Theorems.Thm_AlgebraicCurve_ell_le_degree_add_ellZero
 public import Theorems.Thm_AlgebraicCurve_finiteDimensional_lSpace
 import P2M.Util
+import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_Divisor_finrank_adjoin_le_degree_of_eq_max_neg_ord
