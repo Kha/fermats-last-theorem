@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finiteDimensional_adjoin_coeffEmb_jq_of_neZero

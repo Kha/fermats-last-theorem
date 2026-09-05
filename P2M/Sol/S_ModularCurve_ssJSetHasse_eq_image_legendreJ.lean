@@ -9,7 +9,7 @@ public import Theorems.Thm_WeierstrassCurve_j_legendreCurve
 public import Theorems.Thm_WeierstrassCurve_hasseInvariant_legendreCurve
 public import Theorems.Thm_WeierstrassCurve_hasseInvariant_variableChange
 public import Theorems.Thm_ModularCurve_exists_legendreJ_eq
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_ssJSetHasse_eq_image_legendreJ

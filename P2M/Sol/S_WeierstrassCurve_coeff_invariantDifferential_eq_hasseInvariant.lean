@@ -5,7 +5,7 @@ public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Theorems.Thm_LaurentSeries_derivative_mul
 public import Theorems.Thm_LaurentSeries_coeff_neg_one_inv_mul_derivative
 public import Theorems.Thm_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant

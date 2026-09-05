@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_X0
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_coeffMap_qExpand

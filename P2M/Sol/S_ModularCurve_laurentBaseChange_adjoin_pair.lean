@@ -14,7 +14,7 @@ public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_mul
 public import Theorems.Thm_ModularCurve_coeffEmb_jqN
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_laurentBaseChange_adjoin_pair

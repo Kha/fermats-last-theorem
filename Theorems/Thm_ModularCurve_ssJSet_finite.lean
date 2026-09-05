@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_SupersingularModuli
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_ssJSet_finite
+import P2M.Util
+import P2M.Sol.S_ModularCurve_ssJSet_finite
 
 @[expose] public section
 attribute [-instance] WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly

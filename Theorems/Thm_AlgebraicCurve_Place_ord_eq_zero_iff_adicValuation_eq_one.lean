@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_Place_ord_eq_zero_iff_adicValuation_eq_one
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_Place_ord_eq_zero_iff_adicValuation_eq_one
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 
 @[expose] public section

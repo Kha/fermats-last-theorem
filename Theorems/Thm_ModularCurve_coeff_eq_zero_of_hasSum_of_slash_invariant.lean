@@ -2,8 +2,8 @@ module
 
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant
+import P2M.Util
+import P2M.Sol.S_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant
 
 @[expose] public section
 

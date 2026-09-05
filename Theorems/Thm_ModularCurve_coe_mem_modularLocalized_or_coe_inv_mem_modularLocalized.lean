@@ -3,8 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_CharPReduction
 public import Definitions.Def_ModularCurve_ArithmeticGalois
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_coe_mem_modularLocalized_or_coe_inv_mem_modularLocalized
+import P2M.Util
+import P2M.Sol.S_ModularCurve_coe_mem_modularLocalized_or_coe_inv_mem_modularLocalized
 
 @[expose] public section
 attribute [-instance] WeierstrassCurve.Affine.Point.instSMulCommClassAlgEquivZModTorsionBy instDecEqAlgebraicClosureRat WeierstrassCurve.Affine.Point.instDistribMulActionAlgEquiv WeierstrassCurve.Affine.Point.instModuleZModTorsionBy WeierstrassCurve.Affine.Point.instSMulTorsionBy WeierstrassCurve.Affine.Point.instDistribMulActionTorsionBy WeierstrassCurve.Affine.Point.instSMulAlgEquiv ModularCurve.PhiGen.instNeZeroPhiGenCosetA ModularCurve.instIsDomainTensorProduct AlgebraicClosure.Rat.isGalois

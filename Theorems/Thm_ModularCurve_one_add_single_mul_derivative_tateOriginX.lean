@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_TateOrigin
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_one_add_single_mul_derivative_tateOriginX
+import P2M.Util
+import P2M.Sol.S_ModularCurve_one_add_single_mul_derivative_tateOriginX
 
 @[expose] public section
 set_option synthInstance.maxHeartbeats 400000

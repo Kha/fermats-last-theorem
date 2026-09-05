@@ -2,7 +2,7 @@ module
 
 public import Mathlib
 public import Theorems.Thm_LaurentSeries_derivative_mul
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_LaurentSeries_coeff_neg_one_inv_mul_derivative

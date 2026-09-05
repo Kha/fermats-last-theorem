@@ -7,7 +7,7 @@ public import Theorems.Thm_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transce
 public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
 public import Theorems.Thm_ModularCurve_laurentBaseChange_modularFunctionFieldFull
 public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull

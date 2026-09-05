@@ -9,7 +9,7 @@ public import Mathlib.Analysis.Complex.TaylorSeries
 public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
 public import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_hasSum_smul_modularUnitSeries_inv_qParam

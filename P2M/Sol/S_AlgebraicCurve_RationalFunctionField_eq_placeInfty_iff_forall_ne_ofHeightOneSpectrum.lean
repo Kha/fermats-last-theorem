@@ -4,7 +4,7 @@ public import Mathlib.FieldTheory.RatFunc.AsPolynomial
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_placeInfty_ne_ofHeightOneSpectrum
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_eq_placeInfty_iff_forall_ne_ofHeightOneSpectrum

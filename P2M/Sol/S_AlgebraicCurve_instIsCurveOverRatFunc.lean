@@ -8,7 +8,7 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_deg_placeInfty
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_hasPrincipalDivisors
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_instIsCurveOverRatFunc

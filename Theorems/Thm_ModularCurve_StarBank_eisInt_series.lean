@@ -1,8 +1,8 @@
 module
 
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_StarBank_eisInt_series
+import P2M.Util
+import P2M.Sol.S_ModularCurve_StarBank_eisInt_series
 
 @[expose] public section
 

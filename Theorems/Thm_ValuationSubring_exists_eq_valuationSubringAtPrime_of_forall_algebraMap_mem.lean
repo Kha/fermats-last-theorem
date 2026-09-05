@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
+import P2M.Util
+import P2M.Sol.S_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
 
 @[expose] public section
 

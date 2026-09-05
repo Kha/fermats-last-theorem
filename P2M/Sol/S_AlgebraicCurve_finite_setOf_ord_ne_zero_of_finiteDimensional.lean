@@ -5,7 +5,7 @@ public import P2M.Sol.S_AlgebraicCurve_Place_ord_nonneg_of_mem
 public import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
 public import Mathlib.FieldTheory.Minpoly.Field
-public import P2M.Util
+import P2M.Util
 import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
 @[expose] public section

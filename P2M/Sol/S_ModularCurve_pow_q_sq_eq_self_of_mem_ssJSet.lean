@@ -3,7 +3,7 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Theorems.Thm_WeierstrassCurve_j_pow_q_sq_eq_j_of_forall_q_zsmul_eq_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_pow_q_sq_eq_self_of_mem_ssJSet

@@ -3,7 +3,7 @@ module
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Theorems.Thm_WeierstrassCurve_hasseInvariant_variableChange
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq

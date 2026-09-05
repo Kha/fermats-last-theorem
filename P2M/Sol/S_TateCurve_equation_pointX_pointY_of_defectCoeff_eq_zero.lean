@@ -5,7 +5,7 @@ public import Theorems.Thm_TateCurve_equation_of_defectCoeff_eq_zero
 public import Theorems.Thm_TateCurve_exists_zpow_mul_mem_annulus
 public import Theorems.Thm_TateCurve_pointX_zpow_mul
 public import Theorems.Thm_TateCurve_pointY_zpow_mul
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_TateCurve_equation_pointX_pointY_of_defectCoeff_eq_zero

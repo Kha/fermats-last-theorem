@@ -21,7 +21,7 @@ public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.Data.Nat.Factorization.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi

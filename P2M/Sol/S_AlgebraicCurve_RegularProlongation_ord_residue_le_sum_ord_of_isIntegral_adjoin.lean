@@ -11,7 +11,7 @@ public import Theorems.Thm_AlgebraicCurve_Place_mem_toValuationSubring_of_isInte
 public import Theorems.Thm_AlgebraicCurve_Place_exists_forall_ord_eq
 public import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
 public import P2M.Sol.S_AlgebraicCurve_Place_ord_algebraMap
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RegularProlongation_ord_residue_le_sum_ord_of_isIntegral_adjoin

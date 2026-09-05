@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_JWidth
 public import Theorems.Thm_ModularCurve_sum_inv_jWidth_of_ssJSetHasse
 public import Theorems.Thm_ModularCurve_zero_mem_ssJSetHasse_iff
 public import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_card_eq_of_ssJSetHasse

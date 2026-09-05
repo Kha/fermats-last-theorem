@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_TateCurve_PointSeries
-public import P2M.Util
-public import P2M.Sol.S_TateCurve_nodal_xfun_yfun
+import P2M.Util
+import P2M.Sol.S_TateCurve_nodal_xfun_yfun
 
 @[expose] public section
 

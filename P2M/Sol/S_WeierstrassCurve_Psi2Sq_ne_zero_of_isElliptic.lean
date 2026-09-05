@@ -3,7 +3,7 @@ module
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
 public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
 public import Mathlib.Tactic.LinearCombination
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic

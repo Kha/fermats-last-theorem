@@ -12,7 +12,7 @@ public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_prime_of_not_mem
 public import Theorems.Thm_ModularCurve_jqN_prime_not_mem_adjoin
 public import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
 public import Mathlib.FieldTheory.Relrank
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_relfinrank_full_of_squarefree

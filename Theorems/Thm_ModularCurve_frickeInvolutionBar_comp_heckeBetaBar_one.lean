@@ -3,8 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_HeckeOperator
 public import Definitions.Def_ModularCurve_CuspidalClass
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_frickeInvolutionBar_comp_heckeBetaBar_one
+import P2M.Util
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_comp_heckeBetaBar_one
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

@@ -4,8 +4,8 @@ public import Definitions.Def_ModularCurve_X0
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_isIntegral_adjoin_jq_of_hasSum_of_gamma0_invariant
+import P2M.Util
+import P2M.Sol.S_ModularCurve_isIntegral_adjoin_jq_of_hasSum_of_gamma0_invariant
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

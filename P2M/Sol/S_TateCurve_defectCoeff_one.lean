@@ -1,7 +1,7 @@
 module
 
 public import Definitions.Def_TateCurve_Defect
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_TateCurve_defectCoeff_one

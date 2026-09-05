@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_IsIntegrallyClosed_exists_algebraMap_eq_of_isIntegral_pow_mul
+import P2M.Util
+import P2M.Sol.S_IsIntegrallyClosed_exists_algebraMap_eq_of_isIntegral_pow_mul
 
 @[expose] public section
 

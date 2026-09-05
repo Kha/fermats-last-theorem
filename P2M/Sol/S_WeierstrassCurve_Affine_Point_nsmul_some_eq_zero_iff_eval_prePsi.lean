@@ -2,7 +2,7 @@ module
 
 public import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi

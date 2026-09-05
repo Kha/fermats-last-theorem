@@ -21,7 +21,7 @@ public import Theorems.Thm_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_pr
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.Data.Nat.Factorization.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_package_of_socket

@@ -6,7 +6,7 @@ public import Theorems.Thm_AlgebraicCurve_finite_setOf_ord_ne_zero_of_finiteDime
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_hasPrincipalDivisors
 public import Theorems.Thm_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_fiberOver
 public import Theorems.Thm_AlgebraicCurve_Divisor_degree_eq_sum
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_hasPrincipalDivisors_of_finiteDimensional_of_isSeparable

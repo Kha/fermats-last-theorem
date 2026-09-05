@@ -3,7 +3,7 @@ module
 public import Mathlib
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Theorems.Thm_AlgebraicCurve_isCurveOver_of_transcendental
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_isCurveOver_of_transcendental_of_isSeparable

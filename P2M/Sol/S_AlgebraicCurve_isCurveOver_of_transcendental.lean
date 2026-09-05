@@ -7,7 +7,7 @@ public import Theorems.Thm_AlgebraicCurve_hasPrincipalDivisors_of_transcendental
 public import Theorems.Thm_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
 public import Theorems.Thm_AlgebraicCurve_instIsCurveOverRatFunc
 public import Theorems.Thm_AlgebraicCurve_kaehlerRankOne_of_transcendental
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_isCurveOver_of_transcendental

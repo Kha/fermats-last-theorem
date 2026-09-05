@@ -13,7 +13,7 @@ public import Theorems.Thm_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invaria
 public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
 public import Theorems.Thm_ModularCurve_E4_cube_div_discriminant_smul
 public import Theorems.Thm_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant

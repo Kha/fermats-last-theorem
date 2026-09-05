@@ -4,7 +4,7 @@ public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_eval_hasseInvariant_jFamily_eq_zero_of_mem_ssJSet

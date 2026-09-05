@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_DegeneracyTower
 public import Definitions.Def_ModularCurve_JqCoeff
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin_pair
+import P2M.Util
+import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin_pair
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

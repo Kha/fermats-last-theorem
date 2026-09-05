@@ -10,7 +10,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
 public import Theorems.Thm_ModularCurve_PhiGen_splits_of_coeff_evalAtJ_eq
 public import Theorems.Thm_ModularCurve_PhiGen_phiIrreducible_of_splits
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_exists_phiIrreducible_evalSymm

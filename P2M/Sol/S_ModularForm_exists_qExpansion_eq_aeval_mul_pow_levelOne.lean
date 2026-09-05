@@ -2,7 +2,7 @@ module
 
 public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
 public import Mathlib.RingTheory.LaurentSeries
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne

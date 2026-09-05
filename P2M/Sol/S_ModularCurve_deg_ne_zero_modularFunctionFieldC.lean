@@ -9,7 +9,7 @@ public import Theorems.Thm_AlgebraicCurve_Place_inertiaDeg_pos_of_finiteDimensio
 public import Theorems.Thm_ModularCurve_transcendental_jqModC
 public import Theorems.Thm_ModularCurve_finiteDimensional_adjoin_jqNModC
 public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_deg_ne_zero_modularFunctionFieldC

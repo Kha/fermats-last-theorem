@@ -15,7 +15,7 @@ public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.RingTheory.AdjoinRoot
 public import Mathlib.RingTheory.Polynomial.Cyclotomic.Roots
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot

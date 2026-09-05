@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_AtkinLehnerPartial
 public import Theorems.Thm_ModularCurve_geomAut_atkinLehner_comp_legs
 public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_frickeInvolutionBar_comp_heckeAlphaBar_one

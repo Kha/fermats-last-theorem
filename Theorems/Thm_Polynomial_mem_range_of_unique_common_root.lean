@@ -1,8 +1,8 @@
 module
 
 public import Mathlib.Algebra.Polynomial.Splits
-public import P2M.Util
-public import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
+import P2M.Util
+import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
 
 @[expose] public section
 

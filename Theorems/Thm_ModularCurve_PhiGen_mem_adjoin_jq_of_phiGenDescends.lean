@@ -4,8 +4,8 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
 
 @[expose] public section
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL

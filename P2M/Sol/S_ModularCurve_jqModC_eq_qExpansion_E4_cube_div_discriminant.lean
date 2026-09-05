@@ -8,7 +8,7 @@ public import Theorems.Thm_ModularCurve_hasSum_jq_qParam
 public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
 public import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
 public import Theorems.Thm_ModularCurve_coeffEmb_jq
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant

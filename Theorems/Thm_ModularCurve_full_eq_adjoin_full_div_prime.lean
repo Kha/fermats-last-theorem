@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_full_eq_adjoin_full_div_prime
+import P2M.Util
+import P2M.Sol.S_ModularCurve_full_eq_adjoin_full_div_prime
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

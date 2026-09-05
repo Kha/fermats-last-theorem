@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_fullC
+import P2M.Util
+import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_fullC
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

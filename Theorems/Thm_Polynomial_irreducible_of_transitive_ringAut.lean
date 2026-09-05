@@ -1,8 +1,8 @@
 module
 
 public import Mathlib.Algebra.Polynomial.Splits
-public import P2M.Util
-public import P2M.Sol.S_Polynomial_irreducible_of_transitive_ringAut
+import P2M.Util
+import P2M.Sol.S_Polynomial_irreducible_of_transitive_ringAut
 
 @[expose] public section
 

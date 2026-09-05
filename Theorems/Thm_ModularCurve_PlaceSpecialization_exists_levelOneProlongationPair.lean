@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

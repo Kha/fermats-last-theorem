@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_CuspidalClass
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
+import P2M.Util
+import P2M.Sol.S_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
 
 @[expose] public section
 

@@ -4,7 +4,7 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_NodeLocalized
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_exists_sub_algebraMap_mem_nonunits_of_mem_modularLocalizedAtPoint

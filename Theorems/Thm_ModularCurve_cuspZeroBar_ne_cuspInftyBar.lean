@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_CuspidalClass
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_cuspZeroBar_ne_cuspInftyBar
+import P2M.Util
+import P2M.Sol.S_ModularCurve_cuspZeroBar_ne_cuspInftyBar
 
 @[expose] public section
 

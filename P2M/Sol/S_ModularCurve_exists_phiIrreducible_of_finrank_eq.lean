@@ -6,7 +6,7 @@ public import Theorems.Thm_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
 public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
 public import Mathlib.FieldTheory.Minpoly.IsIntegrallyClosed
 public import Mathlib.RingTheory.Localization.Integral
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_exists_phiIrreducible_of_finrank_eq

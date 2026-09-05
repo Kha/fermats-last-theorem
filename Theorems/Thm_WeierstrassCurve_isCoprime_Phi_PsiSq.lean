@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_isCoprime_Phi_PsiSq
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_isCoprime_Phi_PsiSq
 
 @[expose] public section
 attribute [-instance] WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly

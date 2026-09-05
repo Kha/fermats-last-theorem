@@ -2,7 +2,7 @@ module
 
 public import Mathlib.FieldTheory.RatFunc.AsPolynomial
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import P2M.Util
+import P2M.Util
 public import Mathlib.NumberTheory.RatFunc.Ostrowski
 
 @[expose] public section

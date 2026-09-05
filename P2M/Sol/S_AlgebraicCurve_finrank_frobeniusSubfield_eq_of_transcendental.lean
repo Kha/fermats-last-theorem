@@ -6,7 +6,7 @@ public import Mathlib.FieldTheory.KummerPolynomial
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.LinearAlgebra.Dimension.Free
 public import Mathlib.Algebra.CharP.Algebra
-public import P2M.Util
+import P2M.Util
 import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
 
 @[expose] public section

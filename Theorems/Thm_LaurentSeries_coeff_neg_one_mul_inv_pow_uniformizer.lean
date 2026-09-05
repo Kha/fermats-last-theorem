@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
+import P2M.Util
+import P2M.Sol.S_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
 
 @[expose] public section
 attribute [-simp] ModularCurve.qExpand_coeff_mul ModularCurve.qExpandₐ_apply ModularCurve.jqN_one ModularCurve.qExpand_single ModularCurve.dedekindPsi_one ModularCurve.ModularPolynomialData.mk.sizeOf_spec ModularCurve.evalAtJ_X ModularCurve.ModularPolynomialData.mk.injEq ModularCurve.constantCoeff_jNum ModularCurve.constantCoeff_eisenstein4 ModularCurve.qExpand_C ModularCurve.coeff_jq_neg_one ModularCurve.constantCoeff_jNumQ

@@ -5,7 +5,7 @@ public import Definitions.Def_ModularCurve_NodeDescent
 public import Definitions.Def_ModularCurve_NodeLocalizedPresentation
 public import Theorems.Thm_ModularCurve_NodeLocalized_pointEval_eq_zero_of_modularEval_eq_zero
 public import Theorems.Thm_ModularCurve_NodeLocalized_eval2_branch_eq_zero_of_modularEval_eq_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_isPrime_span_uniformizer_branches_modularLocalizedAtPoint

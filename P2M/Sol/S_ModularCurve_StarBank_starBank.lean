@@ -17,7 +17,7 @@ public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 public import Mathlib.Algebra.Field.ZMod
 public import Mathlib.Algebra.CharP.Algebra
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_starBank

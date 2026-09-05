@@ -7,7 +7,7 @@ public import Theorems.Thm_TateCurve_hasSum_xfun
 public import Theorems.Thm_TateCurve_hasSum_yfun
 public import Theorems.Thm_TateCurve_tsum_succ_prod_eq_tsum_divisors
 public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_TateCurve_pointY_qExpansion

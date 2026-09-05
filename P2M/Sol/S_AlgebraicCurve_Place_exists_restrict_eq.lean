@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
 public import Theorems.Thm_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_fiberOver
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_exists_restrict_eq

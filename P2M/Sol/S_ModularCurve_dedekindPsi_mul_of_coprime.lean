@@ -6,7 +6,7 @@ public import Mathlib.NumberTheory.ArithmeticFunction.Misc
 public import Mathlib.RingTheory.Polynomial.Resultant.Basic
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_dedekindPsi_mul_of_coprime

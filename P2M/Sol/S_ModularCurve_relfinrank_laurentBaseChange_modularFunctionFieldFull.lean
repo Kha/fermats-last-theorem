@@ -9,7 +9,7 @@ public import Theorems.Thm_ModularCurve_transcendental_jq
 public import Theorems.Thm_ModularCurve_finrank_adjoin_jqNModC_eq_of_prime
 public import Theorems.Thm_ModularCurve_modularFunctionFieldBar_eq_restrictScalars
 public import Theorems.Thm_ModularCurve_coeffEmb_jq
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_relfinrank_laurentBaseChange_modularFunctionFieldFull

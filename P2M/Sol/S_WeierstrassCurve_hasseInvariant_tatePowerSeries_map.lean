@@ -7,7 +7,7 @@ public import Definitions.Def_ModularCurve_TateOrigin
 public import Theorems.Thm_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant
 public import Theorems.Thm_ModularCurve_one_add_single_mul_derivative_tateOriginX
 public import Theorems.Thm_ModularCurve_tateOrigin_equation
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_tatePowerSeries_map

@@ -12,7 +12,7 @@ public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull
 public import Theorems.Thm_ModularCurve_CharPReduction_modularRedLocHom_mem
 public import Theorems.Thm_ModularCurve_modularFunctionFieldC_self_collapse_unconditional
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_exists_hasValue_frobNodePair_of_mem_modularLocalizedAtPoint

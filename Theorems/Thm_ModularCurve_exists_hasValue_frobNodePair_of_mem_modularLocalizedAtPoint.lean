@@ -7,8 +7,8 @@ public import Definitions.Def_ModularCurve_SupersingularNodes
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_ArithmeticGalois
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_exists_hasValue_frobNodePair_of_mem_modularLocalizedAtPoint
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_hasValue_frobNodePair_of_mem_modularLocalizedAtPoint
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

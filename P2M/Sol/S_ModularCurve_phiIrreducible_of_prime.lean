@@ -8,7 +8,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
 public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.FieldTheory.Minpoly.Field
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_phiIrreducible_of_prime

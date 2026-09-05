@@ -15,7 +15,7 @@ public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.RingTheory.AdjoinRoot
 public import Mathlib.RingTheory.Polynomial.Cyclotomic.Eval
 public import Mathlib.Algebra.CharP.Lemmas
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_modularPolynomial_kronecker

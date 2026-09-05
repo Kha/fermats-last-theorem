@@ -3,7 +3,7 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
 public import Theorems.Thm_ModularCurve_coe_mem_modularLocalized_or_coe_inv_mem_modularLocalized
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_mem_integersFst_iff_coe_mem_modularLocalized

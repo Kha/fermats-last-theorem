@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Theorems.Thm_ModularCurve_coeffMap_qExpand
 public import Theorems.Thm_ModularCurve_coeffMap_injective
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero

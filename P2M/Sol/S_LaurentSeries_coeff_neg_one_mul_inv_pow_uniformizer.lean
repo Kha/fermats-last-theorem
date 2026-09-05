@@ -2,7 +2,7 @@ module
 
 public import Mathlib
 public import Theorems.Thm_LaurentSeries_coeff_pow_char
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer

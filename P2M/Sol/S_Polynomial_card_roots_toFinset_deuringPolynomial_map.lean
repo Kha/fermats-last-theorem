@@ -2,7 +2,7 @@ module
 
 public import Mathlib
 public import Definitions.Def_Polynomial_DeuringPolynomial
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_Polynomial_card_roots_toFinset_deuringPolynomial_map

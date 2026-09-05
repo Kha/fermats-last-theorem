@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
 
 @[expose] public section
 

@@ -11,7 +11,7 @@ public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.FieldTheory.Minpoly.Field
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.Algebra.Polynomial.Splits
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_jqN_pow_not_mem_adjoin_full

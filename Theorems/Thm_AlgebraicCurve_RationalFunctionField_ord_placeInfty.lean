@@ -6,8 +6,8 @@ public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_placeInfty
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_placeInfty
 
 @[expose] public section
 attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions

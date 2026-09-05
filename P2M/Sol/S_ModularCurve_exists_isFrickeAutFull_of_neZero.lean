@@ -11,7 +11,7 @@ public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
 public import Theorems.Thm_ModularCurve_minpoly_jqN_eq_toAdjoin
 public import Theorems.Thm_ModularCurve_minpoly_jqN_map_eq_prod_slots
 public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_exists_isFrickeAutFull_of_neZero

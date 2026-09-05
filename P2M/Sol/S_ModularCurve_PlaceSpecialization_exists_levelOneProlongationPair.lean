@@ -16,7 +16,7 @@ public import Theorems.Thm_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
 public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 public import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 public import Theorems.Thm_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair

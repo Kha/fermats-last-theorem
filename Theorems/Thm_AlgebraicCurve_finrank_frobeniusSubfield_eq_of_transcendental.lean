@@ -3,8 +3,8 @@ module
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.FieldTheory.Perfect
 public import Mathlib.Algebra.CharP.Algebra
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
 
 @[expose] public section
 

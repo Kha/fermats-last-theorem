@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_ModularUnit
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
+import P2M.Util
+import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

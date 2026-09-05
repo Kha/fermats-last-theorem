@@ -5,7 +5,7 @@ public import Definitions.Def_ModularCurve_PhiGen
 public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
 public import Theorems.Thm_ModularCurve_dedekindPsi_prime
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_of_prime

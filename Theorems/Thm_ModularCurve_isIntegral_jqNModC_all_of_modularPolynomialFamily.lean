@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
+import P2M.Util
+import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
 
 @[expose] public section
 

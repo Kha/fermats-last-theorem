@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_AtkinLehnerPartial
 public import Theorems.Thm_AlgebraicCurve_Place_smul_restrictAlong
 public import Theorems.Thm_ModularCurve_frickeInvolutionBar_comp_heckeAlphaBar_one
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_restrictAlong_heckeBetaBar_frickeInvolutionBar_smul

@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularForm_HeckeOperator
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_cosetPoly_smul
+import P2M.Util
+import P2M.Sol.S_ModularCurve_cosetPoly_smul
 
 @[expose] public section
 

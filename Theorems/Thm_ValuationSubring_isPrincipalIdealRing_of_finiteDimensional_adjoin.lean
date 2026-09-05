@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin
+import P2M.Util
+import P2M.Sol.S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin
 
 @[expose] public section
 

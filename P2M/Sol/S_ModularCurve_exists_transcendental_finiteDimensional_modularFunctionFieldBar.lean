@@ -5,7 +5,7 @@ public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Theorems.Thm_ModularCurve_transcendental_coeffEmb_jq
 public import Theorems.Thm_ModularCurve_finiteDimensional_adjoin_coeffEmb_jq_of_neZero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_exists_transcendental_finiteDimensional_modularFunctionFieldBar

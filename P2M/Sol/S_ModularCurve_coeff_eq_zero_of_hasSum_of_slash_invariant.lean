@@ -1,7 +1,7 @@
 module
 
 public import Mathlib.NumberTheory.ModularForms.NormTrace
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant

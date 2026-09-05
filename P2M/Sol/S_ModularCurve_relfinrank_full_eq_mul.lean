@@ -4,7 +4,7 @@ public import Definitions.Def_ModularCurve_X0
 public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_prime_of_not_mem
 public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem
 public import Mathlib.FieldTheory.Relrank
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_relfinrank_full_eq_mul

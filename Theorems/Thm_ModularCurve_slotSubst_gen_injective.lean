@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_TateSlots
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_slotSubst_gen_injective
+import P2M.Util
+import P2M.Sol.S_ModularCurve_slotSubst_gen_injective
 
 @[expose] public section
 

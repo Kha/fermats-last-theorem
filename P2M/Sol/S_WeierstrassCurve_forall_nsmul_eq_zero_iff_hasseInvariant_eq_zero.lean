@@ -7,7 +7,7 @@ public import Theorems.Thm_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_i
 public import Theorems.Thm_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
 public import Theorems.Thm_WeierstrassCurve_exists_prePsi_eq_expand
 public import Theorems.Thm_WeierstrassCurve_coeff_prePsi_eq_hasseInvariant
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_forall_nsmul_eq_zero_iff_hasseInvariant_eq_zero

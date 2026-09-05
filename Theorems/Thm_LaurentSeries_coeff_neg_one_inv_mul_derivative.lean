@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_LaurentSeries_coeff_neg_one_inv_mul_derivative
+import P2M.Util
+import P2M.Sol.S_LaurentSeries_coeff_neg_one_inv_mul_derivative
 
 @[expose] public section
 set_option synthInstance.maxHeartbeats 400000

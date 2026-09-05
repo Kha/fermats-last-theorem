@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_ValuationSubring_exists_le_forall_mem_iff_apply_mem
+import P2M.Util
+import P2M.Sol.S_ValuationSubring_exists_le_forall_mem_iff_apply_mem
 
 @[expose] public section
 

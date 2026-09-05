@@ -7,7 +7,7 @@ public import Mathlib.RingTheory.DiscreteValuationRing.TFAE
 public import Mathlib.RingTheory.Localization.Integral
 public import Mathlib.RingTheory.Valuation.LocalSubring
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_exists_of_valuationSubring

@@ -3,8 +3,8 @@ module
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_StarBank_press
+import P2M.Util
+import P2M.Sol.S_ModularCurve_StarBank_press
 
 @[expose] public section
 

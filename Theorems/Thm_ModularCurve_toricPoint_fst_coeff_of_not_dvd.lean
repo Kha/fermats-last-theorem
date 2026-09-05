@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_TateSlots
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_toricPoint_fst_coeff_of_not_dvd
+import P2M.Util
+import P2M.Sol.S_ModularCurve_toricPoint_fst_coeff_of_not_dvd
 
 @[expose] public section
 

@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_natDegree_hasseInvariant_jFamily
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_natDegree_hasseInvariant_jFamily
 
 @[expose] public section
 set_option synthInstance.maxHeartbeats 400000

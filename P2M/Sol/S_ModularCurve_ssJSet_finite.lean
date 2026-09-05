@@ -7,7 +7,7 @@ public import Mathlib.FieldTheory.Finite.Basic
 public import Mathlib.Algebra.CharP.Lemmas
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Theorems.Thm_WeierstrassCurve_j_pow_q_sq_eq_j_of_forall_q_zsmul_eq_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_ssJSet_finite

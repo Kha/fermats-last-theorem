@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_X0ModL
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
+import P2M.Util
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

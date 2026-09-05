@@ -4,8 +4,8 @@ public import Mathlib
 public import Definitions.Def_Polynomial_DeuringPolynomial
 public import Definitions.Def_ModularCurve_LegendreJ
 public import Definitions.Def_ModularCurve_JWidth
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
+import P2M.Util
+import P2M.Sol.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
 
 @[expose] public section
 

@@ -4,8 +4,8 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneGlueData
 public import Definitions.Def_ModularCurve_SpecializeModuli
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_PlaceSpecialization_redFst_eq_placeInfty_of_forall_ord_le_zero
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_redFst_eq_placeInfty_of_forall_ord_le_zero
 
 @[expose] public section
 attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions

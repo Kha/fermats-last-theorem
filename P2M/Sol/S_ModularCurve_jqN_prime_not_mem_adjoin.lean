@@ -16,7 +16,7 @@ public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.FieldTheory.Minpoly.Field
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.RingTheory.PowerBasis
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_jqN_prime_not_mem_adjoin

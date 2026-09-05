@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_AtkinLehner
 public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime

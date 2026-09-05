@@ -4,7 +4,7 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Theorems.Thm_WeierstrassCurve_forall_nsmul_eq_zero_iff_hasseInvariant_eq_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_ssJSet_eq_ssJSetHasse

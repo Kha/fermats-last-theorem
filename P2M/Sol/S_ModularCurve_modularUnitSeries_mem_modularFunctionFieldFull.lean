@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_ModularUnit
 public import Theorems.Thm_ModularCurve_modularUnitSeries_mem_modularFunctionField
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull

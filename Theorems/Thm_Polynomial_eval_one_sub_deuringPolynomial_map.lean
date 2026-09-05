@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_Polynomial_DeuringPolynomial
-public import P2M.Util
-public import P2M.Sol.S_Polynomial_eval_one_sub_deuringPolynomial_map
+import P2M.Util
+import P2M.Sol.S_Polynomial_eval_one_sub_deuringPolynomial_map
 
 @[expose] public section
 

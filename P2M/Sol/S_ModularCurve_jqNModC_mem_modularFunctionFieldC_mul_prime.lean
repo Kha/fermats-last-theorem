@@ -14,7 +14,7 @@ public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
 public import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
 public import Theorems.Thm_ModularCurve_minpoly_jqNModC_map_eq_prod_slots
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_prime

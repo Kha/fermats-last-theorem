@@ -16,7 +16,7 @@ public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
 public import Mathlib.FieldTheory.Extension
 public import Mathlib.Data.Nat.Factorization.Induction
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_minpoly_jqN_map_eq_prod_slots

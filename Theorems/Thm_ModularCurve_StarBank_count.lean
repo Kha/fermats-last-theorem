@@ -1,8 +1,8 @@
 module
 
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_StarBank_count
+import P2M.Util
+import P2M.Sol.S_ModularCurve_StarBank_count
 
 @[expose] public section
 

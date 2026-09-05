@@ -5,7 +5,7 @@ public import Mathlib.Topology.Algebra.Valued.NormedValued
 public import Mathlib.RingTheory.Valuation.Discrete.RankOne
 public import Mathlib.RingTheory.MvPowerSeries.Substitution
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_toricPoint_snd_coeff_zero

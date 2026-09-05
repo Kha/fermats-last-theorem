@@ -10,7 +10,7 @@ public import Theorems.Thm_ModularCurve_functionFieldGeneration
 public import Theorems.Thm_ModularCurve_order_jqModC
 public import Theorems.Thm_ModularCurve_deg_qInftyPlaceBar
 public import Theorems.Thm_AlgebraicCurve_constantsAreBase_of_deg_eq_one
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_constantsAreBase_modularFunctionFieldBar

@@ -6,8 +6,8 @@ public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_placeInfty_ne_ofHeightOneSpectrum
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_placeInfty_ne_ofHeightOneSpectrum
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceClassification
 
 @[expose] public section

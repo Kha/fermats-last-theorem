@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_self
+import P2M.Util
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_self
 
 @[expose] public section
 

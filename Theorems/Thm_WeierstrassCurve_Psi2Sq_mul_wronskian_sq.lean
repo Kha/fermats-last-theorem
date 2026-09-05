@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
 
 @[expose] public section
 attribute [-instance] WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly

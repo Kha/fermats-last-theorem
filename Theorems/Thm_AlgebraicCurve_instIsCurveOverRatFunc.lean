@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_instIsCurveOverRatFunc
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_instIsCurveOverRatFunc
 
 @[expose] public section
 attribute [-instance] AlgebraicCurve.Place.instIsRankOneDiscreteWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.Place.instIsTrivialOnWithZeroMultiplicativeIntAdicValuation AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions

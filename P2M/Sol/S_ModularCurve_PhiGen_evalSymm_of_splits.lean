@@ -15,7 +15,7 @@ public import Mathlib.RingTheory.Polynomial.GaussLemma
 public import Mathlib.RingTheory.Polynomial.RationalRoot
 public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.LinearCombination
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_evalSymm_of_splits

@@ -7,7 +7,7 @@ public import Definitions.Def_ModularCurve_KroneckerTransport
 
 public import Theorems.Thm_ModularCurve_toricPoint_equation
 public import Theorems.Thm_ModularCurve_equation_tateBase_iff
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_tateOrigin_equation

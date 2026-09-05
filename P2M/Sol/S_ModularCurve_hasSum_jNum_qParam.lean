@@ -5,7 +5,7 @@ public import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 public import Mathlib.NumberTheory.ModularForms.Discriminant
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_hasSum_jNum_qParam

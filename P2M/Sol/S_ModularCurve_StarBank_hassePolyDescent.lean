@@ -5,7 +5,7 @@ public import Theorems.Thm_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelO
 public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 public import Theorems.Thm_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
 public import Mathlib.Algebra.Polynomial.Lifts
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_hassePolyDescent

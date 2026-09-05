@@ -2,7 +2,7 @@ module
 
 public import Mathlib.RingTheory.Unramified.Field
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq

@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_prePsi_ne_zero_of_isElliptic
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_prePsi_ne_zero_of_isElliptic
 
 @[expose] public section
 attribute [-instance] WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly

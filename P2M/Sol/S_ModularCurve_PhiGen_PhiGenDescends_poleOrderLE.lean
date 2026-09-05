@@ -7,7 +7,7 @@ public import Theorems.Thm_ModularCurve_coeffEmb_injective
 public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.Algebra.Polynomial.Eval.Degree
 public import Mathlib.Tactic.Linarith
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_PhiGenDescends_poleOrderLE

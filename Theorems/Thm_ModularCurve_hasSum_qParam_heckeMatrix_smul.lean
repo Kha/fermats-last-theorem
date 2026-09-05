@@ -3,8 +3,8 @@ module
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.RingTheory.LaurentSeries
 public import Definitions.Def_ModularForm_HeckeOperator
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_hasSum_qParam_heckeMatrix_smul
+import P2M.Util
+import P2M.Sol.S_ModularCurve_hasSum_qParam_heckeMatrix_smul
 
 @[expose] public section
 

@@ -11,7 +11,7 @@ public import Theorems.Thm_Polynomial_eval_one_sub_deuringPolynomial_map
 public import Theorems.Thm_Polynomial_pow_mul_eval_inv_deuringPolynomial_map
 public import Theorems.Thm_ModularCurve_legendreJ_eq_legendreJ_iff
 public import Theorems.Thm_ModularCurve_card_orbit_mul_jWidth
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial

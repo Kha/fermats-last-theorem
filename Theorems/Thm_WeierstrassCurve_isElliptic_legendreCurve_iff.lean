@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_isElliptic_legendreCurve_iff
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_isElliptic_legendreCurve_iff
 
 @[expose] public section
 

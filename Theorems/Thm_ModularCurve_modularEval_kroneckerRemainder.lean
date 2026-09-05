@@ -7,8 +7,8 @@ public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_AlgebraicCurve_GluedPic0
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_modularEval_kroneckerRemainder
+import P2M.Util
+import P2M.Sol.S_ModularCurve_modularEval_kroneckerRemainder
 
 @[expose] public section
 set_option synthInstance.maxHeartbeats 400000

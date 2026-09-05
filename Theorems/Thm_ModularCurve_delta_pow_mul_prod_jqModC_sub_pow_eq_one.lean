@@ -4,8 +4,8 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_ModularCurve_JWidth
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_delta_pow_mul_prod_jqModC_sub_pow_eq_one
+import P2M.Util
+import P2M.Sol.S_ModularCurve_delta_pow_mul_prod_jqModC_sub_pow_eq_one
 
 @[expose] public section
 attribute [-instance] ModularCurve.instIsElliptic_tateLaurent ModularCurve.instIsElliptic_tateBase WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly

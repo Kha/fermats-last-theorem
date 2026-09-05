@@ -12,7 +12,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_hasSum_cosetPoly_c
 public import Theorems.Thm_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
 public import Theorems.Thm_ModularCurve_cosetPoly_smul
 public import Theorems.Thm_ModularCurve_E4_cube_div_discriminant_smul
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends

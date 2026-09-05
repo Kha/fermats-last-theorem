@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_LegendreJ
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_legendreJ_one_sub
+import P2M.Util
+import P2M.Sol.S_ModularCurve_legendreJ_one_sub
 
 @[expose] public section
 

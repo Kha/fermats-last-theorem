@@ -18,7 +18,7 @@ public import Theorems.Thm_ValuationSubring_isAlgClosed_residueField
 public import Theorems.Thm_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
 public import Definitions.Def_FLTPrelim_Ramification
 public import Definitions.Def_ModularCurve_NodeDescent
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_eval2_branch_eq_zero_of_modularEval_eq_zero

@@ -11,7 +11,7 @@ public import Theorems.Thm_AlgebraicCurve_RegularProlongation_ord_residue_le_sum
 public import Theorems.Thm_AlgebraicCurve_Divisor_degree_eq_finrank_adjoin_of_eq_max_neg_ord
 public import Theorems.Thm_ValuationSubring_isAlgClosed_residueField
 public import Theorems.Thm_AlgebraicCurve_constantsAreBase_of_deg_eq_one
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RegularProlongation_sum_ord_eq_sum_ord_residue_of_isIntegral_adjoin

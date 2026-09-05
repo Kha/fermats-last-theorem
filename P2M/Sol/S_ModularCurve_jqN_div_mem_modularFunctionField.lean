@@ -10,7 +10,7 @@ public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Theorems.Thm_Polynomial_mem_range_of_unique_common_root
 public import Theorems.Thm_ModularCurve_coeffMap_injective
 public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_jqN_div_mem_modularFunctionField

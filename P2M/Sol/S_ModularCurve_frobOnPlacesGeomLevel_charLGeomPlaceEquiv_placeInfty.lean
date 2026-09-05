@@ -5,7 +5,7 @@ public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 public import Definitions.Def_ModularCurve_SpecializeModuli
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Theorems.Thm_ModularCurve_eq_charLGeomPlaceEquiv_placeInfty_of_ord_neg
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_frobOnPlacesGeomLevel_charLGeomPlaceEquiv_placeInfty

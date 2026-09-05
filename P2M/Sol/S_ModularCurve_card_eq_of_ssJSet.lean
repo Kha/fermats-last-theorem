@@ -5,7 +5,7 @@ public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
 public import Theorems.Thm_ModularCurve_card_eq_of_ssJSetHasse
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_card_eq_of_ssJSet

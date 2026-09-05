@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_Pic0_zsmul_mk
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_Pic0_zsmul_mk
 
 @[expose] public section
 

@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_SpecializeModuli
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Definitions.Def_ModularCurve_LevelOneGlueData
 public import Theorems.Thm_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_redFst_eq_charLGeomPlaceOfPoint_of_ord_pos

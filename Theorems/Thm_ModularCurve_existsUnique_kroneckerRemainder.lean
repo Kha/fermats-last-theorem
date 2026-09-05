@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_KroneckerTransport
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_existsUnique_kroneckerRemainder
+import P2M.Util
+import P2M.Sol.S_ModularCurve_existsUnique_kroneckerRemainder
 
 @[expose] public section
 

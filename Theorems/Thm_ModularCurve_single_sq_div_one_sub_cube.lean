@@ -1,8 +1,8 @@
 module
 
 public import Mathlib.RingTheory.LaurentSeries
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_single_sq_div_one_sub_cube
+import P2M.Util
+import P2M.Sol.S_ModularCurve_single_sq_div_one_sub_cube
 
 @[expose] public section
 attribute [-instance] ModularCurve.instIsElliptic_tateBase ModularCurve.instIsElliptic_tateLaurent

@@ -3,7 +3,7 @@ module
 public import Definitions.Def_TateCurve_Defect
 public import Theorems.Thm_TateCurve_defectCoeff_eq_zero
 public import Theorems.Thm_TateCurve_equation_pointX_pointY_of_defectCoeff_eq_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_TateCurve_equation_pointX_pointY

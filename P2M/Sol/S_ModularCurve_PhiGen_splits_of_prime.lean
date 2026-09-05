@@ -12,7 +12,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_exists_modularPolynomialData_coef
 public import Theorems.Thm_ModularCurve_PhiGen_splits_of_coeff_evalAtJ_eq
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_splits_of_prime

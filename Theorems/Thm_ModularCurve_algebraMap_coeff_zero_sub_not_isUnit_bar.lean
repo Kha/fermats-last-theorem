@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_QAdicPlace
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
+import P2M.Util
+import P2M.Sol.S_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
 
 @[expose] public section
 

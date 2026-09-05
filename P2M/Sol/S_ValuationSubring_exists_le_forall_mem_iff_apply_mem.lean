@@ -1,7 +1,7 @@
 module
 
 public import Mathlib
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ValuationSubring_exists_le_forall_mem_iff_apply_mem

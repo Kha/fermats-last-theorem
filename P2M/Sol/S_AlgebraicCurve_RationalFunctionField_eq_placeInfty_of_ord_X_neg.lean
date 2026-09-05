@@ -4,7 +4,7 @@ public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
 public import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_eq_placeInfty_of_ord_X_neg

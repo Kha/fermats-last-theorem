@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
+import P2M.Util
+import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 
 @[expose] public section
 

@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_AlgebraicCurve_RegularProlongation
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
 
 @[expose] public section
 

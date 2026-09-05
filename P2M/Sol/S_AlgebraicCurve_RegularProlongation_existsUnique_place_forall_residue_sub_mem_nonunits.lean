@@ -11,7 +11,7 @@ public import Theorems.Thm_ValuationSubring_isAlgClosed_residueField
 public import Theorems.Thm_AlgebraicCurve_exists_separating_transcendental_of_perfectField
 public import Theorems.Thm_AlgebraicCurve_Place_exists_forall_ord_eq
 public import Theorems.Thm_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RegularProlongation_existsUnique_place_forall_residue_sub_mem_nonunits

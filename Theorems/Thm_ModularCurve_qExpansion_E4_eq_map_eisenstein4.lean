@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
+import P2M.Util
+import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 
 @[expose] public section
 

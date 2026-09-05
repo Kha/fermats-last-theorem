@@ -3,7 +3,7 @@ module
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Theorems.Thm_AlgebraicCurve_Pic0_mk_eq_zero_iff
 public import Theorems.Thm_AlgebraicCurve_Pic0_zsmul_mk
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_Pic0_zsmul_mk_eq_zero_of_isPrincipal

@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_QAdicPlace
 public import Theorems.Thm_ModularCurve_surjective_algebraMap_residueField_bar
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_deg_qInftyPlaceBar

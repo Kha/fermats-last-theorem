@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_ValuationSubring_exists_root_mem_of_monic
+import P2M.Util
+import P2M.Sol.S_ValuationSubring_exists_root_mem_of_monic
 
 @[expose] public section
 

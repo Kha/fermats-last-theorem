@@ -1,8 +1,8 @@
 module
 
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_exists_perm_gamma0_cosetReps
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_perm_gamma0_cosetReps
 
 @[expose] public section
 

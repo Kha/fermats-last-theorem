@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_RouteBCoordRing
 public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
 public import Theorems.Thm_ModularCurve_evalAtJGen_injective
 public import Theorems.Thm_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_nonempty_modularPolynomialData

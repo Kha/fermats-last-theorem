@@ -14,7 +14,7 @@ public import Theorems.Thm_KaehlerDifferential_span_D_eq_top_of_transcendental
 public import Mathlib.FieldTheory.Perfect
 public import Mathlib.Algebra.CharP.Algebra
 public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_isCurveOver_modularFunctionFieldBar

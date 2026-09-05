@@ -5,7 +5,7 @@ public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Theorems.Thm_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
 public import Theorems.Thm_WeierstrassCurve_isCoprime_Phi_PsiSq
 public import Theorems.Thm_WeierstrassCurve_prePsi_ne_zero_of_isElliptic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_coeff_prePsi_eq_hasseInvariant

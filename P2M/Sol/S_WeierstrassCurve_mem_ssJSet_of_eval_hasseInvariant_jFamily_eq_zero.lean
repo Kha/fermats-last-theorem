@@ -6,7 +6,7 @@ public import Definitions.Def_ModularCurve_SupersingularModuli
 public import Theorems.Thm_WeierstrassCurve_natDegree_hasseInvariant_jFamily
 public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
 public import Theorems.Thm_WeierstrassCurve_hasseInvariant_pow_mul_delta_pow_eq_of_j_eq
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_mem_ssJSet_of_eval_hasseInvariant_jFamily_eq_zero

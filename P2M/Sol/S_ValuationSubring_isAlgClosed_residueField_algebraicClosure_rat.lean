@@ -1,7 +1,7 @@
 module
 
 public import Mathlib
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ValuationSubring_isAlgClosed_residueField_algebraicClosure_rat

@@ -8,7 +8,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.Algebra.Polynomial.Roots
 public import Mathlib.Algebra.BigOperators.Fin
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot

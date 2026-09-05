@@ -16,7 +16,7 @@ public import Theorems.Thm_Polynomial_irreducible_of_transitive_ringAut
 public import Theorems.Thm_ModularCurve_dedekindPsi_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Relrank
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_relfinrank_fullC_mul_prime_pow

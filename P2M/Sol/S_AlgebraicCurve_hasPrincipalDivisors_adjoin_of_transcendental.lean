@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
 public import Theorems.Thm_AlgebraicCurve_hasPrincipalDivisors_of_transcendental
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental

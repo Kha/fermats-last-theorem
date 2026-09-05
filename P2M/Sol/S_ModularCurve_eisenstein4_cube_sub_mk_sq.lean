@@ -4,7 +4,7 @@ public import Definitions.Def_ModularCurve_X0
 public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 public import Theorems.Thm_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 public import Mathlib.NumberTheory.ModularForms.LevelOne.GradedRing
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_eisenstein4_cube_sub_mk_sq

@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_TateSlots
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_equation_tateBase_iff
+import P2M.Util
+import P2M.Sol.S_ModularCurve_equation_tateBase_iff
 
 @[expose] public section
 

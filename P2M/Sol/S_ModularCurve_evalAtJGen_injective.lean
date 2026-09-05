@@ -1,7 +1,7 @@
 module
 
 public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_evalAtJGen_injective

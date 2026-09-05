@@ -15,7 +15,7 @@ public import Theorems.Thm_ModularCurve_constantsAreBase_modularFunctionFieldBar
 public import Theorems.Thm_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
 public import Theorems.Thm_ModularCurve_exists_transcendental_finiteDimensional_modularFunctionFieldBar
 public import Theorems.Thm_AlgebraicCurve_Place_transcendental_of_ord_ne_zero
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSeries_inv

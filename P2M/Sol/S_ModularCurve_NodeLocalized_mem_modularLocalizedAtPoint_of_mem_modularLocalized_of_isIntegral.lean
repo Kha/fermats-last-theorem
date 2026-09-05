@@ -13,7 +13,7 @@ public import Theorems.Thm_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscr
 public import Theorems.Thm_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
 public import Theorems.Thm_IsIntegrallyClosed_exists_algebraMap_eq_of_isIntegral_pow_mul
 public import Theorems.Thm_ModularCurve_transcendental_jqModC
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_mem_modularLocalizedAtPoint_of_mem_modularLocalized_of_isIntegral

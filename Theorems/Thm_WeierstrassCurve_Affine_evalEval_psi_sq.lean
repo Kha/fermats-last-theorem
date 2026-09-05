@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_Affine_evalEval_psi_sq
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_Affine_evalEval_psi_sq
 
 @[expose] public section
 

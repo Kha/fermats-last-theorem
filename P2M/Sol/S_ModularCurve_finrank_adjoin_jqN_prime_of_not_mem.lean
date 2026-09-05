@@ -11,7 +11,7 @@ public import Theorems.Thm_ModularCurve_dedekindPsi_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_prime_of_not_mem

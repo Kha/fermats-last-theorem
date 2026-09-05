@@ -29,7 +29,7 @@ public import Theorems.Thm_ModularCurve_finiteDimensional_adjoin_jqNModC
 public import Mathlib.Algebra.Algebra.Rat
 public import Theorems.Thm_ModularCurve_isCusp_cuspZeroBar
 public import Theorems.Thm_ModularCurve_isCusp_cuspInftyBar
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_frickeInvolutionBar_coeffEmb_modularUnitSeries

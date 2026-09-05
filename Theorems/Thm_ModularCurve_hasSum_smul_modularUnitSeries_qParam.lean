@@ -3,8 +3,8 @@ module
 public import Definitions.Def_ModularCurve_ModularUnit
 public import Definitions.Def_ModularForm_HeckeOperator
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_hasSum_smul_modularUnitSeries_qParam
+import P2M.Util
+import P2M.Sol.S_ModularCurve_hasSum_smul_modularUnitSeries_qParam
 
 @[expose] public section
 

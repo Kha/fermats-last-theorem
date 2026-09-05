@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_Correspondence
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_Place_smul_restrictAlong
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_Place_smul_restrictAlong
 
 @[expose] public section
 

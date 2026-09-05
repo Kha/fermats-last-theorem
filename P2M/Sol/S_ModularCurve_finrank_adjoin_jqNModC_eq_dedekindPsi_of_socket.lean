@@ -21,7 +21,7 @@ public import Theorems.Thm_ModularCurve_package_of_socket
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 public import Mathlib.Algebra.Polynomial.Eval.Irreducible
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqNModC_eq_dedekindPsi_of_socket

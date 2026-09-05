@@ -9,7 +9,7 @@ public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.Algebra.Polynomial.Bivariate
 public import Mathlib.FieldTheory.Separable
 public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_of_modularPolynomialData

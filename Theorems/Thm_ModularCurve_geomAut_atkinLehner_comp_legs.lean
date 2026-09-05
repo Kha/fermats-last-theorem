@@ -3,8 +3,8 @@ module
 public import Definitions.Def_ModularCurve_AtkinLehnerPartial
 public import Definitions.Def_ModularCurve_HeckeOperator
 public import Definitions.Def_ModularCurve_GeometricBaseChange
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_geomAut_atkinLehner_comp_legs
+import P2M.Util
+import P2M.Sol.S_ModularCurve_geomAut_atkinLehner_comp_legs
 
 @[expose] public section
 

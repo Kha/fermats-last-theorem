@@ -6,7 +6,7 @@ public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
 public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_self
 public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_press

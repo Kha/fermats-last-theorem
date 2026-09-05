@@ -4,7 +4,7 @@ public import Definitions.Def_ModularCurve_AtkinLehner
 public import Theorems.Thm_ModularCurve_ord_cuspInftyBar
 public import Theorems.Thm_ModularCurve_order_coeffEmb
 public import Theorems.Thm_ModularCurve_order_qExpand
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_ord_cuspInftyBar_coeffEmb_qExpand

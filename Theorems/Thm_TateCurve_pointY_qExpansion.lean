@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_TateCurve_PointSeries
 public import Definitions.Def_TateCurve_Tails
-public import P2M.Util
-public import P2M.Sol.S_TateCurve_pointY_qExpansion
+import P2M.Util
+import P2M.Sol.S_TateCurve_pointY_qExpansion
 
 @[expose] public section
 

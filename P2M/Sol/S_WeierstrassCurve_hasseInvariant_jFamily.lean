@@ -11,7 +11,7 @@ public import Theorems.Thm_ModularCurve_card_eq_of_ssJSet
 public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
 public import Theorems.Thm_ModularCurve_zero_mem_ssJSetHasse_iff
 public import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_jFamily

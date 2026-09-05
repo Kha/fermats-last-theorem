@@ -11,7 +11,7 @@ public import Mathlib.RingTheory.Ideal.Norm.RelNorm
 public import Mathlib.FieldTheory.Perfect
 public import Mathlib.Algebra.CharP.Algebra
 public import Mathlib.FieldTheory.RatFunc.AsPolynomial
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental

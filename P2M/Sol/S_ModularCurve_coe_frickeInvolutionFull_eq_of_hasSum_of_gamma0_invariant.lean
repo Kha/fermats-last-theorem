@@ -30,7 +30,7 @@ public import Theorems.Thm_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
 public import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
 public import Definitions.Def_ModularCurve_AtkinLehner
 public import Theorems.Thm_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_coe_frickeInvolutionFull_eq_of_hasSum_of_gamma0_invariant

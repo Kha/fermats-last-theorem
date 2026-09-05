@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_PhiGen_mem_range_coeffEmb_of_forall_coeffMap_eq
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PhiGen_mem_range_coeffEmb_of_forall_coeffMap_eq
 
 @[expose] public section
 

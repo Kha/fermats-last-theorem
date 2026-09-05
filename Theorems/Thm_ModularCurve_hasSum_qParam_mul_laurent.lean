@@ -2,8 +2,8 @@ module
 
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.RingTheory.LaurentSeries
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
+import P2M.Util
+import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
 
 @[expose] public section
 

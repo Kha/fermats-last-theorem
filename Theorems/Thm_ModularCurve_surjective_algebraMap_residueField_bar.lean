@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_QAdicPlace
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_surjective_algebraMap_residueField_bar
+import P2M.Util
+import P2M.Sol.S_ModularCurve_surjective_algebraMap_residueField_bar
 
 @[expose] public section
 

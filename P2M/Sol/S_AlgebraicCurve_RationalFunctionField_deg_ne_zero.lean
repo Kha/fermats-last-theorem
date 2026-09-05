@@ -5,7 +5,7 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_deg_eq_one_of_forall_ne_ofHeightOneSpectrum
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_deg_ofHeightOneSpectrum
 import Definitions.Def_AlgebraicCurve_RatFuncPlaces
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_deg_ne_zero

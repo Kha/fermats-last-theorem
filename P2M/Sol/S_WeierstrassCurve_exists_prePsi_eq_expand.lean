@@ -3,7 +3,7 @@ module
 public import Mathlib
 public import Theorems.Thm_WeierstrassCurve_Psi2Sq_mul_wronskian_sq
 public import Theorems.Thm_WeierstrassCurve_isCoprime_Phi_PsiSq
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_exists_prePsi_eq_expand

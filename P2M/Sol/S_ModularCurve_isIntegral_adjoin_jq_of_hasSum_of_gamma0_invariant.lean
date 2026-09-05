@@ -27,7 +27,7 @@ public import Theorems.Thm_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
 public import Theorems.Thm_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
 public import Theorems.Thm_ModularCurve_exists_perm_gamma0_cosetReps
 public import Theorems.Thm_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_adjoin_jq_of_hasSum_of_gamma0_invariant

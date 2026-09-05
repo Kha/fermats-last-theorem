@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_pow_char_eq_map_frobenius_qExpand
+import P2M.Util
+import P2M.Sol.S_ModularCurve_pow_char_eq_map_frobenius_qExpand
 
 @[expose] public section
 

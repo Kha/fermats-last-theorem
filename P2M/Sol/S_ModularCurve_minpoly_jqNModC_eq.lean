@@ -14,7 +14,7 @@ public import Mathlib.FieldTheory.Minpoly.Field
 public import Mathlib.Algebra.Polynomial.Div
 public import Theorems.Thm_ModularCurve_transcendental_jqModC
 public import Mathlib.FieldTheory.RatFunc.AsPolynomial
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_minpoly_jqNModC_eq

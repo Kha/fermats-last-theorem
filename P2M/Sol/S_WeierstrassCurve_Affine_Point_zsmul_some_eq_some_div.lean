@@ -28,7 +28,7 @@ public import Mathlib.Logic.Embedding.Set
 public import Mathlib.SetTheory.Cardinal.Finite
 public import Mathlib.Data.Set.Card
 public import Mathlib.Algebra.Module.Torsion.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_Affine_Point_zsmul_some_eq_some_div

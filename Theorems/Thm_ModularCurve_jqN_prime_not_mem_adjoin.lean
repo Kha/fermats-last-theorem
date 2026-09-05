@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_jqN_prime_not_mem_adjoin
+import P2M.Util
+import P2M.Sol.S_ModularCurve_jqN_prime_not_mem_adjoin
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

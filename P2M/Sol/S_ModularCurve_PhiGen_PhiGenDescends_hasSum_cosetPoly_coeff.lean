@@ -13,7 +13,7 @@ public import Theorems.Thm_ModularCurve_hasSum_jq_qParam
 public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
 public import Theorems.Thm_ModularCurve_hasSum_qParam_heckeMatrix_smul
 public import Theorems.Thm_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_PhiGenDescends_hasSum_cosetPoly_coeff

@@ -3,8 +3,8 @@ module
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Defs
 public import Mathlib.RingTheory.Algebraic.Defs
 public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
 
 @[expose] public section
 

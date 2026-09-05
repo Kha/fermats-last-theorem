@@ -4,8 +4,8 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Galois.Basic
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_PhiGen_exists_phiGenDescends
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PhiGen_exists_phiGenDescends
 
 @[expose] public section
 

@@ -3,7 +3,7 @@ module
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 public import Mathlib.Algebra.Field.ZMod
 public import Mathlib.Tactic.Group
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_exists_perm_gamma0_cosetReps

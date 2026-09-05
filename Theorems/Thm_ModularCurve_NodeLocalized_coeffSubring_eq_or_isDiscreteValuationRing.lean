@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_NodeDescent
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing
+import P2M.Util
+import P2M.Sol.S_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing
 
 @[expose] public section
 set_option autoImplicit false

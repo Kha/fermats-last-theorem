@@ -3,7 +3,7 @@ module
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Mathlib.Algebra.Polynomial.Degree.Lemmas
 public import Mathlib.Algebra.CharP.Lemmas
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_starK

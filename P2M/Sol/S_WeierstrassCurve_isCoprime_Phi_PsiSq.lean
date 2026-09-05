@@ -29,7 +29,7 @@ public import Mathlib.Data.Set.Card
 public import Mathlib.Algebra.Module.Torsion.Basic
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 public import Definitions.Def_WeierstrassCurve_EDSEngine
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_isCoprime_Phi_PsiSq

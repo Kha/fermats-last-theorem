@@ -3,8 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_TateFormal
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_hasseInvariant_tatePowerSeries_map
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_hasseInvariant_tatePowerSeries_map
 
 @[expose] public section
 attribute [-instance] ModularCurve.instIsElliptic_tateBase

@@ -2,8 +2,8 @@ module
 
 public import Mathlib.RingTheory.LaurentSeries
 public import Mathlib.Topology.Algebra.InfiniteSum.Basic
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_tsum_of_coeff_lt_eq_zero
+import P2M.Util
+import P2M.Sol.S_ModularCurve_tsum_of_coeff_lt_eq_zero
 
 @[expose] public section
 attribute [-instance] ModularCurve.instIsElliptic_tateBase ModularCurve.instIsElliptic_tateLaurent

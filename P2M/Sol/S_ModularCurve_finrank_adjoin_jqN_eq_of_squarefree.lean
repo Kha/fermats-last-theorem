@@ -18,7 +18,7 @@ public import Mathlib.Data.Nat.ModEq
 public import Mathlib.FieldTheory.PrimitiveElement
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.Data.Nat.Factorization.Induction
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree

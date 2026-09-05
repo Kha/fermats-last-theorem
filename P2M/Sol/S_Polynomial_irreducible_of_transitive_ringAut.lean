@@ -2,7 +2,7 @@ module
 
 public import Mathlib.Algebra.Polynomial.Splits
 public import Mathlib.Algebra.Polynomial.FieldDivision
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_Polynomial_irreducible_of_transitive_ringAut

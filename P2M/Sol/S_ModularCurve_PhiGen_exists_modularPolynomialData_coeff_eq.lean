@@ -11,7 +11,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
 public import Theorems.Thm_ModularCurve_dedekindPsi_prime
 public import Mathlib.Algebra.Polynomial.Lifts
 public import Mathlib.RingTheory.Adjoin.Polynomial.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq

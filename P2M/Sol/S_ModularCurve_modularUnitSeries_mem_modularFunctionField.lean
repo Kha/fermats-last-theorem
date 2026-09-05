@@ -9,7 +9,7 @@ public import Theorems.Thm_ModularCurve_hasSum_modularUnitSeries_inv_qParam
 public import Theorems.Thm_ModularCurve_hasSum_smul_modularUnitSeries_qParam
 public import Theorems.Thm_ModularCurve_discriminant_div_discriminant_heckeDiagMatrix_smul
 public import Theorems.Thm_ModularCurve_mem_modularFunctionField_of_hasSum_of_gamma0_invariant
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_modularUnitSeries_mem_modularFunctionField

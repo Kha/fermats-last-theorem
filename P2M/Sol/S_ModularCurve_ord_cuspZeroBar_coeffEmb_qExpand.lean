@@ -3,7 +3,7 @@ module
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Theorems.Thm_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
 public import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_qExpand
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_ord_cuspZeroBar_coeffEmb_qExpand

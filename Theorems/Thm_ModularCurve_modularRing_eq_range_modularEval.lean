@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_NodeLocalized
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_modularRing_eq_range_modularEval
+import P2M.Util
+import P2M.Sol.S_ModularCurve_modularRing_eq_range_modularEval
 
 @[expose] public section
 

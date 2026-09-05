@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_IsLocalRing_isIntegrallyClosed_of_isPrincipalIdealRing_quotient
+import P2M.Util
+import P2M.Sol.S_IsLocalRing_isIntegrallyClosed_of_isPrincipalIdealRing_quotient
 
 @[expose] public section
 

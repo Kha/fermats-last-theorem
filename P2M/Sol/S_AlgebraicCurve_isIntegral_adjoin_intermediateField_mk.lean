@@ -3,7 +3,7 @@ module
 public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
 public import Mathlib.Algebra.Algebra.Subalgebra.Lattice
 public import Mathlib.FieldTheory.IntermediateField.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_isIntegral_adjoin_intermediateField_mk

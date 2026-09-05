@@ -4,7 +4,7 @@ public import Mathlib
 public import Theorems.Thm_WeierstrassCurve_Affine_Point_nsmul_some_eq_zero_iff_eval_prePsi
 public import Theorems.Thm_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
 public import Theorems.Thm_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_prePsi_ne_zero_of_isElliptic

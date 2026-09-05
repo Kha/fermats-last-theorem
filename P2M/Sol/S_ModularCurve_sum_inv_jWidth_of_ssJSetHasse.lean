@@ -7,7 +7,7 @@ public import Definitions.Def_ModularCurve_LegendreJ
 public import Definitions.Def_ModularCurve_JWidth
 public import Theorems.Thm_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
 public import Theorems.Thm_ModularCurve_ssJSetHasse_eq_image_legendreJ_toFinset
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_sum_inv_jWidth_of_ssJSetHasse

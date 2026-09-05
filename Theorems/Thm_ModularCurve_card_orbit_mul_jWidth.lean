@@ -3,8 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_LegendreJ
 public import Definitions.Def_ModularCurve_JWidth
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_card_orbit_mul_jWidth
+import P2M.Util
+import P2M.Sol.S_ModularCurve_card_orbit_mul_jWidth
 
 @[expose] public section
 

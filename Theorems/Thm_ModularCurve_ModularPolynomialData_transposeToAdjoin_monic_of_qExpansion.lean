@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion
+import P2M.Util
+import P2M.Sol.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion
 
 @[expose] public section
 

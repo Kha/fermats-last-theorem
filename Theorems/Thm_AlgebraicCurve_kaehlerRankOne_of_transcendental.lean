@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_kaehlerRankOne_of_transcendental
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_kaehlerRankOne_of_transcendental
 
 @[expose] public section
 

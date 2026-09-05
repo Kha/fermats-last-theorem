@@ -4,7 +4,7 @@ public import Mathlib.FieldTheory.RatFunc.Degree
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_placeInfty_ne_ofHeightOneSpectrum
 public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_eq_neg_intDegree_of_forall_ne_ofHeightOneSpectrum
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_ord_placeInfty

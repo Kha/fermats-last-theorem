@@ -5,7 +5,7 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Definitions.Def_AlgebraicCurve_Repartitions
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_finiteDimensional_lSpace

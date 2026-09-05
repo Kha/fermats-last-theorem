@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
 
 @[expose] public section
 

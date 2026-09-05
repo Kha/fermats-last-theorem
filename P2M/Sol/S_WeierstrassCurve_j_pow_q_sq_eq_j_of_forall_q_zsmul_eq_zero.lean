@@ -6,7 +6,7 @@ public import Theorems.Thm_WeierstrassCurve_Affine_evalEval_psi_sq
 public import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 public import Theorems.Thm_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
 public import Theorems.Thm_WeierstrassCurve_Psi2Sq_ne_zero_of_isElliptic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_j_pow_q_sq_eq_j_of_forall_q_zsmul_eq_zero

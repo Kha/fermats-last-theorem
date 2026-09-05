@@ -11,7 +11,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_evalSymm_of_splits
 public import Theorems.Thm_ModularCurve_dedekindPsi_prime
 public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.Ring
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq

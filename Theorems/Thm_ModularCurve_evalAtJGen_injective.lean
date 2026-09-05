@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_X0
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_evalAtJGen_injective
+import P2M.Util
+import P2M.Sol.S_ModularCurve_evalAtJGen_injective
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

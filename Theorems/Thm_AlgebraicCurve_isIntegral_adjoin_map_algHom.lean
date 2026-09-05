@@ -1,8 +1,8 @@
 module
 
 public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_isIntegral_adjoin_map_algHom
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_isIntegral_adjoin_map_algHom
 
 @[expose] public section
 

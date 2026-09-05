@@ -2,8 +2,8 @@ module
 
 public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
 public import Mathlib.FieldTheory.IntermediateField.Basic
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_isIntegral_adjoin_intermediateField_mk
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_isIntegral_adjoin_intermediateField_mk
 
 @[expose] public section
 

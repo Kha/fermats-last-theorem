@@ -19,7 +19,7 @@ public import Theorems.Thm_ModularCurve_cuspZeroBar_ne_cuspInftyBar
 public import Theorems.Thm_ModularCurve_isCusp_cuspZeroBar
 public import Theorems.Thm_ModularCurve_isCusp_cuspInftyBar
 public import Theorems.Thm_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqNModC_eq_of_prime

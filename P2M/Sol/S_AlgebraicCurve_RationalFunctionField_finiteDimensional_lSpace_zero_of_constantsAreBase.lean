@@ -14,7 +14,7 @@ public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_ord_placeInfty
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_deg_placeInfty
 public import Theorems.Thm_AlgebraicCurve_Place_exists_restrict_eq
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase

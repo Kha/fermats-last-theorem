@@ -2,8 +2,8 @@ module
 
 public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
 public import Mathlib.Analysis.SpecificLimits.Normed
-public import P2M.Util
-public import P2M.Sol.S_TateCurve_tsum_succ_prod_eq_tsum_divisors
+import P2M.Util
+import P2M.Sol.S_TateCurve_tsum_succ_prod_eq_tsum_divisors
 
 @[expose] public section
 

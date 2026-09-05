@@ -3,8 +3,8 @@ module
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 public import Mathlib.NumberTheory.ModularForms.Discriminant
 public import Definitions.Def_ModularForm_HeckeOperator
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_discriminant_div_discriminant_heckeDiagMatrix_smul
+import P2M.Util
+import P2M.Sol.S_ModularCurve_discriminant_div_discriminant_heckeDiagMatrix_smul
 
 @[expose] public section
 

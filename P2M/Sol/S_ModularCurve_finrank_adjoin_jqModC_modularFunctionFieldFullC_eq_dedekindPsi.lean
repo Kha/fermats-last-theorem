@@ -7,7 +7,7 @@ public import Theorems.Thm_ModularCurve_StarBank_starBank
 public import Theorems.Thm_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero
 public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
 public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi

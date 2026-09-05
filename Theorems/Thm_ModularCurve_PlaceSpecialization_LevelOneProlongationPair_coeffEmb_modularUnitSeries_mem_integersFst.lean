@@ -4,8 +4,8 @@ public import Mathlib
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
 public import Definitions.Def_ModularCurve_ModularUnit
 public import Theorems.Thm_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_coeffEmb_modularUnitSeries_mem_integersFst
+import P2M.Util
+import P2M.Sol.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_coeffEmb_modularUnitSeries_mem_integersFst
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

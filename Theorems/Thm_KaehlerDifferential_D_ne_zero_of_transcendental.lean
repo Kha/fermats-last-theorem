@@ -4,8 +4,8 @@ public import Mathlib.RingTheory.Kaehler.Basic
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.FieldTheory.Separable
 public import Mathlib.RingTheory.Algebraic.Defs
-public import P2M.Util
-public import P2M.Sol.S_KaehlerDifferential_D_ne_zero_of_transcendental
+import P2M.Util
+import P2M.Sol.S_KaehlerDifferential_D_ne_zero_of_transcendental
 
 @[expose] public section
 

@@ -5,8 +5,8 @@ public import Mathlib.Algebra.Field.Subfield.Basic
 public import Mathlib.LinearAlgebra.Dimension.Finrank
 public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
 public import Mathlib.FieldTheory.Separable
-public import P2M.Util
-public import P2M.Sol.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
+import P2M.Util
+import P2M.Sol.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
 
 @[expose] public section
 

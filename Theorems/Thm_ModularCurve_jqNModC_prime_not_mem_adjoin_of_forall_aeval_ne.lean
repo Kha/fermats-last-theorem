@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
+import P2M.Util
+import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

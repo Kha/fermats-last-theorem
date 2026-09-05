@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem
+import P2M.Util
+import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

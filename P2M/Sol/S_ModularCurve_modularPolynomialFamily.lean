@@ -8,7 +8,7 @@ public import Theorems.Thm_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
 public import Theorems.Thm_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq
 public import Theorems.Thm_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_modularPolynomialFamily

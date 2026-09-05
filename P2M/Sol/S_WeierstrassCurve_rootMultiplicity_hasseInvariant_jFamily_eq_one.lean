@@ -12,7 +12,7 @@ public import Theorems.Thm_WeierstrassCurve_isElliptic_legendreCurve_iff
 public import Theorems.Thm_ModularCurve_ssJSetHasse_eq_image_legendreJ
 public import Theorems.Thm_ModularCurve_ssJSet_eq_ssJSetHasse
 public import Theorems.Thm_Polynomial_separable_deuringPolynomial_map
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_rootMultiplicity_hasseInvariant_jFamily_eq_one

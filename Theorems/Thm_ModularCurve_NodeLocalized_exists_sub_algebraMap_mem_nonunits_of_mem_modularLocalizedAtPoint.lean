@@ -3,8 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_NodeLocalized
 public import Definitions.Def_ModularCurve_LevelOneProlongationPair
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_NodeLocalized_exists_sub_algebraMap_mem_nonunits_of_mem_modularLocalizedAtPoint
+import P2M.Util
+import P2M.Sol.S_ModularCurve_NodeLocalized_exists_sub_algebraMap_mem_nonunits_of_mem_modularLocalizedAtPoint
 
 @[expose] public section
 

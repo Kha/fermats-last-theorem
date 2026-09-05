@@ -3,7 +3,7 @@ module
 public import Mathlib.FieldTheory.RatFunc.Degree
 public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 public import Theorems.Thm_AlgebraicCurve_RationalFunctionField_ord_placeInfty
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_ord_placeInfty_algebraMap

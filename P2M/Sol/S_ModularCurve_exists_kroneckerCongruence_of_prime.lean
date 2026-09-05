@@ -2,7 +2,7 @@ module
 
 public import Theorems.Thm_ModularCurve_kroneckerCongruence
 public import Theorems.Thm_ModularCurve_nonempty_modularPolynomialData_of_squarefree
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_exists_kroneckerCongruence_of_prime

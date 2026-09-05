@@ -5,7 +5,7 @@ public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_Polynomial_DeuringPolynomial
 public import Definitions.Def_ModularCurve_LegendreJ
 public import Theorems.Thm_ModularCurve_ssJSetHasse_eq_image_legendreJ
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_ssJSetHasse_eq_image_legendreJ_toFinset

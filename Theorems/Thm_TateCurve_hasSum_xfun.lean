@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_TateCurve_PointSeries
-public import P2M.Util
-public import P2M.Sol.S_TateCurve_hasSum_xfun
+import P2M.Util
+import P2M.Sol.S_TateCurve_hasSum_xfun
 
 @[expose] public section
 

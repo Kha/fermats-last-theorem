@@ -5,7 +5,7 @@ public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Theorems.Thm_ModularCurve_laurentBaseChange_adjoin
 public import Theorems.Thm_ModularCurve_coeffEmb_jqN
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_laurentBaseChange_modularFunctionFieldFull

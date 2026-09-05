@@ -3,8 +3,8 @@ module
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Manifold
 public import Mathlib.Analysis.Complex.UpperHalfPlane.FunctionsBoundedAtInfty
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_qParam_coeff_unique
+import P2M.Util
+import P2M.Sol.S_ModularCurve_qParam_coeff_unique
 
 @[expose] public section
 

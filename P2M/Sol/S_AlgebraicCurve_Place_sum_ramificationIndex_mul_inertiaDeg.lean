@@ -11,7 +11,7 @@ public import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
 public import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
 public import Theorems.Thm_AlgebraicCurve_Place_exists_ord_pos
 public import Theorems.Thm_AlgebraicCurve_Place_ord_eq_zero_iff_adicValuation_eq_one
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg

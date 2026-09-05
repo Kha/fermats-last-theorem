@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_isIntegral_adjoin_of_forall_ord_nonneg
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_isIntegral_adjoin_of_forall_ord_nonneg
 
 @[expose] public section
 

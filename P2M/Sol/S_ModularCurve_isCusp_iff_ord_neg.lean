@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_QAdicPlace
 public import Theorems.Thm_AlgebraicCurve_Place_mem_iff_ord_nonneg
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_isCusp_iff_ord_neg

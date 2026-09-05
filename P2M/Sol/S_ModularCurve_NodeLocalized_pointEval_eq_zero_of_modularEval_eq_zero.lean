@@ -9,7 +9,7 @@ public import Theorems.Thm_ModularCurve_minpoly_jqNModC_eq
 public import Theorems.Thm_ModularCurve_transcendental_jqModC
 public import Theorems.Thm_ModularCurve_kroneckerCongruence
 public import Theorems.Thm_ModularCurve_fibrePoly_eq_of_kroneckerCongruence
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_pointEval_eq_zero_of_modularEval_eq_zero

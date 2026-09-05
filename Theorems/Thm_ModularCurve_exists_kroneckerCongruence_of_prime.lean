@@ -2,8 +2,8 @@ module
 
 public import Mathlib
 public import Definitions.Def_ModularCurve_KroneckerTransport
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_exists_kroneckerCongruence_of_prime
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_kroneckerCongruence_of_prime
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

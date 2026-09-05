@@ -3,7 +3,7 @@ module
 public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
 public import Mathlib.Analysis.SpecificLimits.Normed
 public import Mathlib.NumberTheory.Divisors
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_TateCurve_tsum_succ_prod_eq_tsum_divisors

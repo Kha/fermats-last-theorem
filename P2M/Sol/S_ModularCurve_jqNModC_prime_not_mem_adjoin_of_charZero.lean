@@ -19,7 +19,7 @@ public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 public import Mathlib.RingTheory.Polynomial.RationalRoot
 public import Mathlib.Algebra.Polynomial.Roots
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero

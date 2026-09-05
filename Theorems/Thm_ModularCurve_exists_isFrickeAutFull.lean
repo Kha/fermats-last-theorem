@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_AtkinLehner
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

@@ -9,7 +9,7 @@ public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
 public import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
 public import Mathlib.FieldTheory.Relrank
 public import Mathlib.FieldTheory.Minpoly.Field
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_functionFieldGeneration_of_squarefree

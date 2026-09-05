@@ -3,7 +3,7 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Mathlib.Algebra.Order.BigOperators.Group.Finset
 public import Mathlib.Algebra.BigOperators.Intervals
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_one_le_coeff_jq

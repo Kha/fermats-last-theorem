@@ -3,8 +3,8 @@ module
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularForm_HeckeOperator
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
+import P2M.Util
+import P2M.Sol.S_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
 
 @[expose] public section
 

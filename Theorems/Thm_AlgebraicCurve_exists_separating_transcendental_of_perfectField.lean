@@ -1,8 +1,8 @@
 module
 
 public import Mathlib
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
 
 @[expose] public section
 

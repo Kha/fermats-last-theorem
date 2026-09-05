@@ -3,8 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_ModularCurve_TateOrigin
 public import Definitions.Def_ModularCurve_TateFormal
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_tateOrigin_equation
+import P2M.Util
+import P2M.Sol.S_ModularCurve_tateOrigin_equation
 
 @[expose] public section
 attribute [-instance] ModularCurve.instIsElliptic_tateBase

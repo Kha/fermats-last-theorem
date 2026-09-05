@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_TateFormal
 public import Theorems.Thm_ModularCurve_eisenstein4_cube_sub_mk_sq
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_c4_pow_three_tateLaurent

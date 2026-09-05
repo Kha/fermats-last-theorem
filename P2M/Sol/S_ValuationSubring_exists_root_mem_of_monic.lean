@@ -2,7 +2,7 @@ module
 
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
 public import Mathlib.RingTheory.Valuation.LocalSubring
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ValuationSubring_exists_root_mem_of_monic

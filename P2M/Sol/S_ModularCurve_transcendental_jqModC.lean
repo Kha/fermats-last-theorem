@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Mathlib.RingTheory.Algebraic.Basic
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_transcendental_jqModC

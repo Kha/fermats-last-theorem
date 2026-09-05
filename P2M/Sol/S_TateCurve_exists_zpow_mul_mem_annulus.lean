@@ -1,7 +1,7 @@
 module
 
 public import Mathlib
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_TateCurve_exists_zpow_mul_mem_annulus

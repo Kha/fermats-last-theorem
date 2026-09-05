@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_AtkinLehner
 public import Definitions.Def_ModularCurve_PhiGen
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
+import P2M.Util
+import P2M.Sol.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
 
 @[expose] public section
 

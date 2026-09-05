@@ -5,8 +5,8 @@ public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Definitions.Def_AlgebraicCurve_Repartitions
 public import Definitions.Def_AlgebraicCurve_IsCurveOver
 public import Definitions.Def_AlgebraicCurve_AdelicIndex
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_Divisor_degree_le_finrank_adjoin_of_eq_max_neg_ord
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_Divisor_degree_le_finrank_adjoin_of_eq_max_neg_ord
 
 @[expose] public section
 

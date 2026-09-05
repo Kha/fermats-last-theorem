@@ -14,7 +14,7 @@ public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
 public import Theorems.Thm_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
 public import Theorems.Thm_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
 public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
-public import P2M.Util
+import P2M.Util
 public import Definitions.Def_FLTPrelim_Ramification
 
 @[expose] public section

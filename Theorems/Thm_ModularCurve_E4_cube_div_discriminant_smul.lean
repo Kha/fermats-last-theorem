@@ -2,8 +2,8 @@ module
 
 public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_E4_cube_div_discriminant_smul
+import P2M.Util
+import P2M.Sol.S_ModularCurve_E4_cube_div_discriminant_smul
 
 @[expose] public section
 

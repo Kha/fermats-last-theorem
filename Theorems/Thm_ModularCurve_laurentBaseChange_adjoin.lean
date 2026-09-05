@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_LaurentCoeff
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin
+import P2M.Util
+import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin
 
 @[expose] public section
 attribute [-simp] ModularCurve.qExpand_coeff_mul ModularCurve.qExpandₐ_apply ModularCurve.jqN_one ModularCurve.qExpand_single ModularCurve.dedekindPsi_one ModularCurve.ModularPolynomialData.mk.sizeOf_spec ModularCurve.evalAtJ_X ModularCurve.ModularPolynomialData.mk.injEq ModularCurve.constantCoeff_jNum ModularCurve.constantCoeff_eisenstein4 ModularCurve.qExpand_C ModularCurve.coeff_jq_neg_one ModularCurve.constantCoeff_jNumQ

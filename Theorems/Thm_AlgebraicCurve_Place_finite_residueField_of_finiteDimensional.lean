@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorPushPull
-public import P2M.Util
-public import P2M.Sol.S_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
+import P2M.Util
+import P2M.Sol.S_AlgebraicCurve_Place_finite_residueField_of_finiteDimensional
 
 @[expose] public section
 

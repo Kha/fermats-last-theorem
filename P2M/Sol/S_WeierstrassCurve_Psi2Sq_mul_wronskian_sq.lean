@@ -4,7 +4,7 @@ public import Mathlib
 public import Theorems.Thm_WeierstrassCurve_Affine_evalEval_psi_sq
 public import Theorems.Thm_WeierstrassCurve_Affine_Point_smul_some_eq_zero_iff
 public import Theorems.Thm_WeierstrassCurve_Affine_Point_zsmul_some_eq_some_div
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_WeierstrassCurve_Psi2Sq_mul_wronskian_sq

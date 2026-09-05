@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
+import P2M.Util
+import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

@@ -5,7 +5,7 @@ public import Definitions.Def_AlgebraicCurve_AdelicIndex
 public import Definitions.Def_AlgebraicCurve_PlaceEvaluation
 public import Theorems.Thm_AlgebraicCurve_constantsAreBase_of_exists_isRational
 public import P2M.Sol.S_AlgebraicCurve_Place_isRational_iff_deg_eq_one
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_AlgebraicCurve_constantsAreBase_of_deg_eq_one

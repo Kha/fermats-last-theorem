@@ -3,8 +3,8 @@ module
 public import Definitions.Def_ModularCurve_X0
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
-public import P2M.Util
-public import P2M.Sol.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
+import P2M.Util
+import P2M.Sol.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
 
 @[expose] public section
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA

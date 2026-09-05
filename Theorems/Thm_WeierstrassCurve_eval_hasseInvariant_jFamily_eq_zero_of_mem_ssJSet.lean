@@ -3,8 +3,8 @@ module
 public import Mathlib
 public import Definitions.Def_WeierstrassCurve_HasseInvariant
 public import Definitions.Def_ModularCurve_SupersingularModuli
-public import P2M.Util
-public import P2M.Sol.S_WeierstrassCurve_eval_hasseInvariant_jFamily_eq_zero_of_mem_ssJSet
+import P2M.Util
+import P2M.Sol.S_WeierstrassCurve_eval_hasseInvariant_jFamily_eq_zero_of_mem_ssJSet
 
 @[expose] public section
 attribute [-instance] WeierstrassCurve.instIsEllipticBaseChange WeierstrassCurve.Univ.Affine.instAddGroupPointFieldBaseChangeMvPolynomialCoeffIntCurve WeierstrassCurve.Univ.instIsEllipticFieldPointedCurve WeierstrassCurve.Univ.instCommRingPoly

@@ -8,7 +8,7 @@ public import Definitions.Def_AlgebraicCurve_AdelicIndex
 public import Theorems.Thm_AlgebraicCurve_Place_exists_forall_ord_eq
 public import P2M.Sol.S_AlgebraicCurve_Place_ord_nonneg_of_mem
 public import P2M.Sol.S_AlgebraicCurve_Place_mem_of_ord_nonneg
-public import P2M.Util
+import P2M.Util
 import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
 
 @[expose] public section

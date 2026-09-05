@@ -9,7 +9,7 @@ public import Theorems.Thm_ModularCurve_finrank_adjoin_coeffEmb_modularUnitSerie
 public import Theorems.Thm_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
 public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
 public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
-public import P2M.Util
+import P2M.Util
 
 @[expose] public section
 namespace P2MW.S_ModularCurve_PlaceSpecialization_LevelOneProlongationPair_finrank_adjoin_residue_coeffEmb_modularUnitSeries_inv
