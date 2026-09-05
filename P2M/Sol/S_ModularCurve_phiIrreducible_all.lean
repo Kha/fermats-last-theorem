@@ -1,18 +1,14 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
 import P2M.Sol.S_ModularCurve_aeval_jqN_toAdjoin
 import P2M.Sol.S_ModularCurve_phiIrreducible_of_prime
-public import Mathlib.FieldTheory.Separable
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
 import P2M.Util
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_phiIrreducible_all
 

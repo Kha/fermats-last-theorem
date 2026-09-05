@@ -1,6 +1,5 @@
 module
 
-public import Definitions.Def_AlgebraicCurve_GluedPic0
 public import Definitions.Def_AlgebraicCurve_GluedPic0Functoriality
 public import Definitions.Def_ModularCurve_ArithmeticGalois
 public import Definitions.Def_ModularCurve_JqCoeff

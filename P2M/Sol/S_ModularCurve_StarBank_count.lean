@@ -1,18 +1,9 @@
 module
 
 public import Mathlib.FieldTheory.IsAlgClosed.Basic
-public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-public import Mathlib.Algebra.Field.ZMod
-public import Mathlib.Data.ZMod.Basic
-public import Mathlib.Data.Nat.Prime.Basic
-public import Mathlib.Algebra.Order.BigOperators.Group.Finset
-public import Mathlib.Algebra.Polynomial.Roots
-public import Mathlib.Algebra.Polynomial.Splits
-public import Mathlib.Algebra.Polynomial.Coeff
-public import Mathlib.Algebra.Polynomial.Monic
-public import Mathlib.Algebra.Polynomial.Degree.Lemmas
-public import Mathlib.Data.Nat.Choose.Basic
 import P2M.Util
+import Mathlib.Algebra.Field.ZMod
+import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 
 namespace P2MW.S_ModularCurve_StarBank_count
 

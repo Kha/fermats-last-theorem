@@ -1,14 +1,17 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_PhiGen_exists_phiGenDescends
 import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_intCoeffs
 import P2M.Sol.S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
 import P2M.Sol.S_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq
 import P2M.Sol.S_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
-public import Mathlib.NumberTheory.Cyclotomic.Basic
 import P2M.Util
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
 
 namespace P2MW.S_ModularCurve_modularPolynomialFamily
 

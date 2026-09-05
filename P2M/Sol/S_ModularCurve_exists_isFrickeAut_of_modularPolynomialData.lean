@@ -3,8 +3,6 @@ module
 public import Definitions.Def_ModularCurve_AtkinLehner
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_ModularPolynomialData_isIntegral_jqN
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import Mathlib.RingTheory.AdjoinRoot
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData

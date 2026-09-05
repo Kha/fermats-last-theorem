@@ -1,12 +1,12 @@
 module
 
 public import Definitions.Def_ModularCurve_TateSlots
-public import Mathlib.Topology.Algebra.Valued.NormedValued
-public import Mathlib.RingTheory.Valuation.Discrete.RankOne
-public import Mathlib.RingTheory.MvPowerSeries.Substitution
-public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
-public import Mathlib.RingTheory.LaurentSeries
+public import Mathlib.Data.Int.ConditionallyCompleteOrder
+import Definitions.Def_ModularCurve_JqCoeff
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
+import Mathlib.RingTheory.Valuation.Discrete.RankOne
+import Mathlib.Topology.Algebra.Valued.NormedValued
 
 namespace P2MW.S_ModularCurve_single_div_one_sub_sq
 

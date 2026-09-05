@@ -1,9 +1,10 @@
 module
 
-public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
-public import Mathlib.Analysis.SpecificLimits.Normed
 public import Mathlib.NumberTheory.Divisors
 import P2M.Util
+public import Mathlib.Analysis.Normed.Field.Basic
+public import Mathlib.Topology.Algebra.InfiniteSum.Defs
+import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
 
 namespace P2MW.S_TateCurve_tsum_succ_prod_eq_tsum_divisors
 

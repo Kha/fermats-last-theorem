@@ -1,13 +1,9 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
 import P2M.Sol.S_ModularCurve_PhiGen_evalAtJ_injective
-public import Mathlib.FieldTheory.Minpoly.IsIntegrallyClosed
-public import Mathlib.RingTheory.Localization.Integral
 import P2M.Util
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 
 namespace P2MW.S_ModularCurve_exists_phiIrreducible_of_finrank_eq
 

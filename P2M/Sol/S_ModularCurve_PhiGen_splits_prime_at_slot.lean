@@ -1,14 +1,14 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_PhiGen_splits_of_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.Algebra.Polynomial.Roots
-public import Mathlib.Algebra.BigOperators.Fin
 import P2M.Util
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot
 

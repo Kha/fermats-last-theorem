@@ -3,8 +3,8 @@ module
 public import Definitions.Def_ModularCurve_X0
 import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime
-public import Mathlib.Data.Nat.Factorization.Induction
 import P2M.Util
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_dedekindPsi_of_squarefree
 

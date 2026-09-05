@@ -1,8 +1,6 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_minpoly_jqN_eq_toAdjoin

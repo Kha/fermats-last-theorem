@@ -1,13 +1,11 @@
 module
 
 public import Definitions.Def_ModularCurve_TateSlots
-public import Mathlib.Topology.Algebra.Valued.NormedValued
-public import Mathlib.RingTheory.Valuation.Discrete.RankOne
-public import Mathlib.RingTheory.MvPowerSeries.Substitution
-public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
-public import Mathlib.RingTheory.LaurentSeries
-public import Mathlib.Topology.Algebra.InfiniteSum.Basic
+import Definitions.Def_ModularCurve_JqCoeff
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
+import Mathlib.RingTheory.Valuation.Discrete.RankOne
+import Mathlib.Topology.Algebra.Valued.NormedValued
 
 namespace P2MW.S_ModularCurve_tsum_of_coeff_lt_eq_zero
 

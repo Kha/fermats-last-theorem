@@ -1,6 +1,5 @@
 module
 
-public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
 public import Mathlib.NumberTheory.ModularForms.Discriminant
 import P2M.Util
 

@@ -1,10 +1,10 @@
 module
 
-public import Mathlib.NumberTheory.ModularForms.QExpansion
 public import Mathlib.RingTheory.LaurentSeries
 import P2M.Sol.S_ModularCurve_hasSum_qParam_mul
 import P2M.Util
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
+public import Mathlib.Analysis.Complex.Periodic
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
 
 namespace P2MW.S_ModularCurve_hasSum_qParam_mul_laurent
 

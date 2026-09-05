@@ -1,10 +1,7 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Definitions.Def_ModularCurve_DegeneracyTower
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 import P2M.Sol.S_ModularCurve_laurentBaseChange_modularFunctionField
@@ -12,9 +9,9 @@ import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 import P2M.Sol.S_ModularCurve_laurentBaseChange_mono
 import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_mul
 import P2M.Sol.S_ModularCurve_coeffEmb_jqN
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.NumberTheory.Cyclotomic.Basic
 import P2M.Util
+import Definitions.Def_ModularCurve_DegeneracyTower
+import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_laurentBaseChange_adjoin_pair
 

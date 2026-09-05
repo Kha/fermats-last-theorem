@@ -1,21 +1,60 @@
 module
 
-public import Mathlib
-public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Definitions.Def_AlgebraicCurve_DivisorPushPull
-public import Definitions.Def_AlgebraicCurve_Repartitions
-public import Definitions.Def_AlgebraicCurve_IsCurveOver
-public import Definitions.Def_AlgebraicCurve_AdelicIndex
 public import Definitions.Def_AlgebraicCurve_PoleDivisorPackage
-public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
-public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
 import P2M.Sol.S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg
 import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_ord_placeInfty
 import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_deg_placeInfty
 import P2M.Sol.S_AlgebraicCurve_Place_exists_restrict_eq
-import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_eq_ofHeightOneSpectrum_or_eq_placeInfty
 import P2M.Util
-public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+import Definitions.Def_AlgebraicCurve_PlaceEvaluation
+import Definitions.Def_AlgebraicCurve_RatFuncPlaceClassification
+import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Polynomial.Basis
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.Int.Star
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Matrix.FiniteDimensional
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.Valuation.LocalSubring
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase
 attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions

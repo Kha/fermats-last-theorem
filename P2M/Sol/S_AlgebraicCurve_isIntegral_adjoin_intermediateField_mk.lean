@@ -1,9 +1,10 @@
 module
 
-public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
-public import Mathlib.Algebra.Algebra.Subalgebra.Lattice
 public import Mathlib.FieldTheory.IntermediateField.Basic
 import P2M.Util
+public import Mathlib.RingTheory.Adjoin.Polynomial.Basic
+public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Defs
+import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
 
 namespace P2MW.S_AlgebraicCurve_isIntegral_adjoin_intermediateField_mk
 

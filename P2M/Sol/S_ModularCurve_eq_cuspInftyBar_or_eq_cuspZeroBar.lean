@@ -1,11 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_CuspidalClass
-public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
-public import Mathlib.FieldTheory.RatFunc.AsPolynomial
 import P2M.Sol.S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_le_finrank
 import P2M.Sol.S_AlgebraicCurve_Place_inertiaDeg_pos
-public import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Sol.S_ModularCurve_coeffEmb_jq
 import P2M.Sol.S_ModularCurve_laurentBaseChange_modularFunctionField
@@ -20,6 +17,8 @@ import P2M.Sol.S_ModularCurve_isCusp_cuspZeroBar
 import P2M.Sol.S_ModularCurve_isCusp_cuspInftyBar
 import P2M.Sol.S_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
 import P2M.Util
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
+import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 
 namespace P2MW.S_ModularCurve_eq_cuspInftyBar_or_eq_cuspZeroBar
 set_option maxHeartbeats 4000000

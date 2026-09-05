@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_HeckeOperator
 public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
-public import Definitions.Def_HeckeGalois_EichlerShimura
+public import Definitions.Def_ModularCurve_ArithmeticGalois
 
 @[expose] public section
 

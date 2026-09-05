@@ -1,9 +1,6 @@
 module
 
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import Mathlib.RingTheory.PowerSeries.PiTopology
-public import Mathlib.Analysis.Complex.TaylorSeries
-public import Mathlib.Analysis.Complex.LocallyUniformLimit
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod

@@ -1,10 +1,12 @@
 module
 
 public import Definitions.Def_ModularCurve_ArithmeticGalois
-public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_hasPrincipalDivisors_modularFunctionFieldBar
 import P2M.Sol.S_ModularCurve_modularPolynomialFamily
 import P2M.Util
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_hasPrincipalDivisors_modularFunctionFieldBar_unconditional
 

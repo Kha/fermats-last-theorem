@@ -1,6 +1,5 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_relfinrank_laurentBaseChange_modularFunctionFieldFull
 import P2M.Sol.S_ModularCurve_relfinrank_full_eq_dedekindPsi
@@ -8,13 +7,14 @@ import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin_pair
 import P2M.Sol.S_ModularCurve_functionFieldGeneration
 import P2M.Sol.S_ModularCurve_coeffEmb_jq
 import P2M.Sol.S_ModularCurve_coeffEmb_jqN
-public import Mathlib.FieldTheory.Relrank
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import Mathlib.FieldTheory.Minpoly.Field
-public import Mathlib.Algebra.Polynomial.Div
 import P2M.Sol.S_ModularCurve_transcendental_jqModC
-public import Mathlib.FieldTheory.RatFunc.AsPolynomial
 import P2M.Util
+import Definitions.Def_ModularCurve_ArithmeticGalois
+import Definitions.Def_ModularCurve_DegeneracyTower
+import Definitions.Def_ModularCurve_QAdicPlace
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_minpoly_jqNModC_eq
 

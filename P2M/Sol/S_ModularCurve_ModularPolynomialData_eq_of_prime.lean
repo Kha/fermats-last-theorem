@@ -1,14 +1,14 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_prime
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import P2M.Sol.S_ModularCurve_PhiGen_evalAtJ_injective
 import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import Mathlib.FieldTheory.Minpoly.Field
 import P2M.Util
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_ModularPolynomialData_eq_of_prime
 

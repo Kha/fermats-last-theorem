@@ -1,11 +1,8 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_coeffMap_injective
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqNModC_le

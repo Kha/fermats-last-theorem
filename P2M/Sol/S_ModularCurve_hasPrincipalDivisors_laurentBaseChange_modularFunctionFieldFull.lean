@@ -1,13 +1,13 @@
 module
 
-public import Definitions.Def_ModularCurve_ArithmeticGalois
-public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental
 import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
 import P2M.Sol.S_ModularCurve_laurentBaseChange_modularFunctionFieldFull
 import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Util
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+import Definitions.Def_AlgebraicCurve_PlacesOverDVR
 
 namespace P2MW.S_ModularCurve_hasPrincipalDivisors_laurentBaseChange_modularFunctionFieldFull
 

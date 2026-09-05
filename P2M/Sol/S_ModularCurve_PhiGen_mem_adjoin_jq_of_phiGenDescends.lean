@@ -1,19 +1,12 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Definitions.Def_ModularForm_HeckeOperator
-public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
 public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.RingTheory.RootsOfUnity.Complex
-public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
-public import Mathlib.NumberTheory.ModularForms.Discriminant
 import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_hasSum_cosetPoly_coeff
 import P2M.Sol.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
 import P2M.Sol.S_ModularCurve_cosetPoly_smul
 import P2M.Sol.S_ModularCurve_E4_cube_div_discriminant_smul
 import P2M.Util
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 
 namespace P2MW.S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
 

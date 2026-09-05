@@ -1,8 +1,10 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
 import P2M.Util
+public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
+public import Mathlib.NumberTheory.ModularForms.QExpansion
+import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
 
 namespace P2MW.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
 

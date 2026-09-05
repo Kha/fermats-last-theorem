@@ -1,8 +1,5 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
@@ -18,10 +15,9 @@ import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_of_modularPolynomialData
 import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
 import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero
 import P2M.Sol.S_ModularCurve_package_of_socket
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-public import Mathlib.Algebra.Polynomial.Eval.Irreducible
 import P2M.Util
+import Mathlib.Algebra.Polynomial.Eval.Irreducible
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqNModC_eq_dedekindPsi_of_socket
 

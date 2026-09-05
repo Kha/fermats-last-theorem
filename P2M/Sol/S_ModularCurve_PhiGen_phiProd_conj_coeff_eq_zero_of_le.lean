@@ -1,12 +1,8 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
-public import Mathlib.Algebra.BigOperators.Fin
-public import Mathlib.Algebra.BigOperators.Intervals
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.Tactic.Linarith
 import P2M.Util
+import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 
 namespace P2MW.S_ModularCurve_PhiGen_phiProd_conj_coeff_eq_zero_of_le
 

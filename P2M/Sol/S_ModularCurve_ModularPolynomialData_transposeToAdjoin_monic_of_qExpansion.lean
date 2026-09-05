@@ -1,20 +1,12 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
 import P2M.Sol.S_ModularCurve_transcendental_jq
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime
-public import Mathlib.Algebra.Polynomial.Roots
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
-public import Mathlib.FieldTheory.Minpoly.Field
-public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.RingTheory.Polynomial.GaussLemma
-public import Mathlib.RingTheory.Polynomial.RationalRoot
-public import Mathlib.Tactic.Linarith
-public import Mathlib.Tactic.LinearCombination
 import P2M.Util
+import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_ModularPolynomialData_transposeToAdjoin_monic_of_qExpansion
 

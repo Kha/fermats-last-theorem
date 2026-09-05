@@ -1,9 +1,9 @@
 module
 
-public import Mathlib.NumberTheory.ModularForms.NormTrace
 import P2M.Util
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
+public import Mathlib.Analysis.Complex.Periodic
+import Mathlib.NumberTheory.ModularForms.NormTrace
 
 namespace P2MW.S_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant
 

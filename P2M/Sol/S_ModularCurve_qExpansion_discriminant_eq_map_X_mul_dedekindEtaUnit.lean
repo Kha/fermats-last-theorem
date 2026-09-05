@@ -2,7 +2,6 @@ module
 
 public import Definitions.Def_ModularCurve_X0
 import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod
-public import Mathlib.RingTheory.PowerSeries.PiTopology
 import P2M.Util
 public import Mathlib.NumberTheory.ModularForms.Discriminant
 

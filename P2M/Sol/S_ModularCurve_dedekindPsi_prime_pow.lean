@@ -1,9 +1,6 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Mathlib.Data.Nat.Squarefree
-public import Mathlib.NumberTheory.Divisors
-public import Mathlib.Tactic.IntervalCases
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_dedekindPsi_prime_pow

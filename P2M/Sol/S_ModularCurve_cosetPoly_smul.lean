@@ -1,9 +1,9 @@
 module
 
-public import Mathlib.Algebra.Field.ZMod
-public import Mathlib.Topology.Compactification.OnePoint.ProjectiveLine
 public import Definitions.Def_ModularForm_HeckeOperator
 import P2M.Util
+import Mathlib.Algebra.Field.ZMod
+import Mathlib.Topology.Compactification.OnePoint.ProjectiveLine
 
 namespace P2MW.S_ModularCurve_cosetPoly_smul
 

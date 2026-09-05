@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_X0
 import P2M.Util
+import Definitions.Def_ModularCurve_X0
 
 namespace P2MW.S_ModularCurve_laurentBaseChange_adjoin
 

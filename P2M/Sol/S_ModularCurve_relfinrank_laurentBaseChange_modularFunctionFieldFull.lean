@@ -1,16 +1,15 @@
 module
 
-public import Definitions.Def_ModularCurve_GeometricBaseChange
 public import Mathlib.FieldTheory.Relrank
-public import Mathlib.RingTheory.AlgebraTower
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
-public import Definitions.Def_ModularCurve_QAdicPlace
 import P2M.Sol.S_ModularCurve_transcendental_jq
 import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_eq_of_prime
 import P2M.Sol.S_ModularCurve_modularFunctionFieldBar_eq_restrictScalars
 import P2M.Sol.S_ModularCurve_coeffEmb_jq
 import P2M.Util
 public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_X0
+import Mathlib.RingTheory.Flat.FaithfullyFlat.Algebra
+import Mathlib.RingTheory.Flat.TorsionFree
 
 namespace P2MW.S_ModularCurve_relfinrank_laurentBaseChange_modularFunctionFieldFull
 

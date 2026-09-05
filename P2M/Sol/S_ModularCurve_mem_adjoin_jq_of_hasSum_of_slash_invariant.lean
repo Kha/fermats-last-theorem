@@ -1,21 +1,16 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_PhiGen
-public import Definitions.Def_ModularForm_HeckeOperator
-public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.RingTheory.RootsOfUnity.Complex
-public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
-public import Mathlib.NumberTheory.ModularForms.Discriminant
 import P2M.Sol.S_ModularCurve_hasSum_jq_qParam
 import P2M.Sol.S_ModularCurve_coeff_eq_zero_of_hasSum_of_slash_invariant
 import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
 import P2M.Sol.S_ModularCurve_E4_cube_div_discriminant_smul
 import P2M.Sol.S_ModularCurve_exists_aeval_jq_sub_holomorphicAtInfty
 import P2M.Util
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Complex.Periodic
+import Definitions.Def_ModularForm_HeckeOperator
 
 namespace P2MW.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
 

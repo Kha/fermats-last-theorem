@@ -1,13 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Mathlib.RingTheory.DedekindDomain.IntegralClosure
-public import Mathlib.RingTheory.DedekindDomain.Dvr
-public import Mathlib.RingTheory.DiscreteValuationRing.TFAE
-public import Mathlib.RingTheory.Localization.Integral
-public import Mathlib.RingTheory.Valuation.LocalSubring
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
 import P2M.Util
+import Mathlib.RingTheory.Valuation.LocalSubring
 
 namespace P2MW.S_AlgebraicCurve_Place_exists_of_valuationSubring
 

@@ -1,9 +1,8 @@
 module
 
-public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
 public import Mathlib.NumberTheory.Bernoulli
-public import Mathlib.Data.Rat.Lemmas
 import P2M.Util
+import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
 
 namespace P2MW.S_ModularCurve_StarBank_eisInt_not_dvd_num
 

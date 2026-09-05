@@ -1,15 +1,12 @@
 module
 
 public import Definitions.Def_ModularCurve_ModularUnit
-public import Definitions.Def_ModularForm_HeckeOperator
-public import Mathlib.NumberTheory.ModularForms.Discriminant
-import P2M.Sol.S_ModularCurve_hasSum_modularUnitSeries_qParam
-import P2M.Sol.S_ModularCurve_hasSum_smul_modularUnitSeries_inv_qParam
 import P2M.Sol.S_ModularCurve_hasSum_modularUnitSeries_inv_qParam
 import P2M.Sol.S_ModularCurve_hasSum_smul_modularUnitSeries_qParam
 import P2M.Sol.S_ModularCurve_discriminant_div_discriminant_heckeDiagMatrix_smul
 import P2M.Sol.S_ModularCurve_isIntegral_adjoin_jq_of_hasSum_of_gamma0_invariant
 import P2M.Util
+public import Mathlib.Data.Int.ConditionallyCompleteOrder
 
 namespace P2MW.S_ModularCurve_isIntegral_adjoin_jq_modularUnitSeries_inv
 

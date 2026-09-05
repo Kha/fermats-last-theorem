@@ -1,8 +1,8 @@
 module
 
-public import Mathlib.Algebra.Polynomial.Splits
-public import Mathlib.Algebra.Polynomial.FieldDivision
 import P2M.Util
+public import Mathlib.Algebra.Polynomial.AlgebraMap
+import Mathlib.Algebra.Polynomial.Splits
 
 namespace P2MW.S_Polynomial_mem_range_of_eval_eq_const
 

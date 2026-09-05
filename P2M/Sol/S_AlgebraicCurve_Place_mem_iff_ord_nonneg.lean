@@ -2,7 +2,8 @@ module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
-public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+import Mathlib.Data.Int.ConditionallyCompleteOrder
+import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel -- shake: keep
 
 namespace P2MW.S_AlgebraicCurve_Place_mem_iff_ord_nonneg
 

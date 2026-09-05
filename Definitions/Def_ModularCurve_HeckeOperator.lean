@@ -1,7 +1,9 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_Correspondence
-public import Definitions.Def_ModularCurve_ArithmeticGalois
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_X0
+import Definitions.Def_ModularCurve_ArithmeticGalois
 
 @[expose] public section
 

@@ -1,6 +1,5 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_c_top
 import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_c_eq_zero
@@ -9,8 +8,6 @@ import P2M.Sol.S_ModularCurve_PhiGen_PhiGenDescends_sum_mul_jqN_pow_eq_zero
 import P2M.Sol.S_ModularCurve_PhiGen_evalAtJ_injective
 import P2M.Sol.S_ModularCurve_PhiGen_aeval_jq_intCoeffs_descent
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime
-public import Mathlib.Algebra.Polynomial.Lifts
-public import Mathlib.RingTheory.Adjoin.Polynomial.Basic
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_PhiGen_exists_modularPolynomialData_coeff_eq

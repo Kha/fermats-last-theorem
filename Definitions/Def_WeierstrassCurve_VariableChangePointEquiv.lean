@@ -1,7 +1,6 @@
 module
 
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
-public import Mathlib.AlgebraicGeometry.EllipticCurve.VariableChange
 
 @[expose] public section
 

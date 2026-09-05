@@ -1,8 +1,6 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Mathlib.Data.ZMod.Basic
-public import Mathlib.Data.Nat.Choose.Basic
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_StarBank_onePoint

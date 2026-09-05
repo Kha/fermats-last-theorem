@@ -2,7 +2,6 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_coeffEmb_jq

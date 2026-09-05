@@ -1,9 +1,8 @@
 module
 
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-public import Mathlib.Algebra.Field.ZMod
-public import Mathlib.Tactic.Group
 import P2M.Util
+import Mathlib.Algebra.Field.ZMod
 
 namespace P2MW.S_ModularCurve_exists_perm_gamma0_cosetReps
 

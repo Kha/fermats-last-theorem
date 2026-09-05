@@ -1,9 +1,9 @@
 module
 
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.RingTheory.LaurentSeries
 public import Definitions.Def_ModularForm_HeckeOperator
 import P2M.Util
+public import Mathlib.Analysis.Complex.Periodic
 
 namespace P2MW.S_ModularCurve_hasSum_qParam_heckeMatrix_smul
 

@@ -1,12 +1,8 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_coeffEmb_injective
-public import Mathlib.Algebra.BigOperators.Fin
-public import Mathlib.Algebra.Polynomial.Eval.Degree
-public import Mathlib.Tactic.Linarith
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_PhiGen_PhiGenDescends_c_eq_zero

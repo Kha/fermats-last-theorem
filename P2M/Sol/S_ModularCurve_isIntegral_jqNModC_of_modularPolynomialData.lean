@@ -1,15 +1,14 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.Algebra.Polynomial.Bivariate
-public import Mathlib.FieldTheory.Separable
-public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 import P2M.Util
+public import Mathlib.Data.Int.ConditionallyCompleteOrder
+import Definitions.Def_ModularCurve_PhiGen
+import Mathlib.Algebra.Polynomial.Bivariate
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_of_modularPolynomialData
 

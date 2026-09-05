@@ -3,9 +3,6 @@ module
 public import Definitions.Def_ModularCurve_ModularUnit
 public import Definitions.Def_ModularForm_HeckeOperator
 public import Mathlib.NumberTheory.ModularForms.Discriminant
-public import Mathlib.NumberTheory.ModularForms.QExpansion
-public import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
-public import Mathlib.Analysis.Complex.TaylorSeries
 import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 import P2M.Sol.S_ModularCurve_hasSum_qParam_mul_laurent
 import P2M.Sol.S_ModularCurve_laurent_qParam_coeff_unique

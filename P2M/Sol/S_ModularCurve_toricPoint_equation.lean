@@ -14,17 +14,54 @@ import P2M.Sol.S_ModularCurve_slotSubst_gen_injective
 import P2M.Sol.S_ModularCurve_single_div_one_sub_sq
 import P2M.Sol.S_ModularCurve_single_sq_div_one_sub_cube
 import P2M.Sol.S_ModularCurve_tsum_lambertTerm_eq
-public import Definitions.Def_TateCurve_QSeries
-public import Definitions.Def_TateCurve_PointSeries
-public import Definitions.Def_TateCurve_Tails
 import P2M.Sol.S_TateCurve_equation_pointX_pointY
 import P2M.Sol.S_TateCurve_pointX_qExpansion
 import P2M.Sol.S_TateCurve_pointY_qExpansion
-public import Mathlib.Topology.Algebra.Valued.NormedValued
-public import Mathlib.RingTheory.Valuation.Discrete.RankOne
 public import Definitions.Def_ModularCurve_TateSlots
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
+public import Mathlib.Data.Int.ConditionallyCompleteOrder
+import Definitions.Def_TateCurve_Defect
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.Int.Star
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 namespace P2MW.S_ModularCurve_toricPoint_equation
 

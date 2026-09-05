@@ -1,13 +1,8 @@
 module
 
-public import Mathlib.RingTheory.Unramified.Field
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import P2M.Util
-public import Mathlib.Algebra.CharP.Frobenius
-public import Mathlib.Algebra.Field.Subfield.Basic
-public import Mathlib.LinearAlgebra.Dimension.Finrank
-public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
 public import Mathlib.FieldTheory.Separable
+import Mathlib.RingTheory.Unramified.Field
 
 namespace P2MW.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
 

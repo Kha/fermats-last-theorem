@@ -1,13 +1,12 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_modularPolynomialFamily
-public import Mathlib.NumberTheory.ArithmeticFunction.Misc
-public import Mathlib.RingTheory.Polynomial.Resultant.Basic
-public import Mathlib.FieldTheory.IsAlgClosed.Basic
-public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 import P2M.Util
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
+import Mathlib.RingTheory.Polynomial.Resultant.Basic
 
 namespace P2MW.S_ModularCurve_nonempty_modularPolynomialData_of_squarefree
 

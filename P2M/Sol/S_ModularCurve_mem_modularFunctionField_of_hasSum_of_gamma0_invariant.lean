@@ -1,17 +1,7 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_PhiGen
-public import Definitions.Def_ModularForm_HeckeOperator
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-public import Mathlib.RingTheory.RootsOfUnity.Complex
-public import Mathlib.FieldTheory.Galois.Basic
-public import Mathlib.GroupTheory.Perm.Fin
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
-public import Mathlib.NumberTheory.ModularForms.Discriminant
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_coeffEmb_qExpand
 import P2M.Sol.S_ModularCurve_PhiGen_exists_galoisPerm
@@ -28,8 +18,10 @@ import P2M.Sol.S_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
 import P2M.Sol.S_ModularCurve_exists_perm_gamma0_cosetReps
 import P2M.Sol.S_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
 import P2M.Util
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Complex.Periodic
+import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
 
 namespace P2MW.S_ModularCurve_mem_modularFunctionField_of_hasSum_of_gamma0_invariant
 

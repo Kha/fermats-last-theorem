@@ -1,14 +1,12 @@
 module
 
-public import Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis
-public import Mathlib.RingTheory.AlgebraicIndependent.Transcendental
-public import Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCondition
 import P2M.Util
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Defs
 public import Mathlib.RingTheory.Algebraic.Defs
 public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
+public import Mathlib.RingTheory.AlgebraicIndependent.Defs
+import Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure
+import Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis
 
 namespace P2MW.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
 

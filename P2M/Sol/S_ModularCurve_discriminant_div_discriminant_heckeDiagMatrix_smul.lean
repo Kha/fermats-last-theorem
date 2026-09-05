@@ -1,6 +1,5 @@
 module
 
-public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 public import Mathlib.NumberTheory.ModularForms.Discriminant
 public import Definitions.Def_ModularForm_HeckeOperator
 import P2M.Sol.S_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq

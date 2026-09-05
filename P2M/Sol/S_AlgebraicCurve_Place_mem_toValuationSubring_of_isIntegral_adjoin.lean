@@ -1,8 +1,8 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-public import Mathlib.RingTheory.Valuation.Integral
 import P2M.Util
+import Mathlib.RingTheory.Valuation.Integral
 
 namespace P2MW.S_AlgebraicCurve_Place_mem_toValuationSubring_of_isIntegral_adjoin
 

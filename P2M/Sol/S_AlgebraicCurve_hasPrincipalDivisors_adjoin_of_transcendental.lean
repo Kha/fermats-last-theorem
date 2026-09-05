@@ -1,8 +1,8 @@
 module
 
-public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
 import P2M.Sol.S_AlgebraicCurve_hasPrincipalDivisors_of_transcendental
 import P2M.Util
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 
 namespace P2MW.S_AlgebraicCurve_hasPrincipalDivisors_adjoin_of_transcendental
 

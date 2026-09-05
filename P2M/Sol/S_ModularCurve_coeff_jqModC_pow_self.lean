@@ -1,7 +1,6 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Mathlib.RingTheory.Algebraic.Basic
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_coeff_jqModC_pow_self

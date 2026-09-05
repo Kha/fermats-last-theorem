@@ -1,7 +1,6 @@
 module
 
 public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_laurentBaseChange_adjoin
 import P2M.Sol.S_ModularCurve_coeffEmb_jqN

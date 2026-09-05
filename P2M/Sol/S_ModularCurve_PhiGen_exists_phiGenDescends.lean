@@ -1,10 +1,8 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.FieldTheory.Galois.Basic
 import P2M.Util
 
 namespace P2MW.S_ModularCurve_PhiGen_exists_phiGenDescends

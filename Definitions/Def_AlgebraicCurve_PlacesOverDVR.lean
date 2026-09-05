@@ -1,10 +1,7 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_DivisorPushPull
-public import Mathlib.RingTheory.DedekindDomain.IntegralClosure
-public import Mathlib.NumberTheory.RamificationInertia.Basic
-public import Mathlib.RingTheory.DedekindDomain.Factorization
-public import Mathlib.Algebra.Polynomial.Lifts
+import Mathlib.RingTheory.DedekindDomain.Factorization
 
 @[expose] public section
 

@@ -2,6 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_AtkinLehner
 public import Definitions.Def_ModularCurve_GeometricBaseChange
+public import Definitions.Def_FieldTheory_RatAlgClosureGalois
 
 @[expose] public section
 

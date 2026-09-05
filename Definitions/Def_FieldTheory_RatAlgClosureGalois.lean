@@ -1,7 +1,6 @@
 module
 
 public import Mathlib.Algebra.Algebra.Rat
-public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 public import Mathlib.FieldTheory.Galois.Basic
 
 @[expose] public section

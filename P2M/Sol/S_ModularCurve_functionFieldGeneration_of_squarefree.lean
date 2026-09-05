@@ -1,15 +1,15 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
 import P2M.Sol.S_ModularCurve_relfinrank_full_of_squarefree
 import P2M.Sol.S_ModularCurve_relfinrank_modularFunctionField
 import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 import P2M.Sol.S_ModularCurve_dedekindPsi_of_squarefree
-public import Mathlib.FieldTheory.Relrank
-public import Mathlib.FieldTheory.Minpoly.Field
 import P2M.Util
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_functionFieldGeneration_of_squarefree
 

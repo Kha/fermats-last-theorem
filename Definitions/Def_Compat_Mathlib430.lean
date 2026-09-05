@@ -7,15 +7,7 @@ with its docstrings omitted, otherwise byte-identical unless a line is marked `-
 module
 
 public import Mathlib.RepresentationTheory.Rep.Basic
-public import Mathlib.Algebra.Group.End
-public import Mathlib.Algebra.GroupWithZero.Action.Basic
-public import Mathlib.Algebra.Ring.AddAut
-public import Mathlib.Algebra.Ring.Action.Submonoid
 public import Mathlib.NumberTheory.RamificationInertia.Galois
-public import Mathlib.RingTheory.Invariant.Galois
-public import Mathlib.FieldTheory.Galois.Basic
-public import Mathlib.Tactic.LinearCombination
-public import Mathlib.Tactic.Ring
 
 @[expose] public section
 

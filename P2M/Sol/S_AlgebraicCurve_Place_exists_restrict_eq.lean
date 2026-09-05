@@ -1,10 +1,10 @@
 module
 
-public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
 import P2M.Sol.S_AlgebraicCurve_Place_sum_ramificationIndex_mul_inertiaDeg_fiberOver
 import P2M.Util
 public import Definitions.Def_AlgebraicCurve_DivisorPushPull
-public import Mathlib.FieldTheory.Separable
+import Mathlib.RingTheory.Flat.FaithfullyFlat.Algebra
+import Mathlib.RingTheory.Flat.TorsionFree
 
 namespace P2MW.S_AlgebraicCurve_Place_exists_restrict_eq
 

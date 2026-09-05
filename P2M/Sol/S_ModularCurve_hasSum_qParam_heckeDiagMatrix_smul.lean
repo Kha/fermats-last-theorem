@@ -1,9 +1,9 @@
 module
 
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Definitions.Def_ModularCurve_X0
 public import Definitions.Def_ModularForm_HeckeOperator
 import P2M.Util
+public import Mathlib.Analysis.Complex.Periodic
 
 namespace P2MW.S_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
 

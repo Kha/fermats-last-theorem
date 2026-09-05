@@ -1,7 +1,6 @@
 module
 
 public import Definitions.Def_ModularCurve_JqCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
 import P2M.Sol.S_ModularCurve_StarBank_closure
 import P2M.Sol.S_ModularCurve_StarBank_count
@@ -13,11 +12,12 @@ import P2M.Sol.S_ModularCurve_StarBank_hassePolyDescent
 import P2M.Sol.S_ModularCurve_StarBank_onePoint
 import P2M.Sol.S_ModularCurve_StarBank_press
 import P2M.Sol.S_ModularCurve_StarBank_starK
-public import Mathlib.FieldTheory.IsAlgClosed.Basic
-public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-public import Mathlib.Algebra.Field.ZMod
-public import Mathlib.Algebra.CharP.Algebra
 import P2M.Util
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
+import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 namespace P2MW.S_ModularCurve_StarBank_starBank
 

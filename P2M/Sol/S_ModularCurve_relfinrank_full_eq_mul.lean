@@ -5,6 +5,10 @@ import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_prime_of_not_mem
 import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem
 public import Mathlib.FieldTheory.Relrank
 import P2M.Util
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_relfinrank_full_eq_mul
 

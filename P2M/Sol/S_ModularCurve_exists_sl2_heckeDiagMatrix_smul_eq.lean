@@ -1,6 +1,5 @@
 module
 
-public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
 public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 public import Definitions.Def_ModularForm_HeckeOperator
 import P2M.Util

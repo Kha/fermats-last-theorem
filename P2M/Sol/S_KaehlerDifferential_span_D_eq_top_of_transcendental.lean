@@ -1,15 +1,11 @@
 module
 
-public import Mathlib.RingTheory.Etale.Kaehler
-public import Mathlib.RingTheory.Etale.Field
-public import Mathlib.RingTheory.Kaehler.Polynomial
-public import Mathlib.FieldTheory.RatFunc.AsPolynomial
-public import Mathlib.LinearAlgebra.TensorProduct.Basis
 import P2M.Util
 public import Mathlib.RingTheory.Kaehler.Basic
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 public import Mathlib.FieldTheory.Separable
-public import Mathlib.RingTheory.Algebraic.Defs
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Defs
+import Mathlib.FieldTheory.RatFunc.AsPolynomial
+import Mathlib.RingTheory.Etale.Field
 
 namespace P2MW.S_KaehlerDifferential_span_D_eq_top_of_transcendental
 

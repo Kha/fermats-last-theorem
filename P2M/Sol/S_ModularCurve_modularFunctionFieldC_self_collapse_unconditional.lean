@@ -2,8 +2,8 @@ module
 
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
-public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 import P2M.Util
+import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 
 namespace P2MW.S_ModularCurve_modularFunctionFieldC_self_collapse_unconditional
 

@@ -1,8 +1,5 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
@@ -12,16 +9,17 @@ import P2M.Sol.S_ModularCurve_ModularPolynomialData_eval_jqNModC_of_mul_eq_zero
 import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot
 import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Sol.S_Polynomial_mem_range_of_unique_common_root
-import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
 import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 import P2M.Sol.S_ModularCurve_relfinrank_fullC_mul_prime_pow
 import P2M.Sol.S_ModularCurve_jqNModC_prime_not_mem_fullC
 import P2M.Sol.S_ModularCurve_jqNModC_mem_modularFunctionFieldC_mul_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.FieldTheory.Relrank
-public import Mathlib.Data.Nat.Factorization.Basic
 import P2M.Util
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_package_of_socket
 

@@ -1,8 +1,9 @@
 module
 
-public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
 public import Mathlib.RingTheory.LaurentSeries
 import P2M.Util
+public import Mathlib.NumberTheory.ModularForms.Discriminant
+import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
 
 namespace P2MW.S_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
 

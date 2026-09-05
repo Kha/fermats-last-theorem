@@ -1,8 +1,6 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 import P2M.Sol.S_ModularCurve_full_eq_adjoin_primes
@@ -11,15 +9,8 @@ import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_of_prime
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Sol.S_ModularCurve_dedekindPsi_of_squarefree
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.RingTheory.Coprime.Lemmas
-public import Mathlib.Data.Nat.ModEq
-public import Mathlib.FieldTheory.PrimitiveElement
-public import Mathlib.FieldTheory.Relrank
-public import Mathlib.Data.Nat.Factorization.Induction
 import P2M.Util
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
 

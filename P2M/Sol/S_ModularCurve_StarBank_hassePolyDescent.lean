@@ -4,9 +4,8 @@ public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularForm_exists_qExpansion_eq_aeval_mul_pow_levelOne
 import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 import P2M.Sol.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
-public import Mathlib.Algebra.Polynomial.Lifts
 import P2M.Util
-public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
+public import Mathlib.NumberTheory.ModularForms.QExpansion
 
 namespace P2MW.S_ModularCurve_StarBank_hassePolyDescent
 

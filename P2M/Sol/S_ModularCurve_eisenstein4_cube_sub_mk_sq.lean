@@ -3,8 +3,8 @@ module
 public import Definitions.Def_ModularCurve_X0
 import P2M.Sol.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 import P2M.Sol.S_ModularCurve_qExpansion_E4_eq_map_eisenstein4
-public import Mathlib.NumberTheory.ModularForms.LevelOne.GradedRing
 import P2M.Util
+import Mathlib.NumberTheory.ModularForms.LevelOne.GradedRing
 
 namespace P2MW.S_ModularCurve_eisenstein4_cube_sub_mk_sq
 

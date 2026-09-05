@@ -1,10 +1,9 @@
 module
 
-public import Mathlib.NumberTheory.ModularForms.QExpansion
 import P2M.Util
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Manifold
-public import Mathlib.Analysis.Complex.UpperHalfPlane.FunctionsBoundedAtInfty
+public import Mathlib.Analysis.Complex.Periodic
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.NumberTheory.ModularForms.QExpansion
 
 namespace P2MW.S_ModularCurve_qParam_coeff_unique
 

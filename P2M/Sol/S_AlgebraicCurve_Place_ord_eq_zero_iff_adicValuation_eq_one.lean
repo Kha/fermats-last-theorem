@@ -2,7 +2,7 @@ module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
-public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+import Definitions.Def_AlgebraicCurve_RatFuncPlaces -- shake: keep
 
 namespace P2MW.S_AlgebraicCurve_Place_ord_eq_zero_iff_adicValuation_eq_one
 

@@ -2,9 +2,10 @@ module
 
 public import Definitions.Def_ModularCurve_PhiGen
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
-public import Mathlib.RingTheory.PowerSeries.Expand
 import P2M.Util
+public import Mathlib.Data.Int.ConditionallyCompleteOrder
+import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
+import Mathlib.RingTheory.PowerSeries.Expand
 
 namespace P2MW.S_ModularCurve_StarBank_deltaNorm
 

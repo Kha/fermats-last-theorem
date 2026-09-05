@@ -1,8 +1,6 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_PhiGen_splits_prime_at_slot
 import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_prime_of_not_mem
@@ -11,12 +9,8 @@ import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Sol.S_ModularCurve_coeffMap_injective
 import P2M.Sol.S_Polynomial_mem_range_of_eval_eq_const
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.FieldTheory.Minpoly.Field
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-public import Mathlib.RingTheory.PowerBasis
 import P2M.Util
+import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_jqN_prime_not_mem_adjoin
 

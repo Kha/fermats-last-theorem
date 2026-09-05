@@ -2,6 +2,7 @@ module
 
 public import Definitions.Def_ModularCurve_TateFormal
 public import Mathlib.RingTheory.MvPowerSeries.Substitution
+public import Definitions.Def_ModularCurve_X0
 
 @[expose] public section
 

@@ -1,20 +1,50 @@
 module
 
-public import Mathlib
-public import Definitions.Def_ModularCurve_CharPReduction
 public import Definitions.Def_ModularCurve_NodeLocalized
-public import Definitions.Def_ModularCurve_SpecializeModuli
-public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
 public import Definitions.Def_AlgebraicCurve_GluedPic0
 public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_SupersingularNodes
-public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull
 import P2M.Sol.S_ModularCurve_CharPReduction_modularRedLocHom_mem
 import P2M.Sol.S_ModularCurve_modularFunctionFieldC_self_collapse_unconditional
 import P2M.Util
-public import Definitions.Def_ModularCurve_SupersingularModuli
-public import Definitions.Def_ModularCurve_ArithmeticGalois
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
+import P2M.Sol.S_ModularCurve_transcendental_jqModC
 
 namespace P2MW.S_ModularCurve_exists_hasValue_frobNodePair_of_mem_modularLocalizedAtPoint
 set_option synthInstance.maxHeartbeats 1600000

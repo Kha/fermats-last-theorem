@@ -1,8 +1,5 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
-public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
 import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
@@ -14,12 +11,8 @@ import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_self
 import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Sol.S_ModularCurve_one_le_coeff_jq
-public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
-public import Mathlib.RingTheory.Polynomial.RationalRoot
-public import Mathlib.Algebra.Polynomial.Roots
 import P2M.Util
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 namespace P2MW.S_ModularCurve_jqNModC_prime_not_mem_adjoin_of_charZero
 

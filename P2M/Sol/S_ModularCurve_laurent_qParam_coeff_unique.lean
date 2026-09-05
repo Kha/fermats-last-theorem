@@ -1,9 +1,10 @@
 module
 
-public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
 public import Mathlib.RingTheory.LaurentSeries
 import P2M.Sol.S_ModularCurve_qParam_coeff_unique
 import P2M.Util
+public import Mathlib.Analysis.Complex.Periodic
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
 
 namespace P2MW.S_ModularCurve_laurent_qParam_coeff_unique
 

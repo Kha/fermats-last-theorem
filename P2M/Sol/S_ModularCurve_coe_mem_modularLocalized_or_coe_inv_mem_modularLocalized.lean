@@ -1,21 +1,63 @@
 module
 
-public import Mathlib
-public import Definitions.Def_ModularCurve_ReductionModL
-public import Definitions.Def_EllipticCurve_FrobeniusTrace
-public import Definitions.Def_AlgebraicCurve_RegularProlongation
 import P2M.Sol.S_ModularCurve_transcendental_jqModC
 import P2M.Sol.S_ModularCurve_finrank_adjoin_jqModC_modularFunctionFieldFullC_eq_dedekindPsi
 import P2M.Sol.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
 public import Definitions.Def_ModularCurve_CharPReduction
-public import Definitions.Def_ModularCurve_CuspidalClass
 public import Definitions.Def_ModularCurve_ArithmeticGalois
 import P2M.Sol.S_ModularCurve_exists_isFrickeAutFull_of_neZero
 import P2M.Sol.S_ModularCurve_frickeInvolutionBar_coeffEmb_qExpand
 import P2M.Sol.S_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
-public import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 import P2M.Util
-public import Definitions.Def_FLTPrelim_Ramification
+import Definitions.Def_EllipticCurve_FrobeniusTrace
+import Definitions.Def_FLTPrelim_Ramification
+import Definitions.Def_ModularCurve_ReductionModL
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.Finset.Functor
+import Mathlib.Data.Int.Star
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import P2M.Sol.S_ModularCurve_coeffMap_qExpand
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_of_lt
+import P2M.Sol.S_ModularCurve_coeff_jqModC_pow_self
+import P2M.Sol.S_ModularCurve_frobenius_identity_geom_unconditional
 
 namespace P2MW.S_ModularCurve_coe_mem_modularLocalized_or_coe_inv_mem_modularLocalized
 

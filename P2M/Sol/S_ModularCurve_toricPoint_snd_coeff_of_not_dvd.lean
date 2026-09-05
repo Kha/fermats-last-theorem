@@ -1,11 +1,10 @@
 module
 
 public import Definitions.Def_ModularCurve_TateSlots
-public import Mathlib.Topology.Algebra.Valued.NormedValued
-public import Mathlib.RingTheory.Valuation.Discrete.RankOne
-public import Mathlib.RingTheory.MvPowerSeries.Substitution
-public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
 import P2M.Util
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
+import Mathlib.RingTheory.Valuation.Discrete.RankOne
+import Mathlib.Topology.Algebra.Valued.NormedValued
 
 namespace P2MW.S_ModularCurve_toricPoint_snd_coeff_of_not_dvd
 

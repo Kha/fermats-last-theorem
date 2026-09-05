@@ -1,7 +1,5 @@
 module
 
-public import Definitions.Def_ModularCurve_X0
-public import Definitions.Def_ModularCurve_LaurentCoeff
 public import Definitions.Def_ModularCurve_PhiGen
 public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_coeffMap_qExpand
@@ -14,11 +12,12 @@ import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
 import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-public import Mathlib.NumberTheory.Cyclotomic.Basic
-public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-public import Mathlib.FieldTheory.Extension
-public import Mathlib.Data.Nat.Factorization.Induction
 import P2M.Util
+public import Mathlib.Data.Int.ConditionallyCompleteOrder
+import Mathlib.Algebra.Order.Algebra
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_minpoly_jqNModC_map_eq_prod_slots
 
