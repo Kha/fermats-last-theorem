@@ -4,10 +4,6 @@ public import Definitions.Def_ModularCurve_JqCoeff
 public import Definitions.Def_ModularCurve_KroneckerTransport
 import P2M.Sol.S_ModularCurve_modularPolynomial_kronecker
 import P2M.Util
-import Mathlib.Algebra.Order.Algebra
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_kroneckerCongruence
 

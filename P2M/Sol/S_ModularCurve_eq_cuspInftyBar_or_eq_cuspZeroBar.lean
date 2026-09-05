@@ -17,7 +17,6 @@ import P2M.Sol.S_ModularCurve_isCusp_cuspZeroBar
 import P2M.Sol.S_ModularCurve_isCusp_cuspInftyBar
 import P2M.Sol.S_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
 import P2M.Util
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 
 namespace P2MW.S_ModularCurve_eq_cuspInftyBar_or_eq_cuspZeroBar

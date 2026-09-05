@@ -4,9 +4,6 @@ public import Definitions.Def_ModularCurve_JqCoeff
 import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
 import P2M.Sol.S_ModularCurve_modularPolynomialFamily
 import P2M.Util
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_all
 

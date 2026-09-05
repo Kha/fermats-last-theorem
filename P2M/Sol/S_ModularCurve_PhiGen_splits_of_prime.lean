@@ -11,11 +11,6 @@ import P2M.Sol.S_ModularCurve_PhiGen_splits_of_coeff_evalAtJ_eq
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import P2M.Util
 public import Mathlib.Data.Int.ConditionallyCompleteOrder
-import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
-import Mathlib.Analysis.SpecialFunctions.Bernstein
-import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
-import Mathlib.Data.Nat.Choose.Multinomial
-import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
 import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
 
 namespace P2MW.S_ModularCurve_PhiGen_splits_of_prime

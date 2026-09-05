@@ -4,9 +4,6 @@ public import Definitions.Def_ModularCurve_AtkinLehner
 import P2M.Sol.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
 import P2M.Sol.S_ModularCurve_exists_phiIrreducible_evalSymm
 import P2M.Util
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_exists_isFrickeAut
 

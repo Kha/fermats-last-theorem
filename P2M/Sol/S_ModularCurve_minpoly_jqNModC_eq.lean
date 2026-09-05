@@ -12,9 +12,6 @@ import P2M.Util
 import Definitions.Def_ModularCurve_ArithmeticGalois
 import Definitions.Def_ModularCurve_DegeneracyTower
 import Definitions.Def_ModularCurve_QAdicPlace
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_minpoly_jqNModC_eq
 

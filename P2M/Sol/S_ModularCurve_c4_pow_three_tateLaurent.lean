@@ -4,11 +4,6 @@ public import Definitions.Def_ModularCurve_TateFormal
 import P2M.Sol.S_ModularCurve_eisenstein4_cube_sub_mk_sq
 import P2M.Util
 public import Definitions.Def_ModularCurve_JqCoeff
-import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
-import Mathlib.Analysis.SpecialFunctions.Bernstein
-import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
-import Mathlib.Data.Nat.Choose.Multinomial
-import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
 
 namespace P2MW.S_ModularCurve_c4_pow_three_tateLaurent
 

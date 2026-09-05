@@ -13,9 +13,6 @@ import P2M.Sol.S_ModularCurve_StarBank_onePoint
 import P2M.Sol.S_ModularCurve_StarBank_press
 import P2M.Sol.S_ModularCurve_StarBank_starK
 import P2M.Util
-import Mathlib.Analysis.SpecialFunctions.Bernstein
-import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
 import Mathlib.NumberTheory.ModularForms.LevelOne.Basic
 import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 

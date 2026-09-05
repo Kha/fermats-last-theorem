@@ -7,7 +7,6 @@ import P2M.Sol.S_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
 import P2M.Sol.S_ModularCurve_aeval_jqN_toAdjoin
 import P2M.Sol.S_ModularCurve_phiIrreducible_of_prime
 import P2M.Util
-import Mathlib.Algebra.Order.Algebra
 import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_phiIrreducible_all

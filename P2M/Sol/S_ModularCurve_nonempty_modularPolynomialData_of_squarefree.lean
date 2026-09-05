@@ -3,8 +3,6 @@ module
 public import Definitions.Def_ModularCurve_X0
 import P2M.Sol.S_ModularCurve_modularPolynomialFamily
 import P2M.Util
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
 import Mathlib.NumberTheory.ArithmeticFunction.Misc
 import Mathlib.RingTheory.Polynomial.Resultant.Basic
 

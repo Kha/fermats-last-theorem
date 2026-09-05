@@ -16,7 +16,6 @@ import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
 import P2M.Sol.S_ModularCurve_exists_phiIrreducible_of_finrank_eq
 import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 import P2M.Util
-import Mathlib.Algebra.Order.Algebra
 import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_exists_phiIrreducible

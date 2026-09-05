@@ -3,11 +3,6 @@ module
 public import Definitions.Def_ModularCurve_ModularUnit
 import P2M.Sol.S_ModularCurve_modularUnitSeries_mem_modularFunctionField
 import P2M.Util
-import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
-import Mathlib.Analysis.SpecialFunctions.Bernstein
-import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
-import Mathlib.Data.Nat.Choose.Multinomial
-import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
 
 namespace P2MW.S_ModularCurve_modularUnitSeries_mem_modularFunctionFieldFull
 

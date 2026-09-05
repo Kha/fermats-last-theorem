@@ -7,9 +7,6 @@ import P2M.Sol.S_ModularCurve_relfinrank_modularFunctionField
 import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 import P2M.Sol.S_ModularCurve_dedekindPsi_of_squarefree
 import P2M.Util
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_functionFieldGeneration_of_squarefree
 

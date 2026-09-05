@@ -5,7 +5,6 @@ public import Mathlib.RingTheory.PowerSeries.Basic
 public import Mathlib.Analysis.Complex.Periodic
 public import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
 import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
-import Mathlib.Combinatorics.Matroid.Init
 
 namespace P2MW.S_ModularCurve_hasSum_qParam_mul
 

@@ -12,10 +12,6 @@ import P2M.Sol.S_ModularCurve_dedekindPsi_prime_pow
 import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import P2M.Util
-import Mathlib.Algebra.Order.Algebra
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_jqNModC_prime_not_mem_fullC
 

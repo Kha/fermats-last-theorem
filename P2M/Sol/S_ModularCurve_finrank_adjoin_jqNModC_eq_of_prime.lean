@@ -18,7 +18,6 @@ import P2M.Sol.S_ModularCurve_isCusp_cuspInftyBar
 import P2M.Sol.S_ModularCurve_isFrickeAutFull_frickeInvolutionFull_prime
 import P2M.Util
 public import Definitions.Def_ModularCurve_JqCoeff
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqNModC_eq_of_prime

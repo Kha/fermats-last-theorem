@@ -14,9 +14,6 @@ import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 public import Mathlib.FieldTheory.Relrank
 import P2M.Util
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_relfinrank_fullC_mul_prime_pow
 

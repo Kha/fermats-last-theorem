@@ -10,9 +10,6 @@ import P2M.Sol.S_ModularCurve_PhiGen_evalSymm_of_splits
 import P2M.Sol.S_ModularCurve_dedekindPsi_prime
 import P2M.Util
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
 
 namespace P2MW.S_ModularCurve_PhiGen_evalSymm_of_coeff_evalAtJ_eq
 

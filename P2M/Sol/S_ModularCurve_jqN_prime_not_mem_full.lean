@@ -10,7 +10,6 @@ import P2M.Sol.S_ModularCurve_dedekindPsi_mul_of_coprime
 import P2M.Sol.S_ModularCurve_functionFieldGeneration_of_squarefree
 import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 import P2M.Util
-import Mathlib.Algebra.Order.Algebra
 import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_jqN_prime_not_mem_full

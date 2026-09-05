@@ -12,7 +12,6 @@ import P2M.Sol.S_ModularCurve_PhiGen_splits_of_prime
 public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
 import P2M.Util
 public import Mathlib.Data.Int.ConditionallyCompleteOrder
-import Mathlib.Algebra.Order.Algebra
 import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot_of_isPrimitiveRoot

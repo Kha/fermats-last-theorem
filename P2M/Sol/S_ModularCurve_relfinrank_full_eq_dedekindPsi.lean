@@ -17,7 +17,6 @@ import P2M.Sol.S_ModularCurve_exists_phiIrreducible_of_finrank_eq
 import P2M.Sol.S_ModularCurve_functionFieldGeneration_iff_full_eq
 public import Mathlib.FieldTheory.Relrank
 import P2M.Util
-import Mathlib.Algebra.Order.Algebra
 import Mathlib.NumberTheory.Cyclotomic.Basic
 
 namespace P2MW.S_ModularCurve_relfinrank_full_eq_dedekindPsi
