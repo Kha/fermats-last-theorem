@@ -1,9 +1,13 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_coeffMap_injective
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_coeffMap_injective
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
 
 open ModularCurve IntermediateField Polynomial

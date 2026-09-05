@@ -1,8 +1,12 @@
-import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-import Mathlib.NumberTheory.ModularForms.Discriminant
-import Definitions.Def_ModularForm_HeckeOperator
-import Theorems.Thm_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
-import P2M.Util
+module
+
+public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
+public import Mathlib.NumberTheory.ModularForms.Discriminant
+public import Definitions.Def_ModularForm_HeckeOperator
+public import Theorems.Thm_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_discriminant_div_discriminant_heckeDiagMatrix_smul
 
 set_option autoImplicit false

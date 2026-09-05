@@ -1,6 +1,10 @@
-import Mathlib
-import P2M.Util
-import P2M.Sol.S_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
+module
+
+public import Mathlib
+public import P2M.Util
+public import P2M.Sol.S_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
+
+@[expose] public section
 
 theorem ValuationSubring.exists_forall_mem_and_sub_mem_nonunits
     {K : Type*} [Field K] {ι : Type*} [Finite ι] (R : ι → ValuationSubring K)

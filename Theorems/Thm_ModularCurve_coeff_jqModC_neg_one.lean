@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_coeff_jqModC_neg_one
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.coeff_jqModC_neg_one (K : Type*) [CommRing K] :

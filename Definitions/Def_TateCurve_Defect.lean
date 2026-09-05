@@ -1,6 +1,10 @@
-import Definitions.Def_TateCurve_PointSeries
-import Definitions.Def_TateCurve_Tails
-import Mathlib.Analysis.Normed.Ring.InfiniteSum
+module
+
+public import Definitions.Def_TateCurve_PointSeries
+public import Definitions.Def_TateCurve_Tails
+public import Mathlib.Analysis.Normed.Ring.InfiniteSum
+
+@[expose] public section
 
 set_option autoImplicit false
 

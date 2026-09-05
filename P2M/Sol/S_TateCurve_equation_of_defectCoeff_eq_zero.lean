@@ -1,7 +1,11 @@
-import Definitions.Def_TateCurve_Defect
-import Theorems.Thm_TateCurve_defectCoeff_zero
-import Theorems.Thm_TateCurve_defect_qExpansion
-import P2M.Util
+module
+
+public import Definitions.Def_TateCurve_Defect
+public import Theorems.Thm_TateCurve_defectCoeff_zero
+public import Theorems.Thm_TateCurve_defect_qExpansion
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_equation_of_defectCoeff_eq_zero
 open TateCurve
 open scoped NNReal

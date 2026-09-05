@@ -1,5 +1,9 @@
-import Definitions.Def_AlgebraicCurve_Correspondence
-import P2M.Util
+module
+
+public import Definitions.Def_AlgebraicCurve_Correspondence
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_smul_restrictAlong
 
 noncomputable section

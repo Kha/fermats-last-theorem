@@ -1,7 +1,11 @@
-import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
-import Mathlib.Analysis.SpecificLimits.Normed
-import Mathlib.NumberTheory.Divisors
-import P2M.Util
+module
+
+public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
+public import Mathlib.Analysis.SpecificLimits.Normed
+public import Mathlib.NumberTheory.Divisors
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_tsum_succ_prod_eq_tsum_divisors
 
 set_option autoImplicit false

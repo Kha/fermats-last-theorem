@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_AtkinLehner
-import Definitions.Def_ModularCurve_GeometricBaseChange
+module
+
+public import Definitions.Def_ModularCurve_AtkinLehner
+public import Definitions.Def_ModularCurve_GeometricBaseChange
+
+@[expose] public section
 
 set_option autoImplicit false
 

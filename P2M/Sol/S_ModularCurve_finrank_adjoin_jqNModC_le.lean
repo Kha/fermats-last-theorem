@@ -1,10 +1,14 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_coeffMap_injective
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_coeffMap_injective
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqNModC_le
 
 noncomputable section

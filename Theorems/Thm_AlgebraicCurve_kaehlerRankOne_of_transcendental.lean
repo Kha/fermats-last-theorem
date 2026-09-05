@@ -1,6 +1,10 @@
-import Mathlib
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_kaehlerRankOne_of_transcendental
+module
+
+public import Mathlib
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_kaehlerRankOne_of_transcendental
+
+@[expose] public section
 
 open KaehlerDifferential
 theorem AlgebraicCurve.kaehlerRankOne_of_transcendental

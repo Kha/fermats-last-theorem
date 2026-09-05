@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
+
+@[expose] public section
 
 set_option autoImplicit false
 

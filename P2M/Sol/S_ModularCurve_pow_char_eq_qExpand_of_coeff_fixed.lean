@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_X0
-import Mathlib.RingTheory.PowerSeries.Expand
-import Mathlib.FieldTheory.Finite.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Mathlib.RingTheory.PowerSeries.Expand
+public import Mathlib.FieldTheory.Finite.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
 
 noncomputable section

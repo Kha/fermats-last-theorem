@@ -1,7 +1,11 @@
-import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
-import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
-import Mathlib.Tactic.LinearCombination
-import P2M.Util
+module
+
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
+public import Mathlib.Tactic.LinearCombination
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_WeierstrassCurve_Affine_Point_two_smul_some_eq_zero_iff
 
 open Polynomial

@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_FibrePoly
-import P2M.Util
-import P2M.Sol.S_ModularCurve_fibrePoly_eq_of_kroneckerCongruence
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_FibrePoly
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_fibrePoly_eq_of_kroneckerCongruence
+
+@[expose] public section
 
 open Polynomial
 theorem ModularCurve.fibrePoly_eq_of_kroneckerCongruence {k : Type*} [Field k]

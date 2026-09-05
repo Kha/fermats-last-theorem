@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Polynomial.Splits
-import Mathlib.Algebra.Polynomial.FieldDivision
-import P2M.Util
+module
+
+public import Mathlib.Algebra.Polynomial.Splits
+public import Mathlib.Algebra.Polynomial.FieldDivision
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_Polynomial_irreducible_of_transitive_ringAut
 
 p2m_open "Polynomial P2MW.S_Polynomial_irreducible_of_transitive_ringAut.Polynomial"

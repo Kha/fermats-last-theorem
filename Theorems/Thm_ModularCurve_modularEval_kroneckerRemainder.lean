@@ -1,12 +1,16 @@
-import Mathlib
-import Definitions.Def_ModularCurve_NodeLocalized
-import Definitions.Def_ModularCurve_SupersingularNodes
-import Definitions.Def_ModularCurve_SupersingularModuli
-import Definitions.Def_ModularCurve_CuspidalClass
-import Definitions.Def_ModularCurve_ArithmeticGalois
-import Definitions.Def_AlgebraicCurve_GluedPic0
-import P2M.Util
-import P2M.Sol.S_ModularCurve_modularEval_kroneckerRemainder
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_NodeLocalized
+public import Definitions.Def_ModularCurve_SupersingularNodes
+public import Definitions.Def_ModularCurve_SupersingularModuli
+public import Definitions.Def_ModularCurve_CuspidalClass
+public import Definitions.Def_ModularCurve_ArithmeticGalois
+public import Definitions.Def_AlgebraicCurve_GluedPic0
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_modularEval_kroneckerRemainder
+
+@[expose] public section
 set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 800000
 set_option autoImplicit false

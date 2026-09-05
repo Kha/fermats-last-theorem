@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_HeckeOperator
-import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
-import Definitions.Def_HeckeGalois_EichlerShimura
+module
+
+public import Definitions.Def_ModularCurve_HeckeOperator
+public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+public import Definitions.Def_HeckeGalois_EichlerShimura
+
+@[expose] public section
 
 set_option autoImplicit false
 

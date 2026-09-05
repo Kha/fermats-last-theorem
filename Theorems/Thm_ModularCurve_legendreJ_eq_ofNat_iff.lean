@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_LegendreJ
-import P2M.Util
-import P2M.Sol.S_ModularCurve_legendreJ_eq_ofNat_iff
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_LegendreJ
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_legendreJ_eq_ofNat_iff
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.legendreJ_eq_ofNat_iff {K : Type*} [Field K] (h2 : (2 : K) ≠ 0)

@@ -1,10 +1,14 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
-import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
-import Mathlib.FieldTheory.Minpoly.IsIntegrallyClosed
-import Mathlib.RingTheory.Localization.Integral
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
+public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
+public import Mathlib.FieldTheory.Minpoly.IsIntegrallyClosed
+public import Mathlib.RingTheory.Localization.Integral
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_exists_phiIrreducible_of_finrank_eq
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

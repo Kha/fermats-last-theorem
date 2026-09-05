@@ -1,4 +1,8 @@
-import Definitions.Def_WeierstrassCurve_RatPointMap_probe
+module
+
+public import Definitions.Def_WeierstrassCurve_RatPointMap_probe
+
+@[expose] public section
 
 set_option autoImplicit false
 

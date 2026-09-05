@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_FLTPrelim_Ramification
-import P2M.Util
-import P2M.Sol.S_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
+module
+
+public import Mathlib
+public import Definitions.Def_FLTPrelim_Ramification
+public import P2M.Util
+public import P2M.Sol.S_ValuationSubring_map_eq_zero_of_valuation_lt_one_of_charP
+
+@[expose] public section
 
 theorem ValuationSubring.map_eq_zero_of_valuation_lt_one_of_charP
     (A : ValuationSubring (AlgebraicClosure ℚ)) (ℓ : ℕ) [Fact ℓ.Prime] (hA : A.LiesOverPrime ℓ)

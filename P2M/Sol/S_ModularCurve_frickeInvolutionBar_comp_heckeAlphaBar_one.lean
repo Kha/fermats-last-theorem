@@ -1,10 +1,14 @@
-import Mathlib
-import Definitions.Def_ModularCurve_HeckeOperator
-import Definitions.Def_ModularCurve_CuspidalClass
-import Definitions.Def_ModularCurve_AtkinLehnerPartial
-import Theorems.Thm_ModularCurve_geomAut_atkinLehner_comp_legs
-import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_HeckeOperator
+public import Definitions.Def_ModularCurve_CuspidalClass
+public import Definitions.Def_ModularCurve_AtkinLehnerPartial
+public import Theorems.Thm_ModularCurve_geomAut_atkinLehner_comp_legs
+public import Theorems.Thm_ModularCurve_exists_isFrickeAutFull_of_neZero
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_frickeInvolutionBar_comp_heckeAlphaBar_one
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
 attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL

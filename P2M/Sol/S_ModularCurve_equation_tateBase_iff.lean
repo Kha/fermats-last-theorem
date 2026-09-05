@@ -1,9 +1,13 @@
-import Definitions.Def_ModularCurve_TateSlots
-import Mathlib.Topology.Algebra.Valued.NormedValued
-import Mathlib.RingTheory.Valuation.Discrete.RankOne
-import Mathlib.RingTheory.MvPowerSeries.Substitution
-import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_TateSlots
+public import Mathlib.Topology.Algebra.Valued.NormedValued
+public import Mathlib.RingTheory.Valuation.Discrete.RankOne
+public import Mathlib.RingTheory.MvPowerSeries.Substitution
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_equation_tateBase_iff
 
 set_option autoImplicit false

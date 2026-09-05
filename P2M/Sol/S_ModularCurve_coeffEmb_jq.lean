@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Mathlib.RingTheory.Algebraic.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Mathlib.RingTheory.Algebraic.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_coeffEmb_jq
 
 noncomputable section

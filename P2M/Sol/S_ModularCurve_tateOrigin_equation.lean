@@ -1,11 +1,15 @@
-import Mathlib
-import Definitions.Def_ModularCurve_TateOrigin
-import Definitions.Def_ModularCurve_TateSlots
-import Definitions.Def_ModularCurve_KroneckerTransport
+module
 
-import Theorems.Thm_ModularCurve_toricPoint_equation
-import Theorems.Thm_ModularCurve_equation_tateBase_iff
-import P2M.Util
+public import Mathlib
+public import Definitions.Def_ModularCurve_TateOrigin
+public import Definitions.Def_ModularCurve_TateSlots
+public import Definitions.Def_ModularCurve_KroneckerTransport
+
+public import Theorems.Thm_ModularCurve_toricPoint_equation
+public import Theorems.Thm_ModularCurve_equation_tateBase_iff
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_tateOrigin_equation
 attribute [-simp] TateCurve.curve_a₂ TateCurve.b_one TateCurve.curve_a₁ TateCurve.term_zero TateCurve.curve_a₆ TateCurve.curve_a₄ TateCurve.curve_a₃ TateCurve.yfun_zero TateCurve.xfun_zero TateCurve.yTerm_zero TateCurve.xTerm_zero TateCurve.xCoeffFull_succ TateCurve.a₆Coeff_zero TateCurve.a₄Coeff_succ TateCurve.a₄Coeff_zero TateCurve.cauchyMul_zero TateCurve.a₆Coeff_succ TateCurve.yCoeffFull_succ TateCurve.xCoeffFull_zero TateCurve.yCoeffFull_zero TateCurve.cauchyMulInt_zero TateCurve.cauchyMulInt3_zero TateCurve.tent_one TateCurve.Gz_zero TateCurve.cauchyMulInt_one TateCurve.tent_zero TateCurve.Fz_zero FLT.DivisorConvolution.sigma_zero_right FLT.DivisorConvolution.sigma_one_right FLT.DivisorConvolution.sigmaConv_one FLT.DivisorConvolution.sigmaConv_zero
 

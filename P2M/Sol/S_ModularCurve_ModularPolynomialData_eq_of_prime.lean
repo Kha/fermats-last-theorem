@@ -1,12 +1,16 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
-import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
-import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Mathlib.FieldTheory.Minpoly.Field
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
+public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
+public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import Mathlib.FieldTheory.Minpoly.Field
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_ModularPolynomialData_eq_of_prime
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

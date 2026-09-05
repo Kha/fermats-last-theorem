@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_X0
-import Mathlib.Data.Nat.Squarefree
-import Mathlib.NumberTheory.Divisors
-import Mathlib.Tactic.IntervalCases
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Mathlib.Data.Nat.Squarefree
+public import Mathlib.NumberTheory.Divisors
+public import Mathlib.Tactic.IntervalCases
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_dedekindPsi_prime_pow
 
 p2m_open "ModularCurve Finset Nat Finset.Nat"

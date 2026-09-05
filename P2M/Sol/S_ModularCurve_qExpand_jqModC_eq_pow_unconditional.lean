@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
-import Mathlib.RingTheory.Algebraic.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
+public import Mathlib.RingTheory.Algebraic.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_qExpand_jqModC_eq_pow_unconditional
 
 noncomputable section

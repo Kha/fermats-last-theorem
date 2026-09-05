@@ -1,8 +1,12 @@
-import Mathlib
-import Definitions.Def_ModularCurve_TateFormal
-import Definitions.Def_ModularCurve_X0
-import P2M.Util
-import P2M.Sol.S_ModularCurve_delta_tateLaurent
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_TateFormal
+public import Definitions.Def_ModularCurve_X0
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_delta_tateLaurent
+
+@[expose] public section
 set_option synthInstance.maxHeartbeats 400000
 set_option autoImplicit false
 

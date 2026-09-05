@@ -1,10 +1,14 @@
-import Mathlib
-import Mathlib.NumberTheory.Padics.PadicNumbers
-import Definitions.Def_TateCurve_QShift
-import Theorems.Thm_TateCurve_defect_qExpansion
-import Theorems.Thm_TateCurve_pointX_q_mul
-import Theorems.Thm_TateCurve_pointY_q_mul
-import P2M.Util
+module
+
+public import Mathlib
+public import Mathlib.NumberTheory.Padics.PadicNumbers
+public import Definitions.Def_TateCurve_QShift
+public import Theorems.Thm_TateCurve_defect_qExpansion
+public import Theorems.Thm_TateCurve_pointX_q_mul
+public import Theorems.Thm_TateCurve_pointY_q_mul
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_lineCoeff_eq_zero
 
 open scoped NNReal

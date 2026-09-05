@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_coeffEmb_jq
-import Theorems.Thm_ModularCurve_coeffEmb_jqN
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Theorems.Thm_ModularCurve_coeffEmb_jq
+public import Theorems.Thm_ModularCurve_coeffEmb_jqN
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_laurentBaseChange_modularFunctionField
 
 open ModularCurve IntermediateField HahnSeries

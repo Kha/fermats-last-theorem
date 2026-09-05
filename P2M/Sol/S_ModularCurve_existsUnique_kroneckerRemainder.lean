@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_ModularCurve_KroneckerTransport
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_KroneckerTransport
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_existsUnique_kroneckerRemainder
 
 p2m_open "Polynomial ModularCurve P2MW.S_ModularCurve_existsUnique_kroneckerRemainder.ModularCurve"

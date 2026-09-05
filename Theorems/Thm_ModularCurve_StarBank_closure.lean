@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_PhiGen
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_StarBank_closure
+module
+
+public import Definitions.Def_ModularCurve_PhiGen
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_StarBank_closure
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.StarBank.closure {K : Type*} [Field K] [IsAlgClosed K] (p : ℕ) [Fact p.Prime]

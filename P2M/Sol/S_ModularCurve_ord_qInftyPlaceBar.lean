@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_QAdicPlace
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_QAdicPlace
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_ord_qInftyPlaceBar
 
 open ModularCurve AlgebraicCurve

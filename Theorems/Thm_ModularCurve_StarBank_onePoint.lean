@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_StarBank_onePoint
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_StarBank_onePoint
+
+@[expose] public section
 
 open Polynomial HahnSeries ModularCurve
 theorem ModularCurve.StarBank.onePoint {K : Type*} [Field K] {M : ℕ}

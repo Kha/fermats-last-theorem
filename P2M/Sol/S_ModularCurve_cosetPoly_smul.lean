@@ -1,7 +1,11 @@
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Topology.Compactification.OnePoint.ProjectiveLine
-import Definitions.Def_ModularForm_HeckeOperator
-import P2M.Util
+module
+
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Topology.Compactification.OnePoint.ProjectiveLine
+public import Definitions.Def_ModularForm_HeckeOperator
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_cosetPoly_smul
 
 set_option autoImplicit false

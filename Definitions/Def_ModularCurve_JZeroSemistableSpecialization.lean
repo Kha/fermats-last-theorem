@@ -1,9 +1,13 @@
-import Definitions.Def_AlgebraicCurve_GluedPic0
-import Definitions.Def_AlgebraicCurve_GluedPic0Functoriality
-import Definitions.Def_ModularCurve_ArithmeticGalois
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_HeckeGalois_EichlerShimura
-import Definitions.Def_ModularCurve_ComponentGroup
+module
+
+public import Definitions.Def_AlgebraicCurve_GluedPic0
+public import Definitions.Def_AlgebraicCurve_GluedPic0Functoriality
+public import Definitions.Def_ModularCurve_ArithmeticGalois
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_HeckeGalois_EichlerShimura
+public import Definitions.Def_ModularCurve_ComponentGroup
+
+@[expose] public section
 
 noncomputable section
 

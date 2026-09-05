@@ -1,17 +1,21 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Definitions.Def_ModularForm_HeckeOperator
-import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.RingTheory.RootsOfUnity.Complex
-import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
-import Mathlib.NumberTheory.ModularForms.Discriminant
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_hasSum_jq_qParam
-import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
-import Theorems.Thm_ModularCurve_hasSum_qParam_heckeMatrix_smul
-import Theorems.Thm_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Definitions.Def_ModularForm_HeckeOperator
+public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Mathlib.RingTheory.RootsOfUnity.Complex
+public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
+public import Mathlib.NumberTheory.ModularForms.Discriminant
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_hasSum_jq_qParam
+public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
+public import Theorems.Thm_ModularCurve_hasSum_qParam_heckeMatrix_smul
+public import Theorems.Thm_ModularCurve_hasSum_qParam_heckeDiagMatrix_smul
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_PhiGenDescends_hasSum_cosetPoly_coeff
 
 set_option autoImplicit false

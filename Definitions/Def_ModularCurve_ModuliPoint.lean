@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_VariableChangePointEquiv
-import Definitions.Def_WeierstrassCurve_RatPointHom
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_VariableChangePointEquiv
+public import Definitions.Def_WeierstrassCurve_RatPointHom
+
+@[expose] public section
 
 noncomputable section
 

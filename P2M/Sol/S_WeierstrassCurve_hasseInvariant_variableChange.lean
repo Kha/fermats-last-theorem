@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_HasseInvariant
-import Definitions.Def_Polynomial_DeuringPolynomial
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_HasseInvariant
+public import Definitions.Def_Polynomial_DeuringPolynomial
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_WeierstrassCurve_hasseInvariant_variableChange
 
 set_option autoImplicit false

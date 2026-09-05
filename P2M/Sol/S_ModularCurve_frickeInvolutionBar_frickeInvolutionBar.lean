@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_CuspidalClass
-import Theorems.Thm_ModularCurve_frickeInvolutionFull_symm
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_CuspidalClass
+public import Theorems.Thm_ModularCurve_frickeInvolutionFull_symm
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_frickeInvolutionBar_frickeInvolutionBar
 open ModularCurve
 

@@ -1,8 +1,12 @@
-import Definitions.Def_AlgebraicCurve_DivisorPushPull
-import Mathlib.RingTheory.DedekindDomain.IntegralClosure
-import Mathlib.NumberTheory.RamificationInertia.Basic
-import Mathlib.RingTheory.DedekindDomain.Factorization
-import Mathlib.Algebra.Polynomial.Lifts
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorPushPull
+public import Mathlib.RingTheory.DedekindDomain.IntegralClosure
+public import Mathlib.NumberTheory.RamificationInertia.Basic
+public import Mathlib.RingTheory.DedekindDomain.Factorization
+public import Mathlib.Algebra.Polynomial.Lifts
+
+@[expose] public section
 
 set_option autoImplicit false
 

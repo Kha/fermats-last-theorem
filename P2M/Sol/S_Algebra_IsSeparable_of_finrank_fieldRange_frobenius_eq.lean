@@ -1,6 +1,10 @@
-import Mathlib.RingTheory.Unramified.Field
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import P2M.Util
+module
+
+public import Mathlib.RingTheory.Unramified.Field
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
 
 set_option autoImplicit false

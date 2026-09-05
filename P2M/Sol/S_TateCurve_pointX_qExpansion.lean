@@ -1,11 +1,15 @@
-import Definitions.Def_TateCurve_PointSeries
-import Definitions.Def_TateCurve_Tails
-import Theorems.Thm_TateCurve_pointX_normalForm
-import Theorems.Thm_TateCurve_hasSum_xfun
-import Theorems.Thm_TateCurve_hasSum_yfun
-import Theorems.Thm_TateCurve_tsum_succ_prod_eq_tsum_divisors
-import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
-import P2M.Util
+module
+
+public import Definitions.Def_TateCurve_PointSeries
+public import Definitions.Def_TateCurve_Tails
+public import Theorems.Thm_TateCurve_pointX_normalForm
+public import Theorems.Thm_TateCurve_hasSum_xfun
+public import Theorems.Thm_TateCurve_hasSum_yfun
+public import Theorems.Thm_TateCurve_tsum_succ_prod_eq_tsum_divisors
+public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_pointX_qExpansion
 
 set_option autoImplicit false

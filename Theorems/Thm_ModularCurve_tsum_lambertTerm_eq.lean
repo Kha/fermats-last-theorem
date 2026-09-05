@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_TateFormal
-import Mathlib.Topology.Algebra.InfiniteSum.Basic
-import P2M.Util
-import P2M.Sol.S_ModularCurve_tsum_lambertTerm_eq
+module
+
+public import Definitions.Def_ModularCurve_TateFormal
+public import Mathlib.Topology.Algebra.InfiniteSum.Basic
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_tsum_lambertTerm_eq
+
+@[expose] public section
 attribute [-instance] ModularCurve.instIsElliptic_tateBase
 attribute [-simp] ModularCurve.tateUnivCurve_a₂ ModularCurve.tateUnivCurve_a₃ ModularCurve.tateUnivCurve_a₆ ModularCurve.nonToricPoint_fst ModularCurve.toricPoint_snd ModularCurve.tateUnivCurve_a₁ ModularCurve.nonToricPoint_snd ModularCurve.tateUnivCurve_a₄ ModularCurve.toricPoint_fst
 

@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_HasseInvariant
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_HasseInvariant
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_WeierstrassCurve_natDegree_hasseInvariant_jFamily
 
 set_option autoImplicit false

@@ -1,12 +1,16 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.Algebra.Polynomial.Roots
-import Mathlib.Algebra.BigOperators.Fin
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.Algebra.Polynomial.Roots
+public import Mathlib.Algebra.BigOperators.Fin
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_splits_prime_at_slot
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

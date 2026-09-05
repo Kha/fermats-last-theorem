@@ -1,5 +1,9 @@
-import Mathlib.NumberTheory.ModularForms.QExpansion
-import P2M.Util
+module
+
+public import Mathlib.NumberTheory.ModularForms.QExpansion
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_qParam_coeff_unique
 
 set_option autoImplicit false

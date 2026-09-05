@@ -1,7 +1,11 @@
-import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
-import Mathlib.RingTheory.LaurentSeries
-import Theorems.Thm_ModularCurve_qParam_coeff_unique
-import P2M.Util
+module
+
+public import Mathlib.Analysis.Complex.UpperHalfPlane.Exp
+public import Mathlib.RingTheory.LaurentSeries
+public import Theorems.Thm_ModularCurve_qParam_coeff_unique
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_laurent_qParam_coeff_unique
 
 set_option autoImplicit false

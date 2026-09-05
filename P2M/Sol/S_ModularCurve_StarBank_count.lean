@@ -1,16 +1,20 @@
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Data.Nat.Prime.Basic
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Algebra.Polynomial.Roots
-import Mathlib.Algebra.Polynomial.Splits
-import Mathlib.Algebra.Polynomial.Coeff
-import Mathlib.Algebra.Polynomial.Monic
-import Mathlib.Algebra.Polynomial.Degree.Lemmas
-import Mathlib.Data.Nat.Choose.Basic
-import P2M.Util
+module
+
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Data.Nat.Prime.Basic
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Algebra.Polynomial.Roots
+public import Mathlib.Algebra.Polynomial.Splits
+public import Mathlib.Algebra.Polynomial.Coeff
+public import Mathlib.Algebra.Polynomial.Monic
+public import Mathlib.Algebra.Polynomial.Degree.Lemmas
+public import Mathlib.Data.Nat.Choose.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_count
 
 set_option autoImplicit false

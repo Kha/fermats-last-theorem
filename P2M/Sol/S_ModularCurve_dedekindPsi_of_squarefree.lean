@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
-import Mathlib.Data.Nat.Factorization.Induction
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Theorems.Thm_ModularCurve_dedekindPsi_mul_of_coprime
+public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+public import Mathlib.Data.Nat.Factorization.Induction
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_dedekindPsi_of_squarefree
 attribute [-instance] ModularCurve.PhiGen.instNeZeroPhiGenCosetA
 attribute [-simp] ModularCurve.evalAtJqN_X ModularCurve.qTwistFun_coeff ModularCurve.swapBivar_C_X ModularCurve.PhiGen.cosetA_succ ModularCurve.qTwist_coeff ModularCurve.PhiGen.cosetB_zero ModularCurve.PhiGen.cosetA_zero ModularCurve.qTwist_single ModularCurve.swapBivar_X ModularCurve.aeval_toRingHom_X ModularCurve.PhiGen.cosetB_succ ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single

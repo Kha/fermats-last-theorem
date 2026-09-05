@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_StarBank_delta_pow_ne
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_StarBank_delta_pow_ne
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.StarBank.delta_pow_ne (K : Type*) [CommRing K] {ℓ : ℕ} [Fact ℓ.Prime]

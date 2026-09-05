@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_ModularCurve_NodeLocalized
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_NodeLocalized
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_redRes_modularEval
 
 set_option autoImplicit false

@@ -1,5 +1,9 @@
-import Mathlib
-import P2M.Util
+module
+
+public import Mathlib
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_IsIntegrallyClosed_exists_algebraMap_eq_of_isIntegral_pow_mul
 
 theorem solution

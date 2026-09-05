@@ -1,4 +1,8 @@
-import Definitions.Def_ModularCurve_SpecializeModuli
+module
+
+public import Definitions.Def_ModularCurve_SpecializeModuli
+
+@[expose] public section
 
 set_option autoImplicit false
 

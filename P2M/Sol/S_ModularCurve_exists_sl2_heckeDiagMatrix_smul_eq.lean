@@ -1,7 +1,11 @@
-import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
-import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-import Definitions.Def_ModularForm_HeckeOperator
-import P2M.Util
+module
+
+public import Mathlib.Analysis.Complex.UpperHalfPlane.MoebiusAction
+public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
+public import Definitions.Def_ModularForm_HeckeOperator
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_exists_sl2_heckeDiagMatrix_smul_eq
 
 set_option autoImplicit false

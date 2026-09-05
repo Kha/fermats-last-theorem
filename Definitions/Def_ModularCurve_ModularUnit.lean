@@ -1,4 +1,8 @@
-import Definitions.Def_ModularCurve_X0
+module
+
+public import Definitions.Def_ModularCurve_X0
+
+@[expose] public section
 
 set_option autoImplicit false
 

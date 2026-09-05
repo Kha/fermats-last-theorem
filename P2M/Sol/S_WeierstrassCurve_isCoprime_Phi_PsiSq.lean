@@ -1,33 +1,37 @@
-import Mathlib.NumberTheory.EllipticDivisibilitySequence
-import Mathlib.Algebra.Ring.NegOnePow
-import Mathlib.Data.Fin.VecNotation
-import Mathlib.Data.Fin.Tuple.Sort
-import Mathlib.Algebra.GroupWithZero.NonZeroDivisors
-import Mathlib.Algebra.MvPolynomial.CommRing
-import Mathlib.Algebra.MvPolynomial.Basic
-import Mathlib.Tactic.LinearCombination
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.Abel
-import Mathlib.Tactic.IntervalCases
-import Mathlib.Tactic.FieldSimp
-import Mathlib.GroupTheory.Perm.Basic
-import Mathlib.GroupTheory.Perm.Sign
-import Mathlib.GroupTheory.Perm.Cycle.Type
-import Mathlib.Algebra.Polynomial.Bivariate
-import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
-import Mathlib.AlgebraicGeometry.EllipticCurve.Jacobian.Point
-import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
-import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Degree
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.FieldTheory.Separable
-import Mathlib.Data.Nat.Factorization.Induction
-import Mathlib.Logic.Embedding.Set
-import Mathlib.SetTheory.Cardinal.Finite
-import Mathlib.Data.Set.Card
-import Mathlib.Algebra.Module.Torsion.Basic
-import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-import Definitions.Def_WeierstrassCurve_EDSEngine
-import P2M.Util
+module
+
+public import Mathlib.NumberTheory.EllipticDivisibilitySequence
+public import Mathlib.Algebra.Ring.NegOnePow
+public import Mathlib.Data.Fin.VecNotation
+public import Mathlib.Data.Fin.Tuple.Sort
+public import Mathlib.Algebra.GroupWithZero.NonZeroDivisors
+public import Mathlib.Algebra.MvPolynomial.CommRing
+public import Mathlib.Algebra.MvPolynomial.Basic
+public import Mathlib.Tactic.LinearCombination
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.Abel
+public import Mathlib.Tactic.IntervalCases
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.GroupTheory.Perm.Basic
+public import Mathlib.GroupTheory.Perm.Sign
+public import Mathlib.GroupTheory.Perm.Cycle.Type
+public import Mathlib.Algebra.Polynomial.Bivariate
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Jacobian.Point
+public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
+public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Degree
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import Mathlib.FieldTheory.Separable
+public import Mathlib.Data.Nat.Factorization.Induction
+public import Mathlib.Logic.Embedding.Set
+public import Mathlib.SetTheory.Cardinal.Finite
+public import Mathlib.Data.Set.Card
+public import Mathlib.Algebra.Module.Torsion.Basic
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+public import Definitions.Def_WeierstrassCurve_EDSEngine
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_WeierstrassCurve_isCoprime_Phi_PsiSq
 
 section PortGenNetIdentities

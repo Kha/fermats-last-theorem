@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_DivisorPushPull
-import Definitions.Def_AlgebraicCurve_AdelicIndex
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_DivisorPushPull
+public import Definitions.Def_AlgebraicCurve_AdelicIndex
+
+@[expose] public section
 
 set_option autoImplicit false
 

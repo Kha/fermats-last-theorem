@@ -1,5 +1,9 @@
-import Mathlib
-import Definitions.Def_ModularCurve_X0
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_X0
+
+@[expose] public section
 
 noncomputable section
 

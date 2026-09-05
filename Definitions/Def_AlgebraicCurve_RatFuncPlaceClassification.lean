@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_RatFuncPlaces
-import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+public import Definitions.Def_AlgebraicCurve_RatFuncPlaceInfty
+
+@[expose] public section
 
 set_option autoImplicit false
 

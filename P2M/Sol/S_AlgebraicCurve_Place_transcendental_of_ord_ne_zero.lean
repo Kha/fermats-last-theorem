@@ -1,6 +1,10 @@
-import Definitions.Def_AlgebraicCurve_PlacesOverDVR
-import Mathlib.RingTheory.Algebraic.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_AlgebraicCurve_PlacesOverDVR
+public import Mathlib.RingTheory.Algebraic.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_transcendental_of_ord_ne_zero
 
 noncomputable section

@@ -1,11 +1,15 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import Mathlib.RingTheory.DedekindDomain.IntegralClosure
-import Mathlib.RingTheory.DedekindDomain.Dvr
-import Mathlib.RingTheory.DiscreteValuationRing.TFAE
-import Mathlib.RingTheory.Localization.Integral
-import Mathlib.RingTheory.Valuation.LocalSubring
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
-import P2M.Util
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import Mathlib.RingTheory.DedekindDomain.IntegralClosure
+public import Mathlib.RingTheory.DedekindDomain.Dvr
+public import Mathlib.RingTheory.DiscreteValuationRing.TFAE
+public import Mathlib.RingTheory.Localization.Integral
+public import Mathlib.RingTheory.Valuation.LocalSubring
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_exists_of_valuationSubring
 
 set_option autoImplicit false

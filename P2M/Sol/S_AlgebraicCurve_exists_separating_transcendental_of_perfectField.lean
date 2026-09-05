@@ -1,7 +1,11 @@
-import Mathlib
-import Theorems.Thm_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
-import Theorems.Thm_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
-import P2M.Util
+module
+
+public import Mathlib
+public import Theorems.Thm_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
+public import Theorems.Thm_Algebra_IsSeparable_of_finrank_fieldRange_frobenius_eq
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
 
 open IntermediateField

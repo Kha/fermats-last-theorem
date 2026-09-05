@@ -1,4 +1,8 @@
-import Definitions.Def_ModularCurve_ModuliPoint
+module
+
+public import Definitions.Def_ModularCurve_ModuliPoint
+
+@[expose] public section
 
 set_option autoImplicit false
 

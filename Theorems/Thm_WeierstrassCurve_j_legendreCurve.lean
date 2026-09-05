@@ -1,8 +1,12 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_HasseInvariant
-import Definitions.Def_ModularCurve_LegendreJ
-import P2M.Util
-import P2M.Sol.S_WeierstrassCurve_j_legendreCurve
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_HasseInvariant
+public import Definitions.Def_ModularCurve_LegendreJ
+public import P2M.Util
+public import P2M.Sol.S_WeierstrassCurve_j_legendreCurve
+
+@[expose] public section
 
 open WeierstrassCurve
 theorem WeierstrassCurve.j_legendreCurve {K : Type*} [Field K] (t : K) [(legendreCurve t).IsElliptic] :

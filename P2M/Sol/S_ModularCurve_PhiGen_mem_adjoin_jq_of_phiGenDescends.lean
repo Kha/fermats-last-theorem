@@ -1,16 +1,20 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Definitions.Def_ModularForm_HeckeOperator
-import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.RingTheory.RootsOfUnity.Complex
-import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
-import Mathlib.NumberTheory.ModularForms.Discriminant
-import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_hasSum_cosetPoly_coeff
-import Theorems.Thm_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
-import Theorems.Thm_ModularCurve_cosetPoly_smul
-import Theorems.Thm_ModularCurve_E4_cube_div_discriminant_smul
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Definitions.Def_ModularForm_HeckeOperator
+public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Mathlib.RingTheory.RootsOfUnity.Complex
+public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Basic
+public import Mathlib.NumberTheory.ModularForms.Discriminant
+public import Theorems.Thm_ModularCurve_PhiGen_PhiGenDescends_hasSum_cosetPoly_coeff
+public import Theorems.Thm_ModularCurve_mem_adjoin_jq_of_hasSum_of_slash_invariant
+public import Theorems.Thm_ModularCurve_cosetPoly_smul
+public import Theorems.Thm_ModularCurve_E4_cube_div_discriminant_smul
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_mem_adjoin_jq_of_phiGenDescends
 
 set_option autoImplicit false

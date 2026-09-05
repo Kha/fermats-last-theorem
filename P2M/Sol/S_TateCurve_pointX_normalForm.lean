@@ -1,6 +1,10 @@
-import Definitions.Def_TateCurve_PointSeries
-import Theorems.Thm_TateCurve_sOne_eq_tsum_xfun
-import P2M.Util
+module
+
+public import Definitions.Def_TateCurve_PointSeries
+public import Theorems.Thm_TateCurve_sOne_eq_tsum_xfun
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_pointX_normalForm
 p2m_open "TateCurve P2MW.S_TateCurve_pointX_normalForm.TateCurve IsUltrametricDist Filter"
 open scoped NNReal

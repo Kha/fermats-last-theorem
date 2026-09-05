@@ -1,13 +1,17 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.Algebra.Polynomial.Bivariate
-import Mathlib.FieldTheory.Separable
-import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.Algebra.Polynomial.Bivariate
+public import Mathlib.FieldTheory.Separable
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_of_modularPolynomialData
 
 noncomputable section

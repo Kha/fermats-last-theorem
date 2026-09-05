@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_Polynomial_DeuringPolynomial
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_Polynomial_DeuringPolynomial
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_Polynomial_eval_one_sub_deuringPolynomial_map
 
 set_option autoImplicit false

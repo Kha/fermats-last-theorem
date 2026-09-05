@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Sol.S_ModularCurve_map_intCast_pow_char_eq_qExpand
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_delta_pow_ne
 
 set_option autoImplicit false

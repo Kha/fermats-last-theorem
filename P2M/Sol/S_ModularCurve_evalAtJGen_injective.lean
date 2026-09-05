@@ -1,5 +1,9 @@
-import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
-import P2M.Util
+module
+
+public import Theorems.Thm_ModularCurve_PhiGen_evalAtJ_injective
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_evalAtJGen_injective
 
 open ModularCurve IntermediateField

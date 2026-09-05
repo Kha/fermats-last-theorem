@@ -1,9 +1,13 @@
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_laurentBaseChange_adjoin
-import Theorems.Thm_ModularCurve_coeffEmb_jqN
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Theorems.Thm_ModularCurve_laurentBaseChange_adjoin
+public import Theorems.Thm_ModularCurve_coeffEmb_jqN
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_laurentBaseChange_modularFunctionFieldFull
 
 open ModularCurve IntermediateField Polynomial

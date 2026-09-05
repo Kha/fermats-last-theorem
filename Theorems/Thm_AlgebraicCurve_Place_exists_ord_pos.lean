@@ -1,7 +1,11 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_Place_exists_ord_pos
-import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_Place_exists_ord_pos
+public import Definitions.Def_ModularCurve_CharLFrobeniusGeomLevel
+
+@[expose] public section
 
 open AlgebraicCurve
 theorem P2M.Dup.AlgebraicCurve.Place.exists_ord_pos {K F : Type*} [Field K] [Field F] [Algebra K F] (v : Place K F) :

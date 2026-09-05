@@ -1,7 +1,11 @@
-import Mathlib.NumberTheory.ModularForms.QExpansion
-import Mathlib.RingTheory.LaurentSeries
-import Theorems.Thm_ModularCurve_hasSum_qParam_mul
-import P2M.Util
+module
+
+public import Mathlib.NumberTheory.ModularForms.QExpansion
+public import Mathlib.RingTheory.LaurentSeries
+public import Theorems.Thm_ModularCurve_hasSum_qParam_mul
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_hasSum_qParam_mul_laurent
 
 set_option autoImplicit false

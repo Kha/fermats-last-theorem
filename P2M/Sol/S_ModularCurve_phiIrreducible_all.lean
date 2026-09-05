@@ -1,16 +1,20 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
-import Theorems.Thm_ModularCurve_aeval_jqN_toAdjoin
-import Theorems.Thm_ModularCurve_phiIrreducible_of_prime
-import Mathlib.FieldTheory.Separable
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_dedekindPsi
+public import Theorems.Thm_ModularCurve_aeval_jqN_toAdjoin
+public import Theorems.Thm_ModularCurve_phiIrreducible_of_prime
+public import Mathlib.FieldTheory.Separable
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_phiIrreducible_all
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

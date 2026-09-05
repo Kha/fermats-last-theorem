@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_TateFormal
-import Definitions.Def_ModularCurve_X0
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_TateFormal
+public import Definitions.Def_ModularCurve_X0
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_c4_tateLaurent
 
 set_option autoImplicit false

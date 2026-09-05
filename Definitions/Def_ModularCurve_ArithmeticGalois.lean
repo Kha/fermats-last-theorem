@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_AlgebraicCurve_BaseChangeGalois
-import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_AlgebraicCurve_BaseChangeGalois
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+
+@[expose] public section
 
 set_option autoImplicit false
 

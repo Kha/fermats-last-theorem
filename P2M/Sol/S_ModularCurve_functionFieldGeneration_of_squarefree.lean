@@ -1,13 +1,17 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
-import Theorems.Thm_ModularCurve_relfinrank_full_of_squarefree
-import Theorems.Thm_ModularCurve_relfinrank_modularFunctionField
-import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
-import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
-import Mathlib.FieldTheory.Relrank
-import Mathlib.FieldTheory.Minpoly.Field
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
+public import Theorems.Thm_ModularCurve_relfinrank_full_of_squarefree
+public import Theorems.Thm_ModularCurve_relfinrank_modularFunctionField
+public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
+public import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
+public import Mathlib.FieldTheory.Relrank
+public import Mathlib.FieldTheory.Minpoly.Field
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_functionFieldGeneration_of_squarefree
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_PhiGen
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_eq_dedekindPsi_of_socket
+module
+
+public import Definitions.Def_ModularCurve_PhiGen
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_eq_dedekindPsi_of_socket
+
+@[expose] public section
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 
 open ModularCurve ModularCurve.PhiGen

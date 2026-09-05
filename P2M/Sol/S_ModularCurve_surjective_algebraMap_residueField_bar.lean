@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_QAdicPlace
-import Theorems.Thm_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_QAdicPlace
+public import Theorems.Thm_ModularCurve_algebraMap_coeff_zero_sub_not_isUnit_bar
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_surjective_algebraMap_residueField_bar
 
 open ModularCurve AlgebraicCurve

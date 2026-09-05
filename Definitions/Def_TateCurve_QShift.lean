@@ -1,5 +1,9 @@
-import Mathlib
-import Definitions.Def_TateCurve_DefectLines
+module
+
+public import Mathlib
+public import Definitions.Def_TateCurve_DefectLines
+
+@[expose] public section
 
 set_option autoImplicit false
 

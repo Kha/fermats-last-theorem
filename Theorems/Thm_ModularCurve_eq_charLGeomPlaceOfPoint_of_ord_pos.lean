@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_SpecializeModuli
-import P2M.Util
-import P2M.Sol.S_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_SpecializeModuli
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_eq_charLGeomPlaceOfPoint_of_ord_pos
+
+@[expose] public section
 attribute [-instance] AlgebraicCurve.RationalFunctionField.instNontrivialSubtypeUnitsWithZeroMultiplicativeIntMemSubgroupValueGroupRatFuncValuationInftyValuation_definitions
 attribute [-simp] AlgebraicCurve.RationalFunctionField.placeInfty_toValuationSubring AlgebraicCurve.RationalFunctionField.placeEquivOption_placeInfty AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_some AlgebraicCurve.RationalFunctionField.placeEquivOption_placeOfPoint AlgebraicCurve.RationalFunctionField.placeEquivOption_symm_none AlgebraicCurve.Divisor.evalFun_zero AlgebraicCurve.Place.evalAt_one
 

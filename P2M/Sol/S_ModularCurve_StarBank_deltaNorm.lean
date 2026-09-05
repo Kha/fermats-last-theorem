@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_PhiGen
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
-import Mathlib.RingTheory.PowerSeries.Expand
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_PhiGen
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
+public import Mathlib.RingTheory.PowerSeries.Expand
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_deltaNorm
 
 set_option autoImplicit false

@@ -1,6 +1,10 @@
-import Mathlib
-import Theorems.Thm_LaurentSeries_coeff_pow_char
-import P2M.Util
+module
+
+public import Mathlib
+public import Theorems.Thm_LaurentSeries_coeff_pow_char
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
 attribute [-simp] ModularCurve.qExpand_coeff_mul ModularCurve.qExpandₐ_apply ModularCurve.jqN_one ModularCurve.qExpand_single ModularCurve.dedekindPsi_one ModularCurve.ModularPolynomialData.mk.sizeOf_spec ModularCurve.evalAtJ_X ModularCurve.ModularPolynomialData.mk.injEq ModularCurve.constantCoeff_jNum ModularCurve.constantCoeff_eisenstein4 ModularCurve.qExpand_C ModularCurve.coeff_jq_neg_one ModularCurve.constantCoeff_jNumQ
 

@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_JqCoeff
+module
+
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_JqCoeff
+
+@[expose] public section
 
 set_option autoImplicit false
 

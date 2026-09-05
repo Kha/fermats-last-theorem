@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_TateFormal
-import Mathlib.RingTheory.MvPowerSeries.Substitution
+module
+
+public import Definitions.Def_ModularCurve_TateFormal
+public import Mathlib.RingTheory.MvPowerSeries.Substitution
+
+@[expose] public section
 
 set_option autoImplicit false
 

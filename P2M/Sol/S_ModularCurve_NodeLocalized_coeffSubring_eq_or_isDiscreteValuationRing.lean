@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_NodeDescent
-import Theorems.Thm_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_NodeDescent
+public import Theorems.Thm_ValuationSubring_exists_eq_valuationSubringAtPrime_of_forall_algebraMap_mem
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_NodeLocalized_coeffSubring_eq_or_isDiscreteValuationRing
 
 set_option autoImplicit false

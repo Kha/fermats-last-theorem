@@ -1,19 +1,23 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_one_le_coeff_jq
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_coeffEmb_qExpand
-import Theorems.Thm_ModularCurve_transcendental_jq
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
-import Mathlib.Algebra.Polynomial.Roots
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
-import Mathlib.FieldTheory.Minpoly.Field
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.RingTheory.Polynomial.GaussLemma
-import Mathlib.RingTheory.Polynomial.RationalRoot
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.LinearCombination
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_one_le_coeff_jq
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_coeffEmb_qExpand
+public import Theorems.Thm_ModularCurve_transcendental_jq
+public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+public import Mathlib.Algebra.Polynomial.Roots
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Algebra
+public import Mathlib.FieldTheory.Minpoly.Field
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Mathlib.RingTheory.Polynomial.GaussLemma
+public import Mathlib.RingTheory.Polynomial.RationalRoot
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.LinearCombination
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_phiIrreducible_of_splits
 
 noncomputable section

@@ -1,5 +1,9 @@
-import Definitions.Def_AlgebraicCurve_GluedPic0
-import Definitions.Def_AlgebraicCurve_BaseChangeGalois
+module
+
+public import Definitions.Def_AlgebraicCurve_GluedPic0
+public import Definitions.Def_AlgebraicCurve_BaseChangeGalois
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,5 +1,9 @@
-import Mathlib
-import P2M.Util
+module
+
+public import Mathlib
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin
 
 set_option autoImplicit false

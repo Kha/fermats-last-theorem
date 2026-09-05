@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_X0
-import Mathlib.FieldTheory.Relrank
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Mathlib.FieldTheory.Relrank
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_relfinrank_modularFunctionField
 
 namespace ModularCurve p2m_export "ModularCurve" "qExpand jq jqN modularFunctionField adjoin_jq_le" end ModularCurve

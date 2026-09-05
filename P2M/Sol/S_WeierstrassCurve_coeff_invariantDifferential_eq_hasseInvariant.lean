@@ -1,9 +1,13 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_HasseInvariant
-import Theorems.Thm_LaurentSeries_derivative_mul
-import Theorems.Thm_LaurentSeries_coeff_neg_one_inv_mul_derivative
-import Theorems.Thm_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_HasseInvariant
+public import Theorems.Thm_LaurentSeries_derivative_mul
+public import Theorems.Thm_LaurentSeries_coeff_neg_one_inv_mul_derivative
+public import Theorems.Thm_LaurentSeries_coeff_neg_one_mul_inv_pow_uniformizer
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_WeierstrassCurve_coeff_invariantDifferential_eq_hasseInvariant
 attribute [-simp] ModularCurve.qExpand_coeff_mul ModularCurve.qExpandₐ_apply ModularCurve.jqN_one ModularCurve.qExpand_single ModularCurve.dedekindPsi_one ModularCurve.ModularPolynomialData.mk.sizeOf_spec ModularCurve.evalAtJ_X ModularCurve.ModularPolynomialData.mk.injEq ModularCurve.constantCoeff_jNum ModularCurve.constantCoeff_eisenstein4 ModularCurve.qExpand_C ModularCurve.coeff_jq_neg_one ModularCurve.constantCoeff_jNumQ
 

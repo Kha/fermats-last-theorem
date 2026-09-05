@@ -1,6 +1,10 @@
-import Mathlib
-import Theorems.Thm_IsLocalRing_uniqueFactorizationMonoid_of_isPrincipalIdealRing_quotient
-import P2M.Util
+module
+
+public import Mathlib
+public import Theorems.Thm_IsLocalRing_uniqueFactorizationMonoid_of_isPrincipalIdealRing_quotient
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_IsLocalRing_isIntegrallyClosed_of_isPrincipalIdealRing_quotient
 
 theorem solution

@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Data.Nat.Choose.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Data.Nat.Choose.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_onePoint
 
 set_option autoImplicit false

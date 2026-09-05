@@ -1,7 +1,11 @@
-import Definitions.Def_TateCurve_Defect
-import Theorems.Thm_TateCurve_defectCoeff_eq_zero
-import Theorems.Thm_TateCurve_equation_pointX_pointY_of_defectCoeff_eq_zero
-import P2M.Util
+module
+
+public import Definitions.Def_TateCurve_Defect
+public import Theorems.Thm_TateCurve_defectCoeff_eq_zero
+public import Theorems.Thm_TateCurve_equation_pointX_pointY_of_defectCoeff_eq_zero
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_equation_pointX_pointY
 attribute [-simp] TateCurve.cauchyMulInt_zero TateCurve.cauchyMulInt3_zero TateCurve.tent_one TateCurve.Gz_zero TateCurve.cauchyMulInt_one TateCurve.tent_zero TateCurve.Fz_zero FLT.DivisorConvolution.sigma_zero_right FLT.DivisorConvolution.sigma_one_right FLT.DivisorConvolution.sigmaConv_one FLT.DivisorConvolution.sigmaConv_zero
 

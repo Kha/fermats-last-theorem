@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_modularFunctionFieldC_self_collapse_unconditional
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_modularFunctionFieldC_self_collapse_unconditional
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.modularFunctionFieldC_self_collapse_unconditional (K : Type*) [Field K] {ℓ : ℕ} [Fact ℓ.Prime] [CharP K ℓ] :

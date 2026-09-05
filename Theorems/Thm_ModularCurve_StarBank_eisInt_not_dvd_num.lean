@@ -1,6 +1,10 @@
-import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
-import P2M.Util
-import P2M.Sol.S_ModularCurve_StarBank_eisInt_not_dvd_num
+module
+
+public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_StarBank_eisInt_not_dvd_num
+
+@[expose] public section
 
 open scoped ArithmeticFunction.sigma
 open Finset

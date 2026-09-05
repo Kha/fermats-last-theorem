@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_AtkinLehner
-import P2M.Util
-import P2M.Sol.S_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
+module
+
+public import Definitions.Def_ModularCurve_AtkinLehner
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
+
+@[expose] public section
 
 open ModularCurve AlgebraicCurve
 

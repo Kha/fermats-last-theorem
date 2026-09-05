@@ -1,19 +1,23 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
-import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
-import Theorems.Thm_ModularCurve_transcendental_jqModC
-import Theorems.Thm_ModularCurve_coeffMap_injective
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.RingTheory.AdjoinRoot
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Eval
-import Mathlib.Algebra.CharP.Lemmas
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+public import Theorems.Thm_ModularCurve_PhiGen_splits_of_prime
+public import Theorems.Thm_ModularCurve_qExpand_jqModC_eq_pow_unconditional
+public import Theorems.Thm_ModularCurve_transcendental_jqModC
+public import Theorems.Thm_ModularCurve_coeffMap_injective
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Mathlib.RingTheory.AdjoinRoot
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Eval
+public import Mathlib.Algebra.CharP.Lemmas
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_modularPolynomial_kronecker
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

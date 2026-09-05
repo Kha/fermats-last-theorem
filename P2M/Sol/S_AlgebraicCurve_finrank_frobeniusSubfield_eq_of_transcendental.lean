@@ -1,10 +1,14 @@
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Mathlib.FieldTheory.Perfect
-import Mathlib.FieldTheory.KummerPolynomial
-import Mathlib.FieldTheory.Relrank
-import Mathlib.LinearAlgebra.Dimension.Free
-import Mathlib.Algebra.CharP.Algebra
-import P2M.Util
+module
+
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import Mathlib.FieldTheory.Perfect
+public import Mathlib.FieldTheory.KummerPolynomial
+public import Mathlib.FieldTheory.Relrank
+public import Mathlib.LinearAlgebra.Dimension.Free
+public import Mathlib.Algebra.CharP.Algebra
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_finrank_frobeniusSubfield_eq_of_transcendental
 
 set_option autoImplicit false

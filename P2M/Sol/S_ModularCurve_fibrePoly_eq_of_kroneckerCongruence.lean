@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_FibrePoly
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_FibrePoly
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_fibrePoly_eq_of_kroneckerCongruence
 open Polynomial ModularCurve
 theorem solution {k : Type*} [Field k]

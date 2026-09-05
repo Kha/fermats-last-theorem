@@ -1,16 +1,20 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Theorems.Thm_Polynomial_irreducible_of_transitive_ringAut
-import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
-import Mathlib.NumberTheory.Cyclotomic.Gal
-import Mathlib.FieldTheory.Finite.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Theorems.Thm_Polynomial_irreducible_of_transitive_ringAut
+public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+public import Mathlib.NumberTheory.Cyclotomic.Gal
+public import Mathlib.FieldTheory.Finite.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_pow_succ_of_not_mem
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

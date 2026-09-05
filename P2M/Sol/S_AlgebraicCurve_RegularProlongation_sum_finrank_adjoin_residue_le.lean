@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_RegularProlongation
-import Theorems.Thm_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_RegularProlongation
+public import Theorems.Thm_ValuationSubring_exists_forall_mem_and_sub_mem_nonunits
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le
 
 p2m_open "AlgebraicCurve P2MW.S_AlgebraicCurve_RegularProlongation_sum_finrank_adjoin_residue_le.AlgebraicCurve IsLocalRing"

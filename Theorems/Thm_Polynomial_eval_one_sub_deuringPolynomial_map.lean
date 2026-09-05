@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_Polynomial_DeuringPolynomial
-import P2M.Util
-import P2M.Sol.S_Polynomial_eval_one_sub_deuringPolynomial_map
+module
+
+public import Mathlib
+public import Definitions.Def_Polynomial_DeuringPolynomial
+public import P2M.Util
+public import P2M.Sol.S_Polynomial_eval_one_sub_deuringPolynomial_map
+
+@[expose] public section
 
 open Polynomial
 theorem Polynomial.eval_one_sub_deuringPolynomial_map {F : Type*} [Field F] (q : ℕ) [Fact q.Prime]

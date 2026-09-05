@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_X0
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_coeffEmb_qExpand
 
 open ModularCurve IntermediateField HahnSeries

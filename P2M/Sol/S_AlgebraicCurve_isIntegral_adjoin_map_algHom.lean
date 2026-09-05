@@ -1,6 +1,10 @@
-import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
-import Mathlib.Algebra.Algebra.Subalgebra.Lattice
-import P2M.Util
+module
+
+public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
+public import Mathlib.Algebra.Algebra.Subalgebra.Lattice
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_isIntegral_adjoin_map_algHom
 
 set_option autoImplicit false

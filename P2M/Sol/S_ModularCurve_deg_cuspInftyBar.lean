@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_AtkinLehner
-import Theorems.Thm_ModularCurve_deg_qInftyPlaceBar
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_AtkinLehner
+public import Theorems.Thm_ModularCurve_deg_qInftyPlaceBar
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_deg_cuspInftyBar
 
 open ModularCurve AlgebraicCurve

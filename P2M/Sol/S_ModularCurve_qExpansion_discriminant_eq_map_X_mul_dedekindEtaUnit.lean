@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod
-import Mathlib.RingTheory.PowerSeries.PiTopology
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Theorems.Thm_ModularCurve_qExpansion_discriminant_eq_X_mul_tprod
+public import Mathlib.RingTheory.PowerSeries.PiTopology
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_qExpansion_discriminant_eq_map_X_mul_dedekindEtaUnit
 
 set_option autoImplicit false

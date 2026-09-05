@@ -1,11 +1,15 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_modularPolynomialFamily
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
-import Mathlib.RingTheory.Polynomial.Resultant.Basic
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_modularPolynomialFamily
+public import Mathlib.NumberTheory.ArithmeticFunction.Misc
+public import Mathlib.RingTheory.Polynomial.Resultant.Basic
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_nonempty_modularPolynomialData_of_squarefree
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

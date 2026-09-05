@@ -1,10 +1,14 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_HasseInvariant
-import Definitions.Def_ModularCurve_JWidth
-import Theorems.Thm_ModularCurve_sum_inv_jWidth_of_ssJSetHasse
-import Theorems.Thm_ModularCurve_zero_mem_ssJSetHasse_iff
-import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_HasseInvariant
+public import Definitions.Def_ModularCurve_JWidth
+public import Theorems.Thm_ModularCurve_sum_inv_jWidth_of_ssJSetHasse
+public import Theorems.Thm_ModularCurve_zero_mem_ssJSetHasse_iff
+public import Theorems.Thm_ModularCurve_ofNat1728_mem_ssJSetHasse_iff
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_card_eq_of_ssJSetHasse
 
 set_option autoImplicit false

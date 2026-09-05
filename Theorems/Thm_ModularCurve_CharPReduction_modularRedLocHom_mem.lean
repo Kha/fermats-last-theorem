@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_CharPReduction
-import P2M.Util
-import P2M.Sol.S_ModularCurve_CharPReduction_modularRedLocHom_mem
+module
+
+public import Definitions.Def_ModularCurve_CharPReduction
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_CharPReduction_modularRedLocHom_mem
+
+@[expose] public section
 
 open ModularCurve CharPReduction
 theorem ModularCurve.CharPReduction.modularRedLocHom_mem {L : Type*} [CommRing L] (A : Subring L)

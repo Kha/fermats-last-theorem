@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_TateCurve_DefectLines
-import Theorems.Thm_TateCurve_lineCoeff_eq_zero
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_TateCurve_DefectLines
+public import Theorems.Thm_TateCurve_lineCoeff_eq_zero
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_defectCoeff_eq_zero
 
 open TateCurve

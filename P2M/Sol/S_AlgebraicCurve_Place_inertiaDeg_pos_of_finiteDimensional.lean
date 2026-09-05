@@ -1,5 +1,9 @@
-import Definitions.Def_AlgebraicCurve_DivisorPushPull
-import P2M.Util
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorPushPull
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_Place_inertiaDeg_pos_of_finiteDimensional
 
 open AlgebraicCurve

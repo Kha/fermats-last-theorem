@@ -1,5 +1,9 @@
-import Definitions.Def_AlgebraicCurve_Correspondence
-import Definitions.Def_ModularCurve_ArithmeticGalois
+module
+
+public import Definitions.Def_AlgebraicCurve_Correspondence
+public import Definitions.Def_ModularCurve_ArithmeticGalois
+
+@[expose] public section
 
 set_option autoImplicit false
 

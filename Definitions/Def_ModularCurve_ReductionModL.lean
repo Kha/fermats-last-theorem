@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_ModularCurve_ArithmeticGalois
-import Definitions.Def_ModularCurve_X0ModL
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_ArithmeticGalois
+public import Definitions.Def_ModularCurve_X0ModL
+
+@[expose] public section
 
 set_option autoImplicit false
 

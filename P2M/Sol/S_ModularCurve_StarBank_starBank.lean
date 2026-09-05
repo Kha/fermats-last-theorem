@@ -1,21 +1,25 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
-import Theorems.Thm_ModularCurve_StarBank_closure
-import Theorems.Thm_ModularCurve_StarBank_count
-import Theorems.Thm_ModularCurve_StarBank_deltaNorm
-import Theorems.Thm_ModularCurve_StarBank_delta_pow_ne
-import Theorems.Thm_ModularCurve_StarBank_eisInt_not_dvd_num
-import Theorems.Thm_ModularCurve_StarBank_eisInt_series
-import Theorems.Thm_ModularCurve_StarBank_hassePolyDescent
-import Theorems.Thm_ModularCurve_StarBank_onePoint
-import Theorems.Thm_ModularCurve_StarBank_press
-import Theorems.Thm_ModularCurve_StarBank_starK
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Algebra.CharP.Algebra
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_jqNModC_prime_not_mem_adjoin_of_forall_aeval_ne
+public import Theorems.Thm_ModularCurve_StarBank_closure
+public import Theorems.Thm_ModularCurve_StarBank_count
+public import Theorems.Thm_ModularCurve_StarBank_deltaNorm
+public import Theorems.Thm_ModularCurve_StarBank_delta_pow_ne
+public import Theorems.Thm_ModularCurve_StarBank_eisInt_not_dvd_num
+public import Theorems.Thm_ModularCurve_StarBank_eisInt_series
+public import Theorems.Thm_ModularCurve_StarBank_hassePolyDescent
+public import Theorems.Thm_ModularCurve_StarBank_onePoint
+public import Theorems.Thm_ModularCurve_StarBank_press
+public import Theorems.Thm_ModularCurve_StarBank_starK
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Algebra.CharP.Algebra
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_starBank
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

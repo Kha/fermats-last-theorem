@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Mathlib.RingTheory.IntegralClosure.IntegrallyClosed
-import Mathlib.RingTheory.Polynomial.RationalRoot
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Mathlib.RingTheory.IntegralClosure.IntegrallyClosed
+public import Mathlib.RingTheory.Polynomial.RationalRoot
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_PhiGenDescends_intCoeffs
 
 noncomputable section

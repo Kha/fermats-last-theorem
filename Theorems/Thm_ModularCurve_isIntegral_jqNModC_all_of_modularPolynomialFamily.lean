@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import P2M.Util
-import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.isIntegral_jqNModC_all_of_modularPolynomialFamily (K : Type*) [Field K] (hΦ : ModularPolynomialFamily)

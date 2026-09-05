@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_PhiGen
-import Definitions.Def_ModularCurve_JqCoeff
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_PhiGen
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_StarBank_closure
 
 set_option autoImplicit false

@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-import Mathlib.Data.Nat.Factorization.Induction
-import Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+public import Mathlib.Data.Nat.Factorization.Induction
+public import Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_exists_monic_evalAtJ_jqN_eq_zero
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

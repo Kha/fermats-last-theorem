@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_AtkinLehnerPartial
-import Definitions.Def_ModularCurve_HeckeOperator
-import Definitions.Def_ModularCurve_GeometricBaseChange
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_AtkinLehnerPartial
+public import Definitions.Def_ModularCurve_HeckeOperator
+public import Definitions.Def_ModularCurve_GeometricBaseChange
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_geomAut_atkinLehner_comp_legs
 
 set_option autoImplicit false

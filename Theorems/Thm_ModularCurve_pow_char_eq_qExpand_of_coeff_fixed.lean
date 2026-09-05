@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_X0
-import P2M.Util
-import P2M.Sol.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_pow_char_eq_qExpand_of_coeff_fixed
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.pow_char_eq_qExpand_of_coeff_fixed {R : Type*} [CommRing R] (p : ℕ) [Fact p.Prime] [CharP R p]

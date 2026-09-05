@@ -1,6 +1,10 @@
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_Place_exists_forall_ord_eq
+module
+
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_Place_exists_forall_ord_eq
+
+@[expose] public section
 
 open AlgebraicCurve
 theorem AlgebraicCurve.Place.exists_forall_ord_eq {K F : Type*} [Field K] [Field F] [Algebra K F]

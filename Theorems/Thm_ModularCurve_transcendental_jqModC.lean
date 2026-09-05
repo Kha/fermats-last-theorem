@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_transcendental_jqModC
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_transcendental_jqModC
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.transcendental_jqModC (K : Type*) [CommRing K] :

@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import Definitions.Def_AlgebraicCurve_Repartitions
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import Definitions.Def_AlgebraicCurve_Repartitions
+
+@[expose] public section
 
 set_option autoImplicit false
 

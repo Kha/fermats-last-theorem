@@ -1,8 +1,12 @@
-import Definitions.Def_TateCurve_Defect
-import Theorems.Thm_TateCurve_pointX_qExpansion
-import Theorems.Thm_TateCurve_pointY_qExpansion
-import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
-import P2M.Util
+module
+
+public import Definitions.Def_TateCurve_Defect
+public import Theorems.Thm_TateCurve_pointX_qExpansion
+public import Theorems.Thm_TateCurve_pointY_qExpansion
+public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_defect_qExpansion
 
 set_option autoImplicit false

@@ -1,5 +1,9 @@
-import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
-import P2M.Util
+module
+
+public import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_WeierstrassCurve_Affine_evalEval_psi_sq
 
 open Polynomial

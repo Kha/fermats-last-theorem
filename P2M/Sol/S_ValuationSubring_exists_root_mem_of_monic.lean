@@ -1,6 +1,10 @@
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.RingTheory.Valuation.LocalSubring
-import P2M.Util
+module
+
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import Mathlib.RingTheory.Valuation.LocalSubring
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ValuationSubring_exists_root_mem_of_monic
 
 set_option autoImplicit false

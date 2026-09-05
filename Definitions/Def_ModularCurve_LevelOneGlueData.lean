@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_ModularCurve_JZeroSemistableSpecialization
-import Definitions.Def_ModularCurve_PlaceSpecialization
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_JZeroSemistableSpecialization
+public import Definitions.Def_ModularCurve_PlaceSpecialization
+
+@[expose] public section
 
 set_option autoImplicit false
 

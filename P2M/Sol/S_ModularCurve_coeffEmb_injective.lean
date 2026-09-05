@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Theorems.Thm_ModularCurve_coeffMap_injective
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Theorems.Thm_ModularCurve_coeffMap_injective
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_coeffEmb_injective
 
 open ModularCurve IntermediateField HahnSeries

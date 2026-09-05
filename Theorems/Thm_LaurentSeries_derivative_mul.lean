@@ -1,6 +1,10 @@
-import Mathlib
-import P2M.Util
-import P2M.Sol.S_LaurentSeries_derivative_mul
+module
+
+public import Mathlib
+public import P2M.Util
+public import P2M.Sol.S_LaurentSeries_derivative_mul
+
+@[expose] public section
 set_option synthInstance.maxHeartbeats 400000
 set_option autoImplicit false
 

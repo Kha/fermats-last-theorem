@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_JqCoeff
-import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Theorems.Thm_ModularCurve_ModularPolynomialData_eval_jqNModC_mul_eq_zero
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_mul
 attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
 

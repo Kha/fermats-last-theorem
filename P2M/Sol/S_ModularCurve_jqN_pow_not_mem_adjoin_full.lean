@@ -1,15 +1,19 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.FieldTheory.Minpoly.Field
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Mathlib.Algebra.Polynomial.Splits
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Mathlib.FieldTheory.Minpoly.Field
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import Mathlib.Algebra.Polynomial.Splits
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_jqN_pow_not_mem_adjoin_full
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

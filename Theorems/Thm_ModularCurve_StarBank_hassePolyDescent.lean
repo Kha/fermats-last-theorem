@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
-import P2M.Util
-import P2M.Sol.S_ModularCurve_StarBank_hassePolyDescent
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_StarBank_hassePolyDescent
+
+@[expose] public section
 attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
 
 open Polynomial HahnSeries ModularCurve UpperHalfPlane

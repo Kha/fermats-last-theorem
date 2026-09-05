@@ -1,11 +1,15 @@
-import Mathlib
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_coeff_jqModC_pow_self
-import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
-import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_self
+public import Theorems.Thm_ModularCurve_coeff_jqModC_pow_of_lt
+public import Theorems.Thm_ModularCurve_coeff_jqModC_neg_one
+
+@[expose] public section
 
 set_option autoImplicit false
 

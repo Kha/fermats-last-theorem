@@ -1,6 +1,10 @@
-import Mathlib
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
+module
+
+public import Mathlib
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_exists_separating_transcendental_of_perfectField
+
+@[expose] public section
 
 theorem AlgebraicCurve.exists_separating_transcendental_of_perfectField
     {K F : Type*} [Field K] [Field F] [Algebra K F] [PerfectField K]

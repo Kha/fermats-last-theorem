@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_CuspidalClass
-import Theorems.Thm_ModularCurve_ord_cuspZeroBar_coeffEmb_jq
-import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_CuspidalClass
+public import Theorems.Thm_ModularCurve_ord_cuspZeroBar_coeffEmb_jq
+public import Theorems.Thm_ModularCurve_ord_cuspInftyBar_coeffEmb_jq
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_cuspZeroBar_ne_cuspInftyBar
 
 open ModularCurve AlgebraicCurve

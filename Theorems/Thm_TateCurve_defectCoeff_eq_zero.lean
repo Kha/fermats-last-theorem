@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_TateCurve_Defect
-import P2M.Util
-import P2M.Sol.S_TateCurve_defectCoeff_eq_zero
+module
+
+public import Mathlib
+public import Definitions.Def_TateCurve_Defect
+public import P2M.Util
+public import P2M.Sol.S_TateCurve_defectCoeff_eq_zero
+
+@[expose] public section
 attribute [-simp] TateCurve.cauchyMulInt_zero TateCurve.cauchyMulInt3_zero TateCurve.tent_one TateCurve.Gz_zero TateCurve.cauchyMulInt_one TateCurve.tent_zero TateCurve.Fz_zero FLT.DivisorConvolution.sigma_zero_right FLT.DivisorConvolution.sigma_one_right FLT.DivisorConvolution.sigmaConv_one FLT.DivisorConvolution.sigmaConv_zero
 
 open TateCurve

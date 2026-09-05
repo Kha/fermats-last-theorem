@@ -1,8 +1,12 @@
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.RingTheory.Valuation.LocalSubring
-import Mathlib.Algebra.Polynomial.Lifts
-import Theorems.Thm_ValuationSubring_exists_root_mem_of_monic
-import P2M.Util
+module
+
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import Mathlib.RingTheory.Valuation.LocalSubring
+public import Mathlib.Algebra.Polynomial.Lifts
+public import Theorems.Thm_ValuationSubring_exists_root_mem_of_monic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ValuationSubring_isAlgClosed_residueField
 
 set_option autoImplicit false

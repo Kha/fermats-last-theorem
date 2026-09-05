@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+
+@[expose] public section
 
 set_option autoImplicit false
 

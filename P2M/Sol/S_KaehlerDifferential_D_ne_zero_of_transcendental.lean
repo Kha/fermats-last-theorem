@@ -1,9 +1,13 @@
-import Mathlib.RingTheory.Etale.Kaehler
-import Mathlib.RingTheory.Etale.Field
-import Mathlib.RingTheory.Kaehler.Polynomial
-import Mathlib.FieldTheory.RatFunc.AsPolynomial
-import Mathlib.LinearAlgebra.TensorProduct.Basis
-import P2M.Util
+module
+
+public import Mathlib.RingTheory.Etale.Kaehler
+public import Mathlib.RingTheory.Etale.Field
+public import Mathlib.RingTheory.Kaehler.Polynomial
+public import Mathlib.FieldTheory.RatFunc.AsPolynomial
+public import Mathlib.LinearAlgebra.TensorProduct.Basis
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_KaehlerDifferential_D_ne_zero_of_transcendental
 
 noncomputable section

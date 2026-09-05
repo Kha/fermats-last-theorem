@@ -1,4 +1,8 @@
-import Definitions.Def_ModularCurve_HeckeOperator
+module
+
+public import Definitions.Def_ModularCurve_HeckeOperator
+
+@[expose] public section
 
 set_option autoImplicit false
 

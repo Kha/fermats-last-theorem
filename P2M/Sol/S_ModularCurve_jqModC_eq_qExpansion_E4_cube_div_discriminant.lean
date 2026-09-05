@@ -1,12 +1,16 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
-import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-import Theorems.Thm_ModularCurve_hasSum_jq_qParam
-import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
-import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
-import Theorems.Thm_ModularCurve_coeffEmb_jq
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
+public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
+public import Theorems.Thm_ModularCurve_hasSum_jq_qParam
+public import Theorems.Thm_ModularCurve_hasSum_qParam_mul_laurent
+public import Theorems.Thm_ModularCurve_laurent_qParam_coeff_unique
+public import Theorems.Thm_ModularCurve_coeffEmb_jq
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
 
 open UpperHalfPlane

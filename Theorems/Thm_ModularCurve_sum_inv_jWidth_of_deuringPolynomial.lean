@@ -1,9 +1,13 @@
-import Mathlib
-import Definitions.Def_Polynomial_DeuringPolynomial
-import Definitions.Def_ModularCurve_LegendreJ
-import Definitions.Def_ModularCurve_JWidth
-import P2M.Util
-import P2M.Sol.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
+module
+
+public import Mathlib
+public import Definitions.Def_Polynomial_DeuringPolynomial
+public import Definitions.Def_ModularCurve_LegendreJ
+public import Definitions.Def_ModularCurve_JWidth
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_sum_inv_jWidth_of_deuringPolynomial
+
+@[expose] public section
 
 open Polynomial ModularCurve
 theorem ModularCurve.sum_inv_jWidth_of_deuringPolynomial (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)

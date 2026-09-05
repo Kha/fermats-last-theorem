@@ -1,9 +1,13 @@
-import Mathlib.FieldTheory.LinearDisjoint
-import Mathlib.RingTheory.TensorProduct.Free
-import Mathlib.Algebra.Algebra.Hom.Rat
-import Mathlib.Algebra.Module.LinearMap.Rat
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_FieldTheory_RatAlgClosureGalois
+module
+
+public import Mathlib.FieldTheory.LinearDisjoint
+public import Mathlib.RingTheory.TensorProduct.Free
+public import Mathlib.Algebra.Algebra.Hom.Rat
+public import Mathlib.Algebra.Module.LinearMap.Rat
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_FieldTheory_RatAlgClosureGalois
+
+@[expose] public section
 
 set_option autoImplicit false
 

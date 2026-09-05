@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_AlgebraicCurve_RatFuncPlaces
-import Theorems.Thm_ModularCurve_transcendental_jqModC
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_AlgebraicCurve_RatFuncPlaces
+public import Theorems.Thm_ModularCurve_transcendental_jqModC
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_pow_char_eq_map_frobenius_qExpand
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_X0
+public import Theorems.Thm_ModularCurve_pow_char_eq_map_frobenius_qExpand
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_LaurentSeries_coeff_pow_char
 
 set_option autoImplicit false

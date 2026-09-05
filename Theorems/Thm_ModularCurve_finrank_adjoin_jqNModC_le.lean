@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_JqCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_le
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_JqCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_finrank_adjoin_jqNModC_le
+
+@[expose] public section
 attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
 
 open ModularCurve

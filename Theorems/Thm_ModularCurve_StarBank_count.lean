@@ -1,6 +1,10 @@
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import P2M.Util
-import P2M.Sol.S_ModularCurve_StarBank_count
+module
+
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_StarBank_count
+
+@[expose] public section
 
 open Polynomial
 theorem ModularCurve.StarBank.count {K : Type*} [Field K] [IsAlgClosed K] {p : ℕ}

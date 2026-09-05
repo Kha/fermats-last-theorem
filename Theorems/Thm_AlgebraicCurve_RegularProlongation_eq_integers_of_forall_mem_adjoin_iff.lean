@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_RegularProlongation
-import P2M.Util
-import P2M.Sol.S_AlgebraicCurve_RegularProlongation_eq_integers_of_forall_mem_adjoin_iff
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_RegularProlongation
+public import P2M.Util
+public import P2M.Sol.S_AlgebraicCurve_RegularProlongation_eq_integers_of_forall_mem_adjoin_iff
+
+@[expose] public section
 
 open AlgebraicCurve
 

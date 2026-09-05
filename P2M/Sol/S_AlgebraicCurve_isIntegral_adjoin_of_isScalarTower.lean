@@ -1,6 +1,10 @@
-import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
-import Mathlib.Algebra.Algebra.Subalgebra.Tower
-import P2M.Util
+module
+
+public import Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic
+public import Mathlib.Algebra.Algebra.Subalgebra.Tower
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_isIntegral_adjoin_of_isScalarTower
 
 set_option autoImplicit false

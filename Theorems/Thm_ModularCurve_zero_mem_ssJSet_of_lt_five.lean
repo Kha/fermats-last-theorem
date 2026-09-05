@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_ModularCurve_SupersingularModuli
-import P2M.Util
-import P2M.Sol.S_ModularCurve_zero_mem_ssJSet_of_lt_five
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_SupersingularModuli
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_zero_mem_ssJSet_of_lt_five
+
+@[expose] public section
 
 set_option autoImplicit false
 

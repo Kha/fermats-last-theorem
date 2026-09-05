@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_PhiGen
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import P2M.Util
-import P2M.Sol.S_ModularCurve_StarBank_deltaNorm
+module
+
+public import Definitions.Def_ModularCurve_PhiGen
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_StarBank_deltaNorm
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.StarBank.deltaNorm {K : Type*} [Field K] (p : ℕ) [Fact p.Prime] (ζ : Kˣ)

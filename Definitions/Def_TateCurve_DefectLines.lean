@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_TateCurve_Defect
-import Definitions.Def_NumberTheory_DivisorConvolution
-import Theorems.Thm_TateCurve_defectCoeff_one
+module
+
+public import Mathlib
+public import Definitions.Def_TateCurve_Defect
+public import Definitions.Def_NumberTheory_DivisorConvolution
+public import Theorems.Thm_TateCurve_defectCoeff_one
+
+@[expose] public section
 
 set_option autoImplicit false
 

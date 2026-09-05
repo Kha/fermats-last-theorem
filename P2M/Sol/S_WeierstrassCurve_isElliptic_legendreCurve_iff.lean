@@ -1,7 +1,11 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_HasseInvariant
-import Definitions.Def_ModularCurve_LegendreJ
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_HasseInvariant
+public import Definitions.Def_ModularCurve_LegendreJ
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_WeierstrassCurve_isElliptic_legendreCurve_iff
 
 set_option autoImplicit false

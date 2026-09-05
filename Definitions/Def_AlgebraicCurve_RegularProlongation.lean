@@ -1,5 +1,9 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_ConstantReduction
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_ConstantReduction
+
+@[expose] public section
 
 set_option autoImplicit false
 

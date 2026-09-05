@@ -1,9 +1,13 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.FieldTheory.Galois.Basic
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.FieldTheory.Galois.Basic
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_PhiGen_exists_galoisPerm
 
 noncomputable section

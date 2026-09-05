@@ -1,6 +1,10 @@
-import Definitions.Def_TateCurve_Defect
-import Theorems.Thm_TateCurve_nodal_xfun_yfun
-import P2M.Util
+module
+
+public import Definitions.Def_TateCurve_Defect
+public import Theorems.Thm_TateCurve_nodal_xfun_yfun
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_defectCoeff_zero
 open TateCurve
 open scoped NNReal

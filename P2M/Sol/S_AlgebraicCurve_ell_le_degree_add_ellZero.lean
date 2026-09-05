@@ -1,9 +1,13 @@
-import Mathlib
-import Definitions.Def_AlgebraicCurve_DivisorClassGroup
-import Definitions.Def_AlgebraicCurve_Repartitions
-import Definitions.Def_AlgebraicCurve_IsCurveOver
-import Definitions.Def_AlgebraicCurve_AdelicIndex
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
+public import Definitions.Def_AlgebraicCurve_Repartitions
+public import Definitions.Def_AlgebraicCurve_IsCurveOver
+public import Definitions.Def_AlgebraicCurve_AdelicIndex
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_ell_le_degree_add_ellZero
 
 set_option autoImplicit false

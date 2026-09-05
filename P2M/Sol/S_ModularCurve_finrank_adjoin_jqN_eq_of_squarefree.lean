@@ -1,22 +1,26 @@
-import Definitions.Def_ModularCurve_X0
-import Definitions.Def_ModularCurve_LaurentCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_coeffMap_qExpand
-import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
-import Theorems.Thm_ModularCurve_full_eq_adjoin_primes
-import Theorems.Thm_ModularCurve_relfinrank_full_of_squarefree
-import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
-import Theorems.Thm_ModularCurve_dedekindPsi_prime
-import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.NumberTheory.Cyclotomic.Basic
-import Mathlib.RingTheory.Coprime.Lemmas
-import Mathlib.Data.Nat.ModEq
-import Mathlib.FieldTheory.PrimitiveElement
-import Mathlib.FieldTheory.Relrank
-import Mathlib.Data.Nat.Factorization.Induction
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_coeffMap_qExpand
+public import Theorems.Thm_ModularCurve_PhiGen_splits_prime_at_slot
+public import Theorems.Thm_ModularCurve_full_eq_adjoin_primes
+public import Theorems.Thm_ModularCurve_relfinrank_full_of_squarefree
+public import Theorems.Thm_ModularCurve_finrank_adjoin_jqN_eq_of_prime
+public import Theorems.Thm_ModularCurve_dedekindPsi_prime
+public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+public import Theorems.Thm_ModularCurve_dedekindPsi_of_squarefree
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.NumberTheory.Cyclotomic.Basic
+public import Mathlib.RingTheory.Coprime.Lemmas
+public import Mathlib.Data.Nat.ModEq
+public import Mathlib.FieldTheory.PrimitiveElement
+public import Mathlib.FieldTheory.Relrank
+public import Mathlib.Data.Nat.Factorization.Induction
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_finrank_adjoin_jqN_eq_of_squarefree
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

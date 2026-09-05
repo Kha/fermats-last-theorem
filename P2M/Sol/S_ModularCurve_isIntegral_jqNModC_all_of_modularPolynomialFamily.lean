@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_isIntegral_jqNModC_mul
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_isIntegral_jqNModC_mul
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_isIntegral_jqNModC_all_of_modularPolynomialFamily
 
 noncomputable section

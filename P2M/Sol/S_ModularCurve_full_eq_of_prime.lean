@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_X0
-import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
-import Theorems.Thm_ModularCurve_functionFieldGeneration_of_prime
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_X0
+public import Theorems.Thm_ModularCurve_functionFieldGeneration_iff_full_eq
+public import Theorems.Thm_ModularCurve_functionFieldGeneration_of_prime
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_full_eq_of_prime
 
 open ModularCurve IntermediateField

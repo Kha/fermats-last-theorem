@@ -1,5 +1,9 @@
-import Definitions.Def_ModularCurve_QAdicPlace
-import Definitions.Def_ModularCurve_ArithmeticGalois
+module
+
+public import Definitions.Def_ModularCurve_QAdicPlace
+public import Definitions.Def_ModularCurve_ArithmeticGalois
+
+@[expose] public section
 
 set_option autoImplicit false
 

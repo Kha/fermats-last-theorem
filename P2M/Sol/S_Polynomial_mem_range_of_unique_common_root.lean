@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Polynomial.Splits
-import Mathlib.Algebra.Polynomial.FieldDivision
-import P2M.Util
+module
+
+public import Mathlib.Algebra.Polynomial.Splits
+public import Mathlib.Algebra.Polynomial.FieldDivision
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_Polynomial_mem_range_of_unique_common_root
 
 p2m_open "Polynomial P2MW.S_Polynomial_mem_range_of_unique_common_root.Polynomial"

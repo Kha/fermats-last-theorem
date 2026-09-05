@@ -1,8 +1,12 @@
-import Mathlib
-import Definitions.Def_ModularCurve_LegendreJ
-import Theorems.Thm_ModularCurve_legendreJ_one_sub
-import Theorems.Thm_ModularCurve_legendreJ_inv
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_LegendreJ
+public import Theorems.Thm_ModularCurve_legendreJ_one_sub
+public import Theorems.Thm_ModularCurve_legendreJ_inv
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_legendreJ_eq_legendreJ_iff
 
 set_option autoImplicit false

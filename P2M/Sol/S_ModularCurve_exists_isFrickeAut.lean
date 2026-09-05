@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_AtkinLehner
-import Theorems.Thm_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
-import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_AtkinLehner
+public import Theorems.Thm_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
+public import Theorems.Thm_ModularCurve_exists_phiIrreducible_evalSymm
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_exists_isFrickeAut
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 

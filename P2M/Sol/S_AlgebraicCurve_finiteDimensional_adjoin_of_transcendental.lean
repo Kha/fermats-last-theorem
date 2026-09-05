@@ -1,9 +1,13 @@
-import Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis
-import Mathlib.RingTheory.AlgebraicIndependent.Transcendental
-import Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCondition
-import P2M.Util
+module
+
+public import Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis
+public import Mathlib.RingTheory.AlgebraicIndependent.Transcendental
+public import Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCondition
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_AlgebraicCurve_finiteDimensional_adjoin_of_transcendental
 
 open Set Cardinal

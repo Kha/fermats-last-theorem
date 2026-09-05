@@ -1,5 +1,9 @@
-import Definitions.Def_TateCurve_PointSeries
-import P2M.Util
+module
+
+public import Definitions.Def_TateCurve_PointSeries
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_TateCurve_pointY_q_mul
 open TateCurve
 open scoped NNReal

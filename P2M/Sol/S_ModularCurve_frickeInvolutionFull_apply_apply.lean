@@ -1,6 +1,10 @@
-import Definitions.Def_ModularCurve_AtkinLehner
-import Theorems.Thm_ModularCurve_modularFunctionFieldFull_algHom_ext
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_AtkinLehner
+public import Theorems.Thm_ModularCurve_modularFunctionFieldFull_algHom_ext
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_frickeInvolutionFull_apply_apply
 
 set_option autoImplicit false

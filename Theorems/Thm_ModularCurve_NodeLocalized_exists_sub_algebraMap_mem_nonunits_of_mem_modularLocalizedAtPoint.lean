@@ -1,8 +1,12 @@
-import Mathlib
-import Definitions.Def_ModularCurve_NodeLocalized
-import Definitions.Def_ModularCurve_LevelOneProlongationPair
-import P2M.Util
-import P2M.Sol.S_ModularCurve_NodeLocalized_exists_sub_algebraMap_mem_nonunits_of_mem_modularLocalizedAtPoint
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_NodeLocalized
+public import Definitions.Def_ModularCurve_LevelOneProlongationPair
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_NodeLocalized_exists_sub_algebraMap_mem_nonunits_of_mem_modularLocalizedAtPoint
+
+@[expose] public section
 
 set_option autoImplicit false
 

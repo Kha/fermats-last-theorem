@@ -1,8 +1,12 @@
-import Mathlib
-import Definitions.Def_WeierstrassCurve_HasseInvariant
-import Definitions.Def_ModularCurve_JWidth
-import P2M.Util
-import P2M.Sol.S_ModularCurve_card_eq_of_ssJSetHasse
+module
+
+public import Mathlib
+public import Definitions.Def_WeierstrassCurve_HasseInvariant
+public import Definitions.Def_ModularCurve_JWidth
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_card_eq_of_ssJSetHasse
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.card_eq_of_ssJSetHasse (q : ℕ) [Fact q.Prime] (hq : 5 ≤ q)

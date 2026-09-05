@@ -1,9 +1,13 @@
-import Mathlib
-import Definitions.Def_ModularCurve_LegendreJ
-import Definitions.Def_ModularCurve_JWidth
-import Theorems.Thm_ModularCurve_legendreJ_eq_zero_iff
-import Theorems.Thm_ModularCurve_legendreJ_eq_ofNat_iff
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_LegendreJ
+public import Definitions.Def_ModularCurve_JWidth
+public import Theorems.Thm_ModularCurve_legendreJ_eq_zero_iff
+public import Theorems.Thm_ModularCurve_legendreJ_eq_ofNat_iff
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_card_orbit_mul_jWidth
 
 set_option autoImplicit false

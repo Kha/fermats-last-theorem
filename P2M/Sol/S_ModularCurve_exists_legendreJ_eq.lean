@@ -1,6 +1,10 @@
-import Mathlib
-import Definitions.Def_ModularCurve_LegendreJ
-import P2M.Util
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_LegendreJ
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_exists_legendreJ_eq
 
 set_option autoImplicit false

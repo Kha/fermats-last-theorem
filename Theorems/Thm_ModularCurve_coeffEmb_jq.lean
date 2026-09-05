@@ -1,7 +1,11 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_LaurentCoeff
-import P2M.Util
-import P2M.Sol.S_ModularCurve_coeffEmb_jq
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_LaurentCoeff
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_coeffEmb_jq
+
+@[expose] public section
 
 open ModularCurve
 theorem ModularCurve.coeffEmb_jq (L : Type*) [Field L] [Algebra ℚ L] :

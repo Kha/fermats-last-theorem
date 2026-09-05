@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
-import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
-import P2M.Util
-import P2M.Sol.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
+public import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_jqModC_eq_qExpansion_E4_cube_div_discriminant
+
+@[expose] public section
 attribute [-simp] ModularCurve.coeffEmb_coeff ModularCurve.coeffMap_coeff ModularCurve.coeffMap_id ModularCurve.coeffMap_single
 
 open UpperHalfPlane

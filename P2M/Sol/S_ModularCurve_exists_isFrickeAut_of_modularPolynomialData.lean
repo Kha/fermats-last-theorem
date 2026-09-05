@@ -1,9 +1,13 @@
-import Definitions.Def_ModularCurve_AtkinLehner
-import Definitions.Def_ModularCurve_PhiGen
-import Theorems.Thm_ModularCurve_ModularPolynomialData_isIntegral_jqN
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Mathlib.RingTheory.AdjoinRoot
-import P2M.Util
+module
+
+public import Definitions.Def_ModularCurve_AtkinLehner
+public import Definitions.Def_ModularCurve_PhiGen
+public import Theorems.Thm_ModularCurve_ModularPolynomialData_isIntegral_jqN
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import Mathlib.RingTheory.AdjoinRoot
+public import P2M.Util
+
+@[expose] public section
 namespace P2MW.S_ModularCurve_exists_isFrickeAut_of_modularPolynomialData
 
 set_option autoImplicit false

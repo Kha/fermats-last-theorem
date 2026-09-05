@@ -1,11 +1,15 @@
-import Mathlib
-import Definitions.Def_ModularCurve_LevelOneGlueData
-import Definitions.Def_ModularCurve_SupersingularNodes
-import Definitions.Def_ModularCurve_SupersingularModuli
-import Definitions.Def_AlgebraicCurve_RegularProlongation
-import Definitions.Def_ModularCurve_CharPReduction
-import Definitions.Def_ModularCurve_CuspidalClass
-import Definitions.Def_ModularCurve_X0ModL
+module
+
+public import Mathlib
+public import Definitions.Def_ModularCurve_LevelOneGlueData
+public import Definitions.Def_ModularCurve_SupersingularNodes
+public import Definitions.Def_ModularCurve_SupersingularModuli
+public import Definitions.Def_AlgebraicCurve_RegularProlongation
+public import Definitions.Def_ModularCurve_CharPReduction
+public import Definitions.Def_ModularCurve_CuspidalClass
+public import Definitions.Def_ModularCurve_X0ModL
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000

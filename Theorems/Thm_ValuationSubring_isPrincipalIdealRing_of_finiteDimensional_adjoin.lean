@@ -1,6 +1,10 @@
-import Mathlib
-import P2M.Util
-import P2M.Sol.S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin
+module
+
+public import Mathlib
+public import P2M.Util
+public import P2M.Sol.S_ValuationSubring_isPrincipalIdealRing_of_finiteDimensional_adjoin
+
+@[expose] public section
 
 theorem ValuationSubring.isPrincipalIdealRing_of_finiteDimensional_adjoin
     {K F : Type*} [Field K] [Field F] [Algebra K F] (x : F)

@@ -1,8 +1,12 @@
-import Definitions.Def_ModularCurve_JqCoeff
-import Definitions.Def_ModularCurve_PhiGen
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import P2M.Util
-import P2M.Sol.S_ModularCurve_minpoly_jqNModC_map_eq_prod_slots
+module
+
+public import Definitions.Def_ModularCurve_JqCoeff
+public import Definitions.Def_ModularCurve_PhiGen
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import P2M.Util
+public import P2M.Sol.S_ModularCurve_minpoly_jqNModC_map_eq_prod_slots
+
+@[expose] public section
 attribute [-simp] ModularForm.val_heckeDiagMatrix ModularForm.heckeU_zero ModularForm.heckeU_zero_left ModularForm.heckeT_zero ModularForm.val_heckeMatrix ModularForm.heckeMatrix_zero ModularForm.heckeT_zero_left ModularForm.heckeDiagMatrix_zero ModularForm.val_upperTriangularGL
 
 open ModularCurve

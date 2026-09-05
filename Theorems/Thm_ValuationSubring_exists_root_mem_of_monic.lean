@@ -1,6 +1,10 @@
-import Mathlib
-import P2M.Util
-import P2M.Sol.S_ValuationSubring_exists_root_mem_of_monic
+module
+
+public import Mathlib
+public import P2M.Util
+public import P2M.Sol.S_ValuationSubring_exists_root_mem_of_monic
+
+@[expose] public section
 
 theorem ValuationSubring.exists_root_mem_of_monic {K : Type*} [Field K] [IsAlgClosed K]
     (A : ValuationSubring K) (f : Polynomial A) (hf : f.Monic) (hd : f.natDegree ≠ 0) :
