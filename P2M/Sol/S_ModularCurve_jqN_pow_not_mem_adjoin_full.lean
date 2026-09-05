@@ -460,23 +460,23 @@ private theorem range_qExpand_congr {A A' : ℕ} [NeZero A] [NeZero A'] (h : A =
   · rintro ⟨w, rfl⟩; exact ⟨w, (qExpand_congr h w).symm⟩
   · rintro ⟨w, rfl⟩; exact ⟨w, qExpand_congr h w⟩
 
-def chainField_aux (M p : ℕ) [NeZero M] [NeZero p] (i : ℕ) :
+private def chainField (M p : ℕ) [NeZero M] [NeZero p] (i : ℕ) :
     IntermediateField ℚ (LaurentSeries ℚ) :=
   IntermediateField.adjoin ℚ ((modularFunctionFieldFull M : Set (LaurentSeries ℚ))
     ∪ {x : LaurentSeries ℚ | ∃ j : ℕ, j ≤ i ∧ x = jqN (p ^ j)})
 
 private theorem mem_chainField (M p : ℕ) [NeZero M] [NeZero p] {j i : ℕ} (hj : j ≤ i) :
-    jqN (p ^ j) ∈ chainField_aux M p i :=
+    jqN (p ^ j) ∈ chainField M p i :=
   IntermediateField.subset_adjoin ℚ _ (Or.inr ⟨j, hj, rfl⟩)
 
 private theorem full_le_chainField (M p : ℕ) [NeZero M] [NeZero p] (i : ℕ) :
-    modularFunctionFieldFull M ≤ chainField_aux M p i :=
+    modularFunctionFieldFull M ≤ chainField M p i :=
   fun _ hx => IntermediateField.subset_adjoin ℚ _ (Or.inl hx)
 
 private theorem chainField_zero (M p : ℕ) [NeZero M] [NeZero p] :
-    chainField_aux M p 0 = modularFunctionFieldFull M := by
+    chainField M p 0 = modularFunctionFieldFull M := by
   apply le_antisymm
-  · rw [chainField_aux, IntermediateField.adjoin_le_iff]
+  · rw [chainField, IntermediateField.adjoin_le_iff]
     rintro x (hx | ⟨j, hj, rfl⟩)
     · exact hx
     · rw [Nat.le_zero] at hj
@@ -487,17 +487,17 @@ private theorem chainField_zero (M p : ℕ) [NeZero M] [NeZero p] :
   · exact full_le_chainField M p 0
 
 private theorem chainField_mono (M p : ℕ) [NeZero M] [NeZero p] (i : ℕ) :
-    chainField_aux M p i ≤ chainField_aux M p (i + 1) := by
-  rw [chainField_aux, chainField_aux]
+    chainField M p i ≤ chainField M p (i + 1) := by
+  rw [chainField, chainField]
   refine IntermediateField.adjoin.mono ℚ _ _ (Set.union_subset_union_right _ ?_)
   rintro z ⟨j, hj, rfl⟩
   exact ⟨j, le_trans hj (Nat.le_succ i), rfl⟩
 
 private theorem chainField_succ (M p : ℕ) [NeZero M] [NeZero p] (i : ℕ) :
-    chainField_aux M p (i + 1) = IntermediateField.adjoin ℚ
-      ((chainField_aux M p i : Set (LaurentSeries ℚ)) ∪ {jqN (p ^ i * p)}) := by
+    chainField M p (i + 1) = IntermediateField.adjoin ℚ
+      ((chainField M p i : Set (LaurentSeries ℚ)) ∪ {jqN (p ^ i * p)}) := by
   apply le_antisymm
-  · rw [chainField_aux, IntermediateField.adjoin_le_iff]
+  · rw [chainField, IntermediateField.adjoin_le_iff]
     rintro x (hx | ⟨j, hj, rfl⟩)
     · exact IntermediateField.subset_adjoin ℚ _
         (Or.inl (full_le_chainField M p i hx))
@@ -714,14 +714,14 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
     (ζ : Kˣ) (hζ : IsPrimitiveRoot (ζ : K) (M * p ^ (a + 2)))
     (dp : ModularPolynomialData p) (hsp : EvalSymm dp.Φ)
     (hF : jqN p ∉ modularFunctionFieldFull M)
-    (hIH : ∀ a' : ℕ, a' < a → jqN (p ^ (a' + 2)) ∉ chainField_aux M p (a' + 1))
-    (hmem : jqN (p ^ (a + 2)) ∈ chainField_aux M p (a + 1)) : False := by
+    (hIH : ∀ a' : ℕ, a' < a → jqN (p ^ (a' + 2)) ∉ chainField M p (a' + 1))
+    (hmem : jqN (p ^ (a + 2)) ∈ chainField M p (a + 1)) : False := by
   classical
   have hp0 : 0 < p := hp.out.pos
   have hp2 : 2 ≤ p := hp.out.two_le
   have hM0 : 0 < M := Nat.pos_of_ne_zero (NeZero.ne M)
 
-  have hnot : ∀ i : ℕ, i ≤ a → jqN (p ^ i * p) ∉ chainField_aux M p i := by
+  have hnot : ∀ i : ℕ, i ≤ a → jqN (p ^ i * p) ∉ chainField M p i := by
     intro i hi
     rw [show jqN (p ^ i * p) = jqN (p ^ (i + 1)) from jqN_congr (pow_succ p i).symm]
     rcases Nat.eq_zero_or_pos i with rfl | hi0
@@ -730,23 +730,23 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
       exact hF
     · have heq1 : jqN (p ^ (i + 1)) = jqN (p ^ (i - 1 + 2)) :=
         jqN_congr (congrArg (fun n => p ^ n) (by omega))
-      have heq2 : chainField_aux M p i = chainField_aux M p (i - 1 + 1) :=
-        congrArg (chainField_aux M p) (by omega)
+      have heq2 : chainField M p i = chainField M p (i - 1 + 1) :=
+        congrArg (chainField M p) (by omega)
       rw [heq1, heq2]
       exact hIH (i - 1) (by omega)
 
   have chain : ∀ i : ℕ, i ≤ a →
-      ∃ (σ : chainField_aux M p i →+* LaurentSeries K) (t : ℕ),
+      ∃ (σ : chainField M p i →+* LaurentSeries K) (t : ℕ),
         (σ ⟨jqN (p ^ i), mem_chainField M p (le_refl i)⟩
           = qExpand K (M * p ^ (a + 2 - i))
             (qTwist (ζ ^ (t * (M * p ^ (a + 2 - i)))) (coeffEmb K jq))) ∧
-        (∀ y : chainField_aux M p i, σ y ∈ (qExpand K (M * p ^ (a + 2 - i))).range) := by
+        (∀ y : chainField M p i, σ y ∈ (qExpand K (M * p ^ (a + 2 - i))).range) := by
     intro i
     induction i with
     | zero =>
       intro _
       refine ⟨((coeffEmb K).comp (qExpand ℚ (M * p ^ (a + 2)))).comp
-        (algebraMap (chainField_aux M p 0) (LaurentSeries ℚ)), 0, ?_, ?_⟩
+        (algebraMap (chainField M p 0) (LaurentSeries ℚ)), 0, ?_, ?_⟩
       · show coeffEmb K (qExpand ℚ (M * p ^ (a + 2)) (jqN (p ^ 0))) = _
         rw [show jqN (p ^ 0) = jq from (jqN_congr (pow_zero p)).trans jqN_one, iota_jq,
           zero_mul, pow_zero]
@@ -781,21 +781,21 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
             _ = p * (M * p ^ (a + 2 - (i + 1))) * p ^ i := by
                 rw [pow_add, pow_add, pow_one]; ring
         exact hBs ▸ hζ
-      have hσrange' : ∀ y : chainField_aux M p i,
+      have hσrange' : ∀ y : chainField M p i,
           σ y ∈ (qExpand K (p * (M * p ^ (a + 2 - (i + 1))))).range := by
         intro y
         have h := hσrange y
         rwa [range_qExpand_congr hpow_step] at h
       obtain ⟨σ', t', hcompat, hσ'new, hσ'range⟩ :=
-        chain_extend p (M * p ^ (a + 2 - (i + 1))) (p ^ i) ζ hζ' dp (chainField_aux M p i) σ
+        chain_extend p (M * p ^ (a + 2 - (i + 1))) (p ^ i) ζ hζ' dp (chainField M p i) σ
           (p ^ i) (mem_chainField M p (le_refl i)) (hnot i (Nat.le_of_succ_le hi)) t
-          hσtop' hσrange' (chainField_aux M p (i + 1)) (chainField_succ M p i)
+          hσtop' hσrange' (chainField M p (i + 1)) (chainField_succ M p i)
       refine ⟨σ', t', ?_, hσ'range⟩
-      have hxmem : jqN (p ^ i * p) ∈ chainField_aux M p (i + 1) := by
+      have hxmem : jqN (p ^ i * p) ∈ chainField M p (i + 1) := by
         rw [show jqN (p ^ i * p) = jqN (p ^ (i + 1)) from jqN_congr (pow_succ p i).symm]
         exact mem_chainField M p (le_refl (i + 1))
       have hmk : (⟨jqN (p ^ (i + 1)), mem_chainField M p (le_refl (i + 1))⟩ :
-          chainField_aux M p (i + 1)) = ⟨jqN (p ^ i * p), hxmem⟩ :=
+          chainField M p (i + 1)) = ⟨jqN (p ^ i * p), hxmem⟩ :=
         Subtype.ext (jqN_congr (pow_succ p i))
       rw [hmk]
       exact hσ'new hxmem
@@ -812,7 +812,7 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
     rw [h1]
     show TS K (M * p ^ (a + 2 - a)) _ = TS K (p * (M * p)) _
     exact TS_congr hpow_top _
-  have harange' : ∀ y : chainField_aux M p a, σa y ∈ (qExpand K (p * (M * p))).range := by
+  have harange' : ∀ y : chainField M p a, σa y ∈ (qExpand K (p * (M * p))).range := by
     intro y
     have h := harange y
     rwa [range_qExpand_congr hpow_top] at h
@@ -823,13 +823,13 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
         _ = p * (M * p) * p ^ a := by rw [pow_add, pow_add, pow_one]; ring
     exact hBs ▸ hζ
   obtain ⟨σ, tt, hcompat, hnew, hrange⟩ :=
-    chain_extend p (M * p) (p ^ a) ζ hζtop dp (chainField_aux M p a) σa (p ^ a)
+    chain_extend p (M * p) (p ^ a) ζ hζtop dp (chainField M p a) σa (p ^ a)
       (mem_chainField M p (le_refl a)) (hnot a (le_refl a)) ta hatop' harange'
-      (chainField_aux M p (a + 1)) (chainField_succ M p a)
+      (chainField M p (a + 1)) (chainField_succ M p a)
 
-  have hmem_a1 : jqN (p ^ (a + 1)) ∈ chainField_aux M p (a + 1) :=
+  have hmem_a1 : jqN (p ^ (a + 1)) ∈ chainField M p (a + 1) :=
     mem_chainField M p (le_refl (a + 1))
-  have hmem_a : jqN (p ^ a) ∈ chainField_aux M p (a + 1) :=
+  have hmem_a : jqN (p ^ a) ∈ chainField M p (a + 1) :=
     mem_chainField M p (Nat.le_succ a)
 
   have hrel_up_Ω : (phiAtSeed dp (jqN (p ^ (a + 1)))).eval (jqN (p ^ (a + 2))) = 0 := by
@@ -839,21 +839,21 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
   have hrel_dn_Ω : (phiAtSeed dp (jqN (p ^ (a + 1)))).eval (jqN (p ^ a)) = 0 := by
     have h := phiAtSeed_jqN_eval_down p dp hsp (p ^ a)
     rwa [show jqN (p ^ a * p) = jqN (p ^ (a + 1)) from jqN_congr (pow_succ p a).symm] at h
-  have hrel_up_E : (phiAtSeed dp (⟨jqN (p ^ (a + 1)), hmem_a1⟩ : chainField_aux M p (a + 1))).eval
-      (⟨jqN (p ^ (a + 2)), hmem⟩ : chainField_aux M p (a + 1)) = 0 :=
+  have hrel_up_E : (phiAtSeed dp (⟨jqN (p ^ (a + 1)), hmem_a1⟩ : chainField M p (a + 1))).eval
+      (⟨jqN (p ^ (a + 2)), hmem⟩ : chainField M p (a + 1)) = 0 :=
     phiAtSeed_eval_of_injective dp _ _
-      (algebraMap (chainField_aux M p (a + 1)) (LaurentSeries ℚ)) Subtype.val_injective hrel_up_Ω
-  have hrel_dn_E : (phiAtSeed dp (⟨jqN (p ^ (a + 1)), hmem_a1⟩ : chainField_aux M p (a + 1))).eval
-      (⟨jqN (p ^ a), hmem_a⟩ : chainField_aux M p (a + 1)) = 0 :=
+      (algebraMap (chainField M p (a + 1)) (LaurentSeries ℚ)) Subtype.val_injective hrel_up_Ω
+  have hrel_dn_E : (phiAtSeed dp (⟨jqN (p ^ (a + 1)), hmem_a1⟩ : chainField M p (a + 1))).eval
+      (⟨jqN (p ^ a), hmem_a⟩ : chainField M p (a + 1)) = 0 :=
     phiAtSeed_eval_of_injective dp _ _
-      (algebraMap (chainField_aux M p (a + 1)) (LaurentSeries ℚ)) Subtype.val_injective hrel_dn_Ω
+      (algebraMap (chainField M p (a + 1)) (LaurentSeries ℚ)) Subtype.val_injective hrel_dn_Ω
 
   have hσ_a1 : σ ⟨jqN (p ^ (a + 1)), hmem_a1⟩
       = qExpand K (M * p) (qTwist (ζ ^ (tt * (M * p))) (coeffEmb K jq)) := by
-    have hx : jqN (p ^ a * p) ∈ chainField_aux M p (a + 1) := by
+    have hx : jqN (p ^ a * p) ∈ chainField M p (a + 1) := by
       rw [show jqN (p ^ a * p) = jqN (p ^ (a + 1)) from jqN_congr (pow_succ p a).symm]
       exact hmem_a1
-    have hmk : (⟨jqN (p ^ (a + 1)), hmem_a1⟩ : chainField_aux M p (a + 1))
+    have hmk : (⟨jqN (p ^ (a + 1)), hmem_a1⟩ : chainField M p (a + 1))
         = ⟨jqN (p ^ a * p), hx⟩ := Subtype.ext (jqN_congr (pow_succ p a))
     rw [hmk]
     exact hnew hx
@@ -862,13 +862,13 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
       (qTwist (ζ ^ (tt * (M * p))) (coeffEmb K jq)))).eval
       (σ ⟨jqN (p ^ (a + 2)), hmem⟩) = 0 := by
     have h := phiAtSeed_eval_map dp _ _
-      (σ : chainField_aux M p (a + 1) →+* LaurentSeries K) hrel_up_E
+      (σ : chainField M p (a + 1) →+* LaurentSeries K) hrel_up_E
     rwa [hσ_a1] at h
   have hz_dn : (phiAtSeed dp (qExpand K (M * p)
       (qTwist (ζ ^ (tt * (M * p))) (coeffEmb K jq)))).eval
       (σ ⟨jqN (p ^ a), hmem_a⟩) = 0 := by
     have h := phiAtSeed_eval_map dp _ _
-      (σ : chainField_aux M p (a + 1) →+* LaurentSeries K) hrel_dn_E
+      (σ : chainField M p (a + 1) →+* LaurentSeries K) hrel_dn_E
     rwa [hσ_a1] at h
 
   have hpB : p ∣ M * p ^ (a + 2) := by
@@ -932,7 +932,7 @@ private theorem chain_endgame (M p : ℕ) [NeZero M] [hp : Fact (Nat.Prime p)] (
         exact h2
       exact nat_ne_of_mul hM0 (le_trans hp2 (Nat.le_mul_of_pos_right p hp0)) h3
 
-  have hsub : (⟨jqN (p ^ (a + 2)), hmem⟩ : chainField_aux M p (a + 1))
+  have hsub : (⟨jqN (p ^ (a + 2)), hmem⟩ : chainField M p (a + 1))
       = ⟨jqN (p ^ a), hmem_a⟩ :=
     RingHom.injective σ (hz_up_spread.trans hz_dn_spread.symm)
   have hval : jqN (p ^ (a + 2)) = jqN (p ^ a) := Subtype.ext_iff.mp hsub
@@ -958,7 +958,7 @@ set_option maxHeartbeats 3200000 in
 
 theorem jqN_pow_not_mem_adjoin_full_key (M : ℕ) [NeZero M] (p : ℕ) [hp : Fact (Nat.Prime p)]
     (a : ℕ) (hF : jqN p ∉ modularFunctionFieldFull M) :
-    jqN (p ^ (a + 2)) ∉ chainField_aux M p (a + 1) := by
+    jqN (p ^ (a + 2)) ∉ chainField M p (a + 1) := by
   induction a using Nat.strong_induction_on with
   | _ a IH =>
   intro hmem

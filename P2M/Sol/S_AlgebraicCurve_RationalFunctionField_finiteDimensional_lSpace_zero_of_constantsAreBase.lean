@@ -125,7 +125,7 @@ p2m_open "AlgebraicCurve.Place~ord_nonneg_of_mem~mem_of_ord_nonneg~mem_iff_ord_n
 
 variable (v : Place K F)
 
-theorem _root_.AlgebraicCurve.Place.mk_mem_maximalIdeal_iff_aux {f : F} (hf : f ∈ v.toValuationSubring) :
+private theorem _root_.AlgebraicCurve.Place.mk_mem_maximalIdeal_iff {f : F} (hf : f ∈ v.toValuationSubring) :
     (⟨f, hf⟩ : v.toValuationSubring) ∈ IsLocalRing.maximalIdeal v.toValuationSubring
       ↔ f = 0 ∨ 0 < v.ord f := by
   rw [IsLocalRing.mem_maximalIdeal, mem_nonunits_iff]
@@ -152,7 +152,7 @@ theorem _root_.AlgebraicCurve.Place.mk_mem_maximalIdeal_iff_aux {f : F} (hf : f 
     · exact hne rfl
     · omega
 
-p2m_export "AlgebraicCurve.Place" "mk_mem_maximalIdeal_iff_aux"
+p2m_export "AlgebraicCurve.Place" "mk_mem_maximalIdeal_iff"
 end Place
 
 theorem ell_le_ell_sub_single_add_deg [IsCurveOver K F] (D : Divisor K F) (P : Place K F) :
@@ -221,7 +221,7 @@ theorem ell_le_ell_sub_single_add_deg [IsCurveOver K F] (D : Divisor K F) (P : P
   have hker : LinearMap.ker φ = (LSpace E).comap (LSpace D).subtype := by
     ext f
     simp only [LinearMap.mem_ker, Submodule.mem_comap, Submodule.coe_subtype]
-    rw [hphi f, P.mk_mem_maximalIdeal_iff_aux]
+    rw [hphi f, P.mk_mem_maximalIdeal_iff]
     rcases eq_or_ne (f : F) 0 with hf0 | hf0
     ·
       simp only [hf0, mul_zero, true_or, true_iff]
@@ -522,7 +522,7 @@ def adeleBddQuotSingleEquivResidueField (D : Divisor K F) (P : Place K F) :
   have hker : LinearMap.ker φ = (adeleBdd E).comap (adeleBdd D).subtype := by
     ext α
     simp only [LinearMap.mem_ker, Submodule.mem_comap, Submodule.coe_subtype]
-    rw [hphi α, P.mk_mem_maximalIdeal_iff_aux, mem_adeleBdd]
+    rw [hphi α, P.mk_mem_maximalIdeal_iff, mem_adeleBdd]
     have hαD := α.2
     constructor
     · rintro (h | h) v
@@ -1893,7 +1893,7 @@ private theorem _root_.AlgebraicCurve.TranscendenceTower.mem_lSpace_nsmul_poleDi
 p2m_export "AlgebraicCurve.TranscendenceTower" "mem_lSpace_nsmul_poleDivisor_of_regular_outside"
 omit [FiniteDimensional E F] in
 
-theorem _root_.AlgebraicCurve.TranscendenceTower.exists_forall_mem_lSpace_nsmul_poleDivisor_aux {n : ℕ} (u : Fin n → F)
+private theorem _root_.AlgebraicCurve.TranscendenceTower.exists_forall_mem_lSpace_nsmul_poleDivisor {n : ℕ} (u : Fin n → F)
     (hreg : ∀ i, ∀ w : Place K F, w.restrict E ≠ T.v → 0 ≤ w.ord (u i)) :
     ∃ c : ℕ, ∀ i, u i ∈ LSpace (c • T.poleDivisor) := by
   classical
@@ -1914,7 +1914,7 @@ theorem _root_.AlgebraicCurve.TranscendenceTower.exists_forall_mem_lSpace_nsmul_
   have htnat : -(w.ord (u i)) ≤ ((-(w.ord (u i))).toNat : ℤ) := Int.self_le_toNat _
   omega
 
-p2m_export "AlgebraicCurve.TranscendenceTower" "exists_forall_mem_lSpace_nsmul_poleDivisor_aux"
+p2m_export "AlgebraicCurve.TranscendenceTower" "exists_forall_mem_lSpace_nsmul_poleDivisor"
 end TranscendenceTower
 p2m_reactivate "P2MW.S_AlgebraicCurve_RationalFunctionField_finiteDimensional_lSpace_zero_of_constantsAreBase.AlgebraicCurve"
 
@@ -1927,10 +1927,10 @@ def IntegralBasisInLSpace.ofRegularOutside (T : TranscendenceTower K E F)
     (u : Fin (Module.finrank E F) → F) (hu_indep : LinearIndependent E u)
     (hreg : ∀ i, ∀ w : Place K F, w.restrict E ≠ T.v → 0 ≤ w.ord (u i)) :
     IntegralBasisInLSpace T where
-  c := (T.exists_forall_mem_lSpace_nsmul_poleDivisor_aux u hreg).choose
+  c := (T.exists_forall_mem_lSpace_nsmul_poleDivisor u hreg).choose
   u := u
   hu_indep := hu_indep
-  hu_mem := (T.exists_forall_mem_lSpace_nsmul_poleDivisor_aux u hreg).choose_spec
+  hu_mem := (T.exists_forall_mem_lSpace_nsmul_poleDivisor u hreg).choose_spec
 
 omit [FiniteDimensional E F] in
 
@@ -1959,11 +1959,11 @@ def PoleDivisorPackage.ofTranscendenceTower (T : TranscendenceTower K E F)
     PoleDivisorPackage K F where
   x := T.xF
   B := T.poleDivisor
-  hB_eff := private T.poleDivisor_nonneg
-  hx_mem := private T.xF_mem_lSpace_poleDivisor
+  hB_eff := T.poleDivisor_nonneg
+  hx_mem := T.xF_mem_lSpace_poleDivisor
   n := Module.finrank E F
   hn_pos := Module.finrank_pos
-  degB_eq := private T.degree_poleDivisor_eq_finrank
+  degB_eq := T.degree_poleDivisor_eq_finrank
   c := IB.c
   u := IB.u
   hu_mem := IB.hu_mem

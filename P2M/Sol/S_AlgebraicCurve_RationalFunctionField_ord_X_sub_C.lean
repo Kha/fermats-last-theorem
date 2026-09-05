@@ -461,7 +461,7 @@ private theorem ofOption_bijective [IsAlgClosed K] [DecidableEq (RatFunc K)] :
 
 def placeEquivOption [IsAlgClosed K] [DecidableEq (RatFunc K)] :
     Place K (RatFunc K) ≃ Option K :=
-  (Equiv.ofBijective (ofOption K) (private_decl% (ofOption_bijective K))).symm
+  (Equiv.ofBijective (ofOption K) ((ofOption_bijective K))).symm
 
 @[scoped simp]
 theorem placeEquivOption_symm_some [IsAlgClosed K] [DecidableEq (RatFunc K)] (a : K) :

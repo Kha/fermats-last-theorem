@@ -1108,7 +1108,7 @@ variable {L : Type*} [Field L] (A : ValuationSubring L) {F : Type*} [Field F] [A
   {Fbar Fbar' : Type*} [Field Fbar] [Field Fbar'] [Algebra (IsLocalRing.ResidueField A) Fbar]
   [Algebra (IsLocalRing.ResidueField A) Fbar']
 
-def _root_.AlgebraicCurve.RegularProlongation.mapResidue_aux (R : RegularProlongation A F Fbar)
+private def _root_.AlgebraicCurve.RegularProlongation.mapResidue (R : RegularProlongation A F Fbar)
     (e : Fbar ≃ₐ[IsLocalRing.ResidueField A] Fbar') : RegularProlongation A F Fbar' where
   integers := R.integers
   residue := (e : Fbar →+* Fbar').comp R.residue
@@ -1123,15 +1123,15 @@ def _root_.AlgebraicCurve.RegularProlongation.mapResidue_aux (R : RegularProlong
     obtain ⟨c, h, hne⟩ := R.exists_smul_mem f hf
     exact ⟨c, h, by rw [RingHom.comp_apply, RingHom.coe_coe, map_ne_zero_iff e e.injective]; exact hne⟩
 
-p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.mapResidue_aux" "AlgebraicCurve.RegularProlongation.mapResidue_aux"
+p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.mapResidue" "AlgebraicCurve.RegularProlongation.mapResidue"
 @[scoped simp] private theorem _root_.AlgebraicCurve.RegularProlongation.mapResidue_integers (R : RegularProlongation A F Fbar)
-    (e : Fbar ≃ₐ[IsLocalRing.ResidueField A] Fbar') : (R.mapResidue_aux A e).integers = R.integers := rfl
+    (e : Fbar ≃ₐ[IsLocalRing.ResidueField A] Fbar') : (R.mapResidue A e).integers = R.integers := rfl
 
 p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.mapResidue_integers" "AlgebraicCurve.RegularProlongation.mapResidue_integers"
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.Ws25.GaussE.AlgebraicCurve.RegularProlongation"
 private theorem _root_.AlgebraicCurve.RegularProlongation.mapResidue_residue (R : RegularProlongation A F Fbar)
     (e : Fbar ≃ₐ[IsLocalRing.ResidueField A] Fbar') (x : R.integers) :
-    (R.mapResidue_aux A e).residue x = e (R.residue x) := rfl
+    (R.mapResidue A e).residue x = e (R.residue x) := rfl
 
 p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.mapResidue_residue" "AlgebraicCurve.RegularProlongation.mapResidue_residue"
 end MapResidue
@@ -1173,7 +1173,7 @@ theorem isUnit_comapRes_iff (O : ValuationSubring F) (σ : F ≃ₐ[L] F) (x : O
   · intro hx
     exact hx.map (comapRes (L := L) O σ)
 
-def _root_.AlgebraicCurve.RegularProlongation.transport_aux (R : RegularProlongation A F Fbar) (σ : F ≃ₐ[L] F) :
+private def _root_.AlgebraicCurve.RegularProlongation.transport (R : RegularProlongation A F Fbar) (σ : F ≃ₐ[L] F) :
     RegularProlongation A F Fbar where
   integers := R.integers.comap (σ : F →+* F)
   residue := R.residue.comp (comapRes (L := L) R.integers σ)
@@ -1210,14 +1210,14 @@ def _root_.AlgebraicCurve.RegularProlongation.transport_aux (R : RegularProlonga
     have : comapRes (L := L) R.integers σ ⟨c • f, hmem⟩ = ⟨c • σ f, h⟩ := Subtype.ext hσ
     rwa [this] at h0
 
-p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.transport_aux" "AlgebraicCurve.RegularProlongation.transport_aux"
+p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.transport" "AlgebraicCurve.RegularProlongation.transport"
 private theorem _root_.AlgebraicCurve.RegularProlongation.mem_transport_integers_iff (R : RegularProlongation A F Fbar)
-    (σ : F ≃ₐ[L] F) (f : F) : f ∈ (R.transport_aux A σ).integers ↔ σ f ∈ R.integers := Iff.rfl
+    (σ : F ≃ₐ[L] F) (f : F) : f ∈ (R.transport A σ).integers ↔ σ f ∈ R.integers := Iff.rfl
 
 p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.mem_transport_integers_iff" "AlgebraicCurve.RegularProlongation.mem_transport_integers_iff"
 private theorem _root_.AlgebraicCurve.RegularProlongation.transport_residue (R : RegularProlongation A F Fbar)
-    (σ : F ≃ₐ[L] F) (f : F) (h : f ∈ (R.transport_aux A σ).integers) :
-    (R.transport_aux A σ).residue ⟨f, h⟩ = R.residue ⟨σ f, h⟩ := rfl
+    (σ : F ≃ₐ[L] F) (f : F) (h : f ∈ (R.transport A σ).integers) :
+    (R.transport A σ).residue ⟨f, h⟩ = R.residue ⟨σ f, h⟩ := rfl
 
 p2m_alias "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.AlgebraicCurve.RegularProlongation.transport_residue" "AlgebraicCurve.RegularProlongation.transport_residue"
 end Transport
@@ -1664,7 +1664,7 @@ theorem fullC_one_mul_eq_fullC_one :
 
 def R1 (hA : A.LiesOverPrime q) :
     RegularProlongation A (modularFunctionFieldBar (1 * q)) (modularFunctionFieldFullC kk 1) :=
-  (Rfull A (1 * q) (hmem_leaf hA)).mapResidue_aux A (IntermediateField.equivOfEq fullC_one_mul_eq_fullC_one)
+  (Rfull A (1 * q) (hmem_leaf hA)).mapResidue A (IntermediateField.equivOfEq fullC_one_mul_eq_fullC_one)
 
 theorem R1_integers (hA : A.LiesOverPrime q) : (R1 hA).integers = gaussRing A (1 * q) := rfl
 
@@ -1673,7 +1673,7 @@ theorem coe_R1_residue (hA : A.LiesOverPrime q) (f : gaussRing A (1 * q)) :
 
 def R2 (hA : A.LiesOverPrime q) :
     RegularProlongation A (modularFunctionFieldBar (1 * q)) (modularFunctionFieldFullC kk 1) :=
-  (R1 hA).transport_aux A (frickeInvolutionBar (1 * q))
+  (R1 hA).transport A (frickeInvolutionBar (1 * q))
 
 end Leaf
 p2m_reactivate "P2MW.S_ModularCurve_PlaceSpecialization_exists_levelOneProlongationPair.Ws25.GaussE.AlgebraicCurve.RegularProlongation"

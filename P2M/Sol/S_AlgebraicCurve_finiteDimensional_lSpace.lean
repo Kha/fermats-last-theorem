@@ -41,17 +41,17 @@ private theorem _root_.AlgebraicCurve.Place.ord_nonneg_of_mem {f : F} (hf : f �
   rw [hcoe, v.ord_unit_smul_zpow u hπ (n : ℤ)]
   exact Int.natCast_nonneg n
 p2m_export "AlgebraicCurve.Place" "ord_nonneg_of_mem"
-theorem _root_.AlgebraicCurve.Place.mem_of_ord_nonneg_aux {f : F} (hf : f ≠ 0) (h : 0 ≤ v.ord f) :
+private theorem _root_.AlgebraicCurve.Place.mem_of_ord_nonneg {f : F} (hf : f ≠ 0) (h : 0 ≤ v.ord f) :
     f ∈ v.toValuationSubring := by
   obtain ⟨π, hπ⟩ := IsDiscreteValuationRing.exists_irreducible v.toValuationSubring
   obtain ⟨u, hu⟩ := v.exists_unit_mul_zpow hf hπ
   rw [hu, show v.ord f = (((v.ord f).toNat : ℕ) : ℤ) from (Int.toNat_of_nonneg h).symm,
     zpow_natCast]
   exact mul_mem (u : v.toValuationSubring).2 (pow_mem (π : v.toValuationSubring).2 _)
-p2m_export "AlgebraicCurve.Place" "mem_of_ord_nonneg_aux"
+p2m_export "AlgebraicCurve.Place" "mem_of_ord_nonneg"
 theorem mem_iff_ord_nonneg {f : F} (hf : f ≠ 0) :
     f ∈ v.toValuationSubring ↔ 0 ≤ v.ord f :=
-  ⟨v.ord_nonneg_of_mem, v.mem_of_ord_nonneg_aux hf⟩
+  ⟨v.ord_nonneg_of_mem, v.mem_of_ord_nonneg hf⟩
 end Place
 end AlgebraicCurve
 
@@ -111,7 +111,7 @@ p2m_open "AlgebraicCurve.Place"
 
 variable (v : Place K F)
 
-theorem _root_.AlgebraicCurve.Place.mk_mem_maximalIdeal_iff_aux {f : F} (hf : f ∈ v.toValuationSubring) :
+private theorem _root_.AlgebraicCurve.Place.mk_mem_maximalIdeal_iff {f : F} (hf : f ∈ v.toValuationSubring) :
     (⟨f, hf⟩ : v.toValuationSubring) ∈ IsLocalRing.maximalIdeal v.toValuationSubring
       ↔ f = 0 ∨ 0 < v.ord f := by
   rw [IsLocalRing.mem_maximalIdeal, mem_nonunits_iff]
@@ -138,7 +138,7 @@ theorem _root_.AlgebraicCurve.Place.mk_mem_maximalIdeal_iff_aux {f : F} (hf : f 
     · exact hne rfl
     · omega
 
-p2m_export "AlgebraicCurve.Place" "mk_mem_maximalIdeal_iff_aux"
+p2m_export "AlgebraicCurve.Place" "mk_mem_maximalIdeal_iff"
 end Place
 
 theorem ell_le_ell_sub_single_add_deg [IsCurveOver K F] (D : Divisor K F) (P : Place K F) :
@@ -165,7 +165,7 @@ theorem ell_le_ell_sub_single_add_deg [IsCurveOver K F] (D : Divisor K F) (P : P
     intro g hg
     rcases eq_or_ne g 0 with rfl | hg0
     · simp
-    · refine P.mem_of_ord_nonneg_aux (mul_ne_zero htn0 hg0) ?_
+    · refine P.mem_of_ord_nonneg (mul_ne_zero htn0 hg0) ?_
       rw [hordmul hg0]
       have := (mem_lSpace_iff_ord.mp hg).resolve_left hg0 P
       linarith
@@ -207,7 +207,7 @@ theorem ell_le_ell_sub_single_add_deg [IsCurveOver K F] (D : Divisor K F) (P : P
   have hker : LinearMap.ker φ = (LSpace E).comap (LSpace D).subtype := by
     ext f
     simp only [LinearMap.mem_ker, Submodule.mem_comap, Submodule.coe_subtype]
-    rw [hphi f, P.mk_mem_maximalIdeal_iff_aux]
+    rw [hphi f, P.mk_mem_maximalIdeal_iff]
     rcases eq_or_ne (f : F) 0 with hf0 | hf0
     ·
       simp only [hf0, mul_zero, true_or, true_iff]
@@ -469,7 +469,7 @@ def adeleBddQuotSingleEquivResidueField (D : Divisor K F) (P : Place K F) :
     intro α hα
     rcases eq_or_ne (α P) 0 with hg0 | hg0
     · simp [hg0]
-    · refine P.mem_of_ord_nonneg_aux (mul_ne_zero htn0 hg0) ?_
+    · refine P.mem_of_ord_nonneg (mul_ne_zero htn0 hg0) ?_
       rw [hordmul hg0]
       have h := hα P
       rw [P.adicValuation_eq_exp_neg_ord hg0, WithZero.exp_le_exp] at h
@@ -508,7 +508,7 @@ def adeleBddQuotSingleEquivResidueField (D : Divisor K F) (P : Place K F) :
   have hker : LinearMap.ker φ = (adeleBdd E).comap (adeleBdd D).subtype := by
     ext α
     simp only [LinearMap.mem_ker, Submodule.mem_comap, Submodule.coe_subtype]
-    rw [hphi α, P.mk_mem_maximalIdeal_iff_aux, mem_adeleBdd]
+    rw [hphi α, P.mk_mem_maximalIdeal_iff, mem_adeleBdd]
     have hαD := α.2
     constructor
     · rintro (h | h) v
@@ -551,7 +551,7 @@ def adeleBddQuotSingleEquivResidueField (D : Divisor K F) (P : Place K F) :
         · have hf0 : f ≠ 0 := by rw [hf]; exact mul_ne_zero hc0 (zpow_ne_zero _ ht0)
           rw [P.adicValuation_eq_exp_neg_ord hf0, WithZero.exp_le_exp]
           rw [hf, P.ord_mul hc0 (zpow_ne_zero _ ht0), P.ord_zpow, ht1, mul_one]
-          have hclnn := private_decl% (P.ord_nonneg_of_mem cl.2)
+          have hclnn := (P.ord_nonneg_of_mem cl.2)
           linarith
       · rw [Pi.single_eq_of_ne hv, Valuation.map_zero]; exact zero_le'
     refine ⟨⟨Pi.single P f, hαD⟩, ?_⟩

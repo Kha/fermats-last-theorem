@@ -142,19 +142,19 @@ variable {K F : Type*} [Field K] [Field F] [Algebra K F]
 variable {R : Type*} [CommRing R] [IsDedekindDomain R] [Algebra R F] [IsFractionRing R F]
 variable (w : Place K F)
 
-def chartHom_aux (hw : ∀ r : R, algebraMap R F r ∈ w.toValuationSubring) :
+private def chartHom (hw : ∀ r : R, algebraMap R F r ∈ w.toValuationSubring) :
     R →+* w.toValuationSubring :=
   (algebraMap R F).codRestrict w.toValuationSubring.toSubring hw
 
 omit [IsDedekindDomain R] [IsFractionRing R F] in
 @[scoped simp]
 private theorem coe_chartHom (hw : ∀ r : R, algebraMap R F r ∈ w.toValuationSubring) (r : R) :
-    (chartHom_aux w hw r : F) = algebraMap R F r := rfl
+    (chartHom w hw r : F) = algebraMap R F r := rfl
 
 variable (R) in
 
 def center (hw : ∀ r : R, algebraMap R F r ∈ w.toValuationSubring) : Ideal R :=
-  (IsLocalRing.maximalIdeal w.toValuationSubring).comap (chartHom_aux w hw)
+  (IsLocalRing.maximalIdeal w.toValuationSubring).comap (chartHom w hw)
 
 scoped instance (hw : ∀ r : R, algebraMap R F r ∈ w.toValuationSubring) :
     (center R w hw).IsPrime :=
@@ -177,7 +177,7 @@ theorem mem_center_iff_ord_pos (hw : ∀ r : R, algebraMap R F r ∈ w.toValuati
 omit [IsDedekindDomain R] [IsFractionRing R F] in
 
 private theorem inv_algebraMap_mem (hw : ∀ r : R, algebraMap R F r ∈ w.toValuationSubring)
-    {s : R} (hs : IsUnit (chartHom_aux w hw s)) :
+    {s : R} (hs : IsUnit (chartHom w hw s)) :
     (algebraMap R F s)⁻¹ ∈ w.toValuationSubring := by
   obtain ⟨u, hu⟩ := hs
   have hcoe : ((u : w.toValuationSubring) : F) = algebraMap R F s := by rw [hu]; rfl
@@ -194,7 +194,7 @@ theorem center_ne_bot (hw : ∀ r : R, algebraMap R F r ∈ w.toValuationSubring
   intro hbot
   apply w.ne_top'
 
-  have hunit : ∀ r : R, r ≠ 0 → IsUnit (chartHom_aux w hw r) := by
+  have hunit : ∀ r : R, r ≠ 0 → IsUnit (chartHom w hw r) := by
     intro r hr
     by_contra hu
     have : r ∈ center R w hw :=
