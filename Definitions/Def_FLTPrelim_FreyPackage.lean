@@ -8,11 +8,6 @@ module
 
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
 public import Mathlib.Algebra.Field.ZMod
-public import Mathlib.Algebra.GCDMonoid.Nat
-public import Mathlib.Algebra.EuclideanDomain.Int
-public import Mathlib.Data.Nat.Prime.Basic
-public import Mathlib.RingTheory.Int.Basic
-public import Mathlib.Tactic.ModCases
 
 @[expose] public section
 

@@ -1,6 +1,7 @@
 module
 
 public import Definitions.Def_AlgebraicCurve_FrobeniusEndo
+public import Definitions.Def_AlgebraicCurve_Correspondence
 
 @[expose] public section
 

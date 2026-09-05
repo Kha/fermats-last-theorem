@@ -1,10 +1,10 @@
 module
 
-public import Mathlib.NumberTheory.RatFunc.Ostrowski
-public import Mathlib.RingTheory.DedekindDomain.Factorization
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
 public import Mathlib.FieldTheory.RatFunc.Basic
+import Mathlib.NumberTheory.RatFunc.Ostrowski
+import Mathlib.RingTheory.DedekindDomain.Factorization
 
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_finite_setOf_ord_ne_zero
 

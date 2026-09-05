@@ -1,6 +1,9 @@
 module
 
-public meta import Lean
+public meta import Lean.Elab.Command
+public meta import Lean.Elab.Tactic.ElabTerm
+public meta import Std.Do.Triple.SpecLemmas
+import Lean.ScopedEnvExtension
 
 public meta section
 

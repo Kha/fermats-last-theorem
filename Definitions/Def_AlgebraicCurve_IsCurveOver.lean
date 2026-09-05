@@ -2,7 +2,6 @@ module
 
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 public import Mathlib.RingTheory.Kaehler.Basic
-public import Mathlib.FieldTheory.IsAlgClosed.Basic
 
 @[expose] public section
 

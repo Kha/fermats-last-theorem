@@ -1,7 +1,6 @@
 module
 
 public import Mathlib.FieldTheory.RatFunc.Degree
-public import Mathlib.FieldTheory.RatFunc.Valuation
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Sol.S_AlgebraicCurve_Place_ord_eq_neg_log_of_valuationSubring_eq
 import P2M.Sol.S_AlgebraicCurve_RationalFunctionField_toValuationSubring_eq_of_forall_ne_ofHeightOneSpectrum

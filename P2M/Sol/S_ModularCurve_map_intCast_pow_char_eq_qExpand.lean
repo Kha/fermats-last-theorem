@@ -1,9 +1,8 @@
 module
 
 public import Definitions.Def_ModularCurve_X0
-public import Mathlib.RingTheory.PowerSeries.Expand
-public import Mathlib.FieldTheory.Finite.Basic
 import P2M.Util
+import Mathlib.RingTheory.PowerSeries.Expand
 
 namespace P2MW.S_ModularCurve_map_intCast_pow_char_eq_qExpand
 

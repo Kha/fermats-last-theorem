@@ -1,10 +1,9 @@
 module
 
-public import Mathlib.NumberTheory.RatFunc.Ostrowski
-public import Mathlib.RingTheory.DedekindDomain.Factorization
 public import Definitions.Def_AlgebraicCurve_DivisorClassGroup
 import P2M.Util
 public import Mathlib.FieldTheory.RatFunc.Basic
+import Mathlib.NumberTheory.RatFunc.Ostrowski
 
 namespace P2MW.S_AlgebraicCurve_RationalFunctionField_subsingleton_setOf_forall_ne_ofHeightOneSpectrum
 

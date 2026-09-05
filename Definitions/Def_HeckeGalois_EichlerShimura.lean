@@ -2,10 +2,6 @@ module
 
 public import Definitions.Def_FLTPrelim_Ramification
 public import Definitions.Def_EllipticCurve_FrobeniusTrace
-public import Mathlib.Algebra.MvPolynomial.CommRing
-public import Mathlib.Algebra.Module.Torsion.Basic
-public import Mathlib.LinearAlgebra.Determinant
-public import Mathlib.LinearAlgebra.Dimension.Finrank
 
 @[expose] public section
 
